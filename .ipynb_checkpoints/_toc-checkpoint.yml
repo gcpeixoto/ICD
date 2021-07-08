@@ -1,0 +1,26 @@
+# The introduction file is mandatory
+- file: ipynb/00-conteudo
+- part: Unidade 1
+  numbered: true
+  chapters:
+  - file: ipynb/01-introducao
+  - file: ipynb/02a-pip-venv
+  - file: ipynb/02b-conda
+  - file: ipynb/03-ides
+  - file: ipynb/04-cvs-git
+#- part: Temas de projeto
+#  numbered: false
+#  chapters:
+#  - file: ipynb/99-temas-projeto
+
+#
+# MODEL: 
+# - file: intro
+#- part: Get started
+#  chapters:
+#  - file: start/overview
+#  - file: start/build
+#  - file: start/publish
+#    sections:
+#      - file: publish/gh-pages
+#      - file: publish/netlify

@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Crash course de conda &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Ambientes de desenvolvimento e computação interativa" href="03-ides.html" />
+    <link rel="prev" title="1. Introdução à Ciência de Dados" href="01-introducao.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/cycle-ds.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Unidade 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   1. Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2.
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-ides.html">
+   3. Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-cvs-git.html">
+   4. Controle de versão
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ipynb/02-conda.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/02-conda.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/02-conda.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-requisitos">
+   2.1. Pré-requisitos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   2.2. Introdução
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beneficios-do-conda-para-cientistas-de-dados">
+     2.2.1. Benefícios do
+     <em>
+      conda
+     </em>
+     para cientistas de dados
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conceitos-fundamentais">
+   2.3. Conceitos fundamentais
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comandos-fundamentais">
+   2.4. Comandos fundamentais
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-manutencao-e-atualizacao">
+     2.4.1. Comandos para manutenção e atualização
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-trabalhar-com-ambientes">
+     2.4.2. Comandos para trabalhar com ambientes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-para-trabalhar-com-pacotes-e-canais">
+     2.4.3. Comandos para trabalhar com pacotes e canais
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-adicionais">
+     2.4.4. Comandos adicionais
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemplos">
+   2.5. Exemplos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#desempenho-do-conda">
+   2.6. Desempenho do
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicios">
+   2.7. Exercícios
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="crash-course-de-conda">
+<h1><span class="section-number">2. </span><em>Crash course</em> de <em>conda</em><a class="headerlink" href="#crash-course-de-conda" title="Permalink to this headline">¶</a></h1>
+<section id="pre-requisitos">
+<h2><span class="section-number">2.1. </span>Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Instalação</a> da distribuição Anaconda (recomenda-se Python 3.x);</p></li>
+<li><p>Acesso simples a um terminal ou ao <em>Anaconda Prompt</em>;</p></li>
+</ul>
+</section>
+<section id="introducao">
+<h2><span class="section-number">2.2. </span>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>conda</em> é um gerenciador de pacotes, dependências e ambientes para múltiplas linguagens;</p></li>
+<li><p>Pacote de código aberto executável em Windows, macOS e Linux;</p></li>
+<li><p>Seu objetivo é fornecer suporte à rápida instalação, desinstalação e atualização de pacotes</p></li>
+<li><p>Embora criado para Python, hoje pode ser aplicado a softwares escritos em R, Ruby, Lua, Java, Javascript, C++ etc.</p></li>
+<li><p>Atualmente, há cerca de 7500 pacotes gerenciados no repositório <a class="reference external" href="http://repo.anaconda.com">repo.anaconda.com</a> que são mantidos pela empresa Anaconda Inc.</p></li>
+</ul>
+<section id="beneficios-do-conda-para-cientistas-de-dados">
+<h3><span class="section-number">2.2.1. </span>Benefícios do <em>conda</em> para cientistas de dados<a class="headerlink" href="#beneficios-do-conda-para-cientistas-de-dados" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fornece pacotes pré-construídos que evitam a necessidade de lidar com compiladores ou saber como configurar uma ferramenta específica;</p></li>
+<li><p>Gerencia instalações de ferramentas que são mais difíceis de instalar (como TensorFlow) com apenas um passo;</p></li>
+<li><p>Permite que você forneça seu ambiente a outras pessoas em diferentes plataformas, assim oferecendo suporte à reprodutibilidade de fluxos de trabalho de pesquisa;</p></li>
+<li><p>Permite o uso de outras ferramentas de gerenciamento de pacotes, tais como <em>pip</em>, dentro de ambientes <em>conda</em> onde uma biblioteca ou ferramentas ainda não foram empacotadas para <em>conda</em>;</p></li>
+<li><p>Fornece bibliotecas e ferramentas de ciência de dados comumente usadas, tais como <em>R</em>, <em>NumPy</em>, <em>SciPy</em> e <em>TensorFlow</em>. Estes são construídos usando bibliotecas específicas de hardware otimizadas (como MKL da Intel, ou CUDA da NVIDIA) que aceleram o desempenho sem alterações de código.</p></li>
+</ul>
+</section>
+</section>
+<section id="conceitos-fundamentais">
+<h2><span class="section-number">2.3. </span>Conceitos fundamentais<a class="headerlink" href="#conceitos-fundamentais" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Anaconda: distribuição de código aberto, alto desempenho e otimizada para Python e R.</p></li>
+<li><p>Anaconda Cloud: repositório de pacotes hospedado na web (nuvem)</p></li>
+<li><p>Anaconda Navigator: interface gráfica incluída na distribuição para fácil gestão de pacotes, ambientes e canais.</p></li>
+<li><p>Canal: local dos repositórios onde o <em>conda</em> procura por pacotes. Pode ser um repositório público, na web, ou privado, dentro da universidade, em uma empresa, na sua casa, etc.</p></li>
+<li><p><em>conda</em>: gerenciador de pacotes e ambientes que vem incluído na distribuição.</p></li>
+<li><p><em>conda environment</em> (Ambiente): diretório que contém uma coleção específica de pacotes e dependências que pode ser administrado separadamente. Por exemplo, é possível manter um ambiente Python 2 e Python 3 totalmente isolados sem que um interfira em outro.</p></li>
+<li><p><em>conda package</em> (Pacote): arquivo comprimido que contém todos os elementos necessários para o funcionamento de um software: bibliotecas, módulos, executáveis e componentes.</p></li>
+<li><p><em>conda repository</em> (Repositório, ou <em>repo</em>): o repositório em nuvem mantido pela Anaconda.</p></li>
+<li><p>Miniconda: é uma versão menor da distribuição que inclui apenas pacotes essenciais, tais como <code class="docutils literal notranslate"><span class="pre">conda</span></code>, <code class="docutils literal notranslate"><span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">zlib</span></code> e outros considerados básicos. Pode ser expandido pela instalação de pacotes adicionais.</p></li>
+<li><p><em>noarch package</em> (Pacote independente de arquitetura): pacote que não contém nada específico à arquitetura de um sistema e que pode ser instalado em qualquer plataforma. <code class="docutils literal notranslate"><span class="pre">noarch</span></code> constitui um subdiretório em um canal.</p></li>
+<li><p>Repositório: qualquer local onde ativos de software são armazenados e podem ser baixados ou recuperados para instalação e uso em computadores.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Se você é novo com Python ou conda, recomenda-se instalar a distribuição <em>Anaconda</em> (inteira) em vez da <em>Miniconda</em>, embora mais tempo e espaço em disco sejam necessários. A distribuição padrão requer cerca de 3 Gb de espaço em disco, ao passo que a <em>Miniconda</em> ocupa em torno de 400 Mb.</p>
+</div>
+</section>
+<section id="comandos-fundamentais">
+<h2><span class="section-number">2.4. </span>Comandos fundamentais<a class="headerlink" href="#comandos-fundamentais" title="Permalink to this headline">¶</a></h2>
+<p>A lista a seguir não é exaustiva e contempla os comandos <code class="docutils literal notranslate"><span class="pre">conda</span></code> mais frequentes. Baseia-se na <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">[Conda Cheat Sheet]</a></p>
+<p>Aqui, dividiremos os comandos nos seguintes grupos:</p>
+<ol class="simple">
+<li><p>informação e atualização</p></li>
+<li><p>ambientes</p></li>
+<li><p>pacotes e canais</p></li>
+<li><p>adicionais</p></li>
+</ol>
+<section id="comandos-para-manutencao-e-atualizacao">
+<h3><span class="section-number">2.4.1. </span>Comandos para manutenção e atualização<a class="headerlink" href="#comandos-para-manutencao-e-atualizacao" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>comando</p></th>
+<th class="head"><p>o que faz?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> ou <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">-V</span></code></p></td>
+<td><p>verifica se conda está instalado</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span></code></p></td>
+<td><p>verifica instalação e versão do conda</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">-n</span> <span class="pre">base</span> <span class="pre">conda</span></code></p></td>
+<td><p>atualiza o gerenciador para a versão atual</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">conda</span></code></p></td>
+<td><p>idem</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">anaconda</span></code></p></td>
+<td><p>atualiza todos os pacotes da distribuição para versões estáveis</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="comandos-para-trabalhar-com-ambientes">
+<h3><span class="section-number">2.4.2. </span>Comandos para trabalhar com ambientes<a class="headerlink" href="#comandos-para-trabalhar-com-ambientes" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>comando</p></th>
+<th class="head"><p>o que faz?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">AMB</span> <span class="pre">python=3.x</span> <span class="pre">&quot;PKG1&gt;v.s&quot;</span> <span class="pre">PKG2</span></code></p></td>
+<td><p>cria novo ambiente com nome “AMB” para funcionar com a versão Python 3.x e instala neste ambiente os pacotes PKG1 e PKG2, sendo o primeiro na versão específica “v.s” e o outro a estável mais atual</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">AMB</span></code></p></td>
+<td><p>ativa o ambiente de nome AMB</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">/caminho/para/amb</span></code></p></td>
+<td><p>ativa um ambiente dado seu local</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code></p></td>
+<td><p>desativa o ambiente ativo</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code></p></td>
+<td><p>lista todos os pacotes do ambiente ativo</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span> <span class="pre">--name</span> <span class="pre">AMB</span></code></p></td>
+<td><p>lista todos os pacotes do ambiente AMB</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">remove</span> <span class="pre">--name</span> <span class="pre">AMB</span> <span class="pre">--all</span></code></p></td>
+<td><p>deleta todo o ambiente AMB</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--clone</span> <span class="pre">AMB</span> <span class="pre">--name</span> <span class="pre">NAMB</span></code></p></td>
+<td><p>faz um clone NAMB de AMB</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">--name</span> <span class="pre">AMB</span> <span class="pre">&gt;</span> <span class="pre">amb.yml</span></code></p></td>
+<td><p>exporta configurações de AMB em um arquivo YAML</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">--file</span> <span class="pre">amb.yml</span></code></p></td>
+<td><p>cria AMB a partir de configurações contidas em um arquivo YAML</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>YAML (acrônimo para “YAML Ain’t Markup Language”) é uma linguagem de serialização de dados legível por humanos comumente usada para organizar arquivos de configuração. É utilizada em múltiplas linguagens. Veja <a class="reference external" href="https://yaml.org">[YAML]</a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> e <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code> somente funcionam a partir das versões 4.6 do <code class="docutils literal notranslate"><span class="pre">conda</span></code>. Para versões anteriores, no Windows usa-se <code class="docutils literal notranslate"><span class="pre">activate</span></code>/<code class="docutils literal notranslate"><span class="pre">deactivate</span></code> e no macOS, usa-se <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span></code>/<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">deactivate</span></code>.</p>
+</div>
+</section>
+<section id="comandos-para-trabalhar-com-pacotes-e-canais">
+<h3><span class="section-number">2.4.3. </span>Comandos para trabalhar com pacotes e canais<a class="headerlink" href="#comandos-para-trabalhar-com-pacotes-e-canais" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>comando</p></th>
+<th class="head"><p>o que faz?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">search</span> <span class="pre">PCT=2.8</span> <span class="pre">&quot;PCT</span> <span class="pre">[version='&gt;=2.8,&lt;3.2']&quot;</span></code></p></td>
+<td><p>procura pelo pacote PCT nos canais configurados cuja versão esteja no intervalo 2.8 &lt;= v &lt; 3.2</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">PCT</span></code></p></td>
+<td><p>instala o pacote PCT, se disponível</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">CH</span> <span class="pre">PCT</span></code></p></td>
+<td><p>instala o pacote AMB a partir do canal CH</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">PCT==4.1.0</span></code></p></td>
+<td><p>instala o PCT com a versão especificada (4.1.0)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">&quot;PCT[version='3.1.0\|3.1.1']&quot;</span></code></p></td>
+<td><p>instala pacote com uma das versões especificadas (OU)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">&quot;PCT&gt;3.1,&lt;3.5&quot;</span> </code></p></td>
+<td><p>instala uma das das versões do pacote especificadas (E)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A lista de canais padrão utilizadas pela distribuição fica armazenada no arquivo oculto <code class="docutils literal notranslate"><span class="pre">.condarc</span></code>. A partir do caderno interativo, execute o comando <code class="docutils literal notranslate"><span class="pre">!cat</span> <span class="pre">~/.condarc</span></code> para uma visão geral do conteúdo do arquivo <code class="docutils literal notranslate"><span class="pre">.condarc</span></code>.</p>
+</div>
+</section>
+<section id="comandos-adicionais">
+<h3><span class="section-number">2.4.4. </span>Comandos adicionais<a class="headerlink" href="#comandos-adicionais" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>comando</p></th>
+<th class="head"><p>o que faz?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">search</span> <span class="pre">AMB</span> <span class="pre">--info</span></code></p></td>
+<td><p>fornece informação detalhada sobre o pacote AMB</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">clean</span> <span class="pre">--all</span></code></p></td>
+<td><p>remove pacotes inutilizados</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">uninstall</span> <span class="pre">PCT</span> <span class="pre">--name</span> <span class="pre">AMB</span></code></p></td>
+<td><p>remove o pacote PCT do ambiente AMB</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">--all</span> <span class="pre">--name</span> <span class="pre">AMB</span></code></p></td>
+<td><p>atualiza todos os pacotes do ambiente AMB</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">--yes</span> <span class="pre">PCT1</span> <span class="pre">PCT2</span></code></p></td>
+<td><p>instala pacotes sem exigir prompt do usuário</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">-h</span></code></p></td>
+<td><p>para obter ajuda sobre os comandos disponíveis do gerenciador</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Em muitos casos, opções de comandos que são precedidas por 2 hífens (<code class="docutils literal notranslate"><span class="pre">--</span></code>) podem ser abreviadas para apenas 1 hífen e a primeira letra da opção. Então, <code class="docutils literal notranslate"><span class="pre">--name</span></code> e <code class="docutils literal notranslate"><span class="pre">-n</span></code>, bem como <code class="docutils literal notranslate"><span class="pre">--envs</span></code> e <code class="docutils literal notranslate"><span class="pre">-n</span></code> são opções equivalentes.</p>
+</div>
+</section>
+</section>
+<section id="exemplos">
+<h2><span class="section-number">2.5. </span>Exemplos<a class="headerlink" href="#exemplos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Criar ambiente chamado “dataScience” com versão Python 3.8 contendo os pacotes numpy, versão 1.19.1, e pandas, mais atual no repositório Anaconda.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name dataScience <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8 <span class="nv">numpy</span><span class="o">=</span><span class="m">1</span>.19.1 pandas
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Alternar entre ambientes</p></li>
+</ul>
+<p>Abaixo, vamos reproduzir a mudança de um ambiente para outro em um Z Shell apontando para a pasta <em>ICD</em> e mostrar que o pacote <code class="docutils literal notranslate"><span class="pre">scipy</span></code> está instalado em um ambiente, mas não em outro.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># no ambiente &#39;base&#39;, procuramos pelo pacote &#39;scipy&#39;</span>
+<span class="o">(</span>base<span class="o">)</span> gustavo@GloryCrown ICD % conda list scipy
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># packages in environment at /Users/gustavo/opt/anaconda3:</span>
+<span class="c1">#</span>
+<span class="c1"># Name                    Version                   Build  Channel</span>
+<span class="n">scipy</span>                     <span class="mf">1.6.2</span>            <span class="n">py38hd5f7400_1</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ativamos um novo ambiente chamado &#39;lecture&#39;</span>
+<span class="o">(</span>base<span class="o">)</span> gustavo@GloryCrown ICD % conda activate lecture
+<span class="o">(</span>lecture<span class="o">)</span> gustavo@GloryCrown ICD %
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># dentro do ambiente &#39;lecture&#39;, procuramos pelo pacote &#39;scipy&#39;</span>
+<span class="o">(</span>lecture<span class="o">)</span> gustavo@GloryCrown ICD % conda list scipy
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># packages in environment at /Users/gustavo/opt/anaconda3/envs/lecture:</span>
+<span class="c1">#</span>
+<span class="c1"># Name                    Version                   Build  Channel</span>
+</pre></div>
+</div>
+<p>Nada é mostrado, significando que o pacote <code class="docutils literal notranslate"><span class="pre">scipy</span></code> está indisponível no ambiente <code class="docutils literal notranslate"><span class="pre">lecture</span></code>. Enfim, desativamos o ambiente ativo.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># desativamos &#39;lecture&#39; e voltamos para &#39;base&#39;</span>
+<span class="o">(</span>lecture<span class="o">)</span> gustavo@GloryCrown ICD % conda deactivate
+<span class="o">(</span>base<span class="o">)</span> gustavo@GloryCrown ICD %
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Criar arquivo YAML para construção de ambiente personalizado</p>
+<ul>
+<li><p>Abra seu editor de texto preferido (sugestão: no Windows, <code class="docutils literal notranslate"><span class="pre">notepad++</span></code>; no Linux, <code class="docutils literal notranslate"><span class="pre">gedit</span></code>; no macOS, <code class="docutils literal notranslate"><span class="pre">TextEdit</span></code>);</p></li>
+<li><p>Salve o arquivo como <code class="docutils literal notranslate"><span class="pre">icd.yml</span></code>;</p></li>
+<li><p>Personalize o seu ambiente (use o modelo a seguir);</p></li>
+<li><p>Use o comando <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">icd.yml</span></code> para criar o ambiente;</p></li>
+<li><p>Verifique se o ambiente foi criado corretamente com <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code>. Você deve ver algo como:</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">gustavo</span><span class="nd">@GloryCrown</span> <span class="n">ICD</span> <span class="o">%</span> <span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
+<span class="c1"># conda environments:</span>
+<span class="c1">#</span>
+<span class="n">base</span>                  <span class="o">*</span>  <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">gustavo</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">anaconda3</span>
+<span class="n">icd</span>                      <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">gustavo</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">icd</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conteúdo do arquivo  &quot;icd.yaml&quot; </span>
+<span class="c1"># para construir o ambiente &#39;icd&#39;</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icd</span> <span class="c1"># nome do ambiente</span>
+<span class="nt">channels</span><span class="p">:</span> <span class="c1"># lista de canais a utilizar</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">defaults</span> <span class="c1"># canais padrão</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="nt">dependencies</span><span class="p">:</span> <span class="c1"># pacotes dependentes</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">numpy</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">scipy</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sympy</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">matplotlib</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pandas</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seaborn</span>  
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Quando você precisar atualizar o seu ambiente de ciência de dados, seja porque necessita de um pacote novo, ou porque encontrou um pacote melhor, basta atualizar o conteúdo do arquivo <code class="docutils literal notranslate"><span class="pre">icd.yml</span></code> e então executar o seguinte comando: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span> <span class="pre">--file</span> <span class="pre">icd.yml</span> <span class="pre">--prune</span></code>. A opção <code class="docutils literal notranslate"><span class="pre">--prune</span></code> faz com que o conda remova dependêncaias que não forem mais necessárias.</p>
+</div>
+</section>
+<section id="desempenho-do-conda">
+<h2><span class="section-number">2.6. </span>Desempenho do <em>conda</em><a class="headerlink" href="#desempenho-do-conda" title="Permalink to this headline">¶</a></h2>
+<p>A instalação de pacotes pode tornar-se lenta por uma variedade de motivos: processamento de metadados, velocidade de internt, verificação de dependências, etc. À medida que o número de pacotes disponíveis aumenta, a busca que o <em>conda</em> realiza pode perdurar por mais tempo.</p>
+<p>Caso ao tentar instalar um pacote haja lentidão, há algumas questões a analisar. Verifique se há dependências instaladas via <code class="docutils literal notranslate"><span class="pre">pip</span></code>; se os canais estão disponíveis; se o pacote que você está tentando instalar está disponível.</p>
+<p>Para melhorar o desempenho consulte recomendações <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/conda-performance.html#improving-conda-performance">aqui</a>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Trabalhar com ambientes menores e dedicados é sempre melhor e mais rápido do que ter ambientes grandes, que são bem mais difíceis de gerenciar. Para ganhar desempenho, reduza a complexidade de seus ambientes.</p>
+</div>
+</section>
+<section id="exercicios">
+<h2><span class="section-number">2.7. </span>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Usando o <code class="docutils literal notranslate"><span class="pre">conda</span></code>, crie um novo ambiente de trabalho para o curso chamado <code class="docutils literal notranslate"><span class="pre">icd</span></code>.</p></li>
+<li><p>Ative o novo ambiente e instale:</p>
+<ul>
+<li><p>o pacote <code class="docutils literal notranslate"><span class="pre">numpy</span></code> em sua versão mais recente;</p></li>
+<li><p>o pacote <code class="docutils literal notranslate"><span class="pre">scipy</span></code> na versão 1.6.0;</p></li>
+</ul>
+</li>
+<li><p>Execute o comando <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span> <span class="pre">ncurses</span></code>. Qual é a resposta? Ele está instalado? Qual é a versão?</p></li>
+<li><p>Use um comando para buscar informações sobre a versão mais recente do pacote <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Quantas e quais são as suas dependências?</p></li>
+<li><p>Desinstale o pacote <code class="docutils literal notranslate"><span class="pre">scipy</span></code>. Quantos pacotes permaneceram em seu ambiente?</p></li>
+<li><p>Desinstale o pacote <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. Algum pacote ainda permaneceu em seu ambiente? Por quê?</p></li>
+<li><p>Desative o ambiente <code class="docutils literal notranslate"><span class="pre">icd</span></code> e delete-o completamente.</p></li>
+<li><p>Crie um novo ambiente personalizado <code class="docutils literal notranslate"><span class="pre">icd</span></code> a partir de um arquivo YAML.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ipynb"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="01-introducao.html" title="previous page"><span class="section-number">1. </span>Introdução à Ciência de Dados</a>
+    <a class='right-next' id="next-link" href="03-ides.html" title="next page"><span class="section-number">3. </span>Ambientes de desenvolvimento e computação interativa</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

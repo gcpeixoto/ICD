@@ -1,0 +1,13 @@
+# Arquivo YAML para construir o ambiente 'icd'
+
+name: icd # nome do ambiente
+channels: # lista de canais a utilizar
+  - defaults # canais padrão
+  - conda-forge
+dependencies: # pacotes dependentes
+  - numpy
+  - scipy
+  - sympy
+  - matplotlib
+  - pandas
+  - seaborn  

@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Introdução à Ciência de Dados &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Ambientes virtuais com Python" href="02a-pip-venv.html" />
+    <link rel="prev" title="Apresentação do curso" href="00-conteudo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Unidade 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a-pip-venv.html">
+   2. Ambientes virtuais com Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02b-conda.html">
+   3.
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-ides.html">
+   4. Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-cvs-git.html">
+   5. Controle de versão
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ipynb/01-introducao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/01-introducao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/01-introducao.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ciencia-de-dados-no-seculo-xxi">
+   1.1. Ciência de dados no século XXI
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-caso-da-covid-19">
+     1.1.1. O caso da COVID-19
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cientista-de-dados-x-analista-de-dados-x-engenheiro-de-dados">
+     1.1.2. Cientista de dados x analista de dados x engenheiro de dados
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quem-faz-o-que">
+       1.1.2.1. Quem faz o quê?
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#cientista-de-dados">
+         1.1.2.1.1. Cientista de dados
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#analista-de-dados">
+         1.1.2.1.2. Analista de dados
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#engenheiro-a-de-dados">
+         1.1.2.1.3. Engenheiro(a) de dados
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#que-ferramentas-sao-usadas">
+       1.1.2.2. Que ferramentas são usadas?
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         1.1.2.2.1. Cientista de dados
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+         1.1.2.2.2. Analista de dados
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id3">
+         1.1.2.2.3. Engenheiro(a) de dados
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datasfera-o-carater-ubiquo-dos-dados">
+   1.2. “Datasfera”: o caráter ubíquo dos dados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-3v-em-multidominios">
+     1.2.1. Modelo 3V em multidomínios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matematica-por-tras-dos-dados">
+   1.3. Matemática por trás dos dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ferramentas-computacionais-do-curso">
+   1.4. Ferramentas computacionais do curso
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ipython-e-jupyter-notebook">
+     1.4.1.
+     <em>
+      iPython
+     </em>
+     e
+     <em>
+      Jupyter Notebook
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anaconda">
+     1.4.2.
+     <em>
+      Anaconda
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-lab">
+     1.4.3.
+     <em>
+      Jupyter Lab
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#binder">
+     1.4.4.
+     <em>
+      Binder
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#google-colab">
+     1.4.5.
+     <em>
+      Google Colab
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modulos-principais">
+     1.4.6. Módulos principais
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="introducao-a-ciencia-de-dados">
+<h1><span class="section-number">1. </span>Introdução à Ciência de Dados<a class="headerlink" href="#introducao-a-ciencia-de-dados" title="Permalink to this headline">¶</a></h1>
+<section id="ciencia-de-dados-no-seculo-xxi">
+<h2><span class="section-number">1.1. </span>Ciência de dados no século XXI<a class="headerlink" href="#ciencia-de-dados-no-seculo-xxi" title="Permalink to this headline">¶</a></h2>
+<p>A dinâmica do mundo globalizado elevou a importância dos dados e da informação a uma escala jamais vista na história humana em virtude da evolução exponencial dos recursos tecnológicos, dos meios de comunicação e, principalmente, da computação de alto desempenho. Está em vigor a <em>Era da Informação</em>, em que os dados são considerados a matéria-prima imprescindível.</p>
+<p>Assim como a terra era o recurso fundamental para a agricultura, e o ferro o era para a indústria, os dados tornaram-se um bem de valor inestimável para pessoas, empresas, governos e para a própria ciência. Com a expansão do fenômeno <em>Big Data</em>, diversos nichos do conhecimento começaram a eclodir trazendo consigo uma série de nomes elegantes, tais como <em>business intelligence</em>, <em>data analytics</em>, <em>data warehouse</em> e <em>data engineering</em>.</p>
+<p>Apesar disso, <em>ciência de dados</em> desponta-se como o conceito mais razoável para denotar o aspecto científico dos dados. Em um contexto acadêmico, ela encontra-se na interseção de outras áreas do conhecimento e no cerne de uma cadeia maior envolvendo gestão de processos e o pensamento científico.</p>
+<p>É difícil estabelecer um modelo holístico unificado que traduza de maneira exata a capilaridade da ciência de dados nas atividades modernas. Diante disso, a Figura abaixo tenta ilustrar, para nossos propósitos, como a ciência de dados relaciona-se com outros domínios do conhecimento de maneira multidisciplinar.</p>
+<figure class="align-default" id="cycle-ds">
+<a class="reference internal image-reference" href="../_images/cycle-ds.png"><img alt="../_images/cycle-ds.png" src="../_images/cycle-ds.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Modelo holístico da ciência de dados.</span><a class="headerlink" href="#cycle-ds" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>O diagrama mostrado na <a class="reference internal" href="#cycle-ds"><span class="std std-numref">Fig. 1.1</span></a> possui três camadas. A camada mais interna mostra como áreas do conhecimento tradicionais se intersectam para dar forma ao que chamamos de <em>ciência de dados</em>. Aqui, enfatizamos três grandes conjuntos:</p>
+<ol class="simple">
+<li><p><strong>Matemática/Estatística</strong>, que fornece os modelos matemáticos e estatísticos fundamentais para estudo, análise e  inferência de dados, aos quais se agregam as técnicas de aprendizagem de máquina;</p></li>
+<li><p><strong>Ciência da Computação/Engenharia de Software</strong>, que fornece elementos básicos de hardware e software para projetar soluções de intercâmbio, armazenamento e segurança de dados, por exemplo.</p></li>
+<li><p><strong>Conhecimento do Domínio/Expertise</strong>, que é o próprio ramo de aplicação do conhecimento que está sendo buscado através dos dados em questão, ao qual se aderem o <em>data reporting</em>, a inteligência de negócios, o <em>marketing</em> e a comunicação de dados em geral para suporte à tomada de decisões.</p></li>
+</ol>
+<p>A camada intermediária relaciona-se à gestão de processos da cadeia de dados, que envolvem governança, curadoria, armazenamento e reuso de dados, por exemplo, isto é, todos os aspectos relacionados à preservação, manutenção, destruição e compartilhamento de dados.</p>
+<p>No invólucro mais externo, temos a camada relativa ao método científico de busca de soluções para um dado problema. Com alguma adaptação, os processos envolvidos nesta camada representam de maneira satisfatória tanto a ideia de <em>soluções dirigidas por dados</em> (<em>data-driven solutions</em>) amplamente utilizada em contextos empresariais e industriais, em que ferramentas inovadoras são construídas para entregar produtos e soluções especialmente voltadas a um segmento ou público particular com base em um cuidadoso mapeamento de clientes, quanto o compartilhamento e reprodutibilidade da pesquisa científica. Em linhas gerais, este ciclo contém os seguintes processos:</p>
+<ol class="simple">
+<li><p><strong>Definição do problema</strong>, etapa em que uma “grande pergunta” é feita, a qual, a princípio, pode ser respondida ao se vasculhar um conjunto de dados específico.</p></li>
+<li><p><strong>Aquisição de dados</strong>, etapa em que se coleta toda a informação relacionada ao problema lançado na etapa anterior.</p></li>
+<li><p><strong>Processamento de dados</strong>, etapa em que os dados adquiridos são processados para análise. Nesta etapa realiza-se um verdadeiro tratamento dos dados (limpeza, formatação e organização).</p></li>
+<li><p><strong>Análise de dados</strong>, etapa em que os dados são analisados e perscrutados por meio de técnicas de mineração, agrupamento e clusterização. Neste momento é que testes de hipótese e mecanismos de inferência são utilizados.</p></li>
+<li><p><strong>Descoberta de dados</strong>, etapa em que descobertas são realizadas, tais como correlações entre variáveis, comportamentos distintivos e tendências claramente  identificáveis, permitindo que conhecimento seja gerado a partir da informação.</p></li>
+<li><p><strong>Solução</strong>, etapa final do ciclo na qual as descobertas podem ser convertidas em produtos e ativos de valor agregado para o domínio do problema proposto.</p></li>
+</ol>
+<section id="o-caso-da-covid-19">
+<h3><span class="section-number">1.1.1. </span>O caso da COVID-19<a class="headerlink" href="#o-caso-da-covid-19" title="Permalink to this headline">¶</a></h3>
+<p>A pandemia causada pela COVID-19 que assolou o mundo recentemente pode ser tomada como um estudo de caso singular de aplicação do processo de análise de dados citado na seção anterior. Sob o ponto de vista científico, poderíamos levantar várias questões acerca do vírus no que diz respeito à velocidade de contágio, ao impacto em atividades econômicas, às alterações no comportamento social, entre outras.</p>
+<p>Modelos epidemiológicos apontam que a interação entre pessoas é um dos principais mecanismos de transmissão viral. A partir dessa premissa e levando em consideração o nosso país, uma pergunta que poderíamos fazer a fim de nortear uma pesquisa em ciência de dados seria: <em>a taxa de contágio do vírus em pessoas vivendo próximas de um centro comercial localizado em uma zona rural é menor do do que em pessoas vivendo próximas de um centro comercial localizado em uma zona urbana?</em>. É evidente que, para responder uma pergunta como esta com precisão científica, necessitaríamos de definições e muitos dados. Como delimitaríamos a zona urbana? O centro comercial deveria ser caracterizado como um conjunto de lojas de pequeno porte? Feiras? Um local de comércio onde, diariamente, circulam 100 pessoas por hora? Além disso, neste caso, como faríamos para coletar as informações de que precisamos? No banco de dados do IBGE? No DATASUS?</p>
+<p>A aquisição de dados pode ser uma tarefa mais difícil do que se imagina. No caso em questão, certamente buscaríamos informações em bancos de dados do setor público, de secretarias municipais, de órgãos estaduais, até instituições especializadas em âmbito federal. Entretanto, no caso do Brasil, nem todas as regiões – quiçá o país inteiro – usufruem de bancos de dados amplos e precisos onde variáveis primárias necessárias para a análise de dados sejam facilmente obtidas.</p>
+<p>Supondo que tenhamos em mãos as informações de saúde acerca dos habitantes das zonas rural e urbana necessárias para nossa pesquisa sobre a COVID-19, o outro passo a tomar é o processamento dos dados. De que maneira o banco de dados se apresenta? Como uma infinidade de planilhas de Excel sem nenhuma formatação específica? Arquivos .csv estruturados e categorizados por faixa etária, município, densidade populacional? Toda a informação é hierárquica em arquivos HDF5?</p>
+<p>Para cada situação, devemos dispor de ferramentas específicas e adequadas para manipular, organizar, limpar e estruturar os dados. Todo este tratamento dos dados ocorre, em geral, por duas vias: soluções pré-existentes (programas, recursos, interfaces, frameworks, projetos <em>open source</em> etc. já disponíveis no mercado ou na academia) ou soluções customizadas, criadas pelo cientista de dados para o atendimento de demandas específicas não cobertas pelas soluções pré-existentes.</p>
+<p>Uma vez processados, os dados atingem uma condição minimamente razoável para serem escrutinados, isto é, analisados minuciosamente. Nesta fase, o intelecto de quem analisa os dados está a todo vapor, visto que um misto de conhecimento técnico, experiência, e criatividade são os ingredientes para realizar descobertas. Os dados são levados de um lado para outro, calculam-se expressões matemática aqui e acolá, testes estatísticos são feitos uma, duas, três, n vezes, até que conclusões surpreendentes  podem aparecer.</p>
+<p>A propagação de um vírus é um fenômeno não linear suscetível a dinâmicas quase imprevisíveis. Portanto, ao procurarmos a resposta para uma pergunta difícil como a que pusemos acima, pode ser que descubramos padrões e tendências que sequer cogitávamos capazes de responder até mesmo perguntas para outros problemas. Poderíamos chegar à conclusão, por exemplo, que a taxa de contágio na zona urbana é afetada pelas características arquitetônicas do centro comercial: arejamento deficiente, corredores de movimentação estreitos, pontos de venda altamente concentrados, etc.</p>
+<p>Ao final do ciclo, espera-se que respostas sejam obtidas para que soluções sejam propostas e decisões tomadas com responsabilidade. Quando o assunto é a saúde de pessoas, questões éticas e morais tornam-se extremamente sensíveis. O papel de cientistas e analistas de dados em situações particulares como a da COVID-19 é munir gestores e líderes com recomendações resultantes das evidências mostradas pelos dados. Todavia, é importante dizer que modelos matemáticos são estimativas da realidade e também possuem graus de falibilidade. Portanto, equilibrar as descobertas com o peso das decisões é essencial para o alcance de soluções adequadas.</p>
+<p>Diversos projetos focados em ciência e análise de dados focados no estudo da COVID-19 estão atualmente em curso no mundo. Um dos pioneiros foi o <em>Coronavirus Resource Center</em> da <em>John Hopkins University</em> <a class="reference external" href="https://coronavirus.jhu.edu/map.html">[CRC-JHU]</a>. Iniciativas no Brasil são as seguintes: <em>Observatório Covid-19 BR</em> <a class="reference external" href="https://covid19br.github.io/index.html">[COVID19BR]</a>, <em>Observatório Covid-19 Fiocruz</em> <a class="reference external" href="https://portal.fiocruz.br/observatorio-covid-19">[FIOCRUZ]</a>, CoronaVIS-UFRGS <a class="reference external" href="https://covid19.ufrgs.dev/dashboard/#/dashboard">[CoronaVIS-UFRGS]</a>, CovidBR-UFCG <a class="reference external" href="http://covid.lsi.ufcg.edu.br">[CovidBR-UFCG]</a>, entre outras. Na UFPB, destacamos a página do LEAPIG <a class="reference external" href="http://www.de.ufpb.br/~leapig/projetos/covid_19.html#PB">[LEAPIG-UFPB]</a>. Certamente, a COVID-19 deverá se consagrar como um dos maiores estudos de caso da história mundial para a ciência e análise de dados, haja vista o poder computacional de nossos dias.</p>
+</section>
+<section id="cientista-de-dados-x-analista-de-dados-x-engenheiro-de-dados">
+<h3><span class="section-number">1.1.2. </span>Cientista de dados x analista de dados x engenheiro de dados<a class="headerlink" href="#cientista-de-dados-x-analista-de-dados-x-engenheiro-de-dados" title="Permalink to this headline">¶</a></h3>
+<p>As carreiras profissionais neste novo mundo dos dados converteram-se em muitas especialidades. Há três perfis, em particular, sobre os quais gostaríamos de comentar: <em>o cientista de dados</em>, o <em>analista de dados</em> e o <em>engenheiro de dados</em>. Porém, antes de entrar nesta “sopa de letrinhas”, vale a pena entender um pouco sobre como a ciência de dados, como um todo, é compreendida pelas pessoas mundo afora.</p>
+<p>Nos Estados Unidos, um esforço conjunto entre representantes da universidade, do poder público, da indústria e de outros segmentos culminou na publicação especial No. 1500-1 (2015) do <em>National Institute of Standards and Technology</em> (NIST), que definiu diversos conceitos relacionados à ciência de dados <a class="reference external" href="https://bigdatawg.nist.gov/_uploadfiles/NIST.SP.1500-1.pdf">[NIST 1500-1 (2015)]</a>. Segundo este documento,</p>
+<blockquote>
+<div><p><em>“<strong>Cientista de dados</strong> é um profissional que tem conhecimentos suficientes sobre necessidades de negócio, domínio do conhecimento, além de possuir habilidades analíticas, de software e de engenharia de sistemas para gerir, de ponta a ponta, os processos envolvidos no ciclo de vida dos dados.”</em></p>
+</div></blockquote>
+<p>Como se vê, a identidade do cientista de dados é definida por uma interseção de competências. Todas essas competências estão distribuídas, de certa forma, nas três grandes áreas do conhecimento que citamos acima. Por outro lado, o que exatamente é a <em>ciência de dados</em>?</p>
+<p>De acordo com o mesmo documento,</p>
+<blockquote>
+<div><p><em>“<strong>Ciência de dados</strong> é a extração do conhecimento útil diretamente a partir de dados através de um processo de descoberta ou de formulação e teste de hipóteses.”</em></p>
+</div></blockquote>
+<p>A partir disso, percebemos que <em>informação</em> não é sinônimo de <em>conhecimento</em>. Para termos uma clareza melhor dessa distinção, basta refletirmos sobre nosso uso diário do celular. O número de mensagens de texto, de fotos, áudios e vídeos que trocamos com outras pessoas por meio de aplicativos de mensagem instantânea, redes sociais ou e-mail é gigantesco. Quantos de nós não passamos pela necessidade de apagar conteúdo salvo em nosso celular para liberar espaço! Às vezes, não temos ideia de quanta informação trocamos por minuto com três ou quatro colegas. A questão central é: de toda essa informação, que fração seria considerada útil? Isto é, o que poderíamos julgar como conhecimento aproveitável? A resposta talvez seja um incrível “nada”…</p>
+<p>Portanto, ter bastante informação à disposição não significa, necessariamente, possuir conhecimento. Da mesma forma que estudar para aprender é um exercício difícil para o cérebro, garimpar conhecimento em meio a um mar de informação é uma tarefa que exige paciência, análise, raciocínio dedutivo e criatividade. Por falar em análise de dados, vamos entender um pouco sobre o termo <em>analytics</em>, frequentemente utilizado no mercado de trabalho.</p>
+<p><em>Analytics</em> pode ser traduzido literalmente como “análise” e, segundo o documento NIST 1500-1, é definido como o “processo de sintetizar conhecimento a partir da informação”. Diante disso, podemos dizer que</p>
+<blockquote>
+<div><p><em>“<strong>Analista de dados</strong> é o profissional capaz de sintetizar conhecimento a partir da informação e convertê-lo em ativo exploráveis.”</em></p>
+</div></blockquote>
+<p>Uma terceira vertente que surgiu com a evolução do <em>Big Data</em> foi a <em>engenharia de dados</em>, que tem por objetivo projetar ferramentas, dispositivos e sistemas com robustez suficiente para lidar com a grande massa de dados em circulação. Podemos dizer que</p>
+<blockquote>
+<div><p><em>“<strong>Engenheiro(a) de dados</strong> é o(a) profissional que explora recursos independentes para construir sistemas escaláveis capazes de armazenar, manipular e analisar dados com eficiência e e desenvolver novas arquiteturas sempre que a natureza do banco de dados exigi-las.”</em></p>
+</div></blockquote>
+<p>Embora essas três especializações possuam características distintivas, elas são tratadas como partes de um corpo maior, que é a Ciência de Dados. O projeto <a class="reference external" href="https://edison-project.eu">EDISON</a>, coordenado pela Universidade de Amsterdã, Holanda, por exemplo, foi responsável por mapear definições e taxonomias para construir grupos profissionais em ciência de dados para ocuparem posições em centros de pesquisa e indústrias na Europa. De acordo com o <em>EDISON Data Science Framework</em> <a class="reference external" href="https://edison-project.eu/sites/edison-project.eu/files/attached_files/node-5/edison2017poster02-dsp-profiles-v03.pdf">[EDSF]</a>, os grupos profissionais se dividem entre gerentes (CEOs, líderes de pesquisa), profissionais gerais (analista de negócios, engenheiros de dados etc.), profissionais de banco de dados (designer de computação em nuvem, designer de banco de dados etc.), profissionais de curadoria (bibliotecários, arquivistas etc.), profissionais técnicos (operadores de equipamentos, mantenedores de <em>warehouses</em> etc.) e profissionais de apoio (suporte a usuários, alimentadores de sistemas, atendentes etc.).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Em inglês, <em>data</em> (dados) é o plural de <em>datum</em> (dado). O uso do singular, <em>datum</em>, no âmbito da ciência de dados é menos frequente, sendo a forma <em>data</em> por vezes traduzida como <em>dado</em> ou <em>dados</em>. Entretanto, a palavra <em>datum</em>, cuja tradução para o português é imprecisa, pode ser encontrada com facilidade em textos sobre geociências, principalmente sob o conceito de <a class="reference external" href="https://en.wikipedia.org/wiki/Geodetic_datum"><em>geodetic datum</em></a>, atinente a sistemas e referenciais geodésicos.</p>
+</div>
+<section id="quem-faz-o-que">
+<h4><span class="section-number">1.1.2.1. </span>Quem faz o quê?<a class="headerlink" href="#quem-faz-o-que" title="Permalink to this headline">¶</a></h4>
+<p>Resumimos a seguir as principais tarefas atribuídas a cientistas, analistas e engenheiros(as) de dados com base em artigos de canais especializados <a class="reference external" href="https://www.dataquest.io/blog/data-analyst-data-scientist-data-engineer/">[DataQuest]</a>, <a class="reference external" href="https://ncube.com/blog/data-engineer-data-scientist-data-analyst-what-is-the-difference">[NCube]</a>, <a class="reference external" href="https://medium.com/&#64;gdesantis7/decoding-the-data-scientist-51b353a01443">[Medium]</a>, <a class="reference external" href="http://datascienceacademy.com.br/blog/qual-a-diferenca-entre-cientista-de-dados-e-engenheiro-de-machine-learning/">[Data Science Academy]</a>, <a class="reference external" href="https://data-flair.training/blogs/data-scientist-vs-data-engineer-vs-data-analyst/">[Data Flair]</a>. Uma característica importante entre os perfis diz respeito à organização dos dados. Enquanto cientistas e analistas de dados lidam com dados <em>estruturados</em>  – dados organizados e bem definidos que permitem fácil pesquisa –, engenheiros(as) de dados trabalham com dados <em>não estruturados</em>.</p>
+<section id="cientista-de-dados">
+<h5><span class="section-number">1.1.2.1.1. </span>Cientista de dados<a class="headerlink" href="#cientista-de-dados" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Realiza o pré-processamento, a transformação e a limpeza dos dados;</p></li>
+<li><p>Usa ferramentas de aprendizagem de máquina para descobrir padrões nos dados;</p></li>
+<li><p>Aperfeiçoa e otimiza algoritmos de aprendizagem de máquina;</p></li>
+<li><p>Formula questões de pesquisa com base em requisitos do domínio do conhecimento;</p></li>
+</ul>
+</section>
+<section id="analista-de-dados">
+<h5><span class="section-number">1.1.2.1.2. </span>Analista de dados<a class="headerlink" href="#analista-de-dados" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Analisa dados por meio de estatística descritiva;</p></li>
+<li><p>Usa linguagens de consulta a banco de dados para recuperar e manipular a informação;</p></li>
+<li><p>Confecciona relatórios usando visualização de dados;</p></li>
+<li><p>Participa do processo de entendimento de negócios;</p></li>
+</ul>
+</section>
+<section id="engenheiro-a-de-dados">
+<h5><span class="section-number">1.1.2.1.3. </span>Engenheiro(a) de dados<a class="headerlink" href="#engenheiro-a-de-dados" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Desenvolve, constroi e mantém arquiteturas de dados;</p></li>
+<li><p>Realiza testes de larga escala em plataformas de dados;</p></li>
+<li><p>Manipula dados brutos e não estruturados;</p></li>
+<li><p>Desenvolve <em>pipelines</em> para modelagem, mineração e produção de dados</p></li>
+<li><p>Cuida do suporte a cientistas e analistas de dados;</p></li>
+</ul>
+</section>
+</section>
+<section id="que-ferramentas-sao-usadas">
+<h4><span class="section-number">1.1.2.2. </span>Que ferramentas são usadas?<a class="headerlink" href="#que-ferramentas-sao-usadas" title="Permalink to this headline">¶</a></h4>
+<p>As ferramentas usadas por cada um desses profissionais são variadas e evoluem constantemente. Na lista a seguir, citamos algumas.</p>
+<section id="id1">
+<h5><span class="section-number">1.1.2.2.1. </span>Cientista de dados<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>R, Python, Hadoop, Ferramentas SQL (Oracle, PostgreSQL, MySQL etc.)</p></li>
+<li><p>Álgebra, Estatística, Aprendizagem de Máquina</p></li>
+<li><p>Ferramentas de visualização de dados</p></li>
+</ul>
+</section>
+<section id="id2">
+<h5><span class="section-number">1.1.2.2.2. </span>Analista de dados<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>R, Python,</p></li>
+<li><p>Excel, Pandas</p></li>
+<li><p>Ferramentas de visualização de dados (Tableau, Infogram, PowerBi etc.)</p></li>
+<li><p>Ferramentas para relatoria e comunicação</p></li>
+</ul>
+</section>
+<section id="id3">
+<h5><span class="section-number">1.1.2.2.3. </span>Engenheiro(a) de dados<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Ferramentas SQL e noSQL (Oracle NoSQL, MongoDB, Cassandra etc.)</p></li>
+<li><p>Soluções ETL - Extract/Transform/Load (AWS Glue, xPlenty, Stitch etc.)</p></li>
+<li><p>Python, Scala, Java etc.</p></li>
+<li><p>Spark, Hadoop etc.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="datasfera-o-carater-ubiquo-dos-dados">
+<h2><span class="section-number">1.2. </span>“Datasfera”: o caráter ubíquo dos dados<a class="headerlink" href="#datasfera-o-carater-ubiquo-dos-dados" title="Permalink to this headline">¶</a></h2>
+<p>Segundo um relatório da empresa americana <a class="reference external" href="https://www.idc.com">International Data Corporation - IDC</a>, cerca de 150 bilhões de dispositivos estarão conectados mundo afora em 2025. O estudo prevê que nesse ano a “datasfera”, ou seja, o universo de dados global, atingirá a estrondosa marca de 175 ZB (zetabytes) de dados.</p>
+<p>O crescimento exponencial projetado da “datasfera” de 2010 a 2025 está reportado na <a class="reference internal" href="#size-datasphere"><span class="std std-numref">Fig. 1.2</span></a> <a class="reference external" href="https://www.zdnet.com/article/by-2025-nearly-30-percent-of-data-generated-will-be-real-time-idc-says/">[ZDNET]</a>.</p>
+<figure class="align-center" id="size-datasphere">
+<a class="reference internal image-reference" href="../_images/size-datasphere.png"><img alt="../_images/size-datasphere.png" src="../_images/size-datasphere.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Crescimento anual do volume de dados no mundo. Fonte: IDC Global DataSphere, Nov 2018.</span><a class="headerlink" href="#size-datasphere" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>1 ZB equivale a 1 bilhão de terabytes. Levando em consideração que o mundo possua 8 bilhões de pessoas em 2025, a quantidade gerada de dados per capita naquele ano será de aproximadamente 22 terabytes, isto é, 22 HDs de 1 TB por pessoa!</p>
+</div>
+<section id="modelo-3v-em-multidominios">
+<h3><span class="section-number">1.2.1. </span>Modelo 3V em multidomínios<a class="headerlink" href="#modelo-3v-em-multidominios" title="Permalink to this headline">¶</a></h3>
+<p>A natureza expansiva dos dados pode ser explicada pelo <em>modelo 3V</em>:</p>
+<ul class="simple">
+<li><p><em>Velocidade</em>: rapidez com que se acumulam;</p></li>
+<li><p><em>Volume</em>: extensão do armazenamento;</p></li>
+<li><p><em>Variedade</em>: caráter massivo dos diversos tipos de dados (estruturados ou não estruturados)</p></li>
+</ul>
+<p>Há diversos domínios em que o modelo 3V é percebido, tais como:</p>
+<ul class="simple">
+<li><p>Finanças: mercado financeiro, precificação de ativos, transações bancárias etc.</p></li>
+<li><p>Setor público: políticas públicas, regulamentações, leis etc.</p></li>
+<li><p>Política: processo eleitoral, apuração de votos, acompanhamento de engajamento social etc.</p></li>
+<li><p>Saúde: sequenciamento de DNA, estudo de proteínas e metabolismo, estudos clínicos etc.</p></li>
+</ul>
+</section>
+</section>
+<section id="matematica-por-tras-dos-dados">
+<h2><span class="section-number">1.3. </span>Matemática por trás dos dados<a class="headerlink" href="#matematica-por-tras-dos-dados" title="Permalink to this headline">¶</a></h2>
+<p>No mundo real, lidamos com uma grande diversidade de dados, mas nem sempre percebemos como a Matemática atua por trás de cada pedacinho da informação. Ao longo da sua graduação em ciência de dados, você aprenderá conceitos abstratos novos e trabalhará com mais profundidade outros que já conhece, tais como vetor e matriz.</p>
+<p>Você provavelmente já deve ter ouvido falar que o computador digital funciona com uma linguagem <em>binária</em> cujas mensagens são todas codificadas como sequencias dos dígitos 0 e 1. Daí que vem o nome <em>bit</em>, um acrônimo para <em>binary digit</em>, ou dígito binário.</p>
+<p>Em termos de <em>bits</em>, a frase “Ciência de dados é legal!”, por exemplo, é escrita como</p>
+<p><code class="docutils literal notranslate"><span class="pre">1000011110100111101010110111011000111101001110000110000011001001100101</span> <span class="pre">1000001100100110000111001001101111111001110000011101001100000110110011001</span> <span class="pre">01110011111000011101100100001</span></code>.</p>
+<p>Interessante, não? Vejamos outros exemplos.</p>
+<p>Nas aulas de Física, você aprendeu que um vetor possui uma origem e uma extremidade. Tanto a origem como a extremidade são “pontos” do espaço. Agora, imagine um plano cartesiano. Se a sua origem é o ponto <span class="math notranslate nohighlight">\(O = (0,0)\)</span> e a sua extremidade é o ponto <span class="math notranslate nohighlight">\(B = (2,0)\)</span>, você pode traçar um vetor de <span class="math notranslate nohighlight">\(O\)</span> a <span class="math notranslate nohighlight">\(B\)</span> andando duas unidades para a direita. Claramente, este vetor estará sobre o eixo das abscissas. Imagine que você pudesse então usar cada unidade como se fosse uma “caixa” onde pudesse “guardar” uma informação sobre você. Ou seja, em <span class="math notranslate nohighlight">\(O = (0,0)\)</span> você coloca seu nome, em <span class="math notranslate nohighlight">\(A = (0,1)\)</span> a sua idade e em <span class="math notranslate nohighlight">\(B = (0,2)\)</span> seu CPF. Você teria um “vetor” com 3 valores. Além disso, suponha que você pudesse fazer o mesmo para mais 9 pessoas de sua família repetindo este processo em outros 9 vetores paralelos ao primeiro. Você teria agora <span class="math notranslate nohighlight">\(3 + 9 \times 3 = 3 + 27 = 30\)</span> caixas para guardar informações. OK, e daí?</p>
+<p>O que acabamos de ilustrar é a ideia fundamental para estruturar tabelas, planilhas do Excel, ou <em>dataframes</em> (que você aprenderá neste curso). Tudo isso são matrizes! Ou seja, informação organizada em linhas e colunas! Cada linha é como um vetor que contém 3 posições (são as colunas). Cada coluna são os registros que você coloca. Então, digamos que você tenha pensado na sua mãe como o próximo membro da família. O nome dela seria colocado na “caixa” que estaria no ponto <span class="math notranslate nohighlight">\((1,0)\)</span>, a idade dela na “caixa” que estaria no ponto <span class="math notranslate nohighlight">\((1,1)\)</span> e o CPF dela na “caixa” que estaria no ponto <span class="math notranslate nohighlight">\((1,2)\)</span>. Fazendo o com todos os demais membros, você vai concluiria que o CPF do 10o. membro da família deveria estar na “caixa” associada ao ponto <span class="math notranslate nohighlight">\((9,9)\)</span>.</p>
+<p>Para um computador, vetores são chamados de <em>arrays</em>. Uma lista de coisas também pode ser comparada a um <em>array</em>. Note acima que a segunda coordenada do primeiro vetor (aquele que tem as caixas de informação a seu respeito) é sempre zero. Ela se mantém fixa. Isto significa que o dado assemelha-se a algo <strong>unidimensional</strong>. Isto é, basta que eu apenas faça uma contagem de elementos em uma direção. Isto é muito similar ao conjunto dos números inteiros positivos <span class="math notranslate nohighlight">\(\mathbb{Z}_{+}\)</span>.</p>
+<p>Quando, porém, inserimos os vetores adicionais (as informações dos membros da sua família), a segunda coordenada também se altera. Isto significa que o dado assemelha-se a algo <strong>bidimensional</strong>. Ou seja, a contagem dos elementos ocorre em duas direções. Levando em conta um plano cartesiano com o eixo das ordenadas orientado para baixo e não para cima, como de costume, os números cresceriam não apenas para a direita, mas também para baixo. Logo, teríamos uma segunda contagem baseada em mais um conjunto de números inteiros positivos <span class="math notranslate nohighlight">\(\mathbb{Z}_{+}\)</span> independente do primeiro. De que estamos falando aqui? Estamos falando do conceito de <em>par ordenado</em>. Isto é, qualquer ponto <span class="math notranslate nohighlight">\((x,y)\)</span> com <span class="math notranslate nohighlight">\(x \in \mathbb{Z}_{+}\)</span> e <span class="math notranslate nohighlight">\(y \in \mathbb{Z}_{+}\)</span> é um “local” onde existiria uma caixinha onde podemos guardar informações de maneira independente. Uma matriz é exatamente isto.</p>
+<p>As imagens vistas na televisão, as <em>selfies</em> e fotografias que você faz com seu celular e as figuras neste livro podem todas ser descritas como matrizes. Cada elemento da matriz é identificado com uma posição <span class="math notranslate nohighlight">\((x,y)\)</span> ao qual damos o nome de <em>pixel</em>. Uma imagem é, por sua vez, uma pixelização. Porém, as imagens não são apenas “endereços” de pixels. Elas possuem cor, tons de cinza, ou são monocromáticas (preto e branco). As cores são representadas por “canais”. E, acredite, cada canal é também uma matriz de dados! No final das contas, uma imagem colorida é uma “matriz formada por outras matrizes”!</p>
+<p>Uma matriz formada a partir de outra matriz é um exemplo de dado <strong>tridimensional</strong>. Um exemplo disso são dados sequenciais, tais como um filme ou uma animação. O número de <em>frames per second</em> (FPS), ou “quadros por segundo”, é tão alta hoje em dia que nossa visão não é capaz de captar que, quando vamos ao cinema ou assistimos um filme pela TV ou no Youtube, o que vemos é exatamente a mudança rápida e sucessiva de vários “quadros” de imagens por segundo.</p>
+<p>Como você verá ao longo deste curso, muitos conceitos de Matemática que você aprendeu ao longo do Ensino Médio começarão a fazer mais sentido com as aplicações.</p>
+</section>
+<section id="ferramentas-computacionais-do-curso">
+<h2><span class="section-number">1.4. </span>Ferramentas computacionais do curso<a class="headerlink" href="#ferramentas-computacionais-do-curso" title="Permalink to this headline">¶</a></h2>
+<p>Neste curso, usaremos Python 3.x (onde x é um número de versão) como linguagem de programação. Por se tratar de uma linguagem interpretada, interagir com ela é mais fácil do que uma linguagem compilada. Um conjunto mínimo de recursos para Python funcionar é composto do <em>core</em> da linguagem, um terminal de comandos e um editor de texto. Enquanto programadores experientes usam menos recursos visuais, para efeito didático, usaremos interfaces mais amigáveis e interativas comprovadas como bons ambientes de aprendizagem.</p>
+<section id="ipython-e-jupyter-notebook">
+<h3><span class="section-number">1.4.1. </span><em>iPython</em> e <em>Jupyter Notebook</em><a class="headerlink" href="#ipython-e-jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<p>O <a class="reference external" href="http://ipython.org">[iPython]</a> foi um projeto iniciado em 2001 para o desenvolvimento de um interpretador Python para melhorar a interatividade com a linguagem. Ele foi integrado como um <em>kernel</em> (núcleo) no projeto <a class="reference external" href="http://jupyter.org">[Jupyter]</a>, desenvolvido em 2014, permitindo textos, códigos e elementos gráficos sejam integrados em cadernos interativos. <em>Jupyter notebooks</em> são interfaces onde podemos executar códigos em diferentes linguagens desde que alteremos os <em>kernels</em>. A palavra <em>Jupyter</em> é uma aglutinação das iniciais de <em>Julia</em>, <em>Python</em> e <em>R</em>, que são as linguagens de programação mais usuais para ciência de dados.</p>
+</section>
+<section id="anaconda">
+<h3><span class="section-number">1.4.2. </span><em>Anaconda</em><a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h3>
+<p>Em 2012, o projeto <a class="reference external" href="https://www.anaconda.com">[Anaconda]</a> foi iniciado como objetivo de fornecer uma ferramenta completa para o trabalho com Python. Em 2020, já como uma empresa de ponta, ela tornou-se uma das pioneiras no fornecimento de plataformas individuais e empresariais para ciência de dados. Segundo a empresa, a <a class="reference external" href="https://www.anaconda.com/products/individual">[Individual Edition]</a>, que é a versão aberta para uso é a mais popular no mundo com mais de 20 milhões de usuários. Recomendamos que você siga as orientações de instalação desta versão. Uma vez instalada, basta lançar as ferramentas a partir do dashboard <em>Anaconda Navigator</em>.</p>
+</section>
+<section id="jupyter-lab">
+<h3><span class="section-number">1.4.3. </span><em>Jupyter Lab</em><a class="headerlink" href="#jupyter-lab" title="Permalink to this headline">¶</a></h3>
+<p>Uma ferramenta que melhorou a interatividade do Jupyter é o <em>Jupyter Lab</em>, que realiza um alto nível de integração. Este <a class="reference external" href="https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906">[artigo]</a> discute as características do Jupyter Lab, entre as quais vale citar o recurso de arrastar/soltar para reordenar células de cadernos e copiá-las entre cadernos.</p>
+</section>
+<section id="binder">
+<h3><span class="section-number">1.4.4. </span><em>Binder</em><a class="headerlink" href="#binder" title="Permalink to this headline">¶</a></h3>
+<p>O projeto <a class="reference external" href="https://mybinder.org">[Binder]</a> funciona como um servidor online baseada na tecnologia <em>Jupyter Hub</em> para servir cadernos interativos online. Através do Binder, é possível executar códigos “na nuvem” sem a necessidade de instalações, porém as sessões são perdidas após o uso.</p>
+</section>
+<section id="google-colab">
+<h3><span class="section-number">1.4.5. </span><em>Google Colab</em><a class="headerlink" href="#google-colab" title="Permalink to this headline">¶</a></h3>
+<p>O <a class="reference external" href="http://colab.research.google.com">[Google Colab]</a>, uma redução de <em>Colaboratory</em>, é uma ferramenta que possui características mistas entre o <em>Jupyter notebook</em> e o <em>Binder</em>, porém permite que o usuário use a infra-estrutura de computação de alto desempenho (GPUs e TPUS) da Google. A vantagem é que usuários de contas Google podem sincronizar arquivos diretamente com o Google Drive.</p>
+</section>
+<section id="modulos-principais">
+<h3><span class="section-number">1.4.6. </span>Módulos principais<a class="headerlink" href="#modulos-principais" title="Permalink to this headline">¶</a></h3>
+<p>Neste curso, o ecossistema de ferramentas torna-se pleno com a adição de alguns módulos que são considerados essenciais para a prática da ciência e análise de dados contemporânea:</p>
+<ul class="simple">
+<li><p><em>numpy</em> (<em>NUMeric PYthon</em>): o <em>numpy</em> serve para o trabalho de computação numérica, operando fundamentalmente com vetores, matrizes e ágebra linear.</p></li>
+<li><p><em>pandas</em> (<em>Python for Data Analysis</em>): é a biblioteca para análise de dados de Python, que opera <em>dataframes</em> com eficiência.</p></li>
+<li><p><em>sympy</em> (<em>SYMbolic PYthon</em>): é um módulo para trabalhar com matemática simbólica e cumpre o papel de um verdadeiro sistema algébrico computacional.</p></li>
+<li><p><em>matplotlib</em>: voltado para plotagem e visualização de dados, foi um dos primeiros módulos Python para este fim.</p></li>
+<li><p><em>scipy</em> (<em>SCIentific PYthon</em>): o <em>scipy</em> pode ser visto, na verdade, como um módulo mais amplo que integra os módulos anteriores. Em particular, ele é utilizado para cálculos de integração numérica, interpolação, otimização  e estatística.</p></li>
+<li><p><em>seaborn</em>: é um módulo para visualização de dados baseado no <em>matplotlib</em>, porém com capacidades visuais melhores.</p></li>
+</ul>
+<p>A visualização de dados é um tema de suma importância para resultados da análise exploratória de dados em estatística. Um site recomendado para pesquisar as melhores ferramentas para análise de dados é o <a class="reference external" href="https://pyviz.org">[PyViz]</a>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ipynb"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="00-conteudo.html" title="previous page">Apresentação do curso</a>
+    <a class='right-next' id="next-link" href="02a-pip-venv.html" title="next page"><span class="section-number">2. </span>Ambientes virtuais com Python</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
