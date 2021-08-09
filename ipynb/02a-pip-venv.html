@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Ambientes virtuais com Python &#8212; Introdução à Ciência de Dados</title>
+    <title>Pacotes e ambientes virtuais com pip e venv &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,8 +52,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Crash course de conda" href="02b-conda.html" />
-    <link rel="prev" title="1. Introdução à Ciência de Dados" href="01-introducao.html" />
+    <link rel="next" title="Crash course de conda" href="02b-conda.html" />
+    <link rel="prev" title="Introdução à Ciência de Dados" href="01-introducao.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,23 +92,29 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Unidade 1
+  Parte 1
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01-introducao.html">
-   1. Introdução à Ciência de Dados
+   Introdução à Ciência de Dados
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Ambientes virtuais com Python
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02b-conda.html">
-   3.
    <em>
     Crash course
    </em>
@@ -120,12 +126,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03-ides.html">
-   4. Ambientes de desenvolvimento e computação interativa
+   Ambientes de desenvolvimento e computação interativa
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04-cvs-git.html">
-   5. Controle de versão
+   Controle de versão
   </a>
  </li>
 </ul>
@@ -225,18 +231,29 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vantagens">
-   2.1. Vantagens
+  <a class="reference internal nav-link" href="#objetivos">
+   Objetivos
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ambientes-virtuais">
+   Ambientes virtuais
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vantagens">
+     Vantagens
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gerenciamento-de-pacotes-e-ambientes">
-   2.2. Gerenciamento de pacotes e ambientes
+   Gerenciamento de pacotes e ambientes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pip">
-     2.2.1.
      <em>
       pip
      </em>
@@ -244,7 +261,6 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#venv">
-     2.2.2.
      <em>
       venv
      </em>
@@ -252,17 +268,17 @@
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#criacao-e-configuracao-do-ambiente-virtual">
-       2.2.2.1. Criação e configuração do ambiente virtual
+       Criação e configuração do ambiente virtual
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#instalacao-e-gestao-de-pacotes-no-ambiente-virtual">
-       2.2.2.2. Instalação e gestão de pacotes no ambiente virtual
+       Instalação e gestão de pacotes no ambiente virtual
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#salvamento-e-replicacao-do-ambiente-virtual">
-       2.2.2.3. Salvamento e replicação do ambiente virtual
+       Salvamento e replicação do ambiente virtual
       </a>
      </li>
     </ul>
@@ -271,15 +287,13 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outras-opcoes">
-   2.3. Outras opções
+   Outras opções
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#referencias">
-     2.3.1. Referências
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
  </li>
 </ul>
 
@@ -292,11 +306,21 @@
         
               <div>
                 
-  <section id="ambientes-virtuais-com-python">
-<h1><span class="section-number">2. </span>Ambientes virtuais com Python<a class="headerlink" href="#ambientes-virtuais-com-python" title="Permalink to this headline">¶</a></h1>
+  <section id="pacotes-e-ambientes-virtuais-com-pip-e-venv">
+<h1>Pacotes e ambientes virtuais com <em>pip</em> e <em>venv</em><a class="headerlink" href="#pacotes-e-ambientes-virtuais-com-pip-e-venv" title="Permalink to this headline">¶</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Dar visão geral sobre gerenciadores de pacote e ambientes virtuais;</p></li>
+<li><p>Aprender a utilizar o <em>pip</em> e o <em>venv</em> para gerenciar a instalação de pacotes, dependências e ambientes;</p></li>
+<li><p>Compreender comandos do <em>pip</em> e do <em>venv</em>, e praticá-los em terminal</p></li>
+</ul>
+</section>
+<section id="ambientes-virtuais">
+<h2>Ambientes virtuais<a class="headerlink" href="#ambientes-virtuais" title="Permalink to this headline">¶</a></h2>
 <p>Ambientes virtuais são locais isolados do resto do sistema operacional (daí o nome “virtual”) onde podemos instalar pacotes sem que estes interfiram nos demais pacotes configurados globalmente.</p>
 <section id="vantagens">
-<h2><span class="section-number">2.1. </span>Vantagens<a class="headerlink" href="#vantagens" title="Permalink to this headline">¶</a></h2>
+<h3>Vantagens<a class="headerlink" href="#vantagens" title="Permalink to this headline">¶</a></h3>
 <p>Algumas vantagens de se trabalhar com ambientes virtuais são:</p>
 <ul class="simple">
 <li><p><em>Impedir conflitos de versão:</em> suponha que o projeto A no qual você trabalha dependa de uma biblioteca que está na versão X. Então, dentro de alguns meses, você inicia um outro projeto B que depende de uma versão mais nova que X da mesma biblioteca e a atualiza. O projeto B funciona maravilhosamente bem, mas o A para de funcionar porque não suporta outra versão além da X. Conclusão: um conflito de versões!</p></li>
@@ -304,11 +328,12 @@
 <li><p><em>Execução independente de acesso privilegiado:</em> com um ambiente virtual, um usuário que se encontra em uma rede na qual ele não tem acesso como administrador para instalar programas livremente, é possível executar projetos sem ter acesso em nível de <em>root</em>.</p></li>
 </ul>
 </section>
+</section>
 <section id="gerenciamento-de-pacotes-e-ambientes">
-<h2><span class="section-number">2.2. </span>Gerenciamento de pacotes e ambientes<a class="headerlink" href="#gerenciamento-de-pacotes-e-ambientes" title="Permalink to this headline">¶</a></h2>
+<h2>Gerenciamento de pacotes e ambientes<a class="headerlink" href="#gerenciamento-de-pacotes-e-ambientes" title="Permalink to this headline">¶</a></h2>
 <p>Em geral, instalamos “pacotes” em ambientes virtuais. Pacotes podem ser comparados à concessão de habilidades e especializações a um programa. Logo, é necessário que compreendamos como gerimos a instalação de pacotes antes de criarmos ambientes virtuais. Aqui, falaremos um pouco sobre o <em>pip</em> e o <em>venv</em>.</p>
 <section id="pip">
-<h3><span class="section-number">2.2.1. </span><em>pip</em><a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
+<h3><em>pip</em><a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
 <p>A comunidade Python disponibiliza uma infinidade de pacotes em um local remoto chamado <a class="reference external" href="https://pypi.org">PyPi</a>, que significa <em>Python Package Index</em>. Uma das maneiras mais fáceis de instalar pacotes Python de terceiros disponíveis na PyPi é usar o gerenciador de pacotes chamado <em>pip</em>.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
@@ -690,7 +715,7 @@ Required-by: Sphinx
 <p>para instalar a biblioteca <em>lxml</em>, por exemplo, o <em>pip</em> a instalará globalmente em seu computador. Todavia, isso pode ser uma má escolha se você trabalhar com múltiplos projetos e versões como explicado anteriormente. Para evitar potenciais conflitos de versão e imcompatibilidades, podemos criar ambientes virtuais com o <em>venv</em>.</p>
 </section>
 <section id="venv">
-<h3><span class="section-number">2.2.2. </span><em>venv</em><a class="headerlink" href="#venv" title="Permalink to this headline">¶</a></h3>
+<h3><em>venv</em><a class="headerlink" href="#venv" title="Permalink to this headline">¶</a></h3>
 <p>O módulo <em>venv</em> passou a ser integrado na versão Python 3.3 e é intensamente discutido no <a class="reference external" href="https://www.python.org/dev/peps/pep-0405/">PEP 405</a>. Ele surgiu como uma melhoria do módulo anterior <a class="reference external" href="https://virtualenv.pypa.io/en/stable/"><em>virtualenv</em></a>, criado para Python 2, e com uma promessa de confiabilidade superior de isolamento. Por padrão, ele já vem instalado.</p>
 <p>Nesta seção, abordaremos as etapas essenciais do trabalho com <em>venv</em>, que deverão ser realizadas através da linha de comando, a saber:</p>
 <ul class="simple">
@@ -699,7 +724,7 @@ Required-by: Sphinx
 <li><p>Salvamento e replicação do ambiente virtual</p></li>
 </ul>
 <section id="criacao-e-configuracao-do-ambiente-virtual">
-<h4><span class="section-number">2.2.2.1. </span>Criação e configuração do ambiente virtual<a class="headerlink" href="#criacao-e-configuracao-do-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
+<h4>Criação e configuração do ambiente virtual<a class="headerlink" href="#criacao-e-configuracao-do-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
 <p>Vamos supor que o nosso ambiente virtual seja chamado de <code class="docutils literal notranslate"><span class="pre">icd</span></code>. Para criá-lo, fazemos o seguinte:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -734,7 +759,7 @@ drwxr-xr-x@  3 gustavo  staff   96 Jul  7 22:54 <span class=" -Color -Color-Blue
 <p>A ativação do ambiente produzirá uma mudança no terminal, tal como:</p>
 </section>
 <section id="instalacao-e-gestao-de-pacotes-no-ambiente-virtual">
-<h4><span class="section-number">2.2.2.2. </span>Instalação e gestão de pacotes no ambiente virtual<a class="headerlink" href="#instalacao-e-gestao-de-pacotes-no-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
+<h4>Instalação e gestão de pacotes no ambiente virtual<a class="headerlink" href="#instalacao-e-gestao-de-pacotes-no-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
 <p>Uma vez ativado o ambiente, você está isolado do sistema global para instalar pacotes. Vamos agora realizar a instalação dos seguintes pacotes, úteis para o nosso curso:</p>
 <ul class="simple">
 <li><p><em>numpy</em></p></li>
@@ -754,7 +779,7 @@ drwxr-xr-x@  3 gustavo  staff   96 Jul  7 22:54 <span class=" -Color -Color-Blue
 <p>Como podemos ver, não apenas os pacotes requisitados são instalados, mas também uma série de pacotes dependentes adicionais, tais como <em>mpmath</em> e <em>six</em>.</p>
 </section>
 <section id="salvamento-e-replicacao-do-ambiente-virtual">
-<h4><span class="section-number">2.2.2.3. </span>Salvamento e replicação do ambiente virtual<a class="headerlink" href="#salvamento-e-replicacao-do-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
+<h4>Salvamento e replicação do ambiente virtual<a class="headerlink" href="#salvamento-e-replicacao-do-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
 <p>Depois de termos estabelecido um ambiente virtual complexo, se houver interesse em mantê-lo para uso futuro, é natural que “salvemos” o seu estado para que possamos replicá-lo em outro lugar, ou permitir que outro usuário aproveite nossa configuração para construir o ambiente.</p>
 <p>Há uma maneira muito interessante de fazer isto, que se resume em usar o comando <em>freeze</em> e redirecionar os pacotes do ambiente para um arquivo de requisitos que chamaremos de <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>.</p>
 <p>Se analisarmos o conteúdo do arquivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>, veremos algo como:</p>
@@ -771,7 +796,7 @@ drwxr-xr-x@  3 gustavo  staff   96 Jul  7 22:54 <span class=" -Color -Color-Blue
 </section>
 </section>
 <section id="outras-opcoes">
-<h2><span class="section-number">2.3. </span>Outras opções<a class="headerlink" href="#outras-opcoes" title="Permalink to this headline">¶</a></h2>
+<h2>Outras opções<a class="headerlink" href="#outras-opcoes" title="Permalink to this headline">¶</a></h2>
 <p>Há várias formas disponíveis hoje em dia para alcançar a “separação” virtual de ambientes. Algumas opções que você pode estudar mais a respeito são:</p>
 <ul class="simple">
 <li><p>Contêinerização com <em>Docker</em> ou <em>Kubernetes</em></p></li>
@@ -779,15 +804,15 @@ drwxr-xr-x@  3 gustavo  staff   96 Jul  7 22:54 <span class=" -Color -Color-Blue
 <li><p>Gerenciamento de ambientes com <em>conda</em>, <em>miniconda</em>, <em>pipenv</em>,</p></li>
 </ul>
 <p>Veremos mais à frente como gerenciar pacotes e ambientes com um rápido curso sobre <em>conda</em>.</p>
+</section>
 <section id="referencias">
-<h3><span class="section-number">2.3.1. </span>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h3>
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">[PyPA]</a></p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/venv.html">[venv]</a></p></li>
 <li><p><a class="reference external" href="https://docs.python-guide.org/dev/virtualenvs/">[virtualenv]</a></p></li>
 <li><p><a class="reference external" href="https://python.land/virtual-environments/pipenv">[pipenv]</a></p></li>
 </ul>
-</section>
 </section>
 </section>
 
@@ -816,8 +841,8 @@ drwxr-xr-x@  3 gustavo  staff   96 Jul  7 22:54 <span class=" -Color -Color-Blue
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="01-introducao.html" title="previous page"><span class="section-number">1. </span>Introdução à Ciência de Dados</a>
-    <a class='right-next' id="next-link" href="02b-conda.html" title="next page"><span class="section-number">3. </span><em>Crash course</em> de <em>conda</em></a>
+    <a class='left-prev' id="prev-link" href="01-introducao.html" title="previous page">Introdução à Ciência de Dados</a>
+    <a class='right-next' id="next-link" href="02b-conda.html" title="next page"><em>Crash course</em> de <em>conda</em></a>
 
         </div>
         

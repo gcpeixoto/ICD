@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Crash course de conda &#8212; Introdução à Ciência de Dados</title>
+    <title>Crash course de conda &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,8 +52,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Ambientes de desenvolvimento e computação interativa" href="03-ides.html" />
-    <link rel="prev" title="2. Ambientes virtuais com Python" href="02a-pip-venv.html" />
+    <link rel="next" title="Ambientes de desenvolvimento e computação interativa" href="03-ides.html" />
+    <link rel="prev" title="Pacotes e ambientes virtuais com pip e venv" href="02a-pip-venv.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,23 +92,29 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Unidade 1
+  Parte 1
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01-introducao.html">
-   1. Introdução à Ciência de Dados
+   Introdução à Ciência de Dados
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02a-pip-venv.html">
-   2. Ambientes virtuais com Python
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3.
    <em>
     Crash course
    </em>
@@ -120,12 +126,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03-ides.html">
-   4. Ambientes de desenvolvimento e computação interativa
+   Ambientes de desenvolvimento e computação interativa
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04-cvs-git.html">
-   5. Controle de versão
+   Controle de versão
   </a>
  </li>
 </ul>
@@ -225,18 +231,23 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos">
+   Objetivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pre-requisitos">
-   3.1. Pré-requisitos
+   Pré-requisitos
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introducao">
-   3.2. Introdução
+   Introdução
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#beneficios-do-conda-para-cientistas-de-dados">
-     3.2.1. Benefícios do
+     Benefícios do
      <em>
       conda
      </em>
@@ -247,44 +258,44 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conceitos-fundamentais">
-   3.3. Conceitos fundamentais
+   Conceitos fundamentais
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comandos-fundamentais">
-   3.4. Comandos fundamentais
+   Comandos fundamentais
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#comandos-para-manutencao-e-atualizacao">
-     3.4.1. Comandos para manutenção e atualização
+     Comandos para manutenção e atualização
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#comandos-para-trabalhar-com-ambientes">
-     3.4.2. Comandos para trabalhar com ambientes
+     Comandos para trabalhar com ambientes
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#comandos-para-trabalhar-com-pacotes-e-canais">
-     3.4.3. Comandos para trabalhar com pacotes e canais
+     Comandos para trabalhar com pacotes e canais
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#comandos-adicionais">
-     3.4.4. Comandos adicionais
+     Comandos adicionais
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exemplos">
-   3.5. Exemplos
+   Exemplos
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#desempenho-do-conda">
-   3.6. Desempenho do
+   Desempenho do
    <em>
     conda
    </em>
@@ -292,7 +303,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercicios">
-   3.7. Exercícios
+   Exercícios
   </a>
  </li>
 </ul>
@@ -307,16 +318,24 @@
               <div>
                 
   <section id="crash-course-de-conda">
-<h1><span class="section-number">3. </span><em>Crash course</em> de <em>conda</em><a class="headerlink" href="#crash-course-de-conda" title="Permalink to this headline">¶</a></h1>
+<h1><em>Crash course</em> de <em>conda</em><a class="headerlink" href="#crash-course-de-conda" title="Permalink to this headline">¶</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Aprender a utilizar o <em>conda</em> para gerenciar a instalação de pacotes, dependências e ambientes;</p></li>
+<li><p>Entender conceitos de distribuição, módulo e repositório;</p></li>
+<li><p>Compreender comandos do <em>conda</em> e praticá-los em terminal;</p></li>
+</ul>
+</section>
 <section id="pre-requisitos">
-<h2><span class="section-number">3.1. </span>Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Permalink to this headline">¶</a></h2>
+<h2>Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Instalação</a> da distribuição Anaconda (recomenda-se Python 3.x);</p></li>
 <li><p>Acesso simples a um terminal ou ao <em>Anaconda Prompt</em>;</p></li>
 </ul>
 </section>
 <section id="introducao">
-<h2><span class="section-number">3.2. </span>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
+<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><em>conda</em> é um gerenciador de pacotes, dependências e ambientes para múltiplas linguagens;</p></li>
 <li><p>Pacote de código aberto executável em Windows, macOS e Linux;</p></li>
@@ -325,7 +344,7 @@
 <li><p>Atualmente, há cerca de 7500 pacotes gerenciados no repositório <a class="reference external" href="http://repo.anaconda.com">repo.anaconda.com</a> que são mantidos pela empresa Anaconda Inc.</p></li>
 </ul>
 <section id="beneficios-do-conda-para-cientistas-de-dados">
-<h3><span class="section-number">3.2.1. </span>Benefícios do <em>conda</em> para cientistas de dados<a class="headerlink" href="#beneficios-do-conda-para-cientistas-de-dados" title="Permalink to this headline">¶</a></h3>
+<h3>Benefícios do <em>conda</em> para cientistas de dados<a class="headerlink" href="#beneficios-do-conda-para-cientistas-de-dados" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Fornece pacotes pré-construídos que evitam a necessidade de lidar com compiladores ou saber como configurar uma ferramenta específica;</p></li>
 <li><p>Gerencia instalações de ferramentas que são mais difíceis de instalar (como TensorFlow) com apenas um passo;</p></li>
@@ -336,7 +355,7 @@
 </section>
 </section>
 <section id="conceitos-fundamentais">
-<h2><span class="section-number">3.3. </span>Conceitos fundamentais<a class="headerlink" href="#conceitos-fundamentais" title="Permalink to this headline">¶</a></h2>
+<h2>Conceitos fundamentais<a class="headerlink" href="#conceitos-fundamentais" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Anaconda: distribuição de código aberto, alto desempenho e otimizada para Python e R.</p></li>
 <li><p>Anaconda Cloud: repositório de pacotes hospedado na web (nuvem)</p></li>
@@ -356,7 +375,7 @@
 </div>
 </section>
 <section id="comandos-fundamentais">
-<h2><span class="section-number">3.4. </span>Comandos fundamentais<a class="headerlink" href="#comandos-fundamentais" title="Permalink to this headline">¶</a></h2>
+<h2>Comandos fundamentais<a class="headerlink" href="#comandos-fundamentais" title="Permalink to this headline">¶</a></h2>
 <p>A lista a seguir não é exaustiva e contempla os comandos <code class="docutils literal notranslate"><span class="pre">conda</span></code> mais frequentes. Baseia-se na <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">[Conda Cheat Sheet]</a></p>
 <p>Aqui, dividiremos os comandos nos seguintes grupos:</p>
 <ol class="simple">
@@ -366,7 +385,7 @@
 <li><p>adicionais</p></li>
 </ol>
 <section id="comandos-para-manutencao-e-atualizacao">
-<h3><span class="section-number">3.4.1. </span>Comandos para manutenção e atualização<a class="headerlink" href="#comandos-para-manutencao-e-atualizacao" title="Permalink to this headline">¶</a></h3>
+<h3>Comandos para manutenção e atualização<a class="headerlink" href="#comandos-para-manutencao-e-atualizacao" title="Permalink to this headline">¶</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>comando</p></th>
@@ -393,7 +412,7 @@
 </table>
 </section>
 <section id="comandos-para-trabalhar-com-ambientes">
-<h3><span class="section-number">3.4.2. </span>Comandos para trabalhar com ambientes<a class="headerlink" href="#comandos-para-trabalhar-com-ambientes" title="Permalink to this headline">¶</a></h3>
+<h3>Comandos para trabalhar com ambientes<a class="headerlink" href="#comandos-para-trabalhar-com-ambientes" title="Permalink to this headline">¶</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>comando</p></th>
@@ -443,7 +462,7 @@
 </div>
 </section>
 <section id="comandos-para-trabalhar-com-pacotes-e-canais">
-<h3><span class="section-number">3.4.3. </span>Comandos para trabalhar com pacotes e canais<a class="headerlink" href="#comandos-para-trabalhar-com-pacotes-e-canais" title="Permalink to this headline">¶</a></h3>
+<h3>Comandos para trabalhar com pacotes e canais<a class="headerlink" href="#comandos-para-trabalhar-com-pacotes-e-canais" title="Permalink to this headline">¶</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>comando</p></th>
@@ -477,7 +496,7 @@
 </div>
 </section>
 <section id="comandos-adicionais">
-<h3><span class="section-number">3.4.4. </span>Comandos adicionais<a class="headerlink" href="#comandos-adicionais" title="Permalink to this headline">¶</a></h3>
+<h3>Comandos adicionais<a class="headerlink" href="#comandos-adicionais" title="Permalink to this headline">¶</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>comando</p></th>
@@ -512,7 +531,7 @@
 </section>
 </section>
 <section id="exemplos">
-<h2><span class="section-number">3.5. </span>Exemplos<a class="headerlink" href="#exemplos" title="Permalink to this headline">¶</a></h2>
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Criar ambiente chamado “dataScience” com versão Python 3.8 contendo os pacotes numpy, versão 1.19.1, e pandas, mais atual no repositório Anaconda.</p></li>
 </ul>
@@ -592,7 +611,7 @@
 </div>
 </section>
 <section id="desempenho-do-conda">
-<h2><span class="section-number">3.6. </span>Desempenho do <em>conda</em><a class="headerlink" href="#desempenho-do-conda" title="Permalink to this headline">¶</a></h2>
+<h2>Desempenho do <em>conda</em><a class="headerlink" href="#desempenho-do-conda" title="Permalink to this headline">¶</a></h2>
 <p>A instalação de pacotes pode tornar-se lenta por uma variedade de motivos: processamento de metadados, velocidade de internt, verificação de dependências, etc. À medida que o número de pacotes disponíveis aumenta, a busca que o <em>conda</em> realiza pode perdurar por mais tempo.</p>
 <p>Caso ao tentar instalar um pacote haja lentidão, há algumas questões a analisar. Verifique se há dependências instaladas via <code class="docutils literal notranslate"><span class="pre">pip</span></code>; se os canais estão disponíveis; se o pacote que você está tentando instalar está disponível.</p>
 <p>Para melhorar o desempenho consulte recomendações <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/conda-performance.html#improving-conda-performance">aqui</a>.</p>
@@ -602,7 +621,7 @@
 </div>
 </section>
 <section id="exercicios">
-<h2><span class="section-number">3.7. </span>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Usando o <code class="docutils literal notranslate"><span class="pre">conda</span></code>, crie um novo ambiente de trabalho para o curso chamado <code class="docutils literal notranslate"><span class="pre">icd</span></code>.</p></li>
 <li><p>Ative o novo ambiente e instale:</p>
@@ -646,8 +665,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="02a-pip-venv.html" title="previous page"><span class="section-number">2. </span>Ambientes virtuais com Python</a>
-    <a class='right-next' id="next-link" href="03-ides.html" title="next page"><span class="section-number">4. </span>Ambientes de desenvolvimento e computação interativa</a>
+    <a class='left-prev' id="prev-link" href="02a-pip-venv.html" title="previous page">Pacotes e ambientes virtuais com <em>pip</em> e <em>venv</em></a>
+    <a class='right-next' id="next-link" href="03-ides.html" title="next page">Ambientes de desenvolvimento e computação interativa</a>
 
         </div>
         

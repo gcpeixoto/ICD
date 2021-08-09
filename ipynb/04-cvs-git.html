@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Controle de versão &#8212; Introdução à Ciência de Dados</title>
+    <title>Controle de versão &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,7 +52,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="4. Ambientes de desenvolvimento e computação interativa" href="03-ides.html" />
+    <link rel="prev" title="Ambientes de desenvolvimento e computação interativa" href="03-ides.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,23 +91,29 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Unidade 1
+  Parte 1
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01-introducao.html">
-   1. Introdução à Ciência de Dados
+   Introdução à Ciência de Dados
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02a-pip-venv.html">
-   2. Ambientes virtuais com Python
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02b-conda.html">
-   3.
    <em>
     Crash course
    </em>
@@ -119,12 +125,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03-ides.html">
-   4. Ambientes de desenvolvimento e computação interativa
+   Ambientes de desenvolvimento e computação interativa
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   5. Controle de versão
+   Controle de versão
   </a>
  </li>
 </ul>
@@ -225,22 +231,21 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#beneficios-de-um-scv">
-   5.1. Benefícios de um SCV
+   Benefícios de um SCV
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exemplos-de-scvs">
-   5.2. Exemplos de SCVs
+   Exemplos de SCVs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#processo-de-versionamento">
-   5.3. Processo de versionamento
+   Processo de versionamento
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#masters-e-branches">
-     5.3.1.
      <em>
       Masters
      </em>
@@ -254,7 +259,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#usando-o-git">
-   5.4. Usando o
+   Usando o
    <em>
     git
    </em>
@@ -262,17 +267,17 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#estados-de-arquivos">
-     5.4.1. Estados de arquivos
+     Estados de arquivos
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#comandos-basicos">
-     5.4.2. Comandos básicos
+     Comandos básicos
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#boas-praticas-do-commit">
-     5.4.3. Boas práticas do
+     Boas práticas do
      <em>
       commit
      </em>
@@ -280,12 +285,12 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#recuperacao-e-comparacao">
-     5.4.4. Recuperação e comparação
+     Recuperação e comparação
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#trabalhando-com-branches">
-     5.4.5. Trabalhando com
+     Trabalhando com
      <em>
       branches
      </em>
@@ -293,43 +298,42 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fusao">
-     5.4.6. Fusão
+     Fusão
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#conflitos">
-       5.4.6.1. Conflitos
+       Conflitos
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#ferramentas-para-resolver-conflitos">
-         5.4.6.1.1. Ferramentas para resolver conflitos
+         Ferramentas para resolver conflitos
         </a>
        </li>
       </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#boas-praticas">
-       5.4.6.2. Boas práticas
+       Boas práticas
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#integracao-com-repositorios">
-     5.4.7. Integração com repositórios
+     Integração com repositórios
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#vinculando-o-repositorio-local-com-o-remoto">
-       5.4.7.1. Vinculando o repositório local com o remoto
+       Vinculando o repositório local com o remoto
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pull-requests">
-     5.4.8.
      <em>
       Pull requests
      </em>
@@ -337,7 +341,6 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#forks">
-     5.4.9.
      <em>
       Forks
      </em>
@@ -347,7 +350,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resumo-de-comandos-git">
-   5.5. Resumo de comandos
+   Resumo de comandos
    <em>
     git
    </em>
@@ -355,7 +358,7 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tutorial-interativo-do-git">
-     5.5.1. Tutorial interativo do
+     Tutorial interativo do
      <em>
       Git
      </em>
@@ -365,17 +368,17 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#controle-de-versao-para-dados">
-   5.6. Controle de versão para dados
+   Controle de versão para dados
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercicios">
-   5.7. Exercícios
+   Exercícios
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#referencias">
-   5.8. Referências
+   Referências
   </a>
  </li>
 </ul>
@@ -390,13 +393,13 @@
               <div>
                 
   <section id="controle-de-versao">
-<h1><span class="section-number">5. </span>Controle de versão<a class="headerlink" href="#controle-de-versao" title="Permalink to this headline">¶</a></h1>
+<h1>Controle de versão<a class="headerlink" href="#controle-de-versao" title="Permalink to this headline">¶</a></h1>
 <p>Desenvolver softwares, reproduzir pesquisas clínicas e recuperar dados em um banco digital de dois anos atrás são atividades que dependem de uma gestão eficiente de arquivos. A primeira utiliza arquivos que são alterados com frequencia por uma ou mais pessoas; a segunda utiliza arquivos de outras pessoas e, às vezes, os aperfeiçoa; a terceira utiliza arquivos que estão preservados por ter algum valor agregado, por ser protegido por lei, ou por ser útil para reutilização.</p>
 <p>Quando trabalhamos ativamente em projetos, um ou mais arquivos (texto, código, ou ambos) são constantemente alterados por adição, modificação ou deleção de conteúdo. O controle sobre cada uma dessas operações é traduzido pelo conceito de <em>controle de versão</em>.</p>
 <p>Controle de versão é a <em>abordagem sistemática para registrar alterações realizadas em um arquivo ou conjunto de arquivos ao longo do tempo</em>.</p>
 <p>Neste capítulo, daremos uma visão geral sobre <em>sistemas de controle de versão</em> (SCVs), do inglês <em>control version systems</em>, e meios eficientes de gerir arquivos em repositórios remotos. Existem SCVs centralizados e distribuídos, embora os distribuídos, como é o caso do <em>Git</em>, tenham uso mais amplo.</p>
 <section id="beneficios-de-um-scv">
-<h2><span class="section-number">5.1. </span>Benefícios de um SCV<a class="headerlink" href="#beneficios-de-um-scv" title="Permalink to this headline">¶</a></h2>
+<h2>Benefícios de um SCV<a class="headerlink" href="#beneficios-de-um-scv" title="Permalink to this headline">¶</a></h2>
 <p>O uso de SCVs proporciona melhores condições de <em>backup</em> e reduz a probabilidade do cometimento de equívocos. Outros benefícios que SCVs trazem para desenvolvedores, cientistas ou gestores de dados são:</p>
 <ul class="simple">
 <li><p><em>Reprodutibilidade</em>: a reprodutibilidade é a capacidade de reproduzir completamente um ensaio, pesquisa ou relatório que tenha sido apresentado. Este conceito é muito utilizado na pesquisa científica, principalmente quando se deseja atestar conclusões.</p></li>
@@ -407,7 +410,7 @@
 </ul>
 </section>
 <section id="exemplos-de-scvs">
-<h2><span class="section-number">5.2. </span>Exemplos de SCVs<a class="headerlink" href="#exemplos-de-scvs" title="Permalink to this headline">¶</a></h2>
+<h2>Exemplos de SCVs<a class="headerlink" href="#exemplos-de-scvs" title="Permalink to this headline">¶</a></h2>
 <p>SCVs podem ser baseados em interface gráfica ou em linha de comando. Alguns exemplos da primeira classe são:</p>
 <ul class="simple">
 <li><p><em>Google Drive</em>: incorpora uma suíte de soluções, tais como Docs, Sheets e Slides. Todos possuem sistema de <em>tracking</em>.</p></li>
@@ -433,7 +436,7 @@
 </ul>
 </section>
 <section id="processo-de-versionamento">
-<h2><span class="section-number">5.3. </span>Processo de versionamento<a class="headerlink" href="#processo-de-versionamento" title="Permalink to this headline">¶</a></h2>
+<h2>Processo de versionamento<a class="headerlink" href="#processo-de-versionamento" title="Permalink to this headline">¶</a></h2>
 <p>O <em>workflow</em> de um SCV ocorre, em geral, nas seguintes etapas básicas:</p>
 <ol class="simple">
 <li><p>Criar arquivos</p></li>
@@ -442,54 +445,54 @@
 </ol>
 <p>A atribuição do <em>status</em> é o que se define por <em>versão</em> em um determinado tempo. Nos SCVs populares, uma versão é também chamada de <em>checkpoint</em>, <em>commit</em> ou <em>time-point</em>. Para o <em>Git</em>, o <em>commit</em> é a submissão (envio ou transmissão) de uma modificação de arquivo, isto é, uma nova versão de si.</p>
 <section id="masters-e-branches">
-<h3><span class="section-number">5.3.1. </span><em>Masters</em> e <em>branches</em><a class="headerlink" href="#masters-e-branches" title="Permalink to this headline">¶</a></h3>
+<h3><em>Masters</em> e <em>branches</em><a class="headerlink" href="#masters-e-branches" title="Permalink to this headline">¶</a></h3>
 <p>Neste curso, concentrar-nos-emos em entender o processo de versionamento aplicado a códigos. O desenvolvimento de códigos pode ser ilustrado como uma planta que possui um caule e ramificações. Pensamos no caule como a “linha-mestra” (<em>master</em>) do código, que ruma ao pleno desenvolvimento (ex.: um buscador dinâmico das músicas mais tocadas no Spotify durante um dia inteiro). As ramificações (<em>branches</em>) são as melhorias (<em>features</em>) que incorporamos ao código com o tempo.</p>
 <p>A ideia de uma ou mais <em>branches</em> é permitir que um programador trabalhe em múltiplas <em>features</em> ao mesmo tempo e decida, posteriormente, se as <em>branches</em> poderão ser fundidas na <em>master</em> ou não. Este processo é conhecido como “fusão” (<em>merge</em>). A <em>master</em>, por si, é chamada de <em>master branch</em> e estabelece um desenvolvimento <em>linear</em>. Quando <em>branches</em> adicionais coexistem, o desenvolvimento torna-se <em>não-linear</em>, característica determinante para dar eficiência a um SCV.</p>
-<p>A <a class="reference internal" href="#branch-linear"><span class="std std-numref">Fig. 5.1</span></a> ilustra uma <em>master branch</em>.</p>
+<p>A <a class="reference internal" href="#branch-linear"><span class="std std-numref">Fig. 3</span></a> ilustra uma <em>master branch</em>.</p>
 <figure class="align-center" id="branch-linear">
 <a class="reference internal image-reference" href="../_images/branch-linear.png"><img alt="../_images/branch-linear.png" src="../_images/branch-linear.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Ilustração de uma <em>master branch</em>.</span><a class="headerlink" href="#branch-linear" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Ilustração de uma <em>master branch</em>.</span><a class="headerlink" href="#branch-linear" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>A <a class="reference internal" href="#branch-nonlinear"><span class="std std-numref">Fig. 5.2</span></a> ilustra uma <em>master branch</em>.</p>
+<p>A <a class="reference internal" href="#branch-nonlinear"><span class="std std-numref">Fig. 4</span></a> ilustra uma <em>master branch</em>.</p>
 <figure class="align-center" id="branch-nonlinear">
 <a class="reference internal image-reference" href="../_images/branch-nonlinear.png"><img alt="../_images/branch-nonlinear.png" src="../_images/branch-nonlinear.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Ilustração de <em>branches</em> para inserção de <em>features</em>.</span><a class="headerlink" href="#branch-nonlinear" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Ilustração de <em>branches</em> para inserção de <em>features</em>.</span><a class="headerlink" href="#branch-nonlinear" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="usando-o-git">
-<h2><span class="section-number">5.4. </span>Usando o <em>git</em><a class="headerlink" href="#usando-o-git" title="Permalink to this headline">¶</a></h2>
+<h2>Usando o <em>git</em><a class="headerlink" href="#usando-o-git" title="Permalink to this headline">¶</a></h2>
 <p>Para começar, apontemos uma sutil diferença:</p>
 <ul class="simple">
 <li><p><em>Git</em>: é um SCV para gerenciar o histórico de códigos-fonte.</p></li>
 <li><p><em>GitHub</em>: serviço de hospedagem para repositórios <em>Git</em>.</p></li>
 </ul>
 <p>Enquanto outros SCVs lidam com as “mudanças” feitas em cada arquivo ao longo do tempo, o <em>Git</em> trata-os como um conjunto de imagens de um sistema de arquivos em miniatura. Toda vez que alteramos versões (<em>commit</em>), o <em>Git</em> basicamente “tira uma foto de todos os arquivos e armazena uma referência para esse conjunto de arquivos”. Para ser eficiente, se os arquivos não são alterados, o <em>Git</em> não armazena o arquivo novamente, mas um link para o arquivo idêntico anterior já armazenado. Então, o <em>Git</em> lida com <em>fluxo de estado dos arquivos</em>.</p>
-<p>A <a class="reference internal" href="#scv-delta"><span class="std std-numref">Fig. 5.3</span></a> e <a class="reference internal" href="#scv-git"><span class="std std-numref">Fig. 5.4</span></a> ilustram como se dá o fluxo dos arquivos no tempo para um SCV usual e para o <em>Git</em>.</p>
+<p>A <a class="reference internal" href="#scv-delta"><span class="std std-numref">Fig. 5</span></a> e <a class="reference internal" href="#scv-git"><span class="std std-numref">Fig. 6</span></a> ilustram como se dá o fluxo dos arquivos no tempo para um SCV usual e para o <em>Git</em>.</p>
 <figure class="align-center" id="scv-delta">
 <a class="reference internal image-reference" href="../_images/scv-delta.png"><img alt="../_images/scv-delta.png" src="../_images/scv-delta.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Armazenamento de arquivos e suas diferenças (“deltas”). Fonte: Pro Git Book.</span><a class="headerlink" href="#scv-delta" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Armazenamento de arquivos e suas diferenças (“deltas”). Fonte: Pro Git Book.</span><a class="headerlink" href="#scv-delta" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="scv-git">
 <a class="reference internal image-reference" href="../_images/scv-git.png"><img alt="../_images/scv-git.png" src="../_images/scv-git.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Armazenamento de arquivos como <em>snapshots</em> (estado dos arquivos”). Fonte: Pro Git Book.</span><a class="headerlink" href="#scv-git" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Armazenamento de arquivos como <em>snapshots</em> (estado dos arquivos”). Fonte: Pro Git Book.</span><a class="headerlink" href="#scv-git" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="estados-de-arquivos">
-<h3><span class="section-number">5.4.1. </span>Estados de arquivos<a class="headerlink" href="#estados-de-arquivos" title="Permalink to this headline">¶</a></h3>
+<h3>Estados de arquivos<a class="headerlink" href="#estados-de-arquivos" title="Permalink to this headline">¶</a></h3>
 <p>Um repositório <em>git</em> pode ser criado por inicialização em um diretório ou por clonagem (veremos mais à frente) de um repositório existente.</p>
 <p>O processo geral do <em>Git</em> é baseado em três etapas: <em>Alterar &gt; Preparar &gt; Enviar</em>. Em um diretório local, arquivos são criados, modificados, então admitidos a uma área de preparação (<em>stage area</em>) e, posteriormente, enviados (<em>commit</em>) a um estado de “nova versão”. Para submetê-los a um repositório remoto, “empurramos” (<em>push</em>) os arquivos para sincronizá-los com o repositório local.</p>
 <p>A seguir, faremos uma breve explanação sobre os comandos principais a serem usados.</p>
 </section>
 <section id="comandos-basicos">
-<h3><span class="section-number">5.4.2. </span>Comandos básicos<a class="headerlink" href="#comandos-basicos" title="Permalink to this headline">¶</a></h3>
+<h3>Comandos básicos<a class="headerlink" href="#comandos-basicos" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Para inicializar um novo repositório:</p></li>
 </ul>
@@ -520,16 +523,16 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
 </pre></div>
 </div>
-<p>A <a class="reference internal" href="#git-commands"><span class="std std-numref">Fig. 5.5</span></a> é um quadro que mostra um fluxo comum de como comandos <em>git</em> e arquivos relacionam-se.</p>
+<p>A <a class="reference internal" href="#git-commands"><span class="std std-numref">Fig. 7</span></a> é um quadro que mostra um fluxo comum de como comandos <em>git</em> e arquivos relacionam-se.</p>
 <figure class="align-center" id="git-commands">
 <a class="reference internal image-reference" href="../_images/git-commands.png"><img alt="../_images/git-commands.png" src="../_images/git-commands.png" style="width: 650px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Quadro de estado de arquivos e comandos do <em>Git</em>.</span><a class="headerlink" href="#git-commands" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Quadro de estado de arquivos e comandos do <em>Git</em>.</span><a class="headerlink" href="#git-commands" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="boas-praticas-do-commit">
-<h3><span class="section-number">5.4.3. </span>Boas práticas do <em>commit</em><a class="headerlink" href="#boas-praticas-do-commit" title="Permalink to this headline">¶</a></h3>
+<h3>Boas práticas do <em>commit</em><a class="headerlink" href="#boas-praticas-do-commit" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Escrever mensagem:</p></li>
 </ul>
@@ -598,7 +601,7 @@ Replaces symbol &#39;+&#39; with &#39;-&#39; at the expression &#39;a + b&#39; i
 </div>
 </section>
 <section id="recuperacao-e-comparacao">
-<h3><span class="section-number">5.4.4. </span>Recuperação e comparação<a class="headerlink" href="#recuperacao-e-comparacao" title="Permalink to this headline">¶</a></h3>
+<h3>Recuperação e comparação<a class="headerlink" href="#recuperacao-e-comparacao" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Para criar um novo <em>commit</em> que reverte as mudanças feitas na última versão a um estado anterior:</p></li>
 </ul>
@@ -646,8 +649,8 @@ Date:   Tue Mar 16 14:24:03 2021 -0300
 - Comparar somente arquivos relevantes</p>
 </section>
 <section id="trabalhando-com-branches">
-<h3><span class="section-number">5.4.5. </span>Trabalhando com <em>branches</em><a class="headerlink" href="#trabalhando-com-branches" title="Permalink to this headline">¶</a></h3>
-<p>Como ilustrado na <a class="reference internal" href="#branch-nonlinear"><span class="std std-numref">Fig. 5.2</span></a>, <em>branches</em> são abertas para incorporar novos elementos, funcionalidades ou componentes em um projeto de maneira a não interferir no tronco do projeto, que deve permanecer estável ao longo do tempo. <em>Branches</em> são também usadas para evitar rupturas acidentais que danifiquem a operação normal das componentes de projeto.</p>
+<h3>Trabalhando com <em>branches</em><a class="headerlink" href="#trabalhando-com-branches" title="Permalink to this headline">¶</a></h3>
+<p>Como ilustrado na <a class="reference internal" href="#branch-nonlinear"><span class="std std-numref">Fig. 4</span></a>, <em>branches</em> são abertas para incorporar novos elementos, funcionalidades ou componentes em um projeto de maneira a não interferir no tronco do projeto, que deve permanecer estável ao longo do tempo. <em>Branches</em> são também usadas para evitar rupturas acidentais que danifiquem a operação normal das componentes de projeto.</p>
 <ul class="simple">
 <li><p>Para criar uma nova <em>branch</em>, usamos:</p></li>
 </ul>
@@ -674,7 +677,7 @@ Date:   Tue Mar 16 14:24:03 2021 -0300
 </div>
 </section>
 <section id="fusao">
-<h3><span class="section-number">5.4.6. </span>Fusão<a class="headerlink" href="#fusao" title="Permalink to this headline">¶</a></h3>
+<h3>Fusão<a class="headerlink" href="#fusao" title="Permalink to this headline">¶</a></h3>
 <p>Para integrar as modificações propostas em uma <em>branch</em> na <em>branch master</em> realizamos uma espécie de “fusão”. Por exemplo, para fundir uma <em>branch</em> de origem, digamos <em>branch_A</em>, em outra de destino, digamos <em>branch_B</em>, primeiro devemos levar o ponteiro para a origem <em>branch_A</em> com:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout branch_A
 </pre></div>
@@ -684,14 +687,14 @@ Date:   Tue Mar 16 14:24:03 2021 -0300
 </pre></div>
 </div>
 <section id="conflitos">
-<h4><span class="section-number">5.4.6.1. </span>Conflitos<a class="headerlink" href="#conflitos" title="Permalink to this headline">¶</a></h4>
+<h4>Conflitos<a class="headerlink" href="#conflitos" title="Permalink to this headline">¶</a></h4>
 <p>Se, por exemplo, um mesmo arquivo for alterado na <em>branch_A</em>, mas não na <em>branch_B</em>, ao tentar fundi-las, uma incompatibilidade existirá, de maneira que um erro por conflito de versões será produzido.</p>
 <p>Para corrigir incompatibilidades, as partes modificadas do arquivo devem ser equalizadas ou substituídas por um novo arquivo. Em seguida, um novo <em>commit</em> deve ser submetido. Eventualmente, para descatar uma fusão, usamos:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git merge --abort
 </pre></div>
 </div>
 <section id="ferramentas-para-resolver-conflitos">
-<h5><span class="section-number">5.4.6.1.1. </span>Ferramentas para resolver conflitos<a class="headerlink" href="#ferramentas-para-resolver-conflitos" title="Permalink to this headline">¶</a></h5>
+<h5>Ferramentas para resolver conflitos<a class="headerlink" href="#ferramentas-para-resolver-conflitos" title="Permalink to this headline">¶</a></h5>
 <p>Algumas ferramentas que ajudam a resolver conflitos gerados por <em>merge</em> estão disponíveis no mercado, tais como</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://kdiff3.sourceforge.net/">KDiff3</a></p></li>
@@ -710,7 +713,7 @@ Date:   Tue Mar 16 14:24:03 2021 -0300
 </section>
 </section>
 <section id="boas-praticas">
-<h4><span class="section-number">5.4.6.2. </span>Boas práticas<a class="headerlink" href="#boas-praticas" title="Permalink to this headline">¶</a></h4>
+<h4>Boas práticas<a class="headerlink" href="#boas-praticas" title="Permalink to this headline">¶</a></h4>
 <p>Para trabalhar efetivamente com <em>branches</em>, algumas boas práticas recomendadas são:</p>
 <ul class="simple">
 <li><p>Manter a <em>master</em> limpa;</p></li>
@@ -720,7 +723,7 @@ Date:   Tue Mar 16 14:24:03 2021 -0300
 </section>
 </section>
 <section id="integracao-com-repositorios">
-<h3><span class="section-number">5.4.7. </span>Integração com repositórios<a class="headerlink" href="#integracao-com-repositorios" title="Permalink to this headline">¶</a></h3>
+<h3>Integração com repositórios<a class="headerlink" href="#integracao-com-repositorios" title="Permalink to this headline">¶</a></h3>
 <p>Repositórios remotos são hoje amplamente utilizados como meios de hospedagem e compartilhamento de código, entre os quais estão o <em>GitHub</em>, <em>GitLab</em> e o <em>Bitbucket</em>. Todavia, é possível que qualquer um crie seu próprio repositório em um servidor web (veja, por exemplo, este <a class="reference external" href="https://opensource.com/life/16/8/how-construct-your-own-git-server-part-6">link</a>).</p>
 <p>A seguir, damos exemplos de como utilizar o <em>GitHub</em>. Para realizar a comunicação entre um repositório local com seu homólogo remoto, ou vice-versa.</p>
 <p>Para clonar um repositório remoto localmente, o comando se parece com:</p>
@@ -746,7 +749,7 @@ Date:   Tue Mar 16 14:24:03 2021 -0300
 <p>No jargão da computação, <em>repo</em> é uma redução de repositório.</p>
 </div>
 <section id="vinculando-o-repositorio-local-com-o-remoto">
-<h4><span class="section-number">5.4.7.1. </span>Vinculando o repositório local com o remoto<a class="headerlink" href="#vinculando-o-repositorio-local-com-o-remoto" title="Permalink to this headline">¶</a></h4>
+<h4>Vinculando o repositório local com o remoto<a class="headerlink" href="#vinculando-o-repositorio-local-com-o-remoto" title="Permalink to this headline">¶</a></h4>
 <p>Para que tenhamos um repositório local em sincronia com um remoto, podemos realizar os seguintes passos:</p>
 <ul class="simple">
 <li><p>Inicialização e versionamento</p></li>
@@ -776,7 +779,7 @@ git push - u origin master
 </section>
 </section>
 <section id="pull-requests">
-<h3><span class="section-number">5.4.8. </span><em>Pull requests</em><a class="headerlink" href="#pull-requests" title="Permalink to this headline">¶</a></h3>
+<h3><em>Pull requests</em><a class="headerlink" href="#pull-requests" title="Permalink to this headline">¶</a></h3>
 <p>Caso queiramos contribuir com um projeto cuja propriedade seja de outro usuário, podemos requisitar acesso a ele no <em>GitHub</em> com <em>pull requests</em>.</p>
 <p>Suponhamos que 3 desenvolvedores atuam em um projeto em 3 branches distintas. Se um deles fizer uma modificação e submetê-la à <em>branch master</em> sem que os outros 2 acompanhem em tempo real, ambos podem atualizar suas <em>branches</em> com</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">master</span>
@@ -784,7 +787,7 @@ git push - u origin master
 </div>
 </section>
 <section id="forks">
-<h3><span class="section-number">5.4.9. </span><em>Forks</em><a class="headerlink" href="#forks" title="Permalink to this headline">¶</a></h3>
+<h3><em>Forks</em><a class="headerlink" href="#forks" title="Permalink to this headline">¶</a></h3>
 <p>Um <em>fork</em> é o ato de <em>aforquilhar</em> (“prender com forquilha ou garfo”) um projeto, no sentido de copiar o repositório de um usuário no GitHub para você. O repositório original “forkado” é chamado de <em>upstream</em>.</p>
 <p>Para trabalhar com a sua cópia “forkada”, siga os seguintes passos:</p>
 <ul class="simple">
@@ -826,7 +829,7 @@ git push - u origin master
 </section>
 </section>
 <section id="resumo-de-comandos-git">
-<h2><span class="section-number">5.5. </span>Resumo de comandos <em>git</em><a class="headerlink" href="#resumo-de-comandos-git" title="Permalink to this headline">¶</a></h2>
+<h2>Resumo de comandos <em>git</em><a class="headerlink" href="#resumo-de-comandos-git" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Comando</p></th>
@@ -888,13 +891,13 @@ git push - u origin master
 </tbody>
 </table>
 <section id="tutorial-interativo-do-git">
-<h3><span class="section-number">5.5.1. </span>Tutorial interativo do <em>Git</em><a class="headerlink" href="#tutorial-interativo-do-git" title="Permalink to this headline">¶</a></h3>
+<h3>Tutorial interativo do <em>Git</em><a class="headerlink" href="#tutorial-interativo-do-git" title="Permalink to this headline">¶</a></h3>
 <p>Descrever em palavras o que os comandos <em>git</em> realizam concretamente pode ser um pouco impreciso. A ferramenta
 <a class="reference external" href="https://learngitbranching.js.org/">Learn Git Branching</a> foi criada com o propósito de ensinar o <em>git</em> por meio de tutoriais interativos. Com ela, você pode praticar e entender comandos e simular o comportamento de um repositório real.</p>
 </section>
 </section>
 <section id="controle-de-versao-para-dados">
-<h2><span class="section-number">5.6. </span>Controle de versão para dados<a class="headerlink" href="#controle-de-versao-para-dados" title="Permalink to this headline">¶</a></h2>
+<h2>Controle de versão para dados<a class="headerlink" href="#controle-de-versao-para-dados" title="Permalink to this headline">¶</a></h2>
 <p>Em muitos casos, dados que são mantidos e armazenados em repositórios podem ser reutilizados ou reproduzidos para finalidades científicos, de pesquisa ou diversas. Aqueles que não são necessariamente identificados como <em>código</em>, tais como planilhas, PDFs e arquivos de texto também, podem ser difícies de controlar em termos de versão.</p>
 <p>O <em>GitHub</em>, por exemplo, não é adequado para arquivos maiores do que 100 Gb. Arquivos usuais em ciência de dados, tais como <code class="docutils literal notranslate"><span class="pre">.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">.yml</span></code>, podem ser mantidos em projetos no <em>GitHub</em>, desde que pequenos. Quando eles excedem o limite, o <em>GitHub</em> deixa de ser a ferramenta mais adequada para geri-los. Por esta razão, algumas ferramentas para que lidam com controle de versão de grandes arquivos passaram a ser desenvolvidas. Elas permitem que grandes dados sejam adicionados a repositórios e tenham seus estados controlados.</p>
 <p>Algumas dessas ferramentas são:</p>
@@ -913,14 +916,14 @@ git push - u origin master
 </ul>
 </section>
 <section id="exercicios">
-<h2><span class="section-number">5.7. </span>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Criar repositório para o curso e organizá-lo como um projeto.</p></li>
 <li><p>Praticar comandos do <em>git</em> na <em>sandbox</em> do <a class="reference external" href="https://learngitbranching.js.org/">Learn Git Branching</a>.</p></li>
 </ul>
 </section>
 <section id="referencias">
-<h2><span class="section-number">5.8. </span>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.github.com/en">[GitHub Docs]</a></p></li>
 <li><p><a class="reference external" href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">[Learn Git with Bitbucket]</a></p></li>
@@ -955,7 +958,7 @@ git push - u origin master
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="03-ides.html" title="previous page"><span class="section-number">4. </span>Ambientes de desenvolvimento e computação interativa</a>
+    <a class='left-prev' id="prev-link" href="03-ides.html" title="previous page">Ambientes de desenvolvimento e computação interativa</a>
 
         </div>
         
