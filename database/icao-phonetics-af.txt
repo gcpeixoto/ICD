@@ -1,0 +1,7 @@
+Character	Word	Pronunciation
+A	Alfa	ALFAH
+B	Beta	BRAHVOH
+C	Charlie	CHARLEE
+D	Delta	DELLTAH
+E	Echo	ECKOH
+F	Foxtrot	FOKSTROT

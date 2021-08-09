@@ -5,23 +5,18 @@
 
 # ## Conteúdo
 # 
-# Aula (2h)
-# - Apresentação do curso
-# - Introdução à ciência de dados
+# ### Introdução
+# 
+# - [Introdução à Ciência de Dados](01-introducao.ipynb)
 # 
 # ### Unidade 1 (20h)
 # 
-# #### Parte 1 - Ferramentas (6h)
+# #### Parte 1 (8h)
 # 
-# Aula (2h)
-# - Instalação de pacotes e ambientes virtuais
-# 
-# Aula (2h)
-# - IDEs e cadernos interativos
-# 
-# Aula (2h)
-# - Sistemas de controle de versão
-# 
+# - [Pacotes e ambientes virtuais com _pip_ e _venv_](02a-pip-venv.ipynb)
+# - [_Crash course_ de _conda_](02b-conda.ipynb)
+# - [Ambientes de desenvolvimento e computação interativa](03-ides.ipynb)
+# - [Controle de versão](04-cvs-git.ipynb)
 # 
 # <!--
 # #### Parte 2 - Python (14h) 
@@ -127,12 +122,17 @@
 # - Capstone project
 # -->
 
+# In[ ]:
+
+
+
+
+
 # 
 # ```{toctree}
 # :hidden:
 # :titlesonly:
-# :numbered: True
-# :caption: Unidade 1
+# :caption: Parte 1
 # 
 # 01-introducao
 # 02a-pip-venv

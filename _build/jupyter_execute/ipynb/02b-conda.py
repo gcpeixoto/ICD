@@ -3,6 +3,12 @@
 
 # # _Crash course_ de _conda_
 
+# ## Objetivos
+# 
+# - Aprender a utilizar o _conda_ para gerenciar a instalação de pacotes, dependências e ambientes; 
+# - Entender conceitos de distribuição, módulo e repositório;
+# - Compreender comandos do _conda_ e praticá-los em terminal;
+
 # ## Pré-requisitos
 # 
 # - [Instalação](https://docs.anaconda.com/anaconda/install/) da distribuição Anaconda (recomenda-se Python 3.x);

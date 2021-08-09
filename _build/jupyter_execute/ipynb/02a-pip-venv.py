@@ -1,20 +1,25 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Ambientes virtuais com Python
+# # Pacotes e ambientes virtuais com _pip_ e _venv_
+
+# ## Objetivos
+# 
+# - Dar visão geral sobre gerenciadores de pacote e ambientes virtuais;
+# - Aprender a utilizar o _pip_ e o _venv_ para gerenciar a instalação de pacotes, dependências e ambientes; 
+# - Compreender comandos do _pip_ e do _venv_, e praticá-los em terminal
+
+# ## Ambientes virtuais
 
 # Ambientes virtuais são locais isolados do resto do sistema operacional (daí o nome "virtual") onde podemos instalar pacotes sem que estes interfiram nos demais pacotes configurados globalmente.
 # 
-# ## Vantagens
+# ### Vantagens
 # 
 # Algumas vantagens de se trabalhar com ambientes virtuais são: 
 # 
 # - _Impedir conflitos de versão:_ suponha que o projeto A no qual você trabalha dependa de uma biblioteca que está na versão X. Então, dentro de alguns meses, você inicia um outro projeto B que depende de uma versão mais nova que X da mesma biblioteca e a atualiza. O projeto B funciona maravilhosamente bem, mas o A para de funcionar porque não suporta outra versão além da X. Conclusão: um conflito de versões!
 # - _Facilidade para reproduzir e instalar:_ uma vez que você tiver controle sobre as versões exatas necessárias para que seu projeto funcione, torna-se fácil para outros usuários reproduzir o projeto construindo-o e instalando o que for necessário.
 # - _Execução independente de acesso privilegiado:_ com um ambiente virtual, um usuário que se encontra em uma rede na qual ele não tem acesso como administrador para instalar programas livremente, é possível executar projetos sem ter acesso em nível de _root_.
-# 
-# 
-# 
 
 # ## Gerenciamento de pacotes e ambientes
 
@@ -212,7 +217,7 @@ setuptools 41.2.0
 # 
 # Veremos mais à frente como gerenciar pacotes e ambientes com um rápido curso sobre _conda_.
 
-# ### Referências 
+# ## Referências 
 # 
 # - [[PyPA]](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
 # 

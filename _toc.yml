@@ -1,13 +1,18 @@
 # The introduction file is mandatory
 - file: ipynb/00-conteudo
-- part: Unidade 1
-  numbered: true
+- part: Parte 1
+  numbered: false
   chapters:
   - file: ipynb/01-introducao
   - file: ipynb/02a-pip-venv
   - file: ipynb/02b-conda
   - file: ipynb/03-ides
   - file: ipynb/04-cvs-git
+#- part: Parte 2
+#  numbered: false
+#  chapters:
+#  - file: ipynb/05-python-intermediario
+
 #- part: Temas de projeto
 #  numbered: false
 #  chapters:
