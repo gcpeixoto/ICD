@@ -1,0 +1,1006 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Controle de versão &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python Intermediário: Parte 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário: Parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/rise/04-cvs-git-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/rise/04-cvs-git-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/rise/04-cvs-git-rise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos">
+   Objetivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beneficios-de-um-scv">
+   Benefícios de um SCV
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemplos-de-scvs">
+   Exemplos de SCVs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#processo-de-versionamento">
+   Processo de versionamento
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#masters-e-branches">
+     <em>
+      Masters
+     </em>
+     e
+     <em>
+      branches
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#master-branch">
+     <em>
+      Master branch
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#branches">
+     <em>
+      Branches
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usando-o-git">
+   Usando o
+   <em>
+    git
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estados-de-arquivos">
+     Estados de arquivos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-basicos">
+     Comandos básicos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boas-praticas-do-commit">
+     Boas práticas do
+     <em>
+      commit
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recuperacao-e-comparacao">
+     Recuperação e comparação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trabalhando-com-branches">
+     Trabalhando com
+     <em>
+      branches
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fusao">
+     Fusão
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conflitos">
+       Conflitos
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ferramentas-para-resolver-conflitos">
+         Ferramentas para resolver conflitos
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#boas-praticas">
+       Boas práticas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integracao-com-repositorios">
+     Integração com repositórios
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vinculando-o-repositorio-local-com-o-remoto">
+       Vinculando o repositório local com o remoto
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pull-requests">
+     <em>
+      Pull requests
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#forks">
+     <em>
+      Forks
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tutorial-interativo-do-git">
+     Tutorial interativo do
+     <em>
+      Git
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controle-de-versao-para-dados">
+   Controle de versão para dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicios">
+   Exercícios
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="controle-de-versao">
+<h1>Controle de versão<a class="headerlink" href="#controle-de-versao" title="Permalink to this headline">¶</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Entender o que um Sistema de Controle Versões (SCV) e o versionamento de código</p></li>
+<li><p>Compreender benefícios de SCVs para arquivos diversos (reprodutibilidade, auditabilidade, compartilhamento, entre outros)</p></li>
+<li><p>Ter uma visão geral sobre os SCVs mais comuns</p></li>
+<li><p>Entender o funcionamento do SCV <em>git</em>, bem como o workflow <em>stage</em>- <em>commit</em>- <em>push</em>.</p></li>
+<li><p>Compreender comandos básicos para criação e gerenciamento de repositórios locais e remotos</p></li>
+</ul>
+</section>
+<section id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Controle de versão é a <em>abordagem sistemática para registrar alterações realizadas em um arquivo ou conjunto de arquivos ao longo do tempo</em>.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Daremos uma visão geral sobre <em>sistemas de controle de versão</em> (SCVs), do inglês <em>control version systems</em>;</p></li>
+<li><p>Meios eficientes de gerir arquivos em repositórios remotos;</p></li>
+<li><p>Noções de <em>Git</em>.</p></li>
+</ul>
+</section>
+<section id="beneficios-de-um-scv">
+<h2>Benefícios de um SCV<a class="headerlink" href="#beneficios-de-um-scv" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Reprodutibilidade</p></li>
+<li><p>Auditabilidade</p></li>
+<li><p>Historicidade</p></li>
+<li><p>Sincronia</p></li>
+<li><p>Compartilhamento</p></li>
+</ul>
+</section>
+<section id="exemplos-de-scvs">
+<h2>Exemplos de SCVs<a class="headerlink" href="#exemplos-de-scvs" title="Permalink to this headline">¶</a></h2>
+<p>Podem ser baseados em interface gráfica ou em linha de comando. Exemplos:</p>
+<ul class="simple">
+<li><p><em>Google Drive</em>: suíte de soluções bem conhecida;</p></li>
+<li><p><em>Dropbox</em>: repositório de arquivos com versionamento automático;</p></li>
+<li><p><em>Overleaf</em>: ferramenta para escrever artigos científicos com sistema embutido de versão;</p></li>
+<li><p><em>HackMD</em>: ferramenta colaborativa para documentação.</p></li>
+</ul>
+<ul class="simple">
+<li><p><em>Bazaar</em></p></li>
+<li><p><em>Git</em></p></li>
+<li><p><em>Mercurial</em></p></li>
+<li><p><em>Subversion</em></p></li>
+<li><p><em>SVN</em></p></li>
+</ul>
+<p>Neste curso, aprenderemos sobre o <em>Git</em>. O <em>Git</em> surgiu em 2005 para ser um sistema SCV:</p>
+<ul class="simple">
+<li><p>rápido;</p></li>
+<li><p>eficiente;</p></li>
+<li><p>com suporte ao desenvolvimento não-linear (<em>multibranching</em>);</p></li>
+<li><p>completamente distribuído e</p></li>
+<li><p>capaz de manipular grandes projetos.</p></li>
+</ul>
+</section>
+<section id="processo-de-versionamento">
+<h2>Processo de versionamento<a class="headerlink" href="#processo-de-versionamento" title="Permalink to this headline">¶</a></h2>
+<p>O <em>workflow</em> de um SCV ocorre, em geral, nas seguintes etapas básicas:</p>
+<ol class="simple">
+<li><p>Criar arquivos</p></li>
+<li><p>Manipular arquivos (alterar, deletar, adicionar)</p></li>
+<li><p>Atribuir o estado (<em>status</em>) dos arquivos</p></li>
+</ol>
+<ul class="simple">
+<li><p>A atribuição do <em>status</em> é o que se define por <em>versão</em> em um determinado tempo.</p></li>
+<li><p>Nos SCVs populares, versão é também chamada de <em>checkpoint</em>, <em>commit</em> ou <em>time-point</em>.</p></li>
+<li><p>Para o <em>Git</em>, o <em>commit</em> é a submissão de uma modificação de arquivo (nova versão de si).</p></li>
+</ul>
+<section id="masters-e-branches">
+<h3><em>Masters</em> e <em>branches</em><a class="headerlink" href="#masters-e-branches" title="Permalink to this headline">¶</a></h3>
+<p>O desenvolvimento de códigos pode ser ilustrado como uma planta (caule + ramos).</p>
+<ul class="simple">
+<li><p>Caule (<em>master</em>): “linha-mestra”  do código;</p></li>
+<li><p>Ramos (<em>branches</em>):  são as melhorias (<em>features</em>) que incorporamos ao código com o tempo.</p></li>
+</ul>
+<ul class="simple">
+<li><p>A ideia de uma ou mais <em>branches</em> é permitir que um programador trabalhe em múltiplas <em>features</em> ao mesmo tempo e decida, posteriormente, se as <em>branches</em> poderão ser fundidas na <em>master</em> ou não.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Este processo é conhecido como “fusão” (<em>merge</em>).</p></li>
+<li><p>A <em>master</em>, por si, é chamada de <em>master branch</em> =&gt; desenvolvimento <em>linear</em>.</p></li>
+<li><p>Quando <em>branches</em> adicionais coexistem =&gt; desenvolvimento <em>não-linear</em>.</p></li>
+</ul>
+</section>
+<section id="master-branch">
+<h3><em>Master branch</em><a class="headerlink" href="#master-branch" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/branch-linear.png" src="../_images/branch-linear.png" />
+</section>
+<section id="branches">
+<h3><em>Branches</em><a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/branch-nonlinear.png" src="../_images/branch-nonlinear.png" />
+</section>
+</section>
+<section id="usando-o-git">
+<h2>Usando o <em>git</em><a class="headerlink" href="#usando-o-git" title="Permalink to this headline">¶</a></h2>
+<p>Para começar, apontemos uma sutil diferença:</p>
+<ul class="simple">
+<li><p><em>Git</em>: é um SCV para gerenciar o histórico de códigos-fonte.</p></li>
+<li><p><em>GitHub</em>: serviço de hospedagem para repositórios <em>Git</em>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Enquanto outros SCVs lidam com as “mudanças” feitas em cada arquivo ao longo do tempo, o <em>Git</em> trata-os como um conjunto de imagens de um sistema de arquivos em miniatura.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Toda vez que alteramos versões (<em>commit</em>), o <em>Git</em> basicamente “tira uma foto de todos os arquivos e armazena uma referência para esse conjunto de arquivos”.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Para ser eficiente, se os arquivos não são alterados, o <em>Git</em> não armazena o arquivo novamente, mas um link para o arquivo idêntico anterior já armazenado. Então, o <em>Git</em> lida com <em>fluxo de estado dos arquivos</em>.</p></li>
+</ul>
+<img alt="../_images/scv-delta.png" src="../_images/scv-delta.png" />
+<p>Fluxo dos arquivos no tempo para um SCV usual e para o <em>Git</em>.</p>
+<img alt="../_images/scv-git.png" src="../_images/scv-git.png" />
+<p>Armazenamento de arquivos como <em>snapshots</em> (estado dos arquivos”). Fonte: Pro Git Book.</p>
+<section id="estados-de-arquivos">
+<h3>Estados de arquivos<a class="headerlink" href="#estados-de-arquivos" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Um repositório <em>git</em> pode ser criado por inicialização em um diretório ou por clonagem de um repositório existente.</p></li>
+<li><p>O processo geral do <em>Git</em> é baseado em três etapas: <em>Alterar &gt; Preparar &gt; Enviar</em>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Em um diretório local, arquivos são criados, modificados, então admitidos a uma área de preparação (<em>stage area</em>) e, posteriormente, enviados (<em>commit</em>) a um estado de “nova versão”.</p></li>
+<li><p>Para submetê-los a um repositório remoto, “empurramos” (<em>push</em>) os arquivos para sincronizá-los com o repositório local.</p></li>
+</ul>
+</section>
+<section id="comandos-basicos">
+<h3>Comandos básicos<a class="headerlink" href="#comandos-basicos" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Para inicializar um novo repositório:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para adicionar arquivos à área de preparação:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para enviar arquivos à nova versão:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para saber o estado dos arquivos:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para gerar o histórico de mudanças:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<img alt="../_images/git-commands.png" src="../_images/git-commands.png" />
+<p>Quadro de estado de arquivos e comandos do <em>Git</em>.</p>
+</section>
+<section id="boas-praticas-do-commit">
+<h3>Boas práticas do <em>commit</em><a class="headerlink" href="#boas-praticas-do-commit" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Escrever mensagem:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git commit -m &quot;Modificação realizada&quot;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Configurar editor preferido</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git config --global core.editor &quot;editor_preferido&quot;
+</pre></div>
+</div>
+<p>As mensagens de um <em>commit</em> devem seguir algumas diretrizes:</p>
+<ol class="simple">
+<li><p>Dar significado: escreva mensagens objetivas, diretas e significativas.</p></li>
+<li><p>Resumir as alterações: um modelo sugerido é:</p>
+<ul class="simple">
+<li><p>1a. linha: escreva um título com até 50 caracteres.</p></li>
+<li><p>2a. linha: espaçamento.</p></li>
+<li><p>3a. linha em diante: corpo da mensagem contendo o detalhamento das alterações.</p></li>
+</ul>
+</li>
+</ol>
+<ol class="simple">
+<li><p>Usar o tempo verbal no presente: em geral, usamos o tempo verbal no indicativo ou no imperativo, ou mesmo gerúndio para especificar o título de um <em>commit</em>. Por exemplo:</p>
+<ul class="simple">
+<li><p>Fazendo algo… (<em>Doing, adding, including this</em>…)</p></li>
+<li><p>Faz algo… (<em>Do, add, include this</em>…)</p></li>
+</ul>
+</li>
+</ol>
+<ol class="simple">
+<li><p>Especificar arquivos: use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">arq1</span> <span class="pre">arq2</span> <span class="pre">...</span></code> para especificar os arquivos específicos relacionados ao <em>commit</em>.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Em Python, podemos usar <em>len(‘titulo’)</em> para contar se os o objeto <em>str</em> ‘titulo’ possui 50 caracteres ou menos.</p></li>
+</ul>
+<p>Exemplificamos abaixo dois tipos de mensagens que podem acompanhar um <em>commit</em>:</p>
+<ul class="simple">
+<li><p>Mensagem inadequada</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;Estou alterando o sinal de + para -.&quot;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Mensagem adequada</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;Corrige operação aritmética.
+
+Corrige símbolo de adição (&#39;+&#39;) para subtração (&#39;-&#39;) 
+na expressão &#39;a + b&#39; da fórmula utilizada no cálculo do XLMX.&quot;
+</pre></div>
+</div>
+<p>Em inglês, uma mensagem equivalente seria:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;Fix arithmetic operator.
+
+Replaces symbol &#39;+&#39; with &#39;-&#39; at the expression &#39;a + b&#39; in the formula to compute the XLMX. 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para ignorar arquivos de serem rastreados, criamos um arquivo chamado <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> e neles acrescentamos todos os demais que não devem ser rastreados.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Por exemplo, as instruções abaixo servem para criar o arquivo <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> e adicionar o arquivo <em>ignore.txt</em> para não ser rastreável.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch .gitignore<span class="p">;</span> <span class="nb">echo</span> <span class="s2">&quot;ignore.txt&quot;</span> &gt; .gitignore<span class="p">;</span> cat .gitignore
+</pre></div>
+</div>
+</section>
+<section id="recuperacao-e-comparacao">
+<h3>Recuperação e comparação<a class="headerlink" href="#recuperacao-e-comparacao" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Para criar um novo <em>commit</em> que reverte as mudanças feitas na última versão a um estado anterior:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git revert HEAD
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A partir do histórico de mudanças obtido por <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>, podemos reverter o projeto inteiro para uma versão anterior especificando o SHA do projeto:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout SHA
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>No caso de recuperar a versão anterior de um único arquivo, especificamos o arquivo com:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout SHA -- file
+</pre></div>
+</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">[SHA]</a> (<em>Secure Hash Algorithm</em>) é um conjunto de algoritmos desenvolvidos pelo americano National Institute of Standards and Technology (NIST) para encriptar arquivos e atribuir-lhes uma identidade para finalidades de verificação. SHA é um tipo de CHF (<em>cryptographic hash function</em>).</p>
+<p><strong>Exemplo:</strong> 2 <em>commits</em> realizados em um projeto.</p>
+<ul class="simple">
+<li><p>O ponteiro (<em>HEAD</em>) mostra que o <em>commit</em> com SHA <code class="docutils literal notranslate"><span class="pre">553ae56fb180ff630ba4026cbc1deb212e4efd42</span></code> é o estado mais atual do projeto.</p></li>
+<li><p>Para retornar o projeto ao estado imediatamente anterior, podemos fazer <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">431d0e589e7366dc21d0e18144f72b67d6b4a148</span></code>.</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>commit 553ae56fb180ff630ba4026cbc1deb212e4efd42 (HEAD -&gt; master)
+Author: Gustavo Oliveira &lt;gustavo.oliveira@ci.ufpb.br&gt;
+Date:   Tue Mar 16 16:06:50 2021 -0300
+
+    Fix ex5. Required to modify convertInputUnits to see pressure.
+
+commit 431d0e589e7366dc21d0e18144f72b67d6b4a148
+Author: Gustavo Oliveira &lt;gustavo.oliveira@ci.ufpb.br&gt;
+Date:   Tue Mar 16 14:24:03 2021 -0300
+
+    ex5 removed files.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para comparar duas versões de arquivo podemos usar</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span>
+</pre></div>
+</div>
+<p>Entender o que está sendo comparado
+- observar as indicações
+- Comparar somente arquivos relevantes</p>
+</section>
+<section id="trabalhando-com-branches">
+<h3>Trabalhando com <em>branches</em><a class="headerlink" href="#trabalhando-com-branches" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><em>Branches</em> são abertas para incorporar novos elementos, funcionalidades ou componentes em um projeto de maneira a não interferir no tronco do projeto, que deve permanecer estável ao longo do tempo.</p></li>
+<li><p>São também usadas para evitar rupturas acidentais que danifiquem a operação normal das componentes de projeto.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Para criar uma nova <em>branch</em>, usamos:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout -b nome_da_branch
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para navegar entre as <em>branches</em>:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout nome_da_branch
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para listar todas as <em>branches</em> existentes:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git branch
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para deletar completamente uma branch:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git branch -D nome_da_branch
+</pre></div>
+</div>
+</section>
+<section id="fusao">
+<h3>Fusão<a class="headerlink" href="#fusao" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Para integrar as modificações propostas em uma <em>branch</em> na <em>branch master</em> realizamos uma espécie de “fusão”.</p></li>
+<li><p>Por exemplo, para fundir uma <em>branch</em> de origem, digamos <em>branch_A</em>, em outra de destino, digamos <em>branch_B</em>, primeiro devemos levar o ponteiro para a origem <em>branch_A</em> com:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout branch_A
+</pre></div>
+</div>
+<p>Em seguida, a fundimos na <em>branch_B</em> com:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git merge branch_B
+</pre></div>
+</div>
+<section id="conflitos">
+<h4>Conflitos<a class="headerlink" href="#conflitos" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Se, por exemplo, um mesmo arquivo for alterado na <em>branch_A</em>, mas não na <em>branch_B</em>, ao tentar fundi-las, uma incompatibilidade existirá, de maneira que um erro por conflito de versões será produzido.</p></li>
+<li><p>Para corrigir incompatibilidades, as partes modificadas do arquivo devem ser equalizadas ou substituídas por um novo arquivo. Em seguida, um novo <em>commit</em> deve ser submetido. Eventualmente, para descatar uma fusão, usamos:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git merge --abort
+</pre></div>
+</div>
+<section id="ferramentas-para-resolver-conflitos">
+<h5>Ferramentas para resolver conflitos<a class="headerlink" href="#ferramentas-para-resolver-conflitos" title="Permalink to this headline">¶</a></h5>
+<p>Algumas ferramentas que ajudam a resolver conflitos gerados por <em>merge</em> estão disponíveis no mercado, tais como</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://kdiff3.sourceforge.net/">KDiff3</a></p></li>
+<li><p><a class="reference external" href="https://www.scootersoftware.com/">Beyond Compare</a></p></li>
+<li><p><a class="reference external" href="http://meldmerge.org/">Meld</a> e</p></li>
+<li><p><a class="reference external" href="https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge">P4Merge</a>.</p></li>
+</ul>
+<p>Para definir a ferramenta padrão para fusão, fazemos:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git config --global merge.tool name_of_the_tool
+</pre></div>
+</div>
+<p>e a lançamos com:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git mergetool
+</pre></div>
+</div>
+</section>
+</section>
+<section id="boas-praticas">
+<h4>Boas práticas<a class="headerlink" href="#boas-praticas" title="Permalink to this headline">¶</a></h4>
+<p>Para trabalhar efetivamente com <em>branches</em>, algumas boas práticas recomendadas são:</p>
+<ul class="simple">
+<li><p>Manter a <em>master</em> limpa;</p></li>
+<li><p>Adicionar apenas uma nova <em>feature</em> por <em>branch</em>;</p></li>
+<li><p>Usar nomes razoáveis para as <em>branches</em>.</p></li>
+</ul>
+</section>
+</section>
+<section id="integracao-com-repositorios">
+<h3>Integração com repositórios<a class="headerlink" href="#integracao-com-repositorios" title="Permalink to this headline">¶</a></h3>
+<p>Repositórios remotos são hoje amplamente utilizados como meios de hospedagem e compartilhamento de código, entre os quais estão o <em>GitHub</em>, <em>GitLab</em> e o <em>Bitbucket</em>. Todavia, é possível que qualquer um crie seu próprio repositório em um servidor web (veja, por exemplo, este <a class="reference external" href="https://opensource.com/life/16/8/how-construct-your-own-git-server-part-6">link</a>).</p>
+<ul class="simple">
+<li><p>A seguir, damos exemplos de como utilizar o <em>GitHub</em>. Para realizar a comunicação entre um repositório local com seu homólogo remoto, ou vice-versa.</p></li>
+</ul>
+<p>Para clonar um repositório remoto localmente, o comando se parece com:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>onde <em>user</em> é o nome do usuário no <em>GitHub</em> e <em>repo</em> é o nome do repositório.</p>
+<ul class="simple">
+<li><p>Para atualizar um repositório local tomando como base um remoto:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+<p>Neste caso, é necessário que o histórico de modificações também seja compatível entre ambos.</p>
+<ul class="simple">
+<li><p>Para submeter versões após um <em>commit</em> para o repositório remoto, utilizamos</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>No jargão da computação, <em>repo</em> é uma redução de repositório.</p>
+</div></blockquote>
+<section id="vinculando-o-repositorio-local-com-o-remoto">
+<h4>Vinculando o repositório local com o remoto<a class="headerlink" href="#vinculando-o-repositorio-local-com-o-remoto" title="Permalink to this headline">¶</a></h4>
+<p>Para que tenhamos um repositório local em sincronia com um remoto, podemos realizar os seguintes passos:</p>
+<ul class="simple">
+<li><p>Inicialização e versionamento</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd icd
+git init
+git add .
+git commit
+</pre></div>
+</div>
+<p>Acima, <code class="docutils literal notranslate"><span class="pre">icd</span></code> é o diretório onde o projeto está localizado em nosso disco local. Em seguida, inicializamos o rastreamento, adicionamos todos os arquivos contidos no diretório e atribuímos a versão.</p>
+<ul class="simple">
+<li><p>Vinculação remota</p></li>
+</ul>
+<p>Nesta etapa, fazemos a vinculação com o repositório remoto no <em>GitHub</em> e “empurramos” os arquivos para lá:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git remote add origin https://github.com/user/repo.git
+git push - u origin master
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Atualização local</p></li>
+</ul>
+<p>Caso alteremos os arquivos diretamente no <em>GitHub</em>, podemos atualizar o repositório local com:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git pull
+</pre></div>
+</div>
+</section>
+</section>
+<section id="pull-requests">
+<h3><em>Pull requests</em><a class="headerlink" href="#pull-requests" title="Permalink to this headline">¶</a></h3>
+<p>Caso queiramos contribuir com um projeto cuja propriedade seja de outro usuário, podemos requisitar acesso a ele no <em>GitHub</em> com <em>pull requests</em>.</p>
+<p>Suponhamos que 3 desenvolvedores atuam em um projeto em 3 branches distintas. Se um deles fizer uma modificação e submetê-la à <em>branch master</em> sem que os outros 2 acompanhem em tempo real, ambos podem atualizar suas <em>branches</em> com</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+</section>
+<section id="forks">
+<h3><em>Forks</em><a class="headerlink" href="#forks" title="Permalink to this headline">¶</a></h3>
+<p>Um <em>fork</em> é o ato de <em>aforquilhar</em> (“prender com forquilha ou garfo”) um projeto, no sentido de copiar o repositório de um usuário no GitHub para você. O repositório original “forkado” é chamado de <em>upstream</em>.</p>
+<p>Para trabalhar com a sua cópia “forkada”, siga os seguintes passos:</p>
+<ul class="simple">
+<li><p>Clone o <em>repo</em> aforquilhado localmente:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone git@github.com/seu_user/forked_repo.git
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Adicione o <em>upstream</em> à sua lista de repositórios remotos para receber as mudanças submetidas no <em>repo</em> original:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git remote add upstream https://github.com/upstream_user/original_repo.git
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Verifique se ele foi, de fato adicionado:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git remote -v
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Atualize o <em>repo</em> aforquilhado trazendo do original as mudanças e <em>commits</em> mais recentes, bem como todas as <em>branches</em> (fazer uma “juntada”):</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git fetch upstream
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Liste todas as <em>branches</em>, incluindo as do <em>upstream</em>:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git branch -va
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Direcione o ponteiro para a sua <em>master branch</em>:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout master
+</pre></div>
+</div>
+</section>
+<section id="tutorial-interativo-do-git">
+<h3>Tutorial interativo do <em>Git</em><a class="headerlink" href="#tutorial-interativo-do-git" title="Permalink to this headline">¶</a></h3>
+<p>Descrever em palavras o que os comandos <em>git</em> realizam concretamente pode ser um pouco impreciso. A ferramenta
+<a class="reference external" href="https://learngitbranching.js.org/">Learn Git Branching</a> foi criada com o propósito de ensinar o <em>git</em> por meio de tutoriais interativos. Com ela, você pode praticar e entender comandos e simular o comportamento de um repositório real.</p>
+</section>
+</section>
+<section id="controle-de-versao-para-dados">
+<h2>Controle de versão para dados<a class="headerlink" href="#controle-de-versao-para-dados" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Ferramentas para que lidam com controle de versão de grandes arquivos passaram a ser desenvolvidas.</p></li>
+<li><p>Elas permitem que grandes dados sejam adicionados a repositórios e tenham seus estados controlados.</p></li>
+<li><p>Algumas dessas ferramentas são:</p>
+<ul>
+<li><p><a class="reference external" href="https://cyberduck.io">CyberDuck</a></p></li>
+<li><p><a class="reference external" href="https://www.datalad.org">DataLad</a></p></li>
+<li><p><a class="reference external" href="https://git-lfs.github.com/"><em>Git LFS</em></a></p></li>
+<li><p><a class="reference external" href="https://git-annex.branchable.com/"><em>git-annex</em></a></p></li>
+</ul>
+</li>
+</ul>
+<p>Exemplos de ferramentas de <em>cloud computing</em> para gestão de grandes arquivos e controle de dados são:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.alibabacloud.com">Alibaba Cloud</a></p></li>
+<li><p><a class="reference external" href="https://aws.amazon.com/cli/">AWS CLI</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com">Google Cloud</a></p></li>
+<li><p><a class="reference external" href="https://azure.microsoft.com/en-us/">Microsoft Azure</a></p></li>
+</ul>
+</section>
+<section id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Criar repositório para o curso e organizá-lo como um projeto.</p></li>
+<li><p>Praticar comandos do <em>git</em> na <em>sandbox</em> do <a class="reference external" href="https://learngitbranching.js.org/">Learn Git Branching</a>.</p></li>
+</ul>
+</section>
+<section id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en">[GitHub Docs]</a></p></li>
+<li><p><a class="reference external" href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">[Learn Git with Bitbucket]</a></p></li>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2">[Pro Git Book]</a></p></li>
+<li><p><a class="reference external" href="https://the-turing-way.netlify.app/welcome.html">[The Turing Way]</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

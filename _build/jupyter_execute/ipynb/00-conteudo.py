@@ -18,26 +18,16 @@
 # - [Ambientes de desenvolvimento e computação interativa](03-ides.ipynb)
 # - [Controle de versão](04-cvs-git.ipynb)
 # 
+# #### Parte 2 (10h) 
+# 
+# - [Python intermediário - Parte 1](05-python-intermediario.ipynb)
+# - [Python intermediário - Parte 2](06-python-intermediario-2.ipynb)
+# - [Python intermediário - Parte 3](07-python-intermediario-3.ipynb)
+# - [Computação vetorizada](08a-computacao-vetorizada.ipynb)
+# - [Álgebra Linear Computacional básica](08b-alc.ipynb)
+# - [Plotagem e formatação de gráficos](09-plotagem-matplotlib.ipynb)
+# 
 # <!--
-# #### Parte 2 - Python (14h) 
-# 
-# Aula (2h)
-# - Python avançado: string, list, dict, set
-# 
-# Aula (2h)
-# - Python avançado: lambda, map, filter  
-# 
-# Aula (2h)
-# - Python avançado: counter, random, yield 
-# 
-# Aula (2h)
-# - Computação vetorizada com numpy (vetores)  
-# Aula (2h)
-# - Computação vetorizada com numpy (matrizes)  
-# 
-# Aula (2h)
-# - Plotagem básica com matplotlib
-# 
 # Aula (2h)
 # - Prova 2
 # 
@@ -122,12 +112,6 @@
 # - Capstone project
 # -->
 
-# In[ ]:
-
-
-
-
-
 # 
 # ```{toctree}
 # :hidden:
@@ -139,5 +123,19 @@
 # 02b-conda
 # 03-ides
 # 04-cvs-git
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
+# :caption: Parte 2
+# 
+# 05-python-intermediario
+# 06-python-intermediario-2
+# 07-python-intermediario-3
+# 08a-computacao-vetorizada
+# 08b-alc
+# 09-plotagem-matplotlib
 # ```
 # 

@@ -2,7 +2,17 @@
 # coding: utf-8
 
 # # Controle de versão
+
+# ## Objetivos
 # 
+# - Entender o que um Sistema de Controle Versões (SCV) e o versionamento de código
+# - Compreender benefícios de SCVs para arquivos diversos (reprodutibilidade, auditabilidade, compartilhamento, entre outros)
+# - Ter uma visão geral sobre os SCVs mais comuns
+# - Entender o funcionamento do SCV _git_, bem como o workflow _stage_- _commit_- _push_.
+# - Compreender comandos básicos para criação e gerenciamento de repositórios locais e remotos
+
+# ## Introdução
+
 # Desenvolver softwares, reproduzir pesquisas clínicas e recuperar dados em um banco digital de dois anos atrás são atividades que dependem de uma gestão eficiente de arquivos. A primeira utiliza arquivos que são alterados com frequencia por uma ou mais pessoas; a segunda utiliza arquivos de outras pessoas e, às vezes, os aperfeiçoa; a terceira utiliza arquivos que estão preservados por ter algum valor agregado, por ser protegido por lei, ou por ser útil para reutilização. 
 # 
 # Quando trabalhamos ativamente em projetos, um ou mais arquivos (texto, código, ou ambos) são constantemente alterados por adição, modificação ou deleção de conteúdo. O controle sobre cada uma dessas operações é traduzido pelo conceito de _controle de versão_.

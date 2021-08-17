@@ -3,6 +3,12 @@
 
 # # Ambientes de desenvolvimento e computação interativa
 
+# ## Objetivos
+# 
+# - Compreender os conceitos de IDE e computação interativa;
+# - Ter uma visão geral sobre IDEs mais populares;
+# - Compreender a estrutura e a extensibilidade de um _Jupyter Notebook_.
+
 # ## IDEs para ciência de dados
 # 
 # Um IDE (_Integrated Development Environment_), ambiente de desenvolvimento integrado, é um software que facilita programadores para o desenvolvimento de softwares. Em geral, as funcionalidades básicas de um IDE são: 

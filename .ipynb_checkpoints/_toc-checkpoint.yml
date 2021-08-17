@@ -8,10 +8,15 @@
   - file: ipynb/02b-conda
   - file: ipynb/03-ides
   - file: ipynb/04-cvs-git
-#- part: Parte 2
-#  numbered: false
-#  chapters:
-#  - file: ipynb/05-python-intermediario
+- part: Parte 2
+  numbered: false
+  chapters:
+  - file: ipynb/05-python-intermediario
+  - file: ipynb/06-python-intermediario-2
+  - file: ipynb/07-python-intermediario-3
+  - file: ipynb/08a-computacao-vetorizada
+  - file: ipynb/08b-alc
+  - file: ipynb/09-plotagem-matplotlib
 
 #- part: Temas de projeto
 #  numbered: false
