@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ambientes de desenvolvimento e computação interativa &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python Intermediário: Parte 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python Intermediário: Parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional Básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/rise/03-ides-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/rise/03-ides-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/rise/03-ides-rise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ides-para-ciencia-de-dados">
+   IDEs para ciência de dados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alguns-ides-comumente-usados">
+     Alguns IDEs comumente usados
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo-de-uso-spyder-5-0">
+     Exemplo de uso: Spyder 5.0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#completacao-de-codigo-inteligente">
+     Completação de código inteligente
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cadernos-interativos">
+   Cadernos interativos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-projeto-jupyter">
+     O Projeto [Jupyter]
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyterlab">
+     JupyterLab
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instalacao">
+       Instalação
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inicializacao">
+       Inicialização
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#elementos-da-interface">
+       Elementos da interface
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#workspace">
+       Workspace
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#funcoes-de-url-uteis">
+       Funções de URL úteis
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#estrutura-de-um-arquivo-ipynb">
+       Estrutura de um arquivo
+       <em>
+        .ipynb
+       </em>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#formatos-de-saida-de-celulas">
+       Formatos de saída de células
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#depuracao">
+       Depuração
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#extensoes">
+       Extensões
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instalacao-de-extensoes">
+       Instalação de extensões
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extensoes-recomendadas-para-cientistas-de-dados">
+     Extensões recomendadas para cientistas de dados
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercicio-recomendado">
+     Exercício recomendado
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="ambientes-de-desenvolvimento-e-computacao-interativa">
+<h1>Ambientes de desenvolvimento e computação interativa<a class="headerlink" href="#ambientes-de-desenvolvimento-e-computacao-interativa" title="Permalink to this headline">¶</a></h1>
+<section id="ides-para-ciencia-de-dados">
+<h2>IDEs para ciência de dados<a class="headerlink" href="#ides-para-ciencia-de-dados" title="Permalink to this headline">¶</a></h2>
+<p>Um IDE (<em>Integrated Development Environment</em>) é um software que facilita programadores para o desenvolvimento de softwares.</p>
+<p>Funcionalidades básicas de um IDE:</p>
+<ol class="simple">
+<li><p>edição de texto</p></li>
+<li><p>interpretação/compilação automatizada</p></li>
+<li><p>depuração</p></li>
+</ol>
+<section id="alguns-ides-comumente-usados">
+<h3>Alguns IDEs comumente usados<a class="headerlink" href="#alguns-ides-comumente-usados" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sublimetext.com">Sublime</a></p></li>
+<li><p><a class="reference external" href="https://www.spyder-ide.org">Spyder</a></p></li>
+<li><p><a class="reference external" href="https://atom.io/packages/data-atom">Atom</a></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com">Visual Studio</a></p></li>
+<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a></p></li>
+<li><p><a class="reference external" href="https://jupyter.org">Jupyter Notebooks</a></p></li>
+<li><p><a class="reference external" href="http://jupyterlab.io">Jupyter Lab</a></p></li>
+<li><p><a class="reference external" href="https://wingware.com">Wing</a></p></li>
+</ul>
+</section>
+<section id="exemplo-de-uso-spyder-5-0">
+<h3>Exemplo de uso: Spyder 5.0<a class="headerlink" href="#exemplo-de-uso-spyder-5-0" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/spyder-screenshot.png"><img alt="../_images/spyder-screenshot.png" src="../_images/spyder-screenshot.png" style="width: 700px;" /></a>
+<blockquote>
+<div><p>Não existe “o melhor IDE”. A escolha depende do gosto pessoal, da necessidade e dos objetivos. Qualquer que seja a sua opção, algum tempo deve ser gasto no entendimento das funcionalidades de cada um e na organização do <em>workflow</em> individual.</p>
+</div></blockquote>
+</section>
+<section id="completacao-de-codigo-inteligente">
+<h3>Completação de código inteligente<a class="headerlink" href="#completacao-de-codigo-inteligente" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Ferramentas ajudam a aumentar a produtividade</p></li>
+<li><p>A maioria dos IDEs acima possuem completação de código</p></li>
+<li><p>Este nicho tem se tornado bem específico</p></li>
+<li><p>Exemplos de ferramentas para completação de código:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.kite.com">Kite</a></p></li>
+<li><p><a class="reference external" href="https://www.codota.com">Codota</a></p></li>
+<li><p><a class="reference external" href="https://jedi.readthedocs.io/en/latest/docs/features.html#type-hinting">Jedi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/slobdell/Finisher">Finisher</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="cadernos-interativos">
+<h2>Cadernos interativos<a class="headerlink" href="#cadernos-interativos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A computação interativa torna a interação entre pessoas e máquinas mais dialógica e fácil</p></li>
+<li><p>Hoje, <em>cadernos interativos</em> são quase indispensáveis para um cientista de dados</p></li>
+</ul>
+<section id="o-projeto-jupyter">
+<h3>O Projeto <a class="reference external" href="http://jupyter.org">[Jupyter]</a><a class="headerlink" href="#o-projeto-jupyter" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Iniciado em 2014, lançou a proposta dos chamados <em>notebooks</em>:</p></li>
+<li><p>Permite que textos, códigos e elementos gráficos sejam integrados em uma espécie de caderno “vivo”.</p></li>
+<li><p><em>Jupyter notebooks</em> são interfaces baseadas em <em>web</em> onde podemos executar códigos</p></li>
+<li><p>Diferentes linguagens possíveis desde que alteremos os <em>kernels</em>.</p></li>
+<li><p>Para Python, ele dispõe do tradicional <em>kernel</em> <em>IPython</em>.</p></li>
+</ul>
+</section>
+<section id="jupyterlab">
+<h3>JupyterLab<a class="headerlink" href="#jupyterlab" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Interface de nova geração para o <em>Jupyter</em></p></li>
+<li><p>Capacidade para:</p>
+<ul>
+<li><p>editar texto</p></li>
+<li><p>avaliar código</p></li>
+<li><p>pré-visualização de gráficos, figuras, tabelas e muito mais</p></li>
+</ul>
+</li>
+<li><p>Depuração ou funcionalidades específicas alcançadas por meio de <em>extensões</em></p></li>
+</ul>
+<section id="instalacao">
+<h4>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this headline">¶</a></h4>
+<p>Usando <code class="docutils literal notranslate"><span class="pre">conda</span></code>, o <em>JupyterLab</em> pode ser instalado pelo comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge jupyterlab
+</pre></div>
+</div>
+</section>
+<section id="inicializacao">
+<h4>Inicialização<a class="headerlink" href="#inicializacao" title="Permalink to this headline">¶</a></h4>
+<p>Inicialize pelo <em>Anaconda Navigator</em> ou pela linha de comando usando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">lab</span>
+</pre></div>
+</div>
+<p>O ambiente será aberto em seu navegador <em>web</em> padrão em um endereço similar a:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">(</span><span class="n">s</span><span class="p">):</span><span class="o">//&lt;</span><span class="n">server</span><span class="p">:</span><span class="n">port</span><span class="o">&gt;/&lt;</span><span class="n">lab</span><span class="o">-</span><span class="n">location</span><span class="o">&gt;/</span><span class="n">lab</span>
+
+</pre></div>
+</div>
+<p>Para lançar o Jupyter Notebook padrão, use menu <em>Help &gt; Launch Classic Notebook</em>.</p>
+</section>
+<section id="elementos-da-interface">
+<h4>Elementos da interface<a class="headerlink" href="#elementos-da-interface" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Área de trabalho principal</p></li>
+<li><p>Barra lateral esquerda</p>
+<ul>
+<li><p>Navegador de arquivos</p></li>
+<li><p>Lista de kernels em execução</p></li>
+<li><p>Paleta de comandos</p></li>
+<li><p>Inspetor</p></li>
+<li><p>Lista de abas</p></li>
+</ul>
+</li>
+<li><p>Barra de menus</p></li>
+</ul>
+</section>
+<section id="workspace">
+<h4>Workspace<a class="headerlink" href="#workspace" title="Permalink to this headline">¶</a></h4>
+<p>Cada sessão do <em>JupyterLab</em> reside em um <em>workspace</em>, cujas variáveis podem ser dinamicamente alteradas.</p>
+</section>
+<section id="funcoes-de-url-uteis">
+<h4>Funções de URL úteis<a class="headerlink" href="#funcoes-de-url-uteis" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Reset do workspace: adicione <code class="docutils literal notranslate"><span class="pre">?reset</span></code> na URL.</p></li>
+</ul>
+<p>Exemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://127.0.0.1:8889/lab/tree/ICD/teste.ipynb?reset
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Clonar o workspace atual para outro chamado <em>copia</em>: adicione <code class="docutils literal notranslate"><span class="pre">?clone=copia</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://127.0.0.1:8889/lab/tree/ICD/teste.ipynb?clone=copia
+</pre></div>
+</div>
+</section>
+<section id="estrutura-de-um-arquivo-ipynb">
+<h4>Estrutura de um arquivo <em>.ipynb</em><a class="headerlink" href="#estrutura-de-um-arquivo-ipynb" title="Permalink to this headline">¶</a></h4>
+<p>O formato oficial de um <em>Jupyter Notebook</em>, com extensão <em>.ipynb</em> é construído sobre uma estrutura JSON.</p>
+<p><a class="reference external" href="https://www.json.org/json-en.html">[JSON]</a> - JavaScript Object Notation, é um formato de intercâmbio de dados baseado em um subconjunto da linguagem JavaScript.</p>
+<p>Em seu maior nível, o arquivo é um dicionário que contém algumas chaves, tais como:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (dict)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nbformat</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nbformat_minor</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cells</span></code> (list)</p></li>
+</ul>
+<p>Abaixo, temos um exemplo da estrutura JSON de um arquivo <em>.ipynb</em>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;kernelspec&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Python 3&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;python3&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;language_info&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;codemirror_mode&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ipython&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">3</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;file_extension&quot;</span><span class="p">:</span> <span class="s2">&quot;.py&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;mimetype&quot;</span><span class="p">:</span> <span class="s2">&quot;text/x-python&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;nbconvert_exporter&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;pygments_lexer&quot;</span><span class="p">:</span> <span class="s2">&quot;ipython3&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.8.8&quot;</span>
+  <span class="p">}</span>
+ <span class="p">},</span>
+ <span class="nt">&quot;nbformat&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+ <span class="nt">&quot;nbformat_minor&quot;</span><span class="p">:</span> <span class="mi">5</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Uma célula de texto deste material por exemplo é, no formato JSON, exibida como:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+   <span class="nt">&quot;cell_type&quot;</span><span class="p">:</span> <span class="s2">&quot;markdown&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;93e25ab1-2a8a-4baf-9bcf-a72057aa908f&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;### Estrutura de um arquivo `.ipynb`\n&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;\n&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;O formato oficial de um _Jupyter Notebook_, com extensão `.ipynb` é construído sobre uma estrutura JSON.\n&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;\n&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;```{note}\n&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;[[JSON]](https://www.json.org/json-en.html) - JavaScript Object Notation, é um formato de intercâmbio de dado baseado em um subconjunto da linguagem JavaScript.\n&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;```&quot;</span>
+   <span class="p">]</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Os principais elementos são:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cell_type</span></code>: tipo de célula.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: identificador (único) de uma célula. É um objeto <code class="docutils literal notranslate"><span class="pre">str</span></code> de comprimento 1-64.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code>: opções que controlam o comportamento da célula.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: conteúdo da célula.</p></li>
+</ul>
+<p>Entretanto, outros elementos podem estar presentes. Um exemplo de célula de código que retorna um erro é dado a seguir:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+   <span class="nt">&quot;cell_type&quot;</span><span class="p">:</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;execution_count&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="nt">&quot;outputs&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="nt">&quot;ename&quot;</span><span class="p">:</span> <span class="s2">&quot;SyntaxError&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;evalue&quot;</span><span class="p">:</span> <span class="s2">&quot;unexpected EOF while parsing (&lt;ipython-input-5-ef2d20508391&gt;, line 1)&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;output_type&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;traceback&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;\u001b[0;36m  File \u001b[0;32m\&quot;&lt;ipython-input-5-ef2d20508391&gt;\&quot;\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    2 - 98*( 7/3\u001b[0m\n\u001b[0m                ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m unexpected EOF while parsing\n&quot;</span>
+     <span class="p">]</span>
+    <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;2 - 98*( 7/3&quot;</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+</pre></div>
+</div>
+</section>
+<section id="formatos-de-saida-de-celulas">
+<h4>Formatos de saída de células<a class="headerlink" href="#formatos-de-saida-de-celulas" title="Permalink to this headline">¶</a></h4>
+<p>Diferentes tipos de arquivo podem ter uma saída renderizada de modo enriquecido.</p>
+<p>Por exemplo:</p>
+<ul class="simple">
+<li><p>Visualizando código HTML</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython.display</span> <span class="k">as</span> <span class="nn">dpl</span>
+
+<span class="n">dpl</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">dpl</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;h&gt;Isto é um título&lt;/h2&gt; &lt;hr&gt; é &lt;sup&gt;H&lt;/sup&gt;ML&lt;/h1&gt;&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><h>Isto é um título</h2> <hr> é <sup>H</sup>ML</h1></div></div>
+</div>
+<ul class="simple">
+<li><p>Visualizando código JSON</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dpl</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">dpl</span><span class="o">.</span><span class="n">JSON</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s2">&quot;meta&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]}))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.JSON object&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Visualizando vídeo do YouTube</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dpl</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">dpl</span><span class="o">.</span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;fn3KWM1kuAw&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">))</span>   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="500"
+    height="400"
+    src="https://www.youtube.com/embed/fn3KWM1kuAw"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<ul class="simple">
+<li><p>Visualizando áudio</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># teste descomentando</span>
+<span class="c1">#dpl.Audio(url=&quot;https://www.bands.army.mil/music/play.asp?TheArmySong2013_BandAndChorus.mp3&quot;,autoplay=False)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Visualizando imagem</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dpl</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;http://www.google.fr/images/srpr/logo3w.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/03-ides-rise_30_0.png" src="../_images/03-ides-rise_30_0.png" />
+</div>
+</div>
+</section>
+<section id="depuracao">
+<h4>Depuração<a class="headerlink" href="#depuracao" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><em>JupyterLab</em> &gt; 3.0 vem munido de depurador, mas é necessário <em>kernel</em> que o suporte.</p></li>
+<li><p>Alguns conhecidos são:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/jupyter-xeus/xeus-python">xeus-python</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jupyter-xeus/xeus-robot">xeus-robot</a></p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Melhor maneira de ter suporte à depuração:</p>
+<ul>
+<li><p>Criar um ambiente novo, chamado, digamos <code class="docutils literal notranslate"><span class="pre">jb</span></code>, contendo JupyterLab 3.0 e um desses <em>kernels</em></p></li>
+</ul>
+</li>
+<li><p>Exemplo:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n jd -c conda-forge <span class="nv">jupyterlab</span><span class="o">=</span><span class="m">3</span> xeus-python
+conda activate jd
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>O <em>kernel</em> pode ser habilitado via navegador ou seletor de núcleo.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Experimente um ambiente com depuração <a class="reference external" href="https://mybinder.org/v2/gh/blink1073/jupyter-ide-demo/stable?urlpath=/lab/tree/index.ipynb">aqui</a></p></li>
+</ul>
+</section>
+<section id="extensoes">
+<h4>Extensões<a class="headerlink" href="#extensoes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>O <em>JupyterLab</em> é um ambiente extensível</p></li>
+<li><p>Pode ser customizado ou melhorado</p></li>
+<li><p>Extensões incluem:</p>
+<ul>
+<li><p>temas</p></li>
+<li><p>visualizadores</p></li>
+<li><p>editores</p></li>
+<li><p>renderizadores.</p></li>
+</ul>
+</li>
+<li><p>Adicionam itens ao menu, à paleta de comandos ou configurações</p></li>
+</ul>
+</section>
+<section id="instalacao-de-extensoes">
+<h4>Instalação de extensões<a class="headerlink" href="#instalacao-de-extensoes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Podem ser de dois tipos: originais e pré-construídas.</p></li>
+<li><p>Extensões pré-construídas são mais fáceis de gerenciar</p>
+<ul>
+<li><p>Instaláveis usando o gerenciador de extensões: <code class="docutils literal notranslate"><span class="pre">jupyter-labextension</span> <span class="pre">install</span></code></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>Verifique requisito de instalação: <code class="docutils literal notranslate"><span class="pre">node-js</span></code> &gt; 12.0.0</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">nodejs</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">--</span><span class="n">repodata</span><span class="o">-</span><span class="n">fn</span><span class="o">=</span><span class="n">repodata</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>Adicionalmente, elas podem ser instaladas usando o painel lateral esquerdo.</p>
+</section>
+</section>
+<section id="extensoes-recomendadas-para-cientistas-de-dados">
+<h3>Extensões recomendadas para cientistas de dados<a class="headerlink" href="#extensoes-recomendadas-para-cientistas-de-dados" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>JupyterLab drawio: <code class="docutils literal notranslate"><span class="pre">jupyterlab-drawio</span></code></p></li>
+<li><p>JupyterLab plotly: <code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/plotly-extension</span></code></p></li>
+<li><p>JupyterLab Github: <code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/github</span></code></p></li>
+<li><p>JupyterLab bokeh: <code class="docutils literal notranslate"><span class="pre">jupyterlab_bokeh</span></code></p></li>
+<li><p>JupyterLab chart editor: <code class="docutils literal notranslate"><span class="pre">jupyterlab-chart-editor</span></code></p></li>
+</ul>
+<p>Para instalar use: <code class="docutils literal notranslate"><span class="pre">jupyter-labextension</span> <span class="pre">install</span> <span class="pre">EXT</span></code>, substituindo <em>EXT</em> por um dos nomes acima.</p>
+</section>
+<section id="exercicio-recomendado">
+<h3>Exercício recomendado<a class="headerlink" href="#exercicio-recomendado" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Configure seu ambiente de trabalho com IDE ou Jupyter Notebook, com seus temas e extensões de preferência.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

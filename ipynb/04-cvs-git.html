@@ -52,6 +52,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python Intermediário: Parte 1" href="05-python-intermediario.html" />
     <link rel="prev" title="Ambientes de desenvolvimento e computação interativa" href="03-ides.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -131,6 +132,38 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-python-intermediario.html">
+   Python Intermediário: Parte 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-python-intermediario-2.html">
+   Python Intermediário: Parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08b-alc.html">
+   Álgebra Linear Computacional Básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
   </a>
  </li>
 </ul>
@@ -229,6 +262,16 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos">
+   Objetivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#beneficios-de-um-scv">
    Benefícios de um SCV
@@ -394,10 +437,23 @@
                 
   <section id="controle-de-versao">
 <h1>Controle de versão<a class="headerlink" href="#controle-de-versao" title="Permalink to this headline">¶</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Entender o que um Sistema de Controle Versões (SCV) e o versionamento de código</p></li>
+<li><p>Compreender benefícios de SCVs para arquivos diversos (reprodutibilidade, auditabilidade, compartilhamento, entre outros)</p></li>
+<li><p>Ter uma visão geral sobre os SCVs mais comuns</p></li>
+<li><p>Entender o funcionamento do SCV <em>git</em>, bem como o workflow <em>stage</em>- <em>commit</em>- <em>push</em>.</p></li>
+<li><p>Compreender comandos básicos para criação e gerenciamento de repositórios locais e remotos</p></li>
+</ul>
+</section>
+<section id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
 <p>Desenvolver softwares, reproduzir pesquisas clínicas e recuperar dados em um banco digital de dois anos atrás são atividades que dependem de uma gestão eficiente de arquivos. A primeira utiliza arquivos que são alterados com frequencia por uma ou mais pessoas; a segunda utiliza arquivos de outras pessoas e, às vezes, os aperfeiçoa; a terceira utiliza arquivos que estão preservados por ter algum valor agregado, por ser protegido por lei, ou por ser útil para reutilização.</p>
 <p>Quando trabalhamos ativamente em projetos, um ou mais arquivos (texto, código, ou ambos) são constantemente alterados por adição, modificação ou deleção de conteúdo. O controle sobre cada uma dessas operações é traduzido pelo conceito de <em>controle de versão</em>.</p>
 <p>Controle de versão é a <em>abordagem sistemática para registrar alterações realizadas em um arquivo ou conjunto de arquivos ao longo do tempo</em>.</p>
 <p>Neste capítulo, daremos uma visão geral sobre <em>sistemas de controle de versão</em> (SCVs), do inglês <em>control version systems</em>, e meios eficientes de gerir arquivos em repositórios remotos. Existem SCVs centralizados e distribuídos, embora os distribuídos, como é o caso do <em>Git</em>, tenham uso mais amplo.</p>
+</section>
 <section id="beneficios-de-um-scv">
 <h2>Benefícios de um SCV<a class="headerlink" href="#beneficios-de-um-scv" title="Permalink to this headline">¶</a></h2>
 <p>O uso de SCVs proporciona melhores condições de <em>backup</em> e reduz a probabilidade do cometimento de equívocos. Outros benefícios que SCVs trazem para desenvolvedores, cientistas ou gestores de dados são:</p>
@@ -959,6 +1015,7 @@ git push - u origin master
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="03-ides.html" title="previous page">Ambientes de desenvolvimento e computação interativa</a>
+    <a class='right-next' id="next-link" href="05-python-intermediario.html" title="next page">Python Intermediário: Parte 1</a>
 
         </div>
         

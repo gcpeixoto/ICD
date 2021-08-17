@@ -1,0 +1,954 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Pacotes e ambientes virtuais com pip e venv &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python Intermediário: Parte 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python Intermediário: Parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional Básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/rise/02a-pip-venv-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/rise/02a-pip-venv-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/rise/02a-pip-venv-rise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos">
+   Objetivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ambientes-virtuais">
+   Ambientes virtuais
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vantagens">
+     Vantagens
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gerenciamento-de-pacotes-e-ambientes">
+   Gerenciamento de pacotes e ambientes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pip">
+     <em>
+      pip
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#venv">
+     <em>
+      venv
+     </em>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#criacao-e-configuracao-do-ambiente-virtual">
+       Criação e configuração do ambiente virtual
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instalacao-e-gestao-de-pacotes-no-ambiente-virtual">
+       Instalação e gestão de pacotes no ambiente virtual
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#salvamento-e-replicacao-do-ambiente-virtual">
+       Salvamento e replicação do ambiente virtual
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outras-opcoes-para-separacao-virtual-de-ambientes">
+   Outras opções para  “separação” virtual de ambientes
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="pacotes-e-ambientes-virtuais-com-pip-e-venv">
+<h1>Pacotes e ambientes virtuais com <em>pip</em> e <em>venv</em><a class="headerlink" href="#pacotes-e-ambientes-virtuais-com-pip-e-venv" title="Permalink to this headline">¶</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Dar visão geral sobre gerenciadores de pacote e ambientes virtuais</p></li>
+<li><p>Aprender a utilizar o <em>pip</em> e o <em>venv</em> para gerenciar a instalação de pacotes, dependências e ambientes</p></li>
+<li><p>Compreender comandos do <em>pip</em> e do <em>venv</em>, e praticá-los em terminal</p></li>
+</ul>
+</section>
+<section id="ambientes-virtuais">
+<h2>Ambientes virtuais<a class="headerlink" href="#ambientes-virtuais" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Locais isolados do resto do sistema operacional (daí o nome “virtual”) onde podemos instalar pacotes sem que estes interfiram nos demais pacotes configurados globalmente.</p>
+</div></blockquote>
+<section id="vantagens">
+<h3>Vantagens<a class="headerlink" href="#vantagens" title="Permalink to this headline">¶</a></h3>
+<p>Algumas vantagens de se trabalhar com ambientes virtuais são:</p>
+<ul class="simple">
+<li><p>Impedir conflitos de versão</p></li>
+<li><p>Facilidade para reprodução e instalação</p></li>
+<li><p>Execução independente de acesso privilegiado</p></li>
+</ul>
+</section>
+</section>
+<section id="gerenciamento-de-pacotes-e-ambientes">
+<h2>Gerenciamento de pacotes e ambientes<a class="headerlink" href="#gerenciamento-de-pacotes-e-ambientes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Boa prática:</strong> instalar “pacotes” em ambientes virtuais.</p></li>
+<li><p>Pacotes como “habilidades” e “especializações” a um programa.</p></li>
+<li><p>Falaremos um pouco sobre o <em>pip</em> e o <em>venv</em>.</p></li>
+</ul>
+<section id="pip">
+<h3><em>pip</em><a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Infinidade de pacotes no <a class="reference external" href="https://pypi.org">PyPi</a> - <em>Python Package Index</em></p></li>
+<li><p>Uma das maneiras mais fáceis de instalar pacotes PyPi é usar o gerenciador de pacotes <em>pip</em>.</p></li>
+</ul>
+<blockquote>
+<div><p>Precisa de uma especialidade? Confira se já não existe no PyPi. Não reinvente a roda!</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Verificar instalação</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># no sistema operacional, remover o !</span>
+<span class="o">!</span>pip --version
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pip 21.1.1 from /Users/gustavo/opt/anaconda3/lib/python3.8/site-packages/pip (python 3.8)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Verificar lista de pacotes instalados</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip list 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Package                            Version
+---------------------------------- -------------------
+alabaster                          0.7.12
+anaconda-client                    1.7.2
+anaconda-navigator                 2.0.3
+anaconda-project                   0.10.0
+anyio                              3.0.1
+appdirs                            1.4.4
+applaunchservices                  0.2.1
+appnope                            0.1.2
+appscript                          1.1.2
+argh                               0.26.2
+argon2-cffi                        20.1.0
+arrow                              0.13.1
+asn1crypto                         1.4.0
+astroid                            2.5
+astropy                            4.2.1
+async-generator                    1.10
+atomicwrites                       1.4.0
+attrs                              20.3.0
+autopep8                           1.5.6
+Babel                              2.9.1
+backcall                           0.2.0
+backports.functools-lru-cache      1.6.4
+backports.shutil-get-terminal-size 1.0.0
+backports.tempfile                 1.0
+backports.weakref                  1.0.post1
+beautifulsoup4                     4.9.3
+binaryornot                        0.4.4
+bitarray                           2.1.0
+bkcharts                           0.2
+black                              19.10b0
+bleach                             3.3.0
+bokeh                              2.3.2
+boto                               2.49.0
+Bottleneck                         1.3.2
+branca                             0.4.2
+brotlipy                           0.7.0
+cachetools                         4.2.2
+certifi                            2020.12.5
+cffi                               1.14.5
+chardet                            4.0.0
+click                              8.0.1
+cloudpickle                        1.6.0
+clyent                             1.2.2
+codecov                            2.1.11
+colorama                           0.4.4
+conda                              4.10.1
+conda-build                        3.21.4
+conda-content-trust                0+unknown
+conda-pack                         0.6.0
+conda-package-handling             1.7.3
+conda-repo-cli                     1.0.4
+conda-token                        0.3.0
+conda-verify                       3.4.2
+contextlib2                        0.6.0.post1
+cookiecutter                       1.7.2
+coverage                           5.5
+coveralls                          3.2.0
+cryptography                       3.4.7
+cycler                             0.10.0
+Cython                             0.29.23
+cytoolz                            0.11.0
+dask                               2021.4.0
+datascience                        0.17.0
+decorator                          5.0.9
+defusedxml                         0.7.1
+diff-match-patch                   20200713
+dill                               0.3.4
+distributed                        2021.5.0
+docker                             5.0.0
+docopt                             0.6.2
+docutils                           0.17.1
+entrypoints                        0.3
+et-xmlfile                         1.1.0
+fastcache                          1.1.0
+filelock                           3.0.12
+flake8                             3.9.0
+Flask                              1.1.2
+folium                             0.12.1
+fsspec                             0.9.0
+future                             0.18.2
+gevent                             21.1.2
+ghp-import                         1.1.0
+gitdb                              4.0.7
+GitPython                          3.1.14
+glob2                              0.7
+gmpy2                              2.0.8
+gmsh                               4.8.4
+google-api-core                    1.31.0
+google-api-python-client           2.14.0
+google-auth                        1.33.1
+google-auth-httplib2               0.1.0
+google-auth-oauthlib               0.4.4
+googleapis-common-protos           1.53.0
+greenlet                           1.1.0
+gspread                            3.7.0
+h5py                               2.10.0
+HeapDict                           1.0.1
+html5lib                           1.1
+httplib2                           0.19.1
+idna                               2.10
+imageio                            2.9.0
+imagesize                          1.2.0
+importlib-metadata                 3.10.0
+inflection                         0.5.1
+iniconfig                          1.1.1
+intervaltree                       3.1.0
+ipykernel                          5.3.4
+ipython                            7.22.0
+ipython-genutils                   0.2.0
+ipywidgets                         7.6.3
+isort                              5.8.0
+itsdangerous                       2.0.1
+jdcal                              1.4.1
+jedi                               0.17.2
+Jinja2                             2.11.3
+jinja2-time                        0.2.0
+joblib                             1.0.1
+json5                              0.9.5
+jsonschema                         3.2.0
+jupyter                            1.0.0
+jupyter-book                       0.10.2
+jupyter-cache                      0.4.2
+jupyter-client                     6.1.12
+jupyter-console                    6.4.0
+jupyter-core                       4.7.1
+jupyter-packaging                  0.7.12
+jupyter-server                     1.7.0
+jupyter-server-mathjax             0.2.2
+jupyter-sphinx                     0.3.2
+jupyterbook-latex                  0.2.0
+jupyterlab                         3.0.14
+jupyterlab-pygments                0.1.2
+jupyterlab-server                  2.4.0
+jupyterlab-widgets                 1.0.0
+jupytext                           1.10.3
+keyring                            23.0.1
+kiwisolver                         1.3.1
+latexcodec                         2.0.1
+lazy-object-proxy                  1.6.0
+libarchive-c                       2.9
+linkify-it-py                      1.0.1
+llvmlite                           0.36.0
+locket                             0.2.1
+lxml                               4.6.3
+markdown-it-py                     0.6.2
+MarkupSafe                         1.1.1
+matplotlib                         3.3.4
+mccabe                             0.6.1
+mdit-py-plugins                    0.2.6
+meshio                             4.4.3
+mistune                            0.8.4
+mkl-fft                            1.3.0
+mkl-random                         1.2.1
+mkl-service                        2.3.0
+mock                               4.0.3
+more-itertools                     8.7.0
+mpmath                             1.2.1
+msgpack                            1.0.2
+multipledispatch                   0.6.0
+mypy-extensions                    0.4.3
+myst-nb                            0.12.3
+myst-parser                        0.13.7
+navigator-updater                  0.2.1
+nbclassic                          0.2.6
+nbclient                           0.5.3
+nbconvert                          6.0.7
+nbdime                             3.0.0
+nbformat                           5.1.3
+nbsphinx                           0.8.6
+nest-asyncio                       1.5.1
+nested-lookup                      0.2.22
+networkx                           2.5
+nltk                               3.6.2
+nose                               1.3.7
+notebook                           6.4.0
+numba                              0.53.1
+numexpr                            2.7.3
+numpy                              1.20.2
+numpydoc                           1.1.0
+oauthlib                           3.1.1
+olefile                            0.46
+openpyxl                           3.0.7
+packaging                          20.9
+pandas                             1.2.4
+pandocfilters                      1.4.3
+parso                              0.7.0
+partd                              1.2.0
+path                               15.1.2
+pathlib2                           2.3.5
+pathspec                           0.7.0
+pathtools                          0.1.2
+patsy                              0.5.1
+pdfkit                             0.6.1
+pep8                               1.7.1
+pexpect                            4.8.0
+pickleshare                        0.7.5
+Pillow                             8.2.0
+pip                                21.1.1
+pkginfo                            1.7.0
+plotly                             5.1.0
+pluggy                             0.13.1
+ply                                3.11
+poyo                               0.5.0
+prometheus-client                  0.10.1
+prompt-toolkit                     3.0.17
+protobuf                           3.17.3
+psutil                             5.8.0
+ptyprocess                         0.7.0
+py                                 1.10.0
+pyasn1                             0.4.8
+pyasn1-modules                     0.2.8
+pybtex                             0.24.0
+pybtex-docutils                    1.0.0
+pycodestyle                        2.6.0
+pycosat                            0.6.3
+pycparser                          2.20
+pycurl                             7.43.0.6
+pydata-sphinx-theme                0.6.3
+pydocstyle                         6.1.1
+pyerfa                             2.0.0
+pyflakes                           2.2.0
+Pygments                           2.9.0
+pygmsh                             7.1.9
+pylint                             2.7.4
+pyls-black                         0.4.6
+pyls-spyder                        0.3.2
+pyodbc                             4.0.0-unsupported
+pyOpenSSL                          20.0.1
+pyparsing                          2.4.7
+PyPDF2                             1.26.0
+pyrsistent                         0.17.3
+PySocks                            1.7.1
+pytest                             6.2.3
+python-dateutil                    2.8.1
+python-jsonrpc-server              0.4.0
+python-language-server             0.36.2
+python-slugify                     5.0.2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pytz                               2021.1
+PyWavelets                         1.1.1
+PyYAML                             5.4.1
+pyzmq                              20.0.0
+QDarkStyle                         3.0.2
+qstylizer                          0.1.10
+QtAwesome                          1.0.2
+qtconsole                          5.0.3
+QtPy                               1.9.0
+regex                              2021.4.4
+requests                           2.25.1
+requests-oauthlib                  1.3.0
+rope                               0.18.0
+rpy2                               3.4.5
+rsa                                4.7.2
+Rtree                              0.9.7
+ruamel-yaml-conda                  0.15.100
+scikit-image                       0.16.2
+scikit-learn                       0.24.2
+scipy                              1.6.2
+seaborn                            0.11.1
+Send2Trash                         1.5.0
+setuptools                         52.0.0.post20210125
+simplegeneric                      0.8.1
+singledispatch                     0.0.0
+six                                1.15.0
+smmap                              4.0.0
+sniffio                            1.2.0
+snowballstemmer                    2.1.0
+sortedcollections                  2.1.0
+sortedcontainers                   2.3.0
+soupsieve                          2.2.1
+Sphinx                             4.0.1
+sphinx-book-theme                  0.1.0
+sphinx-comments                    0.0.3
+sphinx-copybutton                  0.3.1
+sphinx-panels                      0.5.2
+sphinx-thebe                       0.0.8
+sphinx-togglebutton                0.2.3
+sphinxcontrib-applehelp            1.0.2
+sphinxcontrib-bibtex               2.1.4
+sphinxcontrib-devhelp              1.0.2
+sphinxcontrib-htmlhelp             1.0.3
+sphinxcontrib-jsmath               1.0.1
+sphinxcontrib-qthelp               1.0.3
+sphinxcontrib-serializinghtml      1.1.4
+sphinxcontrib-websupport           1.2.4
+spyder                             5.0.0
+spyder-kernels                     2.0.1
+SQLAlchemy                         1.4.15
+statsmodels                        0.12.2
+sympy                              1.8
+tables                             3.6.1
+tblib                              1.7.0
+tenacity                           8.0.1
+terminado                          0.9.4
+testpath                           0.4.4
+text-unidecode                     1.3
+textdistance                       4.2.1
+threadpoolctl                      2.1.0
+three-merge                        0.1.1
+tinycss                            0.4
+toml                               0.10.2
+toolz                              0.11.1
+tornado                            6.1
+tqdm                               4.59.0
+traitlets                          5.0.5
+typed-ast                          1.4.2
+typing-extensions                  3.7.4.3
+tzlocal                            2.1
+uc-micro-py                        1.0.1
+ujson                              4.0.2
+unicodecsv                         0.14.1
+Unidecode                          1.2.0
+uritemplate                        3.0.1
+urllib3                            1.26.4
+watchdog                           1.0.2
+wcwidth                            0.2.5
+webencodings                       0.5.1
+websocket-client                   0.59.0
+Werkzeug                           1.0.1
+wheel                              0.36.2
+whichcraft                         0.6.1
+widgetsnbextension                 3.5.1
+wrapt                              1.12.1
+wurlitzer                          2.1.0
+xlrd                               2.0.1
+XlsxWriter                         1.3.8
+xlwings                            0.23.0
+xlwt                               1.3.0
+xmltodict                          0.12.0
+yapf                               0.31.0
+zict                               2.0.0
+zipp                               3.4.1
+zope.event                         4.5.0
+zope.interface                     5.3.0
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Imprimir informações sobre um pacote listado</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip show alabaster
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name: alabaster
+Version: 0.7.12
+Summary: A configurable sidebar-enabled Sphinx theme
+Home-page: https://alabaster.readthedocs.io
+Author: Jeff Forcier
+Author-email: jeff@bitprophet.org
+License: UNKNOWN
+Location: /Users/gustavo/opt/anaconda3/lib/python3.8/site-packages
+Requires: 
+Required-by: Sphinx
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Para atualizar o <em>pip</em> para uma versão mais nova</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Para ajuda do <em>pip</em></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Comandos de interesse: <em>install</em>, <em>uninstall</em>, <em>search</em>.</p></li>
+<li><p>Exemplo:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">lxml</span>
+</pre></div>
+</div>
+<p>Instala a biblioteca <em>lxml</em>, globalmente!</p>
+<blockquote>
+<div><p>Todavia, isso pode ser uma má escolha se você trabalhar com múltiplos projetos e versões como explicado anteriormente.</p>
+</div></blockquote>
+<p>Como evitar potenciais conflitos de versão e imcompatibilidades?</p>
+<p><strong>Ambientes virtuais!</strong></p>
+</section>
+<section id="venv">
+<h3><em>venv</em><a class="headerlink" href="#venv" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Integrado na versão Python 3.3 <a class="reference external" href="https://www.python.org/dev/peps/pep-0405/">PEP 405</a></p></li>
+<li><p>Melhoria do <a class="reference external" href="https://virtualenv.pypa.io/en/stable/"><em>virtualenv</em></a> para Python 2</p></li>
+</ul>
+<p>Nesta seção:</p>
+<ul class="simple">
+<li><p>Etapas essenciais do trabalho com <em>venv</em> através da linha de comando:</p>
+<ul>
+<li><p>Criação e configuração do ambiente virtual</p></li>
+<li><p>Instalação e gestão de pacotes no ambiente virtual</p></li>
+<li><p>Salvamento e replicação do ambiente virtual</p></li>
+</ul>
+</li>
+</ul>
+<section id="criacao-e-configuracao-do-ambiente-virtual">
+<h4>Criação e configuração do ambiente virtual<a class="headerlink" href="#criacao-e-configuracao-do-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
+<p>Vamos supor que o nosso ambiente virtual seja chamado de <code class="docutils literal notranslate"><span class="pre">icd</span></code>. Para criá-lo, fazemos o seguinte:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python3 -m venv icd
+</pre></div>
+</div>
+</div>
+</div>
+<p>Um diretório <em>icd</em> é criado no diretório a partir do qual o comando foi executado contendo outros diretórios.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls -l icd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 8
+drwxr-xr-x@ 13 gustavo  staff  416 Jul  7 22:54 <span class=" -Color -Color-Blue">bin</span>
+drwxr-xr-x@  2 gustavo  staff   64 Jul  7 22:54 <span class=" -Color -Color-Blue">include</span>
+drwxr-xr-x@  3 gustavo  staff   96 Jul  7 22:54 <span class=" -Color -Color-Blue">lib</span>
+-rw-r--r--@  1 gustavo  staff  104 Jul  7 22:54 pyvenv.cfg
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><em>lib</em>: diretório de pacotes independentes</p></li>
+<li><p><em>bin</em>: diretório com ferramentas de inicialização e interrupção do ambiente</p></li>
+</ul>
+<p>Para ativar o ambiente, fazemos:</p>
+<p>A ativação do ambiente produzirá uma mudança no terminal, tal como:</p>
+</section>
+<section id="instalacao-e-gestao-de-pacotes-no-ambiente-virtual">
+<h4>Instalação e gestão de pacotes no ambiente virtual<a class="headerlink" href="#instalacao-e-gestao-de-pacotes-no-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Uma vez ativado o ambiente, você está isolado do sistema global</p></li>
+<li><p>Vamos instalar os seguintes pacotes para o curso:</p>
+<ul>
+<li><p><em>numpy</em></p></li>
+<li><p><em>scipy</em></p></li>
+<li><p><em>sympy</em></p></li>
+<li><p><em>matplotlib</em></p></li>
+<li><p><em>pandas</em></p></li>
+<li><p><em>seaborn</em></p></li>
+</ul>
+</li>
+</ul>
+<p>Antes de prosseguir, vamos verificar o que há no ambiente.</p>
+<p>Como vemos, há apenas dois pacotes no ambiente. Agora, podemos proceder à instalação dos pacotes requisitados.</p>
+<p>Se necessário, atualize o <em>pip</em> com <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">pip</span></code>.</p>
+<p>Para verificar se todos os pacotes foram instalados, fazemos:</p>
+</section>
+<section id="salvamento-e-replicacao-do-ambiente-virtual">
+<h4>Salvamento e replicação do ambiente virtual<a class="headerlink" href="#salvamento-e-replicacao-do-ambiente-virtual" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Interesse em manter o AV?</p></li>
+<li><p>Natural “salvar” o seu estado para replicá-lo em outro lugar (ex. outro usuário)</p></li>
+<li><p>Como fazer?</p>
+<ul>
+<li><p>Usar <em>freeze</em> e redirecionar os pacotes para um arquivo de requisitos: <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Se analisarmos o conteúdo do arquivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>, veremos algo como:</p>
+<p>A replicação do nosso ambiente <em>icd</em> em outro computador, por exemplo, pode então ser feita da seguinte forma:</p>
+<p>Se quisermos desinstalar todos os pacotes de uma só vez, podemos fazer algo como:</p>
+<p>Uma vez desinstalados, se listarmos novamente os pacotes no ambiente, veríamos exatamente o que tínhamos no início:</p>
+<p>O arquivo de requisitos permite:</p>
+<ul class="simple">
+<li><p>Indicar restrição para versões dos pacotes</p>
+<ul>
+<li><p>Exemplo: <code class="docutils literal notranslate"><span class="pre">_numpy&gt;=1.14.1_</span></code></p></li>
+</ul>
+</li>
+<li><p><em>upgrade</em> total de uma só vez para todos os pacotes</p>
+<ul>
+<li><p>Exemplo: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>Finalmente, para excluir o ambiente, basta desativá-lo e posteriormente deletar o seu conteúdo.</p>
+</section>
+</section>
+</section>
+<section id="outras-opcoes-para-separacao-virtual-de-ambientes">
+<h2>Outras opções para  “separação” virtual de ambientes<a class="headerlink" href="#outras-opcoes-para-separacao-virtual-de-ambientes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Contêinerização com <em>Docker</em> ou <em>Kubernetes</em></p></li>
+<li><p>Máquinas virtuais (<em>virtual machines</em>)</p></li>
+<li><p>Gerenciamento de ambientes com <em>conda</em>, <em>miniconda</em>, <em>pipenv</em>,</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
