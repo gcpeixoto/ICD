@@ -17,7 +17,10 @@
   - file: ipynb/08a-computacao-vetorizada
   - file: ipynb/08b-alc
   - file: ipynb/09-plotagem-matplotlib
-
+- part: Questionários
+  numbered: false
+  chapters:
+  - file: ipynb/Q21
 #- part: Temas de projeto
 #  numbered: false
 #  chapters:

@@ -20,12 +20,17 @@
 # 
 # #### Parte 2 (10h) 
 # 
-# - [Python intermediário - Parte 1](05-python-intermediario.ipynb)
-# - [Python intermediário - Parte 2](06-python-intermediario-2.ipynb)
-# - [Python intermediário - Parte 3](07-python-intermediario-3.ipynb)
+# - [Python intermediário - I](05-python-intermediario.ipynb)
+# - [Python intermediário - II](06-python-intermediario-2.ipynb)
+# - [Python intermediário - III](07-python-intermediario-3.ipynb)
 # - [Computação vetorizada](08a-computacao-vetorizada.ipynb)
 # - [Álgebra Linear Computacional básica](08b-alc.ipynb)
 # - [Plotagem e formatação de gráficos](09-plotagem-matplotlib.ipynb)
+# 
+# #### Questionários para avaliação
+# 
+# - Unidade 1: Parte 2
+#     - [Questionário 21](Q21.ipynb)
 # 
 # <!--
 # Aula (2h)
@@ -137,5 +142,14 @@
 # 08a-computacao-vetorizada
 # 08b-alc
 # 09-plotagem-matplotlib
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
+# :caption: Questionários
+# 
+# Q21
 # ```
 # 

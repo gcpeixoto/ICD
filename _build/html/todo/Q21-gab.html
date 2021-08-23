@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Questionário 21 &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python Intermediário: Parte 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário: Parte 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/todo/Q21-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/Q21-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/Q21-gab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gabarito">
+   Gabarito
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Gabarito
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Gabarito
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcao-de-gerar-os-cpfs-limpar-a-parte-do-gabarito">
+     Função de gerar os cpfs, limpar a parte do gabarito
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atencao-professor-retirar-toda-a-parte-comentada-corresponde-a-resolucao">
+     Atenção professor, retirar toda a parte comentada, corresponde a resolução
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   GABARITO
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="questionario-21">
+<h1>Questionário 21<a class="headerlink" href="#questionario-21" title="Permalink to this headline">¶</a></h1>
+<p>Orientações:</p>
+<ul class="simple">
+<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
+<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
+<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
+<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-a à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
+</ul>
+<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
+<hr><p><strong>Questão 1</strong>. As rodovias federais brasileiras interligam cidades, estados e regiões. De acordo com o Departamento Nacional de Infraestrutura de Transportes (DNIT), há 5 categorias de rodovias: radiais, longitudinais, transversais, diagonais e de ligação.</p>
+<p>Fonte: <a class="reference external" href="https://www.gov.br/dnit/pt-br/rodovias/rodovias-federais/nomeclatura-das-rodovias-federais">DNIT</a>.</p>
+<p>Usando <em>listcomps</em>, desenvolva um programa que organiza os códigos das rodovias que passam pelo estado da Paraíba separando os algarismos da sigla “BR” e assinale a alternativa correta quanto ao número de rodovias por categoria:</p>
+<p>A. 1 longitudinais / 4 transversal / 3 diagonal / 4 de ligação</p>
+<p>B. 2 longitudinais / 4 transversal / 3 diagonal / 6 de ligação</p>
+<p>C. 4 longitudinais / 1 transversal / 1 diagonal / 6 de ligação</p>
+<p>D. 5 longitudinais / 1 transversal / 3 diagonal / 6 de ligação</p>
+<section id="gabarito">
+<h2>Gabarito<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>BR-101, BR-104, BR-110, BR-116;</p></li>
+<li><p>BR-230;</p></li>
+<li><p>BR-361;</p></li>
+<li><p>BR-405, BR-408, BR-412, BR-426, BR-427, BR-434.</p></li>
+</ul>
+<p>Alternativa C.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rodovias</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;BR-101&quot;</span><span class="p">,</span><span class="s2">&quot;BR-230&quot;</span><span class="p">,</span><span class="s2">&quot;BR-104&quot;</span><span class="p">,</span><span class="s2">&quot;BR-408&quot;</span><span class="p">,</span><span class="s2">&quot;BR-412&quot;</span><span class="p">,</span><span class="s2">&quot;BR-110&quot;</span><span class="p">,</span><span class="s2">&quot;BR-361&quot;</span><span class="p">,</span><span class="s2">&quot;BR-426&quot;</span><span class="p">,</span><span class="s2">&quot;BR-427&quot;</span><span class="p">,</span><span class="s2">&quot;BR-116&quot;</span><span class="p">,</span><span class="s2">&quot;BR-405&quot;</span><span class="p">,</span><span class="s2">&quot;BR-434&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#GABARITO Q1</span>
+<span class="c1">#Criando listas de categoria</span>
+<span class="n">categorias</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Radial&quot;</span><span class="p">,</span><span class="s2">&quot;Longitudinal&quot;</span><span class="p">,</span><span class="s2">&quot;Transversais&quot;</span><span class="p">,</span><span class="s2">&quot;Diagonais&quot;</span><span class="p">,</span><span class="s2">&quot;Ligação&quot;</span><span class="p">]</span>
+<span class="c1">#separador</span>
+<span class="n">algarismos</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rodovias</span><span class="p">]</span> <span class="c1">#Ou pode ser usado o x.split(&quot;-&quot;)</span>
+
+<span class="c1">#identificando o numero chave do algarimo</span>
+<span class="n">identify</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">algarismos</span><span class="p">]</span>
+
+<span class="c1">#relacionando o valor chave e sua categoria</span>
+<span class="n">categorias_relacionadas</span> <span class="o">=</span> <span class="p">[</span><span class="n">categorias</span><span class="p">[</span><span class="n">identify</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">identify</span><span class="p">))]</span>
+
+<span class="c1">#concatenando o codigo de br com sua categoria</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="p">[</span><span class="n">rodovias</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">categorias_relacionadas</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rodovias</span><span class="p">))];</span> <span class="n">resultado</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;BR-101 Longitudinal&#39;,
+ &#39;BR-230 Transversais&#39;,
+ &#39;BR-104 Longitudinal&#39;,
+ &#39;BR-408 Ligação&#39;,
+ &#39;BR-412 Ligação&#39;,
+ &#39;BR-110 Longitudinal&#39;,
+ &#39;BR-361 Diagonais&#39;,
+ &#39;BR-426 Ligação&#39;,
+ &#39;BR-427 Ligação&#39;,
+ &#39;BR-116 Longitudinal&#39;,
+ &#39;BR-405 Ligação&#39;,
+ &#39;BR-434 Ligação&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questão 2</strong>. Segundo o Balanço Energético Nacional 2019, a matriz elétrica brasileira estava distribuída segundo o gráfico abaixo:</p>
+<figure class="align-default" id="ben">
+<a class="reference internal image-reference" href="../_images/ben.png"><img alt="../_images/ben.png" src="../_images/ben.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">Fonte: Matriz elétrica brasileira em 2019</span><a class="headerlink" href="#ben" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Fonte: <a class="reference external" href="https://www.epe.gov.br/pt/abcdenergia/matriz-energetica-e-eletrica">[EPE]</a>.</p>
+<p>Crie um dicionário em que as <em>keys</em> e <em>values</em> correspondam, respectivamente, às fontes de energia e ao percentual na matriz. Considere que:</p>
+<ul class="simple">
+<li><p><em>i</em> é o índice da <em>key</em> “Biomassa” no <em>dict</em> ordenado por valor percentual <strong>crescente</strong>;</p></li>
+<li><p><em>j</em> é o índice da <em>key</em> “Eólica” no <em>dict</em> ordenado por valor percentual <strong>decrescente</strong>.</p></li>
+</ul>
+<p>Assinale a alternativa correta:</p>
+<p>A. <em>i</em> = 4, <em>j</em> = 2</p>
+<p>B. <em>i</em> = 5, <em>j</em> = 3</p>
+<p>C. <em>i</em> = 0, <em>j</em> = 7</p>
+<p>D. <em>i</em> = 3, <em>j</em> = 6</p>
+</section>
+<section id="id1">
+<h2>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Alternativa A.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M_el</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Carvão e derivados&#39;</span><span class="p">:</span> <span class="mf">3.3</span><span class="p">,</span> <span class="s1">&#39;Hidráulica&#39;</span><span class="p">:</span> <span class="mf">64.9</span><span class="p">,</span> <span class="s1">&#39;Nuclear&#39;</span><span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span> <span class="s1">&#39;Gás natural&#39;</span><span class="p">:</span> <span class="mf">9.3</span><span class="p">,</span> 
+        <span class="s1">&#39;Solar&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Eólica&#39;</span> <span class="p">:</span> <span class="mf">8.6</span><span class="p">,</span> <span class="s1">&#39;Biomassa&#39;</span><span class="p">:</span> <span class="mf">8.4</span><span class="p">,</span> <span class="s1">&#39;Derivados de petróleo&#39;</span><span class="p">:</span> <span class="mi">2</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>a) Crie uma função para exibir de forma crescente as porcentagens do dicionário acima e suas respectivas fontes de energia:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># COLOQUE SEU CÓDIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Agora faça o mesmo sendo que de forma decrescente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># COLOQUE SEU CÓDIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>c) Crie uma função para indicar a fontes que é mais utilizada e a que é menos utilizada na Matriz Elétrica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Célula para mostrar a resolução, remover célula na hora de mandar para os alunos</span>
+
+<span class="c1">#Resolução a)</span>
+
+<span class="k">def</span> <span class="nf">crescente</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">):</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">%&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+        
+<span class="c1">#Resolução b)</span>
+
+<span class="k">def</span> <span class="nf">decrescente</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">%&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="c1">#Resolução c)</span>
+<span class="k">def</span> <span class="nf">MaioreMenor</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A maior é a </span><span class="si">{}</span><span class="s2"> com </span><span class="si">{}</span><span class="s2">%&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A menor é a </span><span class="si">{}</span><span class="s2"> com </span><span class="si">{}</span><span class="s2">%&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+    
+<span class="n">crescente</span><span class="p">(</span><span class="n">M_el</span><span class="p">)</span>    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">decrescente</span><span class="p">(</span><span class="n">M_el</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solar : 1%
+Derivados de petróleo : 2%
+Nuclear : 2.5%
+Carvão e derivados : 3.3%
+Biomassa : 8.4%
+Eólica : 8.6%
+Gás natural : 9.3%
+Hidráulica : 64.9%
+
+
+Hidráulica : 64.9%
+Gás natural : 9.3%
+Eólica : 8.6%
+Biomassa : 8.4%
+Carvão e derivados : 3.3%
+Nuclear : 2.5%
+Derivados de petróleo : 2%
+Solar : 1%
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questão 3</strong>: Para que um número de CPF (Cadastro de Pessoa Física) brasileiro seja considerado válido, a soma de todos os seus números deve resultar em um número com dois dígitos iguais. Por exemplo, o número de CPF <span class="math notranslate nohighlight">\(003.939.708-41\)</span> é válido porque</p>
+<div class="math notranslate nohighlight">
+\[0 + 0 + 3 + 9 + 3 + 9 + 7 + 8 + 4 + 1 = 44.\]</div>
+<p>Adicionalmente, a sua autenticidade pode ser verificada observando o último número antes do hífen, o qual determina o estado de origem daquele número de CPF. Considerando que um número de CPF possa ser escrito pela máscara</p>
+<div class="math notranslate nohighlight">
+\[abc.def.ghi\text{-}jk,\]</div>
+<p>o estado ao qual o número de CPF pertence será determinado a partir da correspondência abaixo.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(i=0\)</span>: Rio Grande do Sul</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=1\)</span>: Distrito Federal – Goiás – Mato Grosso – Mato Grosso do Sul – Tocantins</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=2\)</span>: Pará – Amazonas – Acre – Amapá – Rondônia – Roraima</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=3\)</span>: Ceará – Maranhão – Piauí</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=4\)</span>: Pernambuco – Rio Grande do Norte – Paraíba – Alagoas</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=5\)</span>: Bahia – Sergipe</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=6\)</span>: Minas Gerais</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=7\)</span>: Rio de Janeiro – Espírito Santo</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=8\)</span>: São Paulo</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=9\)</span>: Paraná – Santa Catarina</p></li>
+</ul>
+<p>Fonte: <a class="reference external" href="https://www.aceguarulhos.com.br/blog/como-saber-se-um-cpf-e-verdadeiro/#gsc.tab=0">[ACE Guarulhos]</a>
+A função a seguir cria <em>n</em> CPFs fictícios de modo aleatório:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+<span class="k">def</span> <span class="nf">random_cpf</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+    <span class="n">cpf</span> <span class="o">=</span> <span class="p">[]</span>    
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>              
+        <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000000000</span><span class="p">,</span><span class="mi">99999999999</span><span class="p">)</span>
+        <span class="n">cpf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cpf</span> 
+</pre></div>
+</div>
+<p>Execute esta função para <em>n</em>=2. Em seguida, faça um programa para checar se os CPFs gerados são válidos ou inválidos, bem como para determinar o estado brasileiro desses CPFs. Assinale a alternativa correta.</p>
+<p>A. Existem apenas 3 CPFs válidos e 1 deles pertence ao Acre.
+B. Existem apenas 5 CPFs válidos e 2 deles pertencem a São Paulo.
+C. Existe apenas 1 CPF válido, pertencente a Rondônia.
+D. Todos os CPFs são válidos, exceto o último da lista.</p>
+<p><strong>Dica:</strong> use expressão regular.</p>
+</section>
+<section id="id2">
+<h2>Gabarito<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Alternatva B.</p>
+<section id="funcao-de-gerar-os-cpfs-limpar-a-parte-do-gabarito">
+<h3>Função de gerar os cpfs, limpar a parte do gabarito<a class="headerlink" href="#funcao-de-gerar-os-cpfs-limpar-a-parte-do-gabarito" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="atencao-professor-retirar-toda-a-parte-comentada-corresponde-a-resolucao">
+<h3>Atenção professor, retirar toda a parte comentada, corresponde a resolução<a class="headerlink" href="#atencao-professor-retirar-toda-a-parte-comentada-corresponde-a-resolucao" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#toda a parte comentada corresponde a resolução da questão, RETIRAR DO NOTEBOOK</span>
+<span class="kn">import</span> <span class="nn">random</span> 
+<span class="k">def</span> <span class="nf">random_cpf</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+    <span class="n">cpf</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1">#cpf_valido = []</span>
+    <span class="c1">#valido = 0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>              
+        <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000000000</span><span class="p">,</span><span class="mi">99999999999</span><span class="p">)</span>
+        <span class="n">cpf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="c1">#x = str(n)</span>
+        <span class="c1">#s = str(sum([int(digit) for digit in x]))</span>
+        <span class="c1">#if s[0] == s[1]:</span>
+            <span class="c1">#valido+=1</span>
+            <span class="c1">#cpf_valido.append(n)</span>
+        <span class="c1">#s = 0   </span>
+    <span class="k">return</span> <span class="n">cpf</span> <span class="c1">#valido, cpf_valido</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cpfs</span> <span class="o">=</span> <span class="n">random_cpf</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="n">cpfs</span>
+<span class="c1">#COLOQUE SEU CÓDIGO AQUI (crie mais células abaixo se necessário)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[68581093450,
+ 25995741643,
+ 57529102265,
+ 73126840536,
+ 15905286856,
+ 88039947847,
+ 54429577243,
+ 93019478645,
+ 51775415282,
+ 64042892375,
+ 21221880666,
+ 76692463306,
+ 66439432656,
+ 42327558469,
+ 61589781627,
+ 81359433689,
+ 27285430081,
+ 24927304478,
+ 23959506537,
+ 30389438863]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Assinale e marque a resposta correta:</p>
+<ul class="simple">
+<li><p>a) São válidos apenas 3 CPFs, e são de, respectivamente:
+‘Minas Gerais’, ‘São Paulo’, ‘Pernambuco – Rio Grande do Norte – Paraíba – Alagoas’, ‘São Paulo’.</p></li>
+<li><p>b) É válido apenas 1 CPF, e é de:
+‘São Paulo’.</p></li>
+<li><p>c) São válidos apenas 2 CPFs,e são de  respectivamente:
+‘São Paulo’, ‘Pernambuco – Rio Grande do Norte – Paraíba – Alagoas’.</p></li>
+<li><p>d) São válidos apenas 5 CPFs, e são de, respectivamente:
+‘Minas Gerais’, ‘Pará – Amazonas – Acre – Amapá – Rondônia – Roraima’, ‘São Paulo’,
+‘Pernambuco – Rio Grande do Norte – Paraíba – Alagoas’, ‘São Paulo’.</p></li>
+<li><p>e) Nenhum CPF é válido, visto que são numeros gerados aleatóriamente tornando quase impossível conter tal coincidência!</p></li>
+</ul>
+</section>
+</section>
+<section id="id3">
+<h2>GABARITO<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Para rodar daqui em diante é necessário descomentar as funções anteriores</span>
+<span class="c1">#verificando qual o melhor seed para a criação da função, utilizar seed=38, VAI CONTER 5 CPFS VÁLIDOS</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">maior</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="n">cpf</span> <span class="o">=</span> <span class="n">random_cpf</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cpf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maior</span><span class="p">:</span>
+        <span class="n">seed</span><span class="p">,</span><span class="n">maior</span><span class="p">,</span><span class="n">cpf_valido</span> <span class="o">=</span> <span class="n">s</span><span class="p">,</span> <span class="n">cpf</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">cpf</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;O seed: </span><span class="si">{</span><span class="n">seed</span><span class="si">}</span><span class="s2">, obteve </span><span class="si">{</span><span class="n">maior</span><span class="si">}</span><span class="s2"> CPFs válidos: </span><span class="si">{</span><span class="n">cpf_valido</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O seed: 1, obteve 5 CPFs válidos: [25995741643, 57529102265, 15905286856, 42327558469, 30389438863]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Após obter os cpfs válidos, sempre vai corresponder a estes locais</span>
+<span class="c1">#importando biblioteca necessária</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="c1">#criando lista de possíveis lugares</span>
+<span class="n">lugares</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Rio Grande do Sul&quot;</span><span class="p">,</span><span class="s2">&quot;Distrito Federal – Goiás – Mato Grosso – Mato Grosso do Sul – Tocantins&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Pará – Amazonas – Acre – Amapá – Rondônia – Roraima&quot;</span><span class="p">,</span><span class="s2">&quot;Ceará – Maranhão – Piauí&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Pernambuco – Rio Grande do Norte – Paraíba – Alagoas&quot;</span><span class="p">,</span><span class="s2">&quot;Bahia – Sergipe&quot;</span><span class="p">,</span> <span class="s2">&quot;Minas Gerais&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Rio de Janeiro – Espírito Santo&quot;</span><span class="p">,</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span><span class="s2">&quot;Paraná – Santa Catarina&quot;</span><span class="p">]</span> <span class="c1">#Pode ser usado dict</span>
+<span class="c1">#função para localizar</span>
+<span class="k">def</span> <span class="nf">localyze</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">lista</span><span class="o">=</span> <span class="p">[]</span>
+    <span class="n">lugar</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">_</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))]</span>
+    <span class="c1">#usando a função espressões regulares para pegar apenas o digito que nos interessa</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;[0-9]&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">_</span><span class="p">][</span><span class="mi">8</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))]</span>
+    <span class="c1">#criando lista com os index correspondente a lista de lugares</span>
+    <span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))])</span>
+    <span class="c1">#criando lista com lugares correspondentes a lista criada</span>
+    <span class="n">lugar</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">lugares</span><span class="p">[</span><span class="n">lista</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">lugar</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">localyze</span><span class="p">(</span><span class="n">cpf_valido</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Minas Gerais&#39;,
+ &#39;Pará – Amazonas – Acre – Amapá – Rondônia – Roraima&#39;,
+ &#39;São Paulo&#39;,
+ &#39;Pernambuco – Rio Grande do Norte – Paraíba – Alagoas&#39;,
+ &#39;São Paulo&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

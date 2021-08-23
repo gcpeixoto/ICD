@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Apresentação do curso &#8212; Introdução à Ciência de Dados</title>
+    <title>Questionário 21 (Q21) &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,9 +50,11 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introdução à Ciência de Dados" href="01-introducao.html" />
+    <link rel="prev" title="Plotagem e formatação de gráficos" href="09-plotagem-matplotlib.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -83,8 +85,8 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-conteudo.html">
    Apresentação do curso
   </a>
  </li>
@@ -171,9 +173,9 @@
   Questionários
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Q21.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Questionário 21 (Q21)
   </a>
  </li>
@@ -218,7 +220,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/ipynb/00-conteudo.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ipynb/Q21.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -243,7 +245,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/00-conteudo.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/Q21.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -251,7 +253,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/00-conteudo.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/Q21.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -268,50 +270,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conteudo">
-   Conteúdo
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introducao">
-     Introdução
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unidade-1-20h">
-     Unidade 1 (20h)
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parte-1-8h">
-       Parte 1 (8h)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parte-2-10h">
-       Parte 2 (10h)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#questionarios-para-avaliacao">
-       Questionários para avaliação
-      </a>
-      <ul class="nav section-nav flex-column">
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -320,139 +278,80 @@
         
               <div>
                 
-  <section id="apresentacao-do-curso">
-<h1>Apresentação do curso<a class="headerlink" href="#apresentacao-do-curso" title="Permalink to this headline">¶</a></h1>
-<section id="conteudo">
-<h2>Conteúdo<a class="headerlink" href="#conteudo" title="Permalink to this headline">¶</a></h2>
-<section id="introducao">
-<h3>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h3>
+  <section id="questionario-21-q21">
+<h1>Questionário 21 (Q21)<a class="headerlink" href="#questionario-21-q21" title="Permalink to this headline">¶</a></h1>
+<p><strong>Orientações para submissão:</strong></p>
 <ul class="simple">
-<li><p><a class="reference internal" href="01-introducao.html"><span class="doc std std-doc">Introdução à Ciência de Dados</span></a></p></li>
+<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
+<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
+<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
+<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-a à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
 </ul>
-</section>
-<section id="unidade-1-20h">
-<h3>Unidade 1 (20h)<a class="headerlink" href="#unidade-1-20h" title="Permalink to this headline">¶</a></h3>
-<section id="parte-1-8h">
-<h4>Parte 1 (8h)<a class="headerlink" href="#parte-1-8h" title="Permalink to this headline">¶</a></h4>
+<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
+<hr><p><strong>Questão 1</strong>. As rodovias federais brasileiras interligam cidades, estados e regiões. De acordo com o Departamento Nacional de Infraestrutura de Transportes (DNIT), há 5 categorias de rodovias: radiais, longitudinais, transversais, diagonais e de ligação.</p>
+<p>Fonte: <a class="reference external" href="https://www.gov.br/dnit/pt-br/rodovias/rodovias-federais/nomeclatura-das-rodovias-federais">DNIT</a>.</p>
+<p>Usando <em>listcomps</em>, desenvolva um programa que organiza os códigos das rodovias que passam pelo estado da Paraíba separando os algarismos da sigla “BR” e assinale a alternativa correta quanto ao número de rodovias por categoria:</p>
+<p>A. 1 longitudinal / 4 transversais / 3 diagonais / 4 de ligação.</p>
+<p>B. 2 longitudinais / 4 transversais / 3 diagonais / 6 de ligação.</p>
+<p>C. 4 longitudinais / 1 transversal / 1 diagonal / 6 de ligação.</p>
+<p>D. 5 longitudinais / 1 transversal / 3 diagonais / 6 de ligação.</p>
+<p><strong>Questão 2</strong>. Segundo o Balanço Energético Nacional 2019, a matriz elétrica brasileira estava distribuída segundo o gráfico abaixo:</p>
+<figure class="align-default" id="ben">
+<a class="reference internal image-reference" href="../_images/ben.png"><img alt="../_images/ben.png" src="../_images/ben.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Distribuição da matriz elétrica brasileira no final de 2019.</span><a class="headerlink" href="#ben" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Fonte: <a class="reference external" href="https://www.epe.gov.br/pt/abcdenergia/matriz-energetica-e-eletrica">[EPE]</a>.</p>
+<p>Crie um dicionário em que as <em>keys</em> e <em>values</em> correspondam, respectivamente, às fontes de energia legendadas no gráfico e ao percentual que ocupam na matriz energética. Considerando que</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="02a-pip-venv.html"><span class="doc std std-doc">Pacotes e ambientes virtuais com <em>pip</em> e <em>venv</em></span></a></p></li>
-<li><p><a class="reference internal" href="02b-conda.html"><span class="doc std std-doc"><em>Crash course</em> de <em>conda</em></span></a></p></li>
-<li><p><a class="reference internal" href="03-ides.html"><span class="doc std std-doc">Ambientes de desenvolvimento e computação interativa</span></a></p></li>
-<li><p><a class="reference internal" href="04-cvs-git.html"><span class="doc std std-doc">Controle de versão</span></a></p></li>
+<li><p><em>i</em> é o índice da <em>key</em> “Biomassa” no <em>dict</em> ordenado por valor percentual <strong>crescente</strong> e</p></li>
+<li><p><em>j</em> é o índice da <em>key</em> “Eólica” no <em>dict</em> ordenado por valor percentual <strong>decrescente</strong>,</p></li>
 </ul>
-</section>
-<section id="parte-2-10h">
-<h4>Parte 2 (10h)<a class="headerlink" href="#parte-2-10h" title="Permalink to this headline">¶</a></h4>
+<p>assinale a alternativa correta:</p>
+<p>A. <em>i</em> = 4 e <em>j</em> = 2.</p>
+<p>B. <em>i</em> = 5 e <em>j</em> = 3.</p>
+<p>C. <em>i</em> = 0 e <em>j</em> = 7.</p>
+<p>D. <em>i</em> = 3 e <em>j</em> = 6.</p>
+<p><strong>Questão 3</strong>: Para que um número de CPF (Cadastro de Pessoa Física) brasileiro seja considerado válido, a soma de todos os seus dígitos deve resultar em um número com dois dígitos iguais. Por exemplo, o número de CPF <span class="math notranslate nohighlight">\(003.939.708\text{-}41\)</span> é válido porque</p>
+<div class="math notranslate nohighlight">
+\[0 + 0 + 3 + 9 + 3 + 9 + 7 + 8 + 4 + 1 = 44.\]</div>
+<p>Adicionalmente, a sua autenticidade pode ser verificada observando o último dígito imediatamente anterior ao hífen, o qual determina o estado de origem daquele número de CPF.</p>
+<p>Considerando que um número de CPF possa ser escrito pela máscara</p>
+<div class="math notranslate nohighlight">
+\[abc.def.ghi\text{-}jk,\]</div>
+<p>o estado ao qual o número de CPF pertence será determinado a partir da correspondência abaixo.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="05-python-intermediario.html"><span class="doc std std-doc">Python intermediário - I</span></a></p></li>
-<li><p><a class="reference internal" href="06-python-intermediario-2.html"><span class="doc std std-doc">Python intermediário - II</span></a></p></li>
-<li><p><span class="xref myst">Python intermediário - III</span></p></li>
-<li><p><a class="reference internal" href="08a-computacao-vetorizada.html"><span class="doc std std-doc">Computação vetorizada</span></a></p></li>
-<li><p><a class="reference internal" href="08b-alc.html"><span class="doc std std-doc">Álgebra Linear Computacional básica</span></a></p></li>
-<li><p><a class="reference internal" href="09-plotagem-matplotlib.html"><span class="doc std std-doc">Plotagem e formatação de gráficos</span></a></p></li>
+<li><p><span class="math notranslate nohighlight">\(i=0\)</span>: Rio Grande do Sul</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=1\)</span>: Distrito Federal – Goiás – Mato Grosso – Mato Grosso do Sul – Tocantins</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=2\)</span>: Pará – Amazonas – Acre – Amapá – Rondônia – Roraima</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=3\)</span>: Ceará – Maranhão – Piauí</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=4\)</span>: Pernambuco – Rio Grande do Norte – Paraíba – Alagoas</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=5\)</span>: Bahia – Sergipe</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=6\)</span>: Minas Gerais</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=7\)</span>: Rio de Janeiro – Espírito Santo</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=8\)</span>: São Paulo</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=9\)</span>: Paraná – Santa Catarina</p></li>
 </ul>
-</section>
-<section id="questionarios-para-avaliacao">
-<h4>Questionários para avaliação<a class="headerlink" href="#questionarios-para-avaliacao" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>Unidade 1: Parte 2</p>
-<ul>
-<li><p><a class="reference internal" href="Q21.html"><span class="doc std std-doc">Questionário 21</span></a></p></li>
-</ul>
-</li>
-</ul>
-<!--
-Aula (2h)
-- Prova 2
-
-### Unidade 2 (20h)
-
-#### Parte 3 - Ciência e análise de dados (20h)
-
-- Pipeline
-- Estatística
-- Probabilidade
-- Otimização
-- Aprendizagem de máquina
-
-Aula (2h)
-- Pipeline de dados 1: organização, limpeza, armazenamento, preparação e transformação dos dados
-
-Aula (2h)
-- Pipeline de dados 2:
-
-Aula (2h) 
-- Estatística descritiva 1: medidas de centralidade (Estatística) 
-
-Aula (2h)
-- Estatística descritiva 2: medidas de dispersão (Estatística) 
-
-Aula (2h)
-- Correlação (Estatística) 
-
-Aula (2h)
-- Regressão linear (Estatística) 
-
-Aula (2h)
-- Números aleatórios
-- Distribuição normal (Probabilidade)
-
-Aula (2h)
-- Scores e rankings (Probabilidade)
-
-Aula (2h)
-- Otimização - gradient descent
-
-Aula (2h)
-- Prova 3
-
-### Unidade 3 (20h)
-
-### Parte 4 - Aplicações (20h)
-
-Aula (2h)
-- Obtenção de datasets
-- Web scraping (requests)
-- HDF5 (h5py)
-- APIs
-
-Aula (2h) 
-- Aprendizagem de máquina 1: supervisionada (scikit-learn)
-
-Aula (2h)
-- Aprendizagem de máquina 2: não-supervisionada (scikit-learn)
-
-Aula (2h)
-- Redes neurais (keras, tensorflow)
-
-Aula (2h)
-- Data viz
-- Data storytelling
-- Data reporting
-
-Aula (2h)
-- Engenharia de dados
-- Mapreduce
-- Curadoria
-- Ética em dados
-
-Aula (2h)
-- Análise de redes (networkx)
-
-Aula (2h)
-- Sistemas de recomendação
-
-Aula (4h)
-- Capstone project
---><div class="toctree-wrapper compound">
+<p>O CPF usado como modelo acima, por exemplo, pertence a São Paulo, já que <span class="math notranslate nohighlight">\(i = 8\)</span>.</p>
+<p>Fonte: <a class="reference external" href="https://www.aceguarulhos.com.br/blog/como-saber-se-um-cpf-e-verdadeiro/#gsc.tab=0">[ACE Guarulhos]</a></p>
+<p>A função a seguir cria <em>n</em> CPFs fictícios de modo aleatório:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+<span class="k">def</span> <span class="nf">random_cpf</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+    <span class="n">cpf</span> <span class="o">=</span> <span class="p">[]</span>    
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>              
+        <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000000000</span><span class="p">,</span><span class="mi">99999999999</span><span class="p">)</span>
+        <span class="n">cpf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cpf</span> 
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-</section>
-</section>
-</section>
+<p>Execute esta função para <em>n</em>=2. Em seguida, faça um programa para checar se os CPFs gerados são válidos ou inválidos, bem como para determinar o estado brasileiro desses CPFs. Assinale a alternativa correta.</p>
+<p>A. Existem apenas 3 CPFs válidos e 1 deles pertence ao Acre.</p>
+<p>B. Existem apenas 5 CPFs válidos e 2 deles pertencem a São Paulo.</p>
+<p>C. Existe apenas 1 CPF válido, pertencente a Rondônia.</p>
+<p>D. Todos os CPFs são válidos, exceto o último da lista.</p>
+<p><strong>Dica:</strong> use expressão regular.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -480,7 +379,7 @@ Aula (4h)
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="01-introducao.html" title="next page">Introdução à Ciência de Dados</a>
+    <a class='left-prev' id="prev-link" href="09-plotagem-matplotlib.html" title="previous page">Plotagem e formatação de gráficos</a>
 
         </div>
         
