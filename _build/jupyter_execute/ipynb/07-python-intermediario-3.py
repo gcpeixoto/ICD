@@ -96,7 +96,7 @@ f.closed
 # ```
 # 
 # ```{note}
-# Para saber mais acerca de `with`, consulte o [PEP 343].(https://www.python.org/dev/peps/pep-0343/#motivation-and-summary)
+# Para saber mais acerca de `with`, consulte o [PEP 343](https://www.python.org/dev/peps/pep-0343/#motivation-and-summary).
 # ```
 
 # In[7]:

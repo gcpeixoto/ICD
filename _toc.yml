@@ -21,6 +21,7 @@
   numbered: false
   chapters:
   - file: ipynb/Q21
+  - file: ipynb/Q22
 #- part: Temas de projeto
 #  numbered: false
 #  chapters:

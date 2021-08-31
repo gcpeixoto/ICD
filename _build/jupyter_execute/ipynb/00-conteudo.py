@@ -9,16 +9,16 @@
 # 
 # - [Introdução à Ciência de Dados](01-introducao.ipynb)
 # 
-# ### Unidade 1 (20h)
+# ### Unidade 1 
 # 
-# #### Parte 1 (8h)
+# #### Parte 1
 # 
 # - [Pacotes e ambientes virtuais com _pip_ e _venv_](02a-pip-venv.ipynb)
 # - [_Crash course_ de _conda_](02b-conda.ipynb)
 # - [Ambientes de desenvolvimento e computação interativa](03-ides.ipynb)
 # - [Controle de versão](04-cvs-git.ipynb)
 # 
-# #### Parte 2 (10h) 
+# #### Parte 2
 # 
 # - [Python intermediário - I](05-python-intermediario.ipynb)
 # - [Python intermediário - II](06-python-intermediario-2.ipynb)
@@ -27,18 +27,22 @@
 # - [Álgebra Linear Computacional básica](08b-alc.ipynb)
 # - [Plotagem e formatação de gráficos](09-plotagem-matplotlib.ipynb)
 # 
+# ### Unidade 2
+# 
+# _Coming soon..._
+# 
+# 
 # #### Questionários para avaliação
 # 
 # - Unidade 1: Parte 2
 #     - [Questionário 21](Q21.ipynb)
 #     - [Questionário 22](Q22.ipynb)
 # 
+# #### Template para mini-artigos
+# 
+# Para elaborar os mini-artigos avaliativos, use o template disponibilizado <a href="../templates/short-paper/docx/main.docx" download="../templates/short-paper/docx/main.docx"> aqui </a>.
+# 
 # <!--
-# Aula (2h)
-# - Prova 2
-# 
-# ### Unidade 2 (20h)
-# 
 # #### Parte 3 - Ciência e análise de dados (20h)
 # 
 # - Pipeline
@@ -152,5 +156,6 @@
 # :caption: Questionários
 # 
 # Q21
+# Q22
 # ```
 # 
