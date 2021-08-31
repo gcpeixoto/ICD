@@ -58,8 +58,6 @@
 # - Qual é a quantidade de remédios nas classes _gratuidade_ e _copagamento_?
 # - Quantos remédios têm a letra C como inicial de seu nome?
 # 
-# Assinale a alternativa correta.
-# 
 # Assinale a alternativa correta:
 # 
 # A. `'HIPERTENSÃO', (20, 15), 3`  
