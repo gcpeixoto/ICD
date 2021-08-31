@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Questionário Q22 &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/todo/Q22-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/Q22-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/Q22-gab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Questionário Q22
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gabarito">
+     Gabarito
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Gabarito
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   GABARITO
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="questionario-q22">
+<h1>Questionário Q22<a class="headerlink" href="#questionario-q22" title="Permalink to this headline">¶</a></h1>
+<p>Orientações:</p>
+<ul class="simple">
+<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
+<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
+<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
+<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-a à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
+</ul>
+<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
+<hr><p><strong>Questão 1</strong>. O texto abaixo é uma mensagem encriptada. Cada grupo de 4 caracteres corresponde a um número hexadecimal.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mh">0x45</span> <span class="mh">0x6d</span> <span class="mh">0x20</span> <span class="mh">0x61</span> <span class="mh">0x6c</span> <span class="mh">0x67</span> <span class="mh">0x75</span> <span class="mh">0x6d</span> <span class="mh">0x20</span> <span class="mh">0x6c</span> <span class="mh">0x75</span> <span class="mh">0x67</span> <span class="mh">0x61</span> <span class="mh">0x72</span> <span class="mh">0x2c</span> <span class="mh">0x20</span> <span class="mh">0x61</span> <span class="mh">0x6c</span> <span class="mh">0x67</span> <span class="mh">0x6f</span> <span class="mh">0x20</span> <span class="mh">0x69</span> <span class="mh">0x6e</span> <span class="mh">0x63</span> <span class="mh">0x72</span> <span class="mh">0xed</span> <span class="mh">0x76</span> <span class="mh">0x65</span> <span class="mh">0x6c</span> <span class="mh">0x20</span> <span class="mh">0x65</span> <span class="mh">0x73</span> <span class="mh">0x74</span> <span class="mh">0xe1</span> <span class="mh">0x20</span> <span class="mh">0x65</span> <span class="mh">0x73</span> <span class="mh">0x70</span> <span class="mh">0x65</span> <span class="mh">0x72</span> <span class="mh">0x61</span> <span class="mh">0x6e</span> <span class="mh">0x64</span> <span class="mh">0x6f</span> <span class="mh">0x20</span> <span class="mh">0x70</span> <span class="mh">0x61</span> <span class="mh">0x72</span> <span class="mh">0x61</span> <span class="mh">0x20</span> <span class="mh">0x73</span> <span class="mh">0x65</span> <span class="mh">0x72</span> <span class="mh">0x20</span> <span class="mh">0x64</span> <span class="mh">0x65</span> <span class="mh">0x73</span> <span class="mh">0x63</span> <span class="mh">0x6f</span> <span class="mh">0x62</span> <span class="mh">0x65</span> <span class="mh">0x72</span> <span class="mh">0x74</span> <span class="mh">0x6f</span> <span class="mh">0x2e</span>
+</pre></div>
+</div>
+<p>Use seus conhecimentos de funções <em>built_in</em> para decodificar a mensagem, que é inteligível na Língua Portuguesa. Em seguida, determine quais são os caracteres da mensagem que correspondem, respectivamente, ao maior e menor valor binário entre os elementos da sequência. Assinale a alternativa que melhor descreve a mensagem decodificada, o caracter associado ao maior valor binário e o caracter associado ao menor valor binário, nesta sequência.</p>
+<p>A. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">nenhum</span> <span class="pre">lugar,</span> <span class="pre">todo</span> <span class="pre">possível</span> <span class="pre">está</span> <span class="pre">aguardando</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">manifesto'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ê'</span></code> e <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>.</p>
+<p>B. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">algum</span> <span class="pre">lugar,</span> <span class="pre">tudo</span> <span class="pre">incrível</span> <span class="pre">está</span> <span class="pre">esperando</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">incompleto.'</span></code>, <code class="docutils literal notranslate"><span class="pre">'s</span></code> e  <code class="docutils literal notranslate"><span class="pre">'a'</span></code>.</p>
+<p>C. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">nenhum</span> <span class="pre">lugar,</span> <span class="pre">algo</span> <span class="pre">possível</span> <span class="pre">deve</span> <span class="pre">aguardar</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">descoberto'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ê'</span></code> e <code class="docutils literal notranslate"><span class="pre">'í'</span></code>.</p>
+<p>D. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">algum</span> <span class="pre">lugar,</span> <span class="pre">algo</span> <span class="pre">incrível</span> <span class="pre">está</span> <span class="pre">esperando</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">descoberto.'</span></code>, <code class="docutils literal notranslate"><span class="pre">'í</span></code> e  <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>.</p>
+<p><em>Obs.:</em> Considere que os espaços na mensagem original não devem ser considerados como caracteres na mensagem decodificada e que ali servem apenas para separar os quartetos hexadecimais.</p>
+<hr>
+<section id="gabarito">
+<h2>Gabarito<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h2>
+<p>Alternativa <strong>D</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frase_code</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x45</span><span class="p">,</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x6c</span><span class="p">,</span> <span class="mh">0x67</span><span class="p">,</span> <span class="mh">0x75</span><span class="p">,</span> <span class="mh">0x6d</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x6c</span><span class="p">,</span> <span class="mh">0x75</span><span class="p">,</span> <span class="mh">0x67</span><span class="p">,</span><span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x2c</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span>
+              <span class="mh">0x6c</span><span class="p">,</span> <span class="mh">0x67</span><span class="p">,</span> <span class="mh">0x6f</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">,</span> <span class="mh">0x6e</span><span class="p">,</span> <span class="mh">0x63</span><span class="p">,</span><span class="mh">0x72</span><span class="p">,</span> <span class="mh">0xed</span><span class="p">,</span> <span class="mh">0x76</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x6c</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0xe1</span><span class="p">,</span>
+              <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0x70</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x6e</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x6f</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x70</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span>
+              <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0x63</span><span class="p">,</span> <span class="mh">0x6f</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0x6f</span><span class="p">,</span> <span class="mh">0x2e</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maior_int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">frase_code</span><span class="p">)</span>
+<span class="n">menor_int</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">frase_code</span><span class="p">)</span>
+<span class="n">test</span>  <span class="o">=</span> <span class="p">[(</span><span class="nb">chr</span><span class="p">(</span><span class="n">frase_code</span><span class="p">[</span><span class="n">_</span><span class="p">]))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">frase_code</span><span class="p">))]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="n">h</span> <span class="p">,</span> <span class="n">maior</span><span class="p">,</span> <span class="n">menor</span> <span class="p">,</span> <span class="n">binario</span> <span class="o">=</span><span class="nb">bin</span><span class="p">(</span><span class="n">maior_int</span><span class="p">),</span><span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">bin</span><span class="p">(</span><span class="n">menor_int</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A frase: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">\n\</span>
+<span class="s2">O maior numero em binário : [</span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">] seu respectivo caractere: &#39;</span><span class="si">{</span><span class="n">maior</span><span class="si">}</span><span class="s2">&#39;</span><span class="se">\n\</span>
+<span class="s2">O menor numero em binário: [</span><span class="si">{</span><span class="n">binario</span><span class="si">}</span><span class="s2">] e seu respectivo caratere: &#39;</span><span class="si">{</span><span class="n">menor</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A frase: Em algum lugar, algo incrível está esperando para ser descoberto.
+O maior numero em binário : [0b11101101] seu respectivo caractere: &#39;í&#39;
+O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questão 2</strong>. Rindalve é um jovem promissor que conquistou um excelente emprego, mas sofre com a indisciplina financeira. Ele paga o aluguel da casa onde mora sempre com atraso de alguns dias e, extrapola o limite do cartão de crédito com frequência. Neste mês, Jonas pagou seu aluguel de <span> R$</span> 6.500,00 com 12 dias de atraso e hoje faz 6 dias que a fatura de seu cartão, fechada em <span> R$</span> 7.234,77, venceu.</p>
+<p>A imobiliária que administra a casa de Jonas usa a seguinte regra para calcular o valor adicional devido em caso de atraso no pagamento do aluguel:</p>
+<ul class="simple">
+<li><p>mora de 6,25% sobre o valor do aluguel + juro simples de 0,025% ao dia</p></li>
+</ul>
+<p>A administradora de seu cartão de crédito, por outro lado, usa a seguinte regra para calcular o valor adicional devido em caso de atraso no pagamento da fatura do cartão:</p>
+<ul class="simple">
+<li><p>juro composto de 1,44% ao dia.</p></li>
+</ul>
+<p>Crie uma função para calcular o valor total atualizado <span class="math notranslate nohighlight">\(V_T\)</span> que Jonas deverá desembolsar, em reais, para quitar as despesas citadas. Então, marque a alternativa correta.</p>
+<p>A. <span> R$</span> 19.048,09</p>
+<p>B. <span> R$</span> 19.396,08</p>
+<p>C. <span> R$</span> 14.166,77</p>
+<p>D. <span> R$</span> 16.396,77</p>
+<hr>
+</section>
+</section>
+<section id="id1">
+<h1>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa C.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">va_simples</span><span class="p">(</span><span class="n">valor</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">taxa</span><span class="p">,</span><span class="n">mora</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">valor</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">valor</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="p">(</span><span class="n">mora</span> <span class="o">+</span> <span class="n">t</span><span class="o">*</span><span class="n">taxa</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> 
+
+<span class="k">def</span> <span class="nf">va_composto</span><span class="p">(</span><span class="n">valor</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">taxa</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">taxa</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
+        <span class="n">taxa</span> <span class="o">/=</span> <span class="mi">100</span>
+        
+    <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">valor</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">valor</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">taxa</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">**</span><span class="n">t</span>
+
+<span class="k">def</span> <span class="nf">total</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">v1</span> <span class="o">+</span> <span class="n">v2</span>
+
+<span class="n">v1</span> <span class="o">=</span> <span class="n">va_simples</span><span class="p">(</span><span class="mi">6500</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">6.25</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">va_composto</span><span class="p">(</span><span class="mf">7234.77</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mf">1.44</span><span class="p">)</span>
+<span class="n">vt</span> <span class="o">=</span> <span class="n">total</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">)</span>
+<span class="sa">f</span><span class="s1">&#39;Total devido: R$ = </span><span class="si">{</span><span class="n">vt</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Total devido: R$ = 14166.77&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p><strong>Questão 3</strong>. O Ministério da Saúde disponibiliza uma lista de remédios através do programa <em>Farmácia Popular</em>. Clicando <a class="reference external" href="https://antigo.saude.gov.br/images/pdf/2019/janeiro/07/Lista-Medicamentos.pdf">aqui</a>, você será redirecionado a uma dessas listas. Crie um <em>dict</em> em Python com as informações relevantes contidas na tabela do arquivo PDF. Em seguida, crie uma função regular que recebe o seu <em>dict</em> como argumento e retorne 3 objetos: um <em>str</em>, um <em>tuple</em> e um <em>int</em>, os quais nesta, ordem, responderão às seguintes perguntas:</p>
+<ul class="simple">
+<li><p>Para que doença a maior quantidade de remédios na gratuidade é indicada?</p></li>
+<li><p>Qual é a quantidade de remédios nas classes <em>gratuidade</em> e <em>copopagamento</em>?</p></li>
+<li><p>Quantos remédios têm a letra C como inicial de seu nome?</p></li>
+</ul>
+<p>Assinale a alternativa correta.</p>
+<p>Assinale a alternativa correta:</p>
+<p>A. ‘HIPERTENSÃO’, (20, 15), 3</p>
+<p>B. ‘ASMA’, (20, 15), 7</p>
+<p>C. ‘DIABETES’, (10, 20), 8</p>
+<p>D. ‘ASMA’, (18, 17), 6</p>
+<p><em>Obs.:</em> tente usar funções anônimas sempre que possível.</p>
+</section>
+<section id="id2">
+<h1>GABARITO<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>B</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Criação do dataset</span>
+<span class="n">medicamentos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ATENOLOL 25MG&quot;</span><span class="p">,</span><span class="s2">&quot;CAPTOPRIL 25MG&quot;</span><span class="p">,</span> <span class="s2">&quot;CLORIDRATO DE PROPRANOLOL 40MG&quot;</span><span class="p">,</span><span class="s2">&quot;HIDROCLOROTIAZIDA 25MG&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;LOSARTANA POTÁSSICA 50MG&quot;</span><span class="p">,</span><span class="s2">&quot;MALEATO DE ENALAPRIL 10MG&quot;</span><span class="p">,</span><span class="s2">&quot;GLIBENCLAMIDA 5MG&quot;</span><span class="p">,</span><span class="s2">&quot;CLORIDRATO DE METFORMINA 500MG&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;CLORIDRATO DE METFORMINA 500MG – AÇÃO PROLONGADA&quot;</span><span class="p">,</span> <span class="s2">&quot;CLORIDRATO DE METFORMINA 850MG&quot;</span><span class="p">,</span><span class="s2">&quot;INSULINA HUMANA 100UI/ML&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;INSULINA HUMANA REGULAR 100UI/ML&quot;</span><span class="p">,</span><span class="s2">&quot;SULFATO DE SALBUTAMOL 5MG&quot;</span><span class="p">,</span><span class="s2">&quot;SULFATO DE SALBUTAMOL 100MCG&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;DIPROPIONATO DE BECLOMETASONA 50MCG&quot;</span><span class="p">,</span><span class="s2">&quot;DIPROPIONATO DE BECLOMETASONA 200MCG/DOSE&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;DIPROPIONATO DE BECLOMETASONA 200MCG/CÁPSULA&quot;</span><span class="p">,</span><span class="s2">&quot;DIPROPIONATO DE BECLOMETASONA 250MCG&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;BROMETO DE IPRATRÓPIO 0,25MG/ML&quot;</span><span class="p">,</span><span class="s2">&quot;BROMETO DE IPRATRÓPIO 0,02MG/DOSE&quot;</span><span class="p">,</span><span class="s2">&quot;ACETATO DE MEDROXIPROGESTERONA 150MG&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;ETINILESTRADIOL 0,03MG + LEVONORGESTREL 0,15MG&quot;</span><span class="p">,</span><span class="s2">&quot;NORETISTERONA 0,35MG&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;VALERATO DE ESTRADIOL 5MG + ENANTATO DE NORETISTERONA 50MG&quot;</span><span class="p">,</span><span class="s2">&quot;SINVASTATINA 10MG&quot;</span><span class="p">,</span><span class="s2">&quot;SINVASTATINA 20MG&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;SINVASTATINA 40MG&quot;</span><span class="p">,</span> <span class="s2">&quot;BUDESONIDA 32MCG&quot;</span><span class="p">,</span> <span class="s2">&quot;BUDESONIDA 50MCG&quot;</span><span class="p">,</span><span class="s2">&quot;DIPROPINATO DE BELCLOMETASONA 50MCG&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;CARBIDOPA 25MG + LEVODOPA 250MG&quot;</span><span class="p">,</span> <span class="s2">&quot;CLORIDRATO DE BENSERAZIDA 25MG + LEVODOPA 100MG&quot;</span><span class="p">,</span><span class="s2">&quot;ALENDRONATO DE SÓDIO 70MG&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;MALEATO DE TIMOLOL 2,5MG&quot;</span><span class="p">,</span><span class="s2">&quot;MALEATO DE TIMOLOL 5MG&quot;</span><span class="p">]</span>
+
+<span class="n">indicacao</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HIPERTENSÃO&quot;</span><span class="p">,</span><span class="s2">&quot;HIPERTENSÃO&quot;</span><span class="p">,</span><span class="s2">&quot;HIPERTENSÃO&quot;</span><span class="p">,</span><span class="s2">&quot;HIPERTENSÃO&quot;</span><span class="p">,</span><span class="s2">&quot;HIPERTENSÃO&quot;</span><span class="p">,</span><span class="s2">&quot;HIPERTENSÃO&quot;</span><span class="p">,</span><span class="s2">&quot;DIABETES&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;DIABETES&quot;</span><span class="p">,</span><span class="s2">&quot;DIABETES&quot;</span><span class="p">,</span><span class="s2">&quot;DIABETES&quot;</span><span class="p">,</span><span class="s2">&quot;DIABETES&quot;</span><span class="p">,</span><span class="s2">&quot;DIABETES&quot;</span><span class="p">,</span><span class="s2">&quot;ASMA&quot;</span><span class="p">,</span><span class="s2">&quot;ASMA&quot;</span><span class="p">,</span><span class="s2">&quot;ASMA&quot;</span><span class="p">,</span><span class="s2">&quot;ASMA&quot;</span><span class="p">,</span><span class="s2">&quot;ASMA&quot;</span><span class="p">,</span><span class="s2">&quot;ASMA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ASMA&quot;</span><span class="p">,</span><span class="s2">&quot;ASMA&quot;</span><span class="p">,</span><span class="s2">&quot;ANTICONCEPÇÃO&quot;</span><span class="p">,</span><span class="s2">&quot;ANTICONCEPÇÃO&quot;</span><span class="p">,</span><span class="s2">&quot;ANTICONCEPÇÃO&quot;</span><span class="p">,</span><span class="s2">&quot;ANTICONCEPÇÃO&quot;</span><span class="p">,</span><span class="s2">&quot;DISLIPIDEMIA&quot;</span><span class="p">,</span><span class="s2">&quot;DISLIPIDEMIA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;DISLIPIDEMIA&quot;</span><span class="p">,</span> <span class="s2">&quot;RINITE&quot;</span><span class="p">,</span><span class="s2">&quot;RINITE&quot;</span><span class="p">,</span><span class="s2">&quot;RINITE&quot;</span><span class="p">,</span><span class="s2">&quot;DOENÇA DE PARKINSON&quot;</span><span class="p">,</span><span class="s2">&quot;DOENÇA DE PARKINSON&quot;</span><span class="p">,</span><span class="s2">&quot;OSTEOPOROSE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;GLAUCOMA&quot;</span><span class="p">,</span><span class="s2">&quot;GLAUCOMA&quot;</span><span class="p">]</span>
+
+<span class="n">gratuidade_copagamento</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">]</span>
+
+<span class="c1">#verificação se todas estão correpondentes</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">medicamentos</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">indicacao</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">gratuidade_copagamento</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(35, 35, 35)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#juntando indicação + gratuiddado_copagamento</span>
+<span class="n">ind_grat</span> <span class="o">=</span> <span class="p">[</span><span class="n">indicacao</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; | &quot;</span><span class="o">+</span> <span class="n">gratuidade_copagamento</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indicacao</span><span class="p">))]</span>
+<span class="c1">#criando o dict</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">medicamentos</span><span class="p">,</span> <span class="n">ind_grat</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> | &quot;</span> <span class="o">+</span> <span class="n">ind_grat</span><span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 1 | ATENOLOL 25MG | HIPERTENSÃO | GRATUIDADE
+| 2 | CAPTOPRIL 25MG | HIPERTENSÃO | GRATUIDADE
+| 3 | CLORIDRATO DE PROPRANOLOL 40MG | HIPERTENSÃO | GRATUIDADE
+| 4 | HIDROCLOROTIAZIDA 25MG | HIPERTENSÃO | GRATUIDADE
+| 5 | LOSARTANA POTÁSSICA 50MG | HIPERTENSÃO | GRATUIDADE
+| 6 | MALEATO DE ENALAPRIL 10MG | HIPERTENSÃO | GRATUIDADE
+| 7 | GLIBENCLAMIDA 5MG | DIABETES | GRATUIDADE
+| 8 | CLORIDRATO DE METFORMINA 500MG | DIABETES | GRATUIDADE
+| 9 | CLORIDRATO DE METFORMINA 500MG – AÇÃO PROLONGADA | DIABETES | GRATUIDADE
+| 10 | CLORIDRATO DE METFORMINA 850MG | DIABETES | GRATUIDADE
+| 11 | INSULINA HUMANA 100UI/ML | DIABETES | GRATUIDADE
+| 12 | INSULINA HUMANA REGULAR 100UI/ML | DIABETES | GRATUIDADE
+| 13 | SULFATO DE SALBUTAMOL 5MG | ASMA | GRATUIDADE
+| 14 | SULFATO DE SALBUTAMOL 100MCG | ASMA | GRATUIDADE
+| 15 | DIPROPIONATO DE BECLOMETASONA 50MCG | ASMA | GRATUIDADE
+| 16 | DIPROPIONATO DE BECLOMETASONA 200MCG/DOSE | ASMA | GRATUIDADE
+| 17 | DIPROPIONATO DE BECLOMETASONA 200MCG/CÁPSULA | ASMA | GRATUIDADE
+| 18 | DIPROPIONATO DE BECLOMETASONA 250MCG | ASMA | GRATUIDADE
+| 19 | BROMETO DE IPRATRÓPIO 0,25MG/ML | ASMA | GRATUIDADE
+| 20 | BROMETO DE IPRATRÓPIO 0,02MG/DOSE | ASMA | GRATUIDADE
+| 21 | ACETATO DE MEDROXIPROGESTERONA 150MG | ANTICONCEPÇÃO | COPAGAMENTO
+| 22 | ETINILESTRADIOL 0,03MG + LEVONORGESTREL 0,15MG | ANTICONCEPÇÃO | COPAGAMENTO
+| 23 | NORETISTERONA 0,35MG | ANTICONCEPÇÃO | COPAGAMENTO
+| 24 | VALERATO DE ESTRADIOL 5MG + ENANTATO DE NORETISTERONA 50MG | ANTICONCEPÇÃO | COPAGAMENTO
+| 25 | SINVASTATINA 10MG | DISLIPIDEMIA | COPAGAMENTO
+| 26 | SINVASTATINA 20MG | DISLIPIDEMIA | COPAGAMENTO
+| 27 | SINVASTATINA 40MG | DISLIPIDEMIA | COPAGAMENTO
+| 28 | BUDESONIDA 32MCG | RINITE | COPAGAMENTO
+| 29 | BUDESONIDA 50MCG | RINITE | COPAGAMENTO
+| 30 | DIPROPINATO DE BELCLOMETASONA 50MCG | RINITE | COPAGAMENTO
+| 31 | CARBIDOPA 25MG + LEVODOPA 250MG | DOENÇA DE PARKINSON | COPAGAMENTO
+| 32 | CLORIDRATO DE BENSERAZIDA 25MG + LEVODOPA 100MG | DOENÇA DE PARKINSON | COPAGAMENTO
+| 33 | ALENDRONATO DE SÓDIO 70MG | OSTEOPOROSE | COPAGAMENTO
+| 34 | MALEATO DE TIMOLOL 2,5MG | GLAUCOMA | COPAGAMENTO
+| 35 | MALEATO DE TIMOLOL 5MG | GLAUCOMA | COPAGAMENTO
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">info_medicamentos</span><span class="p">(</span><span class="n">dic</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">re</span>
+    <span class="c1">#atribuindo a ind_cop a indicação e o copagamento e names os nomes dos remédios</span>
+    <span class="n">ind_cop</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+    
+    <span class="c1">#contando quantos remédios iniciam com a letra &quot;C&quot;</span>
+    <span class="n">inicial</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="n">names</span><span class="p">))</span>
+    
+    <span class="c1">#separando a indicação e a gratuidade para verificar quantidade</span>
+    <span class="n">sep</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">)),</span> <span class="n">ind_cop</span><span class="p">))</span>
+    <span class="n">count_grat</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">count_copa</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="n">sep</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="s2">&quot;GRATUIDADE&quot;</span><span class="p">:</span>
+            <span class="n">count_grat</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">count_copa</span> <span class="o">+=</span><span class="mi">1</span>
+            
+    <span class="c1">#indetificando qual indicação contém mais remédios gratuitos      </span>
+    <span class="n">junt</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ind_cop</span><span class="p">)</span>
+    <span class="n">chek</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">indi_list</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;HIPERTENSÃO&quot;</span><span class="p">,</span> <span class="s2">&quot;DIABETES&quot;</span><span class="p">,</span> <span class="s2">&quot;ASMA&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">indi_list</span><span class="p">,</span><span class="n">junt</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">chek</span><span class="p">:</span>
+            <span class="n">chek</span><span class="p">,</span> <span class="n">name_ind</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">indi_list</span><span class="p">,</span><span class="n">junt</span><span class="p">))</span> <span class="p">,</span> <span class="n">indi_list</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A indicação </span><span class="si">{</span><span class="n">indi_list</span><span class="si">}</span><span class="s1"> contém </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">indi_list</span><span class="p">,</span><span class="n">junt</span><span class="p">))</span><span class="si">}</span><span class="s1"> remédios gratuitos!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Então </span><span class="si">{</span><span class="n">name_ind</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>    
+     
+    
+    <span class="c1">#contagens</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Há </span><span class="si">{</span><span class="n">count_grat</span><span class="si">}</span><span class="s2"> remédios gratuitos e </span><span class="si">{</span><span class="n">count_copa</span><span class="si">}</span><span class="s2"> remédios coparticipativos!&quot;</span><span class="p">)</span>
+    <span class="c1">#inicial</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">inicial</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2"> remédios iniciam com a letra C&quot;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Resultado esperado: </span><span class="si">{</span><span class="n">name_ind</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">count_grat</span><span class="p">,</span><span class="n">count_copa</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">inicial</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info_medicamentos</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A indicação HIPERTENSÃO contém 6 remédios gratuitos!
+A indicação DIABETES contém 6 remédios gratuitos!
+A indicação ASMA contém 8 remédios gratuitos!
+Então ASMA!
+
+Há 20 remédios gratuitos e 15 remédios coparticipativos!
+7 remédios iniciam com a letra C
+
+Resultado esperado: ASMA / (20, 15) / 7)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

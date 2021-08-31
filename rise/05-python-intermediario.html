@@ -143,12 +143,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../ipynb/05-python-intermediario.html">
-   Python Intermediário: Parte 1
+   Python intermediário - I
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
-   Python intermediário: Parte 2
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
   </a>
  </li>
  <li class="toctree-l1">
@@ -2238,15 +2243,15 @@ A operação &#39;div&#39; de &quot;arit&quot; usa o símbolo &#39;/&#39;.
 
 <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">dado</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">dado</span><span class="p">))</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+5
 1
-2
-1
+6
 </pre></div>
 </div>
 </div>
@@ -2268,11 +2273,11 @@ A operação &#39;div&#39; de &quot;arit&quot; usa o símbolo &#39;/&#39;.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.0305926166842815,
- 0.048945321318505396,
- 0.047421318696230105,
- 0.03159297358232361,
- 0.03967769053476741]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.030566288633078212,
+ 0.04530321265582049,
+ 0.041147554216324315,
+ 0.04802500370888889,
+ 0.036964994081393455]
 </pre></div>
 </div>
 </div>
@@ -2296,28 +2301,14 @@ A operação &#39;div&#39; de &quot;arit&quot; usa o símbolo &#39;/&#39;.
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los Angeles Lakers :: 3-point shooters (Training Schedule):&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">shooter</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>   
         
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Los Angeles Lakers :: 3-point shooters (Training Schedule):
-79
-63
-81
-9
-30
-15
-18
-90
-59
-50
-7
-89
-11
-98
-1
+89 70 40 56 4 91 48 5 3 0 98 59 58 75 81 
 </pre></div>
 </div>
 </div>
@@ -2332,7 +2323,7 @@ A operação &#39;div&#39; de &quot;arit&quot; usa o símbolo &#39;/&#39;.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">shooter</span><span class="p">))</span>
-<span class="n">shooter</span>
+<span class="n">shooter</span> 
 </pre></div>
 </div>
 </div>
@@ -2340,7 +2331,7 @@ A operação &#39;div&#39; de &quot;arit&quot; usa o símbolo &#39;/&#39;.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[15, 59, 7, 63, 18, 89, 9, 30, 1, 98, 50, 79, 81, 90, 11]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 70, 40, 48, 0, 4, 59, 3, 75, 56, 91, 58, 81, 98, 89]
 </pre></div>
 </div>
 </div>
@@ -2363,9 +2354,9 @@ A operação &#39;div&#39; de &quot;arit&quot; usa o símbolo &#39;/&#39;.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Game 1: Washington Nationals x St. Louis Cardinals
-Game 2: Seattle Mariners x Houston Astros
-Game 3: Atlanta Braves x St. Louis Cardinals
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Game 1: Pittsburgh Pirates x Texas Rangers
+Game 2: Philadelphia Phillies x Chicago Cubs
+Game 3: St. Louis Cardinals x Tampa Bay Rays
 </pre></div>
 </div>
 </div>
@@ -2393,7 +2384,7 @@ Game 3: Atlanta Braves x St. Louis Cardinals
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imprime caracteres ASCII mais comuns </span>
 <span class="c1"># end = &#39; &#39; altera a terminação padrão &#39;\n&#39;</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="mi">127</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -2414,7 +2405,7 @@ Game 3: Atlanta Braves x St. Louis Cardinals
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../database/bras-cubas.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">cubas</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">cubas</span>    
+<span class="n">cubas</span> 
 </pre></div>
 </div>
 </div>
@@ -2535,7 +2526,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># uma maneira de mostrar que há apenas</span>
 <span class="c1"># um &#39;que&#39; até o caracter 182 de &#39;cubas&#39;</span>
 <span class="c1"># por meio de split e interseção de conjuntos</span>
-<span class="nb">set</span><span class="p">(</span><span class="n">cubas</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">182</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">intersection</span><span class="p">({</span><span class="s1">&#39;que&#39;</span><span class="p">})</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">cubas</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">182</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span><span class="o">.</span><span class="n">intersection</span><span class="p">({</span><span class="s1">&#39;que&#39;</span><span class="p">})</span> 
 </pre></div>
 </div>
 </div>
@@ -2563,7 +2554,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <p><strong>Exemplo:</strong> Substitua o padrão “Virgília” por “Ofélia” em toda a string do texto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubas_novo</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;Virgília&#39;</span><span class="p">,</span><span class="s1">&#39;Ofélia&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubas_novo</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;Virgília&#39;</span><span class="p">,</span><span class="s1">&#39;Ofélia&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span> 
 <span class="n">cubas_novo</span>
 </pre></div>
 </div>
@@ -2578,7 +2569,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubas_novo2</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;Virgília&#39;</span><span class="p">,</span><span class="s1">&#39;Ofélia&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">,</span><span class="n">count</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">cubas_novo2</span>
+<span class="n">cubas_novo2</span> 
 </pre></div>
 </div>
 </div>
@@ -2612,7 +2603,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <p><strong>Exemplo:</strong> Seccione o texto em várias substrings usando a vírgula (“,”) como ponto de quebra:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubas_sep</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubas_sep</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span> 
 <span class="n">cubas_sep</span>
 </pre></div>
 </div>
@@ -2682,7 +2673,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <p><strong>Exemplo:</strong> Localize padrões iniciando com a letra T maiúscula e contendo, ao todo, 3 caracteres.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;T...&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;T...&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span>  
 </pre></div>
 </div>
 </div>
@@ -2723,7 +2714,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># considera um espaço no padrão</span>
 <span class="n">mt2</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;\. &#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span>
-<span class="n">mt2</span>
+<span class="n">mt2</span> 
 </pre></div>
 </div>
 </div>
@@ -2747,9 +2738,9 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <p><strong>Exemplo:</strong> Use as substrings do exemplo anterior para buscar quais delas iniciam-se por <code class="docutils literal notranslate"><span class="pre">'T'</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mt2</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mt2</span><span class="p">):</span> 
     <span class="n">aux</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;^T&#39;</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">aux</span><span class="p">:</span> <span class="c1"># se lista não for vazia</span>
+    <span class="k">if</span> <span class="n">aux</span><span class="p">:</span> <span class="c1"># se lista não  for vazia</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;---&gt; Padrão detectado na </span><span class="se">\</span>
 <span class="s1">substring </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">:</span><span class="se">\n\&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="se">\&quot;</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2793,7 +2784,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># busca substring terminando com &#39;undo&#39;</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mt2</span><span class="p">):</span>
     <span class="n">aux</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;undo$&#39;</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">aux</span><span class="p">:</span> <span class="c1"># se lista não for vazia</span>
+    <span class="k">if</span> <span class="n">aux</span><span class="p">:</span> <span class="c1"># se lista nã o for vazia</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;---&gt; Padrão detectado na </span><span class="se">\</span>
 <span class="s1">substring </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">:</span><span class="se">\n\&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="se">\&quot;</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2901,7 +2892,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <p><strong>Exemplo:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;s?an.&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;s?an.&#39;</span><span class="p">,</span><span class="n">cubas</span><span class="p">)</span>  
 </pre></div>
 </div>
 </div>
@@ -3173,7 +3164,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;alfa00-LAX&#39;</span><span class="p">,</span><span class="s1">&#39;beta22-PET&#39;</span><span class="p">,</span> <span class="s1">&#39;zeta92-XIR&#39;</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span> 
     <span class="n">pat</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;([a-z][a-z][a-z][a-z][0-9][0-9])-([A-Z]</span><span class="si">{3}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">pat</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">pat</span><span class="o">.</span><span class="n">groups</span><span class="p">())</span>
@@ -3298,7 +3289,7 @@ A vogal &#39;u&#39; foi localizada 43 vezes no texto.
 
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cores</span><span class="p">:</span>
     <span class="n">ok</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;#[a-fA-F0-9]</span><span class="si">{6}</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">ok</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ok</span><span class="p">:</span> 
         <span class="nb">print</span><span class="p">(</span><span class="n">ok</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
 </pre></div>
 </div>
