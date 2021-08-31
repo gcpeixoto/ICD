@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ARQUIVO DE CONFIGURAÇÃO PARA O TEMPLATE DE ARTIGOS DO 
+% 'CADERNOS DE MATEMÁTICA COMPUTACIONAL'
+% http://mat.ci.ufpb.br
+%
+% Adaptado por @Gustavo Oliveira.
+%
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Frits Wenneker
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% CONFIGURAÇÃO
+\documentclass[10pt, a4paper, twocolumn]{article} 
+\input{config.tex} % configuration file
+
+
+%% IDENTIFICAÇÃO
+%----------------------------------------------------------------------------------------
+% titulo
+\title{Template de artigo para o curso de ICD} % The article title
+
+% autoria
+\author{
+	\authorstyle{Augustus Norius\textsuperscript{1,2}} \\ % Author
+    %\authorstyle{Prof. Julius Aminius, Ph.D, \textsuperscript{2}} \\ % Author
+    %\authorstyle{Tercius Ominis \textsuperscript{3}} % Author
+	%\newline\newline % Space before institutions
+	%\textsuperscript{1}\institution{Departamento de Computação Científica}\\ % Institution 1
+	%\textsuperscript{2}\institution{LX - Laboratório X}\\ % Institution 2
+    %\textsuperscript{3}\institution{Bacharelado em Matemática Computacional}\\ % Institution 2
+}
+
+% data
+\date{\today} 
+%----------------------------------------------------------------------------------------
+
+% CORPO
+\begin{document}
+
+\maketitle % imprime titulo
+\thispagestyle{firstpage} 
+
+
+%	RESUMO
+%----------------------------------------------------------------------------------------
+\lettrineabstract{%
+Este trabalho tem a finalidade de apresentar o template para a 
+escrita de resumos (2páginas) de artigos escritos por alunos do Bacharelado em Ciência de Dados e Inteligência Artificial como método de aprendizagem ativa do curso de Introdução à Ciência de Dados.
+}
+
+
+%	CONTEÚDO
+%----------------------------------------------------------------------------------------
+
+\section*{Assunto}
+
+Use esta seção para falar sobre seu assunto. Use referências, se quiser: \citep{ref1} \citep{ref2}. 
+
+Você também pode escrever equações:
+
+\lipsum[1-2]
+
+\begin{align}
+	A = 
+	\begin{bmatrix}
+		A_{11} & A_{21} \\
+		A_{21} & A_{22}
+	\end{bmatrix}
+\end{align}
+
+\lipsum[1]
+
+\subsection*{O que é?}
+
+Você pode acrescentar pontos:
+
+\begin{itemize}
+	\item Item 1
+	\item Item 2
+	\item Item 3
+\end{itemize}
+
+\subsection*{Como é?}
+
+Adicionar tabelas, se for necessário e fazer referência a elas: vide Tabela \ref{tab:tabela}.
+
+\lipsum[1]
+
+\begin{table}
+	\label{tab:tabela}
+	\caption{Tabela de exemplo}
+	\centering
+	\begin{tabular}{llr}
+		\toprule
+		\multicolumn{2}{c}{Nome} \\
+		\cmidrule(r){1-2}
+		Nome & Sobre & Nota \\
+		\midrule
+		João & Dantas & $7.5$ \\
+		Ricardo & Malheiros & $5$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\subsection*{Algo mais a ilustrar?}
+
+Você também pode inserir figuras e fazer referência a elas: vide Figura \ref{fig:conchoide}
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{conchoide} % Figure image
+	\caption{Conchoide.} % Figure caption
+	\label{fig:conchoide} % Label for referencing with \ref{}
+\end{figure}
+
+\lipsum[1]
+
+%	REFERÊNCIAS
+\printbibliography[title={Referências}] % Print the bibliography, section title in curly brackets
+
+
+\end{document} % FIM DO DOCUMENTO

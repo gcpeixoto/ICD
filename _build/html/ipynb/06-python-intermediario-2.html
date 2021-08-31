@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python intermediário: Parte 2 &#8212; Introdução à Ciência de Dados</title>
+    <title>Python intermediário - II &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Computação vetorizada" href="08a-computacao-vetorizada.html" />
-    <link rel="prev" title="Python Intermediário: Parte 1" href="05-python-intermediario.html" />
+    <link rel="next" title="Python intermediário - III" href="07-python-intermediario-3.html" />
+    <link rel="prev" title="Python intermediário - I" href="05-python-intermediario.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -145,12 +145,17 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="05-python-intermediario.html">
-   Python Intermediário: Parte 1
+   Python intermediário - I
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Python intermediário: Parte 2
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-python-intermediario-3.html">
+   Python intermediário - III
   </a>
  </li>
  <li class="toctree-l1">
@@ -383,8 +388,8 @@
         
               <div>
                 
-  <section id="python-intermediario-parte-2">
-<h1>Python intermediário: Parte 2<a class="headerlink" href="#python-intermediario-parte-2" title="Permalink to this headline">¶</a></h1>
+  <section id="python-intermediario-ii">
+<h1>Python intermediário - II<a class="headerlink" href="#python-intermediario-ii" title="Permalink to this headline">¶</a></h1>
 <section id="funcoes">
 <h2>Funções<a class="headerlink" href="#funcoes" title="Permalink to this headline">¶</a></h2>
 <p>O conceito de “função” é conhecido por nós como algo que produz uma saída (<em>output</em>) a partir de uma entrada (<em>input</em>). Matematicamente, podemos representar este processo como <span class="math notranslate nohighlight">\(y= f(x)\)</span>. Por exemplo, uma impressora jato de tinta ao receber uma folha de papel em branco (<span class="math notranslate nohighlight">\(x\)</span>) aciona seus mecanismos de impressão (<span class="math notranslate nohighlight">\(f\)</span>) e produz uma folha impressa (<span class="math notranslate nohighlight">\(y\)</span>).</p>
@@ -403,7 +408,7 @@
 </div>
 <section id="funcoes-predefinidas">
 <h4>Funções predefinidas<a class="headerlink" href="#funcoes-predefinidas" title="Permalink to this headline">¶</a></h4>
-<p>Exploraremos exemplos com funções <em>built-in</em> do <em>core</em> Python. Em particular, cobriremos: <code class="docutils literal notranslate"><span class="pre">hex</span></code>, <code class="docutils literal notranslate"><span class="pre">bin</span></code></p>
+<p>Exploraremos exemplos com funções <em>built-in</em> do <em>core</em> Python.</p>
 <p><strong>Exemplos:</strong> funções predefinidas do <em>core</em> da linguagem.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -420,27 +425,27 @@
 </div>
 <p>Discussão:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">hex</span></code> converte um número para hexadecimal, indicada pelo prefixo <code class="docutils literal notranslate"><span class="pre">0x</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bin</span></code> converte um número para hexadecimal, indicada pelo prefixo <code class="docutils literal notranslate"><span class="pre">0b</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hex</span></code> converte um número para hexadecimal, indicado pelo prefixo <code class="docutils literal notranslate"><span class="pre">0x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bin</span></code> converte um número para binário, indicado pelo prefixo <code class="docutils literal notranslate"><span class="pre">0b</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">round(x,n)</span></code> arredonda um número <code class="docutils literal notranslate"><span class="pre">x</span></code> em <code class="docutils literal notranslate"><span class="pre">n</span></code> dígitos de precisão. Se <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>, retorna <code class="docutils literal notranslate"><span class="pre">0.0</span></code>.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># built-in function</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6000</span><span class="p">,</span><span class="mi">7000</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">700</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ᝰ,។,ᠸ,ᢜ,ᤀ,ᥤ,ᧈ,ᨬ,᪐,᫴,
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ɘ,ɢ,ɬ,ɶ,ʀ,ʊ,ʔ,ʞ,ʨ,ʲ,
 </pre></div>
 </div>
 </div>
 </div>
 <p>Discussão:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">chr</span></code> retorna o caracter Unicode correspondente ao número inteiro passado no intervalo [0,1114111].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chr</span></code> retorna o caracter Unicode correspondente ao número inteiro passado, desde que esteja no intervalo [0,1114111].</p></li>
 </ul>
 <p><strong>Exemplo</strong>: somando números em uma lista.</p>
 <div class="cell docutils container">
@@ -1108,7 +1113,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">*vals</span></code> recebe, em cada caso, os argumentos de entrada. No primeiro caso, 2; no segundo, 4; no terceiro, 7.</p></li>
 </ul>
-<p><strong>Exemplo:</strong> equação de combinação linear em <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> com coeficiente da primeira variável travado.</p>
+<p><strong>Exemplo:</strong> equação de combinação linear em <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> com coeficientes arbitrários.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span> <span class="k">as</span> <span class="n">dpl</span><span class="p">,</span> <span class="n">Math</span>
@@ -1300,8 +1305,8 @@ Adicionar exec x eval
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="05-python-intermediario.html" title="previous page">Python Intermediário: Parte 1</a>
-    <a class='right-next' id="next-link" href="08a-computacao-vetorizada.html" title="next page">Computação vetorizada</a>
+    <a class='left-prev' id="prev-link" href="05-python-intermediario.html" title="previous page">Python intermediário - I</a>
+    <a class='right-next' id="next-link" href="07-python-intermediario-3.html" title="next page">Python intermediário - III</a>
 
         </div>
         

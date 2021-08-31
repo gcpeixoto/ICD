@@ -96,7 +96,7 @@
 #     return cpf 
 # ```    
 # 
-# Execute esta função para _n_=2. Em seguida, faça um programa para checar se os CPFs gerados são válidos ou inválidos, bem como para determinar o estado brasileiro desses CPFs. Assinale a alternativa correta.
+# Execute esta função para _n_=20. Em seguida, faça um programa para checar se os CPFs gerados são válidos ou inválidos, bem como para determinar o estado brasileiro desses CPFs. Assinale a alternativa correta.
 # 
 # A. Existem apenas 3 CPFs válidos e 1 deles pertence ao Acre.
 # 

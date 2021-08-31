@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Python intermediário: Parte 2
+# # Python intermediário - II
 
 # ## Funções
 # 
@@ -23,7 +23,7 @@
 
 # #### Funções predefinidas
 # 
-# Exploraremos exemplos com funções _built-in_ do _core_ Python. Em particular, cobriremos: `hex`, `bin`
+# Exploraremos exemplos com funções _built-in_ do _core_ Python.
 
 # **Exemplos:** funções predefinidas do _core_ da linguagem.
 
@@ -36,23 +36,23 @@ hex(1234),bin(345),round(12.3456,3)
 
 # Discussão: 
 # 
-# - `hex` converte um número para hexadecimal, indicada pelo prefixo `0x`.
+# - `hex` converte um número para hexadecimal, indicado pelo prefixo `0x`.
 # 
-# - `bin` converte um número para hexadecimal, indicada pelo prefixo `0b`.
+# - `bin` converte um número para binário, indicado pelo prefixo `0b`.
 # 
 # - `round(x,n)` arredonda um número `x` em `n` dígitos de precisão. Se `n < 0`, retorna `0.0`. 
 
-# In[2]:
+# In[1]:
 
 
 # built-in function
-for i in range(6000,7000,100):
+for i in range(600,700,10):
     print(chr(i),end=',')
 
 
 # Discussão: 
 # 
-# - `chr` retorna o caracter Unicode correspondente ao número inteiro passado no intervalo [0,1114111].
+# - `chr` retorna o caracter Unicode correspondente ao número inteiro passado, desde que esteja no intervalo [0,1114111].
 
 # **Exemplo**: somando números em uma lista.
 
@@ -521,7 +521,7 @@ print(media_arit(1,2,4,5,7,9,10))
 # Discussão:
 # - `*vals` recebe, em cada caso, os argumentos de entrada. No primeiro caso, 2; no segundo, 4; no terceiro, 7.
 
-# **Exemplo:** equação de combinação linear em $\mathbb{R}^n$ com coeficiente da primeira variável travado.
+# **Exemplo:** equação de combinação linear em $\mathbb{R}^n$ com coeficientes arbitrários.
 
 # In[42]:
 

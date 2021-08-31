@@ -31,6 +31,7 @@
 # 
 # - Unidade 1: Parte 2
 #     - [Questionário 21](Q21.ipynb)
+#     - [Questionário 22](Q22.ipynb)
 # 
 # <!--
 # Aula (2h)

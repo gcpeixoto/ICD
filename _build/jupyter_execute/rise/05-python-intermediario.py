@@ -932,7 +932,7 @@ sorted(f1,reverse=True)
 # 
 # - Em Python, podemos usar o módulo `random` para atingir uma diversidade de propósitos em ciência de dados. Vamos explorar algumas funções para geração aleatória: `choice`, `random`, `randint`, `shuffle` e `sample`.
 
-# In[189]:
+# In[1]:
 
 
 import random
@@ -940,14 +940,14 @@ import random
 
 # **Exemplo:** Crie um experimento de lançamento de dados e realize uma escolha aleatória em $n$ lançamentos.
 
-# In[190]:
+# In[82]:
 
 
 dado = list(range(1,7))
 
 n = 4
 for _ in range(n):
-    print(random.choice(dado))
+    print(random.choice(dado)) 
 
 
 # Comentários:
@@ -957,7 +957,7 @@ for _ in range(n):
 
 # **Exemplo:** Crie um experimento de probabilidade aleatório que determine a salinidade presente em 1 litro de água marinha (3 - 5%). 
 
-# In[191]:
+# In[147]:
 
 
 na = 5
@@ -976,7 +976,7 @@ saly
 # 
 # Lista de números reservados: 8,13,17,19,22,24,25,32,33,34,42,44,52,99.
 
-# In[192]:
+# In[188]:
 
 
 reservados = [8,13,17,19,22,24,25,32,33,34,42,44,52,99]
@@ -989,7 +989,7 @@ while len(shooter) != 15:
 
 print('Los Angeles Lakers :: 3-point shooters (Training Schedule):')
 for s in shooter:
-    print(s)
+    print(s,end=' ')   
         
 
 
@@ -1001,11 +1001,11 @@ for s in shooter:
 
 # **Exemplo:** Crie uma alteração no schedule de treinamento anterior a partir da última lista disponível.
 
-# In[193]:
+# In[202]:
 
 
 print(random.shuffle(shooter))
-shooter
+shooter 
 
 
 # Comentário: 
@@ -1014,7 +1014,7 @@ shooter
 
 # **Exemplo:** Construa uma tabela aleatória de 3 jogos de beisebol entre times da MLB.
 
-# In[194]:
+# In[224]:
 
 
 # lê arquivo com nome de times da MLB
@@ -1046,13 +1046,13 @@ for _ in range(3):
 # . ^ $ * + ? { } [ ] \ | ( )
 # ``` 
 
-# In[195]:
+# In[227]:
 
 
 # imprime caracteres ASCII mais comuns 
 # end = ' ' altera a terminação padrão '\n'
 for i in range(33,127):
-    print(chr(i), end = ' ')
+    print(chr(i), end = ' ') 
 
 
 # ### O módulo `re`
@@ -1061,15 +1061,15 @@ for i in range(33,127):
 # 
 # - Vamos ler o arquivo bras-cubas.txt e salvar o texto em uma _string_.
 
-# In[196]:
+# In[229]:
 
 
 with open('../database/bras-cubas.txt', 'r') as f:
     cubas = f.read()
-cubas    
+cubas 
 
 
-# In[197]:
+# In[230]:
 
 
 # importa o módulo
@@ -1085,7 +1085,7 @@ import re
 
 # **Exemplo:** Procure pelo padrão "que" no texto-base e conte quantas vezes ele aparece.
 
-# In[198]:
+# In[231]:
 
 
 # busca todas as combinações
@@ -1094,7 +1094,7 @@ print(que)
 print(len(que))
 
 
-# In[199]:
+# In[232]:
 
 
 # padrão presente, mas não é palavra inteligível
@@ -1103,7 +1103,7 @@ re.findall('xou',cubas)
 
 # Buscas por caracteres ordinários são sempre exatas, no sentido de que o caracter é combinado como ele é. Vejamos um exemplo que conta as vogais que aparecem no texto.
 
-# In[200]:
+# In[233]:
 
 
 for vogal in ['a','e','i','o','u']:    
@@ -1112,7 +1112,7 @@ for vogal in ['a','e','i','o','u']:
 
 # **Exemplo:** Busque pelo padrão "Tijuca" no texto e determine suas posições de início e término.
 
-# In[201]:
+# In[234]:
 
 
 # busca por combinação retornado posição
@@ -1132,7 +1132,7 @@ p.start(), p.end(), p.group()
 # 
 # - Caso houvesse repetição do padrão, apenas os índices da primeira aparição seriam retornados. Vejamos: 
 
-# In[202]:
+# In[236]:
 
 
 p2 = re.search('que',cubas)
@@ -1141,20 +1141,20 @@ p2.start(), p2.end(), p2.group()
 
 # Vimos anteriormente que há 7 aparições do padrão "que" no texto-base. Porém, apenas a primeira é retornada por `search`. Vejamos:
 
-# In[203]:
+# In[239]:
 
 
 # uma maneira de mostrar que há apenas
 # um 'que' até o caracter 182 de 'cubas'
 # por meio de split e interseção de conjuntos
-set(cubas[0:182].split(' ')).intersection({'que'})
+set(cubas[0:182].split(' ')).intersection({'que'}) 
 
 
 # Como este conjunto é unitário, há apenas um padrão 'que' até a posição 182 de `cubas`.
 
 # **Exemplo:** Busque pelo padrão "Não" no texto e verifique se ele aparece no início da string.
 
-# In[204]:
+# In[241]:
 
 
 p3 = re.match('Não',cubas)
@@ -1163,23 +1163,23 @@ p3.start()
 
 # **Exemplo:** Substitua o padrão "Virgília" por "Ofélia" em toda a string do texto.
 
-# In[205]:
+# In[242]:
 
 
-cubas_novo = re.sub('Virgília','Ofélia',cubas)
+cubas_novo = re.sub('Virgília','Ofélia',cubas) 
 cubas_novo
 
 
 # **Exemplo:** Substitua o padrão "Virgília" por "Ofélia" apenas nas duas primeiras aparições
 
-# In[206]:
+# In[243]:
 
 
 cubas_novo2 = re.sub('Virgília','Ofélia',cubas,count=2)
-cubas_novo2
+cubas_novo2 
 
 
-# In[207]:
+# In[244]:
 
 
 # original
@@ -1194,16 +1194,16 @@ print(len(re.findall('Virgília',cubas_novo2)))
 
 # **Exemplo:** Seccione o texto em várias substrings usando a vírgula (",") como ponto de quebra:
 
-# In[208]:
+# In[260]:
 
 
-cubas_sep = re.split(',',cubas)
+cubas_sep = re.split(',',cubas) 
 cubas_sep
 
 
 # **Exemplo:** Separe a string do texto em no máximo 3 substrings usando o padrão "ão" como ponto de quebra. 
 
-# In[209]:
+# In[266]:
 
 
 # maxsplit = n; logo, n + 1 substrings
@@ -1221,7 +1221,7 @@ cubas_sep3
 
 # **Exemplo:** Localize padrões com 5 caracteres contendo "lh" na 3a. e 4a. posições.
 
-# In[210]:
+# In[269]:
 
 
 re.findall('..lh.',cubas)
@@ -1229,10 +1229,10 @@ re.findall('..lh.',cubas)
 
 # **Exemplo:** Localize padrões iniciando com a letra T maiúscula e contendo, ao todo, 3 caracteres.
 
-# In[211]:
+# In[274]:
 
 
-re.findall('T...',cubas)
+re.findall('T...',cubas)  
 
 
 # #### Metacaracter `\`
@@ -1241,7 +1241,7 @@ re.findall('T...',cubas)
 
 # **Exemplo:** Quebre a string usando o ponto final (".") como ponto de quebra.
 
-# In[212]:
+# In[277]:
 
 
 # escape do metacaracter '.'
@@ -1249,12 +1249,12 @@ mt1 = re.split('\.',cubas)
 mt1
 
 
-# In[213]:
+# In[280]:
 
 
 # considera um espaço no padrão
 mt2 = re.split('\. ',cubas)
-mt2
+mt2 
 
 
 # #### Metacaracter `^`
@@ -1263,12 +1263,12 @@ mt2
 
 # **Exemplo:** Use as substrings do exemplo anterior para buscar quais delas iniciam-se por `'T'`.
 
-# In[214]:
+# In[285]:
 
 
-for k,s in enumerate(mt2):
+for k,s in enumerate(mt2): 
     aux = re.match('^T',s)
-    if aux: # se lista não for vazia
+    if aux: # se lista não  for vazia
         print(f'---> Padrão detectado na substring {k}:\n\"{s}\"')
 
 
@@ -1278,7 +1278,7 @@ for k,s in enumerate(mt2):
 
 # **Exemplo:** Use as substrings do exemplo anterior para buscar quais delas terminam por `'o'`.
 
-# In[215]:
+# In[286]:
 
 
 for k,s in enumerate(mt2):
@@ -1287,13 +1287,13 @@ for k,s in enumerate(mt2):
         print(f'---> Padrão detectado na substring {k}:\n\"{s}\"')
 
 
-# In[216]:
+# In[287]:
 
 
 # busca substring terminando com 'undo'
 for k,s in enumerate(mt2):
     aux = re.findall('undo$',s)
-    if aux: # se lista não for vazia
+    if aux: # se lista nã o for vazia
         print(f'---> Padrão detectado na substring {k}:\n\"{s}\"')
 
 
@@ -1301,7 +1301,7 @@ for k,s in enumerate(mt2):
 # 
 # - Note que para buscar o caracter literal '$' em uma string devemos usar o caracter de escape. Vejamos o próximo exemplo.
 
-# In[217]:
+# In[288]:
 
 
 real = 'João me pagou R$ 150,00.'
@@ -1315,7 +1315,7 @@ print(f'Caracter $ identificado na posição {v.start()}.')
 
 # **Exemplo:**
 
-# In[218]:
+# In[290]:
 
 
 re.findall('hav*.',cubas)
@@ -1334,7 +1334,7 @@ re.findall('hav*.',cubas)
 # - Descrever em palavras o que a expressão regular faz exatamente não é sempre muito fácil. Vejamos mais um exemplo.
 #     
 
-# In[219]:
+# In[291]:
 
 
 c = 'ha hahaa hav havv havva-havvva; haiiaa havia'
@@ -1348,7 +1348,7 @@ re.findall('hav*.',c)
 
 # **Exemplo:**
 
-# In[220]:
+# In[292]:
 
 
 re.findall('hav+.',cubas)
@@ -1367,10 +1367,10 @@ re.findall('hav+.',cubas)
 
 # **Exemplo:**
 
-# In[221]:
+# In[297]:
 
 
-re.findall('s?an.',cubas)
+re.findall('s?an.',cubas)  
 
 
 # Comentários: 
@@ -1389,7 +1389,7 @@ re.findall('s?an.',cubas)
 
 # **Exemplo:**
 
-# In[222]:
+# In[298]:
 
 
 # localiza todas as ocorrências 
@@ -1407,7 +1407,7 @@ print(re.findall('[vnd]',cubas))
 
 # **Exemplo:**
 
-# In[223]:
+# In[299]:
 
 
 re.findall('[a-z]um',cubas)
@@ -1419,7 +1419,7 @@ re.findall('[a-z]um',cubas)
 
 # **Exemplo:**
 
-# In[224]:
+# In[301]:
 
 
 re.findall('[v-z][a-].',cubas)
@@ -1431,7 +1431,7 @@ re.findall('[v-z][a-].',cubas)
 
 # **Exemplo:**
 
-# In[225]:
+# In[303]:
 
 
 # mesmo efeito que anterior
@@ -1442,7 +1442,7 @@ re.findall('[v-z][-a].',cubas)
 # 
 # Os caracteres especiais perdem seu status quando aparecem entre colchetes. Por exemplo, a RE `[(+*)]` procurará por qualquer um dos literais `(`, `+`, `*` ou `)`.
 
-# In[226]:
+# In[304]:
 
 
 ex = 'Quanto é (22 + 3)*1 - 6*1?'
@@ -1453,7 +1453,7 @@ re.findall('[0-9][)*]',ex)
 # 
 # - Esta RE busca padrões em que um dígito de 0 a 9 precede um ')' ou '*' literalmente.
 
-# In[227]:
+# In[305]:
 
 
 re.findall('[0-9][?]',ex)
@@ -1471,7 +1471,7 @@ re.findall('[0-9][?]',ex)
 
 # **Exemplo:**
 
-# In[228]:
+# In[306]:
 
 
 # busca pelo padrão 'rr'
@@ -1480,20 +1480,20 @@ re.search('r{2}',cubas).group()
 
 # **Exemplo:**
 
-# In[229]:
+# In[307]:
 
 
 ex2 = '0110011000110011001010110100110111111000'
 re.findall('0{2}',ex2)
 
 
-# In[230]:
+# In[308]:
 
 
 re.findall('1{3}',ex2)
 
 
-# In[231]:
+# In[309]:
 
 
 # busca 000000 - 111111
@@ -1505,19 +1505,19 @@ re.findall('[0-1]{6}',ex2)
 
 # **Exemplos:**
 
-# In[232]:
+# In[310]:
 
 
 set(re.findall('10{2,3}',ex2))
 
 
-# In[233]:
+# In[311]:
 
 
 set(re.findall('01{2,3}',ex2))
 
 
-# In[234]:
+# In[312]:
 
 
 set(re.findall('[0-1]{2,3}',ex2))
@@ -1529,14 +1529,14 @@ set(re.findall('[0-1]{2,3}',ex2))
 
 # **Exemplos:**
 
-# In[235]:
+# In[313]:
 
 
 # busca por 'rre' ou 'ssa'
 re.findall('r{2}e|s{2}a',cubas)
 
 
-# In[236]:
+# In[315]:
 
 
 # busca por 'cha', 'cho' ou
@@ -1551,12 +1551,12 @@ re.findall('ch[ao]|lh[ai]|pr[aeiou]',cubas)
 
 # **Exemplo**:
 
-# In[237]:
+# In[317]:
 
 
 table = ['alfa00-LAX','beta22-PET', 'zeta92-XIR']
 
-for t in table:
+for t in table: 
     pat = re.match("([a-z][a-z][a-z][a-z][0-9][0-9])-([A-Z]{3})", t)
     if pat:
         print(pat.groups())
@@ -1584,7 +1584,7 @@ for t in table:
 # 
 # O exemplo anterior sobre grupos de captura, por exemplo, poderia ser escrito de outra forma:
 
-# In[238]:
+# In[318]:
 
 
 for t in table:
@@ -1617,7 +1617,7 @@ for t in table:
 
 # **Exemplo:** Identificando padrões de data e hora. 
 
-# In[239]:
+# In[320]:
 
 
 dt = ['2021-04-06 10:32:00', '2020-12-03 01:12:58'] 
@@ -1629,20 +1629,20 @@ for m in dt:
 
 # **Exemplo:** Identificando cores em padrão hexadecimal.
 
-# In[240]:
+# In[321]:
 
 
 cores = ['(1,23,43)','#3ed4f4', '#ffcc00','(C,M,Y,K)','#9999ff'] 
 
 for c in cores:
     ok = re.match('#[a-fA-F0-9]{6}',c)
-    if ok:
+    if ok: 
         print(ok.group())
 
 
 # **Exemplo:** Identificando URLs no domínio Wikipedia Português.
 
-# In[241]:
+# In[322]:
 
 
 urls = ['http://pt.wikipedia.org/wiki/Bras',
@@ -1665,7 +1665,7 @@ for u in urls:
 
 # **Exemplo:**
 
-# In[242]:
+# In[323]:
 
 
 rex = re.compile('[p-t]a[b-d]a?')

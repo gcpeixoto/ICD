@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Python Intermediário: Parte 1
+# # Python intermediário - I
 
 # ## Visão geral sobre sequencias
 # 
