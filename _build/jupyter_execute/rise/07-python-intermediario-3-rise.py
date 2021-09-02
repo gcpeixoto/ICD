@@ -5,18 +5,22 @@
 
 # ## Entrada e saída de dados 
 # 
-# O fluxo de informações que ocorre entre o disco rígido de nosso computador e o que vemos impresso na tela, ou entre um ponto de comunicação remoto e o nosso computador local é geralmente realizado por meio de _objetos-tipo arquivo_ (_file objects_). A esses objetos dá-se também o nome de _input/output stream_, de onde segue o termo _I/O stream_. 
+# - Fluxos de informações são geralmente realizados por meio de _objetos-tipo arquivo_ (_file objects_). 
 # 
+# - A esses objetos dá-se também o nome de _input/output stream_, de onde segue o termo _I/O stream_. 
+# 
+# - Para entendimento prático, _streams_ são os tradicionais "arquivos" que transitam em nossas máquinas. 
+
 # ### Tipos de arquivo
 # 
-# Para entendimento prático, _streams_ são os tradicionais "arquivos" que transitam em nossas máquinas. Os dois tipos principais de arquivo são: 
-# 
-# - _Texto formatado_ (_Text file_). Arquivos de texto recebem e produzem objetos _str_. Isto significa que um processo de codificação/decodificação dos dados ocorre durante o fluxo. 
-# - _Binário_ (_Binary file_). Arquivos binários lidam com a objetos na forma de _bytes_. Isto significa que nenhum processo de codificação/decodificação dos dados ocorre durante o fluxo e que o texto é _não formatado_.
+# - _Texto formatado_ (_Text file_). Recebem e produzem objetos _str_. Ocorre codificação/decodificação dos dados durante o fluxo. 
+# - _Binário_ (_Binary file_). Lidam com objetos na forma de _bytes_. Nenhum processo de codificação/decodificação dos dados ocorre durante o fluxo. O texto é _não formatado_.
 
 # ## Operações com arquivos
 # 
-# Podemos realizar diversas operações com arquivos, tais como _modo de apenas leitura_ (_read-only_), _modo de escrita_ (_write_) e modo de escrita e leitura (_read-write_). Neste capítulo, aprenderemos a manipular o fluxo de entrada e saída de diversos tipos de arquivo. A forma mais fácil de criar uma _stream_ é usando a função predefinida `open`.
+# - Aprenderemos a manipular o fluxo de entrada e saída de diversos tipos de arquivo. 
+# 
+# - A forma mais fácil de criar uma _stream_ é usando a função predefinida `open`.
 
 # **Exemplo:** ler arquivo de texto.
 
@@ -24,13 +28,13 @@
 
 
 f = open('../etc/icd.yml')
-f
+f 
 
 
 # Comentários:
 # - Por padrão, `open` abre um arquivo em modo de leitura.
 # - O arquivo é especificado pelo seu caminho no disco.
-# - `f` é um objeto abstrato que mostra o esquema de codificação usado para decodificar arquivo. Quando não especificado, o `encoding` padrão do sistema é utilizado.
+# - `f` é um objeto abstrato como se vê, que mostra o esquema de codificação usado para decodificar arquivo. Quando não especificado, o `encoding` padrão do sistema é utilizado.
 # - Percebe-se que o encoding padrão do sistema é `UTF-8`.
 
 # **Exemplo:** ler arquivo de texto com especificação de modo.
@@ -46,14 +50,14 @@ o
 # Comentários:
 # 
 # - O segundo argumento de `open` é `mode`, no qual especificamos o modo com que o arquivo será tratado.
-# - Para modo de leitura, usamos `'r'`; para modo de escrita, usamos `'w'`; para modo de apensamento, usamos `'a'` e, para modo binário, usamos `'b'`. A seguir, veremos mais exemplos.
-# - É importante notar que tanto `f` quanto `o` estão "abertos" e devem ser fechadas imediatamente após o uso para evitar consumo desnecessário de memória e outros problemas.
+# - Para modo de leitura, usamos `'r'`; para modo de escrita, usamos `'w'`; para modo de apensamento, usamos `'a'`, e para modo binário, usamos `'b'`. A seguir, veremos mais exemplos.
+# - É importante notar que tanto `f` quanto `o` estão "abertos" e devem ser fechadas imediatamente após o uso para evitar consumo de memória e outros problemas.
 
 # In[3]:
 
 
 # as streams 'f' e 'o' estão abertas 
-f.closed,o.closed
+f.closed,o.closed 
 
 
 # In[4]:
@@ -74,7 +78,7 @@ f.closed,o.closed
 with open('../etc/icd.yml') as f:
     content = f.read()
 
-# imprime conteúdo do arquivo
+# imprime conteúdo do arquivo 
 print(content)
 
 
@@ -88,21 +92,21 @@ f.closed
 # Comentários:
 # 
 # - A _keyword_ `with` possibilita que o fluxo de arquivos seja facilitado.
-# - Com a _keyword_ `with` o arquivo é automaticamente fechado.
-# - É possível gerir a abertura de mais de um arquivo com apenas uma chamada de `with` usando a seguinte instrução 
+# - Com a _keyword_ `with`, o arquivo é automaticamente fechado.
+# - É possível gerir a abertura de mais de um arquivo com apenas uma chamada de `with` com 
 # 
 # ```python
-# with open() as a, open() as b:
+# with A() as a, B() as b:
 # ```
 # 
 # ```{note}
 # Para saber mais acerca de `with`, consulte o [PEP 343](https://www.python.org/dev/peps/pep-0343/#motivation-and-summary).
 # ```
 
-# In[7]:
+# In[6]:
 
 
-with open('../etc/icd.yml','r') as f, open('../database/bras-cubas.txt') as g:
+with open('../etc/icd.yml','r') as f, open('../database/bras-cubas.txt') as g :
     content_f = f.read()
     content_g = g.read()
 
@@ -110,7 +114,7 @@ with open('../etc/icd.yml','r') as f, open('../database/bras-cubas.txt') as g:
 len(content_f),type(content_g)    
 
 
-# #### Modos de operação de arquivos 
+# #### Modos de arquivos 
 # 
 # Antes de prosseguirmos, vamos resumir os principais modos com os quais um arquivo é operado em Python. 
 # 
@@ -123,7 +127,7 @@ len(content_f),type(content_g)
 # |`'b'`| abre em modo binário|
 # |`'t'`| abre em modo texto (padrão)|
 # 
-# Para uma discussão mais ampla sobre todas as possibilidades, consulte este [post](https://tutorial.eyehunts.com/python/python-file-modes-open-write-append-r-r-w-w-x-etc/) e [este](https://riptutorial.com/python/example/978/file-modes).
+# Para uma discussão mais ampla sobre todas as possabilidades, consulte este [post](https://tutorial.eyehunts.com/python/python-file-modes-open-write-append-r-r-w-w-x-etc/) e [este](https://riptutorial.com/python/example/978/file-modes).
 # 
 
 # **Exemplo:** Ler arquivo linha por linha.
@@ -137,12 +141,12 @@ with open('../database/bras-cubas.txt','rt',encoding='utf-8') as f:
 
 
 # Discussão:
-# - Note que especificar o modo `'rt'` é totalmente decorativo, já que são as opções padrão.
-# - O parâmetro `encoding` indica a codificação na qual o texto deve ser lido. `UTF-8` é o padrão. Entretanto, veremos adiante outros sistemas de _encoding_ de caracteres.
+# - Note que especifica o modo `'rt'` é totalmente decorativo, já que são as opções padrão.
+# - O parâmetro `encoding` indica a codificação na qual o texto deve ser lido. `UTF-8` é o padrão. Entretanto, veremos adiante algumas especifidades com relação a _encoding_ de caracteres.
 
 # ### Escrita de arquivos de texto
 # 
-# Escrever conteúdo para arquivos é uma das tarefas mais frequentes do processamento de dados. Para escrever conteúdo em um arquivo, devemos assumir ou que ele é inexistente e precisa ser criado, ou que ele existe e queremos adicionar informações nele.
+# Para escrever conteúdo em um arquivo, devemos assumir ou que ele é inexistente e precisa ser criado, ou que ele existe e queremos adicionar informações nele.
 # 
 # **Exemplo:** escrever um simulacro de "jogo da velha" com caracteres em um arquivo `.txt`.
 
@@ -188,17 +192,17 @@ get_ipython().system("cat '../etc/velha-log.txt'")
 
 # **Exemplo:** escrever arquivo e apensar dados.
 
-# In[11]:
+# In[65]:
 
 
 # escreve
 with open('../etc/lista.txt','w') as f:
-    f.write( str(list(range(5))).strip('[]')) # escreve str e purga '[' e ']'
+    f.write( str(list(range(5))).strip('[,]')) # escreve str e purga '[' e ']'
 
-get_ipython().system('cat ../etc/lista.txt')
+get_ipython().system('cat ../etc/lista.txt ')
 
 
-# In[12]:
+# In[66]:
 
 
 # abre para apensar
@@ -206,7 +210,7 @@ with open('../etc/lista.txt','a') as f:
     f.write(', ') # o que temos sem isto?
     f.write(str(list(range(5,11))).strip('[]'))
 
-get_ipython().system('cat ../etc/lista.txt    ')
+get_ipython().system('cat ../etc/lista.txt     ')
 
 
 # Comentários:
@@ -216,31 +220,31 @@ get_ipython().system('cat ../etc/lista.txt    ')
 
 # **Exemplo:** apensar em arquivo redirecionando a saída de `print`.
 
-# In[13]:
+# In[67]:
 
 
 with open('../etc/lista.txt','a') as f:
     print('!!!',file=f) # mesmo objeto f
 
-get_ipython().system('cat ../etc/lista.txt ')
+get_ipython().system('cat ../etc/lista.txt  ')
 
 
 # Comentário:
-# - Neste exemplo, a string `'!!!'`, que seria impressa na tela por `print`, é apensada no arquivo `lista.txt` via _redirecionamento_. 
+# - Neste exemplo, a string `'!!!'`, que seria impressa na tela por `print` é apensada no arquivo `lista.txt` via _redirecionamento_. 
 # 
-# ```{hint}
-# Em ambiente UNIX, o redirecionamento pode ser feito via Terminal com o operador `>` e o apensamento, com `>>`. Por exemplo, o comando `cat > lista.txt` cria um arquivo vazio e redireciona as linhas digitáveis em tela para o arquivo. O comando `cat >> lista.txt`, por outro lado, permite que mais linhas digitáveis  em tela sejam adicionadas ao arquivo. Veja um exemplo [aqui](https://www.gotothings.com/unix/unix-redirection-and-pipes.htm).
-# ```
+# 
+# Em ambiente UNIX, o redirecionamento pode ser feito via Terminal com o operador `>`, e o apensamento com `>>`. Por exemplo, o comando `cat > lista.txt` cria um arquivo vazio e redireciona as linhas digitáveis em tela para o arquivo. O comando `cat >> lista.txt`, por outro lado, permite que mais linhas digitáveis  em tela sejam adicionadas ao arquivo. Veja um exemplo [aqui](https://www.gotothings.com/unix/unix-redirection-and-pipes.htm).
+# 
 
 # **Exemplo:** escrever para arquivo com redirecionamento, _star expression_ e sem `with`.
 
-# In[14]:
+# In[78]:
 
 
 dado = ('graus C',16,22.5) # tupla com diferentes dados
 
 f = open('../etc/lista-2.txt','w')
-print(*dado,sep=',',file=f) 
+print(*dado,sep='',file=f)  
 f.close() # sem 'with', é necessário fechar a stream 
 
 get_ipython().system('cat ../etc/lista-2.txt')
@@ -248,31 +252,30 @@ get_ipython().system('cat ../etc/lista-2.txt')
 
 # Discussão:
 # - Neste exemplo, `*dado` desempacota a tupla – que tem tipos de dado diferentes –, separa os elementos por `,`, imprime na tela e redireciona para o arquivo de texto `lista-2.txt`.
-# - Observe que o arquivo é aberto em modo de escrita.
+# - Observe que arquivo é aberto em modo de escrita.
 
 # ### Escrita de arquivos binários
 
 # **Exemplo:** pré-visualizar um arquivo PDF no _Jupyter Notebook_.
 
-# In[15]:
+# In[80]:
 
 
 from IPython.display import IFrame
-IFrame('../etc/logo-icd.pdf',width=500,height=500)
+IFrame('../etc/logo-icd.pdf',width=500,height=500) 
 
 
 # Comentários:
-# - Arquivos PDF, assim como áudios, imagens e executáveis, possuem conteúdo em formato binário. O que visualizamos acima é compreensível por humanos. 
-# - O exemplo a seguir mostra o real conteúdo do arquivo PDF em termos de _bytes_.
+# - Arquivos _PDF_, assim como áudios, imagens e executáveis, possuem conteúdo em formato binário. O que visualizamos acima é compreensível por humanos. 
+# - O exemplo a seguir mostra o real conteúdo do arquivo _PDF_ em termos de bytes.
 # 
 # 
-# ```{warning}
-# Tente reproduzir este exemplo com o Jupyter Notebook executando localmente em sua máquina. Em alguns navegadores, o livro _online_ pode não reproduzir esta pré-visualização.
-# ```
+# Tente reproduzir este exemplo com o Jupyter Notebook executando localmente em sua máquina. Em alguns navegadores, o livro online pode não reproduzir esta pré-visualização.
+# 
 
 # **Exemplo:** ler arquivo binário e imprimir seu conteúdo.
 
-# In[16]:
+# In[82]:
 
 
 # modo 'rb'
@@ -283,50 +286,49 @@ with open('../etc/logo-icd.pdf','rb') as f:
 pdf[:200]
 
 
-# In[17]:
+# In[83]:
 
 
 # verifica tipo da variável
-type(pdf)
+type(pdf) 
 
 
 # Comentários:
 # - A variável `pdf` guarda dados em formato **binário**.
-# - O prefixo `'b'` sugere que o tipo de dado é binário e está "codificado" em linguagem de _bytes_.
-# - Perceba que nós, humanos, enxergamos caracteres, mas **o computador enxerga apenas _bytes_**.
+# - O prefixo `'b'` sugere que o tipo de dado é binário e está "codificado" em linguagem de "bytes".
+# - Perceba que nós humanos enxergamos caracteres, mas **o computador enxerga apenas _bytes_**.
 
 # **Exemplo:** escrever arquivo binário.
 
-# In[18]:
+# In[84]:
 
 
 # modo 'wb'
 with open('../etc/logo-icd-part.pdf','wb') as f:
-    f.write(pdf[:200])    
+    f.write(pdf[:200])     
 
 
-# In[19]:
+# In[86]:
 
 
 from IPython.display import IFrame
-IFrame('../etc/logo-icd-part.pdf',width=500,height=500)
+IFrame('../etc/logo-icd-part.pdf',width=500,height=500)  
 
 
 # Discussão:
 # - O conteúdo parcial tomado da string de _bytes_ `'pdf'` é escrito em um segundo arquivo.
-# - Ao ler o conteúdo e tentar visualizá-lo, um erro será lançado. Isto é naturalmente esperado, visto que a sequência de bytes foi, propositalmente, danificada.
+# - Ao ler o conteúdo e tentar visualizá-lo, um erro será lançado. Isto é naturalmente esperado, visto que a sequência de bytes está danificada.
 # 
-# ```{warning}
-# Tente reproduzir este exemplo com o Jupyter Notebook executando localmente em sua máquina. Em alguns navegadores, o livro _online_ pode não reproduzir esta pré-visualização.
-# ```
+# 
+# Tente reproduzir este exemplo com o Jupyter Notebook executando localmente em sua máquina. Em alguns navegadores, o livro online pode não reproduzir esta pré-visualização.
 
 # ### Como evitar sobrescrição acidental 
 # 
-# Quando temos um arquivo existente no disco e operamos com escrita de arquivos com nomes similares, é altamente provável que sobrescrevamos o conteúdo daquele arquivo acidentalmente. Para evitar este problema, podemos usar o modo `'x'`, que garante a "exclusividade" do arquivo existente.
+# Podemos usar o modo `'x'`, que garante a "exclusividade" do arquivo existente.
 
 # **Exemplo:** escrever arquivo em modo de "exclusividade".
 
-# In[20]:
+# In[87]:
 
 
 with open('../etc/lista.txt','x') as f:
@@ -339,7 +341,7 @@ with open('../etc/lista.txt','x') as f:
 # - Como o arquivo existe no disco, um erro de `FileExistsError` é lançado.
 # - O próximo exemplo é bem-sucedido, visto que `lista-3.txt` não existe ainda no disco.
 
-# In[21]:
+# In[92]:
 
 
 with open('../etc/lista-3.txt','x') as f:
@@ -348,14 +350,14 @@ with open('../etc/lista-3.txt','x') as f:
 get_ipython().system('cat ../etc/lista-3.txt    ')
 
 
-# In[22]:
+# In[93]:
 
 
 # remove o arquivo para reproduzir teste
 get_ipython().system('rm ../etc/lista-3.txt')
 
 
-# In[23]:
+# In[94]:
 
 
 # verifica remoção
@@ -366,7 +368,7 @@ get_ipython().system('cat ../etc/lista-3.txt   ')
 # 
 # Uma forma de verificar a existência de arquivos no disco é valer-se do módulo `os` – discutiremos um pouco sobre este módulo à frente –. O exemplo a seguir praticamente alcança o mesmo objetivo que o modo `'x'` ao checar a pré-existência de arquivos.
 
-# In[24]:
+# In[95]:
 
 
 from os.path import exists
@@ -377,9 +379,7 @@ else:
     print('O arquivo não existe! Pé na tábua! 8) ')
 
 
-# ```{note}
 # O módulo [`os`](https://docs.python.org/3/library/os.html?highlight=os%20module#module-os) fornece meios poderosos para navegar pelo sistema operacional e é bastante útil na leitura e escrita de arquivos.
-# ```
 
 # ### Leitura e escrita de arquivos comprimidos
 # 
@@ -389,7 +389,7 @@ else:
 
 # **Exemplo:** escrever arquivos comprimidos.
 
-# In[1]:
+# In[98]:
 
 
 # sem compressão
@@ -407,23 +407,23 @@ with gzip.open('../etc/texto.gz','w') as f:
     f.write(b'[]'*500000) # deve ser string de bytes      
 
 
-# In[2]:
+# In[99]:
 
 
 get_ipython().system(' ls -l ../etc/texto.*')
 
 
 # Comentários:
-# - Note a diferença no tamanho dos arquivos. A taxa de compressão é gigantesca! Os arquivos comprimidos por `bz2` e `gzip` possuem 73 e 1011 _bytes_ de tamanho, nesta ordem, ao passo que o não comprimido possui 1.000.000 de _bytes_ (1 MB) de tamanho.
+# - Note a diferença no tamanho dos arquivos. A taxa de compressão é gigantesca! Os arquivos comprimidos possuem 73 _bytes_ de tamanho, ao passo que o não comprimido possui 1.000.000 de _bytes_ (1 MB) de tamanho.
 # - Para realizarmos a leitura dos arquivos, basta alterar o modo de `'w'` para `'r'`.
 
 # ## O módulo `os`
 # 
-# Ao trabalharmos com leitura e escrita de arquivos, é importante saber navegar pelo sistema operacional, ou listando diretórios, seja criando arquivos em lote, seja buscando por extensões específicas. Com o módulo [`os`](https://docs.python.org/3/library/os.html?highlight=os%20module#module-os), podemos realizar uma série de operações para manipular caminhos de arquivos. Abaixo, discutimos algumas  funções desse módulo.
+# Com o módulo [`os`](https://docs.python.org/3/library/os.html?highlight=os%20module#module-os), podemos realizar uma série de operações para manipular caminhos de arquivos.
 
 # **Exemplo:** manipular caminhos para coletar informações de diretórios.
 
-# In[27]:
+# In[107]:
 
 
 import os
@@ -431,35 +431,35 @@ import os
 arq = '../database/bras-cubas.txt'
 
 
-# In[28]:
+# In[109]:
 
 
 # última parte do caminho
 os.path.basename(arq)
 
 
-# In[29]:
+# In[110]:
 
 
 # diretório
 os.path.dirname(arq)
 
 
-# In[30]:
+# In[112]:
 
 
 # cria caminho unindo partes
 os.path.join('pasta','subpasta',os.path.basename(arq))
 
 
-# In[31]:
+# In[113]:
 
 
 # separa basename e extensão
 os.path.splitext(arq)
 
 
-# In[32]:
+# In[114]:
 
 
 # separa pasta e nome
@@ -468,14 +468,14 @@ os.path.split(arq)
 
 # **Exemplo:** realizar testes para verificar tipos de arquivo.
 
-# In[33]:
+# In[115]:
 
 
 # testa se é arquivo
 os.path.isfile('../etc/velha-log.txt')
 
 
-# In[34]:
+# In[117]:
 
 
 # testa se é diretório
@@ -491,14 +491,14 @@ os.path.isdir('../etc/icd.yml')
 
 # **Exemplo:** obtendo tamanho do arquivo.
 
-# In[35]:
+# In[118]:
 
 
 # no. de bytes
 os.path.getsize('../etc/logo-icd.pdf') 
 
 
-# In[36]:
+# In[120]:
 
 
 import time
@@ -512,15 +512,15 @@ time.ctime(os.path.getmtime('../etc/logo-icd.pdf'))
 
 # **Exemplo:** listar diretórios.
 
-# In[37]:
+# In[121]:
 
 
-os.listdir('../etc/')
+os.listdir('../etc/') 
 
 
 # **Exemplo:** buscar por todos os arquivos comuns em um diretório.
 
-# In[38]:
+# In[122]:
 
 
 pasta = '../etc/'
@@ -531,33 +531,39 @@ arqs
 
 # **Exemplo:** buscar por todos os diretórios.
 
-# In[39]:
+# In[123]:
 
 
 pasta = '../'
 dirs = [a for a in os.listdir(pasta)
        if os.path.isdir(os.path.join(pasta,a))]
-dirs
+dirs  
 
 
 # **Exemplo:** buscar por todos os arquivos de uma dada extensão.
 
-# In[40]:
+# In[124]:
 
 
 # lista apenas .txt
 txts = [a for a in os.listdir('../etc/')
        if a.endswith('.txt')]
-txts
+txts 
 
 
 # ## Codificação e decodificação de caracteres
 
-# Os caracteres que vemos impressos na tela de um dispositivo digital são apenas símbolos renderizados, isto é "marcas". Como sabemos, um computador entende apenas uma linguagem binária. Isto significa que antes de um caracter ser mostrado exatamente como esperamos, digamos, em uma "tela", é necessário que ele seja processado, grosso modo, por duas "camadas abstratas". Uma é a camada de armazenamento, que associa um número binário ao caracter; a outra, é a camada textual, que usa _pontos de código_.
-# 
-# Existem vários sistemas de codificação de caracteres. Alguns bem conhecidos são ASCII, ISO-8859, CP-1252 e UTF-8. Entretanto, atualmente, o sistema UTF-8 se destaca pelo uso largamente difundido. No passado, devido à diferença de sistemas de codificação, o número que representava um caracter em um sistema não era o mesmo em outro sistema. Por isso, o padrão [[Unicode]](https://home.unicode.org) propôs a definição de um único número para cada caracter, permanente, e que valesse independentemente de plataforma, programa ou linguagem. Assim, hoje em dia, a melhor definição de caracter que existe é a de um _caracter Unicode_.
-# 
-# A identidade de um caracter Unicode é o seu _ponto de código_ (_code point_), um número de 0 a 1.114.111 (em base 10) mostrado no padrão Unicode. O padrão Unicode é formado por 4 a 6 dígitos hexadecimais seguidos do prefixo "U+". A tabela abaixo mostra alguns exemplos de caracteres, seu ponto de código e nome no padrão Unicode.
+# - Caracteres impressos em tela são apenas símbolos renderizados
+# - São processados em "camadas abstratas": armazenamento + textual
+# - Existem vários sistemas de codificação de caracteres. (ASCII, ISO-8859, CP-1252) 
+# - Mais comum: UTF-8. 
+
+# - O [[Unicode]](https://home.unicode.org) foi proposto para definir um único número para cada caracter independentemente de plataforma, programa ou linguagem. 
+# - Melhor definição de caracter que existe hoje: _caracter Unicode_.
+# - Identidade do caracter Unicode: _code point_ (número de 0 a 1.114.111 em base 10).
+# - Padrão Unicode: 4 a 6 dígitos hexadecimais seguidos do prefixo "U+". 
+
+# - Exemplos de caracteres, ponto de código e nome no padrão Unicode.
 # 
 # |Caracter|Ponto de código|Nome Unicode|
 # |---|---|---|
@@ -566,15 +572,15 @@ txts
 # |😛|U+1F61B|FACE WITH STUCK-OUT TONGUE|
 # |ぎ|U+304E|HIRAGANA LETTER GI|
 # 
-# Para imprimir em tela caracteres Unicode como os da tabela acima, temos duas maneiras:
-# 
-# - usando uma _string Unicode_ hexadecimal de 32-bits, em cujo caso escrevemos uma string iniciada por `\U` acompanhada de 8 caracteres. Os últimos caracteres correspondem ao ponto de código e as posições anteriores são preenchidas com 0. Neste caso, os caracteres acima poderiam ser impressos com:
+# > Todos os caracteres Unicode são encontrados em tabelas, as chamadas [[_Code Charts_]](https://www.unicode.org/charts/).
+
+# - Impressão usando uma _string Unicode_ hexadecimal de 32-bits:
 # 
 # ```python
 # '\U000000E2','\U00000754','\U0001f61b','\U0000304e'
 # ```
 # 
-# - usando o nome Unicode do caracter, em cujo caso escrevemos uma string iniciada por `\N` acompanhada do nome exato do caracter confinado entre chaves. Neste caso, os caracteres acima poderiam ser impressos com:
+# - Impressão usando o nome Unicode do caracter:
 # 
 # ```python
 # '\N{LATIN SMALL LETTER A WITH CIRCUMFLEX}',
@@ -582,30 +588,29 @@ txts
 # '\N{FACE WITH STUCK-OUT TONGUE}',
 # '\N{HIRAGANA LETTER GI}'
 # ```
-# 
-# Todos os caracteres Unicode são encontrados em tabelas separadas por classes (_planes_), as chamadas [[_Code Charts_]](https://www.unicode.org/charts/).
 
 # ### _bytes_ x texto
 # 
-# A conversão de pontos de código em _bytes_ é chamada de _codificação_, ou _encoding_, ao passo que  a conversão de _bytes_ em pontos de código é chamada de _decodificação_, ou _decoding_.
+# - _Encoding_: conversão de _code points_ => _bytes_.
+# - _Decoding_: conversão de _bytes_ => _code points_. 
 
 # **Exemplo:** codificação e decodificação.
 
-# In[41]:
+# In[178]:
 
 
 s = 'balé'
 len(s)
 
 
-# In[42]:
+# In[179]:
 
 
 b = s.encode('utf8')
 b
 
 
-# In[43]:
+# In[180]:
 
 
 # caracter 'é' representado por dois bytes
@@ -613,7 +618,7 @@ b
 len(b)
 
 
-# In[44]:
+# In[181]:
 
 
 b.decode('utf8')
@@ -622,33 +627,33 @@ b.decode('utf8')
 # Discussão:
 # 
 # - `encode` leva o texto para _bytes_.
-# - `b'` indica uma string literal de _bytes_.
-# - `bal` está no intervalo ASCII imprimível, enquanto que `\xc3` e `\xa9` não estão.
+# - `b'` é uma string literal de _bytes_.
+# - `bal` está no intervalo ASCII imprimível, enquanto que `\xc3` e `\xa9` não.
 # - `decode` leva de _bytes_ para texto.
 
 # Comentários:
 # 
 # - O próprio caracter ASCII é usado para _bytes_ no intevalo imprimível.
-# - Para _bytes_ correspondendo ao TAB, _newline_, _carriage return_ e contrabarra, as sequências de escape `\t`, `\n`, `\r` e `\\` são usadas.
+# - Para _bytes_ correspndendo ao TAB, _newline_, _carriage return_ e '\\', as sequências de escape `\t`, `\n`, `\r` e `\\` são usadas.
 # - Para qualquer outro _byte_, usa-se uma sequência de escape hexadecimal.
 
 # **Exemplo**: decodificação para outros sistemas.
 
-# In[45]:
+# In[182]:
 
 
 # erro! 
 # 'é' não é ASCII
-s.encode().decode('ascii')
+s.encode().decode('ascii')  
 
 
-# In[46]:
+# In[183]:
 
 
 s.encode().decode('iso8859')
 
 
-# In[47]:
+# In[184]:
 
 
 s.encode().decode('cp1252')

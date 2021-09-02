@@ -28,7 +28,7 @@
 # 
 # C. `'Em nenhum lugar, algo possível deve aguardar para ser descoberto'`, `'ê'` e `'í'`.
 # 
-# D. `'Em algum lugar, algo incrível está esperando para ser descoberto.'`, `'í` e  `' '`.
+# D. `'Em algum lugar, algo incrível está esperando para ser descoberto.'`, `'í'` e  `' '`.
 # 
 # _Obs.:_ Considere que os espaços na mensagem original não devem ser considerados como caracteres na mensagem decodificada e que ali servem apenas para separar os quartetos hexadecimais.
 
@@ -39,7 +39,7 @@
 
 # Alternativa **D**
 
-# In[12]:
+# In[14]:
 
 
 frase_code = [0x45, 0x6d, 0x20, 0x61, 0x6c, 0x67, 0x75, 0x6d, 0x20, 0x6c, 0x75, 0x67,0x61, 0x72, 0x2c, 0x20, 0x61,
@@ -48,15 +48,17 @@ frase_code = [0x45, 0x6d, 0x20, 0x61, 0x6c, 0x67, 0x75, 0x6d, 0x20, 0x6c, 0x75, 
               0x65, 0x72, 0x20, 0x64, 0x65, 0x73, 0x63, 0x6f, 0x62, 0x65, 0x72, 0x74, 0x6f, 0x2e]
 
 
-# In[2]:
+# In[17]:
 
 
 maior_int = max(frase_code)
 menor_int = min(frase_code)
+
 test  = [(chr(frase_code[_])) for _ in range(len(frase_code))]
 a = "".join(test)
-h , maior, menor , binario =bin(maior_int),max(a),min(a), bin(menor_int)
-print(f"A frase: {a}\nO maior numero em binário : [{h}] seu respectivo caractere: '{maior}'\nO menor numero em binário: [{binario}] e seu respectivo caratere: '{menor}'")
+maior, menor = max(a),min(a)
+
+print(f"\nResposta esperada: '{a}', '{maior}', '{menor}'\n")
 
 
 # **Questão 2**. Rindalve é um jovem promissor que conquistou um excelente emprego, mas sofre com a indisciplina financeira. Ele paga o aluguel da casa onde mora sempre com atraso de alguns dias e, extrapola o limite do cartão de crédito com frequência. Neste mês, Jonas pagou seu aluguel de <span> R&#36;</span> 6.500,00 com 12 dias de atraso e hoje faz 6 dias que a fatura de seu cartão, fechada em <span> R&#36;</span> 7.234,77, venceu. 
@@ -75,7 +77,7 @@ print(f"A frase: {a}\nO maior numero em binário : [{h}] seu respectivo caracter
 # 
 # B. <span> R&#36;</span> 19.396,08
 # 
-# C. <span> R&#36;</span> 14.166,77
+# C. <span> R&#36;</span> 14.808.54
 # 
 # D. <span> R&#36;</span> 16.396,77
 
@@ -85,7 +87,7 @@ print(f"A frase: {a}\nO maior numero em binário : [{h}] seu respectivo caracter
 # 
 # Alternativa C.
 
-# In[30]:
+# In[3]:
 
 
 def va_simples(valor,t,taxa,mora):
@@ -95,8 +97,6 @@ def va_simples(valor,t,taxa,mora):
         return valor*(1.0 + (mora + t*taxa)/100) 
 
 def va_composto(valor,t,taxa):
-    if taxa > 1.0:
-        taxa /= 100
         
     if t == 0:
         return valor
@@ -120,7 +120,6 @@ f'Total devido: R$ = {vt:.2f}'
 # - Qual é a quantidade de remédios nas classes _gratuidade_ e _copopagamento_?
 # - Quantos remédios têm a letra C como inicial de seu nome?
 # 
-# Assinale a alternativa correta.
 # 
 # Assinale a alternativa correta:
 # 
@@ -135,11 +134,13 @@ f'Total devido: R$ = {vt:.2f}'
 # 
 # _Obs.:_ tente usar funções anônimas sempre que possível.
 
-# ## GABARITO
+# <hr>
+# 
+# ## Gabarito
 #     
 # Alternativa **B**
 
-# In[3]:
+# In[5]:
 
 
 #Criação do dataset
@@ -169,14 +170,14 @@ gratuidade_copagamento = ["GRATUIDADE","GRATUIDADE","GRATUIDADE","GRATUIDADE","G
                          "COPAGAMENTO","COPAGAMENTO","COPAGAMENTO","COPAGAMENTO","COPAGAMENTO","COPAGAMENTO","COPAGAMENTO",
                           "COPAGAMENTO"]
 
-#verificação se todas estão correpondentes
+#verificação se todas estão correspondentes
 len(medicamentos),len(indicacao),len(gratuidade_copagamento)
 
 
-# In[4]:
+# In[6]:
 
 
-#juntando indicação + gratuiddado_copagamento
+#juntando indicação + gratuidade_copagamento
 ind_grat = [indicacao[_] + " | "+ gratuidade_copagamento[_] for _ in range(len(indicacao))]
 #criando o dict
 a = dict(zip(medicamentos, ind_grat))
@@ -184,7 +185,7 @@ for i in enumerate(a):
     print(f"| {i[0]+1} | {i[1]} | " + ind_grat[i[0]])
 
 
-# In[22]:
+# In[11]:
 
 
 def info_medicamentos(dic):
@@ -211,21 +212,13 @@ def info_medicamentos(dic):
     chek = 0
     for indi_list in ["HIPERTENSÃO", "DIABETES", "ASMA"]:
         if len(re.findall(indi_list,junt)) > chek:
-            chek, name_ind = len(re.findall(indi_list,junt)) , indi_list
-        print(f'A indicação {indi_list} contém {len(re.findall(indi_list,junt))} remédios gratuitos!')
-    print(f"Então {name_ind}!")    
-     
+            chek, name_ind = len(re.findall(indi_list,junt)) , indi_list   
     
-    #contagens
-    print(f"\nHá {count_grat} remédios gratuitos e {count_copa} remédios coparticipativos!")
-    #inicial
-    print(f"{inicial.count(True)} remédios iniciam com a letra C")
-    
-    print(f"\nResultado esperado: {name_ind} / {count_grat,count_copa} / {inicial.count(True)})")
+    return print(f"\nResultado esperado: {name_ind} / {count_grat,count_copa} / {inicial.count(True)})")
    
 
 
-# In[23]:
+# In[12]:
 
 
 info_medicamentos(a)
