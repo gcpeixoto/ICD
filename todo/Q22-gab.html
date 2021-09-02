@@ -185,7 +185,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ipynb/Q22.html">
-   Questionário Q22
+   Questionário 22 (Q22)
   </a>
  </li>
 </ul>
@@ -303,7 +303,7 @@
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   GABARITO
+   Gabarito
   </a>
  </li>
 </ul>
@@ -335,7 +335,7 @@
 <p>A. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">nenhum</span> <span class="pre">lugar,</span> <span class="pre">todo</span> <span class="pre">possível</span> <span class="pre">está</span> <span class="pre">aguardando</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">manifesto'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ê'</span></code> e <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>.</p>
 <p>B. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">algum</span> <span class="pre">lugar,</span> <span class="pre">tudo</span> <span class="pre">incrível</span> <span class="pre">está</span> <span class="pre">esperando</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">incompleto.'</span></code>, <code class="docutils literal notranslate"><span class="pre">'s</span></code> e  <code class="docutils literal notranslate"><span class="pre">'a'</span></code>.</p>
 <p>C. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">nenhum</span> <span class="pre">lugar,</span> <span class="pre">algo</span> <span class="pre">possível</span> <span class="pre">deve</span> <span class="pre">aguardar</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">descoberto'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ê'</span></code> e <code class="docutils literal notranslate"><span class="pre">'í'</span></code>.</p>
-<p>D. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">algum</span> <span class="pre">lugar,</span> <span class="pre">algo</span> <span class="pre">incrível</span> <span class="pre">está</span> <span class="pre">esperando</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">descoberto.'</span></code>, <code class="docutils literal notranslate"><span class="pre">'í</span></code> e  <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>.</p>
+<p>D. <code class="docutils literal notranslate"><span class="pre">'Em</span> <span class="pre">algum</span> <span class="pre">lugar,</span> <span class="pre">algo</span> <span class="pre">incrível</span> <span class="pre">está</span> <span class="pre">esperando</span> <span class="pre">para</span> <span class="pre">ser</span> <span class="pre">descoberto.'</span></code>, <code class="docutils literal notranslate"><span class="pre">'í'</span></code> e  <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>.</p>
 <p><em>Obs.:</em> Considere que os espaços na mensagem original não devem ser considerados como caracteres na mensagem decodificada e que ali servem apenas para separar os quartetos hexadecimais.</p>
 <hr>
 <section id="gabarito">
@@ -355,19 +355,17 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maior_int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">frase_code</span><span class="p">)</span>
 <span class="n">menor_int</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">frase_code</span><span class="p">)</span>
+
 <span class="n">test</span>  <span class="o">=</span> <span class="p">[(</span><span class="nb">chr</span><span class="p">(</span><span class="n">frase_code</span><span class="p">[</span><span class="n">_</span><span class="p">]))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">frase_code</span><span class="p">))]</span>
 <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
-<span class="n">h</span> <span class="p">,</span> <span class="n">maior</span><span class="p">,</span> <span class="n">menor</span> <span class="p">,</span> <span class="n">binario</span> <span class="o">=</span><span class="nb">bin</span><span class="p">(</span><span class="n">maior_int</span><span class="p">),</span><span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">bin</span><span class="p">(</span><span class="n">menor_int</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A frase: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">\n\</span>
-<span class="s2">O maior numero em binário : [</span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">] seu respectivo caractere: &#39;</span><span class="si">{</span><span class="n">maior</span><span class="si">}</span><span class="s2">&#39;</span><span class="se">\n\</span>
-<span class="s2">O menor numero em binário: [</span><span class="si">{</span><span class="n">binario</span><span class="si">}</span><span class="s2">] e seu respectivo caratere: &#39;</span><span class="si">{</span><span class="n">menor</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+<span class="n">maior</span><span class="p">,</span> <span class="n">menor</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Resposta esperada: &#39;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&#39;, &#39;</span><span class="si">{</span><span class="n">maior</span><span class="si">}</span><span class="s2">&#39;, &#39;</span><span class="si">{</span><span class="n">menor</span><span class="si">}</span><span class="s2">&#39;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A frase: Em algum lugar, algo incrível está esperando para ser descoberto.
-O maior numero em binário : [0b11101101] seu respectivo caractere: &#39;í&#39;
-O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resposta esperada: &#39;Em algum lugar, algo incrível está esperando para ser descoberto.&#39;, &#39;í&#39;, &#39; &#39;
 </pre></div>
 </div>
 </div>
@@ -384,7 +382,7 @@ O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
 <p>Crie uma função para calcular o valor total atualizado <span class="math notranslate nohighlight">\(V_T\)</span> que Jonas deverá desembolsar, em reais, para quitar as despesas citadas. Então, marque a alternativa correta.</p>
 <p>A. <span> R$</span> 19.048,09</p>
 <p>B. <span> R$</span> 19.396,08</p>
-<p>C. <span> R$</span> 14.166,77</p>
+<p>C. <span> R$</span> 14.808.54</p>
 <p>D. <span> R$</span> 16.396,77</p>
 <hr>
 </section>
@@ -401,8 +399,6 @@ O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
         <span class="k">return</span> <span class="n">valor</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="p">(</span><span class="n">mora</span> <span class="o">+</span> <span class="n">t</span><span class="o">*</span><span class="n">taxa</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> 
 
 <span class="k">def</span> <span class="nf">va_composto</span><span class="p">(</span><span class="n">valor</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">taxa</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">taxa</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
-        <span class="n">taxa</span> <span class="o">/=</span> <span class="mi">100</span>
         
     <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">valor</span>
@@ -420,7 +416,7 @@ O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Total devido: R$ = 14166.77&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Total devido: R$ = 14808.54&#39;
 </pre></div>
 </div>
 </div>
@@ -432,16 +428,16 @@ O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
 <li><p>Qual é a quantidade de remédios nas classes <em>gratuidade</em> e <em>copopagamento</em>?</p></li>
 <li><p>Quantos remédios têm a letra C como inicial de seu nome?</p></li>
 </ul>
-<p>Assinale a alternativa correta.</p>
 <p>Assinale a alternativa correta:</p>
 <p>A. ‘HIPERTENSÃO’, (20, 15), 3</p>
 <p>B. ‘ASMA’, (20, 15), 7</p>
 <p>C. ‘DIABETES’, (10, 20), 8</p>
 <p>D. ‘ASMA’, (18, 17), 6</p>
 <p><em>Obs.:</em> tente usar funções anônimas sempre que possível.</p>
+<hr>
 </section>
 <section id="id2">
-<h1>GABARITO<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<h1>Gabarito<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
 <p>Alternativa <strong>B</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -472,7 +468,7 @@ O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
                          <span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span><span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">,</span>
                           <span class="s2">&quot;COPAGAMENTO&quot;</span><span class="p">]</span>
 
-<span class="c1">#verificação se todas estão correpondentes</span>
+<span class="c1">#verificação se todas estão correspondentes</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">medicamentos</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">indicacao</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">gratuidade_copagamento</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -485,7 +481,7 @@ O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#juntando indicação + gratuiddado_copagamento</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#juntando indicação + gratuidade_copagamento</span>
 <span class="n">ind_grat</span> <span class="o">=</span> <span class="p">[</span><span class="n">indicacao</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; | &quot;</span><span class="o">+</span> <span class="n">gratuidade_copagamento</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indicacao</span><span class="p">))]</span>
 <span class="c1">#criando o dict</span>
 <span class="n">a</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">medicamentos</span><span class="p">,</span> <span class="n">ind_grat</span><span class="p">))</span>
@@ -560,17 +556,9 @@ O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
     <span class="n">chek</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">indi_list</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;HIPERTENSÃO&quot;</span><span class="p">,</span> <span class="s2">&quot;DIABETES&quot;</span><span class="p">,</span> <span class="s2">&quot;ASMA&quot;</span><span class="p">]:</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">indi_list</span><span class="p">,</span><span class="n">junt</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">chek</span><span class="p">:</span>
-            <span class="n">chek</span><span class="p">,</span> <span class="n">name_ind</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">indi_list</span><span class="p">,</span><span class="n">junt</span><span class="p">))</span> <span class="p">,</span> <span class="n">indi_list</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A indicação </span><span class="si">{</span><span class="n">indi_list</span><span class="si">}</span><span class="s1"> contém </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">indi_list</span><span class="p">,</span><span class="n">junt</span><span class="p">))</span><span class="si">}</span><span class="s1"> remédios gratuitos!&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Então </span><span class="si">{</span><span class="n">name_ind</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>    
-     
+            <span class="n">chek</span><span class="p">,</span> <span class="n">name_ind</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">indi_list</span><span class="p">,</span><span class="n">junt</span><span class="p">))</span> <span class="p">,</span> <span class="n">indi_list</span>   
     
-    <span class="c1">#contagens</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Há </span><span class="si">{</span><span class="n">count_grat</span><span class="si">}</span><span class="s2"> remédios gratuitos e </span><span class="si">{</span><span class="n">count_copa</span><span class="si">}</span><span class="s2"> remédios coparticipativos!&quot;</span><span class="p">)</span>
-    <span class="c1">#inicial</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">inicial</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2"> remédios iniciam com a letra C&quot;</span><span class="p">)</span>
-    
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Resultado esperado: </span><span class="si">{</span><span class="n">name_ind</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">count_grat</span><span class="p">,</span><span class="n">count_copa</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">inicial</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Resultado esperado: </span><span class="si">{</span><span class="n">name_ind</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">count_grat</span><span class="p">,</span><span class="n">count_copa</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">inicial</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
    
 </pre></div>
 </div>
@@ -583,15 +571,7 @@ O menor numero em binário: [0b100000] e seu respectivo caratere: &#39; &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A indicação HIPERTENSÃO contém 6 remédios gratuitos!
-A indicação DIABETES contém 6 remédios gratuitos!
-A indicação ASMA contém 8 remédios gratuitos!
-Então ASMA!
-
-Há 20 remédios gratuitos e 15 remédios coparticipativos!
-7 remédios iniciam com a letra C
-
-Resultado esperado: ASMA / (20, 15) / 7)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resultado esperado: ASMA / (20, 15) / 7)
 </pre></div>
 </div>
 </div>
