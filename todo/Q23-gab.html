@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Questionário Q23 &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q23.html">
+   Questionário Q23
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/todo/Q23-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/Q23-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/Q23-gab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Questionário Q23
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gabarito">
+   GABARITO
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Gabarito
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   GABARITO
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="questionario-q23">
+<h1>Questionário Q23<a class="headerlink" href="#questionario-q23" title="Permalink to this headline">¶</a></h1>
+<p>Orientações:</p>
+<ul class="simple">
+<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
+<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
+<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
+<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-a à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
+</ul>
+<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
+<hr><p><strong>Questão 1.</strong> Está transcrito abaixo o poema <em>Se</em>, datado de 1895 e de autoria do escritor anglo-indiano Rudyard Kipling (Prêmio Nobel de Literatura – 1907). O poema foi publicado pela primeira vez apenas em 1910 em uma coletânea de contos e poemas intitulada <em>Rewards and Fairies</em>.</p>
+<blockquote>
+<div><p><em>Se és capaz de manter a tua calma quando
+Todo o mundo ao teu redor já a perdeu e te culpa;
+De crer em ti quando estão todos duvidando?
+E para esses no entanto achar uma desculpa;
+Se és capaz de esperar sem te desesperares?
+Ou? enganado? não mentir ao mentiroso?
+Ou? sendo odiado? sempre ao ódio te esquivares?
+E não parecer bom demais? nem pretensioso;
+Se és capaz de pensar –sem que a isso só te atires?
+De sonhar –sem fazer dos sonhos teus senhores.
+Se encontrando a desgraça e o triunfo conseguires
+Tratar da mesma forma a esses dois impostores;
+Se és capaz de sofrer a dor de ver mudadas
+Em armadilhas as verdades que disseste?
+E as coisas? por que deste a vida? estraçalhadas?
+E refazê-las com o bem pouco que te reste;
+Se és capaz de arriscar numa única parada
+Tudo quanto ganhaste em toda a tua vida?
+E perder e? ao perder? sem nunca dizer nada?
+Resignado? tornar ao ponto de partida;
+De forçar coração? nervos? músculos? tudo
+A dar seja o que for que neles ainda existe,
+E a persistir assim quando? exaustos? contudo
+Resta a vontade em ti que ainda ordena: “Persiste!”;
+Se és capaz de? entre a plebe? não te corromperes
+E? entre reis? não perder a naturalidade?
+E de amigos? quer bons? quer maus? te defenderes?
+Se a todos podes ser de alguma utilidade?
+E se és capaz de dar? segundo por segundo?
+Ao minuto fatal todo o valor e brilho?
+Tua é a terra com tudo o que existe no mundo
+E o que mais – tu serás um homem? ó meu filho!</em></p>
+</div></blockquote>
+<p>Fonte: <a class="reference external" href="https://www.revistaprosaversoearte.com/conheca-se-um-dos-mais-belos-poemas-de-todos-os-tempos-de-rudyard-kipling/">Revista Prosa Verso e Arte</a>.</p>
+<p>Entretanto, diferentemente da versão original, esta transcrição contém pontos de interrogação onde deveria haver vírgulas. Use seus conhecimentos de operações com arquivos para criar um arquivo chamado <code class="docutils literal notranslate"><span class="pre">&quot;Se_RK.txt&quot;</span></code>no qual a versão corrigida deve ser salva. Em seguide, quebre duas linhas e apense o nome do autor, <em>Rudyard Kipling</em> ao arquivo.</p>
+<p>Assinale a alternativa cuja tupla corresponda, respectivamente, ao número de vírgulas obtidas após a substituição e ao número total de caracteres no arquivo após a inclusão do nome do autor.</p>
+<p>A. (38, 1452)</p>
+<p>B. (39, 1437)</p>
+<p>C. (38, 1454)</p>
+<p>D. n.d.a.</p>
+<hr>
+</section>
+<section id="gabarito">
+<h1>GABARITO<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>A</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#texto da questão acima</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;textt.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">t</span><span class="p">:</span>
+    <span class="n">textt</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="c1">#Já vou realizar a contagem das vírgulas já que vou substituir ? por ,   </span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">Se_RS</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">textt</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">_</span> <span class="o">==</span> <span class="s2">&quot;?&quot;</span><span class="p">:</span>
+        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">Se_RS</span><span class="o">+=</span><span class="s2">&quot;,&quot;</span>
+    <span class="k">else</span><span class="p">:</span>    
+        <span class="n">Se_RS</span><span class="o">+=</span> <span class="n">_</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Se_RS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Se és capaz de manter a tua calma quando
+Todo o mundo ao teu redor já a perdeu e te culpa;
+De crer em ti quando estão todos duvidando,
+E para esses no entanto achar uma desculpa;
+Se és capaz de esperar sem te desesperares,
+Ou, enganado, não mentir ao mentiroso,
+Ou, sendo odiado, sempre ao ódio te esquivares,
+E não parecer bom demais, nem pretensioso;
+Se és capaz de pensar –sem que a isso só te atires,
+De sonhar –sem fazer dos sonhos teus senhores.
+Se encontrando a desgraça e o triunfo conseguires
+Tratar da mesma forma a esses dois impostores;
+Se és capaz de sofrer a dor de ver mudadas
+Em armadilhas as verdades que disseste,
+E as coisas, por que deste a vida, estraçalhadas,
+E refazê-las com o bem pouco que te reste;
+Se és capaz de arriscar numa única parada
+Tudo quanto ganhaste em toda a tua vida,
+E perder e, ao perder, sem nunca dizer nada,
+Resignado, tornar ao ponto de partida;
+De forçar coração, nervos, músculos, tudo
+A dar seja o que for que neles ainda existe,
+E a persistir assim quando, exaustos, contudo
+Resta a vontade em ti que ainda ordena: “Persiste!”;
+Se és capaz de, entre a plebe, não te corromperes
+E, entre reis, não perder a naturalidade,
+E de amigos, quer bons, quer maus, te defenderes,
+Se a todos podes ser de alguma utilidade,
+E se és capaz de dar, segundo por segundo,
+Ao minuto fatal todo o valor e brilho,
+Tua é a terra com tudo o que existe no mundo
+E o que mais – tu serás um homem, ó meu filho!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Se_RS.txt&quot;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Se_RS</span><span class="p">)</span>
+
+    
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Se_RS.txt&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">Rudyard Kipling&quot;</span><span class="p">)</span>
+    
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Se_RS.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resposta esperada: </span><span class="si">{</span><span class="n">count</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resposta esperada: (38, 1452)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questão 2.</strong> Em Python, o módulo <code class="docutils literal notranslate"><span class="pre">os</span></code> fornece funções específicas para manipular caminhos e transitar arquivos. Marque a alternativa cujas funções do submódulo <code class="docutils literal notranslate"><span class="pre">path</span></code> listadas são utilizadas para retornar o tamanho de um arquivo e realizar teste de sua existência no disco.</p>
+<p>A.<code class="docutils literal notranslate"><span class="pre">getfn()</span></code> / <code class="docutils literal notranslate"><span class="pre">isdir()</span></code></p>
+<p>B.<code class="docutils literal notranslate"><span class="pre">join()</span></code> / <code class="docutils literal notranslate"><span class="pre">isfile()</span></code></p>
+<p>C.<code class="docutils literal notranslate"><span class="pre">isfile()</span></code> / <code class="docutils literal notranslate"><span class="pre">getsize()</span></code></p>
+<p>D.<code class="docutils literal notranslate"><span class="pre">getamount()</span></code> / <code class="docutils literal notranslate"><span class="pre">isfile()</span></code></p>
+<hr>
+</section>
+<section id="id1">
+<h1>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>C</strong></p>
+<hr>
+<p><strong>Questão 3</strong>. Em criptografia, diversos métodos são utilizados para proteger o conteúdo de mensagens. A tabela abaixo representa um sistema hipotético de criptografia que associa caracteres Unicode por “transliteração”. Ou seja, mensagens escritas com caracteres em um sistema original são reveladas por caracteres equivalentes da Língua Portuguesa.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Escape</p></th>
+<th class="head"><p>Original</p></th>
+<th class="head"><p>Equivalente</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>\u0061</p></td>
+<td><p>ʠ</p></td>
+<td><p>a</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0062</p></td>
+<td><p>ʡ</p></td>
+<td><p>b</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0063</p></td>
+<td><p>ʢ</p></td>
+<td><p>c</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0064</p></td>
+<td><p>ʣ</p></td>
+<td><p>d</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0065</p></td>
+<td><p>ʤ</p></td>
+<td><p>e</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0066</p></td>
+<td><p>ʥ</p></td>
+<td><p>f</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0067</p></td>
+<td><p>ʦ</p></td>
+<td><p>g</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0068</p></td>
+<td><p>ʧ</p></td>
+<td><p>h</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0069</p></td>
+<td><p>ʨ</p></td>
+<td><p>i</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u006A</p></td>
+<td><p>ʩ</p></td>
+<td><p>j</p></td>
+</tr>
+<tr class="row-even"><td><p>\u006B</p></td>
+<td><p>ʪ</p></td>
+<td><p>k</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u006C</p></td>
+<td><p>ʫ</p></td>
+<td><p>l</p></td>
+</tr>
+<tr class="row-even"><td><p>\u006D</p></td>
+<td><p>ʬ</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u006E</p></td>
+<td><p>ʭ</p></td>
+<td><p>n</p></td>
+</tr>
+<tr class="row-even"><td><p>\u006F</p></td>
+<td><p>ʮ</p></td>
+<td><p>o</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0070</p></td>
+<td><p>ʯ</p></td>
+<td><p>p</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0071</p></td>
+<td><p>ΰ</p></td>
+<td><p>q</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0072</p></td>
+<td><p>α</p></td>
+<td><p>r</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0073</p></td>
+<td><p>β</p></td>
+<td><p>s</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0074</p></td>
+<td><p>γ</p></td>
+<td><p>t</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0075</p></td>
+<td><p>δ</p></td>
+<td><p>u</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0076</p></td>
+<td><p>ε</p></td>
+<td><p>v</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0077</p></td>
+<td><p>ζ</p></td>
+<td><p>w</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u0078</p></td>
+<td><p>η</p></td>
+<td><p>x</p></td>
+</tr>
+<tr class="row-even"><td><p>\u0079</p></td>
+<td><p>θ</p></td>
+<td><p>y</p></td>
+</tr>
+<tr class="row-odd"><td><p>\u007A</p></td>
+<td><p>ι</p></td>
+<td><p>z</p></td>
+</tr>
+</tbody>
+</table>
+<p>Crie uma função que “decodifica” palavras escondidas no sistema original em palavras equivalentes em nossa língua (p.ex: <code class="docutils literal notranslate"><span class="pre">ʢʠʬʠ</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">cama</span></code>) e assinale a alternativa que contém a palavra equivalente ao anagrama <code class="docutils literal notranslate"><span class="pre">ʨʭʣδʡʨγʠεʤʫʬʤʭγʤ</span></code>:</p>
+<p>A. ‘inevitavelmente’</p>
+<p>B. ‘indiscutivelmente’</p>
+<p>C. ‘indubitavelmente’</p>
+<p>D. ‘indiscretamente’</p>
+<p><em>Dica:</em> para sequências de escape, vide <a class="reference external" href="https://www.rapidtables.com/code/text/unicode-characters.html">[aqui]</a>.</p>
+<hr>
+</section>
+<section id="id2">
+<h1>GABARITO<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>C</strong></p>
+<p>Criação da tabela code</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bas</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">]</span>
+<span class="n">letras</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s2">&quot;\u00&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">61</span><span class="p">,</span><span class="mi">70</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">r</span><span class="s2">&quot;\u006&quot;</span> <span class="o">+</span> <span class="n">bas</span><span class="p">[</span><span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">r</span><span class="s2">&quot;\u00&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">r</span><span class="s2">&quot;\u007A&quot;</span><span class="p">]</span>
+<span class="n">codes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;\u02A&#39;</span> <span class="o">+</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">bas</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;\u03B&#39;</span> <span class="o">+</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">bas</span><span class="p">[:</span><span class="mi">10</span><span class="p">]]</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">letras</span><span class="p">,</span><span class="n">codes</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">21</span><span class="o">*</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|  Escape  | Unicode |</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">aux</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;| &#39;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="s1">&#39; |   &#39;</span><span class="p">,</span> <span class="n">aux</span><span class="p">,</span><span class="s1">&#39;   |&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">21</span><span class="o">*</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>---------------------
+|  Escape  | Unicode |
+|----------|---------|
+|  \u0061  |    ʠ    |
+|  \u0062  |    ʡ    |
+|  \u0063  |    ʢ    |
+|  \u0064  |    ʣ    |
+|  \u0065  |    ʤ    |
+|  \u0066  |    ʥ    |
+|  \u0067  |    ʦ    |
+|  \u0068  |    ʧ    |
+|  \u0069  |    ʨ    |
+|  \u006A  |    ʩ    |
+|  \u006B  |    ʪ    |
+|  \u006C  |    ʫ    |
+|  \u006D  |    ʬ    |
+|  \u006E  |    ʭ    |
+|  \u006F  |    ʮ    |
+|  \u0070  |    ʯ    |
+|  \u0071  |    ΰ    |
+|  \u0072  |    α    |
+|  \u0073  |    β    |
+|  \u0074  |    γ    |
+|  \u0075  |    δ    |
+|  \u0076  |    ε    |
+|  \u0077  |    ζ    |
+|  \u0078  |    η    |
+|  \u0079  |    θ    |
+|  \u007A  |    ι    |
+---------------------
+</pre></div>
+</div>
+</div>
+</div>
+<p>Função para decodificar a mensagem</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_decode</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">name_reverse</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">sep</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sep</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">sep</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">):</span>
+                <span class="n">name_reverse</span> <span class="o">+=</span> <span class="n">a</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;unicode-escape&#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name_reverse</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_decode</span><span class="p">(</span><span class="s1">&#39;ʨʭʣδʡʨγʠεʤʫʬʤʭγʤ&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;indubitavelmente&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
