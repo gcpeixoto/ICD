@@ -37,6 +37,7 @@
 # - Unidade 1: Parte 2
 #     - [Questionário 21](Q21.ipynb)
 #     - [Questionário 22](Q22.ipynb)
+#     - [Questionário 23](Q23.ipynb)
 # 
 # #### Template para mini-artigos
 # 
@@ -157,5 +158,6 @@
 # 
 # Q21
 # Q22
+# Q23
 # ```
 # 
