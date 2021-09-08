@@ -10,12 +10,6 @@
 # - Saber como resolver sistemas lineares de pequeno porte;
 # - Calcular autovalores e autovetores em matrizes reais;
 
-# ## Introdução
-# 
-# Neste capítulo, mostraremos como realizar operações básicas entre matrizes e vetores usando o computador. A manipulação de matrizes e vetores é essencial em muitas ciências, principalmente para resolver sistemas lineares. 
-# 
-# As matrizes são utilizadas na computação para armazenar informações bidimensionais. Em particular, podem representar translação, rotação, escalonamento e sistemas de equações. O estudo da relação entre algoritmos e métodos computacionais para trabalhar eficientemente com matrizes e vetores é realizado no âmbito da _Álgebra Linear Computacional_.
-
 # ## Matrizes e vetores
 # 
 # Uma matriz ${\bf A}$ de ordem $m \times n$ pode ser escrita como:
@@ -45,10 +39,6 @@
 # - $\vec{u} = 3\vec{i} - 2\vec{j} + 9\vec{k}$
 # - $\vec{v} = -2\vec{i} + 4\vec{j}$
 # - $\vec{w} = \vec{i}$
-
-# ```{note}
-# O _NumPy_ possui uma classe especial para se trabalhar com matrizes e vetores em uma ou duas dimensões, a saber o tipo `matrix`, ou `mat`. Com objetos `matrix`, as  operações particulares de multiplicação matriz-matriz ou matriz-vetor comportam-se diferentemente daquelas na classe `ndarray`. Neste texto, abordaremos apenas os tipos `ndarray` porque são aplicáveis também a matrizes multidimensionais.
-# ```
 
 # In[1]:
 
@@ -118,7 +108,7 @@ print(A3)
 # In[5]:
 
 
-A2T = A2.T
+A2T = A2.T     
 print(A2T)
 
 
@@ -139,7 +129,7 @@ print(At)
 # In[7]:
 
 
-A == At
+A == At 
 
 
 # No caso de vetores:
@@ -186,6 +176,8 @@ print(sub)
 
 B = np.array([u,2*u,3*v]).T
 
+print(B)
+
 ad2 = A + B
 print(ad2)
 
@@ -214,7 +206,7 @@ print(pi2)
 # In[12]:
 
 
-np.sqrt(np.dot(u,u))
+np.sqrt(np.dot(u,u)) 
 
 
 # ### Produto de matrizes
@@ -306,7 +298,7 @@ A = np.array([[-4,1],[1/2,3]])
 
 b = np.array([5,10]).T
 
-# solução
+# solução 
 x = lin.solve(A, b)
 print(x)
 
@@ -336,7 +328,7 @@ print(x2)
 # In[22]:
 
 
-x == x2
+x == x2  
 
 
 # Isto ocorre devido a erros numéricos. Um teste mais adequado deve computar a norma do vetor "erro", dado por ${\bf e} = \bf{b} - \bf{A}\bf{x}$. A norma pode ser calculada diretamente com:
@@ -349,10 +341,6 @@ lin.norm(e)
 
 
 # Isto é, esperamos que $||{\bf e}|| \approx 0$ quando a solução do sistema for exata, a menos de erros numéricos.
-
-# ```{warning}
-# Nunca compare dois números reais (`float`) usando igualdade. Ou seja, `x == y`, não é, em geral, um bom teste lógico para verificar se `x` e `y` possuem o mesmo valor numérico.
-# ```
 
 # ## Algumas matrizes especiais
 
@@ -430,7 +418,7 @@ B == np.tril(B) + np.triu(B)
 
 
 A = np.array([[2,1],
-              [1,-5]])
+             [1,-5]])
 
 w, v = lin.eig(A)
 a,b = w
@@ -515,7 +503,7 @@ np.max(a)
 
 
 # modo alternativo
-a.min()
+a.min() 
 
 
 # In[40]:
