@@ -38,6 +38,7 @@
 #     - [Questionário 21](Q21.ipynb)
 #     - [Questionário 22](Q22.ipynb)
 #     - [Questionário 23](Q23.ipynb)
+#     - [Questionário 24](Q24.ipynb)
 # 
 # #### Template para mini-artigos
 # 
@@ -123,6 +124,12 @@
 # - Capstone project
 # -->
 
+# In[ ]:
+
+
+
+
+
 # 
 # ```{toctree}
 # :hidden:
@@ -159,5 +166,6 @@
 # Q21
 # Q22
 # Q23
+# Q24
 # ```
 # 
