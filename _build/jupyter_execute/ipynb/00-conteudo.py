@@ -29,6 +29,18 @@
 # 
 # ### Unidade 2
 # 
+# #### Parte 3
+# 
+# - [Manipulação de dados - I](10a-pandas-series.ipynb)
+# - [Manipulação de dados - II](10b-pandas-dataframe.ipynb)
+# - [Manipulação de dados - III](10c-pandas-agrupamento.ipynb)
+# 
+# #### Parte 4
+# 
+# - [Estatística Descritiva](11-estatistica-descritiva.ipynb)
+# 
+# ### Unidade 3
+# 
 # _Coming soon..._
 # 
 # 
@@ -52,18 +64,6 @@
 # - Probabilidade
 # - Otimização
 # - Aprendizagem de máquina
-# 
-# Aula (2h)
-# - Pipeline de dados 1: organização, limpeza, armazenamento, preparação e transformação dos dados
-# 
-# Aula (2h)
-# - Pipeline de dados 2:
-# 
-# Aula (2h) 
-# - Estatística descritiva 1: medidas de centralidade (Estatística) 
-# 
-# Aula (2h)
-# - Estatística descritiva 2: medidas de dispersão (Estatística) 
 # 
 # Aula (2h)
 # - Correlação (Estatística) 
@@ -124,12 +124,6 @@
 # - Capstone project
 # -->
 
-# In[ ]:
-
-
-
-
-
 # 
 # ```{toctree}
 # :hidden:
@@ -155,6 +149,26 @@
 # 08a-computacao-vetorizada
 # 08b-alc
 # 09-plotagem-matplotlib
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
+# :caption: Parte 3
+# 
+# 10a-pandas-series
+# 10b-pandas-dataframe
+# 10c-pandas-agrupamento
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
+# :caption: Parte 4
+# 
+# 11-estatistica-descritiva
 # ```
 # 
 # 

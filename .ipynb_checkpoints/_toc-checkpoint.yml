@@ -17,6 +17,16 @@
   - file: ipynb/08a-computacao-vetorizada
   - file: ipynb/08b-alc
   - file: ipynb/09-plotagem-matplotlib
+- part: Parte 3
+  numbered: false
+  chapters:
+  - file: ipynb/10a-pandas-series
+  - file: ipynb/10b-pandas-dataframe
+  - file: ipynb/10c-pandas-agrupamento
+- part: Parte 4
+  numbered: false
+  chapters:
+  - file: ipynb/11-estatistica-descritiva
 - part: Questionários
   numbered: false
   chapters:
