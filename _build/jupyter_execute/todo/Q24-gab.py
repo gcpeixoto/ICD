@@ -33,6 +33,62 @@
 # 
 # **Dica:** Use a função do *numpy* `load('...')`, com a opção `allow_pickle=True` e manipule o _array_ bidimensional.
 
+# <hr>
+# 
+# ## Gabarito
+# Alternativa **B**
+# 
+# **_Obs_**: Os alunos provalmente vão fazer tudo na mão, o senhor tem a opção de disponibilizar o dataset ou fazer com que eles corram atrás, fiz usando ferramentas mais avançadas para facilitar pra mim, tenho ciência que eles não vão fazer dessa forma.
+
+# In[1]:
+
+
+import numpy as np
+import pandas as pd
+
+
+# In[2]:
+
+
+ws = pd.read_html("https://www.espn.com.br/artigo/_/id/4310177/selecao-brasileira-veja-o-censo-completo-dos-jogadores-que-vao-a-copa")
+
+
+# In[3]:
+
+
+#As tabelas no site estão em ordem crescente de acordo com os atributos, vamos alterar e deixar de acordo com os nomes
+ws0 = ws[0].sort_values(by=['Jogador'], ignore_index=True)
+ws1 = ws[1].sort_values(by=['Jogador'], ignore_index=True)
+ws2 = ws[2].sort_values(by=['Jogador'], ignore_index=True)
+
+
+# In[45]:
+
+
+#criando dataframe único com atributos
+db = ws0
+db["Peso"] = ws1["Peso"]
+db['Idade'] = ws2["Idade"]
+db
+
+
+# In[13]:
+
+
+altura = np.array(db["Altura"])
+peso = np.array(db["Peso"])
+idade = np.array(db["Idade"])
+
+IMC = np.array(list(map(lambda x,y: x/y**2, peso,altura)))
+
+grupo1 = [IMC < 21.7]
+grupo2 = [IMC > 21.9]
+
+count_true = len([_ for _ in grupo1[0] if _ == True in grupo1[0]])
+count_false = len([_ for _ in grupo2[0] if _ == True in grupo1[0]])
+f'{count_true} // {count_false}'
+
+
 # **Questão 2.** A _Taxa Metabólica Basal_ (TMB) é a quantidade mínima de energia que o ser humano, em repouso, precisa para sobreviver. A _Equação de Mifflin - St. Jeor_ para calcular a TMB em kcal/dia (quilocalorias por dia) de pessoas do sexo masculino é dada por:
 # 
 # $$TMB = 10M + 6.25A-5I+5,$$
@@ -55,9 +111,34 @@
 # 
 # B. 2022: 4992720.9375, 2024: 4992720.9375
 # 
-# C. 2022: 4908770.9375, 2024: 4824820.9375
+# C. 2022: 4824820.9375, 2024: 4782845.9375
 # 
-# D. 2022: 4908770.9375, 2024: 4824820.9375
+# D. 2022: 4824820.9375, 2024: 4740870.9375
+
+# <hr>
+# 
+# ## Gabarito
+# Alternativa **D**
+# 
+
+# In[6]:
+
+
+#E um ano
+year = 365
+TMB_eq = np.sum(list(map(lambda m,a,i: (10*m) + (6.25*a) - (5*i)+5, peso,altura,idade)))*365
+TMB_eq
+
+
+# In[7]:
+
+
+#Durante 5 anos
+TMB = {}
+for i in range(5):
+    TMB[2020+i] = np.sum(365*np.sum(list(map(lambda m,a,i: (10*m) + (6.25*a) - (5*i)+5, peso,altura,idade+i)))) # kcal necessárias por ano para o time
+TMB
+
 
 # **Questão 3:** O movimento executado por uma bola de futebol ao ser chutada a partir do campo por um jogador é similar ao movimento parabólico de um projétil. A velocidade da bola $V_b$ pode ser calculada pela expressão:
 # 
@@ -90,3 +171,63 @@
 # C. Cássio / Fred
 # 
 # D. Ederson / Fagner
+
+# <hr>
+# 
+# ## Gabarito
+# 
+# Alternativa **C**
+
+# In[48]:
+
+
+# vp: velocidade da perna do jogador (fixa: 20 m/s)
+# mp: massa da perna do jogador (10% da massa do jogador)
+# e: coeficiente de restituição da bola (média da bola oficial: 0.7)
+# mb: massa da bola de futebol oficial (mb = 0.4 kg)
+# alpha: angulo de lançamento da bola (chute)
+# g: constante gravitacional (9.8 m/s2)
+
+# velocidade da bola em m/s
+vb = lambda vp,mp,mb,e: vp*(mp/(mp + mb))*(1 + e)
+
+# formula do alcance: movimento projetil
+alcance = lambda vb, alpha, g: vb**2*np.sin(2*alpha)/g
+
+# Considere o campo FIFA: 100 m x 68 m
+
+e = 0.7
+vp = 20.0
+mb = 0.4
+g = 9.8
+alpha = 45
+
+MP = 0.2*db["Peso"] # massas perna
+VB = vb(vp,MP,mb,e) # vels bola
+ALC = alcance(VB,alpha,g)
+
+# quais jogadores conseguem um 'chute de campo inteiro'
+kicker = ALC >= 100
+
+db["Alcance"] = ALC
+
+
+# In[51]:
+
+
+WFK = db[db["Alcance"] >= 100].sort_values(by="Alcance", ascending=False)
+not_WFK = db[db["Alcance"] < 100].sort_values(by="Alcance", ascending=True)
+WFK[:1]
+
+
+# In[52]:
+
+
+not_WFK[:1]
+
+
+# In[ ]:
+
+
+
+

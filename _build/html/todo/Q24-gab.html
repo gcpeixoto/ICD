@@ -190,12 +190,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ipynb/Q23.html">
-   Questionário Q23
+   Questionário 23 (Q23)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ipynb/Q24.html">
-   Questionário Q24
+   Questionário 24 (Q24)
   </a>
  </li>
 </ul>
@@ -289,6 +289,34 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Questionário Q24
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gabarito">
+   Gabarito
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Gabarito
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Gabarito
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -318,6 +346,285 @@
 <p>C. 6 e 17</p>
 <p>D. 5 e 14</p>
 <p><strong>Dica:</strong> Use a função do <em>numpy</em> <code class="docutils literal notranslate"><span class="pre">load('...')</span></code>, com a opção <code class="docutils literal notranslate"><span class="pre">allow_pickle=True</span></code> e manipule o <em>array</em> bidimensional.</p>
+<hr>
+</section>
+<section id="gabarito">
+<h1>Gabarito<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>B</strong></p>
+<p><strong><em>Obs</em></strong>: Os alunos provalmente vão fazer tudo na mão, o senhor tem a opção de disponibilizar o dataset ou fazer com que eles corram atrás, fiz usando ferramentas mais avançadas para facilitar pra mim, tenho ciência que eles não vão fazer dessa forma.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ws</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s2">&quot;https://www.espn.com.br/artigo/_/id/4310177/selecao-brasileira-veja-o-censo-completo-dos-jogadores-que-vao-a-copa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#As tabelas no site estão em ordem crescente de acordo com os atributos, vamos alterar e deixar de acordo com os nomes</span>
+<span class="n">ws0</span> <span class="o">=</span> <span class="n">ws</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Jogador&#39;</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ws1</span> <span class="o">=</span> <span class="n">ws</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Jogador&#39;</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ws2</span> <span class="o">=</span> <span class="n">ws</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Jogador&#39;</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#criando dataframe único com atributos</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">ws0</span>
+<span class="n">db</span><span class="p">[</span><span class="s2">&quot;Peso&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ws1</span><span class="p">[</span><span class="s2">&quot;Peso&quot;</span><span class="p">]</span>
+<span class="n">db</span><span class="p">[</span><span class="s1">&#39;Idade&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ws2</span><span class="p">[</span><span class="s2">&quot;Idade&quot;</span><span class="p">]</span>
+<span class="n">db</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Jogador</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Idade</th>
+      <th>Alcance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alisson</td>
+      <td>1.91</td>
+      <td>85</td>
+      <td>25</td>
+      <td>100.662336</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Casemiro</td>
+      <td>1.84</td>
+      <td>81</td>
+      <td>26</td>
+      <td>100.434173</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Cássio</td>
+      <td>1.95</td>
+      <td>89</td>
+      <td>31</td>
+      <td>100.870665</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Danilo</td>
+      <td>1.84</td>
+      <td>74</td>
+      <td>26</td>
+      <td>99.977877</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Douglas Costa</td>
+      <td>1.72</td>
+      <td>66</td>
+      <td>27</td>
+      <td>99.343099</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Ederson</td>
+      <td>1.86</td>
+      <td>84</td>
+      <td>24</td>
+      <td>100.607261</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Fagner</td>
+      <td>1.68</td>
+      <td>58</td>
+      <td>29</td>
+      <td>98.541948</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Fernandinho</td>
+      <td>1.77</td>
+      <td>67</td>
+      <td>33</td>
+      <td>99.430376</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Filipe Luis</td>
+      <td>1.82</td>
+      <td>74</td>
+      <td>32</td>
+      <td>99.977877</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Firmino</td>
+      <td>1.81</td>
+      <td>74</td>
+      <td>26</td>
+      <td>99.977877</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Fred</td>
+      <td>1.69</td>
+      <td>57</td>
+      <td>25</td>
+      <td>98.426795</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Gabriel Jesus</td>
+      <td>1.75</td>
+      <td>67</td>
+      <td>21</td>
+      <td>99.430376</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Geromel</td>
+      <td>1.90</td>
+      <td>78</td>
+      <td>32</td>
+      <td>100.248270</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Marcelo</td>
+      <td>1.74</td>
+      <td>67</td>
+      <td>30</td>
+      <td>99.430376</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Marquinhos</td>
+      <td>1.83</td>
+      <td>73</td>
+      <td>24</td>
+      <td>99.905834</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Miranda</td>
+      <td>1.86</td>
+      <td>78</td>
+      <td>33</td>
+      <td>100.248270</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Neymar</td>
+      <td>1.74</td>
+      <td>59</td>
+      <td>26</td>
+      <td>98.653389</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Paulinho</td>
+      <td>1.82</td>
+      <td>75</td>
+      <td>29</td>
+      <td>100.048074</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Philippe Coutinho</td>
+      <td>1.71</td>
+      <td>61</td>
+      <td>26</td>
+      <td>98.865832</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Renato Augusto</td>
+      <td>1.86</td>
+      <td>80</td>
+      <td>30</td>
+      <td>100.373698</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Taison</td>
+      <td>1.72</td>
+      <td>64</td>
+      <td>30</td>
+      <td>99.160734</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Thiago Silva</td>
+      <td>1.83</td>
+      <td>77</td>
+      <td>33</td>
+      <td>100.183206</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Willian</td>
+      <td>1.74</td>
+      <td>66</td>
+      <td>29</td>
+      <td>99.343099</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">altura</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Altura&quot;</span><span class="p">])</span>
+<span class="n">peso</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Peso&quot;</span><span class="p">])</span>
+<span class="n">idade</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Idade&quot;</span><span class="p">])</span>
+
+<span class="n">IMC</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">peso</span><span class="p">,</span><span class="n">altura</span><span class="p">)))</span>
+
+<span class="n">grupo1</span> <span class="o">=</span> <span class="p">[</span><span class="n">IMC</span> <span class="o">&lt;</span> <span class="mf">21.7</span><span class="p">]</span>
+<span class="n">grupo2</span> <span class="o">=</span> <span class="p">[</span><span class="n">IMC</span> <span class="o">&gt;</span> <span class="mf">21.9</span><span class="p">]</span>
+
+<span class="n">count_true</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">grupo1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">_</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">in</span> <span class="n">grupo1</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">count_false</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">grupo2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">_</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">in</span> <span class="n">grupo1</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">count_true</span><span class="si">}</span><span class="s1"> // </span><span class="si">{</span><span class="n">count_false</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;7 // 12&#39;
+</pre></div>
+</div>
+</div>
+</div>
 <p><strong>Questão 2.</strong> A <em>Taxa Metabólica Basal</em> (TMB) é a quantidade mínima de energia que o ser humano, em repouso, precisa para sobreviver. A <em>Equação de Mifflin - St. Jeor</em> para calcular a TMB em kcal/dia (quilocalorias por dia) de pessoas do sexo masculino é dada por:</p>
 <div class="math notranslate nohighlight">
 \[TMB = 10M + 6.25A-5I+5,\]</div>
@@ -333,8 +640,48 @@
 <p>Marque a alternativa que, corretamente, reporta a TMB total da equipe para os anos de 2022 e 2024.</p>
 <p>A. 2022: 4922219.625, 2024: 4838039.625</p>
 <p>B. 2022: 4992720.9375, 2024: 4992720.9375</p>
-<p>C. 2022: 4908770.9375, 2024: 4824820.9375</p>
-<p>D. 2022: 4908770.9375, 2024: 4824820.9375</p>
+<p>C. 2022: 4824820.9375, 2024: 4782845.9375</p>
+<p>D. 2022: 4824820.9375, 2024: 4740870.9375</p>
+<hr>
+</section>
+<section id="id1">
+<h1>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>D</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#E um ano</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">365</span>
+<span class="n">TMB_eq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">i</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">6.25</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span> <span class="n">peso</span><span class="p">,</span><span class="n">altura</span><span class="p">,</span><span class="n">idade</span><span class="p">)))</span><span class="o">*</span><span class="mi">365</span>
+<span class="n">TMB_eq</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4992720.9375
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Durante 5 anos</span>
+<span class="n">TMB</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">TMB</span><span class="p">[</span><span class="mi">2020</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">i</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">6.25</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span> <span class="n">peso</span><span class="p">,</span><span class="n">altura</span><span class="p">,</span><span class="n">idade</span><span class="o">+</span><span class="n">i</span><span class="p">))))</span> <span class="c1"># kcal necessárias por ano para o time</span>
+<span class="n">TMB</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{2020: 4992720.9375,
+ 2021: 4950745.9375,
+ 2022: 4908770.9375,
+ 2023: 4866795.9375,
+ 2024: 4824820.9375}
+</pre></div>
+</div>
+</div>
+</div>
 <p><strong>Questão 3:</strong> O movimento executado por uma bola de futebol ao ser chutada a partir do campo por um jogador é similar ao movimento parabólico de um projétil. A velocidade da bola <span class="math notranslate nohighlight">\(V_b\)</span> pode ser calculada pela expressão:</p>
 <div class="math notranslate nohighlight">
 \[V_b = V_p\left( \dfrac{M_p}{M_p + M_b} \right)(1 + e),\]</div>
@@ -356,6 +703,138 @@
 <p>B. Ederson / Neymar</p>
 <p>C. Cássio / Fred</p>
 <p>D. Ederson / Fagner</p>
+<hr>
+</section>
+<section id="id2">
+<h1>Gabarito<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>C</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vp: velocidade da perna do jogador (fixa: 20 m/s)</span>
+<span class="c1"># mp: massa da perna do jogador (10% da massa do jogador)</span>
+<span class="c1"># e: coeficiente de restituição da bola (média da bola oficial: 0.7)</span>
+<span class="c1"># mb: massa da bola de futebol oficial (mb = 0.4 kg)</span>
+<span class="c1"># alpha: angulo de lançamento da bola (chute)</span>
+<span class="c1"># g: constante gravitacional (9.8 m/s2)</span>
+
+<span class="c1"># velocidade da bola em m/s</span>
+<span class="n">vb</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">vp</span><span class="p">,</span><span class="n">mp</span><span class="p">,</span><span class="n">mb</span><span class="p">,</span><span class="n">e</span><span class="p">:</span> <span class="n">vp</span><span class="o">*</span><span class="p">(</span><span class="n">mp</span><span class="o">/</span><span class="p">(</span><span class="n">mp</span> <span class="o">+</span> <span class="n">mb</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
+
+<span class="c1"># formula do alcance: movimento projetil</span>
+<span class="n">alcance</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">vb</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="n">vb</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">alpha</span><span class="p">)</span><span class="o">/</span><span class="n">g</span>
+
+<span class="c1"># Considere o campo FIFA: 100 m x 68 m</span>
+
+<span class="n">e</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">vp</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">mb</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.8</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mi">45</span>
+
+<span class="n">MP</span> <span class="o">=</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Peso&quot;</span><span class="p">]</span> <span class="c1"># massas perna</span>
+<span class="n">VB</span> <span class="o">=</span> <span class="n">vb</span><span class="p">(</span><span class="n">vp</span><span class="p">,</span><span class="n">MP</span><span class="p">,</span><span class="n">mb</span><span class="p">,</span><span class="n">e</span><span class="p">)</span> <span class="c1"># vels bola</span>
+<span class="n">ALC</span> <span class="o">=</span> <span class="n">alcance</span><span class="p">(</span><span class="n">VB</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
+
+<span class="c1"># quais jogadores conseguem um &#39;chute de campo inteiro&#39;</span>
+<span class="n">kicker</span> <span class="o">=</span> <span class="n">ALC</span> <span class="o">&gt;=</span> <span class="mi">100</span>
+
+<span class="n">db</span><span class="p">[</span><span class="s2">&quot;Alcance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ALC</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">WFK</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Alcance&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;Alcance&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">not_WFK</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Alcance&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;Alcance&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">WFK</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Jogador</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Idade</th>
+      <th>Alcance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Cássio</td>
+      <td>1.95</td>
+      <td>89</td>
+      <td>31</td>
+      <td>100.870665</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">not_WFK</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Jogador</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Idade</th>
+      <th>Alcance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>Fred</td>
+      <td>1.69</td>
+      <td>57</td>
+      <td>25</td>
+      <td>98.426795</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

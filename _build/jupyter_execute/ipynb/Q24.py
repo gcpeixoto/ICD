@@ -13,7 +13,7 @@
 # *Nota:* o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.
 # <hr>
 
-# **Questão 1.** A ESPN forneceu o censo completo dos jogadores da copa de 2018. O arquivo <a href="../database/copa2018.npy" download="../database/copa2018.npy">copa2018.npy</a> contém uma tabela de peso, altura e idade de cada um desses atletas.  Com base nesses dados, crie os _arrays_ `altura`, `idade` e `peso`. Por fim, defina um _dict_ que associe esses dados aos respectivos jogadores.
+# **Questão 1.** A ESPN forneceu o censo completo dos jogadores da copa de 2018. O arquivo [copa2018.npy](https://github.com/gcpeixoto/ICD/blob/main/database/copa2018.npy?raw=true) contém uma tabela de peso, altura e idade de cada um desses atletas.  Com base nesses dados, crie os _arrays_ `altura`, `idade` e `peso`. Por fim, defina um _dict_ que associe esses dados aos respectivos jogadores.
 # 
 # O _Índice de Massa Corpórea_ (IMC) é usado para saber se um indivíduo está no peso ideal. Ele é definido pela fórmula:
 # 
@@ -55,9 +55,9 @@
 # 
 # B. 2022: 4992720.9375, 2024: 4992720.9375
 # 
-# C. 2022: 4908770.9375, 2024: 4824820.9375
+# C. 2022: 4824820.9375, 2024: 4782845.9375
 # 
-# D. 2022: 4908770.9375, 2024: 4824820.9375
+# D. 2022: 4824820.9375, 2024: 4740870.9375
 
 # **Questão 3:** O movimento executado por uma bola de futebol ao ser chutada a partir do campo por um jogador é similar ao movimento parabólico de um projétil. A velocidade da bola $V_b$ pode ser calculada pela expressão:
 # 
