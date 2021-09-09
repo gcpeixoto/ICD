@@ -62,7 +62,7 @@ ws1 = ws[1].sort_values(by=['Jogador'], ignore_index=True)
 ws2 = ws[2].sort_values(by=['Jogador'], ignore_index=True)
 
 
-# In[45]:
+# In[4]:
 
 
 #criando dataframe único com atributos
@@ -72,7 +72,7 @@ db['Idade'] = ws2["Idade"]
 db
 
 
-# In[13]:
+# In[5]:
 
 
 altura = np.array(db["Altura"])
@@ -153,7 +153,7 @@ TMB
 # Diante disso, considere os seguintes dados: 
 # 
 # - A massa da bola de futebol profissional é de 400 gramas e seu coeficiente de restituição é 0.7.
-# - A massa da perna de um jogador equivale a 10% de sua massa.
+# - A massa da perna de um jogador equivale a 20% de sua massa.
 # - A velocidade da perna de um jogador é de 20 m/s.
 # - A constante gravitacional equivale a 9.8 m/s<sup>2</sup>.
 # 
@@ -178,7 +178,7 @@ TMB
 # 
 # Alternativa **C**
 
-# In[48]:
+# In[15]:
 
 
 # vp: velocidade da perna do jogador (fixa: 20 m/s)
@@ -212,7 +212,7 @@ kicker = ALC >= 100
 db["Alcance"] = ALC
 
 
-# In[51]:
+# In[16]:
 
 
 WFK = db[db["Alcance"] >= 100].sort_values(by="Alcance", ascending=False)
@@ -220,14 +220,8 @@ not_WFK = db[db["Alcance"] < 100].sort_values(by="Alcance", ascending=True)
 WFK[:1]
 
 
-# In[52]:
+# In[10]:
 
 
 not_WFK[:1]
-
-
-# In[ ]:
-
-
-
 

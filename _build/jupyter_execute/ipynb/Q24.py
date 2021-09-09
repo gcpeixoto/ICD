@@ -72,7 +72,7 @@
 # Diante disso, considere os seguintes dados: 
 # 
 # - A massa da bola de futebol profissional é de 400 gramas e seu coeficiente de restituição é 0.7.
-# - A massa da perna de um jogador equivale a 10% de sua massa.
+# - A massa da perna de um jogador equivale a 20% de sua massa.
 # - A velocidade da perna de um jogador é de 20 m/s.
 # - A constante gravitacional equivale a 9.8 m/s<sup>2</sup>.
 # 
