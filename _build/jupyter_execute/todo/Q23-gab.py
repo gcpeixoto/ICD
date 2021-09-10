@@ -53,7 +53,7 @@
 # 
 # Entretanto, diferentemente da versão original, esta transcrição contém pontos de interrogação onde deveria haver vírgulas. Use seus conhecimentos de operações com arquivos para criar um arquivo chamado `"Se_RK.txt"`no qual a versão corrigida deve ser salva. Em seguide, quebre duas linhas e apense o nome do autor, _Rudyard Kipling_ ao arquivo. 
 # 
-# Assinale a alternativa cuja tupla corresponda, respectivamente, ao número de vírgulas obtidas após a substituição e ao número total de caracteres no arquivo após a inclusão do nome do autor.
+# Assinale a alternativa cuja tupla corresponda, respectivamente, ao número de vírgulas substituídas e ao número total de caracteres no arquivo após a inclusão do nome do autor.
 # 
 # A. (38, 1452)  
 # 
