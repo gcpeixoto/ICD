@@ -93,7 +93,7 @@ f'{count_true} // {count_false}'
 # 
 # $$TMB = 10M + 6.25A-5I+5,$$
 # 
-# onde $M$ é a massa do indivíduo, $A$ sua altura e $I$ sua idade.
+# onde $M$ é a massa do indivíduo (em _kg_), $A$ sua altura (em _m_) e $I$ sua idade.
 # 
 # [[Fonte: Wiikipedia]](https://en.wikipedia.org/wiki/Basal_metabolic_rate)
 # 
@@ -178,7 +178,7 @@ TMB
 # 
 # Alternativa **C**
 
-# In[15]:
+# In[24]:
 
 
 # vp: velocidade da perna do jogador (fixa: 20 m/s)
@@ -212,7 +212,7 @@ kicker = ALC >= 100
 db["Alcance"] = ALC
 
 
-# In[16]:
+# In[25]:
 
 
 WFK = db[db["Alcance"] >= 100].sort_values(by="Alcance", ascending=False)
@@ -220,8 +220,14 @@ not_WFK = db[db["Alcance"] < 100].sort_values(by="Alcance", ascending=True)
 WFK[:1]
 
 
-# In[10]:
+# In[26]:
 
 
 not_WFK[:1]
+
+
+# In[27]:
+
+
+db.sort_values(by='Peso')
 

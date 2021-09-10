@@ -37,7 +37,7 @@
 # 
 # $$TMB = 10M + 6.25A-5I+5,$$
 # 
-# onde $M$ é a massa do indivíduo, $A$ sua altura e $I$ sua idade.
+# onde $M$ é a massa do indivíduo (em _kg_), $A$ sua altura (em _m_) e $I$ sua idade.
 # 
 # [[Fonte: Wiikipedia]](https://en.wikipedia.org/wiki/Basal_metabolic_rate)
 # 

@@ -638,7 +638,7 @@
 <p><strong>Questão 2.</strong> A <em>Taxa Metabólica Basal</em> (TMB) é a quantidade mínima de energia que o ser humano, em repouso, precisa para sobreviver. A <em>Equação de Mifflin - St. Jeor</em> para calcular a TMB em kcal/dia (quilocalorias por dia) de pessoas do sexo masculino é dada por:</p>
 <div class="math notranslate nohighlight">
 \[TMB = 10M + 6.25A-5I+5,\]</div>
-<p>onde <span class="math notranslate nohighlight">\(M\)</span> é a massa do indivíduo, <span class="math notranslate nohighlight">\(A\)</span> sua altura e <span class="math notranslate nohighlight">\(I\)</span> sua idade.</p>
+<p>onde <span class="math notranslate nohighlight">\(M\)</span> é a massa do indivíduo (em <em>kg</em>), <span class="math notranslate nohighlight">\(A\)</span> sua altura (em <em>m</em>) e <span class="math notranslate nohighlight">\(I\)</span> sua idade.</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Basal_metabolic_rate">[Fonte: Wiikipedia]</a></p>
 <p>Calcule a energia necessária total para a manutenção vital de todos os jogadores da seleção de 2018 durante um ano inteiro, isto é, a TMB anual. Considere 1 ano = 365 dias.</p>
 <p>Calcule a TMB anual necessária para a manutenção vital de todos os jogadores da seleção de 2018 durante o quinquênio 2020 - 2024. Assuma que:</p>
@@ -839,7 +839,228 @@
       <td>1.69</td>
       <td>57</td>
       <td>25</td>
-      <td>92.078386</td>
+      <td>98.426795</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Peso&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Jogador</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Idade</th>
+      <th>Alcance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>Fred</td>
+      <td>1.69</td>
+      <td>57</td>
+      <td>25</td>
+      <td>98.426795</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Fagner</td>
+      <td>1.68</td>
+      <td>58</td>
+      <td>29</td>
+      <td>98.541948</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Neymar</td>
+      <td>1.74</td>
+      <td>59</td>
+      <td>26</td>
+      <td>98.653389</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Philippe Coutinho</td>
+      <td>1.71</td>
+      <td>61</td>
+      <td>26</td>
+      <td>98.865832</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Taison</td>
+      <td>1.72</td>
+      <td>64</td>
+      <td>30</td>
+      <td>99.160734</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Willian</td>
+      <td>1.74</td>
+      <td>66</td>
+      <td>29</td>
+      <td>99.343099</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Douglas Costa</td>
+      <td>1.72</td>
+      <td>66</td>
+      <td>27</td>
+      <td>99.343099</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Marcelo</td>
+      <td>1.74</td>
+      <td>67</td>
+      <td>30</td>
+      <td>99.430376</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Gabriel Jesus</td>
+      <td>1.75</td>
+      <td>67</td>
+      <td>21</td>
+      <td>99.430376</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Fernandinho</td>
+      <td>1.77</td>
+      <td>67</td>
+      <td>33</td>
+      <td>99.430376</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Marquinhos</td>
+      <td>1.83</td>
+      <td>73</td>
+      <td>24</td>
+      <td>99.905834</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Firmino</td>
+      <td>1.81</td>
+      <td>74</td>
+      <td>26</td>
+      <td>99.977877</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Danilo</td>
+      <td>1.84</td>
+      <td>74</td>
+      <td>26</td>
+      <td>99.977877</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Filipe Luis</td>
+      <td>1.82</td>
+      <td>74</td>
+      <td>32</td>
+      <td>99.977877</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Paulinho</td>
+      <td>1.82</td>
+      <td>75</td>
+      <td>29</td>
+      <td>100.048074</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Thiago Silva</td>
+      <td>1.83</td>
+      <td>77</td>
+      <td>33</td>
+      <td>100.183206</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Geromel</td>
+      <td>1.90</td>
+      <td>78</td>
+      <td>32</td>
+      <td>100.248270</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Miranda</td>
+      <td>1.86</td>
+      <td>78</td>
+      <td>33</td>
+      <td>100.248270</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Renato Augusto</td>
+      <td>1.86</td>
+      <td>80</td>
+      <td>30</td>
+      <td>100.373698</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Casemiro</td>
+      <td>1.84</td>
+      <td>81</td>
+      <td>26</td>
+      <td>100.434173</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Ederson</td>
+      <td>1.86</td>
+      <td>84</td>
+      <td>24</td>
+      <td>100.607261</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Alisson</td>
+      <td>1.91</td>
+      <td>85</td>
+      <td>25</td>
+      <td>100.662336</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Cássio</td>
+      <td>1.95</td>
+      <td>89</td>
+      <td>31</td>
+      <td>100.870665</td>
     </tr>
   </tbody>
 </table>
