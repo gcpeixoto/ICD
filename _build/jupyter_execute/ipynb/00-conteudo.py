@@ -51,6 +51,7 @@
 #     - [Questionário 22](Q22.ipynb)
 #     - [Questionário 23](Q23.ipynb)
 #     - [Questionário 24](Q24.ipynb)
+#     - [Questionário 25](Q25.ipynb)
 # 
 # #### Template para mini-artigos
 # 
@@ -181,5 +182,6 @@
 # Q22
 # Q23
 # Q24
+# Q25
 # ```
 # 
