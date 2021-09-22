@@ -1,0 +1,1279 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Manipulação de dados - I &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/rise/10a-pandas-series-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/rise/10a-pandas-series-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/rise/10a-pandas-series-rise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-biblioteca-pandas">
+   A biblioteca
+   <em>
+    pandas
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visao-geral">
+   Visão geral
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series">
+   <em>
+    Series
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criando-um-objeto-do-tipo-series">
+     Criando um objeto do tipo
+     <em>
+      Series
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criando-series-a-partir-de-dicionarios">
+     Criando
+     <em>
+      Series
+     </em>
+     a partir de dicionários
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criando-series-a-partir-de-listas">
+     Criando
+     <em>
+      Series
+     </em>
+     a partir de listas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criando-series-a-partir-de-arrays-do-numpy">
+     Criando
+     <em>
+      Series
+     </em>
+     a partir de
+     <em>
+      arrays
+     </em>
+     do
+     <em>
+      numpy
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fornecendo-um-index-na-criacao-da-series">
+     Fornecendo um
+     <em>
+      index
+     </em>
+     na criação da
+     <em>
+      Series
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criando-series-a-partir-de-escalares">
+     Criando
+     <em>
+      Series
+     </em>
+     a partir de escalares
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#series-comportam-se-como-arrays-do-numpy">
+     <em>
+      Series
+     </em>
+     comportam-se como
+     <em>
+      arrays
+     </em>
+     do
+     <em>
+      numpy
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#series-comportam-se-como-dicionarios">
+     <em>
+      Series
+     </em>
+     comportam-se como dicionários
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-atributo-name">
+     O atributo
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       name
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-funcao-date-range">
+     A função
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       date_range
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="manipulacao-de-dados-i">
+<h1>Manipulação de dados - I<a class="headerlink" href="#manipulacao-de-dados-i" title="Permalink to this headline">¶</a></h1>
+<section id="a-biblioteca-pandas">
+<h2>A biblioteca <em>pandas</em><a class="headerlink" href="#a-biblioteca-pandas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>pandas</em> é uma biblioteca para leitura, tratamento e manipulação de dados em <em>Python</em></p></li>
+<li><p>Funções similares as de softwares de planilhamento (ex. <em>Microsoft Excel</em>, <em>LibreOffice Calc</em>, <em>Apple Numbers</em>)</p></li>
+<li><p>Novas estruturas de dados que <em>pandas</em> introduz: <em>Series</em> e <em>DataFrames</em></p></li>
+<li><p>Para saber mais, veja a <a class="reference external" href="https://pandas.pydata.org/about/index.html">página oficial</a> da biblioteca</p></li>
+</ul>
+</section>
+<section id="visao-geral">
+<h2>Visão geral<a class="headerlink" href="#visao-geral" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Um <em>DataFame</em> possui uma estrutura tabular</p></li>
+<li><p>Suas colunas são vetores unidimensionais (<em>Series</em>)</p></li>
+<li><p>Suas linhas são rotuladas por um <em>index</em></p></li>
+<li><p>Usaremos o <em>numpy</em> integrado com <em>pandas</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="series">
+<h2><em>Series</em><a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h2>
+<p>As <em>Series</em>:</p>
+<ul class="simple">
+<li><p>são vetores, ou seja, são <em>arrays</em> unidimensionais;</p></li>
+<li><p>possuem um <em>index</em> para cada entrada (e são muito eficientes para operar com base neles);</p></li>
+<li><p>podem conter qualquer um dos tipos de dados (<code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> etc.).</p></li>
+</ul>
+<section id="criando-um-objeto-do-tipo-series">
+<h3>Criando um objeto do tipo <em>Series</em><a class="headerlink" href="#criando-um-objeto-do-tipo-series" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>O método padrão é utilizar a função <em>Series</em>:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">serie_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados_de_interesse</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">indice_de_interesse</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dados_de_interesse</span></code> pode ser:</p>
+<ul>
+<li><p>um dicionário (objeto do tipo <code class="docutils literal notranslate"><span class="pre">dict</span></code>);</p></li>
+<li><p>uma lista (objeto do tipo <code class="docutils literal notranslate"><span class="pre">list</span></code>);</p></li>
+<li><p>um objeto <code class="docutils literal notranslate"><span class="pre">array</span></code> do <em>numpy</em>;</p></li>
+<li><p>um escalar, tal como o número inteiro 1.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="criando-series-a-partir-de-dicionarios">
+<h3>Criando <em>Series</em> a partir de dicionários<a class="headerlink" href="#criando-series-a-partir-de-dicionarios" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dicionario_exemplo</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Ana&#39;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;João&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span> <span class="s1">&#39;Maria&#39;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s1">&#39;Pedro&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;Túlio&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dicionario_exemplo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ana      20
+João     19
+Maria    21
+Pedro    22
+Túlio    20
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><em>index</em> obtido a partir das “chaves” dos dicionários</p></li>
+<li><p>ordem do <em>index</em> foi dada pela ordem de entrada no dicionário</p></li>
+<li><p>podemos fornecer um novo <em>index</em> ao dicionário já criado</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dicionario_exemplo</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Maria&#39;</span><span class="p">,</span> <span class="s1">&#39;Maria&#39;</span><span class="p">,</span> <span class="s1">&#39;ana&#39;</span><span class="p">,</span> <span class="s1">&#39;Paula&#39;</span><span class="p">,</span> <span class="s1">&#39;Túlio&#39;</span><span class="p">,</span> <span class="s1">&#39;Pedro&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Maria    21.0
+Maria    21.0
+ana       NaN
+Paula     NaN
+Túlio    20.0
+Pedro    22.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>Dados não encontrados são assinalados por um valor especial. O marcador padrão do <em>pandas</em> para dados faltantes é o <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (<em>not a number</em>).</p>
+</div></blockquote>
+</section>
+<section id="criando-series-a-partir-de-listas">
+<h3>Criando <em>Series</em> a partir de listas<a class="headerlink" href="#criando-series-a-partir-de-listas" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_exemplo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">lista_exemplo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1
+1    2
+2    3
+3    4
+4    5
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>Se os <em>index</em> não forem fornecidos, o <em>pandas</em> atribuirá automaticamente os valores <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">...,</span> <span class="pre">N-1</span></code>, onde <code class="docutils literal notranslate"><span class="pre">N</span></code> é o número de elementos da lista.</p>
+</div></blockquote>
+</section>
+<section id="criando-series-a-partir-de-arrays-do-numpy">
+<h3>Criando <em>Series</em> a partir de <em>arrays</em> do <em>numpy</em><a class="headerlink" href="#criando-series-a-partir-de-arrays-do-numpy" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array_exemplo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">array_exemplo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1
+1    2
+2    3
+3    4
+4    5
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fornecendo-um-index-na-criacao-da-series">
+<h3>Fornecendo um <em>index</em> na criação da <em>Series</em><a class="headerlink" href="#fornecendo-um-index-na-criacao-da-series" title="Permalink to this headline">¶</a></h3>
+<p>O total de elementos do <em>index</em> deve ser igual ao tamanho do <em>array</em>. Caso contrário, um erro será retornado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">array_exemplo</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">55</span><span class="o">-</span><span class="n">f8e840b4247a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">array_exemplo</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">])</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/series.py</span> in <span class="ni">__init__</span><span class="nt">(self, data, index, dtype, name, copy, fastpath)</span>
+<span class="g g-Whitespace">    </span><span class="mi">428</span>                 <span class="n">index</span> <span class="o">=</span> <span class="n">ibase</span><span class="o">.</span><span class="n">default_index</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>             <span class="k">elif</span> <span class="n">is_list_like</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">430</span>                 <span class="n">com</span><span class="o">.</span><span class="n">require_length_match</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span> 
+<span class="g g-Whitespace">    </span><span class="mi">432</span>             <span class="c1"># create/copy the manager</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/common.py</span> in <span class="ni">require_length_match</span><span class="nt">(data, index)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span><span class="s2">     if len(data) != len(index):</span>
+<span class="ne">--&gt; </span><span class="mi">531</span><span class="s2">         raise ValueError(</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span><span class="s2">             &quot;Length of values &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span><span class="s2">             f&quot;({len(data)}) &quot;</span>
+
+<span class="ne">ValueError</span>: Length of values (5) does not match length of index (6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">array_exemplo</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    1
+b    2
+c    3
+d    4
+e    5
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Além disso, não é necessário que que os elementos no <em>index</em> sejam únicos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">array_exemplo</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    1
+a    2
+b    3
+b    4
+c    5
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Um erro ocorrerá se uma operação que dependa da unicidade dos elementos no <em>index</em> for realizada, a exemplo do método <code class="docutils literal notranslate"><span class="pre">reindex</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">array_exemplo</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">])</span> <span class="c1"># &#39;a&#39; e &#39;b&#39; duplicados na origem</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">63</span><span class="o">-</span><span class="n">ee01c968fae1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">series_exemplo</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">])</span> <span class="c1"># &#39;a&#39; e &#39;b&#39; duplicados na origem</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/series.py</span> in <span class="ni">reindex</span><span class="nt">(self, index, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4578</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4579</span>     <span class="k">def</span> <span class="nf">reindex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">4580</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4581</span> 
+<span class="g g-Whitespace">   </span><span class="mi">4582</span>     <span class="nd">@deprecate_nonkeyword_arguments</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">allowed_args</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;self&quot;</span><span class="p">,</span> <span class="s2">&quot;labels&quot;</span><span class="p">])</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/generic.py</span> in <span class="ni">reindex</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4816</span> 
+<span class="g g-Whitespace">   </span><span class="mi">4817</span>         <span class="c1"># perform the reindex on the axes</span>
+<span class="ne">-&gt; </span><span class="mi">4818</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reindex_axes</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4819</span>             <span class="n">axes</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">fill_value</span><span class="p">,</span> <span class="n">copy</span>
+<span class="g g-Whitespace">   </span><span class="mi">4820</span>         <span class="p">)</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;reindex&quot;</span><span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/generic.py</span> in <span class="ni">_reindex_axes</span><span class="nt">(self, axes, level, limit, tolerance, method, fill_value, copy)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4837</span> 
+<span class="g g-Whitespace">   </span><span class="mi">4838</span>             <span class="n">axis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_axis_number</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">4839</span>             <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">_reindex_with_indexers</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4840</span>                 <span class="p">{</span><span class="n">axis</span><span class="p">:</span> <span class="p">[</span><span class="n">new_index</span><span class="p">,</span> <span class="n">indexer</span><span class="p">]},</span>
+<span class="g g-Whitespace">   </span><span class="mi">4841</span>                 <span class="n">fill_value</span><span class="o">=</span><span class="n">fill_value</span><span class="p">,</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/generic.py</span> in <span class="ni">_reindex_with_indexers</span><span class="nt">(self, reindexers, fill_value, copy, allow_dups)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4881</span> 
+<span class="g g-Whitespace">   </span><span class="mi">4882</span>             <span class="c1"># TODO: speed up on homogeneous DataFrame objects</span>
+<span class="ne">-&gt; </span><span class="mi">4883</span>             <span class="n">new_data</span> <span class="o">=</span> <span class="n">new_data</span><span class="o">.</span><span class="n">reindex_indexer</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4884</span>                 <span class="n">index</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4885</span>                 <span class="n">indexer</span><span class="p">,</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/internals/managers.py</span> in <span class="ni">reindex_indexer</span><span class="nt">(self, new_axis, indexer, axis, fill_value, allow_dups, copy, consolidate, only_slice)</span>
+<span class="g g-Whitespace">    </span><span class="mi">668</span>         <span class="c1"># some axes don&#39;t allow reindexing with dups</span>
+<span class="g g-Whitespace">    </span><span class="mi">669</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">allow_dups</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">670</span>             <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span><span class="o">.</span><span class="n">_validate_can_reindex</span><span class="p">(</span><span class="n">indexer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">671</span> 
+<span class="g g-Whitespace">    </span><span class="mi">672</span>         <span class="k">if</span> <span class="n">axis</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndim</span><span class="p">:</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">_validate_can_reindex</span><span class="nt">(self, indexer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3783</span>         <span class="c1"># trying to reindex on an axis with duplicates</span>
+<span class="g g-Whitespace">   </span><span class="mi">3784</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index_as_unique</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">3785</span>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;cannot reindex from a duplicate axis&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3786</span> 
+<span class="g g-Whitespace">   </span><span class="mi">3787</span>     <span class="k">def</span> <span class="nf">reindex</span><span class="p">(</span>
+
+<span class="ne">ValueError</span>: cannot reindex from a duplicate axis
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="criando-series-a-partir-de-escalares">
+<h3>Criando <em>Series</em> a partir de escalares<a class="headerlink" href="#criando-series-a-partir-de-escalares" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    1
+b    1
+c    1
+d    1
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Neste caso, um índice <strong>deve</strong> ser fornecido!</p>
+</section>
+<section id="series-comportam-se-como-arrays-do-numpy">
+<h3><em>Series</em> comportam-se como <em>arrays</em> do <em>numpy</em><a class="headerlink" href="#series-comportam-se-como-arrays-do-numpy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Uma <em>Series</em> do <em>pandas</em> comporta-se como um <em>array</em> unidimensional do <em>numpy</em>.</p></li>
+<li><p>Pode ser utilizada como argumento para a maioria das funções do <em>numpy</em>.</p></li>
+<li><p>A diferença é que o <em>index</em> aparece.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">array_exemplo</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    1
+b    2
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">series_exemplo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    0.000000
+b    0.693147
+c    1.098612
+d    1.386294
+e    1.609438
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mais exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]);</span> <span class="n">serie_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_1</span> <span class="o">+</span> <span class="n">serie_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     5
+1     7
+2     9
+3    11
+4    13
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_1</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">serie_2</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -10
+1   -11
+2   -12
+3   -13
+4   -14
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Assim como <em>arrays</em> do <em>numpy</em>, as <em>Series</em> do <em>pandas</em> também possuem atributos <em>dtype</em> (data type).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;int64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se o interesse for utilizar os dados de uma <em>Series</em> do <em>pandas</em> como um <em>array</em> do <em>numpy</em>, basta utilizar o método <code class="docutils literal notranslate"><span class="pre">to_numpy</span></code> para convertê-la.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3, 4, 5])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="series-comportam-se-como-dicionarios">
+<h3><em>Series</em> comportam-se como dicionários<a class="headerlink" href="#series-comportam-se-como-dicionarios" title="Permalink to this headline">¶</a></h3>
+<p>Podemos acessar os elementos de uma <em>Series</em> através das chaves fornecidas no <em>index</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    1
+b    2
+c    3
+d    4
+e    5
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos adicionar novos elementos associados a chaves novas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    1
+b    2
+c    3
+d    4
+e    5
+f    6
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;f&#39;</span> <span class="ow">in</span> <span class="n">series_exemplo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;g&#39;</span> <span class="ow">in</span> <span class="n">series_exemplo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Neste examplo, tentamos acessar uma chave inexistente. Logo, um erro ocorre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3360</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;g&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">32</span><span class="o">-</span><span class="mi">12</span><span class="n">f1880611a9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">series_exemplo</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/series.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">940</span> 
+<span class="g g-Whitespace">    </span><span class="mi">941</span>         <span class="k">elif</span> <span class="n">key_is_scalar</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">942</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">943</span> 
+<span class="g g-Whitespace">    </span><span class="mi">944</span>         <span class="k">if</span> <span class="n">is_hashable</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/series.py</span> in <span class="ni">_get_value</span><span class="nt">(self, label, takeable)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1049</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1050</span>         <span class="c1"># Similar to Index.get_value, but we do not fall back to positional</span>
+<span class="ne">-&gt; </span><span class="mi">1051</span>         <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1052</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">_get_values_for_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1053</span> 
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3363</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3364</span> 
+<span class="g g-Whitespace">   </span><span class="mi">3365</span>         <span class="k">if</span> <span class="n">is_scalar</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isna</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasnans</span><span class="p">:</span>
+
+<span class="ne">KeyError</span>: &#39;g&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Entretanto, podemos utilizar o método <code class="docutils literal notranslate"><span class="pre">get</span></code> para lidar com chaves que possivelmente inexistam e adicionar um <code class="docutils literal notranslate"><span class="pre">NaN</span></code> do <em>numpy</em> como valor alternativo se, de fato, não exista valor atribuído.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_exemplo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nan
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="o-atributo-name">
+<h3>O atributo <code class="docutils literal notranslate"><span class="pre">name</span></code><a class="headerlink" href="#o-atributo-name" title="Permalink to this headline">¶</a></h3>
+<p>Uma <em>Series</em> do <em>pandas</em> possui um atributo opcional <code class="docutils literal notranslate"><span class="pre">name</span></code> que nos permite identificar o objeto. Ele é  bastante útil em operações envolvendo <em>DataFrames</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_com_nome</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dicionario_exemplo</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Idade&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_com_nome</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ana      20
+João     19
+Maria    21
+Pedro    22
+Túlio    20
+Name: Idade, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-funcao-date-range">
+<h3>A função <code class="docutils literal notranslate"><span class="pre">date_range</span></code><a class="headerlink" href="#a-funcao-date-range" title="Permalink to this headline">¶</a></h3>
+<p>Em muitas situações, os índices podem ser organizados como datas. A função <code class="docutils literal notranslate"><span class="pre">data_range</span></code> cria índices a partir de datas. Alguns argumentos desta função são:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: <code class="docutils literal notranslate"><span class="pre">str</span></code> contendo a data que serve como limite à esquerda das datas. Padrão: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code>: <code class="docutils literal notranslate"><span class="pre">str</span></code> contendo a data que serve como limite à direita das datas. Padrão: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">freq</span></code>: frequência a ser considerada. Por exemplo, dias (<code class="docutils literal notranslate"><span class="pre">D</span></code>), horas (<code class="docutils literal notranslate"><span class="pre">H</span></code>), semanas (<code class="docutils literal notranslate"><span class="pre">W</span></code>), fins de meses (<code class="docutils literal notranslate"><span class="pre">M</span></code>), inícios de meses (<code class="docutils literal notranslate"><span class="pre">MS</span></code>), fins de anos (<code class="docutils literal notranslate"><span class="pre">Y</span></code>), inícios de anos (<code class="docutils literal notranslate"><span class="pre">YS</span></code>) etc. Pode-se também utilizar múltiplos (p.ex. <code class="docutils literal notranslate"><span class="pre">5H</span></code>, <code class="docutils literal notranslate"><span class="pre">2Y</span></code> etc.). Padrão: <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periods</span></code>: número de períodos a serem considerados (o período é determinado pelo argumento <code class="docutils literal notranslate"><span class="pre">freq</span></code>).</p></li>
+</ul>
+<p>Abaixo damos exemplos do uso de <code class="docutils literal notranslate"><span class="pre">date_range</span></code> com diferente formatos de data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;9/19/2021&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2021-09-19&#39;, &#39;2021-09-26&#39;, &#39;2021-10-03&#39;, &#39;2021-10-10&#39;,
+               &#39;2021-10-17&#39;, &#39;2021-10-24&#39;, &#39;2021-10-31&#39;, &#39;2021-11-07&#39;,
+               &#39;2021-11-14&#39;, &#39;2021-11-21&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;W-SUN&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2010-05-10&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2010-12-31&#39;, &#39;2011-12-31&#39;, &#39;2012-12-31&#39;, &#39;2013-12-31&#39;,
+               &#39;2014-12-31&#39;, &#39;2015-12-31&#39;, &#39;2016-12-31&#39;, &#39;2017-12-31&#39;,
+               &#39;2018-12-31&#39;, &#39;2019-12-31&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;A-DEC&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;9/19/2021&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;5H&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2021-09-19 00:00:00&#39;, &#39;2021-09-19 05:00:00&#39;,
+               &#39;2021-09-19 10:00:00&#39;, &#39;2021-09-19 15:00:00&#39;,
+               &#39;2021-09-19 20:00:00&#39;, &#39;2021-09-20 01:00:00&#39;,
+               &#39;2021-09-20 06:00:00&#39;, &#39;2021-09-20 11:00:00&#39;,
+               &#39;2021-09-20 16:00:00&#39;, &#39;2021-09-20 21:00:00&#39;,
+               &#39;2021-09-21 02:00:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;5H&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2024-02-29&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;365D&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2024-02-29&#39;, &#39;2025-02-28&#39;, &#39;2026-02-28&#39;, &#39;2027-02-28&#39;,
+               &#39;2028-02-28&#39;, &#39;2029-02-27&#39;, &#39;2030-02-27&#39;, &#39;2031-02-27&#39;,
+               &#39;2032-02-27&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;365D&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>O exemplo a seguir cria duas <em>Series</em> com valores aleatórios associados a um interstício de 10 dias.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">indice_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">serie_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="n">index</span><span class="o">=</span><span class="n">indice_exemplo</span><span class="p">)</span>   
+<span class="n">serie_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="n">index</span><span class="o">=</span><span class="n">indice_exemplo</span><span class="p">)</span>
+
+<span class="n">serie_1</span><span class="p">,</span> <span class="n">serie_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2020-01-01    0.393696
+ 2020-01-02    1.178169
+ 2020-01-03    1.731551
+ 2020-01-04    0.045049
+ 2020-01-05   -2.502484
+ 2020-01-06   -0.010531
+ 2020-01-07    1.429922
+ 2020-01-08    1.059066
+ 2020-01-09   -0.292633
+ 2020-01-10    0.151089
+ Freq: D, dtype: float64,
+ 2020-01-01   -1.363898
+ 2020-01-02    0.840579
+ 2020-01-03    0.238101
+ 2020-01-04   -0.912568
+ 2020-01-05   -0.551402
+ 2020-01-06   -1.769498
+ 2020-01-07   -0.506190
+ 2020-01-08   -0.935361
+ 2020-01-09    1.861616
+ 2020-01-10    0.408587
+ Freq: D, dtype: float64)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

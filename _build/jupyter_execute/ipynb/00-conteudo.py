@@ -53,77 +53,13 @@
 #     - [Questionário 24](Q24.ipynb)
 #     - [Questionário 25](Q25.ipynb)
 # 
+# - Unidade 2: Parte 3
+#     - [Questionário 31](Q31.ipynb)
+#     
+#     
 # #### Template para mini-artigos
 # 
 # Para elaborar os mini-artigos avaliativos, use o template disponibilizado <a href="../templates/short-paper/docx/main.docx" download="../templates/short-paper/docx/main.docx"> aqui </a>.
-# 
-# <!--
-# #### Parte 3 - Ciência e análise de dados (20h)
-# 
-# - Pipeline
-# - Estatística
-# - Probabilidade
-# - Otimização
-# - Aprendizagem de máquina
-# 
-# Aula (2h)
-# - Correlação (Estatística) 
-# 
-# Aula (2h)
-# - Regressão linear (Estatística) 
-# 
-# Aula (2h)
-# - Números aleatórios
-# - Distribuição normal (Probabilidade)
-# 
-# Aula (2h)
-# - Scores e rankings (Probabilidade)
-# 
-# Aula (2h)
-# - Otimização - gradient descent
-# 
-# Aula (2h)
-# - Prova 3
-# 
-# ### Unidade 3 (20h)
-# 
-# ### Parte 4 - Aplicações (20h)
-# 
-# Aula (2h)
-# - Obtenção de datasets
-# - Web scraping (requests)
-# - HDF5 (h5py)
-# - APIs
-# 
-# Aula (2h) 
-# - Aprendizagem de máquina 1: supervisionada (scikit-learn)
-# 
-# Aula (2h)
-# - Aprendizagem de máquina 2: não-supervisionada (scikit-learn)
-# 
-# Aula (2h)
-# - Redes neurais (keras, tensorflow)
-# 
-# Aula (2h)
-# - Data viz
-# - Data storytelling
-# - Data reporting
-# 
-# Aula (2h)
-# - Engenharia de dados
-# - Mapreduce
-# - Curadoria
-# - Ética em dados
-# 
-# Aula (2h)
-# - Análise de redes (networkx)
-# 
-# Aula (2h)
-# - Sistemas de recomendação
-# 
-# Aula (4h)
-# - Capstone project
-# -->
 
 # 
 # ```{toctree}
@@ -183,5 +119,6 @@
 # Q23
 # Q24
 # Q25
+# Q31
 # ```
 # 
