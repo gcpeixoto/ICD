@@ -1,0 +1,1992 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Algoritmo de avaliação personalizado (ICD) &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/todo/F_atrib_notas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/F_atrib_notas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/F_atrib_notas.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Algoritmo de avaliação personalizado (ICD)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alunos-ativos-no-sigaa-em-ordem-alfabetica">
+     Alunos Ativos no SIGAA (em ordem alfabética)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criacao-do-dataframe-todos-os-valores-precisam-comecar-com-0-e-posteriormente-vai-modificando-de-acordo-com-a-nota-do-aluno">
+     Criação do DataFrame, todos os valores precisam começar com 0 e posteriormente vai modificando de acordo com a nota do aluno
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcao-para-insercao-de-notas">
+     Função para inserção de notas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nota-das-partes">
+   Nota das partes
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nota-das-unidades">
+   Nota das unidades
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nota-das-final">
+   Nota das FINAL
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="algoritmo-de-avaliacao-personalizado-icd">
+<h1>Algoritmo de avaliação personalizado (ICD)<a class="headerlink" href="#algoritmo-de-avaliacao-personalizado-icd" title="Permalink to this headline">¶</a></h1>
+<p>Lucas Miranda de Aguiar</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="alunos-ativos-no-sigaa-em-ordem-alfabetica">
+<h2>Alunos Ativos no SIGAA (em ordem alfabética)<a class="headerlink" href="#alunos-ativos-no-sigaa-em-ordem-alfabetica" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alunos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;notas_GDCOC0089_T01_20211.xls&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriculas_alun</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;20180042677 - ANA PAULA CARDOSO DE CASTRO KENDALL&quot;</span><span class="p">,</span> <span class="s2">&quot;20200111286 - ÂNGELA THAÍS ALVES DA SILVA&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20200026560 - CLELIO SANDOVAL DA FONSECA&quot;</span><span class="p">,</span> <span class="s2">&quot;20190035175 - FRANCELINO TEOTONIO JUNIOR&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20200112309 - GABRIEL BARBOSA FERRAZ JARDIM&quot;</span><span class="p">,</span> <span class="s2">&quot;20200026247 - GUILHERME HERCULANO FERNANDES&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20200161250 - GUILHERME IRAM SILVA ARAUJO&quot;</span><span class="p">,</span> <span class="s2">&quot;20200114706 - GUILHERME PUJONI MENEZES&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20190133775 - IKARO HENRIQUE MONTEIRO ANDRADE&quot;</span><span class="p">,</span> <span class="s2">&quot;20200154050 - INGRID DAYANE DA SILVA FERREIRA&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20200024162 - ISMAEL ALVES LIMA&quot;</span><span class="p">,</span> <span class="s2">&quot;20200139170 - JANSEN CRUZ DE SOUZA&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20200088188 - JOSUE CALEB AVELINO DOS SANTOS&quot;</span><span class="p">,</span><span class="s2">&quot;20190033519 - KENYO MAILTON DA SILVA OLIVEIRA&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20180116153 - LEANDRO QUEIROZ CIRINO ARAUJO&quot;</span><span class="p">,</span> <span class="s2">&quot;20190036379 - LUIS HENRIQUE AUGUSTO DE LIMA&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;11510431 - MANOEL CLEONALDO MENDES PEREIRA SOBRINHO&quot;</span><span class="p">,</span> <span class="s2">&quot;20200133309  - MARCOS DANTAS GUIMARAES FILHO&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20200026200 - MARIA IARA DE ARAUJO&quot;</span><span class="p">,</span> <span class="s2">&quot;20200025900 - MARIA RAQUEL SOUZA MARTINEZ&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20170052034 - MARIANA FRANZ MARROQUIM&quot;</span><span class="p">,</span><span class="s2">&quot;20200025508 - MATHEUS VICTOR ALVES BRAGA MACIEL&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;11507225 - RAMON AZEVEDO DOS SANTOS CAVALCANTI&quot;</span><span class="p">,</span> <span class="s2">&quot;20200026327 - RENAN CAVALCANTI FLORENTINO&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20180044519 - RHUAN GABRIEL DO NASCIMENTO GALDINO&quot;</span><span class="p">,</span> <span class="s2">&quot;20180034639 - SAULO DE ALMEIDA ATAIDE NETO&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20200025983 - TALES NOBRE LEITE DIAS DE OLIVEIRA&quot;</span><span class="p">,</span> <span class="s2">&quot;20190145696 - VIVIANNY KHATLY MEDEIROS PEREIRA&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;20200116827 - WEDSON CHAVES DE SOUSA&quot;</span><span class="p">,</span> <span class="s2">&quot;20200024583 - WILSON FILLIPE DO NASCIMENTO LIMA&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="criacao-do-dataframe-todos-os-valores-precisam-comecar-com-0-e-posteriormente-vai-modificando-de-acordo-com-a-nota-do-aluno">
+<h2>Criação do DataFrame, todos os valores precisam começar com 0 e posteriormente vai modificando de acordo com a nota do aluno<a class="headerlink" href="#criacao-do-dataframe-todos-os-valores-precisam-comecar-com-0-e-posteriormente-vai-modificando-de-acordo-com-a-nota-do-aluno" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Ta com notas random apenas para testes.</span>
+
+<span class="n">notas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;A2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)],</span> <span class="s2">&quot;Q21&quot;</span><span class="p">:[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)],</span><span class="s2">&quot;Q22&quot;</span><span class="p">:[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)],</span><span class="s2">&quot;Q23&quot;</span><span class="p">:[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)],</span><span class="s2">&quot;Q24&quot;</span><span class="p">:[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)],</span><span class="s2">&quot;Q25&quot;</span><span class="p">:[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)]},</span><span class="n">index</span> <span class="o">=</span> <span class="n">matriculas_alun</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">notas</span><span class="p">[</span><span class="s2">&quot;A3&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q31&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q32&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;A4&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q41&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q42&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q43&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q44&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;A5&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q51&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q52&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;A6&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q61&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q62&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;A7&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q71&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q72&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q73&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">notas</span><span class="p">[</span><span class="s2">&quot;Q74&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="funcao-para-insercao-de-notas">
+<h2>Função para inserção de notas<a class="headerlink" href="#funcao-para-insercao-de-notas" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1">## dados do aluno para modificação das notas</span>
+    <span class="n">aluno</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insira a matrícula: &quot;</span><span class="p">)</span>
+    <span class="n">aluno</span> <span class="o">=</span> <span class="n">aluno</span> <span class="o">+</span> <span class="s2">&quot; - &quot;</span> <span class="o">+</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insira o nome completo: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="n">alvo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Qual atividade será atribuida nota? (Ex: Q32) &quot;</span><span class="p">)</span>
+    <span class="n">nota</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insira a nota do aluno para essa atividade: &quot;</span><span class="p">))</span>
+    
+    <span class="c1">#contador para alterar valores em lista</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">#criando nova lista pra modificar o dataset</span>
+    <span class="n">lista</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">alvo</span><span class="p">]))</span>
+    
+    <span class="c1">#modificando nota específica</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">alvo</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">aluno</span><span class="p">:</span>
+            <span class="n">lista</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">*</span><span class="n">nota</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lista</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">*</span><span class="n">y</span>
+        
+        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+           
+    <span class="n">df</span><span class="p">[</span><span class="n">alvo</span><span class="p">]</span> <span class="o">=</span> <span class="n">lista</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Inserindo a nota do A2 em Francelino</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">insere</span><span class="p">(</span><span class="n">notas</span><span class="p">);</span><span class="n">notas</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Insira a matrícula: 20190035175
+Insira o nome completo: FRANCELINO TEOTONIO JUNIOR
+Qual atividade será atribuida nota? (Ex: Q32) A2
+Insira a nota do aluno para essa atividade: 8.4
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A2</th>
+      <th>Q21</th>
+      <th>Q22</th>
+      <th>Q23</th>
+      <th>Q24</th>
+      <th>Q25</th>
+      <th>A3</th>
+      <th>Q31</th>
+      <th>Q32</th>
+      <th>A4</th>
+      <th>...</th>
+      <th>Q51</th>
+      <th>Q52</th>
+      <th>A6</th>
+      <th>Q61</th>
+      <th>Q62</th>
+      <th>A7</th>
+      <th>Q71</th>
+      <th>Q72</th>
+      <th>Q73</th>
+      <th>Q74</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>20180042677 - ANA PAULA CARDOSO DE CASTRO KENDALL</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200111286 - ÂNGELA THAÍS ALVES DA SILVA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200026560 - CLELIO SANDOVAL DA FONSECA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20190035175 - FRANCELINO TEOTONIO JUNIOR</th>
+      <td>8.4</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200112309 - GABRIEL BARBOSA FERRAZ JARDIM</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200026247 - GUILHERME HERCULANO FERNANDES</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200161250 - GUILHERME IRAM SILVA ARAUJO</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200114706 - GUILHERME PUJONI MENEZES</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20190133775 - IKARO HENRIQUE MONTEIRO ANDRADE</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200154050 - INGRID DAYANE DA SILVA FERREIRA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200024162 - ISMAEL ALVES LIMA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200139170 - JANSEN CRUZ DE SOUZA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200088188 - JOSUE CALEB AVELINO DOS SANTOS</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20190033519 - KENYO MAILTON DA SILVA OLIVEIRA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20180116153 - LEANDRO QUEIROZ CIRINO ARAUJO</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20190036379 - LUIS HENRIQUE AUGUSTO DE LIMA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11510431 - MANOEL CLEONALDO MENDES PEREIRA SOBRINHO</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200133309  - MARCOS DANTAS GUIMARAES FILHO</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200026200 - MARIA IARA DE ARAUJO</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200025900 - MARIA RAQUEL SOUZA MARTINEZ</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20170052034 - MARIANA FRANZ MARROQUIM</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200025508 - MATHEUS VICTOR ALVES BRAGA MACIEL</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11507225 - RAMON AZEVEDO DOS SANTOS CAVALCANTI</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200026327 - RENAN CAVALCANTI FLORENTINO</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20180044519 - RHUAN GABRIEL DO NASCIMENTO GALDINO</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20180034639 - SAULO DE ALMEIDA ATAIDE NETO</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200025983 - TALES NOBRE LEITE DIAS DE OLIVEIRA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20190145696 - VIVIANNY KHATLY MEDEIROS PEREIRA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200116827 - WEDSON CHAVES DE SOUSA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20200024583 - WILSON FILLIPE DO NASCIMENTO LIMA</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>30 rows × 25 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="nota-das-partes">
+<h1>Nota das partes<a class="headerlink" href="#nota-das-partes" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
+N_p&amp;=&amp;0,5(A_p)+\sum_{i} x_i(Qpi)\\
+    \\
+\end{array}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>p: parte</p></li>
+<li><p>Qpi: questionário i da parte p</p></li>
+<li><p>xi: peso do questionário Qpi (igual para todos os Qpi, obedecendo a soma 0,5)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#É preciso ir colocando as notas gradativamente, primeiro a parte 2, dps a parte 3...</span>
+
+<span class="k">def</span> <span class="nf">nota_partes</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1">#Inserindo a parte</span>
+    <span class="n">parte</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inisira a parte: &quot;</span><span class="p">))</span> 
+    
+    <span class="c1">#Selecionando os questionários correspondentes a parte</span>
+    <span class="k">if</span> <span class="n">parte</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Q21&quot;</span><span class="p">,</span><span class="s2">&quot;Q22&quot;</span><span class="p">,</span><span class="s2">&quot;Q23&quot;</span><span class="p">,</span><span class="s2">&quot;Q24&quot;</span><span class="p">,</span><span class="s2">&quot;Q25&quot;</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="n">parte</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Q31&quot;</span><span class="p">,</span><span class="s2">&quot;Q32&quot;</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="n">parte</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Q41&quot;</span><span class="p">,</span><span class="s2">&quot;Q42&quot;</span><span class="p">,</span><span class="s2">&quot;Q43&quot;</span><span class="p">,</span><span class="s2">&quot;Q44&quot;</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="n">parte</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Q51&quot;</span><span class="p">,</span><span class="s2">&quot;Q52&quot;</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="n">parte</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Q61&quot;</span><span class="p">,</span><span class="s2">&quot;Q62&quot;</span><span class="p">]]</span>        
+    <span class="k">elif</span> <span class="n">parte</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Q71&quot;</span><span class="p">,</span><span class="s2">&quot;Q72&quot;</span><span class="p">,</span><span class="s2">&quot;Q73&quot;</span><span class="p">,</span><span class="s2">&quot;Q74&quot;</span><span class="p">]]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parte inválida.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    
+    <span class="c1">#Formula da nota das partes </span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Parte &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">parte</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">parte</span><span class="p">)])</span><span class="o">+</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">sum</span><span class="p">((</span><span class="mf">0.5</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span> <span class="o">*</span> <span class="n">Q</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">_</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Q</span><span class="p">))]))</span>
+    
+    <span class="c1">#retorna a matrícula, o nome e a nota da parte.</span>
+    <span class="k">return</span> <span class="n">Q</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;A&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">parte</span><span class="p">),</span><span class="s2">&quot;Parte &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">parte</span><span class="p">)]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observe a nota de Francelino</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nota_partes</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inisira a parte: 2
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Q21</th>
+      <th>Q22</th>
+      <th>Q23</th>
+      <th>Q24</th>
+      <th>Q25</th>
+      <th>A2</th>
+      <th>Parte 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>20180042677 - ANA PAULA CARDOSO DE CASTRO KENDALL</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200111286 - ÂNGELA THAÍS ALVES DA SILVA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200026560 - CLELIO SANDOVAL DA FONSECA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190035175 - FRANCELINO TEOTONIO JUNIOR</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>8.4</td>
+      <td>7.8</td>
+    </tr>
+    <tr>
+      <th>20200112309 - GABRIEL BARBOSA FERRAZ JARDIM</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200026247 - GUILHERME HERCULANO FERNANDES</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200161250 - GUILHERME IRAM SILVA ARAUJO</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200114706 - GUILHERME PUJONI MENEZES</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190133775 - IKARO HENRIQUE MONTEIRO ANDRADE</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200154050 - INGRID DAYANE DA SILVA FERREIRA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200024162 - ISMAEL ALVES LIMA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200139170 - JANSEN CRUZ DE SOUZA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200088188 - JOSUE CALEB AVELINO DOS SANTOS</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190033519 - KENYO MAILTON DA SILVA OLIVEIRA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20180116153 - LEANDRO QUEIROZ CIRINO ARAUJO</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190036379 - LUIS HENRIQUE AUGUSTO DE LIMA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>11510431 - MANOEL CLEONALDO MENDES PEREIRA SOBRINHO</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200133309  - MARCOS DANTAS GUIMARAES FILHO</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200026200 - MARIA IARA DE ARAUJO</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200025900 - MARIA RAQUEL SOUZA MARTINEZ</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20170052034 - MARIANA FRANZ MARROQUIM</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200025508 - MATHEUS VICTOR ALVES BRAGA MACIEL</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>11507225 - RAMON AZEVEDO DOS SANTOS CAVALCANTI</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200026327 - RENAN CAVALCANTI FLORENTINO</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20180044519 - RHUAN GABRIEL DO NASCIMENTO GALDINO</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20180034639 - SAULO DE ALMEIDA ATAIDE NETO</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200025983 - TALES NOBRE LEITE DIAS DE OLIVEIRA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190145696 - VIVIANNY KHATLY MEDEIROS PEREIRA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200116827 - WEDSON CHAVES DE SOUSA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200024583 - WILSON FILLIPE DO NASCIMENTO LIMA</th>
+      <td>3</td>
+      <td>10</td>
+      <td>10</td>
+      <td>7</td>
+      <td>6</td>
+      <td>3.0</td>
+      <td>5.1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="nota-das-unidades">
+<h1>Nota das unidades<a class="headerlink" href="#nota-das-unidades" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
+N_u&amp;=&amp;\frac{1}{P}*\sum_{p=1}^p N_p\\
+    \\
+\end{array}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>u: unidade</p></li>
+<li><p>Np: nota da parte</p></li>
+<li><p>P: numero de partes</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nota_unidade</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1">#Inserindo a unidade</span>
+    <span class="n">unidade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inisira a unidade: &quot;</span><span class="p">))</span> 
+    
+    <span class="c1">#Selecionando a parte correspondente</span>
+    <span class="k">if</span> <span class="n">unidade</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">P</span> <span class="o">=</span> <span class="n">notas</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Parte 2&quot;</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="n">unidade</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">P</span> <span class="o">=</span> <span class="n">notas</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Parte 3&quot;</span><span class="p">,</span> <span class="s2">&quot;Parte 4&quot;</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="n">unidade</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">P</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Parte 5&quot;</span><span class="p">,</span><span class="s2">&quot;Parte 6&quot;</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="n">unidade</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">P</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Parte 7&quot;</span><span class="p">]]</span>        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unidade inválida.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    
+    <span class="c1">#Formula da nota das partes            </span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Und. &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">unidade</span><span class="p">)]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">P</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">sum</span><span class="p">(</span><span class="n">P</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">_</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">P</span><span class="p">))]))</span>
+    
+    <span class="k">return</span> <span class="n">P</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Und. &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">unidade</span><span class="p">)]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nota_unidade</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inisira a unidade: 1
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Parte 2</th>
+      <th>Und. 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>20180042677 - ANA PAULA CARDOSO DE CASTRO KENDALL</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200111286 - ÂNGELA THAÍS ALVES DA SILVA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200026560 - CLELIO SANDOVAL DA FONSECA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190035175 - FRANCELINO TEOTONIO JUNIOR</th>
+      <td>7.8</td>
+      <td>7.8</td>
+    </tr>
+    <tr>
+      <th>20200112309 - GABRIEL BARBOSA FERRAZ JARDIM</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200026247 - GUILHERME HERCULANO FERNANDES</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200161250 - GUILHERME IRAM SILVA ARAUJO</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200114706 - GUILHERME PUJONI MENEZES</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190133775 - IKARO HENRIQUE MONTEIRO ANDRADE</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200154050 - INGRID DAYANE DA SILVA FERREIRA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200024162 - ISMAEL ALVES LIMA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200139170 - JANSEN CRUZ DE SOUZA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200088188 - JOSUE CALEB AVELINO DOS SANTOS</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190033519 - KENYO MAILTON DA SILVA OLIVEIRA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20180116153 - LEANDRO QUEIROZ CIRINO ARAUJO</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190036379 - LUIS HENRIQUE AUGUSTO DE LIMA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>11510431 - MANOEL CLEONALDO MENDES PEREIRA SOBRINHO</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200133309  - MARCOS DANTAS GUIMARAES FILHO</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200026200 - MARIA IARA DE ARAUJO</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200025900 - MARIA RAQUEL SOUZA MARTINEZ</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20170052034 - MARIANA FRANZ MARROQUIM</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200025508 - MATHEUS VICTOR ALVES BRAGA MACIEL</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>11507225 - RAMON AZEVEDO DOS SANTOS CAVALCANTI</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200026327 - RENAN CAVALCANTI FLORENTINO</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20180044519 - RHUAN GABRIEL DO NASCIMENTO GALDINO</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20180034639 - SAULO DE ALMEIDA ATAIDE NETO</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200025983 - TALES NOBRE LEITE DIAS DE OLIVEIRA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20190145696 - VIVIANNY KHATLY MEDEIROS PEREIRA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200116827 - WEDSON CHAVES DE SOUSA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>20200024583 - WILSON FILLIPE DO NASCIMENTO LIMA</th>
+      <td>5.1</td>
+      <td>5.1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="nota-das-final">
+<h1>Nota das FINAL<a class="headerlink" href="#nota-das-final" title="Permalink to this headline">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
+N_f&amp;=&amp;\sum_{u=1}^4 0,1N_u + 0,6 NPF\\
+    \\
+\end{array}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>u: unidade</p></li>
+<li><p>Nf: nota final</p></li>
+<li><p>NPF: Nota do projeto final</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">notas</span><span class="p">[</span><span class="s2">&quot;NPF&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">#basta chamar a função insere(notas) e atribuir os valores do projeto final</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nota_final</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">n_u</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;Unid. 1&quot;</span><span class="p">,</span><span class="s2">&quot;Unid. 1&quot;</span><span class="p">,</span><span class="s2">&quot;Unid. 1&quot;</span><span class="p">,</span><span class="s2">&quot;Unid. 1&quot;</span><span class="p">,</span><span class="s2">&quot;Unid. 1&quot;</span><span class="p">]]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NotaFinal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">n_u</span><span class="o">.</span><span class="n">values</span> <span class="o">+</span> <span class="mf">0.6</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NPF&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">n_u</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;NotaFinal&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
