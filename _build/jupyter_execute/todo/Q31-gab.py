@@ -77,18 +77,20 @@ import numpy as np
 # 
 # $$T_d = \mu(T_{d-1},T_{d-2},T_{d-3}),$$
 # 
-# onde $\mu$ significa "média aritmética dos valores dados", assinale a alternativa que corresponde à temperatura média para todo o mês de junho, à maior e à menor, nesta ordem.
+# onde $\mu$ significa "média aritmética dos valores dados", assinale a alternativa que corresponde à temperatura média para todo o mês de junho, à menor e à maior, nesta ordem.
 # 
 # Obs.: se $d=25$, a temperatura no 25o. dia é a média das temperaturas do 22o. ao 24o. dia.
 # 
 # 
-# A. (-72.15, -74.98, -65.0)
+# A. (-72.15, -74.99, -65.07)
 # 
-# B. (-65.0, -72.98, -65.0)
+# B. (-65.0, -72.99, -65.07)
 # 
-# C. (-75.0, -74.98, -65.0)
+# C. (-75.0, -74.99, -65.07)
 # 
-# D. (-69.55, -74.98, -65.0)
+# D. (-69.97, -74.99, -65.07)
+# 
+# **Obs.:** se $d=25$, a temperatura no 25o. dia é a média das temperaturas do 22o. ao 24o. dia.
 
 # <hr>
 # 
@@ -97,7 +99,7 @@ import numpy as np
 # Alternativa **D**
 # 
 
-# In[234]:
+# In[13]:
 
 
 import numpy as np
@@ -107,7 +109,7 @@ import matplotlib.pyplot as plt
 #--- geração de campo de temperatura aleatório
 np.random.seed(4)
 temps = 23.4 + (28.6-23.34)*np.random.rand(30)
-temps = 5*np.sin(np.sort(temp)) - 70
+temps = 5*np.sin(np.sort(temps)) - 70
 temps[[3,6,9,16,22,27]] = np.nan
 
 plt.figure(figsize=(8,2))
@@ -117,14 +119,15 @@ plt.xticks(np.arange(0,30),np.arange(1,31).astype(str));
 plt.xlabel('day')
 plt.ylabel('ave. temp. [C]')
 plt.title('Mars/Elysium Planitia: Jun/2022 [ficticious]');
-plt.savefig('../figs/q31-mars-temp.png')
+plt.savefig('../figs/q/q31-mars-temp.png')
 #---
 
 dates = pd.date_range(start='6/1/2022', freq='D', periods=30)
-db = pd.Series(temps, index=dates)
+db = pd.Series(temps, index=dates,name='temp')
+db.to_csv('../database/mars-Temp-2022-06.csv',sep=',',index=True)
 
 
-# In[233]:
+# In[4]:
 
 
 def correct(a):

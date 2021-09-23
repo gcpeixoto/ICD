@@ -4,7 +4,7 @@ Disciplina do Bacharelado em Ciência de Dados e Inteligência Artificial da UFP
  
 ## Sobre o curso
 
-Acesse o livro de curso [aqui](https://github.com/gcpeixoto/ICD).
+Acesse o livro de curso [aqui](https://gcpeixoto.github.io/ICD).
 
 ## Docente
 

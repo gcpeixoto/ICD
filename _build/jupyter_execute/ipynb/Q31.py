@@ -52,15 +52,15 @@
 # 
 # $$T_d = \mu(T_{d-1},T_{d-2},T_{d-3}),$$
 # 
-# onde $\mu$ significa "média aritmética dos valores dados", assinale a alternativa que corresponde à temperatura média para todo o mês de junho, à maior e à menor, nesta ordem.
+# onde $\mu$ significa "média aritmética dos valores dados", assinale a alternativa que corresponde à temperatura média para todo o mês de junho, à menor e à maior, nesta ordem.
 # 
-# A. (-72.15, -74.98, -65.0)
+# A. (-72.15, -74.99, -65.07)
 # 
-# B. (-65.0, -72.98, -65.0)
+# B. (-65.0, -72.99, -65.07)
 # 
-# C. (-75.0, -74.98, -65.0)
+# C. (-75.0, -74.99, -65.07)
 # 
-# D. (-69.55, -74.98, -65.0)
+# D. (-69.97, -74.99, -65.07)
 # 
 # 
 # **Obs.:** se $d=25$, a temperatura no 25o. dia é a média das temperaturas do 22o. ao 24o. dia.
