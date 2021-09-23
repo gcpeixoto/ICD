@@ -427,7 +427,7 @@ Suponha que você assinou um contrato com a NASA para analisar supostas prediç�
 <p>A. (-72.15, -74.99, -65.07)</p>
 <p>B. (-65.0, -72.99, -65.07)</p>
 <p>C. (-75.0, -74.99, -65.07)</p>
-<p>D. (-69.55, -74.99, -65.07)</p>
+<p>D. (-69.97, -74.99, -65.07)</p>
 <p><strong>Obs.:</strong> se <span class="math notranslate nohighlight">\(d=25\)</span>, a temperatura no 25o. dia é a média das temperaturas do 22o. ao 24o. dia.</p>
 <hr>
 </section>
@@ -457,7 +457,8 @@ Suponha que você assinou um contrato com a NASA para analisar supostas prediç�
 <span class="c1">#---</span>
 
 <span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;6/1/2022&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">db</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">temps</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">temps</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;temp&#39;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../database/mars-temp-2022-06.csv&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
