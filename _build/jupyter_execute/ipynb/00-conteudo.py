@@ -59,7 +59,9 @@
 #     
 # #### Template para mini-artigos
 # 
-# Para elaborar os mini-artigos avaliativos, use o template disponibilizado <a href="../templates/short-paper/docx/main.docx" download="../templates/short-paper/docx/main.docx"> aqui </a>.
+# Para elaborar os mini-artigos avaliativos, pode-se usar o template em formato .ODT disponibilizado <a href="../templates/short-paper/odt/main.odt" download="../templates/short-paper/odt/main.odt"> aqui </a>, mas recomenda-se, preferencialmente, o uso do template LaTeX disponibilizado <a href="../templates/short-paper/tex"> aqui </a>.
+# 
+# **Atenção:** não altere a formatação do template, sob pena de ter a pontuação reduzida! Obedeça o esquema de cores, fontes, etc.
 
 # 
 # ```{toctree}

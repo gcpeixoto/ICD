@@ -1,6 +1,6 @@
 ### Introdução
 
-`README` do projeto `template-artigo-matcomp` que contém os arquivos $\LaTeX$ necessários para compilar o modelo para artigos, resumos e relatórios submetidos para o _Cadernos de Matemática Computacional_ para o site do [Bacharelado em Matemática Computacional da UFPB](http://mat.ci.ufpb.br).  
+`README` do projeto `template-artigo-cdia` que contém os arquivos $\LaTeX$ necessários para compilar o modelo para artigos, resumos e relatórios submetidos para o _Cadernos de Introdução à Ciência de Dados_ para o site do [Bacharelado em CDIA da UFPB](http://cdia.ci.ufpb.br).  
 
 
 ### O mínimo que você precisa saber...
