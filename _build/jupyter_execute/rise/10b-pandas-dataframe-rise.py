@@ -10,7 +10,7 @@
 # - tem cada coluna formada como uma *Series* do *pandas*;
 # - pode ter *Series* contendo tipos de dado diferentes.
 
-# In[145]:
+# In[1]:
 
 
 import numpy as np
@@ -47,37 +47,37 @@ import pandas as pd
 
 # Exemplo:
 
-# In[148]:
+# In[2]:
 
 
 serie_Idade = pd.Series({'Ana':20, 'João': 19, 'Maria': 21, 'Pedro': 22}, name="Idade") 
 
 
-# In[149]:
+# In[3]:
 
 
 serie_Peso = pd.Series({'Ana':55, 'João': 80, 'Maria': 62, 'Pedro': 67, 'Túlio': 73}, name="Peso")
 
 
-# In[150]:
+# In[4]:
 
 
 serie_Altura = pd.Series({'Ana':162, 'João': 178, 'Maria': 162, 'Pedro': 165, 'Túlio': 171}, name="Altura")
 
 
-# In[151]:
+# In[5]:
 
 
 dicionario_series_exemplo = {'Idade': serie_Idade, 'Peso': serie_Peso, 'Altura': serie_Altura}
 
 
-# In[152]:
+# In[6]:
 
 
 df_dict_series = pd.DataFrame(dicionario_series_exemplo) 
 
 
-# In[154]:
+# In[7]:
 
 
 df_dict_series  
@@ -87,13 +87,13 @@ df_dict_series
 # 
 # Vejamos exemplos sobre como acessar intervalos de dados na tabela.
 
-# In[159]:
+# In[8]:
 
 
 pd.DataFrame(dicionario_series_exemplo, index=['João','Ana','Maria'])
 
 
-# In[164]:
+# In[9]:
 
 
 pd.DataFrame(dicionario_series_exemplo, index=['Ana','Maria'], columns=['Altura','Peso'])
@@ -101,14 +101,14 @@ pd.DataFrame(dicionario_series_exemplo, index=['Ana','Maria'], columns=['Altura'
 
 # Neste exemplo, adicionamos a coluna `IMC`, ainda sem valores calculados.
 
-# In[166]:
+# In[10]:
 
 
 pd.DataFrame(dicionario_series_exemplo, index=['Ana','Maria','Paula'], 
              columns=['Peso','Altura','IMC'])
 
 
-# In[167]:
+# In[11]:
 
 
 df_exemplo_IMC = pd.DataFrame(dicionario_series_exemplo, 
@@ -117,7 +117,7 @@ df_exemplo_IMC = pd.DataFrame(dicionario_series_exemplo,
 
 # Agora, mostramos como os valores do IMC podem ser calculados diretamente por computação vetorizada sobre as *Series*.
 
-# In[168]:
+# In[12]:
 
 
 df_exemplo_IMC['IMC'] = round(df_exemplo_IMC['Peso']/(df_exemplo_IMC['Altura']/100)**2,2)
@@ -135,7 +135,7 @@ df_exemplo_IMC
 
 # Exemplo com dicionário de listas:
 
-# In[169]:
+# In[14]:
 
 
 dicionario_lista_exemplo = {'Idade': [20,19,21,22,20],
@@ -151,7 +151,7 @@ pd.DataFrame(dicionario_lista_exemplo)
 
 # Mais exemplos:
 
-# In[170]:
+# In[16]:
 
 
 pd.DataFrame(dicionario_lista_exemplo, index=['Ana','João','Maria','Pedro','Túlio'])
@@ -159,7 +159,7 @@ pd.DataFrame(dicionario_lista_exemplo, index=['Ana','João','Maria','Pedro','Tú
 
 # Exemplos com dicionário de *arrays* do *numpy*:
 
-# In[171]:
+# In[17]:
 
 
 dicionario_array_exemplo = {'Idade': np.array([20,19,21,22,20]),
@@ -175,7 +175,7 @@ pd.DataFrame(dicionario_array_exemplo)
 
 # Mais exemplos:
 
-# In[172]:
+# In[19]:
 
 
 pd.DataFrame(dicionario_array_exemplo, index=['Ana','João','Maria','Pedro','Túlio'])
@@ -185,13 +185,13 @@ pd.DataFrame(dicionario_array_exemplo, index=['Ana','João','Maria','Pedro','Tú
 # 
 # Neste caso, o *DataFrame* terá o mesmo *index* que a *Series* do *pandas* e apenas uma coluna.
 
-# In[173]:
+# In[20]:
 
 
 series_exemplo = pd.Series({'Ana':20, 'João': 19, 'Maria': 21, 'Pedro': 22, 'Túlio': 20})
 
 
-# In[174]:
+# In[21]:
 
 
 pd.DataFrame(series_exemplo)
@@ -199,13 +199,13 @@ pd.DataFrame(series_exemplo)
 
 # Caso a *Series* possua um atributo `name` especificado, este será o nome da coluna do *DataFrame*.
 
-# In[175]:
+# In[22]:
 
 
 series_exemplo_Idade = pd.Series({'Ana':20, 'João': 19, 'Maria': 21, 'Pedro': 22, 'Túlio': 20}, name="Idade")
 
 
-# In[176]:
+# In[23]:
 
 
 pd.DataFrame(series_exemplo_Idade)
@@ -215,7 +215,7 @@ pd.DataFrame(series_exemplo_Idade)
 # 
 # Neste caso, a entrada dos dados da lista no *DataFrame* será feita por linha.
 
-# In[177]:
+# In[24]:
 
 
 pd.DataFrame([serie_Peso, serie_Altura, serie_Idade]) 
@@ -223,7 +223,7 @@ pd.DataFrame([serie_Peso, serie_Altura, serie_Idade])
 
 # Podemos corrigir a orientação usando o método `transpose`.
 
-# In[180]:
+# In[25]:
 
 
 pd.DataFrame([serie_Peso, serie_Altura, serie_Idade]).transpose()
@@ -1238,14 +1238,6 @@ dados_covid_PB.loc[dados_covid_PB.index.month==2].head()
 # ### Seleção de linhas com o método *query*
 # 
 # Similarmente ao método `eval`, ao utilizarmos `query`, podemos criar expressões lógicas a partir de nomes das colunas do *DataFrame*.
-
-# Assim, podemos reescrever o código
-# 
-# ```python
-# dados_covid_PB.loc[(dados_covid_PB.obitosNovos>25) & 
-#                    (dados_covid_PB.casosNovos>1500)]
-# ```
-# como
 
 # In[144]:
 

@@ -1610,7 +1610,7 @@
 <p>Para ler o arquivo acima basta fazer:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo_0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/exemplo_data.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo_0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/exemplo_data.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1713,7 +1713,7 @@
 <p>No exemplo anterior, as colunas receberam nomes corretamentes exceto pela primeira coluna que gostaríamos de considerar como <em>index</em>. Neste caso fazemos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/exemplo_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/exemplo_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2402,7 +2402,7 @@ memory usage: 240.0+ bytes
 <p>Para exportar para o arquivo <code class="docutils literal notranslate"><span class="pre">exemplo_novo.csv</span></code>, utilizaremos o método <code class="docutils literal notranslate"><span class="pre">.to_csv</span></code> ao <em>DataFrame</em> <code class="docutils literal notranslate"><span class="pre">df_exemplo</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/exemplo_novo.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../database/exemplo_novo.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2427,19 +2427,19 @@ memory usage: 240.0+ bytes
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Index: 331 entries, 2021-02-09 to 2020-03-16
+Index: 559 entries, 2021-09-26 to 2020-03-16
 Data columns (total 7 columns):
  #   Column            Non-Null Count  Dtype  
 ---  ------            --------------  -----  
- 0   casosAcumulados   331 non-null    int64  
- 1   casosNovos        331 non-null    int64  
- 2   descartados       331 non-null    int64  
- 3   recuperados       331 non-null    int64  
- 4   obitosAcumulados  331 non-null    int64  
- 5   obitosNovos       331 non-null    int64  
- 6   Letalidade        331 non-null    float64
-dtypes: float64(1), int64(6)
-memory usage: 20.7+ KB
+ 0   casosAcumulados   559 non-null    int64  
+ 1   casosNovos        559 non-null    int64  
+ 2   descartados       559 non-null    int64  
+ 3   recuperados       559 non-null    int64  
+ 4   obitosAcumulados  559 non-null    int64  
+ 5   obitosNovos       558 non-null    float64
+ 6   Letalidade        559 non-null    float64
+dtypes: float64(2), int64(5)
+memory usage: 34.9+ KB
 </pre></div>
 </div>
 </div>
@@ -2490,54 +2490,54 @@ memory usage: 20.7+ KB
   </thead>
   <tbody>
     <tr>
-      <th>2021-02-09</th>
-      <td>199706</td>
-      <td>971</td>
-      <td>237369</td>
-      <td>152779</td>
-      <td>4171</td>
-      <td>13</td>
-      <td>0.0209</td>
+      <th>2021-09-26</th>
+      <td>441155</td>
+      <td>134</td>
+      <td>484336</td>
+      <td>333751</td>
+      <td>9294</td>
+      <td>2.0</td>
+      <td>0.0211</td>
     </tr>
     <tr>
-      <th>2021-02-08</th>
-      <td>198735</td>
-      <td>611</td>
-      <td>237189</td>
-      <td>151879</td>
-      <td>4158</td>
-      <td>12</td>
-      <td>0.0209</td>
+      <th>2021-09-25</th>
+      <td>441021</td>
+      <td>165</td>
+      <td>484331</td>
+      <td>333441</td>
+      <td>9292</td>
+      <td>2.0</td>
+      <td>0.0211</td>
     </tr>
     <tr>
-      <th>2021-02-07</th>
-      <td>198124</td>
-      <td>664</td>
-      <td>237072</td>
-      <td>151535</td>
-      <td>4146</td>
-      <td>11</td>
-      <td>0.0209</td>
+      <th>2021-09-24</th>
+      <td>440856</td>
+      <td>225</td>
+      <td>484301</td>
+      <td>332845</td>
+      <td>9290</td>
+      <td>3.0</td>
+      <td>0.0211</td>
     </tr>
     <tr>
-      <th>2021-02-06</th>
-      <td>197460</td>
-      <td>918</td>
-      <td>236774</td>
-      <td>150175</td>
-      <td>4135</td>
-      <td>12</td>
-      <td>0.0209</td>
+      <th>2021-09-23</th>
+      <td>440631</td>
+      <td>203</td>
+      <td>484276</td>
+      <td>332540</td>
+      <td>9287</td>
+      <td>3.0</td>
+      <td>0.0211</td>
     </tr>
     <tr>
-      <th>2021-02-05</th>
-      <td>196542</td>
-      <td>1060</td>
-      <td>236216</td>
-      <td>150169</td>
-      <td>4123</td>
-      <td>13</td>
-      <td>0.0210</td>
+      <th>2021-09-22</th>
+      <td>440428</td>
+      <td>297</td>
+      <td>484265</td>
+      <td>331958</td>
+      <td>9284</td>
+      <td>6.0</td>
+      <td>0.0211</td>
     </tr>
   </tbody>
 </table>
@@ -2595,7 +2595,7 @@ memory usage: 20.7+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2605,7 +2605,7 @@ memory usage: 20.7+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2615,7 +2615,7 @@ memory usage: 20.7+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2625,7 +2625,7 @@ memory usage: 20.7+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2635,7 +2635,7 @@ memory usage: 20.7+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
   </tbody>
@@ -2697,58 +2697,58 @@ memory usage: 20.7+ KB
   </thead>
   <tbody>
     <tr>
-      <th>2021-02-09</th>
-      <td>199706</td>
-      <td>971</td>
-      <td>237369</td>
-      <td>152779</td>
-      <td>4171</td>
-      <td>13</td>
-      <td>0.0209</td>
+      <th>2021-09-26</th>
+      <td>441155</td>
+      <td>134</td>
+      <td>484336</td>
+      <td>333751</td>
+      <td>9294</td>
+      <td>2.0</td>
+      <td>0.0211</td>
       <td>PB</td>
     </tr>
     <tr>
-      <th>2021-02-08</th>
-      <td>198735</td>
-      <td>611</td>
-      <td>237189</td>
-      <td>151879</td>
-      <td>4158</td>
-      <td>12</td>
-      <td>0.0209</td>
+      <th>2021-09-25</th>
+      <td>441021</td>
+      <td>165</td>
+      <td>484331</td>
+      <td>333441</td>
+      <td>9292</td>
+      <td>2.0</td>
+      <td>0.0211</td>
       <td>PB</td>
     </tr>
     <tr>
-      <th>2021-02-07</th>
-      <td>198124</td>
-      <td>664</td>
-      <td>237072</td>
-      <td>151535</td>
-      <td>4146</td>
-      <td>11</td>
-      <td>0.0209</td>
+      <th>2021-09-24</th>
+      <td>440856</td>
+      <td>225</td>
+      <td>484301</td>
+      <td>332845</td>
+      <td>9290</td>
+      <td>3.0</td>
+      <td>0.0211</td>
       <td>PB</td>
     </tr>
     <tr>
-      <th>2021-02-06</th>
-      <td>197460</td>
-      <td>918</td>
-      <td>236774</td>
-      <td>150175</td>
-      <td>4135</td>
-      <td>12</td>
-      <td>0.0209</td>
+      <th>2021-09-23</th>
+      <td>440631</td>
+      <td>203</td>
+      <td>484276</td>
+      <td>332540</td>
+      <td>9287</td>
+      <td>3.0</td>
+      <td>0.0211</td>
       <td>PB</td>
     </tr>
     <tr>
-      <th>2021-02-05</th>
-      <td>196542</td>
-      <td>1060</td>
-      <td>236216</td>
-      <td>150169</td>
-      <td>4123</td>
-      <td>13</td>
-      <td>0.0210</td>
+      <th>2021-09-22</th>
+      <td>440428</td>
+      <td>297</td>
+      <td>484265</td>
+      <td>331958</td>
+      <td>9284</td>
+      <td>6.0</td>
+      <td>0.0211</td>
       <td>PB</td>
     </tr>
   </tbody>
@@ -2757,7 +2757,7 @@ memory usage: 20.7+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/dadoscovidpb.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../database/dadoscovidpb.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2890,7 +2890,7 @@ dtype: object
 <p><strong>Exemplo:</strong> Aplicaremos as funções <code class="docutils literal notranslate"><span class="pre">idxmin()</span></code> e <code class="docutils literal notranslate"><span class="pre">idxmax()</span></code> aos dados do arquivo <code class="docutils literal notranslate"><span class="pre">data/exemplo_data.csv</span></code> para localizar entradas de interesse.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/exemplo_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span> <span class="n">df_exemplo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/exemplo_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span> <span class="n">df_exemplo</span>
 </pre></div>
 </div>
 </div>
@@ -5056,14 +5056,14 @@ dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2021-02-09</th>
-      <td>199706</td>
-      <td>971</td>
-      <td>237369</td>
-      <td>152779</td>
-      <td>4171</td>
-      <td>13</td>
-      <td>0.0209</td>
+      <th>2021-09-26</th>
+      <td>441155</td>
+      <td>134</td>
+      <td>484336</td>
+      <td>333751</td>
+      <td>9294</td>
+      <td>2.0</td>
+      <td>0.0211</td>
     </tr>
   </tbody>
 </table>
@@ -5077,13 +5077,13 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosAcumulados     199706
-casosNovos             971
-descartados         237369
-recuperados         152779
-obitosAcumulados      4171
-obitosNovos             13
-Name: 2021-02-09, dtype: int64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosAcumulados     441155
+casosNovos             134
+descartados         484336
+recuperados         333751
+obitosAcumulados      9294
+obitosNovos              2
+Name: 2021-09-26, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -5132,7 +5132,7 @@ Name: 2021-02-09, dtype: int64
       <td>234215</td>
       <td>149235</td>
       <td>4068</td>
-      <td>12</td>
+      <td>12.0</td>
     </tr>
     <tr>
       <th>2021-02-02</th>
@@ -5141,7 +5141,7 @@ Name: 2021-02-09, dtype: int64
       <td>234366</td>
       <td>149242</td>
       <td>4082</td>
-      <td>14</td>
+      <td>14.0</td>
     </tr>
     <tr>
       <th>2021-02-03</th>
@@ -5150,7 +5150,7 @@ Name: 2021-02-09, dtype: int64
       <td>234902</td>
       <td>149248</td>
       <td>4096</td>
-      <td>14</td>
+      <td>14.0</td>
     </tr>
     <tr>
       <th>2021-02-04</th>
@@ -5159,7 +5159,7 @@ Name: 2021-02-09, dtype: int64
       <td>235319</td>
       <td>149792</td>
       <td>4110</td>
-      <td>14</td>
+      <td>14.0</td>
     </tr>
     <tr>
       <th>2021-02-05</th>
@@ -5168,7 +5168,7 @@ Name: 2021-02-09, dtype: int64
       <td>236216</td>
       <td>150169</td>
       <td>4123</td>
-      <td>13</td>
+      <td>13.0</td>
     </tr>
   </tbody>
 </table>
@@ -5217,7 +5217,7 @@ Name: 2021-02-09, dtype: int64
       <td>219890</td>
       <td>127388</td>
       <td>3680</td>
-      <td>8</td>
+      <td>8.0</td>
       <td>0.0220</td>
     </tr>
     <tr>
@@ -5227,7 +5227,7 @@ Name: 2021-02-09, dtype: int64
       <td>234215</td>
       <td>149235</td>
       <td>4068</td>
-      <td>12</td>
+      <td>12.0</td>
       <td>0.0211</td>
     </tr>
   </tbody>
@@ -5242,13 +5242,13 @@ Name: 2021-02-09, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosAcumulados     133220
-casosNovos              71
-descartados         185162
-recuperados         108737
-obitosAcumulados      3107
-obitosNovos              6
-Name: 2020-11-01 00:00:00, dtype: int64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosAcumulados     371133
+casosNovos            2555
+descartados         328941
+recuperados         243203
+obitosAcumulados      8316
+obitosNovos             47
+Name: 2021-06-18 00:00:00, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -5298,49 +5298,49 @@ Name: 2020-11-01 00:00:00, dtype: int64
   </thead>
   <tbody>
     <tr>
-      <th>2020-12-21</th>
-      <td>159639</td>
-      <td>203</td>
-      <td>213617</td>
-      <td>123430</td>
-      <td>3552</td>
-      <td>13</td>
+      <th>2021-08-07</th>
+      <td>424983</td>
+      <td>406</td>
+      <td>456236</td>
+      <td>298889</td>
+      <td>9049</td>
+      <td>12</td>
     </tr>
     <tr>
-      <th>2020-12-20</th>
-      <td>159436</td>
-      <td>327</td>
-      <td>213356</td>
-      <td>123417</td>
-      <td>3539</td>
-      <td>10</td>
+      <th>2021-08-06</th>
+      <td>424577</td>
+      <td>423</td>
+      <td>455493</td>
+      <td>298554</td>
+      <td>9037</td>
+      <td>14</td>
     </tr>
     <tr>
-      <th>2020-12-19</th>
-      <td>159109</td>
-      <td>660</td>
-      <td>213149</td>
-      <td>123295</td>
-      <td>3529</td>
-      <td>6</td>
+      <th>2021-08-05</th>
+      <td>424154</td>
+      <td>570</td>
+      <td>454357</td>
+      <td>297945</td>
+      <td>9023</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>2020-12-18</th>
-      <td>158449</td>
-      <td>1053</td>
-      <td>212439</td>
-      <td>122935</td>
-      <td>3523</td>
-      <td>16</td>
+      <th>2021-08-04</th>
+      <td>423584</td>
+      <td>872</td>
+      <td>453146</td>
+      <td>297222</td>
+      <td>9018</td>
+      <td>7</td>
     </tr>
     <tr>
-      <th>2020-12-17</th>
-      <td>157396</td>
-      <td>1274</td>
-      <td>210628</td>
-      <td>122219</td>
-      <td>3507</td>
-      <td>20</td>
+      <th>2021-08-03</th>
+      <td>422712</td>
+      <td>37</td>
+      <td>451358</td>
+      <td>296180</td>
+      <td>9011</td>
+      <td>8</td>
     </tr>
   </tbody>
 </table>
@@ -5385,29 +5385,29 @@ Name: 2020-11-01 00:00:00, dtype: int64
   </thead>
   <tbody>
     <tr>
-      <th>2021-02-09</th>
-      <td>971</td>
-      <td>13</td>
+      <th>2021-09-26</th>
+      <td>134</td>
+      <td>2.0</td>
     </tr>
     <tr>
-      <th>2021-02-08</th>
-      <td>611</td>
-      <td>12</td>
+      <th>2021-09-25</th>
+      <td>165</td>
+      <td>2.0</td>
     </tr>
     <tr>
-      <th>2021-02-07</th>
-      <td>664</td>
-      <td>11</td>
+      <th>2021-09-24</th>
+      <td>225</td>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>2021-02-06</th>
-      <td>918</td>
-      <td>12</td>
+      <th>2021-09-23</th>
+      <td>203</td>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>2021-02-05</th>
-      <td>1060</td>
-      <td>13</td>
+      <th>2021-09-22</th>
+      <td>297</td>
+      <td>6.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -5417,31 +5417,31 @@ Name: 2020-11-01 00:00:00, dtype: int64
     <tr>
       <th>2020-03-20</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-03-19</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-03-18</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-03-17</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-03-16</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>331 rows × 2 columns</p>
+<p>559 rows × 2 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -5480,29 +5480,29 @@ Name: 2020-11-01 00:00:00, dtype: int64
   </thead>
   <tbody>
     <tr>
-      <th>2021-02-09</th>
-      <td>4171</td>
-      <td>13</td>
+      <th>2021-09-26</th>
+      <td>9294</td>
+      <td>2.0</td>
     </tr>
     <tr>
-      <th>2021-02-08</th>
-      <td>4158</td>
-      <td>12</td>
+      <th>2021-09-25</th>
+      <td>9292</td>
+      <td>2.0</td>
     </tr>
     <tr>
-      <th>2021-02-07</th>
-      <td>4146</td>
-      <td>11</td>
+      <th>2021-09-24</th>
+      <td>9290</td>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>2021-02-06</th>
-      <td>4135</td>
-      <td>12</td>
+      <th>2021-09-23</th>
+      <td>9287</td>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>2021-02-05</th>
-      <td>4123</td>
-      <td>13</td>
+      <th>2021-09-22</th>
+      <td>9284</td>
+      <td>6.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -5512,31 +5512,31 @@ Name: 2020-11-01 00:00:00, dtype: int64
     <tr>
       <th>2020-03-20</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-03-19</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-03-18</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-03-17</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-03-16</th>
       <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>331 rows × 2 columns</p>
+<p>559 rows × 2 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -5579,29 +5579,29 @@ Name: 2020-11-01 00:00:00, dtype: int64
   </thead>
   <tbody>
     <tr>
-      <th>2020-11-06</th>
-      <td>3146</td>
-      <td>8</td>
+      <th>2021-06-23</th>
+      <td>8453</td>
+      <td>20.0</td>
     </tr>
     <tr>
-      <th>2020-11-05</th>
-      <td>3138</td>
-      <td>8</td>
+      <th>2021-06-22</th>
+      <td>8433</td>
+      <td>22.0</td>
     </tr>
     <tr>
-      <th>2020-11-04</th>
-      <td>3130</td>
-      <td>11</td>
+      <th>2021-06-21</th>
+      <td>8411</td>
+      <td>30.0</td>
     </tr>
     <tr>
-      <th>2020-11-03</th>
-      <td>3119</td>
-      <td>11</td>
+      <th>2021-06-20</th>
+      <td>8381</td>
+      <td>33.0</td>
     </tr>
     <tr>
-      <th>2020-11-02</th>
-      <td>3108</td>
-      <td>1</td>
+      <th>2021-06-19</th>
+      <td>8348</td>
+      <td>32.0</td>
     </tr>
   </tbody>
 </table>
@@ -5641,27 +5641,27 @@ Name: 2020-11-01 00:00:00, dtype: int64
     <tr>
       <th>2020-04-10</th>
       <td>6</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-04-09</th>
       <td>24</td>
-      <td>4</td>
+      <td>4.0</td>
     </tr>
     <tr>
       <th>2020-04-08</th>
       <td>14</td>
-      <td>3</td>
+      <td>3.0</td>
     </tr>
     <tr>
       <th>2020-04-07</th>
       <td>5</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2020-04-06</th>
       <td>1</td>
-      <td>0</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
@@ -5870,13 +5870,303 @@ Name: 2020-11-01 00:00:00, dtype: int64
   </thead>
   <tbody>
     <tr>
+      <th>2021-06-18</th>
+      <td>371133</td>
+      <td>2555</td>
+      <td>328941</td>
+      <td>243203</td>
+      <td>8316</td>
+      <td>47.0</td>
+      <td>0.0224</td>
+    </tr>
+    <tr>
+      <th>2021-06-11</th>
+      <td>354715</td>
+      <td>2451</td>
+      <td>322301</td>
+      <td>235778</td>
+      <td>8058</td>
+      <td>55.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-06-10</th>
+      <td>352264</td>
+      <td>3911</td>
+      <td>231258</td>
+      <td>235329</td>
+      <td>8003</td>
+      <td>46.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-04-27</th>
+      <td>289319</td>
+      <td>1037</td>
+      <td>290111</td>
+      <td>204340</td>
+      <td>6722</td>
+      <td>46.0</td>
+      <td>0.0232</td>
+    </tr>
+    <tr>
+      <th>2021-04-19</th>
+      <td>280967</td>
+      <td>904</td>
+      <td>286168</td>
+      <td>194644</td>
+      <td>6487</td>
+      <td>43.0</td>
+      <td>0.0231</td>
+    </tr>
+    <tr>
+      <th>2021-04-14</th>
+      <td>275301</td>
+      <td>1218</td>
+      <td>282121</td>
+      <td>193451</td>
+      <td>6316</td>
+      <td>42.0</td>
+      <td>0.0229</td>
+    </tr>
+    <tr>
+      <th>2021-04-12</th>
+      <td>272811</td>
+      <td>1486</td>
+      <td>279801</td>
+      <td>193188</td>
+      <td>6234</td>
+      <td>58.0</td>
+      <td>0.0229</td>
+    </tr>
+    <tr>
+      <th>2021-04-07</th>
+      <td>267008</td>
+      <td>1551</td>
+      <td>274623</td>
+      <td>189753</td>
+      <td>6050</td>
+      <td>49.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-04-06</th>
+      <td>265457</td>
+      <td>817</td>
+      <td>273026</td>
+      <td>186879</td>
+      <td>6001</td>
+      <td>52.0</td>
+      <td>0.0226</td>
+    </tr>
+    <tr>
+      <th>2021-04-05</th>
+      <td>264640</td>
+      <td>1059</td>
+      <td>272719</td>
+      <td>186670</td>
+      <td>5949</td>
+      <td>43.0</td>
+      <td>0.0225</td>
+    </tr>
+    <tr>
+      <th>2021-04-03</th>
+      <td>262500</td>
+      <td>789</td>
+      <td>272207</td>
+      <td>186334</td>
+      <td>5866</td>
+      <td>46.0</td>
+      <td>0.0223</td>
+    </tr>
+    <tr>
+      <th>2021-04-01</th>
+      <td>260484</td>
+      <td>1311</td>
+      <td>271069</td>
+      <td>186084</td>
+      <td>5791</td>
+      <td>47.0</td>
+      <td>0.0222</td>
+    </tr>
+    <tr>
+      <th>2021-03-31</th>
+      <td>259173</td>
+      <td>1553</td>
+      <td>270560</td>
+      <td>183668</td>
+      <td>5744</td>
+      <td>73.0</td>
+      <td>0.0222</td>
+    </tr>
+    <tr>
+      <th>2021-03-30</th>
+      <td>257620</td>
+      <td>1150</td>
+      <td>269399</td>
+      <td>183369</td>
+      <td>5671</td>
+      <td>70.0</td>
+      <td>0.0220</td>
+    </tr>
+    <tr>
+      <th>2021-03-29</th>
+      <td>256470</td>
+      <td>968</td>
+      <td>268985</td>
+      <td>183028</td>
+      <td>5601</td>
+      <td>49.0</td>
+      <td>0.0218</td>
+    </tr>
+    <tr>
+      <th>2021-03-28</th>
+      <td>255502</td>
+      <td>1203</td>
+      <td>268866</td>
+      <td>182873</td>
+      <td>5552</td>
+      <td>43.0</td>
+      <td>0.0217</td>
+    </tr>
+    <tr>
+      <th>2021-03-27</th>
+      <td>254299</td>
+      <td>1410</td>
+      <td>268309</td>
+      <td>182680</td>
+      <td>5509</td>
+      <td>57.0</td>
+      <td>0.0217</td>
+    </tr>
+    <tr>
+      <th>2021-03-26</th>
+      <td>252889</td>
+      <td>1611</td>
+      <td>266785</td>
+      <td>182404</td>
+      <td>5452</td>
+      <td>48.0</td>
+      <td>0.0216</td>
+    </tr>
+    <tr>
+      <th>2021-03-25</th>
+      <td>251278</td>
+      <td>1672</td>
+      <td>265533</td>
+      <td>180125</td>
+      <td>5404</td>
+      <td>50.0</td>
+      <td>0.0215</td>
+    </tr>
+    <tr>
+      <th>2021-03-24</th>
+      <td>249606</td>
+      <td>1154</td>
+      <td>264150</td>
+      <td>177812</td>
+      <td>5354</td>
+      <td>41.0</td>
+      <td>0.0214</td>
+    </tr>
+    <tr>
+      <th>2021-03-23</th>
+      <td>248452</td>
+      <td>1140</td>
+      <td>264146</td>
+      <td>177591</td>
+      <td>5313</td>
+      <td>41.0</td>
+      <td>0.0214</td>
+    </tr>
+    <tr>
+      <th>2021-03-20</th>
+      <td>245564</td>
+      <td>1300</td>
+      <td>264128</td>
+      <td>174980</td>
+      <td>5212</td>
+      <td>45.0</td>
+      <td>0.0212</td>
+    </tr>
+    <tr>
+      <th>2021-03-19</th>
+      <td>244264</td>
+      <td>1269</td>
+      <td>264122</td>
+      <td>174769</td>
+      <td>5167</td>
+      <td>44.0</td>
+      <td>0.0212</td>
+    </tr>
+    <tr>
+      <th>2021-03-18</th>
+      <td>242995</td>
+      <td>1403</td>
+      <td>258188</td>
+      <td>172789</td>
+      <td>5123</td>
+      <td>43.0</td>
+      <td>0.0211</td>
+    </tr>
+    <tr>
+      <th>2021-03-17</th>
+      <td>241592</td>
+      <td>1194</td>
+      <td>256574</td>
+      <td>172492</td>
+      <td>5080</td>
+      <td>44.0</td>
+      <td>0.0210</td>
+    </tr>
+    <tr>
+      <th>2021-03-16</th>
+      <td>240398</td>
+      <td>804</td>
+      <td>255491</td>
+      <td>172218</td>
+      <td>5036</td>
+      <td>44.0</td>
+      <td>0.0209</td>
+    </tr>
+    <tr>
+      <th>2021-03-15</th>
+      <td>239594</td>
+      <td>1025</td>
+      <td>255162</td>
+      <td>171911</td>
+      <td>4992</td>
+      <td>59.0</td>
+      <td>0.0208</td>
+    </tr>
+    <tr>
+      <th>2021-03-10</th>
+      <td>232771</td>
+      <td>1365</td>
+      <td>251742</td>
+      <td>170510</td>
+      <td>4797</td>
+      <td>50.0</td>
+      <td>0.0206</td>
+    </tr>
+    <tr>
+      <th>2021-03-04</th>
+      <td>225672</td>
+      <td>1385</td>
+      <td>245919</td>
+      <td>164712</td>
+      <td>4612</td>
+      <td>54.0</td>
+      <td>0.0204</td>
+    </tr>
+    <tr>
       <th>2020-07-21</th>
       <td>68844</td>
       <td>1164</td>
       <td>78605</td>
       <td>25028</td>
       <td>1558</td>
-      <td>41</td>
+      <td>41.0</td>
       <td>0.0226</td>
     </tr>
     <tr>
@@ -5886,7 +6176,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>74399</td>
       <td>23695</td>
       <td>1383</td>
-      <td>41</td>
+      <td>41.0</td>
       <td>0.0216</td>
     </tr>
     <tr>
@@ -5896,7 +6186,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>48272</td>
       <td>16349</td>
       <td>1044</td>
-      <td>42</td>
+      <td>42.0</td>
       <td>0.0211</td>
     </tr>
     <tr>
@@ -5906,7 +6196,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>43070</td>
       <td>14930</td>
       <td>977</td>
-      <td>46</td>
+      <td>46.0</td>
       <td>0.0208</td>
     </tr>
   </tbody>
@@ -5960,13 +6250,313 @@ Name: 2020-11-01 00:00:00, dtype: int64
   </thead>
   <tbody>
     <tr>
+      <th>2021-07-02</th>
+      <td>398440</td>
+      <td>1536</td>
+      <td>332530</td>
+      <td>262757</td>
+      <td>8654</td>
+      <td>26.0</td>
+      <td>0.0217</td>
+    </tr>
+    <tr>
+      <th>2021-06-24</th>
+      <td>385018</td>
+      <td>2391</td>
+      <td>332313</td>
+      <td>250519</td>
+      <td>8479</td>
+      <td>26.0</td>
+      <td>0.0220</td>
+    </tr>
+    <tr>
+      <th>2021-06-21</th>
+      <td>378064</td>
+      <td>2114</td>
+      <td>330969</td>
+      <td>249135</td>
+      <td>8411</td>
+      <td>30.0</td>
+      <td>0.0222</td>
+    </tr>
+    <tr>
+      <th>2021-06-20</th>
+      <td>375950</td>
+      <td>2178</td>
+      <td>330721</td>
+      <td>248667</td>
+      <td>8381</td>
+      <td>33.0</td>
+      <td>0.0223</td>
+    </tr>
+    <tr>
+      <th>2021-06-19</th>
+      <td>373772</td>
+      <td>2639</td>
+      <td>329903</td>
+      <td>248304</td>
+      <td>8348</td>
+      <td>32.0</td>
+      <td>0.0223</td>
+    </tr>
+    <tr>
+      <th>2021-06-18</th>
+      <td>371133</td>
+      <td>2555</td>
+      <td>328941</td>
+      <td>243203</td>
+      <td>8316</td>
+      <td>47.0</td>
+      <td>0.0224</td>
+    </tr>
+    <tr>
+      <th>2021-06-17</th>
+      <td>368578</td>
+      <td>2457</td>
+      <td>327929</td>
+      <td>242820</td>
+      <td>8269</td>
+      <td>32.0</td>
+      <td>0.0224</td>
+    </tr>
+    <tr>
+      <th>2021-06-16</th>
+      <td>366121</td>
+      <td>2328</td>
+      <td>326517</td>
+      <td>242184</td>
+      <td>8237</td>
+      <td>40.0</td>
+      <td>0.0225</td>
+    </tr>
+    <tr>
+      <th>2021-06-15</th>
+      <td>363793</td>
+      <td>2358</td>
+      <td>325032</td>
+      <td>241749</td>
+      <td>8197</td>
+      <td>39.0</td>
+      <td>0.0225</td>
+    </tr>
+    <tr>
+      <th>2021-06-14</th>
+      <td>361435</td>
+      <td>2575</td>
+      <td>324438</td>
+      <td>241293</td>
+      <td>8158</td>
+      <td>30.0</td>
+      <td>0.0226</td>
+    </tr>
+    <tr>
+      <th>2021-06-13</th>
+      <td>358860</td>
+      <td>2034</td>
+      <td>324327</td>
+      <td>236555</td>
+      <td>8128</td>
+      <td>33.0</td>
+      <td>0.0226</td>
+    </tr>
+    <tr>
+      <th>2021-06-12</th>
+      <td>356826</td>
+      <td>2111</td>
+      <td>323444</td>
+      <td>236186</td>
+      <td>8095</td>
+      <td>37.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-06-11</th>
+      <td>354715</td>
+      <td>2451</td>
+      <td>322301</td>
+      <td>235778</td>
+      <td>8058</td>
+      <td>55.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-06-10</th>
+      <td>352264</td>
+      <td>3911</td>
+      <td>231258</td>
+      <td>235329</td>
+      <td>8003</td>
+      <td>46.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-06-06</th>
+      <td>344174</td>
+      <td>1982</td>
+      <td>319055</td>
+      <td>230002</td>
+      <td>7849</td>
+      <td>29.0</td>
+      <td>0.0228</td>
+    </tr>
+    <tr>
+      <th>2021-06-05</th>
+      <td>342192</td>
+      <td>1992</td>
+      <td>318096</td>
+      <td>229790</td>
+      <td>7820</td>
+      <td>29.0</td>
+      <td>0.0229</td>
+    </tr>
+    <tr>
+      <th>2021-06-04</th>
+      <td>340200</td>
+      <td>2421</td>
+      <td>317390</td>
+      <td>229489</td>
+      <td>7791</td>
+      <td>26.0</td>
+      <td>0.0229</td>
+    </tr>
+    <tr>
+      <th>2021-06-03</th>
+      <td>337779</td>
+      <td>2660</td>
+      <td>316011</td>
+      <td>229062</td>
+      <td>7765</td>
+      <td>30.0</td>
+      <td>0.0230</td>
+    </tr>
+    <tr>
+      <th>2021-06-02</th>
+      <td>335119</td>
+      <td>2403</td>
+      <td>314538</td>
+      <td>225278</td>
+      <td>7735</td>
+      <td>32.0</td>
+      <td>0.0231</td>
+    </tr>
+    <tr>
+      <th>2021-06-01</th>
+      <td>332716</td>
+      <td>1751</td>
+      <td>314520</td>
+      <td>224912</td>
+      <td>7703</td>
+      <td>31.0</td>
+      <td>0.0232</td>
+    </tr>
+    <tr>
+      <th>2021-05-29</th>
+      <td>328771</td>
+      <td>2429</td>
+      <td>312011</td>
+      <td>224255</td>
+      <td>7617</td>
+      <td>28.0</td>
+      <td>0.0232</td>
+    </tr>
+    <tr>
+      <th>2021-05-28</th>
+      <td>326342</td>
+      <td>1917</td>
+      <td>311013</td>
+      <td>223896</td>
+      <td>7589</td>
+      <td>33.0</td>
+      <td>0.0233</td>
+    </tr>
+    <tr>
+      <th>2021-05-27</th>
+      <td>324425</td>
+      <td>1887</td>
+      <td>310639</td>
+      <td>223537</td>
+      <td>7556</td>
+      <td>36.0</td>
+      <td>0.0233</td>
+    </tr>
+    <tr>
+      <th>2021-05-26</th>
+      <td>322538</td>
+      <td>2262</td>
+      <td>309492</td>
+      <td>221134</td>
+      <td>7520</td>
+      <td>36.0</td>
+      <td>0.0233</td>
+    </tr>
+    <tr>
+      <th>2021-05-25</th>
+      <td>320276</td>
+      <td>2015</td>
+      <td>308275</td>
+      <td>220621</td>
+      <td>7484</td>
+      <td>36.0</td>
+      <td>0.0234</td>
+    </tr>
+    <tr>
+      <th>2021-04-07</th>
+      <td>267008</td>
+      <td>1551</td>
+      <td>274623</td>
+      <td>189753</td>
+      <td>6050</td>
+      <td>49.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-03-31</th>
+      <td>259173</td>
+      <td>1553</td>
+      <td>270560</td>
+      <td>183668</td>
+      <td>5744</td>
+      <td>73.0</td>
+      <td>0.0222</td>
+    </tr>
+    <tr>
+      <th>2021-03-26</th>
+      <td>252889</td>
+      <td>1611</td>
+      <td>266785</td>
+      <td>182404</td>
+      <td>5452</td>
+      <td>48.0</td>
+      <td>0.0216</td>
+    </tr>
+    <tr>
+      <th>2021-03-25</th>
+      <td>251278</td>
+      <td>1672</td>
+      <td>265533</td>
+      <td>180125</td>
+      <td>5404</td>
+      <td>50.0</td>
+      <td>0.0215</td>
+    </tr>
+    <tr>
+      <th>2021-03-13</th>
+      <td>237313</td>
+      <td>1694</td>
+      <td>254238</td>
+      <td>171130</td>
+      <td>4896</td>
+      <td>31.0</td>
+      <td>0.0206</td>
+    </tr>
+    <tr>
       <th>2020-08-04</th>
       <td>85760</td>
       <td>1549</td>
       <td>106500</td>
       <td>38554</td>
       <td>1901</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>0.0222</td>
     </tr>
     <tr>
@@ -5976,7 +6566,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>96753</td>
       <td>35971</td>
       <td>1811</td>
-      <td>26</td>
+      <td>26.0</td>
       <td>0.0219</td>
     </tr>
     <tr>
@@ -5986,7 +6576,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>84047</td>
       <td>28566</td>
       <td>1618</td>
-      <td>37</td>
+      <td>37.0</td>
       <td>0.0221</td>
     </tr>
     <tr>
@@ -5996,7 +6586,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>69567</td>
       <td>21481</td>
       <td>1229</td>
-      <td>33</td>
+      <td>33.0</td>
       <td>0.0208</td>
     </tr>
     <tr>
@@ -6006,7 +6596,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>67549</td>
       <td>19999</td>
       <td>1171</td>
-      <td>26</td>
+      <td>26.0</td>
       <td>0.0208</td>
     </tr>
     <tr>
@@ -6016,7 +6606,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>64933</td>
       <td>19373</td>
       <td>1145</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>0.0209</td>
     </tr>
     <tr>
@@ -6026,7 +6616,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>43070</td>
       <td>14930</td>
       <td>977</td>
-      <td>46</td>
+      <td>46.0</td>
       <td>0.0208</td>
     </tr>
     <tr>
@@ -6036,7 +6626,7 @@ Name: 2020-11-01 00:00:00, dtype: int64
       <td>20650</td>
       <td>4671</td>
       <td>534</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>0.0238</td>
     </tr>
   </tbody>
@@ -6249,54 +6839,54 @@ Name: Sobrenome, dtype: bool
   </thead>
   <tbody>
     <tr>
-      <th>2021-02-09</th>
-      <td>199706</td>
-      <td>971</td>
-      <td>237369</td>
-      <td>152779</td>
-      <td>4171</td>
-      <td>13</td>
-      <td>0.0209</td>
+      <th>2021-02-28</th>
+      <td>221115</td>
+      <td>1392</td>
+      <td>245686</td>
+      <td>158304</td>
+      <td>4496</td>
+      <td>25.0</td>
+      <td>0.0203</td>
     </tr>
     <tr>
-      <th>2021-02-08</th>
-      <td>198735</td>
-      <td>611</td>
-      <td>237189</td>
-      <td>151879</td>
-      <td>4158</td>
-      <td>12</td>
-      <td>0.0209</td>
+      <th>2021-02-27</th>
+      <td>219723</td>
+      <td>1416</td>
+      <td>245121</td>
+      <td>158132</td>
+      <td>4471</td>
+      <td>20.0</td>
+      <td>0.0203</td>
     </tr>
     <tr>
-      <th>2021-02-07</th>
-      <td>198124</td>
-      <td>664</td>
-      <td>237072</td>
-      <td>151535</td>
-      <td>4146</td>
-      <td>11</td>
-      <td>0.0209</td>
+      <th>2021-02-26</th>
+      <td>218307</td>
+      <td>1186</td>
+      <td>244356</td>
+      <td>157849</td>
+      <td>4451</td>
+      <td>18.0</td>
+      <td>0.0204</td>
     </tr>
     <tr>
-      <th>2021-02-06</th>
-      <td>197460</td>
-      <td>918</td>
-      <td>236774</td>
-      <td>150175</td>
-      <td>4135</td>
-      <td>12</td>
-      <td>0.0209</td>
+      <th>2021-02-25</th>
+      <td>217121</td>
+      <td>1594</td>
+      <td>243890</td>
+      <td>157586</td>
+      <td>4433</td>
+      <td>14.0</td>
+      <td>0.0204</td>
     </tr>
     <tr>
-      <th>2021-02-05</th>
-      <td>196542</td>
-      <td>1060</td>
-      <td>236216</td>
-      <td>150169</td>
-      <td>4123</td>
-      <td>13</td>
-      <td>0.0210</td>
+      <th>2021-02-24</th>
+      <td>215527</td>
+      <td>1320</td>
+      <td>243253</td>
+      <td>157329</td>
+      <td>4419</td>
+      <td>15.0</td>
+      <td>0.0205</td>
     </tr>
   </tbody>
 </table>
@@ -6358,13 +6948,313 @@ Name: Sobrenome, dtype: bool
   </thead>
   <tbody>
     <tr>
+      <th>2021-07-02</th>
+      <td>398440</td>
+      <td>1536</td>
+      <td>332530</td>
+      <td>262757</td>
+      <td>8654</td>
+      <td>26.0</td>
+      <td>0.0217</td>
+    </tr>
+    <tr>
+      <th>2021-06-24</th>
+      <td>385018</td>
+      <td>2391</td>
+      <td>332313</td>
+      <td>250519</td>
+      <td>8479</td>
+      <td>26.0</td>
+      <td>0.0220</td>
+    </tr>
+    <tr>
+      <th>2021-06-21</th>
+      <td>378064</td>
+      <td>2114</td>
+      <td>330969</td>
+      <td>249135</td>
+      <td>8411</td>
+      <td>30.0</td>
+      <td>0.0222</td>
+    </tr>
+    <tr>
+      <th>2021-06-20</th>
+      <td>375950</td>
+      <td>2178</td>
+      <td>330721</td>
+      <td>248667</td>
+      <td>8381</td>
+      <td>33.0</td>
+      <td>0.0223</td>
+    </tr>
+    <tr>
+      <th>2021-06-19</th>
+      <td>373772</td>
+      <td>2639</td>
+      <td>329903</td>
+      <td>248304</td>
+      <td>8348</td>
+      <td>32.0</td>
+      <td>0.0223</td>
+    </tr>
+    <tr>
+      <th>2021-06-18</th>
+      <td>371133</td>
+      <td>2555</td>
+      <td>328941</td>
+      <td>243203</td>
+      <td>8316</td>
+      <td>47.0</td>
+      <td>0.0224</td>
+    </tr>
+    <tr>
+      <th>2021-06-17</th>
+      <td>368578</td>
+      <td>2457</td>
+      <td>327929</td>
+      <td>242820</td>
+      <td>8269</td>
+      <td>32.0</td>
+      <td>0.0224</td>
+    </tr>
+    <tr>
+      <th>2021-06-16</th>
+      <td>366121</td>
+      <td>2328</td>
+      <td>326517</td>
+      <td>242184</td>
+      <td>8237</td>
+      <td>40.0</td>
+      <td>0.0225</td>
+    </tr>
+    <tr>
+      <th>2021-06-15</th>
+      <td>363793</td>
+      <td>2358</td>
+      <td>325032</td>
+      <td>241749</td>
+      <td>8197</td>
+      <td>39.0</td>
+      <td>0.0225</td>
+    </tr>
+    <tr>
+      <th>2021-06-14</th>
+      <td>361435</td>
+      <td>2575</td>
+      <td>324438</td>
+      <td>241293</td>
+      <td>8158</td>
+      <td>30.0</td>
+      <td>0.0226</td>
+    </tr>
+    <tr>
+      <th>2021-06-13</th>
+      <td>358860</td>
+      <td>2034</td>
+      <td>324327</td>
+      <td>236555</td>
+      <td>8128</td>
+      <td>33.0</td>
+      <td>0.0226</td>
+    </tr>
+    <tr>
+      <th>2021-06-12</th>
+      <td>356826</td>
+      <td>2111</td>
+      <td>323444</td>
+      <td>236186</td>
+      <td>8095</td>
+      <td>37.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-06-11</th>
+      <td>354715</td>
+      <td>2451</td>
+      <td>322301</td>
+      <td>235778</td>
+      <td>8058</td>
+      <td>55.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-06-10</th>
+      <td>352264</td>
+      <td>3911</td>
+      <td>231258</td>
+      <td>235329</td>
+      <td>8003</td>
+      <td>46.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-06-06</th>
+      <td>344174</td>
+      <td>1982</td>
+      <td>319055</td>
+      <td>230002</td>
+      <td>7849</td>
+      <td>29.0</td>
+      <td>0.0228</td>
+    </tr>
+    <tr>
+      <th>2021-06-05</th>
+      <td>342192</td>
+      <td>1992</td>
+      <td>318096</td>
+      <td>229790</td>
+      <td>7820</td>
+      <td>29.0</td>
+      <td>0.0229</td>
+    </tr>
+    <tr>
+      <th>2021-06-04</th>
+      <td>340200</td>
+      <td>2421</td>
+      <td>317390</td>
+      <td>229489</td>
+      <td>7791</td>
+      <td>26.0</td>
+      <td>0.0229</td>
+    </tr>
+    <tr>
+      <th>2021-06-03</th>
+      <td>337779</td>
+      <td>2660</td>
+      <td>316011</td>
+      <td>229062</td>
+      <td>7765</td>
+      <td>30.0</td>
+      <td>0.0230</td>
+    </tr>
+    <tr>
+      <th>2021-06-02</th>
+      <td>335119</td>
+      <td>2403</td>
+      <td>314538</td>
+      <td>225278</td>
+      <td>7735</td>
+      <td>32.0</td>
+      <td>0.0231</td>
+    </tr>
+    <tr>
+      <th>2021-06-01</th>
+      <td>332716</td>
+      <td>1751</td>
+      <td>314520</td>
+      <td>224912</td>
+      <td>7703</td>
+      <td>31.0</td>
+      <td>0.0232</td>
+    </tr>
+    <tr>
+      <th>2021-05-29</th>
+      <td>328771</td>
+      <td>2429</td>
+      <td>312011</td>
+      <td>224255</td>
+      <td>7617</td>
+      <td>28.0</td>
+      <td>0.0232</td>
+    </tr>
+    <tr>
+      <th>2021-05-28</th>
+      <td>326342</td>
+      <td>1917</td>
+      <td>311013</td>
+      <td>223896</td>
+      <td>7589</td>
+      <td>33.0</td>
+      <td>0.0233</td>
+    </tr>
+    <tr>
+      <th>2021-05-27</th>
+      <td>324425</td>
+      <td>1887</td>
+      <td>310639</td>
+      <td>223537</td>
+      <td>7556</td>
+      <td>36.0</td>
+      <td>0.0233</td>
+    </tr>
+    <tr>
+      <th>2021-05-26</th>
+      <td>322538</td>
+      <td>2262</td>
+      <td>309492</td>
+      <td>221134</td>
+      <td>7520</td>
+      <td>36.0</td>
+      <td>0.0233</td>
+    </tr>
+    <tr>
+      <th>2021-05-25</th>
+      <td>320276</td>
+      <td>2015</td>
+      <td>308275</td>
+      <td>220621</td>
+      <td>7484</td>
+      <td>36.0</td>
+      <td>0.0234</td>
+    </tr>
+    <tr>
+      <th>2021-04-07</th>
+      <td>267008</td>
+      <td>1551</td>
+      <td>274623</td>
+      <td>189753</td>
+      <td>6050</td>
+      <td>49.0</td>
+      <td>0.0227</td>
+    </tr>
+    <tr>
+      <th>2021-03-31</th>
+      <td>259173</td>
+      <td>1553</td>
+      <td>270560</td>
+      <td>183668</td>
+      <td>5744</td>
+      <td>73.0</td>
+      <td>0.0222</td>
+    </tr>
+    <tr>
+      <th>2021-03-26</th>
+      <td>252889</td>
+      <td>1611</td>
+      <td>266785</td>
+      <td>182404</td>
+      <td>5452</td>
+      <td>48.0</td>
+      <td>0.0216</td>
+    </tr>
+    <tr>
+      <th>2021-03-25</th>
+      <td>251278</td>
+      <td>1672</td>
+      <td>265533</td>
+      <td>180125</td>
+      <td>5404</td>
+      <td>50.0</td>
+      <td>0.0215</td>
+    </tr>
+    <tr>
+      <th>2021-03-13</th>
+      <td>237313</td>
+      <td>1694</td>
+      <td>254238</td>
+      <td>171130</td>
+      <td>4896</td>
+      <td>31.0</td>
+      <td>0.0206</td>
+    </tr>
+    <tr>
       <th>2020-08-04</th>
       <td>85760</td>
       <td>1549</td>
       <td>106500</td>
       <td>38554</td>
       <td>1901</td>
-      <td>31</td>
+      <td>31.0</td>
       <td>0.0222</td>
     </tr>
     <tr>
@@ -6374,7 +7264,7 @@ Name: Sobrenome, dtype: bool
       <td>96753</td>
       <td>35971</td>
       <td>1811</td>
-      <td>26</td>
+      <td>26.0</td>
       <td>0.0219</td>
     </tr>
     <tr>
@@ -6384,7 +7274,7 @@ Name: Sobrenome, dtype: bool
       <td>84047</td>
       <td>28566</td>
       <td>1618</td>
-      <td>37</td>
+      <td>37.0</td>
       <td>0.0221</td>
     </tr>
     <tr>
@@ -6394,7 +7284,7 @@ Name: Sobrenome, dtype: bool
       <td>69567</td>
       <td>21481</td>
       <td>1229</td>
-      <td>33</td>
+      <td>33.0</td>
       <td>0.0208</td>
     </tr>
     <tr>
@@ -6404,7 +7294,7 @@ Name: Sobrenome, dtype: bool
       <td>67549</td>
       <td>19999</td>
       <td>1171</td>
-      <td>26</td>
+      <td>26.0</td>
       <td>0.0208</td>
     </tr>
     <tr>
@@ -6414,7 +7304,7 @@ Name: Sobrenome, dtype: bool
       <td>64933</td>
       <td>19373</td>
       <td>1145</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>0.0209</td>
     </tr>
     <tr>
@@ -6424,7 +7314,7 @@ Name: Sobrenome, dtype: bool
       <td>43070</td>
       <td>14930</td>
       <td>977</td>
-      <td>46</td>
+      <td>46.0</td>
       <td>0.0208</td>
     </tr>
     <tr>
@@ -6434,7 +7324,7 @@ Name: Sobrenome, dtype: bool
       <td>20650</td>
       <td>4671</td>
       <td>534</td>
-      <td>27</td>
+      <td>27.0</td>
       <td>0.0238</td>
     </tr>
   </tbody>

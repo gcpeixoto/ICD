@@ -277,7 +277,7 @@ pd.DataFrame([serie_Peso, serie_Altura, serie_Idade]).transpose()
 # In[26]:
 
 
-df_exemplo_0 = pd.read_csv('data/exemplo_data.csv')
+df_exemplo_0 = pd.read_csv('../database/exemplo_data.csv')
 
 
 # In[27]:
@@ -291,7 +291,7 @@ df_exemplo_0
 # In[28]:
 
 
-df_exemplo = pd.read_csv('data/exemplo_data.csv', index_col=0)
+df_exemplo = pd.read_csv('../database/exemplo_data.csv', index_col=0)
 
 
 # In[29]:
@@ -483,7 +483,7 @@ df_exemplo.info()
 # In[51]:
 
 
-df_exemplo.to_csv('data/exemplo_novo.csv')
+df_exemplo.to_csv('../database/exemplo_novo.csv')
 
 
 # ### Exemplo COVID-19 PB
@@ -532,7 +532,7 @@ dados_covid_PB.head()
 # In[58]:
 
 
-dados_covid_PB.to_csv('data/dadoscovidpb.csv')
+dados_covid_PB.to_csv('../database/dadoscovidpb.csv')
 
 
 # ### Índices dos valores máximos ou mínimos
@@ -588,7 +588,7 @@ df_dict_series.idxmax()
 # In[65]:
 
 
-df_exemplo = pd.read_csv('data/exemplo_data.csv', index_col=0); df_exemplo
+df_exemplo = pd.read_csv('../database/exemplo_data.csv', index_col=0); df_exemplo
 
 
 # In[66]:

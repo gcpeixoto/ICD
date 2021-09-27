@@ -30,7 +30,7 @@ dados_covid_PB.agg(lambda vetor: np.sum(vetor))[['casosNovos','obitosNovos']].as
 # In[3]:
 
 
-dados_covid_PB.head()
+dados_covid_PB.head(9)
 
 
 # Isto também pode ser obtido utilizando o método `sum` de *DataFrames* e *Series*:
@@ -309,7 +309,7 @@ dados_PB_BR
 # 
 # - No *DataFrame* *nome_cpf_email* existem alunos que não estão presentes no *nome_cpf_mat* pois estes não são alunos da UFPB.
 
-# In[34]:
+# In[35]:
 
 
 nome_cpf_mat = pd.read_csv('../database/nome_cpf_mat.csv')
@@ -318,13 +318,13 @@ nome_cpf_email = pd.read_csv('../database/nome_cpf_email.csv')
 
 # Vamos agora examinar os *DataFrames*. Como são bem simples, basta realizar *prints* deles.
 
-# In[35]:
+# In[36]:
 
 
 nome_cpf_mat
 
 
-# In[36]:
+# In[37]:
 
 
 nome_cpf_email
@@ -332,7 +332,7 @@ nome_cpf_email
 
 # Tipicamente é bom possuir *index* únicos. Neste sentido, vamos definir o CPF como *index*:
 
-# In[37]:
+# In[38]:
 
 
 nome_cpf_mat = nome_cpf_mat.set_index('CPF')
@@ -341,7 +341,7 @@ nome_cpf_email = nome_cpf_email.set_index('CPF')
 
 # Vamos agora realizar um **left** join com o *DataFrame* **nome_cpf_mat** ficando à esquerda (neste caso, apenas alunos com matrícula irão aparecer):
 
-# In[38]:
+# In[39]:
 
 
 pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = ['Nome','CPF'])
@@ -353,7 +353,7 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = ['Nome','CPF'])
 # 
 # Veja o que aconteceria se informássemos apenas que o *CPF* está presente nos dois *DataFrames*:
 
-# In[39]:
+# In[40]:
 
 
 pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = 'CPF')
@@ -363,7 +363,7 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = 'CPF')
 
 # Vamos agora realizar um **right** join com o *DataFrame* **nome_cpf_mat** ficando à esquerda (neste caso, apenas alunos **com e-mail** irão aparecer):
 
-# In[40]:
+# In[41]:
 
 
 pd.merge(nome_cpf_mat, nome_cpf_email, how = 'right', on = ['Nome','CPF'])
@@ -371,7 +371,7 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'right', on = ['Nome','CPF'])
 
 # Vamos agora realizar um **inner** join com o *DataFrame* **nome_cpf_mat** ficando à esquerda (neste caso, apenas alunos **com matrícula e com e-mail** irão aparecer):
 
-# In[41]:
+# In[42]:
 
 
 pd.merge(nome_cpf_mat, nome_cpf_email, how = 'inner', on = ['Nome','CPF'])
@@ -379,7 +379,7 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'inner', on = ['Nome','CPF'])
 
 # Por fim, vamos agora realizar um **outer** ou **full** join com o *DataFrame* **nome_cpf_mat** ficando à esquerda (neste caso, **todos** os alunos irão aparecer):
 
-# In[42]:
+# In[43]:
 
 
 pd.merge(nome_cpf_mat, nome_cpf_email, how = 'outer', on = ['Nome','CPF'])
@@ -397,7 +397,7 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'outer', on = ['Nome','CPF'])
 
 # * Neste exemplo vamos retomar a concatenação entre os dados da Paraíba e do Brasil, porém iremos substituir *todos* os valores de `NaN` por zero, usando o métodp `applymap`.
 
-# In[43]:
+# In[44]:
 
 
 dados_PB_BR = pd.concat([covid_PB_casos_obitos, covid_BR_casos_obitos], axis=1)
@@ -406,7 +406,7 @@ dados_PB_BR.applymap(lambda valor: 0 if np.isnan(valor) else valor)
 
 # Vamos utilizar `apply` para realizar a soma de casos e óbitos através de mais de uma forma
 
-# In[44]:
+# In[45]:
 
 
 dados_PB_BR.apply(lambda x: np.sum(x)).astype('int')
@@ -414,7 +414,7 @@ dados_PB_BR.apply(lambda x: np.sum(x)).astype('int')
 
 # Se quisermos realizar a operação por linhas, basta utilizar o argumento `axis=1`:
 
-# In[45]:
+# In[46]:
 
 
 dados_PB_BR.apply(lambda x: (x>0).all(), axis=1)
