@@ -374,13 +374,13 @@ serie_1 = pd.Series([1,2,3,4,5])
 serie_1.shape
 
 
-# In[39]:
+# In[151]:
 
 
 df_exemplo.index
 
 
-# In[40]:
+# In[152]:
 
 
 serie_1.index
@@ -410,21 +410,21 @@ df_exemplo.columns.array
 # 
 # Exemplo:
 
-# In[44]:
+# In[160]:
 
 
 serie_1.index.to_numpy()
 
 
-# In[45]:
+# In[162]:
 
 
 df_exemplo.columns.to_numpy()
 
 
-# O método `.to_numpy()` também está disponível em *DataFrames*:
+#   O método `.to_numpy()` também está disponível em *DataFrames*:
 
-# In[46]:
+# In[163]:
 
 
 df_exemplo.to_numpy()
@@ -441,7 +441,7 @@ np.asarray(df_exemplo.index)
 # In[48]:
 
 
-np.asarray(df_exemplo.columns)
+np.asarray(df_exemplo.columns)  
 
 
 # In[49]:
@@ -456,7 +456,7 @@ np.asarray(df_exemplo)
 # 
 # Exemplo:
 
-# In[50]:
+# In[184]:
 
 
 df_exemplo.info()
@@ -478,7 +478,7 @@ df_exemplo.info()
 #     
 # Para exportar para o arquivo `exemplo_novo.csv`, utilizaremos o método `.to_csv` ao *DataFrame* `df_exemplo`:
 
-# In[51]:
+# In[186]:
 
 
 df_exemplo.to_csv('../database/exemplo_novo.csv')
@@ -490,47 +490,47 @@ df_exemplo.to_csv('../database/exemplo_novo.csv')
 # 
 # *Fonte: https://superset.plataformatarget.com.br/superset/dashboard/microdados/*
 
-# In[52]:
+# In[201]:
 
 
 dados_covid_PB = pd.read_csv('https://superset.plataformatarget.com.br/superset/explore_json/?form_data=%7B%22slice_id%22%3A1550%7D&csv=true', 
                              sep=',', index_col=0)
 
 
-# In[53]:
+# In[203]:
 
 
-dados_covid_PB.info()
+dados_covid_PB.info() 
 
 
-# In[54]:
+# In[191]:
 
 
-dados_covid_PB.head()
+dados_covid_PB.head() 
 
 
-# In[55]:
+# In[192]:
 
 
 dados_covid_PB.tail()
 
 
-# In[56]:
+# In[204]:
 
 
-dados_covid_PB['estado'] = 'PB'
+dados_covid_PB['estado'] = 'PB' 
 
 
-# In[57]:
+# In[205]:
 
 
 dados_covid_PB.head()
 
 
-# In[58]:
+# In[206]:
 
 
-dados_covid_PB.to_csv('../database/dadoscovidpb.csv')
+dados_covid_PB.to_csv('../database/dadoscovidpb.csv') 
 
 
 # ### Índices dos valores máximos ou mínimos
@@ -539,7 +539,7 @@ dados_covid_PB.to_csv('../database/dadoscovidpb.csv')
 # 
 # Vamos recriar um *DataFrame* genérico.
 
-# In[59]:
+# In[207]:
 
 
 serie_Idade = pd.Series({'Ana':20, 'João': 19, 'Maria': 21, 'Pedro': 22, 'Túlio': 20}, name="Idade")
@@ -547,19 +547,19 @@ serie_Peso = pd.Series({'Ana':55, 'João': 80, 'Maria': 62, 'Pedro': 67, 'Túlio
 serie_Altura = pd.Series({'Ana':162, 'João': 178, 'Maria': 162, 'Pedro': 165, 'Túlio': 171}, name="Altura")
 
 
-# In[60]:
+# In[208]:
 
 
 dicionario_series_exemplo = {'Idade': serie_Idade, 'Peso': serie_Peso, 'Altura': serie_Altura}
 
 
-# In[61]:
+# In[209]:
 
 
 df_dict_series = pd.DataFrame(dicionario_series_exemplo)
 
 
-# In[62]:
+# In[211]:
 
 
 df_dict_series
@@ -567,10 +567,10 @@ df_dict_series
 
 # Assim, podemos localizar quem possui menores idade, peso e altura.
 
-# In[63]:
+# In[212]:
 
 
-df_dict_series.idxmin()
+df_dict_series.idxmin() 
 
 
 # De igual forma, localizamos quem possui maiores idade, peso e altura.
@@ -583,13 +583,13 @@ df_dict_series.idxmax()
 
 # **Exemplo:** Aplicaremos as funções `idxmin()` e `idxmax()` aos dados do arquivo `data/exemplo_data.csv` para localizar entradas de interesse.
 
-# In[65]:
+# In[213]:
 
 
-df_exemplo = pd.read_csv('../database/exemplo_data.csv', index_col=0); df_exemplo
+df_exemplo = pd.read_csv('../database/exemplo_data.csv', index_col=0); df_exemplo 
 
 
-# In[66]:
+# In[216]:
 
 
 df_exemplo = pd.DataFrame(df_exemplo, columns=['coluna_1','coluna_2','coluna_3'])
@@ -597,11 +597,11 @@ df_exemplo = pd.DataFrame(df_exemplo, columns=['coluna_1','coluna_2','coluna_3']
 
 # Inserimos uma terceira coluna com dados fictícios.
 
-# In[67]:
+# In[217]:
 
 
 df_exemplo['coluna_3'] = pd.Series([1,2,3,4,5,6,7,8,np.nan,np.nan],index=df_exemplo.index)
-df_exemplo
+df_exemplo  
 
 
 # Os *index* correspondentes aos menores e maiores valores são datas, evidentemente.
@@ -628,7 +628,7 @@ df_exemplo.idxmax()
 
 # Exemplos:
 
-# In[70]:
+# In[221]:
 
 
 df_dict_series.reindex(index=['Victor', 'Túlio', 'Pedro', 'João'], columns=['Altura','Peso','IMC'])
@@ -640,19 +640,19 @@ df_dict_series.reindex(index=['Victor', 'Túlio', 'Pedro', 'João'], columns=['A
 
 # Nos exemplos que segue, note que novos *DataFrames* são obtidos a partir de `df_dict_series` sem que este seja sobrescrito.
 
-# In[71]:
+# In[222]:
 
 
 df_dict_series.drop('Túlio') # axis=0 implícito 
 
 
-# In[72]:
+# In[223]:
 
 
 df_dict_series.drop(['Ana','Maria'], axis=0)
 
 
-# In[73]:
+# In[224]:
 
 
 df_dict_series.drop(['Idade'], axis=1)
@@ -664,19 +664,19 @@ df_dict_series.drop(['Idade'], axis=1)
 
 # Exemplo:
 
-# In[74]:
+# In[225]:
 
 
 serie_exemplo = pd.Series([1,2,3], index=['a','b','c'])
 
 
-# In[75]:
+# In[226]:
 
 
 serie_exemplo
 
 
-# In[76]:
+# In[227]:
 
 
 serie_exemplo.rename({'a':'abacaxi', 'b':'banana', 'c': 'cebola'})
@@ -690,7 +690,7 @@ serie_exemplo.rename({'a':'abacaxi', 'b':'banana', 'c': 'cebola'})
 df_dict_series
 
 
-# In[78]:
+# In[228]:
 
 
 df_dict_series.rename(index = {'Ana':'a', 'João':'j', 'Maria':'m', 'Pedro':'p','Túlio':'t'},
@@ -699,13 +699,13 @@ df_dict_series.rename(index = {'Ana':'a', 'João':'j', 'Maria':'m', 'Pedro':'p',
 
 # No próximo exemplo, usamos uma *Series* para renomear os rótulos.
 
-# In[79]:
+# In[229]:
 
 
 indice_novo = pd.Series({'Ana':'a', 'João':'j', 'Maria':'m', 'Pedro':'p','Túlio':'t'})
 
 
-# In[80]:
+# In[230]:
 
 
 df_dict_series.rename(index = indice_novo)
@@ -713,7 +713,7 @@ df_dict_series.rename(index = indice_novo)
 
 # Neste exemplo, usamos a função `str.upper` (altera a `str` para "todas maiúsculas") para renomear colunas.
 
-# In[81]:
+# In[231]:
 
 
 df_dict_series.rename(columns=str.upper)
@@ -727,34 +727,34 @@ df_dict_series.rename(columns=str.upper)
 
 # Exemplos:
 
-# In[82]:
+# In[232]:
 
 
 serie_desordenada = pd.Series({'Maria': 21, 'Pedro': 22, 'Túlio': 20, 'João': 19, 'Ana':20}); 
 serie_desordenada
 
 
-# In[83]:
+# In[233]:
 
 
-serie_desordenada.sort_index() # ordenação alfabética
+serie_desordenada.sort_index() # ordenação alfabética 
 
 
 # Mais exemplos:
 
-# In[84]:
+# In[238]:
 
 
-df_desordenado = df_dict_series.reindex(index=['Pedro','Maria','Ana','Túlio','João'])
+df_desordenado = df_dict_series.reindex(index=['Pedro','Maria','Ana','Túlio','João'])  
 
 
-# In[85]:
+# In[239]:
 
 
-df_desordenado
+df_desordenado  
 
 
-# In[86]:
+# In[241]:
 
 
 df_desordenado.sort_index()
@@ -762,13 +762,13 @@ df_desordenado.sort_index()
 
 # Mais exemplos:
 
-# In[87]:
+# In[242]:
 
 
 serie_desordenada.sort_values()
 
 
-# In[88]:
+# In[243]:
 
 
 df_desordenado.sort_values(by=['Altura']) # ordena por 'Altura'
@@ -776,7 +776,7 @@ df_desordenado.sort_values(by=['Altura']) # ordena por 'Altura'
 
 # No caso de "empate", podemos utilizar outra coluna para desempatar.
 
-# In[89]:
+# In[246]:
 
 
 df_desordenado.sort_values(by=['Altura','Peso']) # usa a coluna 'Peso' para desempatar
@@ -784,13 +784,13 @@ df_desordenado.sort_values(by=['Altura','Peso']) # usa a coluna 'Peso' para dese
 
 # Os métodos `sort_index` e `sort_values` admitem o argumento opcional `ascending`, que permite inverter a ordenação caso tenha valor `False`.
 
-# In[90]:
+# In[250]:
 
 
 df_desordenado.sort_index(ascending=False)
 
 
-# In[91]:
+# In[251]:
 
 
 df_desordenado.sort_values(by=['Idade'], ascending=False)
@@ -813,27 +813,27 @@ df_desordenado.sort_values(by=['Idade'], ascending=False)
 # 
 # Exemplos:
 
-# In[92]:
+# In[252]:
 
 
 serie_exemplo
 
 
-# In[93]:
+# In[254]:
 
 
-serie_exemplo == 2
+serie_exemplo == 2  
 
 
 # De outra forma:
 
-# In[94]:
+# In[255]:
 
 
 serie_exemplo.eq(2)
 
 
-# In[95]:
+# In[256]:
 
 
 serie_exemplo > 1
@@ -841,13 +841,13 @@ serie_exemplo > 1
 
 # Ou, na forma funcional:
 
-# In[96]:
+# In[257]:
 
 
 serie_exemplo.gt(1)
 
 
-# In[97]:
+# In[258]:
 
 
 df_exemplo > 1
@@ -855,27 +855,27 @@ df_exemplo > 1
 
 # > **Importante:** Ao comparar *np.nan*, o resultado tipicamente é falso:
 
-# In[98]:
+# In[259]:
 
 
 np.nan == np.nan
 
 
-# In[99]:
+# In[260]:
 
 
 np.nan > np.nan
 
 
-# In[100]:
+# In[262]:
 
 
-np.nan >= np.nan
+np.nan >= np.nan 
 
 
 # Só é verdadeiro para indicar que é diferente:
 
-# In[101]:
+# In[264]:
 
 
 np.nan != np.nan
@@ -883,14 +883,14 @@ np.nan != np.nan
 
 # Neste sentido, podemos ter tabelas iguais sem que a comparação usual funcione:
 
-# In[102]:
+# In[266]:
 
 
 # 'copy', como o nome sugere, gera uma cópia do DataFrame
-df_exemplo_2 = df_exemplo.copy() 
+df_exemplo_2 = df_exemplo.copy()  
 
 
-# In[103]:
+# In[269]:
 
 
 (df_exemplo == df_exemplo_2)
@@ -898,7 +898,7 @@ df_exemplo_2 = df_exemplo.copy()
 
 # O motivo de haver entradas como `False` ainda que `df_exemplo_2` seja uma cópia exata de `df_exemplo` é a presença do `np.nan`. Neste caso, devemos utilizar o método `equals` para realizar a comparação.
 
-# In[104]:
+# In[271]:
 
 
 df_exemplo.equals(df_exemplo_2)
@@ -910,26 +910,26 @@ df_exemplo.equals(df_exemplo_2)
 
 # Exemplos:
 
-# In[105]:
+# In[272]:
 
 
 serie_exemplo
 
 
-# In[106]:
+# In[273]:
 
 
 serie_exemplo_2 = serie_exemplo-2; 
 serie_exemplo_2
 
 
-# In[107]:
+# In[276]:
 
 
 (serie_exemplo_2 > 0).any()
 
 
-# In[108]:
+# In[277]:
 
 
 (serie_exemplo > 1).all()
@@ -937,13 +937,13 @@ serie_exemplo_2
 
 # Este exemplo reproduz um valor `False` único.
 
-# In[109]:
+# In[281]:
 
 
-(df_exemplo == df_exemplo_2).all().all()
+(df_exemplo == df_exemplo_2).all().all() 
 
 
-# In[110]:
+# In[282]:
 
 
 serie_exemplo.empty
@@ -951,25 +951,25 @@ serie_exemplo.empty
 
 # Mais exemplos:
 
-# In[111]:
+# In[283]:
 
 
 (df_exemplo == df_exemplo_2).any()
 
 
-# In[112]:
+# In[284]:
 
 
 df_exemplo.empty
 
 
-# In[113]:
+# In[287]:
 
 
 df_vazio = pd.DataFrame()
 
 
-# In[114]:
+# In[288]:
 
 
 df_vazio.empty
@@ -981,7 +981,7 @@ df_vazio.empty
 
 # No exemplo abaixo, temos um *DataFrame* contendo as colunas `'Idade'`, `'Peso'` e `'Altura'`. Selecionaremos `'Peso'` e `'Altura'`, apenas.
 
-# In[115]:
+# In[291]:
 
 
 df_dict_series[['Peso','Altura']]
@@ -989,7 +989,7 @@ df_dict_series[['Peso','Altura']]
 
 # Se quisermos selecionar apenas uma coluna, não há necessidade de inserir uma lista. Basta utilizar o nome da coluna:
 
-# In[116]:
+# In[293]:
 
 
 df_dict_series['Peso']
@@ -997,7 +997,7 @@ df_dict_series['Peso']
 
 # Para remover colunas, podemos utilizar o método `drop`.
 
-# In[117]:
+# In[294]:
 
 
 df_dict_series.drop(['Peso','Altura'], axis=1)
@@ -1009,7 +1009,7 @@ df_dict_series.drop(['Peso','Altura'], axis=1)
 
 # Como exemplo, vamos ver como calcular o IMC no *DataFrame* anterior:
 
-# In[118]:
+# In[297]:
 
 
 df_dict_series.eval('Peso/(Altura/100)**2')
@@ -1017,13 +1017,13 @@ df_dict_series.eval('Peso/(Altura/100)**2')
 
 # Se quisermos obter um *DataFrame* contendo o IMC como uma nova coluna, podemos utilizar o método `assign` (sem modificar o *DataFrame* original):
 
-# In[119]:
+# In[299]:
 
 
 df_dict_series.assign(IMC=round(df_dict_series.eval('Peso/(Altura/100)**2'),2))
 
 
-# In[120]:
+# In[300]:
 
 
 df_dict_series # não modificado
@@ -1031,13 +1031,13 @@ df_dict_series # não modificado
 
 # Se quisermos modificar o *DataFrame* para incluir a coluna IMC fazemos:
 
-# In[121]:
+# In[301]:
 
 
 df_dict_series['IMC']=round(df_dict_series.eval('Peso/(Altura/100)**2'),2)
 
 
-# In[122]:
+# In[302]:
 
 
 df_dict_series # modificado "in-place"

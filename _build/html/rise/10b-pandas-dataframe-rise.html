@@ -2291,7 +2291,7 @@ Length: 2, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;coluna_1&#39;, &#39;coluna_2&#39;], dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;coluna_1&#39;, &#39;coluna_2&#39;, &#39;coluna_3&#39;], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -2304,16 +2304,16 @@ Length: 2, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.41609236,  1.81036443],
-       [-0.13796966,  2.57852048],
-       [ 0.57582735,  0.06086649],
-       [-0.01736719,  1.29958653],
-       [ 1.38427924, -0.3817321 ],
-       [ 0.54970562, -1.30878902],
-       [-0.28229623, -1.68897918],
-       [-0.98973006, -0.02812071],
-       [ 0.27558241, -0.1776586 ],
-       [ 0.68513161,  0.50253489]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.41609236,  1.81036443,  1.        ],
+       [-0.13796966,  2.57852048,  2.        ],
+       [ 0.57582735,  0.06086649,  3.        ],
+       [-0.01736719,  1.29958653,  4.        ],
+       [ 1.38427924, -0.3817321 ,  5.        ],
+       [ 0.54970562, -1.30878902,  6.        ],
+       [-0.28229623, -1.68897918,  7.        ],
+       [-0.98973006, -0.02812071,  8.        ],
+       [ 0.27558241, -0.1776586 ,         nan],
+       [ 0.68513161,  0.50253489,         nan]])
 </pre></div>
 </div>
 </div>
@@ -2335,7 +2335,7 @@ Length: 2, dtype: object
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>  
 </pre></div>
 </div>
 </div>
@@ -2379,13 +2379,14 @@ Length: 2, dtype: object
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 Index: 10 entries, 2020-01-01 to 2020-01-10
-Data columns (total 2 columns):
+Data columns (total 3 columns):
  #   Column    Non-Null Count  Dtype  
 ---  ------    --------------  -----  
  0   coluna_1  10 non-null     float64
  1   coluna_2  10 non-null     float64
-dtypes: float64(2)
-memory usage: 240.0+ bytes
+ 2   coluna_3  8 non-null      float64
+dtypes: float64(3)
+memory usage: 320.0+ bytes
 </pre></div>
 </div>
 </div>
@@ -2426,7 +2427,7 @@ memory usage: 240.0+ bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
@@ -2451,7 +2452,7 @@ memory usage: 34.9+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
@@ -2649,7 +2650,7 @@ memory usage: 34.9+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="p">[</span><span class="s1">&#39;estado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;PB&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="p">[</span><span class="s1">&#39;estado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;PB&#39;</span> 
 </pre></div>
 </div>
 </div>
@@ -2762,7 +2763,7 @@ memory usage: 34.9+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../database/dadoscovidpb.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../database/dadoscovidpb.csv&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -2863,7 +2864,7 @@ memory usage: 34.9+ KB
 <p>Assim, podemos localizar quem possui menores idade, peso e altura.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dict_series</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dict_series</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
@@ -2895,7 +2896,7 @@ dtype: object
 <p><strong>Exemplo:</strong> Aplicaremos as funções <code class="docutils literal notranslate"><span class="pre">idxmin()</span></code> e <code class="docutils literal notranslate"><span class="pre">idxmax()</span></code> aos dados do arquivo <code class="docutils literal notranslate"><span class="pre">data/exemplo_data.csv</span></code> para localizar entradas de interesse.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/exemplo_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span> <span class="n">df_exemplo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/exemplo_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span> <span class="n">df_exemplo</span> 
 </pre></div>
 </div>
 </div>
@@ -2988,7 +2989,7 @@ dtype: object
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span><span class="p">[</span><span class="s1">&#39;coluna_3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span><span class="n">index</span><span class="o">=</span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-<span class="n">df_exemplo</span>
+<span class="n">df_exemplo</span>  
 </pre></div>
 </div>
 </div>
@@ -3697,7 +3698,7 @@ dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_desordenada</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span> <span class="c1"># ordenação alfabética</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_desordenada</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span> <span class="c1"># ordenação alfabética </span>
 </pre></div>
 </div>
 </div>
@@ -3715,14 +3716,14 @@ dtype: int64
 <p>Mais exemplos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_desordenado</span> <span class="o">=</span> <span class="n">df_dict_series</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Pedro&#39;</span><span class="p">,</span><span class="s1">&#39;Maria&#39;</span><span class="p">,</span><span class="s1">&#39;Ana&#39;</span><span class="p">,</span><span class="s1">&#39;Túlio&#39;</span><span class="p">,</span><span class="s1">&#39;João&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_desordenado</span> <span class="o">=</span> <span class="n">df_dict_series</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Pedro&#39;</span><span class="p">,</span><span class="s1">&#39;Maria&#39;</span><span class="p">,</span><span class="s1">&#39;Ana&#39;</span><span class="p">,</span><span class="s1">&#39;Túlio&#39;</span><span class="p">,</span><span class="s1">&#39;João&#39;</span><span class="p">])</span>  
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_desordenado</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_desordenado</span>  
 </pre></div>
 </div>
 </div>
@@ -4164,7 +4165,7 @@ dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_exemplo</span> <span class="o">==</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_exemplo</span> <span class="o">==</span> <span class="mi">2</span>  
 </pre></div>
 </div>
 </div>
@@ -4348,7 +4349,7 @@ dtype: bool
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="o">&gt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="o">&gt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> 
 </pre></div>
 </div>
 </div>
@@ -4375,7 +4376,7 @@ dtype: bool
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &#39;copy&#39;, como o nome sugere, gera uma cópia do DataFrame</span>
-<span class="n">df_exemplo_2</span> <span class="o">=</span> <span class="n">df_exemplo</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> 
+<span class="n">df_exemplo_2</span> <span class="o">=</span> <span class="n">df_exemplo</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  
 </pre></div>
 </div>
 </div>
@@ -4551,7 +4552,7 @@ dtype: int64
 <p>Este exemplo reproduz um valor <code class="docutils literal notranslate"><span class="pre">False</span></code> único.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">df_exemplo</span> <span class="o">==</span> <span class="n">df_exemplo_2</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">df_exemplo</span> <span class="o">==</span> <span class="n">df_exemplo_2</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
