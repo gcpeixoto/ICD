@@ -36,11 +36,11 @@ import pandas as pd
 # 
 # | Altura (m) | No. de alunos | 
 # | :-------------: |:-------------:| 
-# |1,50 $|-$ 1,60   | 5 | 
-# | 1,60 $|-$ 1,70   | 15     |   
-# | 1,70 $|-$ 1,80   | 17      |   
-# | 1,80 $|-$ 1,90    | 3      |   
-# | Total    | 40      |
+# |1,50 $\vdash$ 1,60   | 5 | 
+# |1,60 $\vdash$ 1,70   | 15     |   
+# |1,70 $\vdash$ 1,80   | 17      |   
+# |1,80 $\vdash$ 1,90    | 3      |   
+# |Total | 40      |
 
 # #### Construção de uma distribuição de frequência
 # 
@@ -148,7 +148,7 @@ K1,K2
 
 # Uma vez que ambos os valores são iguais, podemos tomar $K = K_1 = K_2 = 6$ e plotar o histograma especificando `bins`.
 
-# In[54]:
+# In[10]:
 
 
 K = K1
@@ -173,12 +173,12 @@ h = np.ceil(R/K); h
 #     
 # | Classes |    
 # | :-------------:
-# | 21 $|-$ 24 |
-# | 24 $|-$ 27 |  
-# | 27 $|-$ 30 |  
-# | 30 $|-$ 33 | 
-# | 33 $|-$ 36 |  
-# | 36 $|-$ 39 | 
+# | 21 $\vdash$ 24 |
+# | 24 $\vdash$ 27 |  
+# | 27 $\vdash$ 30 |  
+# | 30 $\vdash$ 33 | 
+# | 33 $\vdash$ 36 |  
+# | 36 $\vdash$ 39 | 
 
 # In[12]:
 
@@ -193,12 +193,12 @@ bin_
 # 
 # | Classes |   Frequência |
 # | :-------------:| :-------------:|
-# | 21 $|\!-$ 24 | 7 |
-# | 24 $|\!-$ 27 | 9 |  
-# | 27 $|\!-$ 30 | 1 |  
-# | 30 $|\!-$ 33 | 5 | 
-# | 33 $|\!-$ 36 | 7 | 
-# | 36 $|\!-$ 39 | 1 | 
+# | 21 $\vdash$ 24 | 7 |
+# | 24 $\vdash$ 27 | 9 |  
+# | 27 $\vdash$ 30 | 1 |  
+# | 30 $\vdash$ 33 | 5 | 
+# | 33 $\vdash$ 36 | 7 | 
+# | 36 $\vdash$ 39 | 1 | 
 # 
 # No *pandas*, a função `cut` cria classes a partir dos dados e o método `value_counts()` cria uma tabela de frequências.
 
@@ -338,7 +338,7 @@ z4.mode()
 # 
 # - $\{1, 2, 4, 5, 8\}$. Como $n$ é ímpar, $E_{Md} = 3$, e $Md = 4$.
 # 
-# - $\{2, 2, 4, 7, 8, 10\}$. Aqui, $n$ é par. Assim, $E_{\rm  Md,1} = \frac{6}{2} = 3$ e $E_{\rm Md,2} = \frac{6}{2}+1 = 4$. Daí ${ Md} = \frac{4+7}{2} = 5,5$.
+# - $\{2, 2, 4, 7, 8, 10\}$. Aqui, $n$ é par. Assim, $E_{Md,1} = \frac{6}{2} = 3$ e $E_{Md,2} = \frac{6}{2}+1 = 4$. Daí ${Md} = \frac{4+7}{2} = 5,5$.
 #     
 # * Para Series e DataFrames o método `median()` retorna a mediana dos valores.
 
@@ -459,8 +459,10 @@ z2.quantile([0.33,0.66])
 # ### Amplitude
 # 
 # A amplitude $R$ fornece a maior variação possível dos dados. Ela é dada pela fórmula:
-# $$R = X_{\max} -  X_{\min},$$
-# onde $X_{\max}$ é o valor máximo $X_{\min}$ o mínimo entre os dados.
+# 
+# $$R = X_{max} -  X_{min},$$
+# 
+# onde $X_{max}$ é o valor máximo $X_{min}$ o mínimo entre os dados.
 # 
 # Para *Series* e *DataFrames* os métodos `max()` e `min()` retornam respectivamente o máximo e o mínimo.
 
@@ -474,23 +476,17 @@ R = pd.Series(dados).max()-pd.Series(dados).min(); R
 # 
 # Para medir a dispersão dos dados em relação à média, é interessante analisar os desvios em torno da média, isto é, fazer a análise dos desvios:
 # 
-# $$
-# d_i=(X_i-\overline{X}).
-# $$
+# $$d_i=(X_i-\overline{X}).$$
 # 
 # Porém, a soma de todos os desvios é igual a zero, como podemos verificar com
-# $$
-# \sum_{i=1}^{n} d_i= \sum_{i=1}^{n} (X_i-\overline{X})= \sum_{i=1}^{n}X_i-\sum_{i=1}^{n}\overline{X}=\sum_{i=1}^{n}X_i-{n}\overline{X}=
-# $$
 # 
-# $$
-# =\sum_{i=1}^{n}X_i-n\frac{\sum_{i=1}^{n}X_i}{n}= \sum_{i=1}^{n}X_i-\sum_{i=1}^{n}X_i=0.
-# $$
+# $$\sum_{i=1}^{n} d_i= \sum_{i=1}^{n} (X_i-\overline{X})= \sum_{i=1}^{n}X_i-\sum_{i=1}^{n}\overline{X}=\sum_{i=1}^{n}X_i-{n}\overline{X}=$$
+# 
+# $$=\sum_{i=1}^{n}X_i-n\frac{\sum_{i=1}^{n}X_i}{n}= \sum_{i=1}^{n}X_i-\sum_{i=1}^{n}X_i=0.$$
 
 # Logo, será preciso encontrar uma maneira de se trabalhar com os desvios sem que a soma dê zero. Dessa forma, define-se o *desvio médio* $DM$ pela fórmula:
-# $$
-# DM=\sum_{i=1}^{n} \frac{|d_i|}{n}= \sum_{i=1}^{n} \frac{|X_i-\overline{X}|}{n}.
-# $$
+# 
+# $$DM=\sum_{i=1}^{n} \frac{|d_i|}{n}= \sum_{i=1}^{n} \frac{|X_i-\overline{X}|}{n}.$$
 # 
 # Para *Series* e *DataFrames* o método `mad()` retorna a *desvio médio* dos valores.
 
@@ -521,9 +517,8 @@ pd.Series(z3).mad()
 # ### Variância
 # 
 # A *variância* $\sigma^2$ é a medida de dispersão mais utilizada. Ela é dada pelo quociente entre a soma dos quadrados dos desvios e o número de elementos, cuja fórmula é dada por:
-# $$
-# \sigma^2=\sum_{i=1}^{N} \frac{d_i^2}{N}= \sum_{i=1}^{N} \frac{(X_i-\overline{X})^2}{N},
-# $$
+# 
+# $$\sigma^2=\sum_{i=1}^{N} \frac{d_i^2}{N}= \sum_{i=1}^{N} \frac{(X_i-\overline{X})^2}{N},$$
 # 
 # onde $\sigma^2$ indica a variância populacional (lê-se "sigma ao quadrado" ou "sigma dois"). Neste caso, $\overline{X}$ e $N$ na formúla representam a média populacional e o tamanho populacional, respectivamente.
 
