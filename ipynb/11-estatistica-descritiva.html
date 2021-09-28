@@ -341,15 +341,30 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#distribuicao-de-frequencia">
-   Distribuição de Frequência
+  <a class="reference internal nav-link" href="#populacao-e-amostra">
+   População e amostra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analise-de-dados-exploratoria">
+   Análise de dados exploratória
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#descricao-de-dados">
+   Descrição de dados
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#construcao-de-uma-distribuicao-de-frequencia">
-     Construção de uma distribuição de frequência
+    <a class="reference internal nav-link" href="#distribuicao-de-frequencia">
+     Distribuição de frequência
     </a>
     <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#construcao-de-uma-distribuicao-de-frequencia">
+       Construção de uma distribuição de frequência
+      </a>
+     </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#rol-de-dados">
        Rol de dados
@@ -357,7 +372,7 @@
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#amplitude-total">
-       Amplitude Total
+       Amplitude total
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -366,71 +381,68 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#numero-de-classes">
-       Número de Classes
+      <a class="reference internal nav-link" href="#distribuicoes-e-histogramas">
+       Distribuições e histogramas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numero-de-classes-e-binning">
+       Número de classes e
+       <em>
+        binning
+       </em>
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#amplitude-das-classes">
-       Amplitude das Classes
+       Amplitude das classes
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#limites-das-classes">
-       Limites das Classes
+       Limites das classes
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#frequencia-dos-dados">
-       Frequência dos Dados
+       Frequência dos dados
       </a>
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aplicacoes-a-testes-aleatorios">
+     Aplicações a testes aleatórios
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#medidas-de-posicao">
-   Medidas de Posição
+  <a class="reference internal nav-link" href="#medidas-de-tendencia-central">
+   Medidas de Tendência Central
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#media">
      Média
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#media-para-dados-agrupados-em-intervalos">
-       Média para dados agrupados em intervalos
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#moda">
      Moda
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#moda-em-dados-agrupados-em-intervalos">
-       Moda em dados agrupados em intervalos
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mediana">
      Mediana
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mediana-em-dados-agrupados-em-intervalos">
-       Mediana em dados agrupados em intervalos
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantis-e-percentis">
+   Quantis e percentis
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#medidas-de-dispersao">
@@ -446,13 +458,6 @@
     <a class="reference internal nav-link" href="#desvio-medio">
      Desvio Médio
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#desvio-medio-em-dados-agrupados-em-intervalos">
-       Desvio médio em dados agrupados em intervalos
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variancia">
@@ -463,33 +468,19 @@
     <a class="reference internal nav-link" href="#variancia-amostral">
      Variância Amostral
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#variancia-amostral-em-dados-agrupados-em-intervalos">
-       Variância amostral em dados agrupados em intervalos
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#desvio-padrao">
      Desvio Padrão
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#desvio-padrao-para-dados-agrupados-em-intervalos">
-       Desvio Padrão para dados agrupados em intervalos
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resumo-estatistico-de-uma-serie-ou-dataframe">
+  <a class="reference internal nav-link" href="#resumo-estatistico-de-uma-series-ou-dataframe">
    Resumo Estatístico de uma
    <em>
-    Serie
+    Series
    </em>
    ou
    <em>
@@ -510,8 +501,18 @@
                 
   <section id="estatistica-descritiva">
 <h1>Estatística Descritiva<a class="headerlink" href="#estatistica-descritiva" title="Permalink to this headline">¶</a></h1>
-<p>Neste capítulo, apresentaremos vários métodos desenvolvidos para <em>Series</em> e <em>DataFrames</em> relacionados à Estatística Descritiva.</p>
-<p>Começaremos importando as bibliotecas <em>pandas</em> e <em>numpy</em>.</p>
+<p>Estatística é um domínio do conhecimento que se preocupar em compreender dados. Ela se ampara solidamente em métodos matemáticos e pode ser dividida em dois ramos: i) <em>estatística inferencial</em>, que se preocupa em tirar conclusões dos dados analisados, e ii) <em>estatística descritiva</em>, que procura apenas descrever dados quantitativamente valendo-se de conceitos como “amostra” e “população” e apresentado os dados de modo gerenciável.</p>
+<section id="populacao-e-amostra">
+<h2>População e amostra<a class="headerlink" href="#populacao-e-amostra" title="Permalink to this headline">¶</a></h2>
+<p>Uma <em>população</em> é uma coleção de objetos, ou unidades, sobre a qual a informação é procurada. Uma <em>amostra</em> é uma parte da população observada.</p>
+</section>
+<section id="analise-de-dados-exploratoria">
+<h2>Análise de dados exploratória<a class="headerlink" href="#analise-de-dados-exploratoria" title="Permalink to this headline">¶</a></h2>
+<p>Dados extraídos a partir de medições realizadas em amostras representativas constituem o que chamamos de <em>observações</em>. Medições e categorias representam uma <em>distribuição amostral</em> de uma certa variável, as quais podem ser usadas para representar aproximadamente a <em>distribuição populacional</em> dessa variável. O papel da análise de dados exploratória é dar subsídios para visualizar e resumir distribuições amostrais de modo que possamos levantar hipóteses sobre a população envolvida.</p>
+</section>
+<section id="descricao-de-dados">
+<h2>Descrição de dados<a class="headerlink" href="#descricao-de-dados" title="Permalink to this headline">¶</a></h2>
+<p>Neste capítulo, apresentaremos vários métodos desenvolvidos para <em>Series</em> e <em>DataFrames</em> relacionados à Estatística Descritiva. Começaremos importando as bibliotecas <em>pandas</em> e <em>numpy</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -521,13 +522,17 @@
 </div>
 </div>
 <section id="distribuicao-de-frequencia">
-<h2>Distribuição de Frequência<a class="headerlink" href="#distribuicao-de-frequencia" title="Permalink to this headline">¶</a></h2>
-<p>Uma distribuição de frequência é uma tabela que contém um resumo dos dados obtido em uma amostra. A distribuição é organizada em formato de tabela e cada entrada da tabela contém a frequência dos dados em um determinado intervalo, ou em um grupo.</p>
-<p>Abaixo vemos um exemplo simplificado de tabela de distribuição de frequência:</p>
+<h3>Distribuição de frequência<a class="headerlink" href="#distribuicao-de-frequencia" title="Permalink to this headline">¶</a></h3>
+<p>Uma distribuição de frequência é uma tabela que contém um resumo das observações. A distribuição é organizada em uma tabela que contém   <em>intervalos de classe (grupos)</em> e <em>frequências</em> correspondentes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Intervalos de classe são formados por um limite inferior L e um superior S. Eles costumam ser expressos por um “T” horizontal, em que <span class="math notranslate nohighlight">\(L \vdash S\)</span> indica o intervalo <span class="math notranslate nohighlight">\([L,S)\)</span>.</p>
+</div>
+<p>Abaixo vemos um exemplo simplificado de tabela de distribuição de frequência (número de alunos) e intervalos de classe de alturas para uma amostra de alunos.</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p>Alturas em metros</p></th>
-<th class="text-align:center head"><p>Número dos Alunos</p></th>
+<tr class="row-odd"><th class="text-align:center head"><p>Altura (m)</p></th>
+<th class="text-align:center head"><p>No. de alunos</p></th>
 </tr>
 </thead>
 <tbody>
@@ -549,11 +554,9 @@
 </tbody>
 </table>
 <section id="construcao-de-uma-distribuicao-de-frequencia">
-<h3>Construção de uma distribuição de frequência<a class="headerlink" href="#construcao-de-uma-distribuicao-de-frequencia" title="Permalink to this headline">¶</a></h3>
+<h4>Construção de uma distribuição de frequência<a class="headerlink" href="#construcao-de-uma-distribuicao-de-frequencia" title="Permalink to this headline">¶</a></h4>
 <p>Para ilustrar como se constrói uma distribuição de frequência, vamos considerar um exemplo específico. Suponha que uma pesquisa foi feita e o seguinte conjunto de dados foi obtido:</p>
-<ul class="simple">
-<li><p><strong>Dados Brutos</strong>: 24-23-22-28-35-21-23-33-34-24-21-25-36-26-22-30-32-25-26-33-34-21-31-25-31-26-25-35-33-31.</p></li>
-</ul>
+<p><strong>Dados Brutos</strong>: 24-23-22-28-35-21-23-33-34-24-21-25-36-26-22-30-32-25-26-33-34-21-31-25-31-26-25-35-33-31.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados</span> <span class="o">=</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">31</span><span class="p">]</span>
@@ -561,12 +564,11 @@
 </div>
 </div>
 </div>
+</section>
 <section id="rol-de-dados">
 <h4>Rol de dados<a class="headerlink" href="#rol-de-dados" title="Permalink to this headline">¶</a></h4>
 <p>A primeira coisa a fazer é ordenar os dados do menor para o maior, formando o <em>rol de dados</em>:</p>
-<ul class="simple">
-<li><p><strong>Rol de dados</strong>: 21-21-21-22-22-23-23-24-25-25-25-25-26-26-26-28-30-31-31-31-32-33-33-33-34-34-34-35-35-36.</p></li>
-</ul>
+<p><strong>Rol de dados</strong>: 21-21-21-22-22-23-23-24-25-25-25-25-26-26-26-28-30-31-31-31-32-33-33-33-34-34-34-35-35-36.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
@@ -582,12 +584,11 @@
 </div>
 </section>
 <section id="amplitude-total">
-<h4>Amplitude Total<a class="headerlink" href="#amplitude-total" title="Permalink to this headline">¶</a></h4>
-<p>Em seguida, calculamos a <em>amplitude total</em>, ou seja, o maior valor obtido na amostra subtraído do menor
-valor obtido na amostra:</p>
-<ul class="simple">
-<li><p><strong>Amplitude Total</strong>: R = 36-21 = 15.</p></li>
-</ul>
+<h4>Amplitude total<a class="headerlink" href="#amplitude-total" title="Permalink to this headline">¶</a></h4>
+<p>Em seguida, calculamos a <em>amplitude total</em> <span class="math notranslate nohighlight">\(R\)</span> pela diferença entre o maior <span class="math notranslate nohighlight">\(M\)</span> e menor <span class="math notranslate nohighlight">\(m\)</span> valores obtidos na amostra.</p>
+<div class="math notranslate nohighlight">
+\[R = M - m\]</div>
+<p>Para o caso acima, <span class="math notranslate nohighlight">\(R = 36-21 = 15\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dados</span><span class="p">);</span> <span class="n">R</span>
@@ -604,9 +605,6 @@ valor obtido na amostra:</p>
 <section id="tamanho-amostral">
 <h4>Tamanho Amostral<a class="headerlink" href="#tamanho-amostral" title="Permalink to this headline">¶</a></h4>
 <p>Vamos calcular agora o tamanho amostral, ou seja, o número de observações obtidas na amostra.</p>
-<ul class="simple">
-<li><p><strong>Tamanho Amostral</strong>: n = 30.</p></li>
-</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dados</span><span class="p">);</span> <span class="n">n</span>
@@ -619,7 +617,7 @@ valor obtido na amostra:</p>
 </div>
 </div>
 </div>
-<p>Para <em>Series</em> e <em>DataFrames</em> o método <code class="docutils literal notranslate"><span class="pre">count()</span></code> retorna a total de valores.</p>
+<p>Para <em>Series</em> e <em>DataFrames</em>, podemos usar o método <code class="docutils literal notranslate"><span class="pre">count()</span></code> para retornar o tamanho amostral.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">();</span> <span class="n">n</span>
@@ -633,56 +631,81 @@ valor obtido na amostra:</p>
 </div>
 </div>
 </section>
-<section id="numero-de-classes">
-<h4>Número de Classes<a class="headerlink" href="#numero-de-classes" title="Permalink to this headline">¶</a></h4>
-<p>Dividiremos a amostra em uma quantidade de grupos que formarão os intervalos. Cada grupo é chamado de <em>classe</em>. Assim, definiremos o <em>número de classes</em> a ser considerado na tabela de <em>distribuição de frequência</em>:</p>
+<section id="distribuicoes-e-histogramas">
+<h4>Distribuições e histogramas<a class="headerlink" href="#distribuicoes-e-histogramas" title="Permalink to this headline">¶</a></h4>
+<p>Para ter uma visão ampla sobre a distribuição de frequências para o nosso conjunto de dados, podemos plotar o histograma com <code class="docutils literal notranslate"><span class="pre">plot.hist</span></code> diretamente a partir da <em>Series</em> de dados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">);</span>
+<span class="n">d</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1b3ac9&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-estatistica-descritiva_17_0.png" src="../_images/11-estatistica-descritiva_17_0.png" />
+</div>
+</div>
+</section>
+<section id="numero-de-classes-e-binning">
+<h4>Número de classes e <em>binning</em><a class="headerlink" href="#numero-de-classes-e-binning" title="Permalink to this headline">¶</a></h4>
+<p>A divisão das amostras em intervalos de classe pode ser chamada de <em>binning</em>. <em>Bin</em> é o termo utilizado para uma barra vertical no histograma. Por padrão, <code class="docutils literal notranslate"><span class="pre">plot.hist</span></code> usa 10 bins.</p>
+<p>Há mais de uma forma de definir o <em>número de (intervalos) de classe</em> <span class="math notranslate nohighlight">\(K\)</span>. A seguir, temos duas regras práticas de decisão:</p>
 <ul class="simple">
-<li><p><strong>Número de Classes</strong>: K.</p>
-<ul>
-<li><p>K=5 para <span class="math notranslate nohighlight">\(n\leq 25\)</span> e <span class="math notranslate nohighlight">\(K\approx \sqrt{n}\)</span>, para <span class="math notranslate nohighlight">\(n&gt;25\)</span>.</p></li>
-<li><p>Fórmula de Sturges: <span class="math notranslate nohighlight">\(K\approx 1+3,22\log n\)</span>.</p></li>
+<li><p>Regra 1: <span class="math notranslate nohighlight">\(K=5\)</span>, para <span class="math notranslate nohighlight">\(n\leq 25\)</span> e <span class="math notranslate nohighlight">\(K \approx \sqrt{n}\)</span>, para <span class="math notranslate nohighlight">\(n&gt;25\)</span>.</p></li>
+<li><p>Regra 2 (Fórmula de Sturges): <span class="math notranslate nohighlight">\(K\approx 1 + 3,22\log n\)</span>.</p></li>
 </ul>
-</li>
-</ul>
-<p>Logo, pela primeira regra temos <span class="math notranslate nohighlight">\(K=\sqrt{30}\approx 5,48 \approx 6\)</span>, e pela segunda regra
-<span class="math notranslate nohighlight">\(K\approx 1+3,22\log 30\approx 5,75 \approx 6.\)</span> Desta forma, em ambos os casos temos <span class="math notranslate nohighlight">\(K=6\)</span>, que será o valor considerado.</p>
-<p>Número de classes padrão:</p>
+<p>Vamos aplicá-las aos nossos dados:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">25</span><span class="p">:</span>
-    <span class="n">K</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">K</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-<span class="n">K</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># binning usando np.ceil</span>
+<span class="k">def</span> <span class="nf">binning</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">):</span>       
+    
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="nb">list</span><span class="p">):</span> <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>            
+    
+    <span class="k">if</span> <span class="n">rule</span> <span class="o">==</span> <span class="s1">&#39;standard&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">25</span><span class="p">:</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">K</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+            
+    <span class="k">if</span> <span class="n">rule</span> <span class="o">==</span> <span class="s1">&#39;sturges&#39;</span><span class="p">:</span> 
+        <span class="n">K</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.22</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">K</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K1</span><span class="p">,</span><span class="n">K2</span> <span class="o">=</span> <span class="n">binning</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">),</span> <span class="n">binning</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;sturges&#39;</span><span class="p">);</span> 
+<span class="n">K1</span><span class="p">,</span><span class="n">K2</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6, 6)
 </pre></div>
 </div>
 </div>
 </div>
-<p>Número de classes fórmula de Sturges:</p>
+<p>Uma vez que ambos os valores são iguais, podemos tomar <span class="math notranslate nohighlight">\(K = K_1 = K_2 = 6\)</span> e plotar o histograma especificando <code class="docutils literal notranslate"><span class="pre">bins</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">KFS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">3.22</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">n</span><span class="p">));</span> <span class="n">KFS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="n">K1</span>
+<span class="n">d</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="n">K</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1b3ac9&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.0
-</pre></div>
-</div>
+<img alt="../_images/11-estatistica-descritiva_22_0.png" src="../_images/11-estatistica-descritiva_22_0.png" />
 </div>
 </div>
 </section>
 <section id="amplitude-das-classes">
-<h4>Amplitude das Classes<a class="headerlink" href="#amplitude-das-classes" title="Permalink to this headline">¶</a></h4>
-<p>O próximo passo é saber o comprimento de cada intervalo a ser considerado, ou seja, calcular a amplitude de cada classe. Queremos que todas as classes tenham a mesma amplitude e portanto, temos:</p>
-<ul class="simple">
-<li><p><strong>Amplitude das Classes</strong>: <span class="math notranslate nohighlight">\(h=\frac{R}{K}=\frac{15}{6}=2,5\approx 3\)</span>.</p></li>
-</ul>
+<h4>Amplitude das classes<a class="headerlink" href="#amplitude-das-classes" title="Permalink to this headline">¶</a></h4>
+<p>Para determinar o comprimento de cada intervalo, ou seja, a amplitude de cada classe <span class="math notranslate nohighlight">\(h\)</span>, podemos adotar uma divisão uniforme, de modo que:</p>
+<div class="math notranslate nohighlight">
+\[h=\frac{R}{K}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">R</span><span class="o">/</span><span class="n">K</span><span class="p">);</span> <span class="n">h</span>
@@ -697,8 +720,8 @@ valor obtido na amostra:</p>
 </div>
 </section>
 <section id="limites-das-classes">
-<h4>Limites das Classes<a class="headerlink" href="#limites-das-classes" title="Permalink to this headline">¶</a></h4>
-<p>Agora definimos os <em>limites das classes</em>. Para tanto, começamos com o menor valor obtido da amostra, ou equivalentemente, o primeiro valor do <em>rol de dados</em>, e vamos somando a amplitude para definir cada limite de intervalo:</p>
+<h4>Limites das classes<a class="headerlink" href="#limites-das-classes" title="Permalink to this headline">¶</a></h4>
+<p>Os <em>limites das classes</em> são estabelecidos da seguinte forma. Começando a partir do menor valor obtido da amostra, ou equivalentemente, o primeiro valor do <em>rol de dados</em>, somamos a amplitude de maneira progressiva. Dessa maneira, as seguintes classes serão obtidas.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Classes</p></th>
@@ -721,7 +744,8 @@ valor obtido na amostra:</p>
 </table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">h</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)];</span> <span class="n">bins</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bin_</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">h</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="o">+</span><span class="mi">1</span><span class="p">)];</span> 
+<span class="n">bin_</span>
 </pre></div>
 </div>
 </div>
@@ -733,10 +757,8 @@ valor obtido na amostra:</p>
 </div>
 </section>
 <section id="frequencia-dos-dados">
-<h4>Frequência dos Dados<a class="headerlink" href="#frequencia-dos-dados" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>Agora, calculamos as frequências dos dados em cada intervalo e, chamada também de <em>frequência absoluta</em>. E finalmente montamos a tabela de <em>Distribuição de Frequência</em>.</p></li>
-</ul>
+<h4>Frequência dos dados<a class="headerlink" href="#frequencia-dos-dados" title="Permalink to this headline">¶</a></h4>
+<p>Ao calcular a frequência de cada intervalo, a chamada <em>frequência absoluta</em>, montamos a seguinte tabela de <em>distribuição de frequências</em> será obtida.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Classes</p></th>
@@ -764,10 +786,55 @@ valor obtido na amostra:</p>
 </tr>
 </tbody>
 </table>
-<p>No <em>pandas</em>, a função <code class="docutils literal notranslate"><span class="pre">cut</span></code> cria classes a partir dos dados e o método <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> cria uma tabela de frequências. Combinando os dois obtemos uma <em>Distribuição de Frequência</em>.</p>
+<p>No <em>pandas</em>, a função <code class="docutils literal notranslate"><span class="pre">cut</span></code> cria classes a partir dos dados e o método <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> cria uma tabela de frequências.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bin_</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[24, 27), [21, 24), [21, 24), [27, 30), [33, 36), ..., [24, 27), [24, 27), [33, 36), [33, 36), [30, 33)]
+Length: 30
+Categories (6, interval[int64]): [[21, 24) &lt; [24, 27) &lt; [27, 30) &lt; [30, 33) &lt; [33, 36) &lt; [36, 39)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># labels</span>
+<span class="n">T</span><span class="o">.</span><span class="n">codes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 0, 0, 2, 4, 0, 0, 4, 4, 1, 0, 1, 5, 1, 0, 3, 3, 1, 1, 4, 4, 0,
+       3, 1, 3, 1, 1, 4, 4, 3], dtype=int8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># categorias</span>
+<span class="n">T</span><span class="o">.</span><span class="n">categories</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IntervalIndex([[21, 24), [24, 27), [27, 30), [30, 33), [33, 36), [36, 39)],
+              closed=&#39;left&#39;,
+              dtype=&#39;interval[int64]&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tabela de frequências</span>
+<span class="n">T</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
@@ -783,219 +850,133 @@ dtype: int64
 </div>
 </div>
 </div>
-<p>Neste ponto, definiremos algumas funções para ajudar-nos a automatizar a criação de uma tabela de frequências.</p>
+</section>
+</section>
+<section id="aplicacoes-a-testes-aleatorios">
+<h3>Aplicações a testes aleatórios<a class="headerlink" href="#aplicacoes-a-testes-aleatorios" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">n_classes</span><span class="p">(</span><span class="n">dados</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="s1">&#39;Padrão&#39;</span><span class="p">):</span>
-    <span class="n">n_obs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">tipo</span><span class="o">==</span><span class="s1">&#39;Padrão&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">5</span> <span class="k">if</span> <span class="n">n_obs</span><span class="o">&lt;</span><span class="mi">25</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_obs</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">tipo</span><span class="o">==</span><span class="s1">&#39;Sturges&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">n_obs</span><span class="p">)))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">amplitude_classes</span><span class="p">(</span><span class="n">dados</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="s1">&#39;Padrão&#39;</span><span class="p">,</span> <span class="n">arredondar</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="n">amplitude</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">dados</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">dados</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">/</span><span class="n">n_classes</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="n">tipo</span><span class="p">))</span> \
-    <span class="k">if</span> <span class="n">arredondar</span> <span class="k">else</span> <span class="p">(</span><span class="n">dados</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">dados</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">/</span><span class="n">n_classes</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="n">tipo</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">amplitude</span>
-
-<span class="k">def</span> <span class="nf">construir_tabela</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="s1">&#39;Padrão&#39;</span><span class="p">,</span> <span class="n">direita</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">arredondar</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="n">dados_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
-    <span class="n">n_class</span> <span class="o">=</span> <span class="n">n_classes</span><span class="p">(</span><span class="n">dados_series</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="n">tipo</span><span class="p">)</span>
-    <span class="n">amp_class</span> <span class="o">=</span> <span class="n">amplitude_classes</span><span class="p">(</span><span class="n">dados_series</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="n">tipo</span><span class="p">,</span> <span class="n">arredondar</span><span class="o">=</span><span class="n">arredondar</span><span class="p">)</span>
-    <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="n">dados_series</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">amp_class</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_class</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dados_series</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">direita</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Frequência&#39;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">formatar_intervalos</span><span class="p">(</span><span class="n">intervalos</span><span class="p">,</span> <span class="n">prec</span><span class="p">,</span> <span class="n">direita</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>   
-    <span class="n">fechado</span> <span class="o">=</span> <span class="s1">&#39;right&#39;</span> <span class="k">if</span> <span class="n">direita</span> <span class="k">else</span> <span class="s1">&#39;left&#39;</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Interval</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">intervalo</span><span class="o">.</span><span class="n">left</span><span class="p">,</span><span class="n">prec</span><span class="p">),</span> 
-                        <span class="n">right</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">intervalo</span><span class="o">.</span><span class="n">right</span><span class="p">,</span><span class="n">prec</span><span class="p">),</span> <span class="n">closed</span><span class="o">=</span><span class="n">fechado</span><span class="p">)</span> <span class="k">for</span> <span class="n">intervalo</span> <span class="ow">in</span> <span class="n">intervalos</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># função genérica</span>
+<span class="k">def</span> <span class="nf">random_test</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;rand&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">):</span>        
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span><span class="nb">int</span><span class="p">):</span> <span class="n">vals</span> <span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span><span class="nb">tuple</span><span class="p">):</span> <span class="n">vals</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+    
+    <span class="n">z</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;np.random.&#39;</span> <span class="o">+</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">vals</span><span class="p">)</span>    
+    <span class="n">T</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">binning</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">binMethod</span><span class="p">),</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">T</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+<ul class="simple">
+<li><p>Números randômicos</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="s1">&#39;Padrão&#39;</span><span class="p">,</span> <span class="n">prec</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">direita</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">arredondar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exibir_total</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>    
-    <span class="n">df_dist_freq</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">construir_tabela</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="n">tipo</span><span class="p">,</span> <span class="n">direita</span><span class="o">=</span><span class="n">direita</span><span class="p">,</span> <span class="n">arredondar</span><span class="o">=</span><span class="n">arredondar</span><span class="p">))</span>
-    <span class="n">df_dist_freq</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">formatar_intervalos</span><span class="p">(</span><span class="n">df_dist_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">prec</span><span class="p">,</span> <span class="n">direita</span><span class="o">=</span><span class="n">direita</span><span class="p">)</span>
-    <span class="n">df_dist_freq</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df_dist_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Classes&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">exibir_total</span><span class="p">:</span>
-        <span class="n">total_dist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Frequência&#39;</span><span class="p">:</span><span class="n">df_dist_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">])</span>
-        <span class="n">total_dist</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">total_dist</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Classes&#39;</span><span class="p">)</span>
-        <span class="n">df_dist_freq</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_dist_freq</span><span class="p">,</span> <span class="n">total_dist</span><span class="p">])</span>
-    <span class="k">return</span>  <span class="n">df_dist_freq</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Frequência&gt;0&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Exemplos:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z1</span><span class="p">,</span><span class="n">T1</span> <span class="o">=</span> <span class="n">random_test</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;rand&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">)</span>
+<span class="n">z1</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span> <span class="n">T1</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Frequência</th>
-    </tr>
-    <tr>
-      <th>Classes</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>[21.0, 24.0)</th>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>[24.0, 27.0)</th>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>[27.0, 30.0)</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>[30.0, 33.0)</th>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>[33.0, 36.0)</th>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>[36.0, 39.0)</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Total</th>
-      <td>30</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>Exemplo com números aleatórios.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">dist_freq</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.00406, 0.103)    10
+[0.103, 0.201)      10
+[0.201, 0.3)        10
+[0.3, 0.399)         8
+[0.399, 0.498)       9
+[0.498, 0.596)      15
+[0.596, 0.695)       7
+[0.695, 0.794)      12
+[0.794, 0.892)      12
+[0.892, 0.992)       7
+dtype: int64
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Frequência</th>
-    </tr>
-    <tr>
-      <th>Classes</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>[-2.48, -1.48)</th>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>[-1.48, -0.48)</th>
-      <td>43</td>
-    </tr>
-    <tr>
-      <th>[-0.48, 0.52)</th>
-      <td>82</td>
-    </tr>
-    <tr>
-      <th>[0.52, 1.52)</th>
-      <td>47</td>
-    </tr>
-    <tr>
-      <th>[1.52, 2.52)</th>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>[2.52, 3.52)</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Total</th>
-      <td>200</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.4787841627273934
-</pre></div>
-</div>
+<img alt="../_images/11-estatistica-descritiva_35_1.png" src="../_images/11-estatistica-descritiva_35_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z2</span><span class="p">,</span><span class="n">T2</span> <span class="o">=</span> <span class="n">random_test</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;rand&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;sturges&#39;</span><span class="p">)</span>
+<span class="n">z2</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span> <span class="n">T2</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.00688858558626
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.00687, 0.124)    18
+[0.124, 0.241)       5
+[0.241, 0.358)      13
+[0.358, 0.475)      15
+[0.475, 0.592)      11
+[0.592, 0.709)      13
+[0.709, 0.826)      11
+[0.826, 0.944)      14
+dtype: int64
 </pre></div>
 </div>
+<img alt="../_images/11-estatistica-descritiva_36_1.png" src="../_images/11-estatistica-descritiva_36_1.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Distribuição normal</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z3</span><span class="p">,</span><span class="n">T3</span> <span class="o">=</span> <span class="n">random_test</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">)</span>
+<span class="n">z3</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span> <span class="n">T3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.281, -1.696)     4
+[-1.696, -1.111)    10
+[-1.111, -0.525)    10
+[-0.525, 0.0598)    21
+[0.0598, 0.645)     25
+[0.645, 1.23)       16
+[1.23, 1.816)        9
+[1.816, 2.401)       4
+[2.401, 2.986)       0
+[2.986, 3.577)       1
+dtype: int64
+</pre></div>
+</div>
+<img alt="../_images/11-estatistica-descritiva_38_1.png" src="../_images/11-estatistica-descritiva_38_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z4</span><span class="p">,</span><span class="n">T4</span> <span class="o">=</span> <span class="n">random_test</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;sturges&#39;</span><span class="p">)</span>
+<span class="n">z4</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span> <span class="n">T4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.391, -1.724)     1
+[-1.724, -1.057)    12
+[-1.057, -0.391)    18
+[-0.391, 0.276)     24
+[0.276, 0.943)      24
+[0.943, 1.61)       13
+[1.61, 2.277)        7
+[2.277, 2.949)       1
+dtype: int64
+</pre></div>
+</div>
+<img alt="../_images/11-estatistica-descritiva_39_1.png" src="../_images/11-estatistica-descritiva_39_1.png" />
 </div>
 </div>
 </section>
 </section>
-</section>
-<section id="medidas-de-posicao">
-<h2>Medidas de Posição<a class="headerlink" href="#medidas-de-posicao" title="Permalink to this headline">¶</a></h2>
-<p>As medidas de posição são valores que representam a tendência de concentração dos dados observados. As mais importantes são as <em>medidas de tendência central</em>.  As três medidas de tendência central mais utilizadas são: <em>média</em>, <em>moda</em> e <em>mediana</em>.</p>
+<section id="medidas-de-tendencia-central">
+<h2>Medidas de Tendência Central<a class="headerlink" href="#medidas-de-tendencia-central" title="Permalink to this headline">¶</a></h2>
+<p>As <em>medidas de tendência central</em> (ou de centralidade) são as mais importantes de uma classe maior chamada de <em>medidas de posição</em>. Elas representam a tendência de concentração dos dados observados. A seguir, exploraremos algumas medidas de tendência central.</p>
 <section id="media">
 <h3>Média<a class="headerlink" href="#media" title="Permalink to this headline">¶</a></h3>
-<p>É um valor que representa uma característica do conjunto de dados. Essa característica é tal que a soma dos dados é preservada. A média é obtida a partir de todos os elementos da distribuição e do tamanho da amostra.</p>
-<p><em>Notação</em>: representamos a média de um conjunto de dados por <span class="math notranslate nohighlight">\(\overline{X}\)</span>. Calculamos a média aritmética pela fórmula:
-$<span class="math notranslate nohighlight">\(\overline{X}=\sum_{i=1}^{n}\frac{X_i}{n}.\)</span>$</p>
+<p>Quantidade que tem por característica dar um “resumo” para o conjunto de dados. A média <span class="math notranslate nohighlight">\(\overline{X}\)</span> é obtida a partir de todos os elementos da distribuição e do tamanho da amostra.</p>
+<p>Calculamos a média aritmética pela fórmula:</p>
+<div class="math notranslate nohighlight">
+\[\overline{X}=\sum_{i=1}^{n}\frac{X_i}{n}.\]</div>
 <p>Para <em>Series</em> e <em>DataFrames</em> o método <code class="docutils literal notranslate"><span class="pre">mean()</span></code> retorna a média dos valores.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1009,145 +990,17 @@ $<span class="math notranslate nohighlight">\(\overline{X}=\sum_{i=1}^{n}\frac{X
 </div>
 </div>
 </div>
-<section id="media-para-dados-agrupados-em-intervalos">
-<h4>Média para dados agrupados em intervalos<a class="headerlink" href="#media-para-dados-agrupados-em-intervalos" title="Permalink to this headline">¶</a></h4>
-<p>No caso em que temos os dados agrupados em intervalos, utilizamos a frequência e o ponto médio de cada classes para calcular a média pela fórmula:
-$<span class="math notranslate nohighlight">\(\overline{X}=\sum_{i=1}^{K}\frac{F_i\cdot pm_i}{n},\)</span><span class="math notranslate nohighlight">\(
-onde \)</span>K<span class="math notranslate nohighlight">\( é o número de classes, \)</span>F_i<span class="math notranslate nohighlight">\( é a frequência da \)</span>i<span class="math notranslate nohighlight">\(-ésima classe e \)</span>pm_i<span class="math notranslate nohighlight">\( é o ponto médio da \)</span>i$-ésima classe.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dist_freq_pm</span> <span class="o">=</span> <span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">exibir_total</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">intervalos</span> <span class="o">=</span> <span class="n">dist_freq_pm</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span>
-<span class="n">dist_freq_pm</span><span class="p">[</span><span class="s1">&#39;Ponto Médio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">intervalo</span><span class="o">.</span><span class="n">left</span><span class="o">+</span><span class="n">intervalo</span><span class="o">.</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">intervalo</span> <span class="ow">in</span> <span class="n">intervalos</span><span class="p">]</span>
-<span class="n">dist_freq_pm</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Frequência</th>
-      <th>Ponto Médio</th>
-    </tr>
-    <tr>
-      <th>Classes</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>[21.0, 24.0)</th>
-      <td>7</td>
-      <td>22.5</td>
-    </tr>
-    <tr>
-      <th>[24.0, 27.0)</th>
-      <td>9</td>
-      <td>25.5</td>
-    </tr>
-    <tr>
-      <th>[27.0, 30.0)</th>
-      <td>1</td>
-      <td>28.5</td>
-    </tr>
-    <tr>
-      <th>[30.0, 33.0)</th>
-      <td>5</td>
-      <td>31.5</td>
-    </tr>
-    <tr>
-      <th>[33.0, 36.0)</th>
-      <td>7</td>
-      <td>34.5</td>
-    </tr>
-    <tr>
-      <th>[36.0, 39.0)</th>
-      <td>1</td>
-      <td>37.5</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media</span> <span class="o">=</span> <span class="p">(</span><span class="n">dist_freq_pm</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">dist_freq_pm</span><span class="p">[</span><span class="s1">&#39;Ponto Médio&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">dist_freq_pm</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">media</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">media_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">!=</span> <span class="s1">&#39;IntervalArray&#39;</span><span class="p">):</span>
-        <span class="n">d_freq</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">intervalos</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span>
-    <span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Ponto Médio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">intervalo</span><span class="o">.</span><span class="n">left</span><span class="o">+</span><span class="n">intervalo</span><span class="o">.</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">intervalo</span> <span class="ow">in</span> <span class="n">intervalos</span><span class="p">]</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Ponto Médio&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.145
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="moda">
 <h3>Moda<a class="headerlink" href="#moda" title="Permalink to this headline">¶</a></h3>
-<p>Definimos a moda de um conjunto de dados como o valor mais frequente deste conjunto.</p>
-<p><em>Notação</em>: representamos a moda de um conjunto de dados por <span class="math notranslate nohighlight">\(Mo\)</span>.</p>
-<p><em>Exemplo</em>:</p>
+<p>Definimos a moda <span class="math notranslate nohighlight">\(Mo\)</span> de um conjunto de dados como o valor mais frequente deste conjunto.</p>
+<p>Exemplos:</p>
 <ul class="simple">
-<li><p>1, 2, 4, 5 e 8 - não existe valor mais frequente - não existe moda (Amodal).</p></li>
-<li><p>2, 2, 3, 7 e 8 - <span class="math notranslate nohighlight">\(Mo\)</span> = 2 (Unimodal).</p></li>
-<li><p>1, 1, 10, 5, 5, 8, 7, 2 - <span class="math notranslate nohighlight">\(Mo\)</span> = 1 e 5 (Bimodal).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{1, 2, 4, 5, 8\}\)</span>. Não há moda (amodal).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{2, 2, 3, 7, 8\}\)</span>. Para esta amostra, <span class="math notranslate nohighlight">\(Mo\)</span> = 2 (unimodal).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{1, 1, 10, 5, 5, 8, 7, 2\}\)</span>. Para esta amostra, <span class="math notranslate nohighlight">\(Mo\)</span> = 1 e <span class="math notranslate nohighlight">\(Mo=\)</span>5 (bimodal).</p></li>
 </ul>
-<p>Para Series e DataFrames o método <code class="docutils literal notranslate"><span class="pre">mode()</span></code> retorna a moda dos valores.</p>
+<p>Para <em>Series</em> e <em>DataFrames</em>, o método <code class="docutils literal notranslate"><span class="pre">mode()</span></code> retorna a moda dos valores.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
@@ -1163,126 +1016,52 @@ dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     -2.478784
-1     -2.433043
-2     -2.046935
-3     -2.006870
-4     -2.003065
-         ...   
-195    2.122973
-196    2.166357
-197    2.177801
-198    2.352014
-199    3.006889
-Length: 200, dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-<section id="moda-em-dados-agrupados-em-intervalos">
-<h4>Moda em dados agrupados em intervalos<a class="headerlink" href="#moda-em-dados-agrupados-em-intervalos" title="Permalink to this headline">¶</a></h4>
-<p>Neste caso, utiliza-se a fórmula de Czuber identificando a <em>classe modal</em>, isto é, a classe com a maior frequencia.</p>
-<div class="math notranslate nohighlight">
-\[{\rm Mo}=l_{\rm Mo} + \left[\frac{h(F_{\rm Mo} - F_{\rm ant})}{2 F_{\rm Mo}-(F_{\rm ant}+F_{\rm pos})} \right],\]</div>
-<p>onde:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(l_{\rm Mo}\)</span> é o limite inferior da <em>classe modal</em>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(h\)</span> é a amplitude intervalar,</p></li>
-<li><p><span class="math notranslate nohighlight">\(F_{\rm Mo}\)</span> é a frequência da <em>classe modal</em>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(F_{\rm ant}\)</span> é a frequência da classe anterior à <em>classe modal</em>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(F_{\rm pos}\)</span> é a frequência da classe posterior à classe modal.</p></li>
-</ul>
-<p>Aqui, definiremos algumas funções para automatizar processos.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">encontra_indices_modais</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">!=</span> <span class="s1">&#39;IntervalArray&#39;</span><span class="p">):</span>
-        <span class="n">d_freq</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">d_temp</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span>
-    <span class="k">return</span> <span class="p">((</span><span class="n">d_temp</span><span class="p">[</span><span class="n">d_temp</span> <span class="o">==</span> <span class="n">d_temp</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">encontra_freq_anterior</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="n">idx_modal</span> <span class="o">=</span> <span class="n">encontra_indices_modais</span><span class="p">(</span><span class="n">d_freq</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
-    <span class="n">idx_anterior</span> <span class="o">=</span> <span class="n">idx_modal</span><span class="o">-</span><span class="mi">1</span>
-    <span class="n">idx_anterior</span><span class="p">[</span><span class="n">idx_anterior</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-    <span class="n">freq_anterior</span> <span class="o">=</span> <span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx_anterior</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">idx_anterior</span><span class="p">)]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">idx_anterior</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
-        <span class="n">freq_anterior</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">freq_anterior</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">freq_anterior</span>
-
-<span class="k">def</span> <span class="nf">encontra_freq_posterior</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="n">idx_modal</span> <span class="o">=</span> <span class="n">encontra_indices_modais</span><span class="p">(</span><span class="n">d_freq</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
-    <span class="n">n_classes</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">idx_posterior</span> <span class="o">=</span> <span class="n">idx_modal</span><span class="o">+</span><span class="mi">1</span>
-    <span class="n">idx_posterior</span><span class="p">[</span><span class="n">idx_posterior</span> <span class="o">&gt;=</span> <span class="n">n_classes</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-    <span class="n">freq_posterior</span> <span class="o">=</span> <span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx_posterior</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">idx_posterior</span><span class="p">)]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">idx_posterior</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])):</span>
-        <span class="n">freq_posterior</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">freq_posterior</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">freq_posterior</span>
-
-<span class="k">def</span> <span class="nf">moda_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">!=</span> <span class="s1">&#39;IntervalArray&#39;</span><span class="p">):</span>
-        <span class="n">d_freq</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">arrays</span><span class="o">.</span><span class="n">IntervalArray</span><span class="p">)</span>
-    <span class="n">idx_modal</span> <span class="o">=</span> <span class="n">encontra_indices_modais</span><span class="p">(</span><span class="n">d_freq</span><span class="p">)</span>
-    <span class="n">h</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">right</span><span class="o">-</span><span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">left</span>
-    <span class="n">lMo</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">[</span><span class="n">idx_modal</span><span class="p">]</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">array</span>
-    <span class="n">FMo</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx_modal</span><span class="p">][</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">array</span>
-    <span class="n">FPos</span> <span class="o">=</span> <span class="n">encontra_freq_posterior</span><span class="p">(</span><span class="n">d_freq</span><span class="p">)</span>
-    <span class="n">FAnt</span> <span class="o">=</span> <span class="n">encontra_freq_anterior</span><span class="p">(</span><span class="n">d_freq</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">lMo</span> <span class="o">+</span> <span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="p">(</span><span class="n">FMo</span><span class="o">-</span><span class="n">FAnt</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">FMo</span> <span class="o">-</span> <span class="p">(</span><span class="n">FAnt</span><span class="o">+</span><span class="n">FPos</span><span class="p">))</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    2
+1    4
+dtype: int64
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moda_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z4</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;PandasArray&gt;
-[0.04702702702702699]
-Length: 1, dtype: float64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    -2.391123
+1    -1.698127
+2    -1.671712
+3    -1.669090
+4    -1.480987
+        ...   
+95    1.957551
+96    1.959265
+97    2.039529
+98    2.056235
+99    2.943437
+Length: 100, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moda_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;PandasArray&gt;
-[24.6]
-Length: 1, dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="mediana">
 <h3>Mediana<a class="headerlink" href="#mediana" title="Permalink to this headline">¶</a></h3>
-<p>Definimos a mediana de um conjunto de dados como o valor que divide o <em>rol de dados</em> em duas partes com a mesma quantidade de dados.</p>
-<p><em>Notação:</em> representamos a mediana de um conjunto de dados por <span class="math notranslate nohighlight">\(Md\)</span>.</p>
-<p>O <em>elemento mediano</em>, <span class="math notranslate nohighlight">\(E_{\rm  Md}\)</span>, aponta o local no <em>rol de dados</em> onde a mediana está localizada.  A mediana será o valor assumido na posição <span class="math notranslate nohighlight">\(E_{\rm  Md}\)</span>.</p>
-<p>Se o tamanho amostral <span class="math notranslate nohighlight">\(n\)</span> é ímpar, temos que <span class="math notranslate nohighlight">\(E_{\rm  Md} = \frac{(n+1)}{2}\)</span>. Por outro lado, se par, teremos dois valores possíveis para o elemento mediano: <span class="math notranslate nohighlight">\(\frac{n}{2}\)</span> e <span class="math notranslate nohighlight">\(\frac{n}{2}+1\)</span>. Neste caso a mediana será a média dos valores assumidos nestas posições.</p>
+<p>A mediana <span class="math notranslate nohighlight">\(Md\)</span> é o valor que divide o <em>rol de dados</em> em duas partes com a mesma quantidade de dados. O <em>elemento mediano</em>, <span class="math notranslate nohighlight">\(E_{Md}\)</span>, é a posição no <em>rol de dados</em> onde a mediana está localizada.</p>
+<p>Se o tamanho amostral <span class="math notranslate nohighlight">\(n\)</span> é ímpar, temos que <span class="math notranslate nohighlight">\(E_{Md} = \frac{(n+1)}{2}\)</span>; se par, dois valores são possíveis, <span class="math notranslate nohighlight">\(\frac{n}{2}\)</span> e <span class="math notranslate nohighlight">\(\frac{n}{2}+1\)</span>. No último caso, a mediana será a média dos valores assumidos nestas posições.</p>
+<p>Exemplos:</p>
 <ul class="simple">
-<li><p>Exemplos:</p>
-<ul>
-<li><p>1, 2, 4, 5, 8. Como <span class="math notranslate nohighlight">\(n\)</span> é ímpar, temos <span class="math notranslate nohighlight">\(E_{\rm  Md} = 3\)</span>, e <span class="math notranslate nohighlight">\(Md = 4\)</span>.</p></li>
-<li><p>2, 2, 3, 7, 8, 10. Aqui <span class="math notranslate nohighlight">\(n\)</span> é par, assim <span class="math notranslate nohighlight">\(E_{\rm  Md,1} = \frac{6}{2} = 3\)</span> e  <span class="math notranslate nohighlight">\(E_{\rm Md,2} = \frac{6}{2}+1 = 4\)</span>. Daí <span class="math notranslate nohighlight">\({ Md} = \frac{3+7}{2} = 5\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{1, 2, 4, 5, 8\}\)</span>. Como <span class="math notranslate nohighlight">\(n\)</span> é ímpar, <span class="math notranslate nohighlight">\(E_{Md} = 3\)</span>, e <span class="math notranslate nohighlight">\(Md = 4\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{2, 2, 4, 7, 8, 10\}\)</span>. Aqui, <span class="math notranslate nohighlight">\(n\)</span> é par. Assim, <span class="math notranslate nohighlight">\(E_{\rm  Md,1} = \frac{6}{2} = 3\)</span> e <span class="math notranslate nohighlight">\(E_{\rm Md,2} = \frac{6}{2}+1 = 4\)</span>. Daí <span class="math notranslate nohighlight">\({ Md} = \frac{4+7}{2} = 5,5\)</span>.</p></li>
 </ul>
-</li>
+<ul class="simple">
 <li><p>Para Series e DataFrames o método <code class="docutils literal notranslate"><span class="pre">median()</span></code> retorna a mediana dos valores.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -1299,154 +1078,136 @@ Length: 1, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z2</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1579509654534823
-</pre></div>
-</div>
-</div>
-</div>
-<section id="mediana-em-dados-agrupados-em-intervalos">
-<h4>Mediana em dados agrupados em intervalos<a class="headerlink" href="#mediana-em-dados-agrupados-em-intervalos" title="Permalink to this headline">¶</a></h4>
-<p>Neste caso, utilizamos <span class="math notranslate nohighlight">\(E_{\rm Md} = \frac{n}{2}\)</span> independentemente de <span class="math notranslate nohighlight">\(n\)</span> ser par ou ímpar. A <em>classe mediana</em> é a primeira classe tal que <span class="math notranslate nohighlight">\(F_{\rm ac} \geq E_{\rm Md}\)</span>.</p>
-<p>Definimos a <em>mediana</em> pela fórmula</p>
-<div class="math notranslate nohighlight">
-\[{\rm Md} = l_{\rm Md} + h\left[ \frac{E_{\rm Md} - F_{\rm ac,ant}}{F_{\rm Md}}\right],\]</div>
-<p>onde,</p>
-<p><span class="math notranslate nohighlight">\(l_{\rm Md}\)</span> é o limite inferior da <em>classe mediana</em>,</p>
-<p><span class="math notranslate nohighlight">\(h\)</span> é a amplitude do intervalo,</p>
-<p><span class="math notranslate nohighlight">\(F_{\rm ac,ant}\)</span> é a frequência acumulada da classe anterior à <em>classe mediana</em>,</p>
-<p><span class="math notranslate nohighlight">\(F_{\rm Md}\)</span> é a frequência da <em>classe mediana</em>.</p>
-<p>Para <em>Series</em> e <em>DataFrames</em>, o método <code class="docutils literal notranslate"><span class="pre">cumsum()</span></code> retorna a soma acumulada dos valores.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d_freq_temp</span> <span class="o">=</span> <span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">exibir_total</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">d_freq_temp</span><span class="p">[</span><span class="s1">&#39;Freq Acumulada&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d_freq_temp</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
-<span class="n">d_freq_temp</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Frequência</th>
-      <th>Freq Acumulada</th>
-    </tr>
-    <tr>
-      <th>Classes</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>[21.0, 24.0)</th>
-      <td>7</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>[24.0, 27.0)</th>
-      <td>9</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>[27.0, 30.0)</th>
-      <td>1</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>[30.0, 33.0)</th>
-      <td>5</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>[33.0, 36.0)</th>
-      <td>7</td>
-      <td>29</td>
-    </tr>
-    <tr>
-      <th>[36.0, 39.0)</th>
-      <td>1</td>
-      <td>30</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mediana_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">!=</span> <span class="s1">&#39;IntervalArray&#39;</span><span class="p">):</span>
-        <span class="n">d_freq</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">arrays</span><span class="o">.</span><span class="n">IntervalArray</span><span class="p">)</span>
-    <span class="n">n_obs</span> <span class="o">=</span> <span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    <span class="n">h</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">right</span><span class="o">-</span><span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">left</span>
-    <span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Freq Acumulada&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
-    <span class="n">lMd</span> <span class="o">=</span> <span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Freq Acumulada&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">n_obs</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">left</span>
-    <span class="n">EMd</span> <span class="o">=</span> <span class="n">n_obs</span><span class="o">/</span><span class="mi">2</span>
-    <span class="n">FMd</span> <span class="o">=</span> <span class="n">d_freq</span><span class="p">[</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Freq Acumulada&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">n_obs</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Freq Acumulada&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">n_obs</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
-        <span class="n">FAcAnt</span> <span class="o">=</span> <span class="n">d_freq</span><span class="p">[</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Freq Acumulada&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">n_obs</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;Freq Acumulada&#39;</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">FAcAnt</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">return</span> <span class="n">lMd</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="p">(</span><span class="n">EMd</span><span class="o">-</span><span class="n">FAcAnt</span><span class="p">)</span><span class="o">/</span><span class="n">FMd</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mediana_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.10536585365853657
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mediana_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26.666666666666668
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.45838862597368923
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 </section>
+<section id="quantis-e-percentis">
+<h2>Quantis e percentis<a class="headerlink" href="#quantis-e-percentis" title="Permalink to this headline">¶</a></h2>
+<p>Quantis e percentis são utilizados para compreender os dados sob a perspectiva de “partes”. Por exemplo, dado o rol de dados <span class="math notranslate nohighlight">\( d = \{x_i\}\)</span> com <span class="math notranslate nohighlight">\(n\)</span> valores, procuramos pelo valor <span class="math notranslate nohighlight">\(x_p\)</span> que divide o rol em partes regulares. O valor <span class="math notranslate nohighlight">\(x_p\)</span> é o <span class="math notranslate nohighlight">\(p\)</span>-ésimo <em>quantil</em>, ou o <span class="math notranslate nohighlight">\(100 \times p\)</span>-ésimo percentil. Em particular, <span class="math notranslate nohighlight">\(x_p = d[I_p]\)</span>, onde <span class="math notranslate nohighlight">\(I_p\)</span> é o índice (número inteiro) para o quantil no rol de dados.</p>
+<p>Os seguintes nomes são usados na prática:</p>
+<ul class="simple">
+<li><p><em>Percentis</em> variam no intervalo 0 a 100.</p></li>
+<li><p><em>Quartis</em> variam no intervalo 0 a 4.</p></li>
+<li><p><em>Quantis</em> variam de qualquer valor para outro.</p></li>
+</ul>
+<p>Entretanto, outras definições existem: os 3-quantis são chamados de <em>tercis</em>, os 5-quantis são chamados de <em>quintis</em>, os 12-quantis são chamados de <em>duo-deciles</em>, e assim por diante.</p>
+<p>Uma tabela de correspondência útil para compreensão é a seguinte:</p>
+<ul class="simple">
+<li><p>0-percentil = 0-quartil = menor valor do rol de dados</p></li>
+<li><p>25-percentil = 1-quartil</p></li>
+<li><p>50-percentil = 2-quartil = mediana</p></li>
+<li><p>75-percentil = 3-quartil</p></li>
+<li><p>100-percentil = 4-quartil = máximo valor do rol de dados</p></li>
+</ul>
+<p>Como se vê, a mediana é o 50-percentil. Isto significa que ela representa o valor que está abaixo de 50% dos valores no rol de dados. Quantis, por sua vez, são uma generalização da mediana.</p>
+<p>O código abaixo retorna o <span class="math notranslate nohighlight">\(p\)</span>-percentil de um rol de dados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 0 &lt; p &lt; 1</span>
+<span class="k">def</span> <span class="nf">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">I_p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">)[</span><span class="n">I_p</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Por exemplo, para o nosso conjunto:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[21, 21, 21, 22, 22, 23, 23, 24, 24, 25, 25, 25, 25, 26, 26, 26, 28, 30, 31, 31, 31, 32, 33, 33, 33, 34, 34, 35, 35, 36]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.0</span><span class="p">),</span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.25</span><span class="p">),</span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.5</span><span class="p">),</span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.75</span><span class="p">),</span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(21, 24, 26, 33, 35)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comentário:</p>
+<ul class="simple">
+<li><p>A mediana é o valor <span class="math notranslate nohighlight">\(x_{1/2} = 26\)</span>. Ou seja, <span class="math notranslate nohighlight">\(p= 1/2 = 0.5\)</span>. Isto equivale a dizer que a mediana é o <span class="math notranslate nohighlight">\(1/2\)</span>-quantil ou <span class="math notranslate nohighlight">\(100 \times 1/2 = 50\)</span>-percentil.</p></li>
+<li><p>Para <span class="math notranslate nohighlight">\(p=1/4\)</span>, temos o <span class="math notranslate nohighlight">\(1/4\)</span>-quantil ou <span class="math notranslate nohighlight">\(100 \times 1/4 = 25\)</span>-percentil. Este valor equivale a <span class="math notranslate nohighlight">\(x_{1/4} = 24\)</span>.</p></li>
+<li><p>24 é o primeiro quartil do rol, ou seja, 25% dos valores do rol são menores do que 24.</p></li>
+<li><p>33 é o terceiro quartil do rol, ou seja, 75% dos valores do rol são menores do que 33.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Para saber mais sobre a terminologia estatística “x-is”, veja a tabela do Apêndice A deste artigo de <a class="reference external" href="https://www.doi.org/10.1177/1536867X1601600413">[Nicholas J. Cox]</a>.</p>
+</div>
+<p>O <em>pandas</em> possui a função <code class="docutils literal notranslate"><span class="pre">quantile</span></code> para calcular os quantis que desejarmos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z1</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.22</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.21890696593274928
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1-, 2-, e 3-quartis</span>
+<span class="n">z4</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.75</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.25   -0.600232
+0.50    0.208658
+0.75    0.808281
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1-, 2- tercis</span>
+<span class="n">z2</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.33</span><span class="p">,</span><span class="mf">0.66</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.33    0.306155
+0.66    0.620944
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="medidas-de-dispersao">
 <h2>Medidas de Dispersão<a class="headerlink" href="#medidas-de-dispersao" title="Permalink to this headline">¶</a></h2>
-<p>As medidas de dispersão medem o grau de variabilidade dos elementos de uma distribuição. O valor zero indica ausência de dispersão. A dispersão aumenta à medida que aumenta o valor da medida de dispersão. As principais Medidas de Dispersão: <em>amplitude</em>, <em>desvio médio</em>, <em>variância</em>, <em>desvio padrão</em>.</p>
-<p>Motivação para as medidas de dispersão</p>
+<p>As medidas de dispersão medem o grau de variabilidade dos elementos de uma distribuição. O valor zero indica ausência de dispersão. As principais medidas de dispersão incluem: <em>amplitude</em>, <em>desvio médio</em>, <em>variância</em> e <em>desvio padrão</em>.</p>
+<p>Como uma motivação para estudar as medidas de dispersão, consideremos a seguinte distribuição de notas é médias em uma classe.</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p>Alunos</p></th>
+<tr class="row-odd"><th class="text-align:center head"><p>Discente</p></th>
 <th class="text-align:center head"><p></p></th>
 <th class="text-align:center head"><p></p></th>
 <th class="text-align:center head"><p>Notas</p></th>
@@ -1492,16 +1253,16 @@ Length: 1, dtype: float64
 </table>
 <p>Observa-se que:</p>
 <ul class="simple">
-<li><p>As notas de Antônio não variaram;</p></li>
-<li><p>As notas de João variaram menos do que as notas de José;</p></li>
-<li><p>As notas de Pedro variaram mais do que as notas de todos os outros alunos.</p></li>
+<li><p>as notas de Antônio não variaram;</p></li>
+<li><p>as notas de João variaram menos do que as notas de José;</p></li>
+<li><p>as notas de Pedro variaram mais do que as notas dos demais;</p></li>
 </ul>
 <section id="amplitude">
 <h3>Amplitude<a class="headerlink" href="#amplitude" title="Permalink to this headline">¶</a></h3>
-<p>A amplitude nos fornece uma idéia do campo de variação dos elementos. Mais precisamente, ela fornece a maior variação possível dos dados. A amplitude é dada pela fórmula:
+<p>A amplitude <span class="math notranslate nohighlight">\(R\)</span> fornece a maior variação possível dos dados. Ela é dada pela fórmula:
 $<span class="math notranslate nohighlight">\(R = X_{\max} -  X_{\min},\)</span><span class="math notranslate nohighlight">\(
-onde \)</span>X_{\max}<span class="math notranslate nohighlight">\( é o máximo dos valores nos dados e \)</span>X_{\min}$ é o mínimo dos valores nos dados.</p>
-<p>Para <em>Series</em> e <em>DataFrames</em> os métodos <code class="docutils literal notranslate"><span class="pre">max()</span></code> e <code class="docutils literal notranslate"><span class="pre">min()</span></code> retornam respectivamente o máximo e mínimo dos valores.</p>
+onde \)</span>X_{\max}<span class="math notranslate nohighlight">\( é o valor máximo \)</span>X_{\min}$ o mínimo entre os dados.</p>
+<p>Para <em>Series</em> e <em>DataFrames</em> os métodos <code class="docutils literal notranslate"><span class="pre">max()</span></code> e <code class="docutils literal notranslate"><span class="pre">min()</span></code> retornam respectivamente o máximo e o mínimo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">-</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">();</span> <span class="n">R</span>
@@ -1517,7 +1278,7 @@ onde \)</span>X_{\max}<span class="math notranslate nohighlight">\( é o máximo
 </section>
 <section id="desvio-medio">
 <h3>Desvio Médio<a class="headerlink" href="#desvio-medio" title="Permalink to this headline">¶</a></h3>
-<p>Para medir a dispersão dos dados em relação a média, é interessante analisar os desvios em torno da média, isto é, fazer a análise dos desvios:</p>
+<p>Para medir a dispersão dos dados em relação à média, é interessante analisar os desvios em torno da média, isto é, fazer a análise dos desvios:</p>
 <div class="math notranslate nohighlight">
 \[
 d_i=(X_i-\overline{X}).
@@ -1530,9 +1291,7 @@ $<span class="math notranslate nohighlight">\(
 \[
 =\sum_{i=1}^{n}X_i-n\frac{\sum_{i=1}^{n}X_i}{n}= \sum_{i=1}^{n}X_i-\sum_{i=1}^{n}X_i=0.
 \]</div>
-<p>Logo, será preciso encontrar uma maneira de se trabalhar com os desvios sem que a soma dê zero. Dessa forma, define-se o <em>desvio médio</em>.</p>
-<p><em>Notação:</em> representamos o <em>desvio médio</em> de um conjunto de dados por <span class="math notranslate nohighlight">\(DM\)</span>.</p>
-<p>Portanto, definimos o <em>desvio médio</em> pela fórmula:
+<p>Logo, será preciso encontrar uma maneira de se trabalhar com os desvios sem que a soma dê zero. Dessa forma, define-se o <em>desvio médio</em> <span class="math notranslate nohighlight">\(DM\)</span> pela fórmula:
 $<span class="math notranslate nohighlight">\(
 DM=\sum_{i=1}^{n} \frac{|d_i|}{n}= \sum_{i=1}^{n} \frac{|X_i-\overline{X}|}{n}.
 \)</span>$</p>
@@ -1551,57 +1310,12 @@ DM=\sum_{i=1}^{n} \frac{|d_i|}{n}= \sum_{i=1}^{n} \frac{|X_i-\overline{X}|}{n}.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">mad</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z3</span><span class="p">)</span><span class="o">.</span><span class="n">mad</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8315262165194537
-</pre></div>
-</div>
-</div>
-</div>
-<section id="desvio-medio-em-dados-agrupados-em-intervalos">
-<h4>Desvio médio em dados agrupados em intervalos<a class="headerlink" href="#desvio-medio-em-dados-agrupados-em-intervalos" title="Permalink to this headline">¶</a></h4>
-<p>No caso em que temos os dados agrupados em intervalos, utilizamos a frequência e o ponto médio de cada classe para calcular a <em>desvio médio</em> pela fórmula:</p>
-<div class="math notranslate nohighlight">
-\[
-DM=\sum_{i=1}^{K} \frac{|d_i|\cdot F_i}{n}= \sum_{i=1}^{K} \frac{|pm_i-\overline{X}|\cdot F_i}{n},
-\]</div>
-<p>onde <span class="math notranslate nohighlight">\(K\)</span> é o número de classes, <span class="math notranslate nohighlight">\(F_i\)</span> é a frequência da <span class="math notranslate nohighlight">\(i\)</span>-ésima classe e  <span class="math notranslate nohighlight">\(pm_i\)</span> é o ponto médio da <span class="math notranslate nohighlight">\(i\)</span>-ésima classe.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dm_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">!=</span> <span class="s1">&#39;IntervalArray&#39;</span><span class="p">):</span>
-        <span class="n">d_freq</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">intervalos</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span>
-    <span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Ponto Médio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">intervalo</span><span class="o">.</span><span class="n">left</span><span class="o">+</span><span class="n">intervalo</span><span class="o">.</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">intervalo</span> <span class="ow">in</span> <span class="n">intervalos</span><span class="p">]</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Ponto Médio&#39;</span><span class="p">]</span> <span class="o">-</span> 
-                                  <span class="n">media_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">)))</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dm_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.472413793103448
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dm_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7725879396984924
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.807488319270341
 </pre></div>
 </div>
 </div>
@@ -1609,18 +1323,20 @@ DM=\sum_{i=1}^{K} \frac{|d_i|\cdot F_i}{n}= \sum_{i=1}^{K} \frac{|pm_i-\overline
 <p><strong>Observações</strong>:</p>
 <ul class="simple">
 <li><p>A <em>amplitude</em> não mede bem a dispersão dos dados porque usam-se apenas os valores extremos em vez de todos os elementos da distribuição.</p></li>
-<li><p>O <em>desvio médio</em> é mais vantajoso que a <em>amplitude</em>, visto que leva em consideração todos os valores da distribuição e é menos sensível a <em>outliers</em>.</p></li>
-<li><p>No entanto, <em>desvio médio</em> não é tão frequentemente empregado no ajuste de modelos, pois não apresenta propriedades matemáticas interessantes, porém é bastante utilizado na validação e comparação de modelos.</p></li>
+<li><p>O <em>desvio médio</em> é mais vantajoso do que a <em>amplitude</em>, visto que leva em consideração todos os valores da distribuição e é menos sensível a <em>outliers</em>.</p></li>
+<li><p>No entanto, o <em>desvio médio</em> não é tão frequentemente empregado no ajuste de modelos, pois não apresenta propriedades matemáticas interessantes. Porém é bastante utilizado na validação e comparação de modelos.</p></li>
 </ul>
-</section>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“Um <em>outlier</em> é uma observação que se diferencia tanto das demais observações que levanta suspeitas de que aquela observação foi gerada por um mecanismo distinto” (Wikipedia, apud: Hawkins, 1980). Outlier é um dado que se distancia demasiadamente de todos os outros. Literalmente, o “ponto fora da curva”.</p>
+</div>
 </section>
 <section id="variancia">
 <h3>Variância<a class="headerlink" href="#variancia" title="Permalink to this headline">¶</a></h3>
-<p>A <em>variância</em> é a medida de dispersão mais utilizada. É o quociente entre a soma dos quadrados dos desvios e o número de elementos. Assim, temos a seguinte fórmula para <em>variância populacional</em>:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>A <em>variância</em> <span class="math notranslate nohighlight">\(\sigma^2\)</span> é a medida de dispersão mais utilizada. Ela é dada pelo quociente entre a soma dos quadrados dos desvios e o número de elementos, cuja fórmula é dada por:
+$<span class="math notranslate nohighlight">\(
 \sigma^2=\sum_{i=1}^{N} \frac{d_i^2}{N}= \sum_{i=1}^{N} \frac{(X_i-\overline{X})^2}{N},
-\]</div>
+\)</span>$</p>
 <p>onde <span class="math notranslate nohighlight">\(\sigma^2\)</span> indica a variância populacional (lê-se “sigma ao quadrado” ou “sigma dois”). Neste caso, <span class="math notranslate nohighlight">\(\overline{X}\)</span> e <span class="math notranslate nohighlight">\(N\)</span> na formúla representam a média populacional e o tamanho populacional, respectivamente.</p>
 </section>
 <section id="variancia-amostral">
@@ -1638,82 +1354,33 @@ S^2=\sum_{i=1}^{n} \frac{d_i^2}{n-1}= \sum_{i=1}^{n} \frac{(X_i-\overline{X})^2}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.281609195402297
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.281609195402304
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z3</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0902588407996143
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.080578663807713
 </pre></div>
 </div>
 </div>
 </div>
-<section id="variancia-amostral-em-dados-agrupados-em-intervalos">
-<h4>Variância amostral em dados agrupados em intervalos<a class="headerlink" href="#variancia-amostral-em-dados-agrupados-em-intervalos" title="Permalink to this headline">¶</a></h4>
-<p>No caso em que temos os dados agrupados em intervalos, utilizamos a frequência e o ponto médio de cada classe para calcular a <em>variância</em> pela fórmula:</p>
-<div class="math notranslate nohighlight">
-\[
-S^2=\sum_{i=1}^{K} \frac{d_i^2\cdot F_i}{n-1}= \sum_{i=1}^{K} \frac{(pm_i-\overline{X})^2\cdot F_i}{n-1}.
-\]</div>
-<p>onde <span class="math notranslate nohighlight">\(K\)</span> é o número de classes, <span class="math notranslate nohighlight">\(F_i\)</span> é a frequência da <span class="math notranslate nohighlight">\(i\)</span>-ésima classe e  <span class="math notranslate nohighlight">\(pm_i\)</span> é o ponto médio da <span class="math notranslate nohighlight">\(i\)</span>-ésima classe.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">var_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">!=</span> <span class="s1">&#39;IntervalArray&#39;</span><span class="p">):</span>
-        <span class="n">d_freq</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">intervalos</span> <span class="o">=</span> <span class="n">d_freq</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">array</span>
-    <span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Ponto Médio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">intervalo</span><span class="o">.</span><span class="n">left</span><span class="o">+</span><span class="n">intervalo</span><span class="o">.</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">intervalo</span> <span class="ow">in</span> <span class="n">intervalos</span><span class="p">]</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Ponto Médio&#39;</span><span class="p">]</span> <span class="o">-</span> 
-                                  <span class="n">media_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">d_freq</span><span class="p">[</span><span class="s1">&#39;Frequência&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.60875804666038
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0247072589279063
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="desvio-padrao">
 <h3>Desvio Padrão<a class="headerlink" href="#desvio-padrao" title="Permalink to this headline">¶</a></h3>
 <p>Temos também outra medida de dispersão, que é a raiz quadrada da variância, chamada de <em>desvio padrão</em>. Assim,</p>
 <div class="math notranslate nohighlight">
-\[
-\sigma = \sqrt{\sigma^2} \quad \hbox{é o desvio desvio padrão populacional}
-\]</div>
-<p>e</p>
+\[\sigma = \sqrt{\sigma^2}\]</div>
+<p>é o desvio desvio padrão populacional, e</p>
 <div class="math notranslate nohighlight">
-\[
-S = \sqrt{S^2} \quad \hbox{é o desvio desvio padrão amostral.}
-\]</div>
+\[S = \sqrt{S^2}\]</div>
+<p>é o desvio desvio padrão amostral.</p>
 <p>Para o cálculo do <em>desvio padrão</em>, deve-se, primeiramente, determinar o valor da variância e, em seguida, extrair a raiz quadrada desse resultado.</p>
 <p>Para <em>Series</em> e <em>DataFrames</em> o método <code class="docutils literal notranslate"><span class="pre">std()</span></code> retorna o <em>desvio padrão</em> dos valores.</p>
 <div class="cell docutils container">
@@ -1723,7 +1390,7 @@ S = \sqrt{S^2} \quad \hbox{é o desvio desvio padrão amostral.}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.927637283262872
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.9276372832628725
 </pre></div>
 </div>
 </div>
@@ -1735,74 +1402,39 @@ S = \sqrt{S^2} \quad \hbox{é o desvio desvio padrão amostral.}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.927637283262872
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.9276372832628725
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z3</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.044154605793421
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.039508857012634
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z3</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.044154605793421
-</pre></div>
-</div>
-</div>
-</div>
-<section id="desvio-padrao-para-dados-agrupados-em-intervalos">
-<h4>Desvio Padrão para dados agrupados em intervalos<a class="headerlink" href="#desvio-padrao-para-dados-agrupados-em-intervalos" title="Permalink to this headline">¶</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dp_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">var_dist_freq</span><span class="p">(</span><span class="n">d_freq</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dp_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">dados</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.960721524804671
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dp_dist_freq</span><span class="p">(</span><span class="n">dist_freq</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0122782517311661
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.039508857012634
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 </section>
-</section>
-<section id="resumo-estatistico-de-uma-serie-ou-dataframe">
-<h2>Resumo Estatístico de uma <em>Serie</em> ou <em>DataFrame</em><a class="headerlink" href="#resumo-estatistico-de-uma-serie-ou-dataframe" title="Permalink to this headline">¶</a></h2>
+<section id="resumo-estatistico-de-uma-series-ou-dataframe">
+<h2>Resumo Estatístico de uma <em>Series</em> ou <em>DataFrame</em><a class="headerlink" href="#resumo-estatistico-de-uma-series-ou-dataframe" title="Permalink to this headline">¶</a></h2>
 <p>Para obtermos um resumo estatístico de uma <em>Series</em> ou <em>DataFrame</em> do <em>pandas</em>, utilizamos o método <code class="docutils literal notranslate"><span class="pre">describe</span></code>. O método <code class="docutils literal notranslate"><span class="pre">describe</span></code> exclui observações ausentes por padrão.</p>
 <p>Exemplos:</p>
 <div class="cell docutils container">
@@ -1827,7 +1459,7 @@ dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">z2</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1856,35 +1488,35 @@ dtype: float64
   <tbody>
     <tr>
       <th>count</th>
-      <td>200.000000</td>
+      <td>100.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>0.131732</td>
+      <td>0.473328</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>1.044155</td>
+      <td>0.280552</td>
     </tr>
     <tr>
       <th>min</th>
-      <td>-2.478784</td>
+      <td>0.006874</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>-0.499487</td>
+      <td>0.251347</td>
     </tr>
     <tr>
       <th>50%</th>
-      <td>0.157951</td>
+      <td>0.458389</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>0.921309</td>
+      <td>0.705439</td>
     </tr>
     <tr>
       <th>max</th>
-      <td>3.006889</td>
+      <td>0.943035</td>
     </tr>
   </tbody>
 </table>
@@ -1892,8 +1524,8 @@ dtype: float64
 </div>
 <p><strong>Observações</strong></p>
 <ul class="simple">
-<li><p>Se as entradas da <em>Series</em> não forem numéricas, o método <code class="docutils literal notranslate"><span class="pre">describe</span></code> retornará uma tabela contendo as quantidades de valores únicos, qual o valor mais frequente e qual a quantidade de elementos do valor mais frequente.</p></li>
-<li><p>No caso de um <em>DataFrame</em> que contenha colunas numéricas e colunas não-numéricas, o método <code class="docutils literal notranslate"><span class="pre">describe</span></code> só irá considerar as colunas numéricas.</p></li>
+<li><p>Se as entradas da <em>Series</em> não forem numéricas, o método <code class="docutils literal notranslate"><span class="pre">describe</span></code> retornará uma tabela contendo as quantidades de valores únicos, o valor mais frequente e a quantidade de elementos do valor mais frequente.</p></li>
+<li><p>No caso de um <em>DataFrame</em> que contenha colunas numéricas e colunas não-numéricas, o método <code class="docutils literal notranslate"><span class="pre">describe</span></code> irá considerar apenas as colunas numéricas.</p></li>
 </ul>
 <p>Exemplos:</p>
 <div class="cell docutils container">
@@ -1913,7 +1545,7 @@ dtype: float64
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     10
 unique    10
-top        a
+top        h
 freq       1
 dtype: object
 </pre></div>
@@ -2098,7 +1730,10 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-<p><strong>Observação</strong>: Podemos controlar o que será considerado no <code class="docutils literal notranslate"><span class="pre">describe</span></code> utilizando os argumentos <code class="docutils literal notranslate"><span class="pre">include</span></code> ou <code class="docutils literal notranslate"><span class="pre">exclude</span></code>. No caso, devemos colocar como argumento uma lista contendo os tipos a serem incluídos ou excluídos. Existem vários tipos que podem ser considerados para serem incluídos ou excluídos. Para uma lista dos tipos disponíveis, consulte a documentação da função <code class="docutils literal notranslate"><span class="pre">select_dtypes()</span></code>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>É possível controlar o que será considerado em <code class="docutils literal notranslate"><span class="pre">describe</span></code> utilizando os argumentos <code class="docutils literal notranslate"><span class="pre">include</span></code> ou <code class="docutils literal notranslate"><span class="pre">exclude</span></code>. No caso, devemos passar uma lista contendo os parâmetros a serem incluídos ou excluídos como argumento. Para uma lista dos parâmetros disponíveis, consulte a documentação da função <code class="docutils literal notranslate"><span class="pre">select_dtypes()</span></code>.</p>
+</div>
 <p>Exemplos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2139,7 +1774,7 @@ dtype: float64
     </tr>
     <tr>
       <th>top</th>
-      <td>a</td>
+      <td>h</td>
     </tr>
     <tr>
       <th>freq</th>
@@ -2188,7 +1823,7 @@ dtype: float64
     </tr>
     <tr>
       <th>top</th>
-      <td>a</td>
+      <td>h</td>
     </tr>
     <tr>
       <th>freq</th>
@@ -2241,7 +1876,7 @@ dtype: float64
     </tr>
     <tr>
       <th>top</th>
-      <td>a</td>
+      <td>h</td>
       <td>NaN</td>
     </tr>
     <tr>
