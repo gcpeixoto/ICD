@@ -27,6 +27,7 @@
   numbered: false
   chapters:
   - file: ipynb/11-estatistica-descritiva
+  - file: ipynb/12-correlacao
 - part: Questionários
   numbered: false
   chapters:

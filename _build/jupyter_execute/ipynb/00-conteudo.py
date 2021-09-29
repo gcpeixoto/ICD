@@ -38,6 +38,7 @@
 # #### Parte 4
 # 
 # - [Estatística Descritiva](11-estatistica-descritiva.ipynb)
+# - [Correlação](12-correlacao.ipynb)
 # 
 # ### Unidade 3
 # 
@@ -195,6 +196,7 @@
 # :caption: Parte 4
 # 
 # 11-estatistica-descritiva
+# 12-correlacao
 # ```
 # 
 # 
