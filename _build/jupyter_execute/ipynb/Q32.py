@@ -14,13 +14,6 @@
 # 
 # <hr>
 
-# In[1]:
-
-
-import pandas as pd
-import numpy as np
-
-
 # **Questão 1.** Marque a alternativa cujas funções são as utilizadas para imprimir as 4 primeiras e as 6 últimas linhas, respectivamente, de um _DataFrame_ `d`, tal que  `len(d) = 20`.
 # 
 # A. `df.head(6)`, `df.tail(4)`
@@ -30,21 +23,6 @@ import numpy as np
 # C. `df.head(-16)`, `df.tail(6)`
 # 
 # D. `df.tail(-6)`, `df.tail(4)`
-
-# <hr>
-# 
-# ## Gabarito
-# 
-# Alternativa **C**.
-
-# In[2]:
-
-
-d1 = dict(zip([chr(i) for i in range(97,107)],range(0,10)))
-d2 = dict(zip([chr(i) for i in range(65,75)],range(11,21)))
-df = pd.DataFrame({'d':d1,'e':d2})
-df.head(-16),df.tail(6)
-
 
 # <hr>
 # 
@@ -78,55 +56,6 @@ df.head(-16),df.tail(6)
 
 # <hr>
 # 
-# ## Gabarito
-# 
-# Alternativa **D**:
-
-# In[3]:
-
-
-del df
-import datetime
-
-d = pd.Series({'Veículo': 'VW Gol','Cidade': 'Bahia', 'Distância (km)': 848, 'Duração (h)': 7.5})
-e = pd.Series({'Veículo': 'BMW Z4','Cidade': 'Fortaleza', 'Distância (km)': 728, 'Duração (h)': 10})
-f = pd.Series({'Veículo': 'Chery QQ','Cidade': 'Sergipe', 'Distância (km)': 640, 'Duração (h)': 9.5})
-
-df = pd.DataFrame({0:d,1:e,2:f}).transpose()
-df['Vel. média (km/h)'] = (df['Distância (km)']/df['Duração (h)']).apply(lambda x: round(x,2)) 
-df['Vel. média (m/s)'] = (df['Distância (km)']/df['Duração (h)']*3.6).apply(lambda x: round(x,2)) 
-
-# velocidade no trecho
-prop = 0.12
-df['Vel. inicial (m/s)'] = df['Vel. média (m/s)']
-df['Vel. final (m/s)'] = np.round((1.0 + prop)*df['Vel. média (m/s)'],2)
-
-# tempo
-t0 = datetime.datetime(year=2021,month=8,day=1,hour=13,minute=45)
-tf = datetime.datetime(year=2021,month=8,day=1,hour=13,minute=47)
-deltaT = (tf-t0).total_seconds()
-
-df['Tempo inicial'] = t0
-df['Tempo final'] = tf
-df['Delta t (s)'] = deltaT
-
-# aceleração no trecho
-df['Aceleração (m/s2)'] = np.round((df['Vel. final (m/s)'] - df['Vel. inicial (m/s)'])/deltaT,2)
-df = df.set_index('Veículo')
-df
-
-
-# In[4]:
-
-
-a=df.loc['VW Gol']['Vel. inicial (m/s)']
-b=df.loc['BMW Z4']['Vel. final (m/s)']
-c=df.loc['Chery QQ']['Aceleração (m/s2)']
-a,b,c
-
-
-# <hr>
-# 
 # **Questão 3.** O _dataset_ encontrado no arquivo [flights.csv](https://github.com/gcpeixoto/ICD/blob/main/database/flights.csv?raw=true) (_Box & Jenkins arline data_) registra a quantidade de passageiros transportados por uma companhia aérea entre 1949 e 1960.
 # 
 # Utilizando agrupamentos, determine: 
@@ -137,33 +66,10 @@ a,b,c
 # 
 # Assinale a alternativa que corresponde aos valores corretos dessas variáveis na seguinte ordem: `y`, `p`, `(m1,m2,m3)`.
 
-# a. 1957, 4421, (Jul, Ago, Set)
+# A. 1957, 4421, (Jul, Ago, Set)
 # 
-# b. 1960, 5714, (Jul, Ago, Jun)
+# B. 1960, 5714, (Jul, Ago, Jun)
 # 
-# c. 1960, 5714, (Nov, Fev, Jan)
+# C. 1960, 5714, (Nov, Fev, Jan)
 # 
-# d. 1951, 2042, (Ago, Set, Out)
-
-# <hr>
-# 
-# ## Gabarito
-# 
-# Alternativa **B**.
-# 
-
-# In[7]:
-
-
-del df
-# RESOLUÇÃO:
-df = pd.read_csv("../database/flights.csv")
-df_year_soma = df[['year', 'passengers']].groupby(["year"]).sum()
-df_year_soma.loc[df_year_soma.idxmax()]
-
-
-# In[6]:
-
-
-df[["month","passengers"]].groupby(["month"]).mean().sort_values(by='passengers',ascending=False)
-
+# D. 1951, 2042, (Ago, Set, Out)

@@ -19,7 +19,7 @@ dados_covid_PB = pd.read_csv('https://superset.plataformatarget.com.br/superset/
                              sep=',', index_col=0)
 
 
-# In[2]:
+# In[47]:
 
 
 dados_covid_PB.agg(lambda vetor: np.sum(vetor))[['casosNovos','obitosNovos']].astype('int')
@@ -35,10 +35,10 @@ dados_covid_PB.head(9)
 
 # Isto também pode ser obtido utilizando o método `sum` de *DataFrames* e *Series*:
 
-# In[4]:
+# In[48]:
 
 
-dados_covid_PB[['casosNovos','obitosNovos']].sum()
+dados_covid_PB[['casosNovos','obitosNovos']].sum() 
 
 
 # Podemos recriar a coluna `'obitosAcumulados'` com o método `cumsum` (soma cumulativa):
@@ -60,38 +60,38 @@ dados_covid_PB.obitosNovos.sort_index().cumsum()
 covid_BR = pd.read_excel('../database/HIST_PAINEL_COVIDBR_18jul2020.xlsx')
 
 
-# In[7]:
+# In[58]:
 
 
-covid_BR.tail(3)
+covid_BR.tail(3) 
 
 
-# In[8]:
+# In[51]:
 
 
 # resumo da tabela
-covid_BR.info()
+covid_BR.info() 
 
 
-# In[9]:
+# In[73]:
 
 
 # todos os estados únicos
-covid_BR.estado.drop_duplicates().array
+covid_BR.estado.drop_duplicates().array 
 
 
-# In[10]:
+# In[77]:
 
 
 # ordena alfabeticamente
-covid_BR.estado.drop_duplicates().dropna().sort_values().array
+covid_BR.estado.drop_duplicates().dropna().sort_values().array 
 
 
 # ### Agrupando dados por valores em colunas e agregando os resultados
 # 
 # Vamos determinar uma coluna para agrupar. Consideraremos o *DataFrame* `covid_BR`e selecionaremos os estados *PB*, *PE*, *RJ* e *SP* para realizar análises agrupando os resultados por estados.
 
-# In[11]:
+# In[78]:
 
 
 covid_BR.query('estado in ["PB", "PE", "RJ", "SP"]')
@@ -101,7 +101,7 @@ covid_BR.query('estado in ["PB", "PE", "RJ", "SP"]')
 # 
 # Como estamos interessados nos valores por estado, vamos selecionar apenas os dados com `codmun` contendo `NaN`.
 
-# In[12]:
+# In[84]:
 
 
 covid_estados = covid_BR.query('estado in ["PB", "PE", "RJ", "SP"]')
@@ -110,13 +110,13 @@ covid_apenas_estados = covid_estados.loc[covid_estados['codmun'].isna()]
 
 # Vamos agora selecionar apenas as colunas de interesse. Para tanto, vejamos os nomes das colunas:
 
-# In[13]:
+# In[85]:
 
 
 covid_apenas_estados.columns
 
 
-# In[14]:
+# In[88]:
 
 
 covid_apenas_estados = covid_apenas_estados[['estado', 'data', 'casosNovos', 'obitosNovos']]
@@ -124,19 +124,19 @@ covid_apenas_estados = covid_apenas_estados[['estado', 'data', 'casosNovos', 'ob
 
 # A data parece ser o *index* natural, já que o *index* atual não representa nada. Observe que teremos *index* repetidos, pois teremos as mesmas datas em estados diferentes.
 
-# In[15]:
+# In[90]:
 
 
 covid_apenas_estados
 
 
-# In[16]:
+# In[91]:
 
 
 covid_apenas_estados = covid_apenas_estados.set_index('data')
 
 
-# In[17]:
+# In[92]:
 
 
 covid_apenas_estados
@@ -146,13 +146,13 @@ covid_apenas_estados
 # 
 # Podemos escolher uma (ou mais colunas, incluindo o índice) para agrupar os dados. Ao agruparmos os dados, receberemos um objeto do tipo `DataFrameGroupBy`. Para vermos os resultados, devemos agregar os valores:
 
-# In[18]:
+# In[95]:
 
 
 covid_estados_agrupado = covid_apenas_estados.groupby('estado')
 
 
-# In[19]:
+# In[97]:
 
 
 covid_estados_agrupado.sum().rename({'casosNovos':'Casos Totais', 'obitosNovos':'Obitos Totais'},axis=1)
@@ -160,7 +160,7 @@ covid_estados_agrupado.sum().rename({'casosNovos':'Casos Totais', 'obitosNovos':
 
 # Podemos agrupar por mais de uma coluna. Vamos fazer dois grupos. *grupo_1* formado por PB e PE e *grupo_2* formado por RJ e SP. Em seguida, vamos agrupar por grupo e por data:
 
-# In[20]:
+# In[103]:
 
 
 covid_estados_grupos = covid_apenas_estados.copy()
@@ -169,7 +169,7 @@ col_grupos = covid_estados_grupos.estado.map(lambda estado: 'grupo_1' if estado 
 covid_estados_grupos['grupo'] = col_grupos
 
 
-# In[21]:
+# In[104]:
 
 
 covid_estados_grupos
@@ -177,7 +177,7 @@ covid_estados_grupos
 
 # Agora vamos agrupar e agregar:
 
-# In[22]:
+# In[107]:
 
 
 covid_grupo_agrupado = covid_estados_grupos.groupby(['grupo','data'])
@@ -202,15 +202,16 @@ covid_grupo_agrupado.sum()
 
 # Relembre do *DataFrame* `df_dict_series`:
 
-# In[24]:
+# In[108]:
 
 
-df_dict_series = pd.read_csv('../database/df_dict_series.csv')
+df_dict_series = pd.read_csv('../database/df_dict_series.csv') 
+df_dict_series
 
 
 # Vamos criar um novo, com novas pessoas:
 
-# In[25]:
+# In[110]:
 
 
 serie_Idade_nova = pd.Series({'Augusto':13, 'André': 17, 'Alexandre': 45}, name="Idade")
@@ -223,25 +224,25 @@ df_novo = pd.DataFrame(dicionario_novo)
 df_novo = df_novo.assign(IMC=round(df_novo.eval('Peso/(Altura/100)**2'),2))
 
 
-# In[26]:
+# In[111]:
 
 
-df_novo
+df_novo 
 
 
 # Agora vamos concatená-los:
 
-# In[27]:
+# In[112]:
 
 
-pd.concat([df_dict_series,df_novo]) 
+pd.concat([df_dict_series,df_novo])  
 
 
 # ### Concatenando por coluna
 # 
 # Para exemplificar vamos considerar os dados de COVID da Paraíba, selecionando casos novos e óbitos novos, e vamos obter dos dados do Brasil apenas os casos e óbitos diários do país, e vamos concatená-los por coluna.
 
-# In[28]:
+# In[115]:
 
 
 covid_PB_casos_obitos = dados_covid_PB[['casosNovos','obitosNovos']]
@@ -249,20 +250,19 @@ covid_PB_casos_obitos = dados_covid_PB[['casosNovos','obitosNovos']]
 
 # Vamos tratar os dados do Brasil:
 
-# In[29]:
+# In[119]:
 
 
 covid_BR_casos_obitos = covid_BR.query('regiao=="Brasil"')
 covid_BR_casos_obitos = covid_BR_casos_obitos.set_index('data')
 covid_BR_casos_obitos = covid_BR_casos_obitos[['casosNovos','obitosNovos']].rename({
-    'casosNovos':'casosBR', 'obitosNovos':'obitosBR'
-}, axis=1)
+    'casosNovos':'casosBR', 'obitosNovos':'obitosBR'}, axis=1)
 
 
-# In[30]:
+# In[120]:
 
 
-covid_PB_casos_obitos
+covid_PB_casos_obitos  
 
 
 # In[31]:
@@ -273,7 +273,7 @@ covid_BR_casos_obitos
 
 # Vamos agora concatená-los por coluna:
 
-# In[32]:
+# In[121]:
 
 
 pd.concat([covid_PB_casos_obitos, covid_BR_casos_obitos], axis=1)
@@ -281,7 +281,7 @@ pd.concat([covid_PB_casos_obitos, covid_BR_casos_obitos], axis=1)
 
 # Para um polimento final, vamos substituir os valores `NaN` que ocorreram antes do dia 13 de julho por 0. Para tanto, a forma ideal é utilizando o método `map`:
 
-# In[33]:
+# In[122]:
 
 
 dados_PB_BR = pd.concat([covid_PB_casos_obitos, covid_BR_casos_obitos], axis=1)
@@ -309,22 +309,22 @@ dados_PB_BR
 # 
 # - No *DataFrame* *nome_cpf_email* existem alunos que não estão presentes no *nome_cpf_mat* pois estes não são alunos da UFPB.
 
-# In[35]:
+# In[141]:
 
 
 nome_cpf_mat = pd.read_csv('../database/nome_cpf_mat.csv')
-nome_cpf_email = pd.read_csv('../database/nome_cpf_email.csv')
+nome_cpf_email = pd.read_csv('../database/nome_cpf_email.csv') 
 
 
 # Vamos agora examinar os *DataFrames*. Como são bem simples, basta realizar *prints* deles.
 
-# In[36]:
+# In[142]:
 
 
 nome_cpf_mat
 
 
-# In[37]:
+# In[143]:
 
 
 nome_cpf_email
@@ -332,19 +332,21 @@ nome_cpf_email
 
 # Tipicamente é bom possuir *index* únicos. Neste sentido, vamos definir o CPF como *index*:
 
-# In[38]:
+# In[144]:
 
 
 nome_cpf_mat = nome_cpf_mat.set_index('CPF')
 nome_cpf_email = nome_cpf_email.set_index('CPF')
 
+nome_cpf_mat, nome_cpf_email
+
 
 # Vamos agora realizar um **left** join com o *DataFrame* **nome_cpf_mat** ficando à esquerda (neste caso, apenas alunos com matrícula irão aparecer):
 
-# In[39]:
+# In[38]:
 
 
-pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = ['Nome','CPF'])
+pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = ['Nome','CPF']) 
 
 
 # - Na opção *how* dizemos qual o tipo de *join* que queremos realizar. 
@@ -353,7 +355,7 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = ['Nome','CPF'])
 # 
 # Veja o que aconteceria se informássemos apenas que o *CPF* está presente nos dois *DataFrames*:
 
-# In[40]:
+# In[39]:
 
 
 pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = 'CPF')
@@ -363,7 +365,7 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'left', on = 'CPF')
 
 # Vamos agora realizar um **right** join com o *DataFrame* **nome_cpf_mat** ficando à esquerda (neste caso, apenas alunos **com e-mail** irão aparecer):
 
-# In[41]:
+# In[40]:
 
 
 pd.merge(nome_cpf_mat, nome_cpf_email, how = 'right', on = ['Nome','CPF'])
@@ -371,18 +373,18 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'right', on = ['Nome','CPF'])
 
 # Vamos agora realizar um **inner** join com o *DataFrame* **nome_cpf_mat** ficando à esquerda (neste caso, apenas alunos **com matrícula e com e-mail** irão aparecer):
 
-# In[42]:
+# In[145]:
 
 
-pd.merge(nome_cpf_mat, nome_cpf_email, how = 'inner', on = ['Nome','CPF'])
+pd.merge(nome_cpf_mat, nome_cpf_email, how = ' ', on = ['Nome','CPF'])
 
 
 # Por fim, vamos agora realizar um **outer** ou **full** join com o *DataFrame* **nome_cpf_mat** ficando à esquerda (neste caso, **todos** os alunos irão aparecer):
 
-# In[43]:
+# In[146]:
 
 
-pd.merge(nome_cpf_mat, nome_cpf_email, how = 'outer', on = ['Nome','CPF'])
+pd.merge(nome_cpf_mat, nome_cpf_email, how = 'outer', on = ['Nome','CPF']) 
 
 
 # ### Os métodos *apply*, *map* e *applymap*
@@ -397,7 +399,7 @@ pd.merge(nome_cpf_mat, nome_cpf_email, how = 'outer', on = ['Nome','CPF'])
 
 # * Neste exemplo vamos retomar a concatenação entre os dados da Paraíba e do Brasil, porém iremos substituir *todos* os valores de `NaN` por zero, usando o métodp `applymap`.
 
-# In[44]:
+# In[149]:
 
 
 dados_PB_BR = pd.concat([covid_PB_casos_obitos, covid_BR_casos_obitos], axis=1)
@@ -406,7 +408,7 @@ dados_PB_BR.applymap(lambda valor: 0 if np.isnan(valor) else valor)
 
 # Vamos utilizar `apply` para realizar a soma de casos e óbitos através de mais de uma forma
 
-# In[45]:
+# In[150]:
 
 
 dados_PB_BR.apply(lambda x: np.sum(x)).astype('int')
@@ -414,7 +416,7 @@ dados_PB_BR.apply(lambda x: np.sum(x)).astype('int')
 
 # Se quisermos realizar a operação por linhas, basta utilizar o argumento `axis=1`:
 
-# In[46]:
+# In[152]:
 
 
 dados_PB_BR.apply(lambda x: (x>0).all(), axis=1)

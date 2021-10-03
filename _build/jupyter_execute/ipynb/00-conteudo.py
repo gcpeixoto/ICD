@@ -54,9 +54,9 @@
 #     - [Questionário 23](Q23.ipynb)
 #     - [Questionário 24](Q24.ipynb)
 #     - [Questionário 25](Q25.ipynb)
-# 
 # - Unidade 2: Parte 3
 #     - [Questionário 31](Q31.ipynb)
+#     - [Questionário 32](Q32.ipynb)
 #     
 # #### Conceito
 # 
@@ -137,7 +137,7 @@
 # - Nota da parte: $N_{p} = 0,5A_p + \sum_{i} x_i \, Q_{pi}$
 #     - $A_p$: nota do mini-artigo associado à parte $p$
 #     - $Q_{pi}$: questionário $i$ da parte $p$
-#     - $x_{i}$: peso do questionário $Q_{pi}$ (igual para todos, com $\sum_i x_{i} = 0,5$.
+#     - $x_{i}$: peso do questionário $Q_{pi}$ (igual para todos, com $\sum_i x_{i} = 0,5.$
 #   
 # - Nota da unidade: $N_u = \frac{1}{P}\sum_{p=1}^P N_p$
 #     - $P$: número de partes
@@ -211,5 +211,6 @@
 # Q24
 # Q25
 # Q31
+# Q32
 # ```
 # 
