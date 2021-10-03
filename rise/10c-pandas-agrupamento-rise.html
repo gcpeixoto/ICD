@@ -245,6 +245,11 @@
    Questionário 31 (Q31)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -459,8 +464,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosNovos     440037
-obitosNovos      9294
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosNovos     440106
+obitosNovos      9304
 dtype: int64
 </pre></div>
 </div>
@@ -512,6 +517,26 @@ dtype: int64
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <th>2021-09-28</th>
+      <td>441224</td>
+      <td>31</td>
+      <td>484369</td>
+      <td>333781</td>
+      <td>9304</td>
+      <td>6.0</td>
+      <td>0.0211</td>
+    </tr>
+    <tr>
+      <th>2021-09-27</th>
+      <td>441193</td>
+      <td>38</td>
+      <td>484341</td>
+      <td>333758</td>
+      <td>9298</td>
+      <td>4.0</td>
+      <td>0.0211</td>
+    </tr>
     <tr>
       <th>2021-09-26</th>
       <td>441155</td>
@@ -582,26 +607,6 @@ dtype: int64
       <td>6.0</td>
       <td>0.0211</td>
     </tr>
-    <tr>
-      <th>2021-09-19</th>
-      <td>440067</td>
-      <td>168</td>
-      <td>484224</td>
-      <td>331604</td>
-      <td>9271</td>
-      <td>3.0</td>
-      <td>0.0211</td>
-    </tr>
-    <tr>
-      <th>2021-09-18</th>
-      <td>439899</td>
-      <td>3144</td>
-      <td>484234</td>
-      <td>331213</td>
-      <td>9268</td>
-      <td>4.0</td>
-      <td>0.0211</td>
-    </tr>
   </tbody>
 </table>
 </div></div></div>
@@ -609,13 +614,13 @@ dtype: int64
 <p>Isto também pode ser obtido utilizando o método <code class="docutils literal notranslate"><span class="pre">sum</span></code> de <em>DataFrames</em> e <em>Series</em>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="p">[[</span><span class="s1">&#39;casosNovos&#39;</span><span class="p">,</span><span class="s1">&#39;obitosNovos&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_covid_PB</span><span class="p">[[</span><span class="s1">&#39;casosNovos&#39;</span><span class="p">,</span><span class="s1">&#39;obitosNovos&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosNovos     440037.0
-obitosNovos      9294.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosNovos     440106.0
+obitosNovos      9304.0
 dtype: float64
 </pre></div>
 </div>
@@ -636,12 +641,12 @@ dtype: float64
 2020-03-19       0.0
 2020-03-20       0.0
                ...  
-2021-09-22    9284.0
-2021-09-23    9287.0
 2021-09-24    9290.0
 2021-09-25    9292.0
 2021-09-26    9294.0
-Name: obitosNovos, Length: 559, dtype: float64
+2021-09-27    9298.0
+2021-09-28    9304.0
+Name: obitosNovos, Length: 561, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -660,7 +665,7 @@ Name: obitosNovos, Length: 559, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid_BR</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid_BR</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -774,7 +779,7 @@ Name: obitosNovos, Length: 559, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># resumo da tabela</span>
-<span class="n">covid_BR</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">covid_BR</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
@@ -811,7 +816,7 @@ memory usage: 86.5+ MB
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># todos os estados únicos</span>
-<span class="n">covid_BR</span><span class="o">.</span><span class="n">estado</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">array</span>
+<span class="n">covid_BR</span><span class="o">.</span><span class="n">estado</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">array</span> 
 </pre></div>
 </div>
 </div>
@@ -828,7 +833,7 @@ Length: 28, dtype: object
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ordena alfabeticamente</span>
-<span class="n">covid_BR</span><span class="o">.</span><span class="n">estado</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">array</span>
+<span class="n">covid_BR</span><span class="o">.</span><span class="n">estado</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">array</span> 
 </pre></div>
 </div>
 </div>
@@ -1714,10 +1719,87 @@ Length: 27, dtype: object
 <p>Relembre do <em>DataFrame</em> <code class="docutils literal notranslate"><span class="pre">df_dict_series</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dict_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/df_dict_series.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dict_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/df_dict_series.csv&#39;</span><span class="p">)</span> 
+<span class="n">df_dict_series</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Idade</th>
+      <th>Peso</th>
+      <th>Altura</th>
+      <th>IMC</th>
+      <th>Sobrenome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Ana</td>
+      <td>20</td>
+      <td>65</td>
+      <td>162</td>
+      <td>24.77</td>
+      <td>Silva</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>João</td>
+      <td>19</td>
+      <td>80</td>
+      <td>178</td>
+      <td>25.25</td>
+      <td>PraDo</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Maria</td>
+      <td>21</td>
+      <td>62</td>
+      <td>162</td>
+      <td>23.62</td>
+      <td>Sales</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Pedro</td>
+      <td>22</td>
+      <td>67</td>
+      <td>165</td>
+      <td>24.61</td>
+      <td>MachadO</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Túlio</td>
+      <td>20</td>
+      <td>73</td>
+      <td>171</td>
+      <td>24.96</td>
+      <td>Coutinho</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Vamos criar um novo, com novas pessoas:</p>
 <div class="cell docutils container">
@@ -1736,7 +1818,7 @@ Length: 27, dtype: object
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_novo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_novo</span> 
 </pre></div>
 </div>
 </div>
@@ -1798,7 +1880,7 @@ Length: 27, dtype: object
 <p>Agora vamos concatená-los:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_dict_series</span><span class="p">,</span><span class="n">df_novo</span><span class="p">])</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_dict_series</span><span class="p">,</span><span class="n">df_novo</span><span class="p">])</span>  
 </pre></div>
 </div>
 </div>
@@ -1924,15 +2006,14 @@ Length: 27, dtype: object
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid_BR_casos_obitos</span> <span class="o">=</span> <span class="n">covid_BR</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;regiao==&quot;Brasil&quot;&#39;</span><span class="p">)</span>
 <span class="n">covid_BR_casos_obitos</span> <span class="o">=</span> <span class="n">covid_BR_casos_obitos</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
 <span class="n">covid_BR_casos_obitos</span> <span class="o">=</span> <span class="n">covid_BR_casos_obitos</span><span class="p">[[</span><span class="s1">&#39;casosNovos&#39;</span><span class="p">,</span><span class="s1">&#39;obitosNovos&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span>
-    <span class="s1">&#39;casosNovos&#39;</span><span class="p">:</span><span class="s1">&#39;casosBR&#39;</span><span class="p">,</span> <span class="s1">&#39;obitosNovos&#39;</span><span class="p">:</span><span class="s1">&#39;obitosBR&#39;</span>
-<span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="s1">&#39;casosNovos&#39;</span><span class="p">:</span><span class="s1">&#39;casosBR&#39;</span><span class="p">,</span> <span class="s1">&#39;obitosNovos&#39;</span><span class="p">:</span><span class="s1">&#39;obitosBR&#39;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid_PB_casos_obitos</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid_PB_casos_obitos</span>  
 </pre></div>
 </div>
 </div>
@@ -1966,6 +2047,16 @@ Length: 27, dtype: object
   </thead>
   <tbody>
     <tr>
+      <th>2021-09-28</th>
+      <td>31</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>2021-09-27</th>
+      <td>38</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
       <th>2021-09-26</th>
       <td>134</td>
       <td>2.0</td>
@@ -1979,16 +2070,6 @@ Length: 27, dtype: object
       <th>2021-09-24</th>
       <td>225</td>
       <td>3.0</td>
-    </tr>
-    <tr>
-      <th>2021-09-23</th>
-      <td>203</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>2021-09-22</th>
-      <td>297</td>
-      <td>6.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2022,7 +2103,7 @@ Length: 27, dtype: object
     </tr>
   </tbody>
 </table>
-<p>559 rows × 2 columns</p>
+<p>561 rows × 2 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2161,6 +2242,20 @@ Length: 27, dtype: object
   </thead>
   <tbody>
     <tr>
+      <th>2021-09-28</th>
+      <td>31.0</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-09-27</th>
+      <td>38.0</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
       <th>2021-09-26</th>
       <td>134.0</td>
       <td>2.0</td>
@@ -2178,20 +2273,6 @@ Length: 27, dtype: object
       <th>2021-09-24</th>
       <td>225.0</td>
       <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2021-09-23</th>
-      <td>203.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2021-09-22</th>
-      <td>297.0</td>
-      <td>6.0</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -2239,7 +2320,7 @@ Length: 27, dtype: object
     </tr>
   </tbody>
 </table>
-<p>579 rows × 4 columns</p>
+<p>581 rows × 4 columns</p>
 </div></div></div>
 </div>
 <p>Para um polimento final, vamos substituir os valores <code class="docutils literal notranslate"><span class="pre">NaN</span></code> que ocorreram antes do dia 13 de julho por 0. Para tanto, a forma ideal é utilizando o método <code class="docutils literal notranslate"><span class="pre">map</span></code>:</p>
@@ -2286,6 +2367,20 @@ Length: 27, dtype: object
   </thead>
   <tbody>
     <tr>
+      <th>2021-09-28</th>
+      <td>31</td>
+      <td>6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-09-27</th>
+      <td>38</td>
+      <td>4</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
       <th>2021-09-26</th>
       <td>134</td>
       <td>2</td>
@@ -2303,20 +2398,6 @@ Length: 27, dtype: object
       <th>2021-09-24</th>
       <td>225</td>
       <td>3</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2021-09-23</th>
-      <td>203</td>
-      <td>3</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2021-09-22</th>
-      <td>297</td>
-      <td>6</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -2364,7 +2445,7 @@ Length: 27, dtype: object
     </tr>
   </tbody>
 </table>
-<p>579 rows × 4 columns</p>
+<p>581 rows × 4 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -2387,7 +2468,7 @@ Length: 27, dtype: object
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nome_cpf_mat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/nome_cpf_mat.csv&#39;</span><span class="p">)</span>
-<span class="n">nome_cpf_email</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/nome_cpf_email.csv&#39;</span><span class="p">)</span>
+<span class="n">nome_cpf_email</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/nome_cpf_email.csv&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -2546,6 +2627,29 @@ Length: 27, dtype: object
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nome_cpf_mat</span> <span class="o">=</span> <span class="n">nome_cpf_mat</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;CPF&#39;</span><span class="p">)</span>
 <span class="n">nome_cpf_email</span> <span class="o">=</span> <span class="n">nome_cpf_email</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;CPF&#39;</span><span class="p">)</span>
+
+<span class="n">nome_cpf_mat</span><span class="p">,</span> <span class="n">nome_cpf_email</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(                          Nome  Matricula
+ CPF                                      
+ 326.475.190-99      João Paulo    8848484
+ 073.101.240-22       Ana Silva    8451212
+ 830.060.930-03  Antonio Carlos    5151213
+ 472.006.460-40   Debora Santos   51848484
+ 566.712.550-16   Rodrigo Gomes    1415816
+ 308.226.400-07    Edson Jardim    9592303,
+                           Nome                     e-mail
+ CPF                                                      
+ 326.475.190-99      João Paulo      joao@inventado.com.br
+ 073.101.240-22       Ana Silva       ana@inventado.com.br
+ 830.060.930-03  Antonio Carlos   antonio@inventado.com.br
+ 370.981.810-99    Saulo Santos     saulo@inventado.com.br
+ 250.078.710-95   Paulo Cardoso     paulo@inventado.com.br
+ 308.226.400-07    Edson Jardim     edson@inventado.com.br
+ 344.246.630-00       Ana Silva  anasilva@inventado.com.br)
 </pre></div>
 </div>
 </div>
@@ -2553,7 +2657,7 @@ Length: 27, dtype: object
 <p>Vamos agora realizar um <strong>left</strong> join com o <em>DataFrame</em> <strong>nome_cpf_mat</strong> ficando à esquerda (neste caso, apenas alunos com matrícula irão aparecer):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nome_cpf_mat</span><span class="p">,</span> <span class="n">nome_cpf_email</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span><span class="s1">&#39;CPF&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nome_cpf_mat</span><span class="p">,</span> <span class="n">nome_cpf_email</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span><span class="s1">&#39;CPF&#39;</span><span class="p">])</span> 
 </pre></div>
 </div>
 </div>
@@ -2806,73 +2910,60 @@ Length: 27, dtype: object
 <p>Vamos agora realizar um <strong>inner</strong> join com o <em>DataFrame</em> <strong>nome_cpf_mat</strong> ficando à esquerda (neste caso, apenas alunos <strong>com matrícula e com e-mail</strong> irão aparecer):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nome_cpf_mat</span><span class="p">,</span> <span class="n">nome_cpf_email</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span><span class="s1">&#39;CPF&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nome_cpf_mat</span><span class="p">,</span> <span class="n">nome_cpf_email</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span><span class="s1">&#39;CPF&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">145</span><span class="o">-</span><span class="n">d97c0fe2d090</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nome_cpf_mat</span><span class="p">,</span> <span class="n">nome_cpf_email</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span><span class="s1">&#39;CPF&#39;</span><span class="p">])</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/reshape/merge.py</span> in <span class="ni">merge</span><span class="nt">(left, right, how, on, left_on, right_on, left_index, right_index, sort, suffixes, copy, indicator, validate)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span>         <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">122</span>     <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">123</span> 
+<span class="g g-Whitespace">    </span><span class="mi">124</span> 
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nome</th>
-      <th>Matricula</th>
-      <th>e-mail</th>
-    </tr>
-    <tr>
-      <th>CPF</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>326.475.190-99</th>
-      <td>João Paulo</td>
-      <td>8848484</td>
-      <td>joao@inventado.com.br</td>
-    </tr>
-    <tr>
-      <th>073.101.240-22</th>
-      <td>Ana Silva</td>
-      <td>8451212</td>
-      <td>ana@inventado.com.br</td>
-    </tr>
-    <tr>
-      <th>830.060.930-03</th>
-      <td>Antonio Carlos</td>
-      <td>5151213</td>
-      <td>antonio@inventado.com.br</td>
-    </tr>
-    <tr>
-      <th>308.226.400-07</th>
-      <td>Edson Jardim</td>
-      <td>9592303</td>
-      <td>edson@inventado.com.br</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/reshape/merge.py</span> in <span class="ni">get_result</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">714</span>             <span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indicator_pre_merge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">715</span> 
+<span class="ne">--&gt; </span><span class="mi">716</span>         <span class="n">join_index</span><span class="p">,</span> <span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_join_info</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">717</span> 
+<span class="g g-Whitespace">    </span><span class="mi">718</span>         <span class="n">llabels</span><span class="p">,</span> <span class="n">rlabels</span> <span class="o">=</span> <span class="n">_items_overlap_with_suffix</span><span class="p">(</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/reshape/merge.py</span> in <span class="ni">_get_join_info</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">960</span>             <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">961</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">962</span>             <span class="p">(</span><span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_join_indexers</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">963</span> 
+<span class="g g-Whitespace">    </span><span class="mi">964</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_index</span><span class="p">:</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/reshape/merge.py</span> in <span class="ni">_get_join_indexers</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">934</span>         <span class="sd">&quot;&quot;&quot;return the join indexers&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">935</span>         <span class="c1"># Both returned ndarrays are np.intp</span>
+<span class="ne">--&gt; </span><span class="mi">936</span>         <span class="k">return</span> <span class="n">get_join_indexers</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">937</span>             <span class="bp">self</span><span class="o">.</span><span class="n">left_join_keys</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_join_keys</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sort</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">how</span>
+<span class="g g-Whitespace">    </span><span class="mi">938</span>         <span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/envs/lecture/lib/python3.9/site-packages/pandas/core/reshape/merge.py</span> in <span class="ni">get_join_indexers</span><span class="nt">(left_keys, right_keys, sort, how, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1490</span>     <span class="k">if</span> <span class="n">how</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1491</span>         <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;sort&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sort</span>
+<span class="ne">-&gt; </span><span class="mi">1492</span>     <span class="n">join_func</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">   </span><span class="mi">1493</span>         <span class="s2">&quot;inner&quot;</span><span class="p">:</span> <span class="n">libjoin</span><span class="o">.</span><span class="n">inner_join</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1494</span>         <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">libjoin</span><span class="o">.</span><span class="n">left_outer_join</span><span class="p">,</span>
+
+<span class="ne">KeyError</span>: &#39; &#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Por fim, vamos agora realizar um <strong>outer</strong> ou <strong>full</strong> join com o <em>DataFrame</em> <strong>nome_cpf_mat</strong> ficando à esquerda (neste caso, <strong>todos</strong> os alunos irão aparecer):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nome_cpf_mat</span><span class="p">,</span> <span class="n">nome_cpf_email</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span><span class="s1">&#39;CPF&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nome_cpf_mat</span><span class="p">,</span> <span class="n">nome_cpf_email</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span><span class="s1">&#39;CPF&#39;</span><span class="p">])</span> 
 </pre></div>
 </div>
 </div>
@@ -3019,6 +3110,20 @@ Length: 27, dtype: object
   </thead>
   <tbody>
     <tr>
+      <th>2021-09-28</th>
+      <td>31.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2021-09-27</th>
+      <td>38.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
       <th>2021-09-26</th>
       <td>134.0</td>
       <td>2.0</td>
@@ -3036,20 +3141,6 @@ Length: 27, dtype: object
       <th>2021-09-24</th>
       <td>225.0</td>
       <td>3.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2021-09-23</th>
-      <td>203.0</td>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2021-09-22</th>
-      <td>297.0</td>
-      <td>6.0</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
@@ -3097,7 +3188,7 @@ Length: 27, dtype: object
     </tr>
   </tbody>
 </table>
-<p>579 rows × 4 columns</p>
+<p>581 rows × 4 columns</p>
 </div></div></div>
 </div>
 <p>Vamos utilizar <code class="docutils literal notranslate"><span class="pre">apply</span></code> para realizar a soma de casos e óbitos através de mais de uma forma</p>
@@ -3108,8 +3199,8 @@ Length: 27, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosNovos      440037
-obitosNovos       9294
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>casosNovos      440106
+obitosNovos       9304
 casosBR        2074860
 obitosBR         78772
 dtype: int64
@@ -3126,18 +3217,18 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data
+2021-09-28    False
+2021-09-27    False
 2021-09-26    False
 2021-09-25    False
 2021-09-24    False
-2021-09-23    False
-2021-09-22    False
               ...  
 2020-03-11    False
 2020-03-12    False
 2020-03-13    False
 2020-03-14    False
 2020-03-15    False
-Length: 579, dtype: bool
+Length: 581, dtype: bool
 </pre></div>
 </div>
 </div>

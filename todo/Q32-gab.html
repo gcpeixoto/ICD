@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Questiónario Q32 - Pandas Data Frames &#8212; Introdução à Ciência de Dados</title>
+    <title>Questionário 32 (Q32) &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -245,6 +245,11 @@
    Questionário 31 (Q31)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -343,73 +348,23 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Questiónario Q32 - Pandas Data Frames
+   Questionário 32 (Q32)
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#questao-1">
-   Questão 1
+  <a class="reference internal nav-link" href="#gabarito">
+   Gabarito
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#para-criar-uma-data-frame-utilizamos-a-funcao-pd-dataframe">
-     Para criar uma Data Frame utilizamos a função pd.DataFrame()
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#marque-a-alternativa-verdadeira-sobre-os-parametros-da-funcao-pd-dataframe">
-       Marque a alternativa verdadeira sobre os parâmetros da função pd.DataFrame()
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#questao-2">
-   Questão 2
+  <a class="reference internal nav-link" href="#id1">
+   Gabarito
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quais-sao-as-funcoes-utilizadas-para-vizualizar-respectivamente-as-cinco-primeiras-e-cinco-ultimas-de-um-data-frame-chamado-data-frame">
-     Quais são as funções utilizadas para vizualizar respectivamente as cinco primeiras e cinco últimas de um Data Frame chamado “data_frame”?
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#questao-3">
-   Questão 3
+  <a class="reference internal nav-link" href="#id2">
+   Gabarito
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tres-carros-sairam-de-joao-pessoa-pb-e-foram-enviados-para-3-localidades-diferentes">
-     Três carros saíram de João Pessoa - PB e foram enviados para 3 localidades diferentes.
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#carro-1-para-bahia-848-km-e-gastou-7h-e-30-min">
-       Carro 1 para Bahia(848 Km) e gastou 7h e 30 min.
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#carro-2-para-fortaleza-728-km-e-gastou-10h">
-       Carro 2 para Fortaleza(728 Km) e gastou 10h.
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#carro-3-para-sergipe-640-km-e-gastou-9h-e-30-min">
-       Carro 3 para Sergipe(640 Km) e gastou 9h e 30 min.
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crie-um-dataframe-com-esses-dados-depois-crie-uma-nova-coluna-com-a-velocidade-media-de-cada-carro-e-crie-um-programa-para-printar-o-carro-que-teve-a-velocidade-media-mais-alta">
-     Crie um DataFrame com esses dados, depois crie uma nova coluna com a Velocidade Média de cada carro e crie um programa para printar o carro que teve a Velocidade Média mais alta.
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -422,90 +377,395 @@
         
               <div>
                 
-  <section id="questionario-q32-pandas-data-frames">
-<h1>Questiónario Q32 - Pandas Data Frames<a class="headerlink" href="#questionario-q32-pandas-data-frames" title="Permalink to this headline">¶</a></h1>
-<p>Monitor: Vladimir Yuri</p>
+  <section id="questionario-32-q32">
+<h1>Questionário 32 (Q32)<a class="headerlink" href="#questionario-32-q32" title="Permalink to this headline">¶</a></h1>
+<p>Orientações:</p>
+<ul class="simple">
+<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
+<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
+<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
+<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-o à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
+</ul>
+<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
+<hr><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questão 1.</strong> Marque a alternativa cujas funções são as utilizadas para imprimir as 4 primeiras e as 6 últimas linhas, respectivamente, de um <em>DataFrame</em> <code class="docutils literal notranslate"><span class="pre">d</span></code>, tal que  <code class="docutils literal notranslate"><span class="pre">len(d)</span> <span class="pre">=</span> <span class="pre">20</span></code>.</p>
+<p>A. <code class="docutils literal notranslate"><span class="pre">df.head(6)</span></code>, <code class="docutils literal notranslate"><span class="pre">df.tail(4)</span></code></p>
+<p>B. <code class="docutils literal notranslate"><span class="pre">df.head(-6)</span></code>, <code class="docutils literal notranslate"><span class="pre">df.tail(4)</span></code></p>
+<p>C. <code class="docutils literal notranslate"><span class="pre">df.head(-16)</span></code>, <code class="docutils literal notranslate"><span class="pre">df.tail(6)</span></code></p>
+<p>D. <code class="docutils literal notranslate"><span class="pre">df.tail(-6)</span></code>, <code class="docutils literal notranslate"><span class="pre">df.tail(4)</span></code></p>
+<hr>
 </section>
-<section id="questao-1">
-<h1>Questão 1<a class="headerlink" href="#questao-1" title="Permalink to this headline">¶</a></h1>
-<section id="para-criar-uma-data-frame-utilizamos-a-funcao-pd-dataframe">
-<h2>Para criar uma Data Frame utilizamos a função pd.DataFrame()<a class="headerlink" href="#para-criar-uma-data-frame-utilizamos-a-funcao-pd-dataframe" title="Permalink to this headline">¶</a></h2>
-<section id="marque-a-alternativa-verdadeira-sobre-os-parametros-da-funcao-pd-dataframe">
-<h3>Marque a alternativa verdadeira sobre os parâmetros da função pd.DataFrame()<a class="headerlink" href="#marque-a-alternativa-verdadeira-sobre-os-parametros-da-funcao-pd-dataframe" title="Permalink to this headline">¶</a></h3>
-<p>a. (dados, index, colums) = o parâmetro “index” rotula as linhas do DataFrame.</p>
-<p>b. (dados, columns, lines) = “dados” serão os dados utilizados para vizualizar no DataFrame.</p>
-<p>c. (dados, index, colums) = o parâmetro “columns” printa somente as colunas do DataFrane.</p>
-<p>d. (index, columns, dados) = “index” se refere aos índices do DataFrame.</p>
-<p>RESPOSTA CORRETA: A</p>
-</section>
-</section>
-</section>
-<section id="questao-2">
-<h1>Questão 2<a class="headerlink" href="#questao-2" title="Permalink to this headline">¶</a></h1>
-<section id="quais-sao-as-funcoes-utilizadas-para-vizualizar-respectivamente-as-cinco-primeiras-e-cinco-ultimas-de-um-data-frame-chamado-data-frame">
-<h2>Quais são as funções utilizadas para vizualizar respectivamente as cinco primeiras e cinco últimas de um Data Frame chamado “data_frame”?<a class="headerlink" href="#quais-sao-as-funcoes-utilizadas-para-vizualizar-respectivamente-as-cinco-primeiras-e-cinco-ultimas-de-um-data-frame-chamado-data-frame" title="Permalink to this headline">¶</a></h2>
-<p>a. data_frame.begin() e data_frame.last()</p>
-<p>b. data_frame.head() e data_frame.last()</p>
-<p>c. data_frame.head() e data_frame.tail()</p>
-<p>d. data_frame.first(5) e data_frame.tail()</p>
-<p>RESPOSTA CORRETA: C</p>
-</section>
-</section>
-<section id="questao-3">
-<h1>Questão 3<a class="headerlink" href="#questao-3" title="Permalink to this headline">¶</a></h1>
-<section id="tres-carros-sairam-de-joao-pessoa-pb-e-foram-enviados-para-3-localidades-diferentes">
-<h2>Três carros saíram de João Pessoa - PB e foram enviados para 3 localidades diferentes.<a class="headerlink" href="#tres-carros-sairam-de-joao-pessoa-pb-e-foram-enviados-para-3-localidades-diferentes" title="Permalink to this headline">¶</a></h2>
-<section id="carro-1-para-bahia-848-km-e-gastou-7h-e-30-min">
-<h3>Carro 1 para Bahia(848 Km) e gastou 7h e 30 min.<a class="headerlink" href="#carro-1-para-bahia-848-km-e-gastou-7h-e-30-min" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="carro-2-para-fortaleza-728-km-e-gastou-10h">
-<h3>Carro 2 para Fortaleza(728 Km) e gastou 10h.<a class="headerlink" href="#carro-2-para-fortaleza-728-km-e-gastou-10h" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="carro-3-para-sergipe-640-km-e-gastou-9h-e-30-min">
-<h3>Carro 3 para Sergipe(640 Km) e gastou 9h e 30 min.<a class="headerlink" href="#carro-3-para-sergipe-640-km-e-gastou-9h-e-30-min" title="Permalink to this headline">¶</a></h3>
-</section>
-</section>
-<section id="crie-um-dataframe-com-esses-dados-depois-crie-uma-nova-coluna-com-a-velocidade-media-de-cada-carro-e-crie-um-programa-para-printar-o-carro-que-teve-a-velocidade-media-mais-alta">
-<h2>Crie um DataFrame com esses dados, depois crie uma nova coluna com a Velocidade Média de cada carro e crie um programa para printar o carro que teve a Velocidade Média mais alta.<a class="headerlink" href="#crie-um-dataframe-com-esses-dados-depois-crie-uma-nova-coluna-com-a-velocidade-media-de-cada-carro-e-crie-um-programa-para-printar-o-carro-que-teve-a-velocidade-media-mais-alta" title="Permalink to this headline">¶</a></h2>
-<p>a. Carro 2 = 125,06 Km/h</p>
-<p>a. Carro 1 = 113,06 Km/h</p>
-<p>c. Carro 1 = 115,45 Km/h</p>
-<p>d. Carro 3 = 110,8 Km/h</p>
+<section id="gabarito">
+<h1>Gabarito<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>C</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RESOLUÇÃO:</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">carros_distancia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;Carro 1&#39;</span><span class="p">:</span> <span class="mi">848</span><span class="p">,</span> <span class="s1">&#39;Carro 2&#39;</span><span class="p">:</span> <span class="mi">728</span><span class="p">,</span> <span class="s1">&#39;Carro 3&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">},</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Distancia&quot;</span><span class="p">)</span>
-<span class="n">carros_tempo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;Carro 1&#39;</span><span class="p">:</span> <span class="mf">7.5</span><span class="p">,</span> <span class="s1">&#39;Carro 2&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Carro 3&#39;</span><span class="p">:</span> <span class="mf">9.5</span><span class="p">},</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Velocidade&quot;</span><span class="p">)</span>
-
-<span class="n">carros_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Distancia&#39;</span><span class="p">:</span> <span class="n">carros_distancia</span><span class="p">,</span> <span class="s1">&#39;Velocidade&#39;</span><span class="p">:</span> <span class="n">carros_tempo</span><span class="p">}</span>
-
-<span class="n">carros_dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">carros_dict</span><span class="p">)</span>
-
-<span class="n">carros_dataframe</span><span class="p">[</span><span class="s2">&quot;Km/h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">carros_dataframe</span><span class="p">[</span><span class="s2">&quot;Distancia&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">carros_dataframe</span><span class="p">[</span><span class="s2">&quot;Velocidade&quot;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">carros_dataframe</span><span class="p">)):</span>
-    
-    <span class="k">if</span><span class="p">(</span><span class="n">carros_dataframe</span><span class="p">[</span><span class="s2">&quot;Km/h&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maior</span><span class="p">):</span>
-        <span class="n">maior</span> <span class="o">=</span> <span class="n">carros_dataframe</span><span class="p">[</span><span class="s2">&quot;Km/h&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-        
-        
-<span class="nb">print</span><span class="p">(</span><span class="n">maior</span><span class="p">)</span>
-
-<span class="c1"># RESPOSTA CORRETA: A</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">97</span><span class="p">,</span><span class="mi">107</span><span class="p">)],</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span><span class="mi">75</span><span class="p">)],</span><span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">21</span><span class="p">)))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;d&#39;</span><span class="p">:</span><span class="n">d1</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">:</span><span class="n">d2</span><span class="p">})</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="o">-</span><span class="mi">16</span><span class="p">),</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>113.06666666666666
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(     d   e
+ a  0.0 NaN
+ b  1.0 NaN
+ c  2.0 NaN
+ d  3.0 NaN,
+     d     e
+ E NaN  15.0
+ F NaN  16.0
+ G NaN  17.0
+ H NaN  18.0
+ I NaN  19.0
+ J NaN  20.0)
 </pre></div>
 </div>
 </div>
 </div>
+<hr>
+<p><strong>Questão 2</strong> No dia 01/08/2021, três veículos saíram de João Pessoa - PB (JPA) com destino a três cidades com distâncias (em quilômetros) e durações de viagem (em horas) em relação à origem dadas pelo quadro abaixo.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:right head"><p>Veículo</p></th>
+<th class="text-align:left head"><p>Cidade</p></th>
+<th class="text-align:right head"><p>Distância de JPA (km)</p></th>
+<th class="text-align:left head"><p>Duração (h)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:right"><p>VW Gol</p></td>
+<td class="text-align:left"><p>Bahia</p></td>
+<td class="text-align:right"><p>848</p></td>
+<td class="text-align:left"><p>7,5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>BMW Z4</p></td>
+<td class="text-align:left"><p>Fortaleza</p></td>
+<td class="text-align:right"><p>728</p></td>
+<td class="text-align:left"><p>10</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>Chery QQ</p></td>
+<td class="text-align:left"><p>Sergipe</p></td>
+<td class="text-align:right"><p>640</p></td>
+<td class="text-align:left"><p>9,5</p></td>
+</tr>
+</tbody>
+</table>
+<p>Tendo chegado ao destino, verificou-se por meio de um sistema de monitoramento que às 13:45h desse mesmo dia, todos os veículos haviam registrado no velocímetro uma velocidade igual à velocidade média calculada para o percurso. Entretanto, a partir desse instante, o sistema mostrou que os veículos haviam acelerado de tal forma que, às 13:47h, a velocidade média havia aumentado em 12% de seu valor.</p>
+<p>Construa um <em>DataFrame</em> <code class="docutils literal notranslate"><span class="pre">df</span></code> que calcule as velocidades e acelerações dos veículos – em unidades de metro e segundo – nos instantes de interesse e defina as variáveis a seguir:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">df.loc['VW</span> <span class="pre">Gol']['Vel.</span> <span class="pre">inicial</span> <span class="pre">(m/s)']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">df.loc['BMW</span> <span class="pre">Z4']['Vel.</span> <span class="pre">final</span> <span class="pre">(m/s)']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">df.loc['Chery</span> <span class="pre">QQ']['Aceleração</span> <span class="pre">(m/s2)']</span></code></p></li>
+</ul>
+<p>Então, assinale a alternativa que corresponde à tupla <code class="docutils literal notranslate"><span class="pre">(a,b,c)</span></code>, com aproximação de duas casas decimais.</p>
+<p>A. (101.12, 200.20, 0.10)</p>
+<p>B. (242.53, 271.63, 0.41)</p>
+<p>C. (262.08, 293.53, 0.26)</p>
+<p>D. (407.04, 293.53, 0.24)</p>
+<hr>
 </section>
+<section id="id1">
+<h1>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>D</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">df</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;Veículo&#39;</span><span class="p">:</span> <span class="s1">&#39;VW Gol&#39;</span><span class="p">,</span><span class="s1">&#39;Cidade&#39;</span><span class="p">:</span> <span class="s1">&#39;Bahia&#39;</span><span class="p">,</span> <span class="s1">&#39;Distância (km)&#39;</span><span class="p">:</span> <span class="mi">848</span><span class="p">,</span> <span class="s1">&#39;Duração (h)&#39;</span><span class="p">:</span> <span class="mf">7.5</span><span class="p">})</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;Veículo&#39;</span><span class="p">:</span> <span class="s1">&#39;BMW Z4&#39;</span><span class="p">,</span><span class="s1">&#39;Cidade&#39;</span><span class="p">:</span> <span class="s1">&#39;Fortaleza&#39;</span><span class="p">,</span> <span class="s1">&#39;Distância (km)&#39;</span><span class="p">:</span> <span class="mi">728</span><span class="p">,</span> <span class="s1">&#39;Duração (h)&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;Veículo&#39;</span><span class="p">:</span> <span class="s1">&#39;Chery QQ&#39;</span><span class="p">,</span><span class="s1">&#39;Cidade&#39;</span><span class="p">:</span> <span class="s1">&#39;Sergipe&#39;</span><span class="p">,</span> <span class="s1">&#39;Distância (km)&#39;</span><span class="p">:</span> <span class="mi">640</span><span class="p">,</span> <span class="s1">&#39;Duração (h)&#39;</span><span class="p">:</span> <span class="mf">9.5</span><span class="p">})</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span><span class="n">d</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">e</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="n">f</span><span class="p">})</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. média (km/h)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Distância (km)&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duração (h)&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. média (m/s)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Distância (km)&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duração (h)&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">3.6</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
+
+<span class="c1"># velocidade no trecho</span>
+<span class="n">prop</span> <span class="o">=</span> <span class="mf">0.12</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. inicial (m/s)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. média (m/s)&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. final (m/s)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">((</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">prop</span><span class="p">)</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. média (m/s)&#39;</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># tempo</span>
+<span class="n">t0</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2021</span><span class="p">,</span><span class="n">month</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">hour</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span><span class="n">minute</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">tf</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2021</span><span class="p">,</span><span class="n">month</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">hour</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span><span class="n">minute</span><span class="o">=</span><span class="mi">47</span><span class="p">)</span>
+<span class="n">deltaT</span> <span class="o">=</span> <span class="p">(</span><span class="n">tf</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Tempo inicial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">t0</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Tempo final&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tf</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Delta t (s)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">deltaT</span>
+
+<span class="c1"># aceleração no trecho</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aceleração (m/s2)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. final (m/s)&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. inicial (m/s)&#39;</span><span class="p">])</span><span class="o">/</span><span class="n">deltaT</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Veículo&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Cidade</th>
+      <th>Distância (km)</th>
+      <th>Duração (h)</th>
+      <th>Vel. média (km/h)</th>
+      <th>Vel. média (m/s)</th>
+      <th>Vel. inicial (m/s)</th>
+      <th>Vel. final (m/s)</th>
+      <th>Tempo inicial</th>
+      <th>Tempo final</th>
+      <th>Delta t (s)</th>
+      <th>Aceleração (m/s2)</th>
+    </tr>
+    <tr>
+      <th>Veículo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>VW Gol</th>
+      <td>Bahia</td>
+      <td>848</td>
+      <td>7.5</td>
+      <td>113.07</td>
+      <td>407.04</td>
+      <td>407.04</td>
+      <td>455.88</td>
+      <td>2021-08-01 13:45:00</td>
+      <td>2021-08-01 13:47:00</td>
+      <td>120.0</td>
+      <td>0.41</td>
+    </tr>
+    <tr>
+      <th>BMW Z4</th>
+      <td>Fortaleza</td>
+      <td>728</td>
+      <td>10</td>
+      <td>72.80</td>
+      <td>262.08</td>
+      <td>262.08</td>
+      <td>293.53</td>
+      <td>2021-08-01 13:45:00</td>
+      <td>2021-08-01 13:47:00</td>
+      <td>120.0</td>
+      <td>0.26</td>
+    </tr>
+    <tr>
+      <th>Chery QQ</th>
+      <td>Sergipe</td>
+      <td>640</td>
+      <td>9.5</td>
+      <td>67.37</td>
+      <td>242.53</td>
+      <td>242.53</td>
+      <td>271.63</td>
+      <td>2021-08-01 13:45:00</td>
+      <td>2021-08-01 13:47:00</td>
+      <td>120.0</td>
+      <td>0.24</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;VW Gol&#39;</span><span class="p">][</span><span class="s1">&#39;Vel. inicial (m/s)&#39;</span><span class="p">]</span>
+<span class="n">b</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;BMW Z4&#39;</span><span class="p">][</span><span class="s1">&#39;Vel. final (m/s)&#39;</span><span class="p">]</span>
+<span class="n">c</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Chery QQ&#39;</span><span class="p">][</span><span class="s1">&#39;Aceleração (m/s2)&#39;</span><span class="p">]</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(407.04, 293.53, 0.24)
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p><strong>Questão 3.</strong> O <em>dataset</em> encontrado no arquivo <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/flights.csv?raw=true">flights.csv</a> (<em>Box &amp; Jenkins arline data</em>) registra a quantidade de passageiros transportados por uma companhia aérea entre 1949 e 1960.</p>
+<p>Utilizando agrupamentos, determine:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code>: o ano em que o maior número de passageiros foi transportado;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code>: o total de passageiros transportados no ano <code class="docutils literal notranslate"><span class="pre">y</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m1,</span> <span class="pre">m2,</span> <span class="pre">m3</span></code>: os 3 meses que, na média, transportaram os maiores números de passageiros ao longo desses anos (TOP 3);</p></li>
+</ul>
+<p>Assinale a alternativa que corresponde aos valores corretos dessas variáveis na seguinte ordem: <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">(m1,m2,m3)</span></code>.</p>
+<p>a. 1957, 4421, (Jul, Ago, Set)</p>
+<p>b. 1960, 5714, (Jul, Ago, Jun)</p>
+<p>c. 1960, 5714, (Nov, Fev, Jan)</p>
+<p>d. 1951, 2042, (Ago, Set, Out)</p>
+<hr>
+</section>
+<section id="id2">
+<h1>Gabarito<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>B</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">df</span>
+<span class="c1"># RESOLUÇÃO:</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../database/flights.csv&quot;</span><span class="p">)</span>
+<span class="n">df_year_soma</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;passengers&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">df_year_soma</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_year_soma</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>passengers</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1960</th>
+      <td>5714</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span><span class="s2">&quot;passengers&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;month&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;passengers&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>passengers</th>
+    </tr>
+    <tr>
+      <th>month</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>July</th>
+      <td>351.333333</td>
+    </tr>
+    <tr>
+      <th>August</th>
+      <td>351.083333</td>
+    </tr>
+    <tr>
+      <th>June</th>
+      <td>311.666667</td>
+    </tr>
+    <tr>
+      <th>September</th>
+      <td>302.416667</td>
+    </tr>
+    <tr>
+      <th>May</th>
+      <td>271.833333</td>
+    </tr>
+    <tr>
+      <th>March</th>
+      <td>270.166667</td>
+    </tr>
+    <tr>
+      <th>April</th>
+      <td>267.083333</td>
+    </tr>
+    <tr>
+      <th>October</th>
+      <td>266.583333</td>
+    </tr>
+    <tr>
+      <th>December</th>
+      <td>261.833333</td>
+    </tr>
+    <tr>
+      <th>January</th>
+      <td>241.750000</td>
+    </tr>
+    <tr>
+      <th>February</th>
+      <td>235.000000</td>
+    </tr>
+    <tr>
+      <th>November</th>
+      <td>232.833333</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
