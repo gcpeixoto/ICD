@@ -1,0 +1,1989 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Estatística Descritiva &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/rise/11-estatistica-descritiva.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/rise/11-estatistica-descritiva.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/rise/11-estatistica-descritiva.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#populacao-e-amostra">
+   População e amostra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analise-de-dados-exploratoria">
+   Análise de dados exploratória
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#descricao-de-dados">
+   Descrição de dados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuicao-de-frequencia">
+     Distribuição de frequência
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#construcao-de-uma-distribuicao-de-frequencia">
+       Construção de uma distribuição de frequência
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rol-de-dados">
+       Rol de dados
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#amplitude-total">
+       Amplitude total
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tamanho-amostral">
+       Tamanho Amostral
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#distribuicoes-e-histogramas">
+       Distribuições e histogramas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numero-de-classes-e-binning">
+       Número de classes e
+       <em>
+        binning
+       </em>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#amplitude-das-classes">
+       Amplitude das classes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#limites-das-classes">
+       Limites das classes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#frequencia-dos-dados">
+       Frequência dos dados
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aplicacoes-a-testes-aleatorios">
+     Aplicações a testes aleatórios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medidas-de-tendencia-central">
+   Medidas de Tendência Central
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#media">
+     Média
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#moda">
+     Moda
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mediana">
+     Mediana
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantis-e-percentis">
+   Quantis e percentis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medidas-de-dispersao">
+   Medidas de Dispersão
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amplitude">
+     Amplitude
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desvio-medio">
+     Desvio Médio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variancia">
+     Variância
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variancia-amostral">
+     Variância Amostral
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desvio-padrao">
+     Desvio Padrão
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumo-estatistico-de-uma-series-ou-dataframe">
+   Resumo Estatístico de uma
+   <em>
+    Series
+   </em>
+   ou
+   <em>
+    DataFrame
+   </em>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="estatistica-descritiva">
+<h1>Estatística Descritiva<a class="headerlink" href="#estatistica-descritiva" title="Permalink to this headline">¶</a></h1>
+<p>Estatística é um domínio do conhecimento que se preocupar em compreender dados.</p>
+<ul class="simple">
+<li><p>Dividida em:</p>
+<ul>
+<li><p><em>estatística inferencial</em>: tirar conclusões dos dados analisados</p></li>
+<li><p><em>estatística descritiva</em>, descrever dados quantitativamente valendo-se de conceitos como “amostra” e “população”</p></li>
+</ul>
+</li>
+</ul>
+<section id="populacao-e-amostra">
+<h2>População e amostra<a class="headerlink" href="#populacao-e-amostra" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>População</em>: coleção de objetos, ou unidades, sobre a qual a informação é procurada;</p></li>
+<li><p><em>Amostra</em>: parte da população observada</p></li>
+</ul>
+</section>
+<section id="analise-de-dados-exploratoria">
+<h2>Análise de dados exploratória<a class="headerlink" href="#analise-de-dados-exploratoria" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Dados extraídos a partir de medições realizadas em amostras representativas constituem <em>observações</em>.</p></li>
+<li><p>Medições e categorias representam uma <em>distribuição amostral</em> de uma certa variável,</p></li>
+<li><p>DAs podem ser usadas para representar aproximadamente a <em>distribuição populacional</em> dessa variável.</p></li>
+<li><p>Análise de dados exploratória: dá subsídios para visualizar e resumir distribuições amostrais de modo que possamos levantar hipóteses sobre a população envolvida.</p></li>
+</ul>
+</section>
+<section id="descricao-de-dados">
+<h2>Descrição de dados<a class="headerlink" href="#descricao-de-dados" title="Permalink to this headline">¶</a></h2>
+<p>Neste capítulo, apresentaremos vários métodos desenvolvidos para <em>Series</em> e <em>DataFrames</em> relacionados à Estatística Descritiva. Começaremos importando as bibliotecas <em>pandas</em> e <em>numpy</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="distribuicao-de-frequencia">
+<h3>Distribuição de frequência<a class="headerlink" href="#distribuicao-de-frequencia" title="Permalink to this headline">¶</a></h3>
+<p>Uma distribuição de frequência é uma tabela que contém um resumo das observações. A distribuição é organizada em uma tabela que contém   <em>intervalos de classe (grupos)</em> e <em>frequências</em> correspondentes.</p>
+<p>Abaixo vemos um exemplo simplificado de tabela de distribuição de frequência (número de alunos) e intervalos de classe de alturas para uma amostra de alunos.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Altura (m)</p></th>
+<th class="text-align:center head"><p>No. de alunos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>1,50 <span class="math notranslate nohighlight">\(\vdash\)</span> 1,60</p></td>
+<td class="text-align:center"><p>5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1,60 <span class="math notranslate nohighlight">\(\vdash\)</span> 1,70</p></td>
+<td class="text-align:center"><p>15</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1,70 <span class="math notranslate nohighlight">\(\vdash\)</span> 1,80</p></td>
+<td class="text-align:center"><p>17</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1,80 <span class="math notranslate nohighlight">\(\vdash\)</span> 1,90</p></td>
+<td class="text-align:center"><p>3</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Total</p></td>
+<td class="text-align:center"><p>40</p></td>
+</tr>
+</tbody>
+</table>
+<section id="construcao-de-uma-distribuicao-de-frequencia">
+<h4>Construção de uma distribuição de frequência<a class="headerlink" href="#construcao-de-uma-distribuicao-de-frequencia" title="Permalink to this headline">¶</a></h4>
+<p>Para ilustrar como se constrói uma distribuição de frequência, vamos considerar um exemplo específico. Suponha que uma pesquisa foi feita e o seguinte conjunto de dados foi obtido:</p>
+<p><strong>Dados Brutos</strong>: 24-23-22-28-35-21-23-33-34-24-21-25-36-26-22-30-32-25-26-33-34-21-31-25-31-26-25-35-33-31.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados</span> <span class="o">=</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">31</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="rol-de-dados">
+<h4>Rol de dados<a class="headerlink" href="#rol-de-dados" title="Permalink to this headline">¶</a></h4>
+<p>A primeira coisa a fazer é ordenar os dados do menor para o maior, formando o <em>rol de dados</em>:</p>
+<p><strong>Rol de dados</strong>: 21-21-21-22-22-23-23-24-25-25-25-25-26-26-26-28-30-31-31-31-32-33-33-33-34-34-34-35-35-36.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([21, 21, 21, 22, 22, 23, 23, 24, 24, 25, 25, 25, 25, 26, 26, 26, 28,
+       30, 31, 31, 31, 32, 33, 33, 33, 34, 34, 35, 35, 36])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="amplitude-total">
+<h4>Amplitude total<a class="headerlink" href="#amplitude-total" title="Permalink to this headline">¶</a></h4>
+<p>Em seguida, calculamos a <em>amplitude total</em> <span class="math notranslate nohighlight">\(R\)</span> pela diferença entre o maior <span class="math notranslate nohighlight">\(M\)</span> e menor <span class="math notranslate nohighlight">\(m\)</span> valores obtidos na amostra.</p>
+<div class="math notranslate nohighlight">
+\[R = M - m\]</div>
+<p>Para o caso acima, <span class="math notranslate nohighlight">\(R = 36-21 = 15\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dados</span><span class="p">);</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tamanho-amostral">
+<h4>Tamanho Amostral<a class="headerlink" href="#tamanho-amostral" title="Permalink to this headline">¶</a></h4>
+<p>Vamos calcular agora o tamanho amostral, ou seja, o número de observações obtidas na amostra.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dados</span><span class="p">);</span> <span class="n">n</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para <em>Series</em> e <em>DataFrames</em>, podemos usar o método <code class="docutils literal notranslate"><span class="pre">count()</span></code> para retornar o tamanho amostral.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">();</span> <span class="n">n</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribuicoes-e-histogramas">
+<h4>Distribuições e histogramas<a class="headerlink" href="#distribuicoes-e-histogramas" title="Permalink to this headline">¶</a></h4>
+<p>Para ter uma visão ampla sobre a distribuição de frequências para o nosso conjunto de dados, podemos plotar o histograma com <code class="docutils literal notranslate"><span class="pre">plot.hist</span></code> diretamente a partir da <em>Series</em> de dados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">);</span>
+<span class="n">d</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#4b3f49&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-estatistica-descritiva_19_0.png" src="../_images/11-estatistica-descritiva_19_0.png" />
+</div>
+</div>
+</section>
+<section id="numero-de-classes-e-binning">
+<h4>Número de classes e <em>binning</em><a class="headerlink" href="#numero-de-classes-e-binning" title="Permalink to this headline">¶</a></h4>
+<p>A divisão das amostras em intervalos de classe pode ser chamada de <em>binning</em>. <em>Bin</em> é o termo utilizado para uma barra vertical no histograma. Por padrão, <code class="docutils literal notranslate"><span class="pre">plot.hist</span></code> usa 10 bins.</p>
+<p>Há mais de uma forma de definir o <em>número de (intervalos) de classe</em> <span class="math notranslate nohighlight">\(K\)</span>. A seguir, temos duas regras práticas de decisão:</p>
+<ul class="simple">
+<li><p>Regra 1: <span class="math notranslate nohighlight">\(K=5\)</span>, para <span class="math notranslate nohighlight">\(n\leq 25\)</span> e <span class="math notranslate nohighlight">\(K \approx \sqrt{n}\)</span>, para <span class="math notranslate nohighlight">\(n&gt;25\)</span>.</p></li>
+<li><p>Regra 2 (Fórmula de Sturges): <span class="math notranslate nohighlight">\(K\approx 1 + 3,22\log n\)</span>.</p></li>
+</ul>
+<p>Vamos aplicá-las aos nossos dados:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># binning usando np.ceil</span>
+<span class="k">def</span> <span class="nf">binning</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">):</span>       
+    
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="nb">list</span><span class="p">):</span> <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>            
+    
+    <span class="k">if</span> <span class="n">rule</span> <span class="o">==</span> <span class="s1">&#39;standard&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">25</span><span class="p">:</span> <span class="n">K</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">K</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+            
+    <span class="k">if</span> <span class="n">rule</span> <span class="o">==</span> <span class="s1">&#39;sturges&#39;</span><span class="p">:</span> 
+        <span class="n">K</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.22</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">K</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K1</span><span class="p">,</span><span class="n">K2</span> <span class="o">=</span> <span class="n">binning</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">),</span> <span class="n">binning</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span><span class="n">rule</span><span class="o">=</span><span class="s1">&#39;sturges&#39;</span><span class="p">);</span> 
+<span class="n">K1</span><span class="p">,</span><span class="n">K2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Uma vez que ambos os valores são iguais, podemos tomar <span class="math notranslate nohighlight">\(K = K_1 = K_2 = 6\)</span> e plotar o histograma especificando <code class="docutils literal notranslate"><span class="pre">bins</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="n">K1</span>
+<span class="n">d</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="n">K</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1b3ac9&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-estatistica-descritiva_24_0.png" src="../_images/11-estatistica-descritiva_24_0.png" />
+</div>
+</div>
+</section>
+<section id="amplitude-das-classes">
+<h4>Amplitude das classes<a class="headerlink" href="#amplitude-das-classes" title="Permalink to this headline">¶</a></h4>
+<p>Para determinar o comprimento de cada intervalo, ou seja, a amplitude de cada classe <span class="math notranslate nohighlight">\(h\)</span>, podemos adotar uma divisão uniforme, de modo que:</p>
+<div class="math notranslate nohighlight">
+\[h=\frac{R}{K}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">R</span><span class="o">/</span><span class="n">K</span><span class="p">);</span> <span class="n">h</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="limites-das-classes">
+<h4>Limites das classes<a class="headerlink" href="#limites-das-classes" title="Permalink to this headline">¶</a></h4>
+<p>Os <em>limites das classes</em> são estabelecidos da seguinte forma. Começando a partir do menor valor obtido da amostra, ou equivalentemente, o primeiro valor do <em>rol de dados</em>, somamos a amplitude de maneira progressiva. Dessa maneira, as seguintes classes serão obtidas.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Classes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>21 <span class="math notranslate nohighlight">\(\vdash\)</span> 24</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>24 <span class="math notranslate nohighlight">\(\vdash\)</span> 27</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>27 <span class="math notranslate nohighlight">\(\vdash\)</span> 30</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>30 <span class="math notranslate nohighlight">\(\vdash\)</span> 33</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>33 <span class="math notranslate nohighlight">\(\vdash\)</span> 36</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>36 <span class="math notranslate nohighlight">\(\vdash\)</span> 39</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bin_</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">h</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="o">+</span><span class="mi">1</span><span class="p">)];</span> 
+<span class="n">bin_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[21, 24, 27, 30, 33, 36, 39]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="frequencia-dos-dados">
+<h4>Frequência dos dados<a class="headerlink" href="#frequencia-dos-dados" title="Permalink to this headline">¶</a></h4>
+<p>Ao calcular a frequência de cada intervalo, a chamada <em>frequência absoluta</em>, montamos a seguinte tabela de <em>distribuição de frequências</em> será obtida.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Classes</p></th>
+<th class="text-align:center head"><p>Frequência</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>21 <span class="math notranslate nohighlight">\(\vdash\)</span> 24</p></td>
+<td class="text-align:center"><p>7</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>24 <span class="math notranslate nohighlight">\(\vdash\)</span> 27</p></td>
+<td class="text-align:center"><p>9</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>27 <span class="math notranslate nohighlight">\(\vdash\)</span> 30</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>30 <span class="math notranslate nohighlight">\(\vdash\)</span> 33</p></td>
+<td class="text-align:center"><p>5</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>33 <span class="math notranslate nohighlight">\(\vdash\)</span> 36</p></td>
+<td class="text-align:center"><p>7</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>36 <span class="math notranslate nohighlight">\(\vdash\)</span> 39</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>No <em>pandas</em>, a função <code class="docutils literal notranslate"><span class="pre">cut</span></code> cria classes a partir dos dados e o método <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> cria uma tabela de frequências.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bin_</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+<span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[24, 27), [21, 24), [21, 24), [27, 30), [33, 36), ..., [24, 27), [24, 27), [33, 36), [33, 36), [30, 33)]
+Length: 30
+Categories (6, interval[int64, left]): [[21, 24) &lt; [24, 27) &lt; [27, 30) &lt; [30, 33) &lt; [33, 36) &lt; [36, 39)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># labels</span>
+<span class="n">T</span><span class="o">.</span><span class="n">codes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 0, 0, 2, 4, 0, 0, 4, 4, 1, 0, 1, 5, 1, 0, 3, 3, 1, 1, 4, 4, 0,
+       3, 1, 3, 1, 1, 4, 4, 3], dtype=int8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># categorias</span>
+<span class="n">T</span><span class="o">.</span><span class="n">categories</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IntervalIndex([[21, 24), [24, 27), [27, 30), [30, 33), [33, 36), [36, 39)], dtype=&#39;interval[int64, left]&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tabela de frequências</span>
+<span class="n">T</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[21, 24)    7
+[24, 27)    9
+[27, 30)    1
+[30, 33)    5
+[33, 36)    7
+[36, 39)    1
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="aplicacoes-a-testes-aleatorios">
+<h3>Aplicações a testes aleatórios<a class="headerlink" href="#aplicacoes-a-testes-aleatorios" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># função genérica</span>
+<span class="k">def</span> <span class="nf">random_test</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;rand&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">):</span>        
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span><span class="nb">int</span><span class="p">):</span> <span class="n">vals</span> <span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span><span class="nb">tuple</span><span class="p">):</span> <span class="n">vals</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+    
+    <span class="n">z</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;np.random.&#39;</span> <span class="o">+</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">vals</span><span class="p">)</span>    
+    <span class="n">T</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">binning</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">binMethod</span><span class="p">),</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">T</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Números randômicos</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z1</span><span class="p">,</span><span class="n">T1</span> <span class="o">=</span> <span class="n">random_test</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;rand&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">)</span>
+<span class="n">z1</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span> <span class="n">T1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.0199, 0.116)    10
+[0.116, 0.211)      9
+[0.211, 0.307)      8
+[0.307, 0.403)     11
+[0.403, 0.498)      8
+[0.498, 0.594)     12
+[0.594, 0.69)      13
+[0.69, 0.785)      11
+[0.785, 0.881)     12
+[0.881, 0.978)      6
+dtype: int64
+</pre></div>
+</div>
+<img alt="../_images/11-estatistica-descritiva_37_1.png" src="../_images/11-estatistica-descritiva_37_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z2</span><span class="p">,</span><span class="n">T2</span> <span class="o">=</span> <span class="n">random_test</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;rand&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;sturges&#39;</span><span class="p">)</span>
+<span class="n">z2</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span> <span class="n">T2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.00129, 0.125)    11
+[0.125, 0.248)      18
+[0.248, 0.372)       9
+[0.372, 0.495)      14
+[0.495, 0.619)      11
+[0.619, 0.742)       9
+[0.742, 0.866)      17
+[0.866, 0.99)       11
+dtype: int64
+</pre></div>
+</div>
+<img alt="../_images/11-estatistica-descritiva_38_1.png" src="../_images/11-estatistica-descritiva_38_1.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Distribuição normal</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z3</span><span class="p">,</span><span class="n">T3</span> <span class="o">=</span> <span class="n">random_test</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">)</span>
+<span class="n">z3</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span> <span class="n">T3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.463, -1.925)     2
+[-1.925, -1.388)     5
+[-1.388, -0.851)     9
+[-0.851, -0.314)    16
+[-0.314, 0.224)     23
+[0.224, 0.761)      20
+[0.761, 1.298)      11
+[1.298, 1.835)       9
+[1.835, 2.373)       2
+[2.373, 2.915)       3
+dtype: int64
+</pre></div>
+</div>
+<img alt="../_images/11-estatistica-descritiva_40_1.png" src="../_images/11-estatistica-descritiva_40_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z4</span><span class="p">,</span><span class="n">T4</span> <span class="o">=</span> <span class="n">random_test</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span><span class="n">binMethod</span><span class="o">=</span><span class="s1">&#39;sturges&#39;</span><span class="p">)</span>
+<span class="n">z4</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span> <span class="n">T4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.597, -1.994)     2
+[-1.994, -1.391)     4
+[-1.391, -0.788)    11
+[-0.788, -0.186)    14
+[-0.186, 0.417)     23
+[0.417, 1.02)       27
+[1.02, 1.623)       14
+[1.623, 2.23)        5
+dtype: int64
+</pre></div>
+</div>
+<img alt="../_images/11-estatistica-descritiva_41_1.png" src="../_images/11-estatistica-descritiva_41_1.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="medidas-de-tendencia-central">
+<h2>Medidas de Tendência Central<a class="headerlink" href="#medidas-de-tendencia-central" title="Permalink to this headline">¶</a></h2>
+<p>As <em>medidas de tendência central</em> (ou de centralidade) são as mais importantes de uma classe maior chamada de <em>medidas de posição</em>. Elas representam a tendência de concentração dos dados observados. A seguir, exploraremos algumas medidas de tendência central.</p>
+<section id="media">
+<h3>Média<a class="headerlink" href="#media" title="Permalink to this headline">¶</a></h3>
+<p>Quantidade que tem por característica dar um “resumo” para o conjunto de dados. A média <span class="math notranslate nohighlight">\(\overline{X}\)</span> é obtida a partir de todos os elementos da distribuição e do tamanho da amostra.</p>
+<p>Calculamos a média aritmética pela fórmula:</p>
+<div class="math notranslate nohighlight">
+\[\overline{X}=\sum_{i=1}^{n}\frac{X_i}{n}.\]</div>
+<p>Para <em>Series</em> e <em>DataFrames</em> o método <code class="docutils literal notranslate"><span class="pre">mean()</span></code> retorna a média dos valores.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27.833333333333332
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="moda">
+<h3>Moda<a class="headerlink" href="#moda" title="Permalink to this headline">¶</a></h3>
+<p>Definimos a moda <span class="math notranslate nohighlight">\(Mo\)</span> de um conjunto de dados como o valor mais frequente deste conjunto.</p>
+<p>Exemplos:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\{1, 2, 4, 5, 8\}\)</span>. Não há moda (amodal).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{2, 2, 3, 7, 8\}\)</span>. Para esta amostra, <span class="math notranslate nohighlight">\(Mo\)</span> = 2 (unimodal).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{1, 1, 10, 5, 5, 8, 7, 2\}\)</span>. Para esta amostra, <span class="math notranslate nohighlight">\(Mo\)</span> = 1 e <span class="math notranslate nohighlight">\(Mo=\)</span>5 (bimodal).</p></li>
+</ul>
+<p>Para <em>Series</em> e <em>DataFrames</em>, o método <code class="docutils literal notranslate"><span class="pre">mode()</span></code> retorna a moda dos valores.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    25
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    2
+1    4
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z4</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    -2.596763
+1    -2.017885
+2    -1.939213
+3    -1.838160
+4    -1.706094
+        ...   
+95    1.647601
+96    1.778631
+97    2.121072
+98    2.140601
+99    2.225374
+Length: 100, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mediana">
+<h3>Mediana<a class="headerlink" href="#mediana" title="Permalink to this headline">¶</a></h3>
+<p>A mediana <span class="math notranslate nohighlight">\(Md\)</span> é o valor que divide o <em>rol de dados</em> em duas partes com a mesma quantidade de dados. O <em>elemento mediano</em>, <span class="math notranslate nohighlight">\(E_{Md}\)</span>, é a posição no <em>rol de dados</em> onde a mediana está localizada.</p>
+<p>Se o tamanho amostral <span class="math notranslate nohighlight">\(n\)</span> é ímpar, temos que <span class="math notranslate nohighlight">\(E_{Md} = \frac{(n+1)}{2}\)</span>; se par, dois valores são possíveis, <span class="math notranslate nohighlight">\(\frac{n}{2}\)</span> e <span class="math notranslate nohighlight">\(\frac{n}{2}+1\)</span>. No último caso, a mediana será a média dos valores assumidos nestas posições.</p>
+<p>Exemplos:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\{1, 2, 4, 5, 8\}\)</span>. Como <span class="math notranslate nohighlight">\(n\)</span> é ímpar, <span class="math notranslate nohighlight">\(E_{Md} = 3\)</span>, e <span class="math notranslate nohighlight">\(Md = 4\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{2, 2, 4, 7, 8, 10\}\)</span>. Aqui, <span class="math notranslate nohighlight">\(n\)</span> é par. Assim, <span class="math notranslate nohighlight">\(E_{Md,1} = \frac{6}{2} = 3\)</span> e <span class="math notranslate nohighlight">\(E_{Md,2} = \frac{6}{2}+1 = 4\)</span>. Daí <span class="math notranslate nohighlight">\({Md} = \frac{4+7}{2} = 5,5\)</span>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Para Series e DataFrames o método <code class="docutils literal notranslate"><span class="pre">median()</span></code> retorna a mediana dos valores.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z2</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4817839389594648
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="quantis-e-percentis">
+<h2>Quantis e percentis<a class="headerlink" href="#quantis-e-percentis" title="Permalink to this headline">¶</a></h2>
+<p>Utilizados para compreender os dados sob a perspectiva de “partes”.</p>
+<p>Ex.: dado o rol de dados <span class="math notranslate nohighlight">\( d = \{x_i\}\)</span> com <span class="math notranslate nohighlight">\(n\)</span> valores, procuramos <span class="math notranslate nohighlight">\(x_p\)</span> que divide o rol em partes regulares.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_p\)</span> é o <span class="math notranslate nohighlight">\(p\)</span>-ésimo <em>quantil</em>, ou o <span class="math notranslate nohighlight">\(100 \times p\)</span>-ésimo percentil. Em particular, <span class="math notranslate nohighlight">\(x_p = d[I_p]\)</span>, onde <span class="math notranslate nohighlight">\(I_p\)</span> é o índice (número inteiro) para o quantil no rol de dados.</p></li>
+</ul>
+<p>Os seguintes nomes são usados na prática:</p>
+<ul class="simple">
+<li><p><em>Percentis</em> variam no intervalo 0 a 100.</p></li>
+<li><p><em>Quartis</em> variam no intervalo 0 a 4.</p></li>
+<li><p><em>Quantis</em> variam de qualquer valor para outro.</p></li>
+</ul>
+<p>Uma tabela de correspondência útil para compreensão é a seguinte:</p>
+<ul class="simple">
+<li><p>0-percentil = 0-quartil = menor valor do rol de dados</p></li>
+<li><p>25-percentil = 1-quartil</p></li>
+<li><p>50-percentil = 2-quartil = mediana</p></li>
+<li><p>75-percentil = 3-quartil</p></li>
+<li><p>100-percentil = 4-quartil = máximo valor do rol de dados</p></li>
+</ul>
+<blockquote>
+<div><p>Como se vê, a mediana é o 50-percentil. Isto significa que ela representa o valor que está abaixo de 50% dos valores no rol de dados. Quantis, por sua vez, são uma generalização da mediana.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 0 &lt; p &lt; 1</span>
+<span class="k">def</span> <span class="nf">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">I_p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">)[</span><span class="n">I_p</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Por exemplo, para o nosso conjunto:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[21, 21, 21, 22, 22, 23, 23, 24, 24, 25, 25, 25, 25, 26, 26, 26, 28, 30, 31, 31, 31, 32, 33, 33, 33, 34, 34, 35, 35, 36]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.0</span><span class="p">),</span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.25</span><span class="p">),</span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.5</span><span class="p">),</span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.75</span><span class="p">),</span><span class="n">quantil</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">0.9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(21, 24, 26, 33, 35)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comentário:</p>
+<ul class="simple">
+<li><p>A mediana é o valor <span class="math notranslate nohighlight">\(x_{1/2} = 26\)</span>. Ou seja, <span class="math notranslate nohighlight">\(p= 1/2 = 0.5\)</span>. Isto equivale a dizer que a mediana é o <span class="math notranslate nohighlight">\(1/2\)</span>-quantil ou <span class="math notranslate nohighlight">\(100 \times 1/2 = 50\)</span>-percentil.</p></li>
+<li><p>Para <span class="math notranslate nohighlight">\(p=1/4\)</span>, temos o <span class="math notranslate nohighlight">\(1/4\)</span>-quantil ou <span class="math notranslate nohighlight">\(100 \times 1/4 = 25\)</span>-percentil. Este valor equivale a <span class="math notranslate nohighlight">\(x_{1/4} = 24\)</span>.</p></li>
+<li><p>24 é o primeiro quartil do rol, ou seja, 25% dos valores do rol são menores do que 24.</p></li>
+<li><p>33 é o terceiro quartil do rol, ou seja, 75% dos valores do rol são menores do que 33.</p></li>
+</ul>
+<p>O <em>pandas</em> possui a função <code class="docutils literal notranslate"><span class="pre">quantile</span></code> para calcular os quantis que desejarmos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z1</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.22</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2626878677019487
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1-, 2-, e 3-quartis</span>
+<span class="n">z4</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.75</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.25   -0.373573
+0.50    0.300447
+0.75    0.812786
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1-, 2- tercis</span>
+<span class="n">z2</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.33</span><span class="p">,</span><span class="mf">0.66</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.33    0.304235
+0.66    0.664050
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="medidas-de-dispersao">
+<h2>Medidas de Dispersão<a class="headerlink" href="#medidas-de-dispersao" title="Permalink to this headline">¶</a></h2>
+<p>As medidas de dispersão medem o grau de variabilidade dos elementos de uma distribuição. O valor zero indica ausência de dispersão. As principais medidas de dispersão incluem: <em>amplitude</em>, <em>desvio médio</em>, <em>variância</em> e <em>desvio padrão</em>.</p>
+<p>Como uma motivação para estudar as medidas de dispersão, consideremos a seguinte distribuição de notas é médias em uma classe.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Discente</p></th>
+<th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p>Notas</p></th>
+<th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p>Média</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Antônio</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>João</p></td>
+<td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>5</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>José</p></td>
+<td class="text-align:center"><p>10</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Pedro</p></td>
+<td class="text-align:center"><p>10</p></td>
+<td class="text-align:center"><p>10</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>5</p></td>
+</tr>
+</tbody>
+</table>
+<p>Observa-se que:</p>
+<ul class="simple">
+<li><p>as notas de Antônio não variaram;</p></li>
+<li><p>as notas de João variaram menos do que as notas de José;</p></li>
+<li><p>as notas de Pedro variaram mais do que as notas dos demais;</p></li>
+</ul>
+<section id="amplitude">
+<h3>Amplitude<a class="headerlink" href="#amplitude" title="Permalink to this headline">¶</a></h3>
+<p>A amplitude <span class="math notranslate nohighlight">\(R\)</span> fornece a maior variação possível dos dados. Ela é dada pela fórmula:</p>
+<div class="math notranslate nohighlight">
+\[R = X_{max} -  X_{min},\]</div>
+<p>onde <span class="math notranslate nohighlight">\(X_{max}\)</span> é o valor máximo <span class="math notranslate nohighlight">\(X_{min}\)</span> o mínimo entre os dados.</p>
+<p>Para <em>Series</em> e <em>DataFrames</em> os métodos <code class="docutils literal notranslate"><span class="pre">max()</span></code> e <code class="docutils literal notranslate"><span class="pre">min()</span></code> retornam respectivamente o máximo e o mínimo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">-</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">();</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="desvio-medio">
+<h3>Desvio Médio<a class="headerlink" href="#desvio-medio" title="Permalink to this headline">¶</a></h3>
+<p>Para medir a dispersão dos dados em relação à média, é interessante analisar os desvios em torno da média, isto é, fazer a análise dos desvios:</p>
+<div class="math notranslate nohighlight">
+\[d_i=(X_i-\overline{X}).\]</div>
+<p>Porém, a soma de todos os desvios é igual a zero, como podemos verificar com</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^{n} d_i= \sum_{i=1}^{n} (X_i-\overline{X})= \sum_{i=1}^{n}X_i-\sum_{i=1}^{n}\overline{X}=\sum_{i=1}^{n}X_i-{n}\overline{X}=\]</div>
+<div class="math notranslate nohighlight">
+\[=\sum_{i=1}^{n}X_i-n\frac{\sum_{i=1}^{n}X_i}{n}= \sum_{i=1}^{n}X_i-\sum_{i=1}^{n}X_i=0.\]</div>
+<p>Logo, será preciso encontrar uma maneira de se trabalhar com os desvios sem que a soma dê zero. Dessa forma, define-se o <em>desvio médio</em> <span class="math notranslate nohighlight">\(DM\)</span> pela fórmula:</p>
+<div class="math notranslate nohighlight">
+\[DM=\sum_{i=1}^{n} \frac{|d_i|}{n}= \sum_{i=1}^{n} \frac{|X_i-\overline{X}|}{n}.\]</div>
+<p>Para <em>Series</em> e <em>DataFrames</em> o método <code class="docutils literal notranslate"><span class="pre">mad()</span></code> retorna a <em>desvio médio</em> dos valores.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">mad</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.422222222222222
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z3</span><span class="p">)</span><span class="o">.</span><span class="n">mad</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8022908522790512
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Observações</strong>:</p>
+<ul class="simple">
+<li><p>A <em>amplitude</em> não mede bem a dispersão dos dados porque usam-se apenas os valores extremos em vez de todos os elementos da distribuição.</p></li>
+<li><p>O <em>desvio médio</em> é mais vantajoso do que a <em>amplitude</em>, visto que leva em consideração todos os valores da distribuição e é menos sensível a <em>outliers</em>.</p></li>
+<li><p>No entanto, o <em>desvio médio</em> não é tão frequentemente empregado no ajuste de modelos, pois não apresenta propriedades matemáticas interessantes. Porém é bastante utilizado na validação e comparação de modelos.</p></li>
+</ul>
+<blockquote>
+<div><p>Um <em>outlier</em> é uma observação que se diferencia tanto das demais observações que levanta suspeitas de que aquela observação foi gerada por um mecanismo distinto” (Wikipedia, apud: Hawkins, 1980). Outlier é um dado que se distancia demasiadamente de todos os outros. Literalmente, o “ponto fora da curva”.</p>
+</div></blockquote>
+</section>
+<section id="variancia">
+<h3>Variância<a class="headerlink" href="#variancia" title="Permalink to this headline">¶</a></h3>
+<p>A <em>variância</em> <span class="math notranslate nohighlight">\(\sigma^2\)</span> é a medida de dispersão mais utilizada. Ela é dada pelo quociente entre a soma dos quadrados dos desvios e o número de elementos, cuja fórmula é dada por:</p>
+<div class="math notranslate nohighlight">
+\[\sigma^2=\sum_{i=1}^{N} \frac{d_i^2}{N}= \sum_{i=1}^{N} \frac{(X_i-\overline{X})^2}{N},\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\sigma^2\)</span> indica a variância populacional (lê-se “sigma ao quadrado” ou “sigma dois”). Neste caso, <span class="math notranslate nohighlight">\(\overline{X}\)</span> e <span class="math notranslate nohighlight">\(N\)</span> na formúla representam a média populacional e o tamanho populacional, respectivamente.</p>
+</section>
+<section id="variancia-amostral">
+<h3>Variância Amostral<a class="headerlink" href="#variancia-amostral" title="Permalink to this headline">¶</a></h3>
+<p>Temos a seguinte definição de <em>variância amostral</em>:</p>
+<div class="math notranslate nohighlight">
+\[
+S^2=\sum_{i=1}^{n} \frac{d_i^2}{n-1}= \sum_{i=1}^{n} \frac{(X_i-\overline{X})^2}{n-1}.
+\]</div>
+<p>Para <em>Series</em> e <em>DataFrames</em> o método <code class="docutils literal notranslate"><span class="pre">var()</span></code> retorna a <em>variância amostral</em> dos valores.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.281609195402304
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z3</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.060163807249227
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="desvio-padrao">
+<h3>Desvio Padrão<a class="headerlink" href="#desvio-padrao" title="Permalink to this headline">¶</a></h3>
+<p>Temos também outra medida de dispersão, que é a raiz quadrada da variância, chamada de <em>desvio padrão</em>. Assim,</p>
+<div class="math notranslate nohighlight">
+\[\sigma = \sqrt{\sigma^2}\]</div>
+<p>é o desvio desvio padrão populacional, e</p>
+<div class="math notranslate nohighlight">
+\[S = \sqrt{S^2}\]</div>
+<p>é o desvio desvio padrão amostral.</p>
+<p>Para o cálculo do <em>desvio padrão</em>, deve-se, primeiramente, determinar o valor da variância e, em seguida, extrair a raiz quadrada desse resultado.</p>
+<p>Para <em>Series</em> e <em>DataFrames</em> o método <code class="docutils literal notranslate"><span class="pre">std()</span></code> retorna o <em>desvio padrão</em> dos valores.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.9276372832628725
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">())</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.9276372832628725
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z3</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.029642562858212
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">z3</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.029642562858212
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="resumo-estatistico-de-uma-series-ou-dataframe">
+<h2>Resumo Estatístico de uma <em>Series</em> ou <em>DataFrame</em><a class="headerlink" href="#resumo-estatistico-de-uma-series-ou-dataframe" title="Permalink to this headline">¶</a></h2>
+<p>Para obtermos um resumo estatístico de uma <em>Series</em> ou <em>DataFrame</em> do <em>pandas</em>, utilizamos o método <code class="docutils literal notranslate"><span class="pre">describe</span></code>. O método <code class="docutils literal notranslate"><span class="pre">describe</span></code> exclui observações ausentes por padrão.</p>
+<p>Exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    30.000000
+mean     27.833333
+std       4.927637
+min      21.000000
+25%      24.000000
+50%      26.000000
+75%      32.750000
+max      36.000000
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">z2</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.493710</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.293381</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.001293</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.229292</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.481784</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>0.762240</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>0.989137</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Observações</strong></p>
+<ul class="simple">
+<li><p>Se as entradas da <em>Series</em> não forem numéricas, o método <code class="docutils literal notranslate"><span class="pre">describe</span></code> retornará uma tabela contendo as quantidades de valores únicos, o valor mais frequente e a quantidade de elementos do valor mais frequente.</p></li>
+<li><p>No caso de um <em>DataFrame</em> que contenha colunas numéricas e colunas não-numéricas, o método <code class="docutils literal notranslate"><span class="pre">describe</span></code> irá considerar apenas as colunas numéricas.</p></li>
+</ul>
+<p>Exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_ex1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;j&#39;</span><span class="p">])</span>
+<span class="n">serie_ex2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_ex1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     10
+unique    10
+top        a
+freq       1
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">serie_ex2</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    10.00000
+mean      4.50000
+std       3.02765
+min       0.00000
+25%       2.25000
+50%       4.50000
+75%       6.75000
+max       9.00000
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">serie_ex1</span><span class="p">,</span> <span class="n">serie_ex2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>d</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>f</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>g</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>h</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>i</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>j</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>10.00000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>4.50000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>3.02765</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2.25000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>4.50000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>6.75000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>9.00000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<blockquote>
+<div><p>É possível controlar o que será considerado em <code class="docutils literal notranslate"><span class="pre">describe</span></code> utilizando os argumentos <code class="docutils literal notranslate"><span class="pre">include</span></code> ou <code class="docutils literal notranslate"><span class="pre">exclude</span></code>. No caso, devemos passar uma lista contendo os parâmetros a serem incluídos ou excluídos como argumento. Para uma lista dos parâmetros disponíveis, consulte a documentação da função <code class="docutils literal notranslate"><span class="pre">select_dtypes()</span></code>.</p>
+</div></blockquote>
+<p>Exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exemplo</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>10</td>
+      <td>10.00000</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>10</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>a</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>NaN</td>
+      <td>4.50000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>NaN</td>
+      <td>3.02765</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>NaN</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>NaN</td>
+      <td>2.25000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>NaN</td>
+      <td>4.50000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>NaN</td>
+      <td>6.75000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>NaN</td>
+      <td>9.00000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
