@@ -109,7 +109,7 @@
 # 
 # O processo de avaliação do mini-artigo seguirá o seguinte fluxo: 
 # 
-# 1. Mini-artigo é escrito e renomeado para o seguinte modelo: `AAAA-SS - Short Paper - Ap - Nome Sobrenome`, onde `AAAA` é o ano corrente, `SS` o semestre acadêmico corrente (01 ou 02), `p` é o dígito correspondente à parte do curso (vide divisão de unidades e partes), `Nome` é o primeiro nome do(a) discente e `Sobrenome` seu último sobrenome.
+# 1. Mini-artigo é escrito e renomeado para o seguinte modelo: `<YYYY-SS> - Short Paper - A<p> - <Name> <Surname> - <Title>`, onde `YYYY` é o ano corrente, `SS` o semestre acadêmico corrente (01 ou 02), `p` é o dígito correspondente à parte do curso (vide divisão de unidades e partes), `Name` é o primeiro nome do(a) discente, `Surname` seu último sobrenome e `Title` o título do artigo. **Atenção:** altere apenas os caracteres confinados por `< >`. O nome do arquivo deve resultar em algo como: `2021-01> - Short Paper - A2 - Isaac Newton - Análise do módulo os`. 
 # 2. Mini-artigo é submetido à avaliação via SIGAA dentro do prazo estipulado.
 # 3. Mini-artigo é avaliado segundo os 4 critérios e a nota é atribuída. 
 # 4. Comentários com recomendações são adicionados no PDF para finalidades de correção.

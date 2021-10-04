@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Correlação &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/rise/12-correlacao-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/rise/12-correlacao-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/rise/12-correlacao-rise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#associacao-entre-variaveis-e-causalidade">
+   Associação entre variáveis e causalidade
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correlacao-e-dependencia-linear">
+     Correlação e dependência linear
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escore-padronizado">
+   Escore padronizado
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-de-z-scores">
+     Plot de
+     <em>
+      z-scores
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#covariancia">
+   Covariância
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matriz-de-covariancias">
+     Matriz de covariâncias
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Correlação
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coeficiente-de-correlacao-de-pearson">
+     Coeficiente de correlação de Pearson
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#correlacoes-pareadas">
+       Correlações pareadas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grafico-de-dispersao">
+     Gráfico de dispersão
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leituras-recomendadas">
+   Leituras recomendadas
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="correlacao">
+<h1>Correlação<a class="headerlink" href="#correlacao" title="Permalink to this headline">¶</a></h1>
+<p>Correlação é qualquer associação estatística entre um par de variáveis. Quanto mais correlacionadas estão duas variáveis, mais “alinhamento” há entre elas. Isto é, uma análise de correlação fornece um número que resume o grau de relacionamento linear entre duas variáveis. Introduziremos este assunto com alguns conceitos fundamentais.</p>
+<section id="associacao-entre-variaveis-e-causalidade">
+<h2>Associação entre variáveis e causalidade<a class="headerlink" href="#associacao-entre-variaveis-e-causalidade" title="Permalink to this headline">¶</a></h2>
+<p>A associação entre duas variáveis pode ocorrer de duas formas:</p>
+<ul class="simple">
+<li><p><em>correlacional</em>: neste caso, não há interferência alguma sobre as variáveis observadas. As variáveis são <em>aleatórias</em> e seus comportamentos ocorrem conforme a “natureza” determina. Por exemplo, o exercício físico e a queima calórica possuem correlação positiva, pois quanto mais intensamente nos exercitamos, mais queimamos caloria.</p></li>
+</ul>
+<ul class="simple">
+<li><p><em>experimental</em>: neste caso, uma das variáveis é controlada e esta interfere sobre a outra. Isto é, uma variável A é a <em>causa</em> (variável independente) e a outra, B, o <em>efeito</em> (variável independente). Uma sentença lógica do tipo “se A, então B” estabelece a idéia de <em>causalidade</em>. Por exemplo: quando cientistas estudam a administração de fármacos em um organismo, eles analisam os efeitos dessa droga naquele organismo. Logo, a droga é a causa; a resposta orgânica, o efeito.</p></li>
+</ul>
+<section id="correlacao-e-dependencia-linear">
+<h3>Correlação e dependência linear<a class="headerlink" href="#correlacao-e-dependencia-linear" title="Permalink to this headline">¶</a></h3>
+<p>Podemos interpretar a <em>correlação</em> também pelo ponto de vista de “dependência linear”. Duas variáveis perfeitamente correlacionadas são similares a dois vetores paralelos, ou seja, linearmente dependentes. Por outro lado, duas variáveis totalmente não correlacionadas são similares a dois vetores perpendiculares, ou seja, linearmente independentes.</p>
+</section>
+</section>
+<section id="escore-padronizado">
+<h2>Escore padronizado<a class="headerlink" href="#escore-padronizado" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Quando as variáveis que queremos comparar não estão expressas na mesma unidade (Ex. correlacionar alturas em cm e pesos em kg).</p></li>
+</ul>
+<p>As duas soluções comuns para lidar com esses problemas são:</p>
+<ol class="simple">
+<li><p>Transformar todos os valores para um <em>escore padronizado</em>.</p></li>
+<li><p>Transformar todos os valores para ranques baseados em percentis.</p></li>
+</ol>
+<p>Para converter uma série <span class="math notranslate nohighlight">\(X\)</span> de valores <span class="math notranslate nohighlight">\(x_i\)</span> em uma escala padronizada de escores, subtraímos a média dos dados e dividimos esta diferença pelo desvio padrão. Isto é:</p>
+<div class="math notranslate nohighlight">
+\[z_i = \dfrac{x_i - \mu}{\sigma},\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\mu\)</span> é a média e <span class="math notranslate nohighlight">\(\sigma\)</span> o desvio padrão.</p>
+<p>Ao dividir os desvios (numerador) pelo desvio padrão, na verdade, estamos <em>normalizando</em> o desvio, de modo que os valores <span class="math notranslate nohighlight">\(z_i\)</span> da nova série <span class="math notranslate nohighlight">\(Z\)</span> são adimensionais (não possuem unidades), possuam média 0 e variância 1. A série <span class="math notranslate nohighlight">\(Z\)</span> herda a “forma” de <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">sts</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">e735aafa49a3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">sts</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vejamos exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dataframe</span>
+<span class="n">dfp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Idade&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">20</span><span class="p">]),</span>
+       <span class="s1">&#39;Peso&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">55</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">73</span><span class="p">]),</span>
+       <span class="s1">&#39;Altura&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">162</span><span class="p">,</span><span class="mi">178</span><span class="p">,</span><span class="mi">162</span><span class="p">,</span><span class="mi">165</span><span class="p">,</span><span class="mi">171</span><span class="p">]),</span>
+       <span class="s1">&#39;IMC&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">20.96</span><span class="p">,</span> <span class="mf">25.25</span><span class="p">,</span> <span class="mf">23.62</span><span class="p">,</span> <span class="mf">24.61</span><span class="p">,</span> <span class="mf">24.96</span><span class="p">])},</span>
+        <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Ana&#39;</span><span class="p">,</span><span class="s1">&#39;João&#39;</span><span class="p">,</span><span class="s1">&#39;Maria&#39;</span><span class="p">,</span><span class="s1">&#39;Pedro&#39;</span><span class="p">,</span><span class="s1">&#39;Túlio&#39;</span><span class="p">])</span>
+<span class="n">dfp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vamos calcular o <em>z-score</em> para todas as <em>Series</em> do <em>DataFrame</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">zScore</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">colname</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">colname</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">s</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="n">s</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># ddof = 0 para dividir por N</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cria novo dataframe de z-scores</span>
+
+<span class="n">Z</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">dfp</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>    
+    <span class="n">Z</span><span class="p">[</span><span class="n">c</span> <span class="o">+</span> <span class="s1">&#39;:Z-score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">zScore</span><span class="p">(</span><span class="n">dfp</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+
+<span class="n">dfpz</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+<span class="n">dfpz</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p>Os <em>z-score</em> ajudam a entender se uma observação específica é comum ou excepcional:</p>
+<ul>
+<li><p><em>z-score</em> &lt; 0 representam valores abaixo da média;</p></li>
+<li><p><em>z-score</em> &gt; 0 representam valores acima da média;</p></li>
+<li><p><em>z-score</em> da média é 0, uma vez que ela é ponto médio;</p></li>
+<li><p>A soma dos <em>z-score</em> = 0;</p></li>
+<li><p><em>z-scores</em> com valores positivos extremamente altos indicam uma distribuição com <em>assimetria à direita</em> (mais sobre isso adiante);</p></li>
+<li><p><em>z-scores</em> com valores negativos extremamente altos indicam uma distribuição com <em>assimetria à esquerda</em> (mais sobre isso adiante);</p></li>
+<li><p>se |<em>z-score</em>| &gt; 2, a distribuição é incomum ou excepcional.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Z-Score das séries têm soma nula</span>
+<span class="n">dfpz</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculando o z-score por função predefinida.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z2</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">dfp</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>    
+    <span class="n">Z2</span><span class="p">[</span><span class="n">c</span> <span class="o">+</span> <span class="s1">&#39;:Z-score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sts</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">dfp</span><span class="p">[</span><span class="n">c</span><span class="p">])</span>
+
+<span class="n">dfpz2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Z2</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="n">dfp</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">dfpz2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ambos os métodos dão resultados idênticos</span>
+<span class="p">(</span><span class="n">dfpz</span> <span class="o">==</span> <span class="n">dfpz2</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="plot-de-z-scores">
+<h3>Plot de <em>z-scores</em><a class="headerlink" href="#plot-de-z-scores" title="Permalink to this headline">¶</a></h3>
+<p>A plotagem dos <em>z-scores</em> pode ser feita diretamente com <code class="docutils literal notranslate"><span class="pre">plot</span></code> a partir da <em>Series</em> <span class="math notranslate nohighlight">\(Z\)</span> de interesse.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpz</span><span class="p">[</span><span class="s1">&#39;Peso:Z-score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpz</span><span class="p">[</span><span class="s1">&#39;IMC:Z-score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p>A partir desses plots, vemos claramente qual discente está “acima da”, “abaixo da” ou “na” média perante a variável escolhida.</p></li>
+</ul>
+</section>
+</section>
+<section id="covariancia">
+<h2>Covariância<a class="headerlink" href="#covariancia" title="Permalink to this headline">¶</a></h2>
+<p>Quando queremos compreender como duas variáveis variam juntas, aplicamos o conceito de <em>covariância</em>. Se <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> são duas <em>Series</em>, a covariância entre ambas é dada por</p>
+<div class="math notranslate nohighlight">
+\[\textrm{cov}(X,Y) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu_X)(y_i - \mu_Y),\]</div>
+<p>onde <span class="math notranslate nohighlight">\(n\)</span> é o número de elementos na série (igual em ambas) e <span class="math notranslate nohighlight">\(\mu_X\)</span> (<span class="math notranslate nohighlight">\(\mu_Y\)</span>) é a média de <span class="math notranslate nohighlight">\(X\)</span>(<span class="math notranslate nohighlight">\(Y\)</span>).</p>
+<p>Notemos que a covariância é uma “média” do produto dos desvios.</p>
+<p><strong>Exemplo:</strong> vamos criar uma função para o cálculo da variância.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># covariância</span>
+<span class="k">def</span> <span class="nf">cov</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">colname1</span><span class="p">,</span><span class="n">colname2</span><span class="p">):</span>
+    <span class="n">s1</span><span class="p">,</span><span class="n">s2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">colname1</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="n">colname2</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span> <span class="n">s1</span> <span class="o">-</span> <span class="n">s1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">s2</span> <span class="o">-</span> <span class="n">s2</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Testemos a covariância entre as variáveis de nosso <em>DataFrame</em> de estudo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cov</span><span class="p">(</span><span class="n">dfp</span><span class="p">,</span><span class="s1">&#39;Altura&#39;</span><span class="p">,</span><span class="s1">&#39;Peso&#39;</span><span class="p">),</span> <span class="n">cov</span><span class="p">(</span><span class="n">dfp</span><span class="p">,</span><span class="s1">&#39;Idade&#39;</span><span class="p">,</span><span class="s1">&#39;Peso&#39;</span><span class="p">),</span> <span class="n">cov</span><span class="p">(</span><span class="n">dfp</span><span class="p">,</span><span class="s1">&#39;Idade&#39;</span><span class="p">,</span><span class="s1">&#39;Altura&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p>Esses cálculos mostram que variações de <em>altura</em> e <em>peso</em> interferem consideravelmente uma na outra “na mesma direção”.</p></li>
+<li><p>Porém, não notamos o mesmo comportamento para <em>idade</em> e <em>peso</em> ou para <em>idade</em> e <em>altura</em>.</p></li>
+</ul>
+<p>Podemos checar o cálculo de nossa função com a função <code class="docutils literal notranslate"><span class="pre">var</span></code> do <em>pandas</em>, sabendo que <span class="math notranslate nohighlight">\(\text{cov}(X,X) = \text{var}(X) = S^2(X), \, \forall X\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cov</span><span class="p">(</span><span class="n">dfp</span><span class="p">,</span><span class="s1">&#39;Altura&#39;</span><span class="p">,</span><span class="s1">&#39;Altura&#39;</span><span class="p">),</span> <span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Altura&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Outra forma de calcular a covariância é usar o método <code class="docutils literal notranslate"><span class="pre">cov</span></code> de uma <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Altura&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Peso&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="matriz-de-covariancias">
+<h3>Matriz de covariâncias<a class="headerlink" href="#matriz-de-covariancias" title="Permalink to this headline">¶</a></h3>
+<p>Podemos usar a função <code class="docutils literal notranslate"><span class="pre">numpy.cov()</span></code> para computar a covariância entre duas <em>Series</em> <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span>. Para tanto, devemos passar a matriz <span class="math notranslate nohighlight">\([X \ \ Y]\)</span> como parâmetro para a função.</p>
+<p>A resposta é uma <em>matriz de covariâncias</em> 2x2 cujas entradas são:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\text{cov}(X,X) &amp; \text{cov}(X,Y) \\
+\text{cov}(Y,X) &amp; \text{cov}(Y,Y)
+\end{bmatrix}\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Altura&#39;</span><span class="p">],</span> <span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Peso&#39;</span><span class="p">]</span>
+<span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id1">
+<h2>Correlação<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Uma das dificuldades conhecidas da covariância é a sua interpretação. Uma vez que ela é dada pelo produto das unidades de suas entradas, muito frequentemente será inviável atribuir significado ao número. Por exemplo, se a unidade de <span class="math notranslate nohighlight">\(X\)</span> for quilogramas e <span class="math notranslate nohighlight">\(Y\)</span> for anos, a unidade da covariância seria quilogramas vezes anos. Um meio de solucionar este problema é dividir o produto da covariância pelo desvio padrão de cada série de dados, assim formando o conceito de <em>correlação</em>, dado por:</p>
+<div class="math notranslate nohighlight">
+\[\rho(X,Y) = \frac{1}{n}\sum_{i=1}^n\frac{(x_i - \mu_X)}{\sigma_X}\frac{(y_i - \mu_Y)}{\sigma_Y}.\]</div>
+<p>Em outras palavras, a correlação é a soma do produto de escores padronizados.</p>
+<section id="coeficiente-de-correlacao-de-pearson">
+<h3>Coeficiente de correlação de Pearson<a class="headerlink" href="#coeficiente-de-correlacao-de-pearson" title="Permalink to this headline">¶</a></h3>
+<p>Se os desvios forem retirados da somatória, a expressão torna-se:</p>
+<div class="math notranslate nohighlight">
+\[\rho(X,Y) = \frac{1}{\sigma_X \sigma_Y}\frac{1}{n}\sum_{i=1}^n(x_i - \mu_X)(y_i - \mu_Y) = \frac{\textrm{cov}(X,Y)}{{\sigma_X \sigma_Y}}.\]</div>
+<p>O número <span class="math notranslate nohighlight">\(\rho\)</span> é chamado de <em>coeficiente de correlação de Pearson</em>, ou simplesmente <em>correlação de Pearson</em>, e vale que <span class="math notranslate nohighlight">\(-1 \leq \rho \leq 1\)</span>. A magnitude de <span class="math notranslate nohighlight">\(\rho\)</span> determina a <em>força de correlação</em> entre as variáveis. Em geral, a seguinte interpretação é utilizada:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho = 1\)</span>: as variáveis são perfeitamente correlacionadas.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho = 0\)</span>: as variáveis são correlacionadas de alguma forma, mas <strong>não</strong> linearmente. Neste sentido, <span class="math notranslate nohighlight">\(\rho\)</span> subestimará a força da dependência linear.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho = -1\)</span>: idem, porém negativamente.</p></li>
+</ul>
+<p><strong>Exemplo:</strong> A tabela a seguir contém dados coletados na administração de um zoológico para alguns dias do mês de abril de 2021. Nesta ordem, a tabela mostra o número de visitantes no zoológico, o número de tickets de estacionamento adquiridos e a temperatura média contabilizados por dia.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:right head"><p>Visitantes</p></th>
+<th class="text-align:right head"><p>Tickets</p></th>
+<th class="text-align:right head"><p>Temperatura</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:right"><p>1580</p></td>
+<td class="text-align:right"><p>8</p></td>
+<td class="text-align:right"><p>35</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>1230</p></td>
+<td class="text-align:right"><p>6</p></td>
+<td class="text-align:right"><p>38</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>1950</p></td>
+<td class="text-align:right"><p>9</p></td>
+<td class="text-align:right"><p>32</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>890</p></td>
+<td class="text-align:right"><p>4</p></td>
+<td class="text-align:right"><p>26</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>1140</p></td>
+<td class="text-align:right"><p>6</p></td>
+<td class="text-align:right"><p>31</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>1760</p></td>
+<td class="text-align:right"><p>9</p></td>
+<td class="text-align:right"><p>36</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>1650</p></td>
+<td class="text-align:right"><p>10</p></td>
+<td class="text-align:right"><p>38</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>1470</p></td>
+<td class="text-align:right"><p>3</p></td>
+<td class="text-align:right"><p>30</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>390</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>21</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>1460</p></td>
+<td class="text-align:right"><p>9</p></td>
+<td class="text-align:right"><p>34</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>1000</p></td>
+<td class="text-align:right"><p>7</p></td>
+<td class="text-align:right"><p>36</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>1030</p></td>
+<td class="text-align:right"><p>6</p></td>
+<td class="text-align:right"><p>32</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>740</p></td>
+<td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>25</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>1340</p></td>
+<td class="text-align:right"><p>6</p></td>
+<td class="text-align:right"><p>37</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>1150</p></td>
+<td class="text-align:right"><p>7</p></td>
+<td class="text-align:right"><p>34</p></td>
+</tr>
+</tbody>
+</table>
+<p>O arquivo com os dados está disponível <span class="xref myst">aqui</span>. Vamos buscar correlações nos dados.</p>
+<p>Carregando o arquivo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zoo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/visitantes-zoo.csv&#39;</span><span class="p">);</span> <span class="n">zoo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para calcular a correlação de Pearson entre duas séries, podemos usar a função <code class="docutils literal notranslate"><span class="pre">pearsonr()</span></code> do módulo <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr1</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">sts</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Tickets:Parking&#39;</span><span class="p">]);</span> 
+<span class="n">corr2</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">sts</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">]);</span>
+
+<span class="n">corr1</span><span class="p">,</span><span class="n">corr2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p>O coeficiente de Pearson mostra que há uma “força” de correlação não desprezível entre o número de visitantes e tickets vendidos.</p></li>
+<li><p>Esta correlação é menor para a faixa de temperaturas médias.</p></li>
+</ul>
+<p>A correlação pode também ser calculada através do método <code class="docutils literal notranslate"><span class="pre">corr</span></code> de uma <em>Series</em> do pandas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Tickets:Parking&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="correlacoes-pareadas">
+<h4>Correlações pareadas<a class="headerlink" href="#correlacoes-pareadas" title="Permalink to this headline">¶</a></h4>
+<p>Usando o método <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame.corrwith()</span></code> é possível calcular correlações pareadas entre colunas de um <em>DataFrame</em> ou linhas de outra <em>Series</em> ou <em>DataFrame</em>.</p>
+<p>No exemplo abaixo, passamos uma <em>Series</em> como argumento. A resposta são os mesmos valores obtidos anteriormente, porém na forma de uma <em>Series</em>. O valor unitário é devido à correlação da variável com ela própria.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zoo</span><span class="o">.</span><span class="n">corrwith</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="grafico-de-dispersao">
+<h3>Gráfico de dispersão<a class="headerlink" href="#grafico-de-dispersao" title="Permalink to this headline">¶</a></h3>
+<p>Antes de calcular cegamente o valor de <span class="math notranslate nohighlight">\(\rho\)</span> para séries de dados, é interessante fazer um gráfico de <em>dispersão</em> (<em>scatter plot</em>) entre as variáveis. Podemos fazer isto com o <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> e tipo de marcador <code class="docutils literal notranslate"><span class="pre">o</span></code> ou com <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.scatter()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="c1"># plot 1</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Tickets:Parking&#39;</span><span class="p">],</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;corr=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">corr1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;No. visitantes&#39;</span><span class="p">);</span> 
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Tickets de estacionamento&#39;</span><span class="p">);</span> 
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="c1"># plot 2</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">],</span><span class="s1">&#39;or&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;corr=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">corr2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;No. visitantes&#39;</span><span class="p">);</span> 
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">);</span> 
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reproduzindo com <code class="docutils literal notranslate"><span class="pre">plt.scatter</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Tickets:Parking&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="leituras-recomendadas">
+<h2>Leituras recomendadas<a class="headerlink" href="#leituras-recomendadas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pt.wikipedia.org/wiki/Paradoxo_de_Simpson">Paradoxo de Simpson</a></p></li>
+<li><p><a class="reference external" href="https://www.statsmodels.org/stable/index.html">statsmodels</a></p></li>
+<li><p><a class="reference external" href="https://www.aquare.la/o-que-sao-outliers-e-como-trata-los-em-uma-analise-de-dados/">Outliers, o que são e como tratá-los em uma análise de dados?</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
