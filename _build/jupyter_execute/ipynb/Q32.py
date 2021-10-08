@@ -26,12 +26,12 @@
 
 # <hr>
 # 
-# **Questão 2** No dia 01/08/2021, três veículos saíram de João Pessoa - PB (JPA) com destino a três cidades com distâncias (em quilômetros) e durações de viagem (em horas) em relação à origem dadas pelo quadro abaixo. 
+# **Questão 2** No dia 01/08/2021, três veículos saíram de João Pessoa - PB (JPA) com destino a três cidades de outros estados com distâncias (em quilômetros) e durações de viagem (em horas) em relação à origem dadas pelo quadro abaixo. 
 # 
-# |   Veículo | Cidade    |   Distância de JPA (km) | Duração (h) |
+# | Veículo | Estado    |Distância de JPA (km) | Duração (h) |
 # |--------:|:----------|-----------------:|:-------------|
 # |  VW Gol | Bahia     |              848 | 7,5          |
-# |  BMW Z4 | Fortaleza |              728 | 10           |
+# |  BMW Z4 | Ceará     |              728 | 10           |
 # |Chery QQ | Sergipe   |              640 | 9,5          |
 # 
 # Tendo chegado ao destino, verificou-se por meio de um sistema de monitoramento que às 13:45h desse mesmo dia, todos os veículos haviam registrado no velocímetro uma velocidade igual à velocidade média calculada para o percurso. Entretanto, a partir desse instante, o sistema mostrou que os veículos haviam acelerado de tal forma que, às 13:47h, a velocidade média havia aumentado em 12% de seu valor. 
