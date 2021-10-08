@@ -42,7 +42,10 @@
 #  numbered: false
 #  chapters:
 #  - file: ipynb/99-temas-projeto
-
+- part: Cadernos de ICD
+  numbered: false
+  chapters:
+  - file: ipynb/cadernos-icd
 #
 # MODEL: 
 # - file: intro

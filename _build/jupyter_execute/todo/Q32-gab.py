@@ -68,13 +68,13 @@ df.head(-16),df.tail(6)
 # 
 # Então, assinale a alternativa que corresponde à tupla `(a,b,c)`, com aproximação de duas casas decimais. 
 # 
-# A. (101.12, 200.20, 0.10)
+# A. (10.12, 20.20, 0.01)
 # 
-# B. (242.53, 271.63, 0.41)
+# B. (18.71, 20.96, 0.03)
 # 
-# C. (262.08, 293.53, 0.26)
+# C. (20.22, 22.65, 0.02)
 # 
-# D. (407.04, 293.53, 0.24)
+# D. (31.41, 22.65, 0.02)
 
 # <hr>
 # 
@@ -82,7 +82,7 @@ df.head(-16),df.tail(6)
 # 
 # Alternativa **D**:
 
-# In[3]:
+# In[12]:
 
 
 del df
@@ -94,7 +94,7 @@ f = pd.Series({'Veículo': 'Chery QQ','Cidade': 'Sergipe', 'Distância (km)': 64
 
 df = pd.DataFrame({0:d,1:e,2:f}).transpose()
 df['Vel. média (km/h)'] = (df['Distância (km)']/df['Duração (h)']).apply(lambda x: round(x,2)) 
-df['Vel. média (m/s)'] = (df['Distância (km)']/df['Duração (h)']*3.6).apply(lambda x: round(x,2)) 
+df['Vel. média (m/s)'] = (df['Distância (km)']/df['Duração (h)']/3.6).apply(lambda x: round(x,2)) 
 
 # velocidade no trecho
 prop = 0.12
@@ -116,7 +116,7 @@ df = df.set_index('Veículo')
 df
 
 
-# In[4]:
+# In[13]:
 
 
 a=df.loc['VW Gol']['Vel. inicial (m/s)']

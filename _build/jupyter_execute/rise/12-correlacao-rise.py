@@ -32,7 +32,7 @@
 # 
 # onde $\mu$ é a média e $\sigma$ o desvio padrão. 
 # 
-# Ao dividir os desvios (numerador) pelo desvio padrão, na verdade, estamos _normalizando_ o desvio, de modo que os valores $z_i$ da nova série $Z$ são adimensionais (não possuem unidades), possuam média 0 e variância 1. A série $Z$ herda a "forma" de $X$.
+# Ao dividir os desvios (numerador) pelo desvio padrão, na verdade, estamos _normalizando_ o desvio, de modo que os valores $z_i$ da nova série $Z$ sejam adimensionais (sem unidades), possuam média 0 e variância 1. A série $Z$ herda a "forma" de $X$.
 
 # In[1]:
 
@@ -45,7 +45,7 @@ import scipy.stats as sts
 
 # Vejamos exemplos:
 
-# In[ ]:
+# In[2]:
 
 
 # dataframe
@@ -59,7 +59,7 @@ dfp
 
 # Vamos calcular o _z-score_ para todas as _Series_ do _DataFrame_.
 
-# In[ ]:
+# In[3]:
 
 
 def zScore(df,colname):
@@ -67,11 +67,10 @@ def zScore(df,colname):
     return (s - s.mean())/s.std(ddof=0) # ddof = 0 para dividir por N
 
 
-# In[ ]:
+# In[4]:
 
 
 # cria novo dataframe de z-scores
-
 Z = {}
 
 for c in dfp.columns:    
@@ -92,7 +91,7 @@ dfpz
 #     - _z-scores_ com valores negativos extremamente altos indicam uma distribuição com _assimetria à esquerda_ (mais sobre isso adiante);
 #     - se |_z-score_| > 2, a distribuição é incomum ou excepcional.
 
-# In[ ]:
+# In[5]:
 
 
 # Z-Score das séries têm soma nula
@@ -101,7 +100,7 @@ dfpz.sum(axis=0)
 
 # Calculando o z-score por função predefinida.
 
-# In[ ]:
+# In[6]:
 
 
 Z2 = {}
@@ -113,7 +112,7 @@ dfpz2 = pd.DataFrame(Z2,index=dfp.index)
 dfpz2
 
 
-# In[ ]:
+# In[7]:
 
 
 # ambos os métodos dão resultados idênticos
@@ -124,16 +123,16 @@ dfpz2
 # 
 # A plotagem dos _z-scores_ pode ser feita diretamente com `plot` a partir da _Series_ $Z$ de interesse.
 
-# In[ ]:
+# In[8]:
 
 
 dfpz['Peso:Z-score'].plot(marker='o',ls='');
 
 
-# In[ ]:
+# In[9]:
 
 
-dfpz['IMC:Z-score'].plot(marker='o',ls='',color='g');
+dfpz['Peso:Z-score'].plot(marker='o',ls='',color='g');
 
 
 # Comentários: 
@@ -152,7 +151,7 @@ dfpz['IMC:Z-score'].plot(marker='o',ls='',color='g');
 
 # **Exemplo:** vamos criar uma função para o cálculo da variância.
 
-# In[ ]:
+# In[10]:
 
 
 # covariância
@@ -163,7 +162,7 @@ def cov(df,colname1,colname2):
 
 # Testemos a covariância entre as variáveis de nosso _DataFrame_ de estudo.
 
-# In[ ]:
+# In[11]:
 
 
 cov(dfp,'Altura','Peso'), cov(dfp,'Idade','Peso'), cov(dfp,'Idade','Altura')
@@ -175,7 +174,7 @@ cov(dfp,'Altura','Peso'), cov(dfp,'Idade','Peso'), cov(dfp,'Idade','Altura')
 
 # Podemos checar o cálculo de nossa função com a função `var` do _pandas_, sabendo que $\text{cov}(X,X) = \text{var}(X) = S^2(X), \, \forall X$.
 
-# In[ ]:
+# In[12]:
 
 
 cov(dfp,'Altura','Altura'), dfp['Altura'].var()
@@ -183,7 +182,7 @@ cov(dfp,'Altura','Altura'), dfp['Altura'].var()
 
 # Outra forma de calcular a covariância é usar o método `cov` de uma `pandas.Series`.
 
-# In[ ]:
+# In[13]:
 
 
 dfp['Altura'].cov(dfp['Peso'])
@@ -200,7 +199,7 @@ dfp['Altura'].cov(dfp['Peso'])
 # \text{cov}(Y,X) & \text{cov}(Y,Y)
 # \end{bmatrix}$$
 
-# In[ ]:
+# In[14]:
 
 
 X, Y = dfp['Altura'], dfp['Peso']
@@ -227,6 +226,8 @@ np.cov(np.array([X,Y]))
 # - $\rho = 0$: as variáveis são correlacionadas de alguma forma, mas **não** linearmente. Neste sentido, $\rho$ subestimará a força da dependência linear.
 # - $\rho = -1$: idem, porém negativamente.
 
+# <img src='../figs/12/correlation.png' width=800px>
+
 # **Exemplo:** A tabela a seguir contém dados coletados na administração de um zoológico para alguns dias do mês de abril de 2021. Nesta ordem, a tabela mostra o número de visitantes no zoológico, o número de tickets de estacionamento adquiridos e a temperatura média contabilizados por dia.
 # 
 # |   Visitantes |   Tickets         |   Temperatura     |
@@ -251,7 +252,7 @@ np.cov(np.array([X,Y]))
 
 # Carregando o arquivo:
 
-# In[ ]:
+# In[15]:
 
 
 zoo = pd.read_csv('../database/visitantes-zoo.csv'); zoo
@@ -259,7 +260,7 @@ zoo = pd.read_csv('../database/visitantes-zoo.csv'); zoo
 
 # Para calcular a correlação de Pearson entre duas séries, podemos usar a função `pearsonr()` do módulo `scipy.stats`.
 
-# In[ ]:
+# In[16]:
 
 
 corr1,_ = sts.pearsonr(zoo['Visitantes'],zoo['Tickets:Parking']); 
@@ -275,13 +276,13 @@ corr1,corr2
 
 # A correlação pode também ser calculada através do método `corr` de uma _Series_ do pandas.
 
-# In[ ]:
+# In[17]:
 
 
 zoo['Visitantes'].corr(zoo['Tickets:Parking'])
 
 
-# In[ ]:
+# In[18]:
 
 
 zoo['Visitantes'].corr(zoo['Temperatura (C)'])
@@ -293,7 +294,7 @@ zoo['Visitantes'].corr(zoo['Temperatura (C)'])
 # 
 # No exemplo abaixo, passamos uma _Series_ como argumento. A resposta são os mesmos valores obtidos anteriormente, porém na forma de uma _Series_. O valor unitário é devido à correlação da variável com ela própria.
 
-# In[ ]:
+# In[19]:
 
 
 zoo.corrwith(zoo['Visitantes'])
@@ -303,10 +304,10 @@ zoo.corrwith(zoo['Visitantes'])
 # 
 # Antes de calcular cegamente o valor de $\rho$ para séries de dados, é interessante fazer um gráfico de _dispersão_ (_scatter plot_) entre as variáveis. Podemos fazer isto com o `matplotlib.pyplot.plot()` e tipo de marcador `o` ou com `matplotlib.pyplot.scatter()`.
 
-# In[ ]:
+# In[20]:
 
 
-fig,ax = plt.subplots(1,2,figsize=(10,3))
+fig,ax = plt.subplots(1,2,figsize=(14,5))
 # plot 1
 ax[0].plot(zoo['Visitantes'],zoo['Tickets:Parking'],'o',label=f'corr={round(corr1,2)}')
 ax[0].set_xlabel('No. visitantes'); 
@@ -321,10 +322,10 @@ ax[1].legend();
 
 # Reproduzindo com `plt.scatter`:
 
-# In[ ]:
+# In[21]:
 
 
-plt.scatter(zoo['Visitantes'],zoo['Tickets:Parking']);
+plt.scatter(zoo['Visitantes'],zoo['Tickets:Parking']); 
 
 
 # ## Leituras recomendadas 

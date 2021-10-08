@@ -144,12 +144,10 @@
 # 
 # - Nota final: $N_{f} = \sum_{u=1}^4 0,1N_{u} + 0,6 NPF$
 #     - $NPF$: nota do projeto final
-
-# In[ ]:
-
-
-
-
+#     
+# #### Repositório de arquivos
+# 
+# - [Projeto _Cadernos de ICD_](cadernos-icd.ipynb)
 
 # 
 # ```{toctree}
@@ -212,5 +210,14 @@
 # Q25
 # Q31
 # Q32
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
+# :caption: Cadernos de ICD
+# 
+# cadernos-icd
 # ```
 # 

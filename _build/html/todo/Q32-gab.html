@@ -251,6 +251,18 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -467,10 +479,10 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">df.loc['Chery</span> <span class="pre">QQ']['Aceleração</span> <span class="pre">(m/s2)']</span></code></p></li>
 </ul>
 <p>Então, assinale a alternativa que corresponde à tupla <code class="docutils literal notranslate"><span class="pre">(a,b,c)</span></code>, com aproximação de duas casas decimais.</p>
-<p>A. (101.12, 200.20, 0.10)</p>
-<p>B. (242.53, 271.63, 0.41)</p>
-<p>C. (262.08, 293.53, 0.26)</p>
-<p>D. (407.04, 293.53, 0.24)</p>
+<p>A. (10.12, 20.20, 0.01)</p>
+<p>B. (18.71, 20.96, 0.03)</p>
+<p>C. (20.22, 22.65, 0.02)</p>
+<p>D. (31.41, 22.65, 0.02)</p>
 <hr>
 </section>
 <section id="id1">
@@ -487,7 +499,7 @@
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span><span class="n">d</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">e</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="n">f</span><span class="p">})</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. média (km/h)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Distância (km)&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duração (h)&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. média (m/s)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Distância (km)&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duração (h)&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">3.6</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vel. média (m/s)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Distância (km)&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Duração (h)&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">3.6</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
 
 <span class="c1"># velocidade no trecho</span>
 <span class="n">prop</span> <span class="o">=</span> <span class="mf">0.12</span>
@@ -563,13 +575,13 @@
       <td>848</td>
       <td>7.5</td>
       <td>113.07</td>
-      <td>407.04</td>
-      <td>407.04</td>
-      <td>455.88</td>
+      <td>31.41</td>
+      <td>31.41</td>
+      <td>35.18</td>
       <td>2021-08-01 13:45:00</td>
       <td>2021-08-01 13:47:00</td>
       <td>120.0</td>
-      <td>0.41</td>
+      <td>0.03</td>
     </tr>
     <tr>
       <th>BMW Z4</th>
@@ -577,13 +589,13 @@
       <td>728</td>
       <td>10</td>
       <td>72.80</td>
-      <td>262.08</td>
-      <td>262.08</td>
-      <td>293.53</td>
+      <td>20.22</td>
+      <td>20.22</td>
+      <td>22.65</td>
       <td>2021-08-01 13:45:00</td>
       <td>2021-08-01 13:47:00</td>
       <td>120.0</td>
-      <td>0.26</td>
+      <td>0.02</td>
     </tr>
     <tr>
       <th>Chery QQ</th>
@@ -591,13 +603,13 @@
       <td>640</td>
       <td>9.5</td>
       <td>67.37</td>
-      <td>242.53</td>
-      <td>242.53</td>
-      <td>271.63</td>
+      <td>18.71</td>
+      <td>18.71</td>
+      <td>20.96</td>
       <td>2021-08-01 13:45:00</td>
       <td>2021-08-01 13:47:00</td>
       <td>120.0</td>
-      <td>0.24</td>
+      <td>0.02</td>
     </tr>
   </tbody>
 </table>
@@ -613,7 +625,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(407.04, 293.53, 0.24)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(31.41, 22.65, 0.02)
 </pre></div>
 </div>
 </div>
