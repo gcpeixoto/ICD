@@ -253,6 +253,18 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -458,25 +470,13 @@
 <div class="math notranslate nohighlight">
 \[z_i = \dfrac{x_i - \mu}{\sigma},\]</div>
 <p>onde <span class="math notranslate nohighlight">\(\mu\)</span> é a média e <span class="math notranslate nohighlight">\(\sigma\)</span> o desvio padrão.</p>
-<p>Ao dividir os desvios (numerador) pelo desvio padrão, na verdade, estamos <em>normalizando</em> o desvio, de modo que os valores <span class="math notranslate nohighlight">\(z_i\)</span> da nova série <span class="math notranslate nohighlight">\(Z\)</span> são adimensionais (não possuem unidades), possuam média 0 e variância 1. A série <span class="math notranslate nohighlight">\(Z\)</span> herda a “forma” de <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>Ao dividir os desvios (numerador) pelo desvio padrão, na verdade, estamos <em>normalizando</em> o desvio, de modo que os valores <span class="math notranslate nohighlight">\(z_i\)</span> da nova série <span class="math notranslate nohighlight">\(Z\)</span> sejam adimensionais (sem unidades), possuam média 0 e variância 1. A série <span class="math notranslate nohighlight">\(Z\)</span> herda a “forma” de <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">sts</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">e735aafa49a3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">sts</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
 </pre></div>
 </div>
 </div>
@@ -494,6 +494,70 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Idade</th>
+      <th>Peso</th>
+      <th>Altura</th>
+      <th>IMC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ana</th>
+      <td>20</td>
+      <td>55</td>
+      <td>162</td>
+      <td>20.96</td>
+    </tr>
+    <tr>
+      <th>João</th>
+      <td>19</td>
+      <td>80</td>
+      <td>178</td>
+      <td>25.25</td>
+    </tr>
+    <tr>
+      <th>Maria</th>
+      <td>21</td>
+      <td>62</td>
+      <td>162</td>
+      <td>23.62</td>
+    </tr>
+    <tr>
+      <th>Pedro</th>
+      <td>22</td>
+      <td>67</td>
+      <td>165</td>
+      <td>24.61</td>
+    </tr>
+    <tr>
+      <th>Túlio</th>
+      <td>20</td>
+      <td>73</td>
+      <td>171</td>
+      <td>24.96</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Vamos calcular o <em>z-score</em> para todas as <em>Series</em> do <em>DataFrame</em>.</p>
 <div class="cell docutils container">
@@ -508,7 +572,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cria novo dataframe de z-scores</span>
-
 <span class="n">Z</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">dfp</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>    
@@ -519,6 +582,70 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Idade:Z-score</th>
+      <th>Peso:Z-score</th>
+      <th>Altura:Z-score</th>
+      <th>IMC:Z-score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ana</th>
+      <td>-0.392232</td>
+      <td>-1.435277</td>
+      <td>-0.910359</td>
+      <td>-1.871626</td>
+    </tr>
+    <tr>
+      <th>João</th>
+      <td>-1.372813</td>
+      <td>1.458427</td>
+      <td>1.690666</td>
+      <td>0.878126</td>
+    </tr>
+    <tr>
+      <th>Maria</th>
+      <td>0.588348</td>
+      <td>-0.625040</td>
+      <td>-0.910359</td>
+      <td>-0.166652</td>
+    </tr>
+    <tr>
+      <th>Pedro</th>
+      <td>1.568929</td>
+      <td>-0.046299</td>
+      <td>-0.422666</td>
+      <td>0.467906</td>
+    </tr>
+    <tr>
+      <th>Túlio</th>
+      <td>-0.392232</td>
+      <td>0.648190</td>
+      <td>0.552718</td>
+      <td>0.692245</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Comentários:</p>
 <ul class="simple">
@@ -541,6 +668,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Idade:Z-score     6.772360e-15
+Peso:Z-score     -3.219647e-15
+Altura:Z-score    4.662937e-15
+IMC:Z-score      -6.994405e-15
+dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 <p>Calculando o z-score por função predefinida.</p>
 <div class="cell docutils container">
@@ -555,11 +691,84 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Idade:Z-score</th>
+      <th>Peso:Z-score</th>
+      <th>Altura:Z-score</th>
+      <th>IMC:Z-score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ana</th>
+      <td>-0.392232</td>
+      <td>-1.435277</td>
+      <td>-0.910359</td>
+      <td>-1.871626</td>
+    </tr>
+    <tr>
+      <th>João</th>
+      <td>-1.372813</td>
+      <td>1.458427</td>
+      <td>1.690666</td>
+      <td>0.878126</td>
+    </tr>
+    <tr>
+      <th>Maria</th>
+      <td>0.588348</td>
+      <td>-0.625040</td>
+      <td>-0.910359</td>
+      <td>-0.166652</td>
+    </tr>
+    <tr>
+      <th>Pedro</th>
+      <td>1.568929</td>
+      <td>-0.046299</td>
+      <td>-0.422666</td>
+      <td>0.467906</td>
+    </tr>
+    <tr>
+      <th>Túlio</th>
+      <td>-0.392232</td>
+      <td>0.648190</td>
+      <td>0.552718</td>
+      <td>0.692245</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ambos os métodos dão resultados idênticos</span>
 <span class="p">(</span><span class="n">dfpz</span> <span class="o">==</span> <span class="n">dfpz2</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Idade:Z-score     True
+Peso:Z-score      True
+Altura:Z-score    True
+IMC:Z-score       True
+dtype: bool
 </pre></div>
 </div>
 </div>
@@ -573,12 +782,18 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/12-correlacao-rise_18_0.png" src="../_images/12-correlacao-rise_18_0.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpz</span><span class="p">[</span><span class="s1">&#39;IMC:Z-score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpz</span><span class="p">[</span><span class="s1">&#39;Peso:Z-score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/12-correlacao-rise_19_0.png" src="../_images/12-correlacao-rise_19_0.png" />
 </div>
 </div>
 <p>Comentários:</p>
@@ -612,6 +827,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(62.7, -4.7, -5.300000000000001)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Comentários:</p>
 <ul class="simple">
@@ -625,11 +845,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(47.3, 47.3)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Outra forma de calcular a covariância é usar o método <code class="docutils literal notranslate"><span class="pre">cov</span></code> de uma <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Altura&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Peso&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.7
 </pre></div>
 </div>
 </div>
@@ -647,6 +877,12 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Altura&#39;</span><span class="p">],</span> <span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;Peso&#39;</span><span class="p">]</span>
 <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[47.3, 62.7],
+       [62.7, 93.3]])
 </pre></div>
 </div>
 </div>
@@ -670,6 +906,7 @@
 <li><p><span class="math notranslate nohighlight">\(\rho = 0\)</span>: as variáveis são correlacionadas de alguma forma, mas <strong>não</strong> linearmente. Neste sentido, <span class="math notranslate nohighlight">\(\rho\)</span> subestimará a força da dependência linear.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\rho = -1\)</span>: idem, porém negativamente.</p></li>
 </ul>
+<a class="reference internal image-reference" href="../_images/correlation.png"><img alt="../_images/correlation.png" src="../_images/correlation.png" style="width: 800px;" /></a>
 <p><strong>Exemplo:</strong> A tabela a seguir contém dados coletados na administração de um zoológico para alguns dias do mês de abril de 2021. Nesta ordem, a tabela mostra o número de visitantes no zoológico, o número de tickets de estacionamento adquiridos e a temperatura média contabilizados por dia.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -749,6 +986,124 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Visitantes</th>
+      <th>Tickets:Parking</th>
+      <th>Temperatura (C)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1580.0</td>
+      <td>8.0</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1230.0</td>
+      <td>6.0</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1950.0</td>
+      <td>9.0</td>
+      <td>32.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>890.0</td>
+      <td>4.0</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1140.0</td>
+      <td>6.0</td>
+      <td>31.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1760.0</td>
+      <td>9.0</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1650.0</td>
+      <td>10.0</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1470.0</td>
+      <td>3.0</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>390.0</td>
+      <td>1.0</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1460.0</td>
+      <td>9.0</td>
+      <td>34.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1000.0</td>
+      <td>7.0</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>1030.0</td>
+      <td>6.0</td>
+      <td>32.0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>740.0</td>
+      <td>2.0</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>1340.0</td>
+      <td>6.0</td>
+      <td>37.0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>1150.0</td>
+      <td>7.0</td>
+      <td>34.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Para calcular a correlação de Pearson entre duas séries, podemos usar a função <code class="docutils literal notranslate"><span class="pre">pearsonr()</span></code> do módulo <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>.</p>
 <div class="cell docutils container">
@@ -757,6 +1112,11 @@
 <span class="n">corr2</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">sts</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">]);</span>
 
 <span class="n">corr1</span><span class="p">,</span><span class="n">corr2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.8044243219605788, 0.6815723802241447)
 </pre></div>
 </div>
 </div>
@@ -773,10 +1133,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8044243219605786
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6815723802241447
 </pre></div>
 </div>
 </div>
@@ -791,6 +1161,14 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Visitantes         1.000000
+Tickets:Parking    0.804424
+Temperatura (C)    0.681572
+dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -799,7 +1177,7 @@
 <p>Antes de calcular cegamente o valor de <span class="math notranslate nohighlight">\(\rho\)</span> para séries de dados, é interessante fazer um gráfico de <em>dispersão</em> (<em>scatter plot</em>) entre as variáveis. Podemos fazer isto com o <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> e tipo de marcador <code class="docutils literal notranslate"><span class="pre">o</span></code> ou com <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.scatter()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 <span class="c1"># plot 1</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Tickets:Parking&#39;</span><span class="p">],</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;corr=</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">corr1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;No. visitantes&#39;</span><span class="p">);</span> 
@@ -813,13 +1191,19 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/12-correlacao-rise_48_0.png" src="../_images/12-correlacao-rise_48_0.png" />
+</div>
 </div>
 <p>Reproduzindo com <code class="docutils literal notranslate"><span class="pre">plt.scatter</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Tickets:Parking&#39;</span><span class="p">]);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Visitantes&#39;</span><span class="p">],</span><span class="n">zoo</span><span class="p">[</span><span class="s1">&#39;Tickets:Parking&#39;</span><span class="p">]);</span> 
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/12-correlacao-rise_50_0.png" src="../_images/12-correlacao-rise_50_0.png" />
 </div>
 </div>
 </section>

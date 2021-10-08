@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Questionário 31 (Q31) &#8212; Introdução à Ciência de Dados</title>
+    <title>Cadernos de ICD &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,12 +50,9 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Questionário 32 (Q32)" href="Q32.html" />
-    <link rel="prev" title="Questionário 25 (Q25)" href="Q25.html" />
+    <link rel="prev" title="Questionário 32 (Q32)" href="Q32.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -218,7 +215,7 @@
   Questionários
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Q21.html">
    Questionário 21 (Q21)
@@ -244,8 +241,8 @@
    Questionário 25 (Q25)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q31.html">
    Questionário 31 (Q31)
   </a>
  </li>
@@ -260,9 +257,9 @@
   Cadernos de ICD
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="cadernos-icd.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Cadernos de ICD
   </a>
  </li>
@@ -307,7 +304,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/ipynb/Q31.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ipynb/cadernos-icd.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -332,7 +329,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/Q31.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/cadernos-icd.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -340,7 +337,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/Q31.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/cadernos-icd.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -365,44 +362,13 @@
         
               <div>
                 
-  <section id="questionario-31-q31">
-<h1>Questionário 31 (Q31)<a class="headerlink" href="#questionario-31-q31" title="Permalink to this headline">¶</a></h1>
-<p>Orientações:</p>
-<ul class="simple">
-<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
-<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
-<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
-<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-o à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
-</ul>
-<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
-<hr><p><strong>Questão 1.</strong> Assinale a alternativa cujos tipos de dado mencionados podem ser todos utilizados para construir uma <em>Series</em> do <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
-<p>A. <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code>.</p>
-<p>B. <code class="docutils literal notranslate"><span class="pre">set</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.</p>
-<p>C. <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
-<p>D. <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code>, <code class="docutils literal notranslate"><span class="pre">complex</span></code>.</p>
-<p><strong>Questão 2</strong> Ao se construir um objeto <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code>, um comportamento padrão é esperado quando índices não são explicitamente fornecidos. Semelhantemente, ao se trabalhar com objetos <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>, a biblioteca encarrega-se, por padrão, de tratar dados chamados “ausentes”.  Assinale a alternativa correta quanto à execução das funções de criação dos objetos.</p>
-<p>A. <code class="docutils literal notranslate"><span class="pre">pandas.Series()</span></code> sempre retorna erro se um <code class="docutils literal notranslate"><span class="pre">index</span></code> não for especificado; <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> trata dados ausentes adicionando 0 nas posições devidas e converte o <code class="docutils literal notranslate"><span class="pre">dtype</span></code> de todas as <code class="docutils literal notranslate"><span class="pre">Series</span></code> que o constituem para <code class="docutils literal notranslate"><span class="pre">int64</span></code>.</p>
-<p>B. <code class="docutils literal notranslate"><span class="pre">pandas.Series()</span></code> atribui valores de <code class="docutils literal notranslate"><span class="pre">1</span></code> a <code class="docutils literal notranslate"><span class="pre">n</span></code> (sendo <code class="docutils literal notranslate"><span class="pre">n</span></code> o número de elementos) às linhas; <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame()</span></code> trata dados ausentes adicionando <code class="docutils literal notranslate"><span class="pre">np.nan</span></code> nas posições devidas.</p>
-<p>C. <code class="docutils literal notranslate"><span class="pre">pandas.Series()</span></code> atribui valores de <code class="docutils literal notranslate"><span class="pre">0</span></code> a <code class="docutils literal notranslate"><span class="pre">n</span></code> (sendo <code class="docutils literal notranslate"><span class="pre">n</span></code> o número de elementos) às linhas; <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame()</span></code> trata dados ausentes adicionando <code class="docutils literal notranslate"><span class="pre">np.nan</span></code> nas posições devidas.</p>
-<p>D. n.d.a.</p>
-<p><strong>Questão 3.</strong> A temperatura na Elysium Planitia do Planeta Vermelho é monitorada pela NASA através da MARS InSigth Mission.
-Suponha que você assinou um contrato com a NASA para analisar supostas predições climáticas para o ano de 2022. O gráfico abaixo mostra uma distribuição provável da temperatura média diária na região supracitada para cada dia do mês de junho (disponível no arquivo <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/mars-temp-2022-06.csv?raw=true">mars-temp-2022-06.csv</a>), porém, falhas de medição passadas induziram <em>gaps</em> nas previsões para alguns dias, como pode ser observado.</p>
-<figure class="align-default" id="mars-temp">
-<a class="reference internal image-reference" href="../_images/q31-mars-temp.png"><img alt="../_images/q31-mars-temp.png" src="../_images/q31-mars-temp.png" style="width: 700px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Temperatura média diária na Elysium Planitia - Marte.</span><a class="headerlink" href="#mars-temp" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<p>Fonte: adaptado de <a class="reference external" href="https://mars.nasa.gov/insight/weather/">NASA MARS Insight Mission</a></p>
-<p>Sabendo que a temperatura <span class="math notranslate nohighlight">\(T_d\)</span> no dia desconhecido <span class="math notranslate nohighlight">\(d\)</span> pode ser estimada por</p>
-<div class="math notranslate nohighlight">
-\[T_d = \mu(T_{d-1},T_{d-2},T_{d-3}),\]</div>
-<p>onde <span class="math notranslate nohighlight">\(\mu\)</span> significa “média aritmética dos valores dados”, assinale a alternativa que corresponde à temperatura média para todo o mês de junho, à menor e à maior, nesta ordem.</p>
-<p>A. (-72.15, -74.99, -65.07)</p>
-<p>B. (-65.0, -72.99, -65.07)</p>
-<p>C. (-75.0, -74.99, -65.07)</p>
-<p>D. (-69.97, -74.99, -65.07)</p>
-<p><strong>Obs.:</strong> se <span class="math notranslate nohighlight">\(d=25\)</span>, a temperatura no 25o. dia é a média das temperaturas do 22o. ao 24o. dia.</p>
+  <section id="cadernos-de-icd">
+<h1>Cadernos de ICD<a class="headerlink" href="#cadernos-de-icd" title="Permalink to this headline">¶</a></h1>
+<p>O projeto <em>Cadernos de ICD</em> é uma iniciativa que tem por objetivo a produção textual técnica no âmbito da disciplina de <em>Introdução à Ciência de Dados</em>.</p>
+<p>Como parte do processo de avaliação, cada aluno(a) matriculado(a) na disciplina é estimulado(a) a escrever mini-artigos de até 2 páginas ao longo do semestre.</p>
+<p>Depois de avaliados e adequados à formatação padrão, os mini-artigos são arquivados em um repositório compartilhado para consulta futura por novos alunos e interessados.</p>
+<p>Acesse o repositório clicando <a class="reference external" href="https://drive.google.com/drive/folders/1r_DRFk2gFgq3Ordyw29myG9bC_drxfGD?usp=sharing">aqui</a>.</p>
+<p>Os mini-artigos prezam pela iniciativa <em>Open Access</em> e possuem atribuição <em>Creative Commons</em>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -430,8 +396,7 @@ Suponha que você assinou um contrato com a NASA para analisar supostas prediç�
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Q25.html" title="previous page">Questionário 25 (Q25)</a>
-    <a class='right-next' id="next-link" href="Q32.html" title="next page">Questionário 32 (Q32)</a>
+    <a class='left-prev' id="prev-link" href="Q32.html" title="previous page">Questionário 32 (Q32)</a>
 
         </div>
         
