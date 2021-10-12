@@ -39,6 +39,7 @@
 # 
 # - [Estatística Descritiva](11-estatistica-descritiva.ipynb)
 # - [Correlação](12-correlacao.ipynb)
+# <!-- - [Regressão](13-regressao.ipynb) -->
 # 
 # ### Unidade 3
 # 
@@ -56,8 +57,10 @@
 #     - [Questionário 25](Q25.ipynb)
 # - Unidade 2: Parte 3
 #     - [Questionário 31](Q31.ipynb)
-#     - [Questionário 32](Q32.ipynb)
-#     
+#     - [Questionário 32](Q32.ipynb)    
+# - Unidade 2: Parte 4
+#     - [Questionário 41](Q41.ipynb)    
+# 
 # #### Conceito
 # 
 # Cada questionário possui 3 questões em formato _única escolha_ (vide orientações em seu cabeçalho) e procura avaliar a compreensão dos conceitos.
@@ -149,6 +152,12 @@
 # 
 # - [Projeto _Cadernos de ICD_](cadernos-icd.ipynb)
 
+# In[ ]:
+
+
+
+
+
 # 
 # ```{toctree}
 # :hidden:
@@ -210,6 +219,7 @@
 # Q25
 # Q31
 # Q32
+# Q41
 # ```
 # 
 # 

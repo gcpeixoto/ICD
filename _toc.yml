@@ -28,6 +28,7 @@
   chapters:
   - file: ipynb/11-estatistica-descritiva
   - file: ipynb/12-correlacao
+#  - file: ipynb/13-regressao
 - part: Questionários
   numbered: false
   chapters:
@@ -38,6 +39,7 @@
   - file: ipynb/Q25
   - file: ipynb/Q31
   - file: ipynb/Q32
+  - file: ipynb/Q41
 #- part: Temas de projeto
 #  numbered: false
 #  chapters:
