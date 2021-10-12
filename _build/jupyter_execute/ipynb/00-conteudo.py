@@ -39,7 +39,7 @@
 # 
 # - [Estatística Descritiva](11-estatistica-descritiva.ipynb)
 # - [Correlação](12-correlacao.ipynb)
-# <!-- - [Regressão](13-regressao.ipynb) -->
+# - [Regressão](13-regressao.ipynb)
 # 
 # ### Unidade 3
 # 
@@ -204,6 +204,7 @@
 # 
 # 11-estatistica-descritiva
 # 12-correlacao
+# 13-regressao
 # ```
 # 
 # 

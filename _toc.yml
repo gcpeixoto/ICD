@@ -28,7 +28,7 @@
   chapters:
   - file: ipynb/11-estatistica-descritiva
   - file: ipynb/12-correlacao
-#  - file: ipynb/13-regressao
+  - file: ipynb/13-regressao
 - part: Questionários
   numbered: false
   chapters:

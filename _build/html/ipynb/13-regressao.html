@@ -54,6 +54,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Questionário 21 (Q21)" href="Q21.html" />
+    <link rel="prev" title="Correlação" href="12-correlacao.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -199,7 +201,7 @@
   Parte 4
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="11-estatistica-descritiva.html">
    Estatística Descritiva
@@ -208,6 +210,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="12-correlacao.html">
    Correlação
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Análise de regressão
   </a>
  </li>
 </ul>
@@ -435,6 +442,52 @@
   <a class="reference internal nav-link" href="#regressao-multipla">
    Regressão múltipla
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estimando-valores">
+     Estimando valores
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspecao-de-multicolinearidade">
+   Inspeção de multicolinearidade
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas-plotting-scatter-matrix">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas.plotting.scatter_matrix
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seaborn-pairplot">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       seaborn.pairplot
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seaborn-heatmap">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       seaborn.heatmap
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-aplicado">
+   Exercício aplicado
+  </a>
  </li>
 </ul>
 
@@ -449,25 +502,24 @@
                 
   <section id="analise-de-regressao">
 <h1>Análise de regressão<a class="headerlink" href="#analise-de-regressao" title="Permalink to this headline">¶</a></h1>
-<p>Como vimos no capítulo anterior, a correlação investiga se existe ou não interferência entre duas variáveis. Em particular, ela procura se ambas possuem algum grau de dependência linear.</p>
-<p>Um pouco além, a <em>análise de regressão</em>, ou simplesmente <em>regressão</em>, busca saber de que maneira uma variável pode predizer o comportamento da outra. Assim, no mundo real, algumas perguntas que procuramos responder são:</p>
+<p>Como vimos no capítulo anterior, a correlação investiga se existe ou não interferência entre duas variáveis. Em particular, ela procura se ambas possuem algum grau de dependência linear. Indo um pouco além, a <em>análise de regressão</em>, ou simplesmente <em>regressão</em>, busca saber de que maneira uma variável pode predizer o comportamento da outra. Assim, no mundo real, algumas perguntas que se quer responder são:</p>
 <ul class="simple">
 <li><p>Como o volume de vendas de canetas esferográficas muda se o preço da unidade subir?</p></li>
-<li><p>De que maneira a taxa de inflação deste ano prediz o aumento do aluguel para os próximos dois meses?</p></li>
+<li><p>De que maneira a taxa de inflação deste ano pode predizer o aumento do aluguel para os próximos dois meses?</p></li>
 <li><p>A que horas seria melhor sair da universidade para evitar ficar preso pelo tráfego intenso na via?</p></li>
 </ul>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>O termo “regressão” deve-se ao estatístico inglês do século XIX Sir Francis Galton. Galton usou o termo para interpretar resultados de um experimento sobre hereditariedade, para o qual coletou alturas de pais e filhos para realizar predições sobre alturas das próximas gerações. Percebendo que a altura de um filho “regredia” (era menor do que) em relação à altura de seus pais por um fator de 2/3, publicou um artigo intitulado <em>Regression towards Mediocrity in Hereditary Stature</em> que, ironicamente, deu surgimento ao nome que usamos para o método estatístico que estamos aprendendo. Galton não aplicou o <em>método dos mínimos quadrados</em> (que é a base teórica para a regressão linear), já conhecido há 80 anos antes de sua época por Gauss e Legendre. Ele simplesmente “traçou uma reta”. Para Galton, a “regressão” representava apenas uma tendência de os dados “reverterem” a tendência média. Isto é, a origem do método <em>regressão</em> é uma “ironia do destino”. Para saber a história completa, veja este <a class="reference external" href="https://blog.minitab.com/en/statistics-and-quality-data-analysis/so-why-is-it-called-regression-anyway">post</a>.</p>
+<p>Perguntas como essas tem uma característica comum. Elas exigem uma <em>resposta</em> que pode ser expressa como uma combinação de uma ou mais <em>variáveis independentes</em>, que são também chamadas de <em>preditores</em> ou <em>covariantes</em>. Assim, o objetivo de uma análise de regressão é <em>construir modelos preditivos a partir dos dados</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A origem do nome <em>regressão</em> deve-se ao estatístico inglês do século XIX Sir Francis Galton. Galton usou o termo para interpretar resultados de um experimento sobre hereditariedade, para o qual coletou alturas de pais e filhos para realizar predições sobre alturas das próximas gerações. Percebendo que a altura de um filho “regredia” (era menor do que) em relação à altura de seus pais por um fator de 2/3, publicou um artigo intitulado <em>Regression towards Mediocrity in Hereditary Stature</em> que, ironicamente, deu surgimento ao nome que usamos para o método estatístico que estamos aprendendo. Galton não aplicou o <em>método dos mínimos quadrados</em> (que é a base teórica para a regressão linear), já conhecido há 80 anos antes de sua época por Gauss e Legendre. Ele simplesmente “traçou uma reta”. Para Galton, a “regressão” representava apenas uma tendência de os dados “reverterem” a tendência média. Isto é, a origem do método <em>regressão</em> é uma “ironia do destino”. Para saber a história completa, veja este <a class="reference external" href="https://blog.minitab.com/en/statistics-and-quality-data-analysis/so-why-is-it-called-regression-anyway">post</a>.</p>
 </div>
-<p>A estrutura comum de perguntas como essas é a seguinte: elas exigem uma <em>resposta</em> que pode ser expressa como uma combinação de uma ou mais <em>variáveis independentes</em> chamadas de <em>preditores</em> ou <em>covariantes</em>. Dessa maneira, o objetivo da análise de regressão é <em>construir modelos preditivos a partir dos dados</em>.</p>
 <section id="regressao-linear">
 <h2>Regressão linear<a class="headerlink" href="#regressao-linear" title="Permalink to this headline">¶</a></h2>
-<p>O modelo mais básico de regressão é o linear. A <em>regressão linear</em> procura ajustar um modelo matemático aos dados cuja resposta <span class="math notranslate nohighlight">\({\bf y}\)</span> depende linearmente de <span class="math notranslate nohighlight">\(d\)</span> preditores. Em termos vetoriais, o modelo pode ser descrito como:</p>
+<p>O modelo mais básico de regressão é o linear. A <em>regressão linear</em> tenta ajustar um modelo matemático aos dados disponíveis cuja resposta <span class="math notranslate nohighlight">\({\bf y}\)</span> depende linearmente de até <span class="math notranslate nohighlight">\(d\)</span> preditores. Em termos vetoriais, o modelo pode ser descrito como:</p>
 <div class="math notranslate nohighlight">
 \[{\bf y} = a_1{\bf x}_1 + a_2{\bf x}_2 + \ldots + a_d{\bf x}_d,\]</div>
 <p>em que os <span class="math notranslate nohighlight">\(a_i \in \mathbb{R}, \, i = 1,\ldots d\)</span>, são os <em>parâmetros</em> ou <em>coeficientes</em> do modelo e os <span class="math notranslate nohighlight">\({\bf x}_i\)</span> as variáveis.</p>
-<p>Se levarmos em conta <span class="math notranslate nohighlight">\(n\)</span> observações de cada variável, cada um dos <span class="math notranslate nohighlight">\({\bf x}_i\)</span> e <span class="math notranslate nohighlight">\({\bf y}\)</span> são identificados como vetores do espaço <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, de maneira que a equação anterior pode ser reescrita como um <em>sistema matricial</em> da forma <span class="math notranslate nohighlight">\({\bf y} = {\bf X}{\bf a}\)</span>, onde:</p>
+<p>Se levarmos em conta <span class="math notranslate nohighlight">\(n\)</span> observações de cada variável, cada um dos <span class="math notranslate nohighlight">\({\bf x}_i\)</span> e <span class="math notranslate nohighlight">\({\bf y}\)</span> são todos identificados como vetores do espaço <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, de maneira que a equação anterior, reescrita como um <em>sistema matricial</em>, assume a forma <span class="math notranslate nohighlight">\({\bf y} = {\bf X}{\bf a}\)</span>, onde</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf y} = 
 \begin{bmatrix}
@@ -491,24 +543,23 @@ a_1 \\
 a_2 \\
 \vdots \\
 a_n \\
-\end{bmatrix}
-\end{split}\]</div>
+\end{bmatrix}.\end{split}\]</div>
 <section id="regressao-linear-simples">
 <h3>Regressão linear simples<a class="headerlink" href="#regressao-linear-simples" title="Permalink to this headline">¶</a></h3>
-<p>A regressão linear simples assume um modelo “tipo reta”, contendo apenas um regressor dado por</p>
+<p>A <em>regressão linear simples</em> contém apenas um regressor e o modelo é a equação analítica de uma reta. Escrevemos</p>
 <div class="math notranslate nohighlight">
 \[{\bf y} = a_0 + a_1{\bf x},\]</div>
-<p>onde <span class="math notranslate nohighlight">\(a_0\)</span> é o <em>termo constante</em>, também chamado de <em>offset</em> ou <em>intercept</em>, e <span class="math notranslate nohighlight">\(a_1\)</span> é a <em>inclinação</em>.</p>
-<p>Dessa forma, dados <span class="math notranslate nohighlight">\(n\)</span> pares de valores <span class="math notranslate nohighlight">\((x_i, y_i)\)</span>, para preditor e resposta, podemos encontrar <span class="math notranslate nohighlight">\(a_0\)</span> e <span class="math notranslate nohighlight">\(a_1\)</span> e, enfim, explicar como ambos se relacionam.</p>
-<p>Entretanto, uma pergunta a se fazer é a seguinte: quais seriam os valores de <span class="math notranslate nohighlight">\(a_0\)</span> e <span class="math notranslate nohighlight">\(a_1\)</span> que produziriam a melhor reta para os dados? Em outras palavras, que reta melhor explicaria como <span class="math notranslate nohighlight">\({\bf y}\)</span> depende linearmente de <span class="math notranslate nohighlight">\({\bf x}\)</span>?</p>
-<p>A resposta é: a reta que produz os menores erros no sentido do método conhecido como <em>mínimos quadrados</em> (<em>least squares</em>).</p>
+<p>onde <span class="math notranslate nohighlight">\(a_0\)</span> é o <em>termo constante</em>, também chamado de <em>offset</em> ou <em>intercept</em>, e <span class="math notranslate nohighlight">\(a_1\)</span> é a <em>inclinação</em>. Logo, dados <span class="math notranslate nohighlight">\(n\)</span> pares de valores <span class="math notranslate nohighlight">\((x_i, y_i)\)</span>, para preditor e resposta, respectivamente, determinamos <span class="math notranslate nohighlight">\(a_0\)</span> e <span class="math notranslate nohighlight">\(a_1\)</span> e, enfim, podemos explicar como ambas as variáveis se relacionam.</p>
+<p>Entretanto, uma pergunta a se fazer é a seguinte: quais seriam os valores de <span class="math notranslate nohighlight">\(a_0\)</span> e <span class="math notranslate nohighlight">\(a_1\)</span> que produziriam a melhor reta para os dados? Em outras palavras, existe uma reta que explica como <span class="math notranslate nohighlight">\({\bf y}\)</span> depende linearmente de <span class="math notranslate nohighlight">\({\bf x}\)</span> da melhor forma possível? A resposta é sim. Tal reta será aquela que produz os menores erros locais no sentido do método conhecido como <em>mínimos quadrados</em> (<em>least squares</em>).</p>
 <section id="minimos-quadrados">
 <h4>Mínimos quadrados<a class="headerlink" href="#minimos-quadrados" title="Permalink to this headline">¶</a></h4>
-<p>O <em>método dos mínimos quadrados</em> sugere que a distância Euclidiana entre os valores preditos (modelados) e os valores dados deve ser <em>minimizada</em>. Na linguagem matemática, devemos encontrar <span class="math notranslate nohighlight">\(a_0\)</span> e <span class="math notranslate nohighlight">\(a_1\)</span> de maneira que o <em>resíduo</em> (ou erro) <span class="math notranslate nohighlight">\({\bf r}\)</span>
-seja o menor possível, isto é, que a norma</p>
+<p>O <em>método dos mínimos quadrados</em> sugere que a distância Euclidiana entre os valores preditos (modelados) e os valores disponíveis (conhecidos) deve ser <em>minimizada</em>. Na linguagem matemática, devemos encontrar <span class="math notranslate nohighlight">\(a_0\)</span> e <span class="math notranslate nohighlight">\(a_1\)</span> de modo que a norma do <em>resíduo</em> (ou erro) <span class="math notranslate nohighlight">\({\bf r}\)</span> seja o menor possível, isto é, que</p>
 <div class="math notranslate nohighlight">
 \[\|\bf{r}\|^2 =  \|\bf{y} - (a_0 + a_1\bf{x})\|^2 = \sum_{j=1}^{n}(y_j - a_0 - a_1x_j)^2,\]</div>
-<p>seja minimizada.</p>
+<p>seja minimizada. Este problema recai em um problema de otimização e equivale a buscar o ponto de mínimo global <span class="math notranslate nohighlight">\((a_0,a_1)\)</span> de uma função quadrática <span class="math notranslate nohighlight">\(F(x,y)\)</span>. Grosso modo, achar <span class="math notranslate nohighlight">\((a_0,a_1)\)</span>, tal que.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial F}{\partial a_0} = 0, \ \ \frac{\partial F}{\partial a_1} = 0.\]</div>
+<p>Você estudará isto futuramente.</p>
 </section>
 </section>
 </section>
@@ -516,7 +567,7 @@ seja o menor possível, isto é, que a norma</p>
 <h2>Estudo de caso: o gelo marinho e as mudanças climáticas<a class="headerlink" href="#estudo-de-caso-o-gelo-marinho-e-as-mudancas-climaticas" title="Permalink to this headline">¶</a></h2>
 <p>Vamos entender a <em>análise de regressão</em> por meio de um estudo de caso. A pergunta que queremos responder é:</p>
 <blockquote>
-<div><p>A queda na área coberta por gelo no mar pode nos levar a crer que o clima está mudando?</p>
+<div><p>A queda na área coberta por gelo no mar é causada pela alteração do clima?</p>
 </div></blockquote>
 <p>Vamos trabalhar com o <em>dataset</em> G02135 - Sea Ice Index, Version 3,
 do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3">NSIDC</a>.</p>
@@ -533,8 +584,7 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">sii</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/Sea_Ice_Index_Monthly_Baffin-Area-km^2.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sii</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/Sea_Ice_Index_Monthly_Baffin-Area-km^2.csv&#39;</span><span class="p">)</span>
 <span class="n">month</span> <span class="o">=</span> <span class="s1">&#39;jan&#39;</span>
 <span class="n">s</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">month</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">sii</span><span class="p">,</span><span class="n">fit_reg</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
 <span class="n">s</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ice coverage area in Baffin Area [km2]&#39;</span><span class="p">);</span>
@@ -548,7 +598,7 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 <p>Comentários:</p>
 <ul class="simple">
 <li><p>A função <code class="docutils literal notranslate"><span class="pre">lmplot()</span></code> realiza a análise de regressão simples com o modelo linear (reta) a partir dos dados passados.</p></li>
-<li><p>O <em>dataset</em> em questão mostra que a área de cobertura do gelo está sob uma tendência de declínio desde 1980.</p></li>
+<li><p>O <em>dataset</em> em questão mostra que a área de cobertura do gelo na área de Baffin está sob uma tendência de declínio desde 1980.</p></li>
 <li><p>A reta da regressão pode ser retirada do gráfico usando <code class="docutils literal notranslate"><span class="pre">fit_reg=False</span></code>.</p></li>
 </ul>
 <p>A seguir, “desdobramos” o <em>DataFrame</em> original para realizar uma análise de regressão durante os anos de 1997 a 2017 levando em conta valores mensais.</p>
@@ -588,10 +638,10 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </ul>
 <section id="normalizacao-dos-dados">
 <h3>Normalização dos dados<a class="headerlink" href="#normalizacao-dos-dados" title="Permalink to this headline">¶</a></h3>
-<p>Para evitar a flutuação, normalizaremos a área usando desvios em relação às médias mensais e o percentual relativo à média para o período de anos estudado. A expressão matemática é dada por:</p>
+<p>Para evitar a flutuação, normalizaremos a área usando desvios em relação às médias mensais e o percentual relativo à média para o período de anos estudado. A expressão matemática é dada por</p>
 <div class="math notranslate nohighlight">
-\[\tilde{\bf a}_i = 100\frac{({\bf a}_i - \mu_i)}{\mu}, = 1,\ldots, 12\]</div>
-<p>onde <span class="math notranslate nohighlight">\(\tilde{\bf a}_i\)</span> é a série contendo valores das áreas normalizadas, <span class="math notranslate nohighlight">\({\bf a}_i\)</span> a série contendo valores das áreas originais, <span class="math notranslate nohighlight">\(\mu_i\)</span> as médias, todas para o <span class="math notranslate nohighlight">\(i\)</span>-ésimo mês, e <span class="math notranslate nohighlight">\(\mu\)</span> é a média das áreas para todo o período de 20 anos (todos os meses).</p>
+\[\tilde{\bf a}_i = 100\frac{({\bf a}_i - \mu_i)}{\mu}, \ \ i = 1,\ldots, 12,\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\tilde{\bf a}_i\)</span> é a série contendo valores das áreas normalizadas, <span class="math notranslate nohighlight">\({\bf a}_i\)</span> a série contendo valores das áreas originais, <span class="math notranslate nohighlight">\(\mu_i\)</span> as médias, para o <span class="math notranslate nohighlight">\(i\)</span>-ésimo mês, e <span class="math notranslate nohighlight">\(\mu\)</span> é a média das áreas para todo o período de 20 anos (todos os meses).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span><span class="p">;</span> <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> 
@@ -637,10 +687,10 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </section>
 <section id="analise-quantitativa">
 <h3>Análise quantitativa<a class="headerlink" href="#analise-quantitativa" title="Permalink to this headline">¶</a></h3>
-<p>No caso anterior, fizemos uma análise qualitativa (visual) de como a área de cobertura de gelo (resposta) diminuiu ao longo do ano (preditor). Entretanto, não temos ideia da “cara” deste modelo ainda. Para saber a equação da análise de regressão, podemos utilizar alguns métodos.</p>
+<p>No caso anterior, fizemos uma análise <em>qualitativa</em> (visual) de como a área de cobertura de gelo (resposta) diminuiu ao longo do ano (preditor). Entretanto, ainda não temos uma ideia <em>quantitativa</em> deste modelo. Para saber a equação da análise de regressão, podemos utilizar alguns métodos.</p>
 <section id="scipy-stats-linregress">
 <h4><code class="docutils literal notranslate"><span class="pre">scipy.stats.linregress</span></code><a class="headerlink" href="#scipy-stats-linregress" title="Permalink to this headline">¶</a></h4>
-<p>A primeira forma que temos de encontrar a equação do modelo linear é usando <code class="docutils literal notranslate"><span class="pre">scipy.stats.linregress</span></code>.</p>
+<p>A primeira forma que temos para encontrar a equação do modelo linear é usar <code class="docutils literal notranslate"><span class="pre">scipy.stats.linregress</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">sts</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">siif2</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">],</span><span class="n">siif2</span><span class="p">[</span><span class="s1">&#39;arean&#39;</span><span class="p">])</span>
@@ -677,7 +727,7 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </section>
 <section id="sklearn-linear-model-linearregression">
 <h4><code class="docutils literal notranslate"><span class="pre">sklearn.linear_model.LinearRegression</span></code><a class="headerlink" href="#sklearn-linear-model-linearregression" title="Permalink to this headline">¶</a></h4>
-<p>A primeira forma que temos de encontrar a equação do modelo linear é usando <code class="docutils literal notranslate"><span class="pre">sklearn.linear_model.LinearRegression</span></code>.</p>
+<p>Outra forma é usar <code class="docutils literal notranslate"><span class="pre">sklearn.linear_model.LinearRegression</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
@@ -702,22 +752,21 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </div>
 <p>Comentários:</p>
 <ul class="simple">
-<li><p>Verificamos que os valores de slope e intercept obtidos pelo <code class="docutils literal notranslate"><span class="pre">sklearn.linear_model.LinearRegression</span></code> equivalem àqueles obtidos com <code class="docutils literal notranslate"><span class="pre">scipy.stats.linregress</span></code>.</p></li>
+<li><p>Verificamos que os valores de <em>slope</em> (coeficiente angular) e <em>intercept</em> (coeficiente linear) obtidos tanto por <code class="docutils literal notranslate"><span class="pre">sklearn.linear_model.LinearRegression</span></code> quanto por <code class="docutils literal notranslate"><span class="pre">scipy.stats.linregress</span></code> são equivalentes.</p></li>
 </ul>
 </section>
 </section>
 <section id="preditores-e-estimadores">
 <h3>Preditores e estimadores<a class="headerlink" href="#preditores-e-estimadores" title="Permalink to this headline">¶</a></h3>
-<p>Estimadores geram predições a partir da análise de regressão. Usando o módulo <code class="docutils literal notranslate"><span class="pre">sklearn</span></code>, podemos avaliar quão bem o modelo construído se ajusta aos dados conhecidos atra’ves de duas métricas bastante populares:</p>
+<p>Estimadores geram predições a partir da análise de regressão. Usando o módulo <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> (<em>scikit learn</em>), podemos avaliar quão bem o modelo construído se ajusta aos dados conhecidos através de duas <em>métricas</em> bastante populares:</p>
 <ul class="simple">
-<li><p><em>erro quadrático médio</em> (ou <em>MSE</em>, do inglês <em>mean squared error</em>), que fornece uma “média” do quadrado dos <span class="math notranslate nohighlight">\(n\)</span> erros existentes pontualmente entre as séries de dados conhecidos <span class="math notranslate nohighlight">\(\{y_i\}\)</span> e de dados estimados <span class="math notranslate nohighlight">\(\{\hat{y}_i\}\)</span>. Ele pode ser definido em termos de um <em>preditor</em> ou de um <em>estimador</em>. Ambos os conceitos são levemente distintos. Para nossos propósitos, vamos utilizar a definição do primeiro caso, que é:</p></li>
+<li><p><em>erro quadrático médio</em> (ou <em>MSE</em>, do inglês <em>mean squared error</em>), que fornece uma “média” do quadrado dos <span class="math notranslate nohighlight">\(n\)</span> erros existentes pontualmente entre a série de dados conhecidos <span class="math notranslate nohighlight">\(\{y_i\}\)</span> e a série de dados estimados <span class="math notranslate nohighlight">\(\{\hat{y}_i\}\)</span>. O MSE pode ser definido em termos de um <em>preditor</em> ou de um <em>estimador</em>. Ambos os conceitos são levemente distintos. Por conveniência de entendimento, vamos utilizar a definição do primeiro caso, que é:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\text{MSE} = \frac{1}{n}\sum_{i=1}^n (y_i -\hat{y}_i)^2\]</div>
-<p>Notemos que, em notação vetorial, <span class="math notranslate nohighlight">\(\text{MSE} = \frac{1}{n}({\bf e} \cdot {\bf e})\)</span>, com
-<span class="math notranslate nohighlight">\({\bf e} = {\bf y} - \hat{\bf y}\)</span>.</p>
+<p>Observe que, em notação vetorial, o MSE provém de um produto interno, isto é, <span class="math notranslate nohighlight">\(\text{MSE} = \frac{1}{n}({\bf e} \cdot {\bf e})\)</span>, com <span class="math notranslate nohighlight">\({\bf e} = {\bf y} - \hat{\bf y}\)</span>.</p>
 <ul class="simple">
-<li><p><em>coeficiente de determinação</em>, que mede a “qualidade” do ajuste. Este coeficiente é simplesmente o quadrado do coeficiente de correlação. Comumente, ele é denotado por <span class="math notranslate nohighlight">\(R^2\)</span> e <span class="math notranslate nohighlight">\( 0 \leq R^2 \leq 1\)</span>. Todavia, dependendo de como ele for definido, valores negativos são possíveis. Se <span class="math notranslate nohighlight">\(R^2 = 0\)</span>, o ajuste é o pior possível; se <span class="math notranslate nohighlight">\(R^2 = 1\)</span>, o melhor possível.</p></li>
+<li><p><em>coeficiente de determinação</em>, que mede a “qualidade” do ajuste. Este coeficiente é simplesmente o quadrado do coeficiente de correlação. Comumente, ele é denotado por <span class="math notranslate nohighlight">\(R^2\)</span>. Mais comumente, adota-se que <span class="math notranslate nohighlight">\( 0 \leq R^2 \leq 1\)</span>. Todavia, dependendo de como ele for definido, valores negativos serão possíveis. Em suma, sua interpretação é a seguinte: se <span class="math notranslate nohighlight">\(R^2 = 0\)</span>, o ajuste é o pior possível; se <span class="math notranslate nohighlight">\(R^2 = 1\)</span>, o melhor possível.</p></li>
 </ul>
 <p>Vamos calcular essas métricas para um conjunto de dados do <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> sobre diabetes.</p>
 <div class="cell docutils container">
@@ -761,7 +810,8 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 <p>Agora, verificamos a qualidade do ajuste dos dados pela regressão linear.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">diabetes_y_teste</span><span class="p">,</span><span class="n">diabetes_y_predicao</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MSE</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">diabetes_y_teste</span><span class="p">,</span><span class="n">diabetes_y_predicao</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -773,7 +823,8 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span><span class="p">(</span><span class="n">diabetes_y_teste</span><span class="p">,</span> <span class="n">diabetes_y_predicao</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># R2</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span><span class="p">(</span><span class="n">diabetes_y_teste</span><span class="p">,</span> <span class="n">diabetes_y_predicao</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -795,10 +846,11 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 <img alt="../_images/13-regressao_34_0.png" src="../_images/13-regressao_34_0.png" />
 </div>
 </div>
-<p>Uma vez que temos à disposição os coeficientes de ajuste, podemos predizer valores em locais desconhecidos.</p>
+<p>Uma vez que temos à disposição os coeficientes do ajuste, podemos predizer valores em locais desconhecidos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m3</span><span class="p">,</span><span class="n">b3</span> <span class="o">=</span> <span class="n">linregr</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">linregr</span><span class="o">.</span><span class="n">intercept_</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># slope, intercept</span>
+<span class="n">m3</span><span class="p">,</span><span class="n">b3</span> <span class="o">=</span> <span class="n">linregr</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">linregr</span><span class="o">.</span><span class="n">intercept_</span>
 <span class="nb">print</span><span class="p">((</span><span class="n">m3</span><span class="p">,</span><span class="n">b3</span><span class="p">))</span>
 
 <span class="c1"># plot</span>
@@ -821,12 +873,22 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 <img alt="../_images/13-regressao_36_1.png" src="../_images/13-regressao_36_1.png" />
 </div>
 </div>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p>Os 3 pontos são colineares. Ou seja, pertencem à reta.</p></li>
+<li><p>O triângulo rosa seria considerado uma <em>extrapolação</em>, já que é uma estimativa feita muito “além do conhecido”. Ele segue a tendência linear, mas pode ser uma previsão bastante errônea.</p></li>
+</ul>
 </section>
 </section>
 <section id="regressao-multipla">
 <h2>Regressão múltipla<a class="headerlink" href="#regressao-multipla" title="Permalink to this headline">¶</a></h2>
-<p>Estenderemos a discussão sobre regressão apresentando um exemplo simples de regressão mútlipla. Como vimos anteriormente, na regressão múltipla haverá mais do que um preditor. Neste caso, em vez de uma reta, o modelo matemático é um <em>hiperplano</em>. Hiperplano é um termo que generaliza o conceito de plano em um espaço vetorial de <span class="math notranslate nohighlight">\(d\)</span> dimensões.</p>
-<p>O <em>dataset</em> <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/Advertising.csv">Advertising.csv</a> contém informação sobre orçamentos destinados para anúncios em TV, rádio e jornal, bem como do número de vendas. O objetivo é saber como esses orçamentos influenciam a venda de produtos.</p>
+<p>Estenderemos a discussão sobre regressão apresentando um exemplo simples de regressão mútlipla. Na regressão múltipla, há mais do que um preditor (covariante) envolvido. Neste caso, em vez de uma reta, o modelo matemático é um <em>hiperplano</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://pt.wikipedia.org/wiki/Hiperplano">Hiperplano</a> é um conceito generalizado de plano em um espaço vetorial de <span class="math notranslate nohighlight">\(d\)</span> dimensões.</p>
+</div>
+<p>O <em>dataset</em> <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/Advertising.csv">Advertising.csv</a>, disponibilizado no <a class="reference external" href="https://www.kaggle.com">Kaggle</a>, contém informação sobre orçamentos destinados para anúncios em TV, rádio e jornal, bem como sobre o número de vendas em unidades não declaradas. O objetivo da análise de regressão é saber como esses orçamentos influenciam a venda de produtos.</p>
+<p>Para estudar este caso, usaremos o módulo <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importa statsmodels</span>
@@ -908,6 +970,18 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </table>
 </div></div></div>
 </div>
+<p>Uma visão geral sobre a distribuição dos dados é obtida com a plotagem múltipla dos histogramas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># histogramas</span>
+<span class="n">ad</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13-regressao_42_0.png" src="../_images/13-regressao_42_0.png" />
+</div>
+</div>
 <p>Realizamos a análise de regressão linear para verificar se poderíamos usar a variável <code class="docutils literal notranslate"><span class="pre">TV</span></code> para predizer as vendas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -937,7 +1011,7 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
   <th>Date:</th>             <td>Tue, 12 Oct 2021</td> <th>  Prob (F-statistic):</th> <td>1.47e-42</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>03:13:33</td>     <th>  Log-Likelihood:    </th> <td> -519.05</td>
+  <th>Time:</th>                 <td>15:14:47</td>     <th>  Log-Likelihood:    </th> <td> -519.05</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   200</td>      <th>  AIC:               </th> <td>   1042.</td>
@@ -1004,10 +1078,10 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/13-regressao_44_0.png" src="../_images/13-regressao_44_0.png" />
+<img alt="../_images/13-regressao_47_0.png" src="../_images/13-regressao_47_0.png" />
 </div>
 </div>
-<p>Embora o valor de <span class="math notranslate nohighlight">\(R^2\)</span> seja razoável, vamos repetir a análise, mas agora com a variávell <code class="docutils literal notranslate"><span class="pre">Radio</span></code>.</p>
+<p>Embora o valor de <span class="math notranslate nohighlight">\(R^2\)</span> seja razoável, vamos repetir a análise, mas agora com a variável <code class="docutils literal notranslate"><span class="pre">Radio</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_ad2</span> <span class="o">=</span> <span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Sales&#39;</span><span class="p">]</span>
@@ -1036,7 +1110,7 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
   <th>Date:</th>             <td>Tue, 12 Oct 2021</td> <th>  Prob (F-statistic):</th> <td>4.35e-19</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>03:28:32</td>     <th>  Log-Likelihood:    </th> <td> -573.34</td>
+  <th>Time:</th>                 <td>15:14:47</td>     <th>  Log-Likelihood:    </th> <td> -573.34</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   200</td>      <th>  AIC:               </th> <td>   1151.</td>
@@ -1077,6 +1151,19 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </tr>
 </table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
 </div>
+<p>Igualmente, podemos fazer um plot de dispersão.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Radio&#39;</span><span class="p">],</span><span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Sales&#39;</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Rádio&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Vendas&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13-regressao_51_0.png" src="../_images/13-regressao_51_0.png" />
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lr2</span><span class="o">.</span><span class="n">rsquared</span>
@@ -1089,7 +1176,8 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </div>
 </div>
 </div>
-<p>Neste caso, o modelo retorna um valor de <span class="math notranslate nohighlight">\(R^2\)</span> pior que o anterior. Mas, e se ambos os preditores forem postos juntos no modelo?</p>
+<p>Neste caso, o modelo retorna um valor de <span class="math notranslate nohighlight">\(R^2\)</span> pior do que o anterior. Este valor seria considerado “ruim”. Mas, e se ambos os preditores forem postos juntos no modelo?</p>
+<p>Vejamos o que ocorre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_ad3</span> <span class="o">=</span> <span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Sales&#39;</span><span class="p">]</span>
@@ -1118,7 +1206,7 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
   <th>Date:</th>             <td>Tue, 12 Oct 2021</td> <th>  Prob (F-statistic):</th> <td>4.83e-98</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>03:30:02</td>     <th>  Log-Likelihood:    </th> <td> -386.20</td>
+  <th>Time:</th>                 <td>15:14:47</td>     <th>  Log-Likelihood:    </th> <td> -386.20</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   200</td>      <th>  AIC:               </th> <td>   778.4</td>
@@ -1174,40 +1262,153 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
 </div>
 </div>
 </div>
-<p>Com ambos os preditores, o valor de <span class="math notranslate nohighlight">\(R^2\)</span> saltou para quase 90%, o que é um número melhor. Assim se forma a regressão múltipla.</p>
-<p>Para ver o plano da regressão múltipla, devemos fazer um plot 3D.</p>
+<p>Com ambos os preditores, o valor de <span class="math notranslate nohighlight">\(R^2\)</span> saltou para quase 90%, um número melhor! Assim, percebemos que a regressão múltipla resulta em um modelo mais acurado do que os modelos para regressão simples individuais.</p>
+<p>Para ver o plano da regressão múltipla, devemos fazer uma plotagem tridimensional.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
 
-<span class="c1"># X e Y usando tamanhos deTV and Radio</span>
+<span class="c1"># X e Y usando tamanhos de TV and Radio</span>
 <span class="n">X_axis</span><span class="p">,</span> <span class="n">Y_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ad</span><span class="p">[</span><span class="s1">&#39;TV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ad</span><span class="p">[</span><span class="s1">&#39;TV&#39;</span><span class="p">]</span><span class="o">.</span> <span class="nb">max</span><span class="p">(),</span> <span class="mi">100</span><span class="p">),</span> 
                              <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Radio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Radio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">100</span><span class="p">))</span>
 
-
-<span class="c1"># equação do hiperplano calculano o eixo Z correspondente (Sales)</span>
+<span class="c1"># equação do hiperplano calculando o eixo Z correspondente (Sales)</span>
 <span class="c1"># z = a0 + a1x + a2y</span>
 <span class="n">Z_axis</span> <span class="o">=</span> <span class="n">lr3</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">lr3</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">X_axis</span> <span class="o">+</span> <span class="n">lr3</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">Y_axis</span>
 
-<span class="c1"># Cria matplotlib 3D axes</span>
+<span class="c1"># cria eixo 3D</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> <span class="c1"># figsize refers to width and height of the figure</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">Axes3D</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">azim</span><span class="o">=-</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">Axes3D</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">azim</span><span class="o">=-</span><span class="mi">50</span><span class="p">)</span>
 
- <span class="c1"># Plota o hiperplane</span>
+<span class="c1"># plota o hiperplano</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X_axis</span><span class="p">,</span> <span class="n">Y_axis</span><span class="p">,</span> <span class="n">Z_axis</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="c1"># Plota pontos </span>
+<span class="c1"># plota dispersão </span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ad</span><span class="p">[</span><span class="s1">&#39;TV&#39;</span><span class="p">],</span> <span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Radio&#39;</span><span class="p">],</span><span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Sales&#39;</span><span class="p">])</span>
 
 <span class="c1"># labels</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TV&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Radio&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Sales&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TV&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Rádio&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Vendas&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/13-regressao_52_0.png" src="../_images/13-regressao_52_0.png" />
+<img alt="../_images/13-regressao_57_0.png" src="../_images/13-regressao_57_0.png" />
 </div>
 </div>
+<p>A conclusão da última análise é que as vendas são, de fato, impulsionadas, se houver cada vez mais investimento em propaganda via rádio e televisão.</p>
+<section id="estimando-valores">
+<h3>Estimando valores<a class="headerlink" href="#estimando-valores" title="Permalink to this headline">¶</a></h3>
+<p>Digamos que, como um analista de mercado, você tem interesse em prever quanto atingiria em vendas investindo <span class="math notranslate nohighlight">\(t\)</span> e <span class="math notranslate nohighlight">\(r\)</span> unidades monetárias (p.ex. milhares de reais) em anúncios na TV e rádio, respectivamente.</p>
+<p>Como fizemos na regressão simples, basta substituir valores na equação do plano e verificar a resposta.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">venda_pred</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span><span class="n">r</span><span class="p">:</span> <span class="n">lr3</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">lr3</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">lr3</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">r</span>
+<span class="n">venda_pred</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.415912077944483
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">venda_pred</span><span class="p">(</span><span class="mi">253</span><span class="p">,</span><span class="mi">44</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.768814104270994
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">venda_pred</span><span class="p">(</span><span class="mi">619</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.23074734862246
+</pre></div>
+</div>
+</div>
+</div>
+<p>Conforme a própria inclinação do plano mostra, à medida que aumentamos o investimento em ambos os canais de divulgação, as vendas aumentam.</p>
+</section>
+</section>
+<section id="inspecao-de-multicolinearidade">
+<h2>Inspeção de multicolinearidade<a class="headerlink" href="#inspecao-de-multicolinearidade" title="Permalink to this headline">¶</a></h2>
+<p>É possível inspecionar a relação entre variáveis (preditores) através de um <em>scatter matrix plot</em>. Por meio dele, gráficos de dispersão são plotados em um formato dois-a-dois. As figuras da diagonal principal mostram apenas histogramas, visto que seria o mesmo que plotar uma variável contra si mesma.</p>
+<p>Com a matriz dos gráficos de dispersão, verificamos a <em>multicolinearidade</em>, isto é se pares de variáveis se correlacionam de modo linear. ou não. Para este tipo de plotagem, temos algumas alternativas.</p>
+<section id="pandas-plotting-scatter-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">pandas.plotting.scatter_matrix</span></code><a class="headerlink" href="#pandas-plotting-scatter-matrix" title="Permalink to this headline">¶</a></h3>
+<p>Plota dispersões entre séries de um <em>DataFrame</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">ad</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span><span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span> <span class="n">ad</span><span class="p">[</span><span class="s1">&#39;Sales&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13-regressao_66_0.png" src="../_images/13-regressao_66_0.png" />
+</div>
+</div>
+</section>
+<section id="seaborn-pairplot">
+<h3><code class="docutils literal notranslate"><span class="pre">seaborn.pairplot</span></code><a class="headerlink" href="#seaborn-pairplot" title="Permalink to this headline">¶</a></h3>
+<p>Faz o mesmo que a função anterior. Entretanto, há uma série de opções adicionais.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">ad</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13-regressao_68_0.png" src="../_images/13-regressao_68_0.png" />
+</div>
+</div>
+<p>Para incluir as retas de regressão, adicione <code class="docutils literal notranslate"><span class="pre">kind='reg'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">ad</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;reg&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13-regressao_70_0.png" src="../_images/13-regressao_70_0.png" />
+</div>
+</div>
+</section>
+<section id="seaborn-heatmap">
+<h3><code class="docutils literal notranslate"><span class="pre">seaborn.heatmap</span></code><a class="headerlink" href="#seaborn-heatmap" title="Permalink to this headline">¶</a></h3>
+<p>O <em>heat map</em> (mapa de calor) é uma matriz de cores útil para mostrar visualmente coeficientes de correlação entre duas variáveis. As cores quentes representam alta correlação; as frias, baixa correlação.</p>
+<p>Podemos criar um mapa de calor para o <em>DataFrame</em> dos anúncios com a ajuda da função <code class="docutils literal notranslate"><span class="pre">pandas.corr()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">ad</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdBu&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13-regressao_72_0.png" src="../_images/13-regressao_72_0.png" />
+</div>
+</div>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vmin</span></code> e <code class="docutils literal notranslate"><span class="pre">vmax</span></code> são limitantes para a escala de cores.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmap</span></code> controla o mapa de cores. Para saber as opções possíveis, verifique <code class="docutils literal notranslate"><span class="pre">help(plt.colormaps)</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="exercicio-aplicado">
+<h2>Exercício aplicado<a class="headerlink" href="#exercicio-aplicado" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Use a série <code class="docutils literal notranslate"><span class="pre">Newspaper</span></code> para criar um modelo de regressão múltipla com os três covariantes do <em>dataset</em> <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/Advertising.csv">Advertising.csv</a> e faça predições. Note que o seu hiperplano tem imagem real, mas pertence ao <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p></li>
+</ul>
 </section>
 </section>
 
@@ -1236,6 +1437,8 @@ do <a class="reference external" href="https://nsidc.org/data/G02135/versions/3"
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="12-correlacao.html" title="previous page">Correlação</a>
+    <a class='right-next' id="next-link" href="Q21.html" title="next page">Questionário 21 (Q21)</a>
 
         </div>
         
