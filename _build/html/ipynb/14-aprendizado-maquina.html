@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Aprendizado de máquina - Parte 1 &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Questionário 21 (Q21)" href="Q21.html" />
+    <link rel="prev" title="Análise de regressão" href="13-regressao.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-regressao.html">
+   Análise de regressão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 5
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Aprendizado de máquina - Parte 1
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q41.html">
+   Questionário 41 (Q41)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q42.html">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ipynb/14-aprendizado-maquina.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/14-aprendizado-maquina.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/14-aprendizado-maquina.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelagem-e-a-subdivisao-da-area">
+   Modelagem e a subdivisão da área
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estudo-de-caso-classificacao-de-emprestimos-bancarios">
+   Estudo de caso: classificação de empréstimos bancários
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interfaces-do-scikit-learn">
+     Interfaces do
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scikit-learn
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#acuracia">
+       Acurácia
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matriz-de-confusao">
+       Matriz de confusão
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conjuntos-de-treinamento-e-de-teste">
+       Conjuntos de treinamento e de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="aprendizado-de-maquina-parte-1">
+<h1>Aprendizado de máquina - Parte 1<a class="headerlink" href="#aprendizado-de-maquina-parte-1" title="Permalink to this headline">¶</a></h1>
+<p><em>Aprendizado de máquina</em> (<em>machine learning</em>, ML) é um subcampo da inteligência artificial que tem por objetivo permitir que o computador <em>aprenda com os dados</em> sem ser explicitamente programado. Em linhas gerais, no <em>machine learning</em> se constrói algoritmos que leem dados, aprendem com a “experiência” deles e inferem coisas a partir do conhecimento adquirido. Esta área tem sido de grande valor para muitos setores por ser capaz de transformar dados aparentemente desconexos em informações cruciais para a tomada de decisões pelo reconhecimento de padrões significativos.</p>
+<section id="modelagem-e-a-subdivisao-da-area">
+<h2>Modelagem e a subdivisão da área<a class="headerlink" href="#modelagem-e-a-subdivisao-da-area" title="Permalink to this headline">¶</a></h2>
+<p>Os problemas fundamentais de ML em geral podem ser explicados por meio de <em>modelos</em>. Um modelo matemático (ou probabilístico) nada mais é do que uma relação entre variáveis. As duas maiores classes de problemas de ML são as seguintes.</p>
+<ul class="simple">
+<li><p><strong>Aprendizagem supervisionada (<em>supervised learning</em>)</strong>, aplicável a situações em que desejamos predizer valores. Neste caso, os algoritmos aprendem a partir de um conjunto de treinamento rotulado (<em>labels</em> ou <em>exemplars</em>) e procuram <em>generalizações</em> para todos os dados de entrada possíveis. Em problemas supervisionados, é necessário saber que dado fornece a “verdade fundamental” para que outros possam a ele ser comparados. Popularmente, este termo é chamado de <em>ground-truth</em>. Exemplos de algoritmos desta classe são: regressão logística (<em>logistic regression</em>), máquinas de vetor de suporte (<em>support vector machines</em>) e floresta aleatória (<em>random forest</em>).</p></li>
+<li><p><strong>Aprendizagem não-supervisionada (<em>unsupervised learning</em>)</strong>, aplicável a situações em que desejamos explorar os dados para explicá-los. Neste caso, os algoritmos aprendem a partir de um conjunto de treinamento não rotulado (<em>unlabeled</em>) e buscam <em>explicações</em> a partir de algum critério estatístico, geométrico ou de similaridade. Exemplos de algoritmos desta classe são: clusterização por <em>k-means</em> (<em>k-means clustering</em> e núcleo-estimador da função densidade (<em>kernel density estimation</em>).</p></li>
+</ul>
+<p>Existe ainda uma terceira classe que não estudaremos neste curso, a qual corresponde à <strong>aprendizagem por reforço</strong> (<em>reinforcement learning</em>), cujos algoritmos aprendem a partir de reforço para aperfeiçoar a qualidade de uma resposta explorando o espaço de solução iterativamente.</p>
+<p>Como a <a class="reference internal" href="#overview-ml"><span class="std std-numref">Fig. 10</span></a> resume, problemas de aprendizagem supervisionada podem ser de:</p>
+<ul class="simple">
+<li><p><em>classificação</em>, se a resposta procurada é discreta, isto é, se há apenas alguns valores possíveis para atribuição (p.ex. classificar se uma família é de baixa, média ou alta renda a partir de dados econômicos);</p></li>
+<li><p><em>regressão</em>, se a resposta procurada é contínua, isto é, se admite valores variáveis (p.ex. determinar a renda dos membros de uma família com base em suas profissões).</p></li>
+</ul>
+<p>Por outro lado, problemas de aprendizagem não supervisionada podem ser de:</p>
+<ul class="simple">
+<li><p><em>clusterização</em>, se a resposta procurada deve ser organizada em vários grupos. A clusterização tem similaridades com o problema de classificação, exceto pelo desconhecimento <em>a priori</em>, de quantas classes existem;</p></li>
+<li><p><em>estimativa de densidade</em>, se a resposta procurada é a explicação de processos fundamentais responsáveis pela distribuição dos dados.</p></li>
+</ul>
+<figure class="align-default" id="overview-ml">
+<a class="reference internal image-reference" href="../_images/visao-geral-ml.png"><img alt="../_images/visao-geral-ml.png" src="../_images/visao-geral-ml.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Classes principais e problemas fundamentais do <em>machine learning</em>. Fonte: adaptado de Chah.</span><a class="headerlink" href="#overview-ml" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="estudo-de-caso-classificacao-de-emprestimos-bancarios">
+<h2>Estudo de caso: classificação de empréstimos bancários<a class="headerlink" href="#estudo-de-caso-classificacao-de-emprestimos-bancarios" title="Permalink to this headline">¶</a></h2>
+<p>O problema que estudaremos consiste em predizer se o pedido de empréstimo de uma pessoa será parcial ou totalmente aprovado por uma financeira. O banco de dados disponível da financeira abrange os anos de 2007 a 2011.</p>
+<p>A aprovação do pedido baseia-se em uma análise de risco que usa diversas informações, tais como renda anual da pessoa, endividamento, calotes, taxa de juros do empréstimo, etc.</p>
+<p>Matematicamente, o pedido da pessoa será bem-sucedido se</p>
+<div class="math notranslate nohighlight">
+\[\alpha = \frac{E - F}{E} \ge 0.95,\]</div>
+<p>onde <span class="math notranslate nohighlight">\(E\)</span> é o valor do empréstimo requisitado e <span class="math notranslate nohighlight">\(F\)</span> o financiamento liberado. O classificador binário pode ser escrito pela função</p>
+<div class="math notranslate nohighlight">
+\[h({\bf X}): \mathbb{M}_{n \, \times \, d} \to \mathbb{K},\]</div>
+<p>com <span class="math notranslate nohighlight">\(\mathbb{K} = \{+1,-1\}\)</span> e <span class="math notranslate nohighlight">\({\bf X}\)</span> é uma matriz de <span class="math notranslate nohighlight">\(n\)</span> amostras e <span class="math notranslate nohighlight">\(d\)</span> <em>features</em> pertencente ao conjunto abstrato <span class="math notranslate nohighlight">\(\mathbb{M}_{n \, \times \, d}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Em um problema de classificação, se a resposta admite apenas dois valores (duas classes), como “sim” e “não”, diz-se que o classificador é <strong>binário</strong>. Se mais valores são admissíveis, diz-se que o classificador é <strong>mutliclasse</strong>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vamos ler o banco de dados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../database/dataset_small.pkl&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+<span class="c1"># necessário encoding &#39;latin1&#39;</span>
+<span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aqui, <code class="docutils literal notranslate"><span class="pre">x</span></code> é a nossa matriz de features.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4140 amostras</span>
+<span class="c1"># 15 features</span>
+<span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4140, 15)
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">y</span></code> é o vetor de <em>labels</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4140 targets +1 ou -1</span>
+<span class="n">y</span><span class="p">,</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 1.,  1.,  1., ..., -1., -1., -1.]), (4140,))
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p>As <em>features</em> (atributos) são características que nos permitem distinguir um item. Neste exemplo, são todas as informações coletadas sobre a pessoa ou sobre o mecanismo de empréstimo. São 15, no total, com 4140 valores reais (amostras) cada.</p></li>
+<li><p>Em geral, uma amostra pode ser um documento, figura, arquivo de áudio, linha de uma planilha.</p></li>
+<li><p><em>Features</em> são geralmente valores reais, mas podem ser booleanos, discretos, ou categóricos.</p></li>
+<li><p>O vetor-alvo (<em>target</em>) contém valores que marcam se empréstimos passados no histórico da financeira foram aprovados ou reprovados.</p></li>
+</ul>
+<section id="interfaces-do-scikit-learn">
+<h3>Interfaces do <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code><a class="headerlink" href="#interfaces-do-scikit-learn" title="Permalink to this headline">¶</a></h3>
+<p>Usaremos o módulo <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> para resolver o problema. Este módulo usa três interfaces:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fit()</span></code> (estimador), para construir modelos de ajuste;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">predict()</span></code> (preditor), para fazer predições;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transform()</span></code> (transformador), para converter dados;</p></li>
+</ul>
+<p>O objetivo é predizer empréstimos malsucedidos, isto é, aqueles que se acham aquém do limiar de 95% de <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">neighbors</span>
+
+<span class="c1"># cria uma instância de classificação </span>
+<span class="c1"># 11 vizinhos mais próximos</span>
+<span class="n">nn</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">nn</span><span class="p">)</span>
+
+<span class="c1"># treina o classificador </span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># calcula a predição</span>
+<span class="n">yh</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># predição, real</span>
+<span class="n">y</span><span class="p">,</span><span class="n">yh</span>
+
+<span class="c1"># altere nn e verifique diferenças</span>
+<span class="c1">#from numpy import size, where</span>
+<span class="c1">#size(where(y - yh == 0))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 1.,  1.,  1., ..., -1., -1., -1.]),
+ array([-1., -1., -1., ..., -1., -1., -1.]))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>O algoritmo de classificação dos <em>K</em> vizinhos mais próximos foi proposto em 1975. A base de seu funcionamento é a determinação do rótulo de classificação de uma amostra a partir de <em>K</em> amostras vizinhas em um conjunto de treinamento. Saiba mais <a class="reference external" href="http://computacaointeligente.com.br/algoritmos/k-vizinhos-mais-proximos/">aqui</a>.</p>
+</div>
+<section id="acuracia">
+<h4>Acurácia<a class="headerlink" href="#acuracia" title="Permalink to this headline">¶</a></h4>
+<p>Podemos medir o desempenho do classificador usando métricas. A métrica padrão para o método <em>KNN</em> é a <em>acurácia</em>, dada por:</p>
+<div class="math notranslate nohighlight">
+\[acc = 1 - erro = \frac{\text{no. de predições corretas}}{n}.\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8316425120772947
+</pre></div>
+</div>
+</div>
+</div>
+<p>Este <em>score</em> parece bom, mas há o que analisar… Vamos plotar a distribuição dos rótulos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gráfico &quot;torta&quot; (pie chart)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span>
+             <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">))][</span><span class="mi">0</span><span class="p">],</span>
+       <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;E parcial&#39;</span><span class="p">,</span><span class="s1">&#39;E total&#39;</span><span class="p">],</span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">],</span>
+       <span class="n">shadow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">((</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/14-aprendizado-maquina_19_0.png" src="../_images/14-aprendizado-maquina_19_0.png" />
+</div>
+</div>
+<p>O gráfico mostra que o banco de dados está desequilibrado, já que 81,57% dos empréstimos foram liberados integralmente. Isso pode implicar que a predição será pela “maioria”.</p>
+</section>
+<section id="matriz-de-confusao">
+<h4>Matriz de confusão<a class="headerlink" href="#matriz-de-confusao" title="Permalink to this headline">¶</a></h4>
+<p>Há casos em que a acurácia não é uma boa métrica de desempenho. Quando análises mais detalhadas são necessárias, podemos usar a <em>matriz de confusão</em>.</p>
+<p>Com a matriz de confusão, podemos definir métricas para cenários distintos que levam em conta os valores obtidos pelo classificador e os valores considerados como corretos (<em>ground-truth</em>, isto é, o  “padrão-ouro” (<em>gold standard</em>).</p>
+<p>Em um classificador binário, há quatro casos a considerar, ilustrados na <a class="reference internal" href="#matriz-confusao"><span class="std std-numref">Fig. 11</span></a>:</p>
+<ul class="simple">
+<li><p><em>Verdadeiro positivo</em> (VP). O classificador prediz uma amostra como positiva que, de fato, é positiva.</p></li>
+<li><p><em>Falso positivo</em> (FP). O classificador prediz uma amostra como positiva que, na verdade, é negativa.</p></li>
+<li><p><em>Verdadeiro negativo</em> (VN). O classificador prediz uma amostra como negativa que, de fato, é negativa.</p></li>
+<li><p><em>Falso negativo</em> (FN). O classificador prediz uma amostra como negativa que, na verdade, é positiva.</p></li>
+</ul>
+<figure class="align-default" id="matriz-confusao">
+<a class="reference internal image-reference" href="../_images/matriz-confusao.png"><img alt="../_images/matriz-confusao.png" src="../_images/matriz-confusao.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Matriz de confusão. Fonte: elaboração própria.</span><a class="headerlink" href="#matriz-confusao" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Combinando esses quatro conceitos, podemos definir as métricas <em>acurácia</em>, <em>recall</em> (ou <em>sensibilidade</em>), <em>especificidade</em>, <em>precisão</em> (ou <em>valor previsto positivo</em>), <em>valor previsto negativo</em>, nesta ordem, da seguinte maneira:</p>
+<div class="math notranslate nohighlight">
+\[\text{acc} = \dfrac{TP + TN}{TP + TN + FP + FN}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{rec} = \dfrac{TP}{TP + FP}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{spec} = \dfrac{TN}{TN + FP}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{prec} = \dfrac{TP}{TP + FP}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{npv} = \dfrac{TN}{TN + FN}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Para uma interpretação ilustrada sobre essas métricas, veja este <a class="reference external" href="https://medium.com/swlh/explaining-accuracy-precision-recall-and-f1-score-f29d370caaa8">post</a>.</p>
+</div>
+<p>Podemos computar a matriz de confusão com</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conf</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">yh</span> <span class="o">==</span> <span class="n">a</span><span class="p">,</span> <span class="n">y</span> <span class="o">==</span> <span class="n">b</span><span class="p">))</span>
+<span class="n">TP</span><span class="p">,</span> <span class="n">TN</span><span class="p">,</span> <span class="n">FP</span><span class="p">,</span> <span class="n">FN</span> <span class="o">=</span> <span class="n">conf</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">conf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">conf</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">conf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">TP</span><span class="p">,</span><span class="n">FP</span><span class="p">],[</span><span class="n">FN</span><span class="p">,</span><span class="n">TN</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3370,  690],
+       [   7,   73]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>ou, usando o <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, com</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">yh</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c1"># switch (prediction, target)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3370,  690],
+       [   7,   73]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conjuntos-de-treinamento-e-de-teste">
+<h4>Conjuntos de treinamento e de teste<a class="headerlink" href="#conjuntos-de-treinamento-e-de-teste" title="Permalink to this headline">¶</a></h4>
+<p>Vejamos um exemplo com <code class="docutils literal notranslate"><span class="pre">nn=1</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">yh</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">yh</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">yh</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1.0,
+ array([[3377,    0],
+        [   0,  763]]))
+</pre></div>
+</div>
+</div>
+</div>
+<p>Este caso tem 100% de acurácia e uma matriz de confusão diagonal.  No exemplo anterior, não diferenciamos o conjunto usado para treinamento e predição.</p>
+<p>Porém, em problemas reais, as chances dessa perfeição ocorrer são minimas. Da mesma forma, o classificador em geral será aplicado em dados previamente desconhecidos. Esta condição força-nos a dividir os dados em dois conjuntos: aquele usado para aprendizagem (<em>conjunto de treinamento</em>) e outro para testar a acurácia (<em>conjunto de teste</em>.</p>
+<p>Vejamos uma simulação mais realista.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Randomiza e divide dados</span>
+<span class="c1"># PRC*100% para treinamento</span>
+<span class="c1"># (1-PRC)*100% para teste</span>
+
+<span class="n">PRC</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">perm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">split_point</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">PRC</span><span class="p">))</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">perm</span><span class="p">[:</span><span class="n">split_point</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),:]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">perm</span><span class="p">[:</span><span class="n">split_point</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">split_point</span><span class="p">:]</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),:]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">split_point</span><span class="p">:]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aux</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;training&#39;</span><span class="p">:</span> <span class="n">X_train</span><span class="p">,</span>
+       <span class="s1">&#39;training target&#39;</span><span class="p">:</span><span class="n">y_train</span><span class="p">,</span>
+       <span class="s1">&#39;test&#39;</span><span class="p">:</span><span class="n">X_test</span><span class="p">,</span>
+       <span class="s1">&#39;test target&#39;</span><span class="p">:</span><span class="n">y_test</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">aux</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>training: (2898, 15)
+training target: (2898,)
+test: (1242, 15)
+test target: (1242,)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Agora treinaremos o modelo com esta nova partição.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">yht</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;acc&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">yht</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)),</span>
+ <span class="s1">&#39;conf. matrix&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">yht</span><span class="p">))}</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acc: 1.0
+conf. matrix: 
+[[2366    0]
+ [   0  532]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para <code class="docutils literal notranslate"><span class="pre">nn</span> <span class="pre">=</span> <span class="pre">1</span></code>, a acurácia é de 100%. Vejamos o que acontecerá nesta simulação com dados ainda não vistos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yht2</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;acc&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">yht2</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)),</span>
+ <span class="s1">&#39;conf. matrix&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">yht2</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))}</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acc: 0.7737520128824477
+conf. matrix: 
+[[887 157]
+ [124  74]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Neste caso, a acurácia naturalmente reduziu.</p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ipynb"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="13-regressao.html" title="previous page">Análise de regressão</a>
+    <a class='right-next' id="next-link" href="Q21.html" title="next page">Questionário 21 (Q21)</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -43,6 +43,12 @@
 # 
 # ### Unidade 3
 # 
+# #### Parte 5
+# 
+# - [Aprendizado de máquina - I](14-aprendizado-maquina.ipynb)
+# 
+# ### Unidade 4
+# 
 # _Coming soon..._
 # 
 # ## Avaliação
@@ -59,7 +65,8 @@
 #     - [Questionário 31](Q31.ipynb)
 #     - [Questionário 32](Q32.ipynb)    
 # - Unidade 2: Parte 4
-#     - [Questionário 41](Q41.ipynb)    
+#     - [Questionário 41](Q41.ipynb)
+#     - [Questionário 42](Q42.ipynb)
 # 
 # #### Conceito
 # 
@@ -152,12 +159,6 @@
 # 
 # - [Projeto _Cadernos de ICD_](cadernos-icd.ipynb)
 
-# In[ ]:
-
-
-
-
-
 # 
 # ```{toctree}
 # :hidden:
@@ -211,6 +212,15 @@
 # ```{toctree}
 # :hidden:
 # :titlesonly:
+# :caption: Parte 5
+# 
+# 14-aprendizado-maquina
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
 # :caption: Questionários
 # 
 # Q21
@@ -221,6 +231,7 @@
 # Q31
 # Q32
 # Q41
+# Q42
 # ```
 # 
 # 

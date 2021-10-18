@@ -1,0 +1,864 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Questionário 42 (Q42) &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/13-regressao.html">
+   Análise de regressão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/14-aprendizado-maquina.html">
+   Aprendizado de máquina - Parte 1
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q41.html">
+   Questionário 41 (Q41)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q42.html">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/todo/Q42-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/Q42-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/Q42-gab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gabarito">
+   GABARITO
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   GABARITO
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   GABARITO
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="questionario-42-q42">
+<h1>Questionário 42 (Q42)<a class="headerlink" href="#questionario-42-q42" title="Permalink to this headline">¶</a></h1>
+<p>Orientações:</p>
+<ul class="simple">
+<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
+<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
+<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
+<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-o à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
+</ul>
+<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
+<hr><p><strong>Questão 1.</strong> No <em>dataset</em> <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/enem2019.xlsx">enem2019.xlsx</a>, estão disponíveis as notas médias por estado obtidas nas provas do ENEM 2019. Supondo que <em>x</em> é a diferença entre a amplitude da quantidade de inscritos na região Sudeste e a amplitude da quantidade de inscritos na região Norte, e que <em>y</em> é o desvio médio para a série da quantidade total de inscritos de ensino médio público apenas para os estados do sul, assinale a alternativa que corretamente expressa os valores de <em>x</em> e <em>y</em>,  nesta sequência.</p>
+<p><strong>Obs.:</strong> considere apenas a parte inteira do desvio médio.</p>
+<p>A. 149465 e 5690</p>
+<p>B. 169265 e 6593</p>
+<p>C. 149465 e 0</p>
+<p>D. 173921 e 2</p>
+</section>
+<section id="gabarito">
+<h1>GABARITO<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\(n =\)</span> <strong><em>Quantidade de inscritos da região</em></strong></p>
+<p><span class="math notranslate nohighlight">\(\overline{X}\)</span> = <strong><em>Média do total de inscritos de Ensino Público</em></strong></p>
+<p><span class="math notranslate nohighlight">\(X_i\)</span> = <span class="math notranslate nohighlight">\(Estado_i\)</span></p>
+<p>Alterei o <strong>n</strong> e o desvio da média; alterei o <strong>n</strong> que deveria ser para evitar que os alunos apenas usem <em>.mad()</em> e realizem de fato o desvio médio</p>
+<p>Alternativa <strong>C</strong></p>
+<hr><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;../database/enem2019.xlsx&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Estado&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COD UF</th>
+      <th>Quantidade de Inscritos</th>
+      <th>Total de inscritos de Ensino Médio Público</th>
+      <th>Total de inscritos de Ensino Médio Privado</th>
+      <th>Média da nota da prova de Ciências da Natureza</th>
+      <th>Média da nota da prova de Ciências Humanas</th>
+      <th>Média da nota da prova de Linguagens e Códigos</th>
+      <th>Média da nota da prova de Matemática</th>
+      <th>Média da nota da prova de redação</th>
+    </tr>
+    <tr>
+      <th>Estado</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>RS</th>
+      <td>43</td>
+      <td>46173</td>
+      <td>41424</td>
+      <td>4749</td>
+      <td>484.659842</td>
+      <td>524.267227</td>
+      <td>533.906006</td>
+      <td>546.707112</td>
+      <td>598.457500</td>
+    </tr>
+    <tr>
+      <th>AP</th>
+      <td>16</td>
+      <td>6136</td>
+      <td>5711</td>
+      <td>425</td>
+      <td>446.884217</td>
+      <td>477.089716</td>
+      <td>491.826222</td>
+      <td>477.948733</td>
+      <td>538.818381</td>
+    </tr>
+    <tr>
+      <th>AL</th>
+      <td>27</td>
+      <td>17551</td>
+      <td>15328</td>
+      <td>2223</td>
+      <td>453.600683</td>
+      <td>480.601937</td>
+      <td>496.041317</td>
+      <td>498.075512</td>
+      <td>553.236927</td>
+    </tr>
+    <tr>
+      <th>AM</th>
+      <td>13</td>
+      <td>25817</td>
+      <td>24541</td>
+      <td>1276</td>
+      <td>446.577429</td>
+      <td>475.833558</td>
+      <td>494.953598</td>
+      <td>482.391837</td>
+      <td>509.776809</td>
+    </tr>
+    <tr>
+      <th>GO</th>
+      <td>52</td>
+      <td>35546</td>
+      <td>31323</td>
+      <td>4223</td>
+      <td>477.625078</td>
+      <td>505.805269</td>
+      <td>520.101327</td>
+      <td>528.496087</td>
+      <td>594.747233</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">norte0</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AC&quot;</span><span class="p">,</span><span class="s2">&quot;AP&quot;</span><span class="p">,</span><span class="s2">&quot;AM&quot;</span><span class="p">,</span><span class="s2">&quot;PA&quot;</span><span class="p">,</span><span class="s2">&quot;RO&quot;</span><span class="p">,</span><span class="s2">&quot;RR&quot;</span><span class="p">,</span><span class="s2">&quot;TO&quot;</span><span class="p">]</span>
+<span class="n">alvos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Quantidade de Inscritos&quot;</span><span class="p">]</span>
+<span class="n">nortedf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">norte0</span><span class="p">,</span><span class="n">alvos</span><span class="p">]</span>
+<span class="n">sudeste0</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ES&quot;</span><span class="p">,</span><span class="s2">&quot;MG&quot;</span><span class="p">,</span><span class="s2">&quot;RJ&quot;</span><span class="p">,</span><span class="s2">&quot;SP&quot;</span><span class="p">]</span>
+<span class="n">sudestedf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sudeste0</span><span class="p">,</span><span class="n">alvos</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R_norte</span> <span class="o">=</span> <span class="n">nortedf</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">nortedf</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">R_sudeste</span> <span class="o">=</span> <span class="n">sudestedf</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">sudestedf</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">R_dif</span> <span class="o">=</span> <span class="n">R_sudeste</span> <span class="o">-</span> <span class="n">R_norte</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alvos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Quantidade de Inscritos&quot;</span><span class="p">,</span><span class="s2">&quot;Total de inscritos de Ensino Médio Público&quot;</span><span class="p">,</span><span class="s2">&quot;Total de inscritos de Ensino Médio Privado&quot;</span><span class="p">]</span>
+<span class="n">sul0</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PR&quot;</span><span class="p">,</span><span class="s2">&quot;RS&quot;</span><span class="p">,</span><span class="s2">&quot;SC&quot;</span><span class="p">]</span>
+<span class="n">suldf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sul0</span><span class="p">,</span><span class="n">alvos</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">suldf</span><span class="p">[</span><span class="s2">&quot;Quantidade de Inscritos&quot;</span><span class="p">])</span>
+<span class="n">media</span> <span class="o">=</span> <span class="n">suldf</span><span class="p">[</span><span class="s2">&quot;Total de inscritos de Ensino Médio Público&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">DM</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">suldf</span><span class="p">[</span><span class="s2">&quot;Total de inscritos de Ensino Médio Público&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="sa">f</span><span class="s1">&#39;Resultado esperado: </span><span class="si">{</span><span class="n">R_dif</span><span class="si">}</span><span class="s1"> // </span><span class="si">{</span><span class="n">DM</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Resultado esperado: 149465 // 0.0&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p><strong>Questão 2.</strong> Calcule o percentual <em>p</em> de inscritos para o ENEM 2019 provenientes do ensino privado de todos os Estados em relação ao total de inscritos no exame, bem como o valor do quociente <em>v/V</em>, onde <em>v</em> é a variância para a série do total de inscritos provenientes do ensino público e <em>V</em> a variância para a série do total de inscritos provenientes do ensino privado. Assinale a alternativa correta para <em>p</em> e <em>v/V</em>.</p>
+<p>A. 11.4% e 34.48</p>
+<p>B. 15% e 33.45</p>
+<p>C. 12.5% e 36.78</p>
+<p>D. 13.54% e 34.6</p>
+<hr>
+</section>
+<section id="id1">
+<h1>GABARITO<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>A</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#RESPOSTA CERTA A)</span>
+
+<span class="n">df4</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">([</span><span class="s2">&quot;Quantidade de Inscritos&quot;</span><span class="p">,</span> <span class="s2">&quot;Total de inscritos de Ensino Médio Público&quot;</span><span class="p">,</span> <span class="s2">&quot;Total de inscritos de Ensino Médio Privado&quot;</span><span class="p">])</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Total de inscritos de Ensino Médio Privado&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Quantidade de Inscritos&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Total de inscritos de Ensino Médio Público&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">()</span> <span class="o">/</span> <span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Total de inscritos de Ensino Médio Privado&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">% é a porcentagem do total de inscritos no ENEM do Ensino Médio Privado&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2"> é o quociente da variância do Total de inscritos de Ensino Médio Público sob o Total de inscritos de Ensino Médio Privado&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.47% é a porcentagem do total de inscritos no ENEM do Ensino Médio Privado
+34.48 é o quociente da variância do Total de inscritos de Ensino Médio Público sob o Total de inscritos de Ensino Médio Privado
+</pre></div>
+</div>
+</div>
+</div>
+<hr><p><strong>Questão 3.</strong> Defina a nota média <span class="math notranslate nohighlight">\(N(x)\)</span> de cada região brasileira <span class="math notranslate nohighlight">\(x\)</span> como a média das notas <span class="math notranslate nohighlight">\(N_i\)</span> de cada uma das <span class="math notranslate nohighlight">\(Q\)</span> grandes áreas de conhecimento que constam da prova do ENEM 2019, isto é,</p>
+<div class="math notranslate nohighlight">
+\[N(x) =  \frac{ \sum_{i=1}^Q N_i(x)}{Q},\]</div>
+<p>e assinale a alternativa cujas regiões detém o primeiro e o segundo maiores valores de desvio padrão.</p>
+<p>A. Nordeste e Sudeste</p>
+<p>B. Sudeste e Nordeste</p>
+<p>C. Norte e Sul</p>
+<p>D. Sul e Centro-Oeste</p>
+<hr>
+</section>
+<section id="id2">
+<h1>GABARITO<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>Na verdade é apenas o desvio padrão da nota de cada região.</p>
+<p>Alternativa <strong>B</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nordeste0</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AL&quot;</span><span class="p">,</span><span class="s2">&quot;BA&quot;</span><span class="p">,</span><span class="s2">&quot;CE&quot;</span><span class="p">,</span><span class="s2">&quot;MA&quot;</span><span class="p">,</span><span class="s2">&quot;PB&quot;</span><span class="p">,</span><span class="s2">&quot;PE&quot;</span><span class="p">,</span><span class="s2">&quot;PI&quot;</span><span class="p">,</span><span class="s2">&quot;RN&quot;</span><span class="p">,</span><span class="s2">&quot;SE&quot;</span><span class="p">]</span>
+<span class="n">centro_oeste0</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GO&quot;</span><span class="p">,</span><span class="s2">&quot;MT&quot;</span><span class="p">,</span><span class="s2">&quot;MS&quot;</span><span class="p">,</span><span class="s2">&quot;DF&quot;</span><span class="p">]</span>
+<span class="n">norte1</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">norte0</span><span class="p">]</span>
+<span class="n">sudeste1</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sudeste0</span><span class="p">]</span>
+<span class="n">nordeste1</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">nordeste0</span><span class="p">]</span>
+<span class="n">centro_oeste1</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">centro_oeste0</span><span class="p">]</span>
+<span class="n">sul1</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sul0</span><span class="p">]</span>
+<span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Nordeste&quot;</span><span class="p">:</span> <span class="n">nordeste1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="s2">&quot;Sudeste&quot;</span><span class="p">:</span><span class="n">sudeste1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="s2">&quot;Centro-Oeste&quot;</span><span class="p">:</span><span class="n">centro_oeste1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+                   <span class="s2">&quot;Norte&quot;</span><span class="p">:</span> <span class="n">norte1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="s2">&quot;Sul&quot;</span><span class="p">:</span><span class="n">sul1</span><span class="o">.</span><span class="n">mean</span><span class="p">()},</span><span class="n">index</span><span class="o">=</span><span class="n">nordeste1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df3</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nordeste</th>
+      <th>Sudeste</th>
+      <th>Centro-Oeste</th>
+      <th>Norte</th>
+      <th>Sul</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Média da nota da prova de Ciências da Natureza</th>
+      <td>459.822169</td>
+      <td>487.889456</td>
+      <td>477.229090</td>
+      <td>454.433446</td>
+      <td>486.822070</td>
+    </tr>
+    <tr>
+      <th>Média da nota da prova de Ciências Humanas</th>
+      <td>486.437270</td>
+      <td>517.440376</td>
+      <td>505.731320</td>
+      <td>482.186277</td>
+      <td>522.094818</td>
+    </tr>
+    <tr>
+      <th>Média da nota da prova de Linguagens e Códigos</th>
+      <td>501.290674</td>
+      <td>529.593297</td>
+      <td>520.213301</td>
+      <td>498.047329</td>
+      <td>531.704797</td>
+    </tr>
+    <tr>
+      <th>Média da nota da prova de Matemática</th>
+      <td>504.269135</td>
+      <td>544.992793</td>
+      <td>524.339688</td>
+      <td>491.570353</td>
+      <td>545.590979</td>
+    </tr>
+    <tr>
+      <th>Média da nota da prova de redação</th>
+      <td>565.778561</td>
+      <td>598.633811</td>
+      <td>583.111094</td>
+      <td>542.626425</td>
+      <td>585.516619</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df3</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">df3</span><span class="o">.</span><span class="n">std</span><span class="p">()],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df4</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Média&#39;</span><span class="p">,</span> <span class="s1">&#39;Desvio padrão&#39;</span><span class="p">]</span>
+<span class="n">df4</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Desvio padrão&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Média</th>
+      <th>Desvio padrão</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Sudeste</th>
+      <td>535.709947</td>
+      <td>40.937678</td>
+    </tr>
+    <tr>
+      <th>Nordeste</th>
+      <td>503.519562</td>
+      <td>38.996729</td>
+    </tr>
+    <tr>
+      <th>Centro-Oeste</th>
+      <td>522.124899</td>
+      <td>38.769378</td>
+    </tr>
+    <tr>
+      <th>Sul</th>
+      <td>534.345857</td>
+      <td>35.918217</td>
+    </tr>
+    <tr>
+      <th>Norte</th>
+      <td>493.772766</td>
+      <td>31.982931</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

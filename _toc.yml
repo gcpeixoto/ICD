@@ -29,6 +29,10 @@
   - file: ipynb/11-estatistica-descritiva
   - file: ipynb/12-correlacao
   - file: ipynb/13-regressao
+- part: Parte 5  
+  numbered: false
+  chapters:
+  - file: ipynb/14-aprendizado-maquina
 - part: Questionários
   numbered: false
   chapters:
@@ -40,6 +44,7 @@
   - file: ipynb/Q31
   - file: ipynb/Q32
   - file: ipynb/Q41
+  - file: ipynb/Q42
 #- part: Temas de projeto
 #  numbered: false
 #  chapters:
