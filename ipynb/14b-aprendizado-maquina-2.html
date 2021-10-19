@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Aprendizado de máquina - II &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Questionário 21 (Q21)" href="Q21.html" />
+    <link rel="prev" title="Aprendizado de máquina - I" href="14-aprendizado-maquina.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-regressao.html">
+   Análise de regressão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 5
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-aprendizado-maquina.html">
+   Aprendizado de máquina - I
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Aprendizado de máquina - II
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q41.html">
+   Questionário 41 (Q41)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q42.html">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ipynb/14b-aprendizado-maquina-2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/14b-aprendizado-maquina-2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/14b-aprendizado-maquina-2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#breves-comentarios-sobre-aprendizagem">
+   Breves comentários sobre aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#treinamento-validacao-e-generalizacao">
+   Treinamento, validação e generalização
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estudo-de-caso-clusterizacao-de-dados-aleatorios">
+   Estudo de caso: clusterização de dados aleatórios
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-e-clusterizacao">
+     O que é clusterização?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#similaridade-e-distancia">
+     Similaridade e distância
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-algoritmo-k-means">
+     O algoritmo
+     <em>
+      k-means
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metricas-de-qualidade-para-clusterizacao">
+   Métricas de qualidade para clusterização
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coeficiente-de-silhueta">
+     Coeficiente de Silhueta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analise-de-silhueta">
+     Análise de silhueta
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="aprendizado-de-maquina-ii">
+<h1>Aprendizado de máquina - II<a class="headerlink" href="#aprendizado-de-maquina-ii" title="Permalink to this headline">¶</a></h1>
+<p>No capítulo anterior, aprendemos a resolver um problema de classificação, que recai na classe de aprendizado de máquina supervisionado. Neste capítulo, estudaremos o aprendizado de máquina não supervisionado resolvendo um problema de <em>clusterização</em>.</p>
+<p>Como já sabemos, no aprendizado não supervisionado, procuramos por “estruturas escondidas” em um banco de dados não rotulado. Enquanto no aprendizado supervisionado é possível medir erros entre os valores esperados e os previstos, no aprendizado não supervisionado os algoritmos devem apelar para as exclusivamente para as <em>features</em> do banco de dados e categorizá-las aplicando algum critério estatístico ou geométrico.</p>
+<section id="breves-comentarios-sobre-aprendizagem">
+<h2>Breves comentários sobre aprendizagem<a class="headerlink" href="#breves-comentarios-sobre-aprendizagem" title="Permalink to this headline">¶</a></h2>
+<p>A <em>aprendizagem</em> é um conceito que pode ser quantificado por meio de erros. Durante o treinamento de um algoritmo de <em>machine learning</em>, dois erros são estimados.</p>
+<p>O primeiro é o <em>erro de treinamento</em>, que mede a discrepância entre as amostras observadas e as amostras apenas do conjunto de treinamento. No problema de classificação por exemplo, o erro de treinamento <span class="math notranslate nohighlight">\(e_i = e(x_i,y_i)\)</span> para cada observação <span class="math notranslate nohighlight">\(x_i\)</span> e resposta <span class="math notranslate nohighlight">\(y_i\)</span> poderia ser calculado usando uma função indicadora que contaria todas as amostras corretamente calculadas. Ou seja,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e_i = e(x_i,y_i) =
+\begin{cases}
+1, \ \ \text{se} \ \ h(x_i) = y_i \\
+0, \ \ \text{caso contrário}
+\end{cases}\end{split}\]</div>
+<p>O erro de treinamento seria então definido por</p>
+<div class="math notranslate nohighlight">
+\[E_{tr} = \frac{ \sum_{i=1}^n e_i }{n},\]</div>
+<p>para <span class="math notranslate nohighlight">\(n\)</span> amostras do conjunto de treinamento.</p>
+<p>O segundo erro é o <em>erro de teste</em> ou <em>erro de generalização</em>, que é um erro médio calculado sobre os dados não vistos. Este erro é chamado de <span class="math notranslate nohighlight">\(E_gen\)</span>.</p>
+<p>Em geral, <span class="math notranslate nohighlight">\(E_{gen} \leq E_{tr}\)</span> e a <em>aprendizagem</em> é atingida quando <span class="math notranslate nohighlight">\(E_{gen}\)</span> é o menor possível. Para tanto, intuitivamente, ou <span class="math notranslate nohighlight">\(E_{tr}\)</span> deve tender a zero, ou <span class="math notranslate nohighlight">\(E_{gen}\)</span> deve ser aproximar de <span class="math notranslate nohighlight">\(E_{tr}\)</span>.</p>
+<p>Assim, a aprendizagem é o resultado de <span class="math notranslate nohighlight">\(E_{tr} \to 0\)</span>, ou <span class="math notranslate nohighlight">\(E_{gen} \approx E_{tr}\)</span>. Isto é, um excelente treinamento deve conduzir a um modelo de aprendizagem robusto.</p>
+<p>A aprendizagem é medida por meio de <em>curvas de aprendizagem</em>, que possuem aparência assintótica. Modelos com alto desempenho durante a etapa de treinamento que generalizam mal tendem a sofrer um <em>superajustamento</em> (<em>overfitting</em>). Modelos com baixo desempenho já durante a etapa de treinamento tendem a sofrer um <em>subajustamento</em> (<em>underfitting</em>). Ambos os comportamentos são percebidos nas curvas de aprendizagem. A correção de <em>overfitting</em> ou <em>underfitting</em> pode ser feita com várias técnicas. Uma delas é a <em>regularização</em>.</p>
+</section>
+<section id="treinamento-validacao-e-generalizacao">
+<h2>Treinamento, validação e generalização<a class="headerlink" href="#treinamento-validacao-e-generalizacao" title="Permalink to this headline">¶</a></h2>
+<p>Vale fazer um breve adendo sobre esses três conceitos:</p>
+<ul class="simple">
+<li><p><em>treinamento</em>: etapa em que se verifica o desempenho de um modelo a partir de uma classe de modelos.</p></li>
+<li><p><em>validação</em>: etapa em que se selecionam os melhores hiperparâmetros do modelo tendo por base estimativas do erro de generalização.</p></li>
+<li><p><em>generalização (ou teste)</em>: etapa exclusiva em que se avalia o desempenho final do modelo sobre um conjunto de dados que nunca deve ser usado nas etapas de treinamento ou validação.</p></li>
+</ul>
+<p>O ajustamento dos melhores parâmetros duranta a etapa de validação pode ser realizado por várias técnicas. Uma das mais conhecidas é a <em>validação cruzada</em> (<em>cross validation</em>).</p>
+</section>
+<section id="estudo-de-caso-clusterizacao-de-dados-aleatorios">
+<h2>Estudo de caso: clusterização de dados aleatórios<a class="headerlink" href="#estudo-de-caso-clusterizacao-de-dados-aleatorios" title="Permalink to this headline">¶</a></h2>
+<p>Estudaremos um problema de clusterização como exemplo de aplicação do aprendizado de máquina não supervisionado. Relembre que nesta classe de aprendizado, não há como mensurar erros no cálculo de desempenho do modelo, visto que os dados fornecidos não são rotulados. Então, a única maneira de explicar os dados dá-se por critérios estatísticos, geométricos ou de similaridade.</p>
+<section id="o-que-e-clusterizacao">
+<h3>O que é clusterização?<a class="headerlink" href="#o-que-e-clusterizacao" title="Permalink to this headline">¶</a></h3>
+<p>A clusterização é baseada no particionamento dos dados não rotulados em subconjuntos disjuntos chamados <em>clusters</em>, de forma que os elementos de um cluster sejam altamente similares (alta <em>similaridade intra-classe</em>) e os elementos de clusters distintos possuam baixa similaridade com os os demais clusters (baixa <em>similaridade inter-classe</em> ).</p>
+<p>Devido à arbitrariedade com que os dados podem ser agrupados em <em>clusters</em>, a clusterização tende a ser subjetiva e a qualidade dependente da aplicação e da avaliação do analista.</p>
+</section>
+<section id="similaridade-e-distancia">
+<h3>Similaridade e distância<a class="headerlink" href="#similaridade-e-distancia" title="Permalink to this headline">¶</a></h3>
+<p>Estabelecer “similaridade” entre instâncias pode ser um pouco difícil. Em problemas de clusterização, uma forma de aproximar essa ideia é usar distâncias. Uma fórmula generalizada é a <em>distância de Minkowski</em>, dada por</p>
+<div class="math notranslate nohighlight">
+\[d({\bf x},{\bf y}) = \left( \sum_{i=1}^d | x_i - y_i |^p \right)^{1/p},\]</div>
+<p>com <span class="math notranslate nohighlight">\({\bf x}\)</span> e <span class="math notranslate nohighlight">\({\bf y}\)</span> vetores do espaço <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> e <span class="math notranslate nohighlight">\(p \in \mathbb{R}\)</span> é um parâmetro. Dependendo do valor de <span class="math notranslate nohighlight">\(p\)</span>, a fórmula se reduz a outras distâncias conhecidas:</p>
+<ul class="simple">
+<li><p>Se <span class="math notranslate nohighlight">\(p = 2\)</span>, temos a <em>distância Euclidiana</em>;</p></li>
+<li><p>Se <span class="math notranslate nohighlight">\(p = 1\)</span>, temos a <em>distância de Manhattan</em> (ou <em>distância do taxista</em>);</p></li>
+<li><p>Se <span class="math notranslate nohighlight">\(p = \infty\)</span>, temos a <em>distância de Chebyshev</em> (ou <em>distância do máximo</em>), definida por <span class="math notranslate nohighlight">\(\max \{ | x_i - y_i | \}\)</span>, isto é, a componente com o maior módulo.</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Para saber mais sobre outras definições de distância, veja a documentação da função
+<code class="docutils literal notranslate"><span class="pre">scipy.spatial.distance</span></code> do módulo Scipy.</p>
+</div>
+</section>
+<section id="o-algoritmo-k-means">
+<h3>O algoritmo <em>k-means</em><a class="headerlink" href="#o-algoritmo-k-means" title="Permalink to this headline">¶</a></h3>
+<p><em>k-means</em> é um algoritmo classificado como de <em>partição rígida</em> que atribui cada elemento no espaço de <em>features</em> a um único cluster. Os passos do algoritmo são:</p>
+<ol class="simple">
+<li><p>Inicialize o valor <em>k</em> de clusters desejados;</p></li>
+<li><p>Inicialize os centroides dos <em>k clusters</em>;</p></li>
+<li><p>Atribua cada uma das <em>n</em> amostras de dados ao cluster cujo centroide está mais próximo da amostra;</p></li>
+<li><p>Redefina os <em>k</em> centroides iterativamente assumindo que estejam corretos;</p></li>
+<li><p>Se nenhuma amostra migrar de um cluster para outro na última iteração, pare. Caso contrário, retorne ao passo 3.</p></li>
+</ol>
+<p>Vejamos um exemplo sobre um conjunto de dados aleatórios.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cria dados aleatórios</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="n">X1</span> <span class="o">=</span> <span class="mf">1.25</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">X2</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">X3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mf">1.2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">X1</span><span class="p">,</span><span class="n">X2</span><span class="p">,</span><span class="n">X3</span><span class="p">])</span>
+
+<span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(120, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vamos criar rótulos para os 3 grupos e mostrar a clusterização segundo o que nós pré-determinamos e o que, de fato, é passado como entrada para o algoritmo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cria labels</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="mi">3</span><span class="p">)])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X1</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X1</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X2</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X2</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X3</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X3</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dados rotulados&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dados &quot;vistos&quot; pelo algoritmo&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/14b-aprendizado-maquina-2_11_0.png" src="../_images/14b-aprendizado-maquina-2_11_0.png" />
+</div>
+</div>
+<p>Usa <em>k-means</em> com inicialização de 3 clusters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">cluster</span>
+
+<span class="c1"># no. de clusters</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># ajusta parâmetros de aprendizagem</span>
+<span class="n">cfit</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">KMeans</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="s1">&#39;random&#39;</span><span class="p">,</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+<span class="n">cfit</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KMeans(init=&#39;random&#39;, n_clusters=3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># labels do ajuste</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cfit</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 1 2 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 1
+ 2 2 2 2 2 2 2 2 2]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plota comparativo de labels (original x ajuste)</span>
+<span class="n">cl</span> <span class="o">=</span> <span class="n">cfit</span><span class="o">.</span><span class="n">labels_</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X1</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X1</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X2</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X2</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X3</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X3</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rótulos originais x rótulos do ajuste&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/14b-aprendizado-maquina-2_15_0.png" src="../_images/14b-aprendizado-maquina-2_15_0.png" />
+</div>
+</div>
+<p>Criando pontos novos no espaço que cobre os dados originais.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gera &quot;grade&quot; 2D de pontos </span>
+<span class="c1"># em [-5,15] x [-5,15]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">XX</span><span class="p">,</span><span class="n">YY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">sz</span> <span class="o">=</span> <span class="n">XX</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="c1"># concatena</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">XX</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">YY</span><span class="o">.</span><span class="n">flatten</span><span class="p">()]</span>
+
+<span class="c1"># predição</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">cfit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Verificando partição do espaço determinado pelo algoritmo x dados originais.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># partições do espaço</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sz</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span> 
+           <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span> 
+           <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Partições do espaço&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/14b-aprendizado-maquina-2_19_0.png" src="../_images/14b-aprendizado-maquina-2_19_0.png" />
+</div>
+</div>
+<p>Então, comparamos o resultado da clusterização em comparação com os dados originais.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># overlay</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sz</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span> 
+           <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span> 
+           <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># original</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rótulos originais&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">c</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># overlay</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sz</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span> 
+           <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span> 
+           <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># clusterização</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rótulos da clusterização&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">cl</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/14b-aprendizado-maquina-2_21_0.png" src="../_images/14b-aprendizado-maquina-2_21_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="metricas-de-qualidade-para-clusterizacao">
+<h2>Métricas de qualidade para clusterização<a class="headerlink" href="#metricas-de-qualidade-para-clusterizacao" title="Permalink to this headline">¶</a></h2>
+<p>Vejamos brevemente uma métrica conhecida para comparar resultados de clusterização.</p>
+<section id="coeficiente-de-silhueta">
+<h3>Coeficiente de Silhueta<a class="headerlink" href="#coeficiente-de-silhueta" title="Permalink to this headline">¶</a></h3>
+<p>O <em>coeficiente de silhueta</em> <span class="math notranslate nohighlight">\(s\)</span> é um valor atribuído a cada ponto de um cluster para medir a “silhueta” de seu cluster. Em linhas gerais, este coeficiente é usado para definir se houve uma “boa” clusterização do dataset. Matematicamente,</p>
+<div class="math notranslate nohighlight">
+\[s(i) = \frac{b(i) - a(i)}{\max \{a(i),b(i)\}},\]</div>
+<p>onde</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a(i)\)</span> é a distância média intra-cluster da amostra <span class="math notranslate nohighlight">\(i\)</span>, isto é, a distância média da amostra <span class="math notranslate nohighlight">\(i\)</span> a todos as suas “irmãs”, percententes ao seu mesmo <em>cluster</em>. Este valor mede a dissimilaridade de <span class="math notranslate nohighlight">\(i\)</span> em relação às suas amostras “irmãs”.</p></li>
+<li><p><span class="math notranslate nohighlight">\(b(i)\)</span> é a distância média inter-cluster da amostra <span class="math notranslate nohighlight">\(i\)</span>, considerando o cluster <em>A</em> ao qual ela pertence e o <em>cluster</em> <em>B</em> mais próximo de <em>A</em>. Este valor mede a dissimilaridade de <span class="math notranslate nohighlight">\(i\)</span> em relação a todas as amostras em <em>B</em>.</p></li>
+</ul>
+<p>O valor de <span class="math notranslate nohighlight">\(s\)</span> varia no intervalo [-1,1] e a interpretação é a seguinte. Quando <span class="math notranslate nohighlight">\(s=-1\)</span>, a clusterização é considerada incorreta; quando <span class="math notranslate nohighlight">\(s=1\)</span>, a clusterização está muito densa. Quando <span class="math notranslate nohighlight">\(s \approx 0\)</span>, há <em>clusters</em> que sobrepõem.</p>
+<p>Vamos calcular <span class="math notranslate nohighlight">\(s\)</span> para o nosso exemplo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+
+<span class="n">ss</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">silhouette_samples</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">cl</span><span class="p">,</span><span class="n">metric</span><span class="o">=</span><span class="s1">&#39;euclidean&#39;</span><span class="p">)</span>
+
+<span class="n">ssm</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">cl</span><span class="p">,</span><span class="n">metric</span><span class="o">=</span><span class="s1">&#39;euclidean&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Coeficiente de silhueta por amostra&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ss</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ss</span><span class="p">)),</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">ss</span><span class="p">),</span><span class="n">ssm</span><span class="p">),</span><span class="s1">&#39;:&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;s médio&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/14b-aprendizado-maquina-2_26_0.png" src="../_images/14b-aprendizado-maquina-2_26_0.png" />
+</div>
+</div>
+</section>
+<section id="analise-de-silhueta">
+<h3>Análise de silhueta<a class="headerlink" href="#analise-de-silhueta" title="Permalink to this headline">¶</a></h3>
+<p>O plot de silhueta permite que busquemos o número adequado de clusters a partir de uma análise gráfica dos valores de <span class="math notranslate nohighlight">\(s\)</span>. Em outras palavras, a análise de silhueta é usada para escolher um valor ótimo para o número de clusters a serem determinados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.cm</span> <span class="k">as</span> <span class="nn">cm</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">])</span>
+
+
+<span class="n">y_lower</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">ssi</span> <span class="o">=</span> <span class="n">ss</span><span class="p">[</span><span class="n">cl</span> <span class="o">==</span> <span class="n">i</span><span class="p">]</span> <span class="c1"># i-th cluster s</span>
+    <span class="n">ssi</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">sizei</span> <span class="o">=</span> <span class="n">ssi</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">y_upper</span> <span class="o">=</span> <span class="n">y_lower</span> <span class="o">+</span> <span class="n">sizei</span>
+    
+    <span class="n">color</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nipy_spectral</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">fill_betweenx</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y_lower</span><span class="p">,</span> <span class="n">y_upper</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span>
+                      <span class="n">ssi</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+                      <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">y_lower</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sizei</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">y_lower</span> <span class="o">=</span> <span class="n">y_upper</span> <span class="o">+</span> <span class="mi">10</span>
+    
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Plot de silhueta: </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> clusters&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Rótulos dos clusters&quot;</span><span class="p">)</span>    
+    
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ssm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+    
+<span class="n">colors</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">nipy_spectral</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">/</span><span class="n">k</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>    
+<span class="n">centroides</span> <span class="o">=</span> <span class="n">cfit</span><span class="o">.</span><span class="n">cluster_centers_</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroides</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">centroides</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">centroides</span><span class="p">):</span>
+    
+    <span class="n">ax2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;$%d$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Clusters&quot;</span><span class="p">)</span> 
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Feature #1&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Feature #2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">((</span><span class="s2">&quot;Análise de silhueta por k-means: </span><span class="si">%d</span><span class="s2"> clusters&quot;</span> <span class="o">%</span> <span class="n">k</span><span class="p">),</span>
+                 <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/14b-aprendizado-maquina-2_28_0.png" src="../_images/14b-aprendizado-maquina-2_28_0.png" />
+</div>
+</div>
+<p>A análise de silhueta mostra que 3 clusters é um número adequado porque em todos eles há amostras com valor de <span class="math notranslate nohighlight">\(s\)</span> acima da média. A espessura das silhuetas também ajuda a ter uma ideia do “tamanho” dos <em>clusters</em>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ipynb"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="14-aprendizado-maquina.html" title="previous page">Aprendizado de máquina - I</a>
+    <a class='right-next' id="next-link" href="Q21.html" title="next page">Questionário 21 (Q21)</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
