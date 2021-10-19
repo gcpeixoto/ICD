@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Aprendizado de máquina - Parte 1
+# # Aprendizado de máquina - I
 
 # _Aprendizado de máquina_ (_machine learning_, ML) é um subcampo da inteligência artificial que tem por objetivo permitir que o computador _aprenda com os dados_ sem ser explicitamente programado. Em linhas gerais, no _machine learning_ se constrói algoritmos que leem dados, aprendem com a "experiência" deles e inferem coisas a partir do conhecimento adquirido. Esta área tem sido de grande valor para muitos setores por ser capaz de transformar dados aparentemente desconexos em informações cruciais para a tomada de decisões pelo reconhecimento de padrões significativos.
 # 

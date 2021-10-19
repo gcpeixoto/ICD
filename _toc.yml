@@ -33,6 +33,7 @@
   numbered: false
   chapters:
   - file: ipynb/14-aprendizado-maquina
+  - file: ipynb/14b-aprendizado-maquina-2
 - part: Questionários
   numbered: false
   chapters:

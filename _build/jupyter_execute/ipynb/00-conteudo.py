@@ -46,6 +46,7 @@
 # #### Parte 5
 # 
 # - [Aprendizado de máquina - I](14-aprendizado-maquina.ipynb)
+# - [Aprendizado de máquina - II](14b-aprendizado-maquina-2.ipynb)
 # 
 # ### Unidade 4
 # 
@@ -215,6 +216,7 @@
 # :caption: Parte 5
 # 
 # 14-aprendizado-maquina
+# 14b-aprendizado-maquina-2
 # ```
 # 
 # 
