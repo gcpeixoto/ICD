@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Aprendizado de máquina - Parte 1
+# # Aprendizado de máquina - I
 
 # - Subcampo da IA que tem por objetivo permitir que o computador _aprenda com os dados_ sem ser explicitamente programado. 
 # - Em linhas gerais, no _machine learning_ se constrói algoritmos que leem dados, aprendem com a "experiência" deles e inferem coisas a partir do conhecimento adquirido. 
