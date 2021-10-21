@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Otimização &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Questionário 21 (Q21)" href="Q21.html" />
+    <link rel="prev" title="Aprendizado de máquina - II" href="14b-aprendizado-maquina-2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-regressao.html">
+   Análise de regressão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 5
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-aprendizado-maquina.html">
+   Aprendizado de máquina - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14b-aprendizado-maquina-2.html">
+   Aprendizado de máquina - II
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Otimização
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q41.html">
+   Questionário 41 (Q41)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q42.html">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ipynb/15-otimizacao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/15-otimizacao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/15-otimizacao.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classificacao-de-problemas-de-otimizacao">
+     Classificação de problemas de otimização
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problemas-convexos">
+     Problemas convexos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pontos-de-sela">
+     Pontos de sela
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otimizacao-univariada">
+   Otimização univariada
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problema-resolvido">
+     Problema resolvido
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resolucao">
+     Resolução
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conclusao">
+     Conclusão
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estudo-parametrico-de-geometria">
+   Estudo paramétrico de geometria
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="otimizacao">
+<h1>Otimização<a class="headerlink" href="#otimizacao" title="Permalink to this headline">¶</a></h1>
+<section id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
+<p>Problemas de otimização são encontrados em diversas situações da Engenharia, em particular na Engenharia de Produção. Em uma linha de produção, por exemplo, a otimização de custos com logística, recursos humanos, matéria-prima são exemplos de onde podemos empregar métodos computacionais para obter soluções <em>ótimas</em>.</p>
+<p>Problemas de otimização são comumente tratados como <em>problemas de minimização</em>, onde se busca o <em>mínimo global</em> de uma <em>função objetivo</em> (FO) escalar <span class="math notranslate nohighlight">\(f(x)\)</span>, visto que maximizar <span class="math notranslate nohighlight">\(f(x)\)</span> é equivalente a minimizar <span class="math notranslate nohighlight">\(-f(x)\)</span>.</p>
+<p>Entretanto, esses problemas são acompanhados de <em>restrições</em>, que podem ser representadas por uma igualdade ou por uma desigualdade. Quando uma restrição é escrita na forma <span class="math notranslate nohighlight">\(g(x) = 0\)</span>, dizemos que <span class="math notranslate nohighlight">\(g(x)\)</span> é uma <em>restrição de igualdade</em>; quando escrita na forma <span class="math notranslate nohighlight">\(h(x) \leq 0\)</span>, dizemos que <span class="math notranslate nohighlight">\(h(x)\)</span> é uma <em>restrição de desigualdade</em>.</p>
+<section id="classificacao-de-problemas-de-otimizacao">
+<h3>Classificação de problemas de otimização<a class="headerlink" href="#classificacao-de-problemas-de-otimizacao" title="Permalink to this headline">¶</a></h3>
+<p>Problemas de otimização (PO) são classificados com base nas propriedades das funções <span class="math notranslate nohighlight">\(f(x)\)</span>, <span class="math notranslate nohighlight">\(g(x)\)</span> e <span class="math notranslate nohighlight">\(h(x)\)</span>. Em linhas gerais, um PO pode ser:</p>
+<ul class="simple">
+<li><p><em>univariado</em> (ou <em>unidimensional</em>), se <span class="math notranslate nohighlight">\(x\)</span> é escalar, i.e. <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>;</p></li>
+<li><p><em>multivariado</em> (ou <em>multidimensional</em>), se <span class="math notranslate nohighlight">\(x\)</span> é um vetor, i.e. <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>.</p></li>
+<li><p><em>linear</em>: se a FO e as restrições são funções lineares. Neste caso, por razões históricas, diz-se que o problema é de <em>programação linear</em>.</p></li>
+<li><p><em>não-linear</em>: se a FO e as restrições são funções não-lineares. Neste caso, diz-se que o problema é de <em>programação não-linear</em>.</p></li>
+</ul>
+<p>Com respeito às restrições, um PO pode ainda ser:</p>
+<ul class="simple">
+<li><p><em>irrestrito</em>: quando não se assumem limites para os valores de <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p><em>restrito</em>: quando limites para os valores de <span class="math notranslate nohighlight">\(x\)</span> são impostos.</p></li>
+</ul>
+<p>Aqui trataremos apenas de casos em que <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>.</p>
+</section>
+<section id="problemas-convexos">
+<h3>Problemas convexos<a class="headerlink" href="#problemas-convexos" title="Permalink to this headline">¶</a></h3>
+<p>Sabe-se que problemas não-lineares são muito mais difíceis de resolver do que problemas lineares porque eles podem admitir uma ampla variedade de comportamentos. Um PO não-linear pode ter tanto <em>mínimos locais</em> quanto <em>mínimos globais</em>. Logo, encontrar o <em>mínimo global</em> de uma função <span class="math notranslate nohighlight">\(f(x)\)</span> não-linear exige técnicas aperfeiçoadas.</p>
+<p>Neste sentido, uma subclasse de problemas não-lineares que pode ser resolvida eficientemente são os chamados <em>convexos</em>. Em problemas convexos, a função <span class="math notranslate nohighlight">\(f(x)\)</span> é <em>convexa</em>. Mas o que é uma <em>função convexa</em>?</p>
+<p>Uma função convexa definida em um intervalo <span class="math notranslate nohighlight">\([a,b]\)</span> é aquela em que todos os seus valores estão abaixo da reta secante que passa pelos pontos <span class="math notranslate nohighlight">\((a,f(a))\)</span> e <span class="math notranslate nohighlight">\((b,f(b)\)</span>. Isto, por sua vez, garante que ela contenha <em>somente</em> um mínimo global.</p>
+<p>Importaremos os seguintes módulos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">optimize</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
+<span class="n">sy</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exemplo</strong>: a função <span class="math notranslate nohighlight">\(f(x) = 3x^2 - 0.36x - 11.2\)</span> é convexa em <span class="math notranslate nohighlight">\([-2,3]\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># domínio</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> 
+
+<span class="c1"># função e valores nos extremos</span>
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">10.36</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mf">11.2</span> 
+<span class="n">fa</span><span class="p">,</span><span class="n">fb</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> 
+
+<span class="c1"># reta secante</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">fa</span> <span class="o">+</span> <span class="p">(</span><span class="n">fb</span> <span class="o">-</span> <span class="n">fa</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># ponto de mínimo: -b/(2a)</span>
+<span class="n">xmin</span> <span class="o">=</span> <span class="mf">10.36</span><span class="o">/</span><span class="mi">10</span> 
+
+<span class="c1"># plotagem de funções</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffa500&#39;</span><span class="p">)</span>
+
+<span class="c1"># pontos da secante</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffa500&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffa500&#39;</span><span class="p">)</span>
+
+<span class="c1"># ponto de mínimo</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">xmin</span><span class="p">),</span><span class="s1">&#39;*r&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Exemplo de função convexa&#39;</span><span class="p">);</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_7_0.png" src="../_images/15-otimizacao_7_0.png" />
+</div>
+</div>
+<p><strong>Exemplo</strong>: a função <span class="math notranslate nohighlight">\(p(x) = 10x^2\textrm{sen}(6x) - 10.36\exp(x/8) - 11.2\)</span> não é convexa em <span class="math notranslate nohighlight">\([-2,3]\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># função</span>
+<span class="n">p</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mf">10.36</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">8</span><span class="p">)</span> <span class="o">-</span> <span class="mf">11.2</span> 
+
+<span class="c1"># extremos</span>
+<span class="n">pa</span><span class="p">,</span><span class="n">pb</span> <span class="o">=</span> <span class="n">p</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">p</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># secante</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">pa</span> <span class="o">+</span> <span class="p">(</span><span class="n">pb</span> <span class="o">-</span> <span class="n">pa</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> 
+
+<span class="c1"># plotagem de funções</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">p</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffa500&#39;</span><span class="p">)</span>
+
+<span class="c1"># pontos da secante</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">p</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffa500&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">p</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffa500&#39;</span><span class="p">)</span>
+
+<span class="c1"># mínimos locais</span>
+<span class="n">xloc</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.33868618</span><span class="p">,</span><span class="mf">0.88811853</span><span class="p">,</span><span class="mf">1.87451904</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">xl</span> <span class="ow">in</span> <span class="n">xloc</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xl</span><span class="p">,</span><span class="n">p</span><span class="p">(</span><span class="n">xl</span><span class="p">),</span><span class="s1">&#39;or&#39;</span><span class="p">);</span>
+
+<span class="c1"># mínimo global</span>
+<span class="n">xmin2</span> <span class="o">=</span> <span class="mf">2.90547127</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xmin2</span><span class="p">,</span><span class="n">p</span><span class="p">(</span><span class="n">xmin2</span><span class="p">),</span><span class="s1">&#39;*r&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Exemplo de função não convexa&#39;</span><span class="p">);</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_9_0.png" src="../_images/15-otimizacao_9_0.png" />
+</div>
+</div>
+<p>Como vemos acima, a função <span class="math notranslate nohighlight">\(p(x)\)</span> admite 3 mínimos locais e um mínimo global. Pense um pouco sobre que estratégia computacional você utilizaria para encontrar os mínimos locais. Mais adiante mostraremos como localizar o mínimo global para funções univariadas contínuas (quando possível).</p>
+</section>
+<section id="pontos-de-sela">
+<h3>Pontos de sela<a class="headerlink" href="#pontos-de-sela" title="Permalink to this headline">¶</a></h3>
+<p>Como vimos acima, a convexidade de uma função é uma propriedade muito importante para que um mínimo global seja localizado. Como sabemos do Cálculo, pontos de máximo ou mínimo identificam-se como <em>pontos críticos</em> de uma função nos quais a primeira derivada da função se anula.</p>
+<p>Casos particulares onde a derivada de uma FO anula-se mas o ponto não pode ser definido como de mínimo ou máximo podem ocorrer. Tais situações implicam a existência dos chamados <em>pontos de sela</em>. Uma função com um único ponto de sela, por exemplo, não admitirá mínimo global nem mínimo local. Para testarmos se um ponto crítico é um ponto de sela, devemos verificar o sinal da segunda derivada da função. Uma das seguintes situações deve ser obtida em um ponto crítico <span class="math notranslate nohighlight">\(x^*\)</span>:</p>
+<ul class="simple">
+<li><p><em>ponto de mínimo:</em> <span class="math notranslate nohighlight">\(f''(x^*) &gt; 0\)</span></p></li>
+<li><p><em>ponto de máximo:</em> <span class="math notranslate nohighlight">\(f''(x^*) &lt; 0\)</span></p></li>
+<li><p><em>ponto de sela:</em> <span class="math notranslate nohighlight">\(f''(x^*) = 0\)</span></p></li>
+</ul>
+<p><strong>Exemplo:</strong> qualquer função quadrática admite ou um ponto de mínimo ou de máximo. A função <span class="math notranslate nohighlight">\(f(x) = x^3\)</span> possui um ponto de sela em <span class="math notranslate nohighlight">\(x^* = 0\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;r*&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;mínimo global&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;r*&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;máximo global&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;r*&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ponto de sela&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_13_0.png" src="../_images/15-otimizacao_13_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="otimizacao-univariada">
+<h2>Otimização univariada<a class="headerlink" href="#otimizacao-univariada" title="Permalink to this headline">¶</a></h2>
+<p>Como dissemos anteriormente, a otimização univariada visa resolver um problema de minimização tomando uma FO que depende apenas de uma variável. Matematicamente, podemos descrever este problema da seguinte forma:</p>
+<div class="math notranslate nohighlight">
+\[\text{Encontre } x^{*} = \min f(x), \, \text{sujeito a} \, g(x) = 0, h(x) \leq 0.\]</div>
+<p>Em geral, <span class="math notranslate nohighlight">\(x\)</span> é uma <em>variável de decisão</em>, isto é, uma quantidade que pode ser ajustada livremente (ex. comprimentos, áreas, ângulos etc.).</p>
+<p>As técnicas utilizadas para a resolução de um problema desse tipo são baseadas em métodos analíticos (busca pelos zeros das derivadas) ou em métodos computacionais (determinação de raízes por processos iterativos). Métodos chamados de <em>root finding</em> são estudados em um curso introdutório de Métodos Numéricos.</p>
+<p>Para dar exemplos com problemas aplicados de otimização univariada, usaremos a abordagem analítica por meio de computação simbólica (módulo <code class="docutils literal notranslate"><span class="pre">sympy</span></code>) e, posteriormente, veremos os métodos <code class="docutils literal notranslate"><span class="pre">minimize_scalar</span></code> e <code class="docutils literal notranslate"><span class="pre">fminbound</span></code> pertencentes ao submódulo <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code>.</p>
+<section id="problema-resolvido">
+<h3>Problema resolvido<a class="headerlink" href="#problema-resolvido" title="Permalink to this headline">¶</a></h3>
+<p>Consideremos o seguinte problema: <em>maximizar a área do retângulo inscrito em uma elipse.</em></p>
+</section>
+<section id="resolucao">
+<h3>Resolução<a class="headerlink" href="#resolucao" title="Permalink to this headline">¶</a></h3>
+<p>Em primeiro lugar, escreveremos este problema em linguagem matemática. Sabemos que a área de um retângulo com vértice esquerdo inferior na origem da elipse e com vértice direito superior no ponto <span class="math notranslate nohighlight">\((x,y)\)</span> da elipse que está no primeiro quadrante é dada por <span class="math notranslate nohighlight">\(A_r = xy\)</span>. Logo, a área do retângulo inscrito na elipse será <span class="math notranslate nohighlight">\(A = 4xy\)</span>.</p>
+<p>A área <span class="math notranslate nohighlight">\(A\)</span> pode ser escrita em termos de <span class="math notranslate nohighlight">\(y\)</span>. Uma vez que a equação da elipse (centrada na origem) é dada por</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1,\]</div>
+<p>podemos resolver a equação da elipse para <span class="math notranslate nohighlight">\(x\)</span> (ou <span class="math notranslate nohighlight">\(y\)</span>) e substituir esta solução na expressão da área para ter uma função <span class="math notranslate nohighlight">\(A(x)\)</span> (ou <span class="math notranslate nohighlight">\(A(y)\)</span>). Se escolhermos <span class="math notranslate nohighlight">\(x\)</span>, o problema de otimização pode ser escrito como:</p>
+<div class="math notranslate nohighlight">
+\[\text{Encontre } x^{*} = \min \,( -A(x) ), \, \text{sujeito a} \, x &gt; 0.\]</div>
+<p>Notemos que maximizar <span class="math notranslate nohighlight">\(A(x)\)</span> equivale a minimizar <span class="math notranslate nohighlight">\(-A(x)\)</span>.</p>
+<p>Na busca do ponto de mínimo <span class="math notranslate nohighlight">\(x^{*}\)</span>, usaremos computação simbólica.</p>
+<p>Primeiramente, criamos variáveis simbólicas que representem as variáveis de interesse do problema e a expressão da área total.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cria variáveis simbólicas</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x,y,a,b&#39;</span><span class="p">)</span> 
+
+<span class="c1"># área do retângulo no 1o. quadrante é xy</span>
+<span class="c1"># logo, área total é 4xy</span>
+<span class="n">A</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+<span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_19_0.png" src="../_images/15-otimizacao_19_0.png" />
+</div>
+</div>
+<p>Em seguida, resolvemos a equação da elipse para a variável <span class="math notranslate nohighlight">\(y\)</span> utilizando a função <code class="docutils literal notranslate"><span class="pre">sympy.solve</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolve equação da elipse para y</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">sol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_21_0.png" src="../_images/15-otimizacao_21_0.png" />
+</div>
+</div>
+<p>Duas soluções são possíveis para <span class="math notranslate nohighlight">\(y\)</span>. Porém, como o nosso ponto de referência sobre a elipse está no primeiro quadrante, tomamos a expressão para <span class="math notranslate nohighlight">\(y &gt; 0\)</span> e a substituímos na expressão da área de forma a obter uma expressão univariada <span class="math notranslate nohighlight">\(A(x)\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># substitui expressão de y positivo em A para ter -A(x)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">sol</span><span class="p">[</span><span class="mi">1</span><span class="p">]})</span>
+<span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_23_0.png" src="../_images/15-otimizacao_23_0.png" />
+</div>
+</div>
+<p>Localizaremos o ponto crítico da função a partir da derivada <span class="math notranslate nohighlight">\(A'(x)\)</span>. Derivando <span class="math notranslate nohighlight">\(A\)</span> em relação a <span class="math notranslate nohighlight">\(x\)</span>, obtemos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># deriva -A(x) com a,b constantes</span>
+<span class="n">dAdx</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">dAdx</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_25_0.png" src="../_images/15-otimizacao_25_0.png" />
+</div>
+</div>
+<p>Em seguida, buscamos <span class="math notranslate nohighlight">\(x^{*}\)</span> tal que <span class="math notranslate nohighlight">\(A'(x^{*}) = \frac{dA}{dx}(x^{*}) = 0\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolve A&#39;(x*) = 0</span>
+<span class="n">sol_x</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">dAdx</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">sol_x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_27_0.png" src="../_images/15-otimizacao_27_0.png" />
+</div>
+</div>
+<p>Duas soluções, são possíveis, porém, podemos verificar qual ponto de crítico, de fato, é o que minimizará <span class="math notranslate nohighlight">\(-A(x)\)</span> através da análise da concavidade. Então, calculamos <span class="math notranslate nohighlight">\(A''(x)\)</span>, para cada ponto crítico.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># testa A&#39;&#39;(x) para os dois pontos</span>
+<span class="n">dAdx2</span> <span class="o">=</span> <span class="n">dAdx</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">dAdx2</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">sol_x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">simplify</span><span class="p">(),</span><span class="n">dAdx2</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">sol_x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_29_0.png" src="../_images/15-otimizacao_29_0.png" />
+</div>
+</div>
+<p>Uma vez que a segunda solução verifica a concavidade positiva, temos que o ponto crítico <span class="math notranslate nohighlight">\(x^{*}\)</span> é:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># concavidade para cima =&gt; ponto de mínimo</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">sol_x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">xs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_31_0.png" src="../_images/15-otimizacao_31_0.png" />
+</div>
+</div>
+<p>Usando este valor na equação da elipse, obtemos a ordenada correspondente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolve para y &gt; 0</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">sy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">xs</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ys</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_33_0.png" src="../_images/15-otimizacao_33_0.png" />
+</div>
+</div>
+<p>Por fim, substituindo <span class="math notranslate nohighlight">\(x^{*}\)</span> na expressão da área, temos que <span class="math notranslate nohighlight">\(A_{max}\)</span> é:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># área máxima</span>
+<span class="n">A_max</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">xs</span><span class="p">)</span>
+<span class="n">A_max</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_35_0.png" src="../_images/15-otimizacao_35_0.png" />
+</div>
+</div>
+<p>ou, de forma, simplificada,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># simplificando</span>
+<span class="n">A_max</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_37_0.png" src="../_images/15-otimizacao_37_0.png" />
+</div>
+</div>
+</section>
+<section id="conclusao">
+<h3>Conclusão<a class="headerlink" href="#conclusao" title="Permalink to this headline">¶</a></h3>
+<p>A área do retângulo inscrito na elipse será máxima quando <span class="math notranslate nohighlight">\(x = \frac{\sqrt{2}}{2}a\)</span> e <span class="math notranslate nohighlight">\(y = \frac{\sqrt{2}}{2}b\)</span>. Portanto, <span class="math notranslate nohighlight">\(A_{max} = 2ab\)</span>, para comprimentos <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> de semi-eixo maior e menor.</p>
+</section>
+</section>
+<section id="estudo-parametrico-de-geometria">
+<h2>Estudo paramétrico de geometria<a class="headerlink" href="#estudo-parametrico-de-geometria" title="Permalink to this headline">¶</a></h2>
+<p>No gráfico abaixo, plotamos a variação das áreas de retângulos inscritos em uma elipse arbitrária com semi-eixos <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> em função do comprimento <span class="math notranslate nohighlight">\(x\)</span> da meia-base do retângulo até o limite da meia-base do retângulo de área máxima. Adicionalmente, plotamos a variação do comprimento da diagonal do retângulo. A constante <span class="math notranslate nohighlight">\(A_{elip}\)</span> é a área da elipse.</p>
+<p>Você pode alterar os parâmetros de construção de elipse, o número de valores para <span class="math notranslate nohighlight">\(x\)</span> e realizar uma nova análise dos parâmetros.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># semi-eixos da elipse</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span><span class="mi">2</span>
+
+<span class="c1"># no. de retângulos inscritos</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="mi">40</span> 
+
+<span class="c1"># base variável do retângulo</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="n">nx</span><span class="p">)</span>
+
+<span class="c1"># área da elipse</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
+
+<span class="c1"># áreas dos retângulos</span>
+<span class="n">R</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">H</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">X</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>        
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="c1"># diagonal do retângulo    </span>
+    <span class="n">R</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">H</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+    
+<span class="c1"># plotagem   </span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="s1">&#39;sb&#39;</span><span class="p">,</span><span class="n">mec</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$A_</span><span class="si">{ret}</span><span class="s1">(x)$&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">),</span><span class="s1">&#39;--r&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$A_</span><span class="si">{max}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">e</span><span class="p">),</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$A_</span><span class="si">{elip}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1"># labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$ [compr. base ret. inscrito]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$A$ [áreas]&#39;</span><span class="p">);</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">H</span><span class="p">,</span><span class="s1">&#39;og&#39;</span><span class="p">,</span><span class="n">mec</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$h_</span><span class="si">{ret}</span><span class="s1">(x)$&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">ncol</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$h$ [compr. diag ret.]&#39;</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Variação de áreas e diagonais: elipse x retângulo inscrito</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Elipse: $x^2/(</span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">)^2 + y^2/(</span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">)^2 = 1$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/15-otimizacao_40_0.png" src="../_images/15-otimizacao_40_0.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ipynb"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="14b-aprendizado-maquina-2.html" title="previous page">Aprendizado de máquina - II</a>
+    <a class='right-next' id="next-link" href="Q21.html" title="next page">Questionário 21 (Q21)</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

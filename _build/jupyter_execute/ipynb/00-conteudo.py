@@ -47,6 +47,7 @@
 # 
 # - [Aprendizado de máquina - I](14-aprendizado-maquina.ipynb)
 # - [Aprendizado de máquina - II](14b-aprendizado-maquina-2.ipynb)
+# - [Otimização](15-otimizacao)
 # 
 # ### Unidade 4
 # 
@@ -160,6 +161,12 @@
 # 
 # - [Projeto _Cadernos de ICD_](cadernos-icd.ipynb)
 
+# In[ ]:
+
+
+
+
+
 # 
 # ```{toctree}
 # :hidden:
@@ -217,6 +224,7 @@
 # 
 # 14-aprendizado-maquina
 # 14b-aprendizado-maquina-2
+# 15-otimizacao
 # ```
 # 
 # 
