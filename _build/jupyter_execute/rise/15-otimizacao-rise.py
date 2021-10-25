@@ -5,23 +5,25 @@
 
 # ## Introdução
 # 
-# Problemas de otimização (POs) são encontrados em diversas situações da Engenharia, em particular na Engenharia de Produção. Em uma linha de produção, por exemplo, a otimização de custos com logística, recursos humanos, matéria-prima são exemplos de onde podemos empregar métodos computacionais para obter soluções _ótimas_. Entretanto, princípios de otimização são a base de muitos algoritmos e aplicações de inteligência artificial, em particular, no aprendizado de máquina. Máquinas de vetor de suporte (_support vector machines_) são um exemplo de onde se usa otimização, já que podem ser formuladas como problemas convexos quadráticos.
+# - Problemas de otimização são encontrados em diversas situações da Engenharia e indústria
+# - Muitos algoritmos da inteligência artificial utilizam algum princípio de otimização
+# - Problemas de otimização são comumente tratados como *problemas de minimização*: 
+#     - Busca-se o _mínimo global_ de uma _função objetivo_ (FO) escalar $f(x)$
+#     - Maximizar $f(x)$ equivalente a minimizar $-f(x)$. 
+
+# ### Restrições 
 # 
-# Problemas de otimização são comumente tratados como *problemas de minimização*, onde se busca o _mínimo global_ de uma _função objetivo_ (FO) escalar $f(x)$, visto que maximizar $f(x)$ é equivalente a minimizar $-f(x)$. 
-# 
-# Entretanto, esses problemas são acompanhados de _restrições_, que podem ser representadas por uma igualdade ou por uma desigualdade. Quando uma restrição é escrita na forma $g(x) = 0$, dizemos que $g(x)$ é uma _restrição de igualdade_; quando escrita na forma $h(x) \leq 0$, dizemos que $h(x)$ é uma _restrição de desigualdade_.
-# 
-# Neste capítulo, faremos uma breve explanação sobre otimização tomando o cálculo de derivadas e pontos críticos como elementos fundamentais. Utilizaremos recursos de computação simbólica para resolver um problema unidimensional e revisitaremos conceitos aprendidos nas disciplinas de Cálculo.
+# - POs são acompanhados de _restrições_: 
+# - Para $g(x) = 0$, $g(x)$ é uma _restrição de igualdade_; 
+# - Para $h(x) \leq 0$, $h(x)$ é uma _restrição de desigualdade_.
 
 # ### Classificação de problemas de otimização
-# 
-# Problemas de otimização (PO) são classificados com base nas propriedades das funções $f(x)$, $g(x)$ e $h(x)$. Em linhas gerais, um PO pode ser:
 # 
 # - _univariado_ (ou _unidimensional_), se $x$ é escalar, i.e. $x \in \mathbb{R}$;
 # - _multivariado_ (ou _multidimensional_), se $x$ é um vetor, i.e. $x \in \mathbb{R}^n$.
 # - _linear_: se a FO e as restrições são funções lineares. Neste caso, por razões históricas, diz-se que o problema é de _programação linear_.
 # - _não-linear_: se a FO e as restrições são funções não-lineares. Neste caso, diz-se que o problema é de _programação não-linear_.
-# 
+
 # Com respeito às restrições, um PO pode ainda ser:
 # 
 # - _irrestrito_: quando não se assumem limites para os valores de $x$.
@@ -31,13 +33,11 @@
 
 # ### Problemas convexos
 # 
-# Sabe-se que problemas não-lineares são muito mais difíceis de resolver do que problemas lineares porque eles podem admitir uma ampla variedade de comportamentos. Um PO não-linear pode ter tanto _mínimos locais_ quanto _mínimos globais_. Logo, encontrar o _mínimo global_ de uma função $f(x)$ não-linear exige técnicas aperfeiçoadas. 
-# 
-# Neste sentido, uma subclasse de problemas não-lineares que pode ser resolvida eficientemente são os chamados _convexos_. Em problemas convexos, a função $f(x)$ é _convexa_. Mas o que é uma _função convexa_?
-# 
-# Uma função convexa definida em um intervalo $[a,b]$ é aquela em que todos os seus valores estão abaixo da reta secante que passa pelos pontos $(a,f(a))$ e $(b,f(b)$. Isto, por sua vez, garante que ela contenha _somente_ um mínimo global.
-
-# Importaremos os seguintes módulos:
+# - Problemas não-lineares são mais difíceis de resolver do que problemas lineares 
+# - Podem admitir uma ampla variedade de comportamentos. 
+# - Um PO não-linear pode ter tanto _mínimos locais_ quanto _mínimos globais_. 
+# - Encontrar o _mínimo global_ de uma função $f(x)$ não-linear exige técnicas aperfeiçoadas. 
+# - Subclasse de problemas não-lineares que pode ser resolvida eficientemente: _convexos_. 
 
 # In[1]:
 
@@ -47,6 +47,10 @@ import matplotlib.pyplot as plt
 import sympy as sy
 sy.init_printing()
 
+
+# ### Funções convexas
+# 
+# > Uma função convexa definida em um intervalo $[a,b]$ é aquela em que todos os seus valores estão abaixo da reta secante que passa pelos pontos $(a,f(a))$ e $(b,f(b)$. Isto, por sua vez, garante que ela contenha _somente_ um mínimo global.
 
 # **Exemplo**: a função $f(x) = 3x^2 - 0.36x - 11.2$ é convexa em $[-2,3]$.
 
@@ -119,17 +123,15 @@ plt.plot(xmin2,p(xmin2),'*r',ms=10);
 plt.title('Exemplo de função não convexa'); 
 
 
-# Como vemos acima, a função $p(x)$ admite 3 mínimos locais e um mínimo global. Pense um pouco sobre que estratégia computacional você utilizaria para encontrar os mínimos locais. Mais adiante mostraremos como localizar o mínimo global para funções univariadas contínuas (quando possível).
-
 # ### Pontos de sela
 # 
-# Como vimos acima, a convexidade de uma função é uma propriedade muito importante para que um mínimo global seja localizado. Como sabemos do Cálculo, pontos de máximo ou mínimo identificam-se como _pontos críticos_ de uma função nos quais a primeira derivada da função se anula.
-# 
-# Casos particulares onde a derivada de uma FO anula-se mas o ponto não pode ser definido como de mínimo ou máximo podem ocorrer. Tais situações implicam a existência dos chamados _pontos de sela_. Uma função com um único ponto de sela, por exemplo, não admitirá mínimo global nem mínimo local. Para testarmos se um ponto crítico é um ponto de sela, devemos verificar o sinal da segunda derivada da função. Uma das seguintes situações deve ser obtida em um ponto crítico $x^*$:
-# 
-# - _ponto de mínimo:_ $f''(x^*) > 0$
-# - _ponto de máximo:_ $f''(x^*) < 0$
-# - _ponto de sela:_ $f''(x^*) = 0$
+# - Casos particulares onde a derivada de uma FO anula-se mas o ponto não pode ser definido como de mínimo ou máximo.
+# - Tais situações implicam a existência dos chamados _pontos de sela_. 
+# - Uma função com um único ponto de sela, por exemplo, não admitirá mínimo global nem mínimo local. 
+# - Para testarmos se um ponto crítico é um ponto de sela, devemos verificar o sinal da segunda derivada da função. - Uma das seguintes situações deve ser obtida em um ponto crítico $x^*$:
+#     - _ponto de mínimo:_ $f''(x^*) > 0$
+#     - _ponto de máximo:_ $f''(x^*) < 0$
+#     - _ponto de sela:_ $f''(x^*) = 0$
 
 # **Exemplo:** qualquer função quadrática admite ou um ponto de mínimo ou de máximo. A função $f(x) = x^3$ possui um ponto de sela em $x^* = 0$.
 
@@ -157,16 +159,22 @@ plt.title('ponto de sela');
 
 
 # ## Otimização univariada
-
-# Como dissemos anteriormente, a otimização univariada visa resolver um problema de minimização tomando uma FO que depende apenas de uma variável. Matematicamente, podemos descrever este problema da seguinte forma:
+# 
+# - Otimização univariada visa resolver um problema de minimização tomando uma FO que depende apenas de uma variável. 
+# - Matematicamente:
 # 
 # $$\text{Encontre } x^{*} = \min f(x), \, \text{sujeito a} \, g(x) = 0, h(x) \leq 0.$$
 # 
-# Em geral, $x$ é uma _variável de decisão_, isto é, uma quantidade que pode ser ajustada livremente (ex. comprimentos, áreas, ângulos etc.). 
+# - Em geral, $x$ é uma _variável de decisão_, isto é, uma quantidade que pode ser ajustada livremente (ex. comprimentos, áreas, ângulos etc.). 
+
+# ### Técnicas
 # 
-# As técnicas utilizadas para a resolução de um problema desse tipo são baseadas em métodos analíticos (busca pelos zeros das derivadas) ou em métodos computacionais (determinação de raízes por processos iterativos). Métodos chamados de _root finding_ são estudados em um curso introdutório de Métodos Numéricos.
+# - As técnicas utilizadas para a resolução de um problema desse tipo são baseadas em:
+#     - métodos analíticos (busca pelos zeros das derivadas);
+#     - métodos computacionais (determinação de raízes por processos iterativos). 
+#     - métodos chamados de _root finding_ são estudados em um curso introdutório de Métodos Numéricos.
 # 
-# Para exemplificar, usaremos uma abordagem analítica por meio de computação simbólica (módulo `sympy`) para resolver um problema que pode ser exibido como de otimização univariada.
+# - Para dar exemplos com problemas aplicados de otimização univariada, usaremos a abordagem analítica por meio de computação simbólica (módulo `sympy`).
 
 # ### Problema resolvido
 # 
@@ -174,19 +182,18 @@ plt.title('ponto de sela');
 
 # ### Resolução 
 # 
-# Em primeiro lugar, escreveremos este problema em linguagem matemática. Sabemos que a área de um retângulo com vértice esquerdo inferior na origem da elipse e com vértice direito superior no ponto $(x,y)$ da elipse que está no primeiro quadrante é dada por $A_r = xy$. Logo, a área do retângulo inscrito na elipse será $A = 4xy$.
+# - Área de um retângulo com vértice esquerdo inferior na origem da elipse e com vértice direito superior no ponto $(x,y)$ da elipse que está no primeiro quadrante é dada por $A_r = xy$. 
+# - Logo, a área do retângulo inscrito na elipse será $A = 4xy$.
 # 
-# A área $A$ pode ser escrita em termos de $y$. Uma vez que a equação da elipse (centrada na origem) é dada por
+# - A área $A$ pode ser escrita isolando $y$ na equação da elipse: 
 # 
 # $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1,$$
-# 
-# podemos resolver a equação da elipse para $x$ (ou $y$) e substituir esta solução na expressão da área para ter uma função $A(x)$ (ou $A(y)$). Se escolhermos $x$, o problema de otimização pode ser escrito como:
+
+# ### Declaração do problema 
 # 
 # $$\text{Encontre } x^{*} = \min \,( -A(x) ), \, \text{sujeito a} \, x > 0.$$
 # 
-# Notemos que maximizar $A(x)$ equivale a minimizar $-A(x)$. 
-# 
-# Na busca do ponto de mínimo $x^{*}$, usaremos computação simbólica.
+# - Notemos que maximizar $A(x)$ equivale a minimizar $-A(x)$. 
 
 # Primeiramente, criamos variáveis simbólicas que representem as variáveis de interesse do problema e a expressão da área total.
 
@@ -297,9 +304,8 @@ A_max.simplify()
 
 # ## Estudo paramétrico de geometria
 # 
-# No gráfico abaixo, plotamos a variação das áreas de retângulos inscritos em uma elipse arbitrária com semi-eixos $a$ e $b$ em função do comprimento $x$ da meia-base do retângulo até o limite da meia-base do retângulo de área máxima. Adicionalmente, plotamos a variação do comprimento da diagonal do retângulo. A constante $A_{elip}$ é a área da elipse.
-# 
-# Você pode alterar os parâmetros de construção de elipse, o número de valores para $x$ e realizar uma nova análise dos parâmetros.
+# - Plotaremos a variação das áreas de retângulos inscritos em uma elipse arbitrária em função do comprimento $x$ da meia-base do retângulo até o limite da meia-base do retângulo de área máxima. 
+# - Adicionalmente, plotaremos a variação do comprimento da diagonal do retângulo. 
 
 # In[15]:
 
