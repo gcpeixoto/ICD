@@ -47,9 +47,16 @@
 # 
 # - [Aprendizado de máquina - I](14-aprendizado-maquina.ipynb)
 # - [Aprendizado de máquina - II](14b-aprendizado-maquina-2.ipynb)
+# 
+# #### Parte 6
+# 
 # - [Otimização](15-otimizacao)
 # 
 # ### Unidade 4
+# 
+# ### Parte 7
+# 
+# - [Visualização de dados com seaborn](16-visualizacao-dados-seaborn)
 # 
 # _Coming soon..._
 # 
@@ -69,6 +76,7 @@
 # - Unidade 2: Parte 4
 #     - [Questionário 41](Q41.ipynb)
 #     - [Questionário 42](Q42.ipynb)
+#     - [Questionário 43](Q43.ipynb)
 # 
 # #### Conceito
 # 
@@ -231,6 +239,15 @@
 # ```{toctree}
 # :hidden:
 # :titlesonly:
+# :caption: Parte 6
+# 
+# 16-visualizacao-dados-seaborn
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
 # :caption: Questionários
 # 
 # Q21
@@ -242,6 +259,7 @@
 # Q32
 # Q41
 # Q42
+# Q43
 # ```
 # 
 # 

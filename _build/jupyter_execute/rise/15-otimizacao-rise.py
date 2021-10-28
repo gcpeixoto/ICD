@@ -39,7 +39,7 @@
 # - Encontrar o _mínimo global_ de uma função $f(x)$ não-linear exige técnicas aperfeiçoadas. 
 # - Subclasse de problemas não-lineares que pode ser resolvida eficientemente: _convexos_. 
 
-# In[1]:
+# In[17]:
 
 
 import numpy as np
@@ -54,7 +54,7 @@ sy.init_printing()
 
 # **Exemplo**: a função $f(x) = 3x^2 - 0.36x - 11.2$ é convexa em $[-2,3]$.
 
-# In[2]:
+# In[18]:
 
 
 # domínio
@@ -68,7 +68,7 @@ fa,fb = f(a),f(b)
 # reta secante
 s = fa + (fb - fa)/(b - a)*(x - a)
 
-# ponto de mínimo: -b/(2a)
+# ponto de mínimo: 
 xmin = 10.36/10 
 
 # plotagem de funções
@@ -88,7 +88,7 @@ plt.title('Exemplo de função convexa');
 
 # **Exemplo**: a função $p(x) = 10x^2\textrm{sen}(6x) - 10.36\exp(x/8) - 11.2$ não é convexa em $[-2,3]$.
 
-# In[3]:
+# In[19]:
 
 
 # função
@@ -128,14 +128,15 @@ plt.title('Exemplo de função não convexa');
 # - Casos particulares onde a derivada de uma FO anula-se mas o ponto não pode ser definido como de mínimo ou máximo.
 # - Tais situações implicam a existência dos chamados _pontos de sela_. 
 # - Uma função com um único ponto de sela, por exemplo, não admitirá mínimo global nem mínimo local. 
-# - Para testarmos se um ponto crítico é um ponto de sela, devemos verificar o sinal da segunda derivada da função. - Uma das seguintes situações deve ser obtida em um ponto crítico $x^*$:
+# - Para testarmos se um ponto crítico é um ponto de sela, devemos verificar o sinal da segunda derivada da função. 
+# - Uma das seguintes situações deve ser obtida em um ponto crítico $x^*$:
 #     - _ponto de mínimo:_ $f''(x^*) > 0$
 #     - _ponto de máximo:_ $f''(x^*) < 0$
 #     - _ponto de sela:_ $f''(x^*) = 0$
 
 # **Exemplo:** qualquer função quadrática admite ou um ponto de mínimo ou de máximo. A função $f(x) = x^3$ possui um ponto de sela em $x^* = 0$.
 
-# In[4]:
+# In[20]:
 
 
 x = np.linspace(-1,1)
@@ -197,7 +198,7 @@ plt.title('ponto de sela');
 
 # Primeiramente, criamos variáveis simbólicas que representem as variáveis de interesse do problema e a expressão da área total.
 
-# In[5]:
+# In[31]:
 
 
 # cria variáveis simbólicas
@@ -211,37 +212,37 @@ A
 
 # Em seguida, resolvemos a equação da elipse para a variável $y$ utilizando a função `sympy.solve`.
 
-# In[6]:
+# In[35]:
 
 
 # resolve equação da elipse para y
 sol = sy.solve(x**2/a**2 + y**2/b**2 - 1,y)
-sol[0],sol[1]
+sol[0].expand(),sol[1].expand()
 
 
 # Duas soluções são possíveis para $y$. Porém, como o nosso ponto de referência sobre a elipse está no primeiro quadrante, tomamos a expressão para $y > 0$ e a substituímos na expressão da área de forma a obter uma expressão univariada $A(x)$.
 
-# In[7]:
+# In[39]:
 
 
 # substitui expressão de y positivo em A para ter -A(x)
 A = A.subs({'y':sol[1]})
-A
+A.expand()
 
 
 # Localizaremos o ponto crítico da função a partir da derivada $A'(x)$. Derivando $A$ em relação a $x$, obtemos: 
 
-# In[8]:
+# In[42]:
 
 
 # deriva -A(x) com a,b constantes
 dAdx = A.diff(x)
-dAdx
+dAdx.expand()
 
 
 # Em seguida, buscamos $x^{*}$ tal que $A'(x^{*}) = \frac{dA}{dx}(x^{*}) = 0$.
 
-# In[9]:
+# In[45]:
 
 
 # resolve A'(x*) = 0
@@ -251,7 +252,7 @@ sol_x
 
 # Duas soluções, são possíveis, porém, podemos verificar qual ponto de crítico, de fato, é o que minimizará $-A(x)$ através da análise da concavidade. Então, calculamos $A''(x)$, para cada ponto crítico.
 
-# In[10]:
+# In[52]:
 
 
 # testa A''(x) para os dois pontos
@@ -261,7 +262,7 @@ dAdx2.subs(x,sol_x[0]).simplify(),dAdx2.subs(x,sol_x[1]).simplify()
 
 # Uma vez que a segunda solução verifica a concavidade positiva, temos que o ponto crítico $x^{*}$ é:
 
-# In[11]:
+# In[53]:
 
 
 # concavidade para cima => ponto de mínimo
@@ -271,17 +272,17 @@ xs
 
 # Usando este valor na equação da elipse, obtemos a ordenada correspondente:
 
-# In[12]:
+# In[54]:
 
 
 # resolve para y > 0
 ys = sy.solve(xs**2/a**2 + y**2/b**2 - 1,y)[1]
-ys
+ys 
 
 
 # Por fim, substituindo $x^{*}$ na expressão da área, temos que $A_{max}$ é:
 
-# In[13]:
+# In[56]:
 
 
 # área máxima
@@ -291,7 +292,7 @@ A_max
 
 # ou, de forma, simplificada,
 
-# In[14]:
+# In[61]:
 
 
 # simplificando
@@ -307,31 +308,25 @@ A_max.simplify()
 # - Plotaremos a variação das áreas de retângulos inscritos em uma elipse arbitrária em função do comprimento $x$ da meia-base do retângulo até o limite da meia-base do retângulo de área máxima. 
 # - Adicionalmente, plotaremos a variação do comprimento da diagonal do retângulo. 
 
-# In[15]:
+# In[67]:
 
 
 # semi-eixos da elipse
-a,b = 10,2
-
+a,b = 60,30
 # no. de retângulos inscritos
 nx = 40 
-
 # base variável do retângulo
 X = np.linspace(0,np.sqrt(2)/2*a,nx)
-
 # área da elipse
 e = np.pi*a*b
-
 # áreas dos retângulos
-R = []
-H = []
+R = []; H = []
 for x in X:
     y = b*np.sqrt(1 - x**2/a**2)        
     r = 4*x*y
     h = np.hypot(2*x,2*y) # diagonal do retângulo    
     R.append(r)
     H.append(h)
-    
 # plotagem   
 fig,ax1 = plt.subplots(figsize=(6,4))
 ax1.plot(X,R,'sb',mec='w',alpha=0.8,label='$A_{ret}(x)$')
@@ -339,14 +334,12 @@ ax1.plot(X,np.full(X.shape,2*a*b),'--r',alpha=0.8,label='$A_{max}$')
 ax1.plot(X,np.full(X.shape,e),'-',alpha=0.8,label='$A_{elip}$')
 ax1.legend(fontsize=10)
 # labels
-plt.xlabel('$x$ [compr. base ret. inscrito]')
+plt.xlabel('$x$ [compr. base ret. inscrito]') 
 plt.ylabel('$A$ [áreas]');
-
 ax2 = ax1.twinx()
 ax2.plot(X,H,'og',mec='w',alpha=0.8,label='$h_{ret}(x)$')
 ax2.legend(loc=5,ncol=1,fontsize=10)
 plt.ylabel('$h$ [compr. diag ret.]');
-
 plt.suptitle('Variação de áreas e diagonais: elipse x retângulo inscrito\n');
 plt.title(f'Elipse: $x^2/({a:.1f})^2 + y^2/({b:.1f})^2 = 1$',fontsize=10);
 
