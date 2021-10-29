@@ -1,0 +1,1205 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Distribuições &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Aprendizado de máquina - I" href="14-aprendizado-maquina.html" />
+    <link rel="prev" title="Análise de regressão" href="13-regressao.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-regressao.html">
+   Análise de regressão
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Distribuições
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-aprendizado-maquina.html">
+   Aprendizado de máquina - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14b-aprendizado-maquina-2.html">
+   Aprendizado de máquina - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-otimizacao.html">
+   Otimização
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 6
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-visualizacao-dados-seaborn.html">
+   Visualização de dados com
+   <em>
+    seaborn
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q41.html">
+   Questionário 41 (Q41)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q42.html">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q43.html">
+   Questionário 43 (Q43)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ipynb/13a-distribuicoes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/13a-distribuicoes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/13a-distribuicoes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funcao-massa-de-probabilidade">
+   Função massa de probabilidade
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funcao-distribuicao-cumulativa">
+   Função distribuição cumulativa
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medicao-de-assimetria">
+   Medição de assimetria
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distribuicoes-continuas">
+   Distribuições contínuas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuicao-exponencial">
+     Distribuição exponencial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuicao-normal">
+     Distribuição normal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuicao-logistica">
+     Distribuição logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimadores-de-densidade-de-kernel">
+   Estimadores de densidade de
+   <em>
+    kernel
+   </em>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="distribuicoes">
+<h1>Distribuições<a class="headerlink" href="#distribuicoes" title="Permalink to this headline">¶</a></h1>
+<p>A estatística descritiva é limitada para resumir dados, visto que dados com características completamente distintas podem ter os mesmos valores para média, mediana e variância, por exemplo.</p>
+<p>Uma forma aprofundada de reconhecer as características dos dados é inspecionar a sua <em>distribuição</em>. Neste capítulo, discutiremos algumas distribuições e outras técnicas de exploração de dados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sb</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="funcao-massa-de-probabilidade">
+<h2>Função massa de probabilidade<a class="headerlink" href="#funcao-massa-de-probabilidade" title="Permalink to this headline">¶</a></h2>
+<p>A <em>função massa de probabilidade</em> (FMP) associa uma probabilidade à ocorrência de um certo valor dentro de um <em>espaço de resultados</em>. Podemos entender a FMP como um histograma normalizado. Isto é, todas as frequências são divididas pelo número de amostras.</p>
+<p>Para estudar a FMP e os demais conceitos neste capítulo, usaremos um banco de dados que contém dados sobre adultos americanos, tais como idade, nível de escolaridade, ocupação, estado civil, entre outros.</p>
+<p>Primeiramente, carregamos o <em>dataset</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adults</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/adults.csv&#39;</span><span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">adults</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>type-employer</th>
+      <th>fnlwgt</th>
+      <th>education</th>
+      <th>education_num</th>
+      <th>marital</th>
+      <th>occupation</th>
+      <th>relationship</th>
+      <th>race</th>
+      <th>sex</th>
+      <th>capital_gain</th>
+      <th>capital_loss</th>
+      <th>hr_per_week</th>
+      <th>country</th>
+      <th>income</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>39</td>
+      <td>State-gov</td>
+      <td>77516</td>
+      <td>Bachelors</td>
+      <td>13</td>
+      <td>Never-married</td>
+      <td>Adm-clerical</td>
+      <td>Not-in-family</td>
+      <td>White</td>
+      <td>Male</td>
+      <td>2174</td>
+      <td>0</td>
+      <td>40</td>
+      <td>United-States</td>
+      <td>&lt;=50K</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>50</td>
+      <td>Self-emp-not-inc</td>
+      <td>83311</td>
+      <td>Bachelors</td>
+      <td>13</td>
+      <td>Married-civ-spouse</td>
+      <td>Exec-managerial</td>
+      <td>Husband</td>
+      <td>White</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>0</td>
+      <td>13</td>
+      <td>United-States</td>
+      <td>&lt;=50K</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>38</td>
+      <td>Private</td>
+      <td>215646</td>
+      <td>HS-grad</td>
+      <td>9</td>
+      <td>Divorced</td>
+      <td>Handlers-cleaners</td>
+      <td>Not-in-family</td>
+      <td>White</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>0</td>
+      <td>40</td>
+      <td>United-States</td>
+      <td>&lt;=50K</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>53</td>
+      <td>Private</td>
+      <td>234721</td>
+      <td>11th</td>
+      <td>7</td>
+      <td>Married-civ-spouse</td>
+      <td>Handlers-cleaners</td>
+      <td>Husband</td>
+      <td>Black</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>0</td>
+      <td>40</td>
+      <td>United-States</td>
+      <td>&lt;=50K</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>28</td>
+      <td>Private</td>
+      <td>338409</td>
+      <td>Bachelors</td>
+      <td>13</td>
+      <td>Married-civ-spouse</td>
+      <td>Prof-specialty</td>
+      <td>Wife</td>
+      <td>Black</td>
+      <td>Female</td>
+      <td>0</td>
+      <td>0</td>
+      <td>40</td>
+      <td>Cuba</td>
+      <td>&lt;=50K</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Comparemos a distribuição da variável <em>idade</em> por histograma e pela PMF.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># histograma</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="n">idade</span> <span class="o">=</span> <span class="n">adults</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">idade</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">.6</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+           <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#aa88bb&#39;</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span>
+           <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Idade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histograma&#39;</span><span class="p">)</span>
+
+<span class="c1"># FMP</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+<span class="n">idade</span> <span class="o">=</span> <span class="n">adults</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">idade</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">.9</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+           <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#aa88bb&#39;</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span>
+           <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Idade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;FMP&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_5_0.png" src="../_images/13a-distribuicoes_5_0.png" />
+</div>
+</div>
+</section>
+<section id="funcao-distribuicao-cumulativa">
+<h2>Função distribuição cumulativa<a class="headerlink" href="#funcao-distribuicao-cumulativa" title="Permalink to this headline">¶</a></h2>
+<p>A <em>função distribuição cumulativa</em> (CDF) calcula a probabilidade de uma variável com uma dada distribuição de probabilidade ter um valor menor ou igual a <span class="math notranslate nohighlight">\(x\)</span>. Em outras palavras, para calcularmos <span class="math notranslate nohighlight">\(CDF(x)\)</span> para um valor particular <span class="math notranslate nohighlight">\(x\)</span>, devemos computar a fração dos valores na amostra que são menores ou iguais a <span class="math notranslate nohighlight">\(x\)</span>. A CDF é similar ao conceito de <em>percentil</em>, mas a resposta é um valor no intervalo [0,1], em vez de um <em>ranque</em> na faixa 0-100.</p>
+<p>Considerando um <em>array</em> de amostras <code class="docutils literal notranslate"><span class="pre">t</span></code> e o dado valor <span class="math notranslate nohighlight">\(x\)</span>, que não necessariamente está em <code class="docutils literal notranslate"><span class="pre">t</span></code>, podemos implementar uma função <code class="docutils literal notranslate"><span class="pre">CDF</span></code> da seguinte forma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># implementação da CDF</span>
+<span class="k">def</span> <span class="nf">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># contagem</span>
+    <span class="k">for</span> <span class="n">ti</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span> <span class="c1"># cada valor na amostra</span>
+        <span class="k">if</span> <span class="n">ti</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">prob</span> <span class="o">=</span> <span class="n">c</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c1"># probabilidade</span>
+    <span class="k">return</span> <span class="n">prob</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vejamos um exemplo simples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># amostra</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+
+<span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.3333333333333333, 0.6666666666666666, 0.8333333333333334)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p>A probabilidade de se encontrar um valor menor ou igual a 2 em <code class="docutils literal notranslate"><span class="pre">t</span></code> é de 33,3%.</p></li>
+<li><p>A probabilidade de se encontrar um valor menor ou igual a 3 em <code class="docutils literal notranslate"><span class="pre">t</span></code> é de 66,6%.</p></li>
+<li><p>A probabilidade de se encontrar um valor menor ou igual a 5 em <code class="docutils literal notranslate"><span class="pre">t</span></code> é de 83,3%.</p></li>
+</ul>
+<p>Para valores fora da amostra:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mf">3.45</span><span class="p">),</span> <span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mf">1.11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.6666666666666666, 0.16666666666666666)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se <span class="math notranslate nohighlight">\(x\)</span> for menor do que o menor valor de <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">CDF(x)</span> <span class="pre">=</span> <span class="pre">0</span></code>; se <span class="math notranslate nohighlight">\(x\)</span> for maior do que o maior valor de <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">CDF(x)</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">),</span> <span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mf">0.8</span><span class="p">),</span> <span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mf">7.5</span><span class="p">),</span> <span class="n">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 0.0, 1.0, 1.0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>A CDF é uma função <em>step</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sex</span> <span class="o">=</span> <span class="n">adults</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">idade</span><span class="p">[</span><span class="n">sex</span> <span class="o">==</span> <span class="s1">&#39; Male&#39;</span><span class="p">]</span>
+<span class="n">fm</span> <span class="o">=</span> <span class="n">idade</span><span class="p">[</span><span class="n">sex</span> <span class="o">==</span> <span class="s1">&#39; Female&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">im</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Male&#39;</span><span class="p">)</span>
+<span class="n">fm</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Female&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Idade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;CDF&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_17_0.png" src="../_images/13a-distribuicoes_17_0.png" />
+</div>
+</div>
+</section>
+<section id="medicao-de-assimetria">
+<h2>Medição de assimetria<a class="headerlink" href="#medicao-de-assimetria" title="Permalink to this headline">¶</a></h2>
+<p>A assimetria das distribuições pode ser medida pelo <em>coeficiente de Pearson</em>, dado por:</p>
+<div class="math notranslate nohighlight">
+\[p = 3(\mu - \theta)\sigma,\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\mu\)</span> é a média, <span class="math notranslate nohighlight">\(\theta\)</span> é a mediana e <span class="math notranslate nohighlight">\(\sigma\)</span> é o desvio padrão.</p>
+<p>Podemos defini-lo como:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># coeficiente de pearson</span>
+<span class="k">def</span> <span class="nf">p</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">median</span><span class="p">()</span> <span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A seguir calculamos o coeficiente de Pearson para a série de idades para homens e mulheres.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="p">(</span><span class="n">im</span><span class="p">),</span> <span class="n">p</span><span class="p">(</span><span class="n">fm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(57.50230041174153, 78.12203531109172)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comparemos com os histogramas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">im</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Male&#39;</span><span class="p">)</span>
+<span class="n">fm</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Female&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_23_0.png" src="../_images/13a-distribuicoes_23_0.png" />
+</div>
+</div>
+<p>A interpretação da assimetria é a seguinte:</p>
+<ul class="simple">
+<li><p>Na assimetria à direita (ou positiva), a moda e a mediana localizam-se à esquerda da média. Isto significa que o histograma é mais denso à esquerda.</p></li>
+<li><p>Na assimetria à esquerda (ou negativa), a moda e a mediana localizam-se à direita da média. Isto significa que o histograma é mais denso à direita.</p></li>
+<li><p>Coeficientes de assimetria positivos explicam assimetria à direita.</p></li>
+<li><p>Coeficientes de assimetria negativos explicam assimetria à esquerda.</p></li>
+<li><p>Coeficientes de assimetria nulos explicam simetria (distribuição normal).</p></li>
+</ul>
+<p>Comentários:</p>
+<ul class="simple">
+<li><p>No exemplo anterior, o coeficiente de Pearson maior para a distribuição de idades entre mulheres mostra que ela é mais assimétrica do que a distribuição de idades para mulheres.</p></li>
+</ul>
+</section>
+<section id="distribuicoes-continuas">
+<h2>Distribuições contínuas<a class="headerlink" href="#distribuicoes-continuas" title="Permalink to this headline">¶</a></h2>
+<p>Distribuições baseadas em observações de amostras finitas são chamadas de <em>distribuições empíricas</em>, a exemplo da FMP anterior. Em muitas situações, necessitamos de <em>distribuições contínuas</em>. No caso de funções contínuas, a FMP é generalizada para a <em>função densidade de probabilidade</em> (PDF). A PDF é definida por meio de integração.</p>
+<section id="distribuicao-exponencial">
+<h3>Distribuição exponencial<a class="headerlink" href="#distribuicao-exponencial" title="Permalink to this headline">¶</a></h3>
+<p>A <em>distribuição exponencial</em> (DE) serve para medir tempos entre eventos, que são chamados de  “tempos de chegadas” (<em>inter-arrival times</em>). Se os eventos têm a mesma probabilidade de ocorrer a qualquer momento, a distribuição dos tempos de chegadas tende a se parecer com uma distribuição exponencial.</p>
+<p>DEs são úteis para descrever: o tempo de realização de uma prova, o tempo de vida de aparelhos, o tempo de espera em restaurantes, o tempo para realizar uma prova.</p>
+<p>A CDF e a PDF de uma distribuição exponencial são definidas por:</p>
+<div class="math notranslate nohighlight">
+\[CDF(x) = 1 - e^{-\lambda x}, \ \ \ PDF(x) = \lambda e^{-\lambda x},\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\lambda\)</span> é um parâmetro que define o formato da distribuição.</p>
+<p>Uma DE tem:</p>
+<ul class="simple">
+<li><p>média = <span class="math notranslate nohighlight">\(1/\lambda\)</span></p></li>
+<li><p>variância = <span class="math notranslate nohighlight">\(1/\lambda^2\)</span></p></li>
+<li><p>mediana = <span class="math notranslate nohighlight">\(\ln(2)/\lambda.\)</span></p></li>
+</ul>
+<p>Para plotar uma DE aleatoriamente, podemos utilizar o <em>numpy</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># usando numpy</span>
+<span class="n">lamb</span> <span class="o">=</span> <span class="mf">1.3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">de</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">lamb</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">de</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_29_0.png" src="../_images/13a-distribuicoes_29_0.png" />
+</div>
+</div>
+<p>ou o <em>scipy</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># usando scipy</span>
+<span class="n">des</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">lamb</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">des</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#aa88bb&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_31_0.png" src="../_images/13a-distribuicoes_31_0.png" />
+</div>
+</div>
+<p>No próximo exemplo, usamos um valor bem maior de <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lamb</span> <span class="o">=</span> <span class="mf">50.3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">de</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">lamb</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">de</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_33_0.png" src="../_images/13a-distribuicoes_33_0.png" />
+</div>
+</div>
+</section>
+<section id="distribuicao-normal">
+<h3>Distribuição normal<a class="headerlink" href="#distribuicao-normal" title="Permalink to this headline">¶</a></h3>
+<p>A <em>distribuição normal</em>, ou <em>distribuição Gaussiana</em>, possui um formato particularmente simétrico. Ela é a distribuição mais comumente empregada para representar fenômenos econômicos, naturais, sociais, entre outros. Enquanto a CDF para a distribuição normal dependa de integrais que não podem ser expressas em termos de funções elementares, a sua função densidade de probabilidade é dada por</p>
+<div class="math notranslate nohighlight">
+\[PDF(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}}e^{- \frac{(x-\mu)^2}{2\sigma^2}},\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\mu\)</span> é a média e <span class="math notranslate nohighlight">\(\sigma\)</span> o desvio padrão de uma série de dados.</p>
+<p>À medida que os valores de <span class="math notranslate nohighlight">\(\mu\)</span> e <span class="math notranslate nohighlight">\(\sigma\)</span> são alterados, a forma de “sino” da distribuição “alarga”, “afina”, “estica” ou se “contrai”.</p>
+<p>Vejamos como gerar DNs através do <em>scipy</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">lab</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;$\mu=</span><span class="si">{</span><span class="n">mu</span><span class="si">}</span><span class="s1">,\sigma=</span><span class="si">{</span><span class="n">sigma</span><span class="si">}</span><span class="s1">$&#39;</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_35_0.png" src="../_images/13a-distribuicoes_35_0.png" />
+</div>
+</div>
+<p>A CDF para essas distribuições pode ser plotada adicionado <code class="docutils literal notranslate"><span class="pre">kde_kws={'cumulative':True}</span></code> na função <code class="docutils literal notranslate"><span class="pre">distplot</span></code> do <em>seaborn</em>. Para remover o histograma, basta configurar <code class="docutils literal notranslate"><span class="pre">hist=False</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_37_0.png" src="../_images/13a-distribuicoes_37_0.png" />
+</div>
+</div>
+</section>
+<section id="distribuicao-logistica">
+<h3>Distribuição logística<a class="headerlink" href="#distribuicao-logistica" title="Permalink to this headline">¶</a></h3>
+<p>A <em>distribuição logística</em> (DL) é interessante para fundamentar aplicações de aprendizagem de máquina, principalmente em problemas envolvendo <em>regressão logística</em> e <em>redes neurais</em>. A DL é utilizada para descrever fenômenos associados a crescimento ou queda. Modelos biológicos são um exemplo. A função de distribuição geral de uma DL é:</p>
+<div class="math notranslate nohighlight">
+\[PDF(x) = \frac{e^{-\frac{(x-\mu)}{s}}}{s(1 + e^{-\frac{(x-\mu)}{s}})^2},\]</div>
+<p>para uma a média <span class="math notranslate nohighlight">\(\mu\)</span> e o parâmetro <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<p>Com o <em>scipy</em>, podemos gerar DLs da mesma forma que as distribuições anteriores.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">lab</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">mu</span><span class="p">,</span><span class="n">s</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;$\mu=</span><span class="si">{</span><span class="n">mu</span><span class="si">}</span><span class="s1">,s=</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1">$&#39;</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">s</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span><span class="n">s</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span><span class="n">s</span><span class="o">-</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">s</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">s</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">s</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_39_0.png" src="../_images/13a-distribuicoes_39_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">sigma</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">dn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">logistic</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> 
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">dn</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">kde_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cumulative&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">},</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">lab</span><span class="p">(</span><span class="n">mu</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span><span class="n">sigma</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_40_0.png" src="../_images/13a-distribuicoes_40_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="estimadores-de-densidade-de-kernel">
+<h2>Estimadores de densidade de <em>kernel</em><a class="headerlink" href="#estimadores-de-densidade-de-kernel" title="Permalink to this headline">¶</a></h2>
+<p>Histogramas possuem o ponto de fraco de definir intervalos de classe (<em>binning</em>). Dependendo dos dados com que trabalhamos, métodos diferentes de <em>binning</em> podem levar a interpretações diferentes, visto que a plotagem visual pode ser diferente.</p>
+<p>Um <em>kernel</em> especifica o formato da distribuição em cada ponto e a <em>largura de banda</em> controla o tamanho do <em>kernel</em>. O propósito de um <em>kernel density estimator</em> (KDE) é buscar uma distribuição contínua do conjunto de dados, quando nosso interesse é apenas fazer uma inspeção geral nos dados.</p>
+<p>Há diversos tipos de <em>kernel</em> e rotinas implementados em Python. Entretanto, vamos utilizar os KDEs do módulo <em>scikit-learn</em>.</p>
+<p>Antes disso, vejamos o efeito do <em>binning</em> sobre os dados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">sharey</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">im</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;5 bins&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">im</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span><span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;20 bins&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_43_0.png" src="../_images/13a-distribuicoes_43_0.png" />
+</div>
+</div>
+<p>Os <em>kernels</em> disponíveis no <em>scikit-learn</em> são obtidos a partir da classe <code class="docutils literal notranslate"><span class="pre">KernelDensity</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KernelDensity</span>
+
+<span class="n">X_plot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">200</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span>
+<span class="n">X_src</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">ff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="p">):</span>
+     <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;0&quot;</span>
+     <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;h&quot;</span>
+     <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;-h&quot;</span>
+     <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;%ih&quot;</span> <span class="o">%</span> <span class="n">x</span>
+
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">kernel</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;gaussian&quot;</span><span class="p">,</span> <span class="s2">&quot;tophat&quot;</span><span class="p">,</span> <span class="s2">&quot;epanechnikov&quot;</span><span class="p">,</span> <span class="s2">&quot;exponential&quot;</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;cosine&quot;</span><span class="p">]</span>
+<span class="p">):</span>
+    <span class="n">axi</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">log_dens</span> <span class="o">=</span> <span class="n">KernelDensity</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="n">kernel</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_src</span><span class="p">)</span><span class="o">.</span><span class="n">score_samples</span><span class="p">(</span><span class="n">X_plot</span><span class="p">)</span>
+    <span class="n">axi</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">X_plot</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">log_dens</span><span class="p">),</span> <span class="s2">&quot;-k&quot;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;#aa88bb&#39;</span><span class="p">)</span>
+    <span class="n">axi</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">kernel</span><span class="p">)</span>
+    
+    <span class="n">axi</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="n">ff</span><span class="p">))</span>
+    <span class="n">axi</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">axi</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+    
+    <span class="n">axi</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">2.9</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Kernels disponíveis :: scikit-learn&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_45_0.png" src="../_images/13a-distribuicoes_45_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># amostras</span>
+<span class="n">band</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1"># largura de banda</span>
+<span class="n">kernels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;gaussian&quot;</span><span class="p">,</span> <span class="s2">&quot;tophat&quot;</span><span class="p">,</span> <span class="s2">&quot;cosine&quot;</span><span class="p">]</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">N</span><span class="p">)),</span>
+     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.7</span> <span class="o">*</span> <span class="n">N</span><span class="p">))))[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+
+<span class="n">Xp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+
+<span class="n">true_dens</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mf">0.7</span> <span class="o">*</span> <span class="n">norm</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">true_dens</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;distribuição original&quot;</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;darkgreen&quot;</span><span class="p">]</span>
+
+<span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">kernel</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">colors</span><span class="p">,</span> <span class="n">kernels</span><span class="p">):</span>
+    <span class="n">kde</span> <span class="o">=</span> <span class="n">KernelDensity</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="n">kernel</span><span class="p">,</span> <span class="n">bandwidth</span><span class="o">=</span><span class="n">band</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">log_dens</span> <span class="o">=</span> <span class="n">kde</span><span class="o">.</span><span class="n">score_samples</span><span class="p">(</span><span class="n">Xp</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">Xp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">log_dens</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+        <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;kernel = &#39;</span><span class="si">{0}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">kernel</span><span class="p">),</span>
+    <span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">0.37</span><span class="p">,</span> <span class="s2">&quot;N=</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Aplicação de KDE&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13a-distribuicoes_46_0.png" src="../_images/13a-distribuicoes_46_0.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ipynb"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="13-regressao.html" title="previous page">Análise de regressão</a>
+    <a class='right-next' id="next-link" href="14-aprendizado-maquina.html" title="next page">Aprendizado de máquina - I</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
