@@ -29,6 +29,7 @@
   - file: ipynb/11-estatistica-descritiva
   - file: ipynb/12-correlacao
   - file: ipynb/13-regressao
+  - file: ipynb/13a-distribuicoes
 - part: Parte 5  
   numbered: false
   chapters:

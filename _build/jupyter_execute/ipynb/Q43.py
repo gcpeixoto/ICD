@@ -48,10 +48,10 @@
 
 # **Questão 3.** Tomando todas as séries do _DataFrama_ de _GM_ em diante, identifique aquela que possui a mais forte correlação positiva com _E_ e aquela que possui a mais forte correlação negativa com _V_, respectivamente.
 # 
-# A. GP / GC
+# A. _GP_ / _GC_
 # 
-# B. CV / GP
+# B. _CV_ / _GP_
 # 
-# C. CA / GC
+# C. _CA_ / _GC_
 # 
-# D. SG / GC
+# D. _SG_ / _GC_
