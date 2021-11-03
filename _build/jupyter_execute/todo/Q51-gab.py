@@ -31,7 +31,7 @@
 # > Um hospital especializado em traumatologia possui um setor que pode atender casos gerais de emergência e dispõe de uma lista dos pacientes atendidos. Suponha que um número considerável de pessoas com sintomas de acidente vascular cerebral - AVC procurem o hospital mensalmente e que, para cada paciente com esse quadro, sejam feitas as seguintes perguntas: 
 # > - Qual é a sua idade? 
 # > - Você é fumante? 
-# > - Você é casado? 
+# > - Qual é o seu estado civil? 
 # > - De um a quatro, qual seu nível de estresse no trabalho? 
 # > - Você mora em área rural ou urbana? 
 # > - Você tem hipertensão? 
