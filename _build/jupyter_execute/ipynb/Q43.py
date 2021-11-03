@@ -46,12 +46,13 @@
 # D. _SG_ e _GC_
 # 
 
-# **Questão 3.** Tomando todas as séries do _DataFrama_ de _GM_ em diante, identifique aquela que possui a mais forte correlação positiva com _E_ e aquela que possui a mais forte correlação negativa com _V_, respectivamente.
+# **Questão 3.** Considere o _DataFrame_ processado para a resolução da Questão 2. Entre as 
+# séries Gols Marcados (Pró) (_GP_), Gol Sofridos (Contra) (_GC_), Saldo de Gols (_SG_), Cartões Amarelos (_CA_) e Cartões Vermelhos (_CV_), identifique a que possui a mais forte correlação positiva com _E_ e a que possui a mais forte correlação negativa com _V_, respectivamente. Assinale a alternativa correta.
 # 
-# A. _GP_ / _GC_
+# A. _GP_ e _GC_
 # 
-# B. _CV_ / _GP_
+# B. _CV_ e _GP_
 # 
-# C. _CA_ / _GC_
+# C. _CA_ e _GC_
 # 
-# D. _SG_ / _GC_
+# D. _SG_ e _GC_

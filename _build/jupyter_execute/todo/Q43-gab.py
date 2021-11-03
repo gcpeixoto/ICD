@@ -38,7 +38,7 @@
 # 
 # Alternativa **C**
 
-# In[13]:
+# In[1]:
 
 
 #Dataset e tratamento dos dados
@@ -48,6 +48,7 @@ import numpy as np
 # Fonte: https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-a"
 brasileiro_2021 = pd.read_csv('../database/brasileirao2021.csv')
 brasileiro_2021 = brasileiro_2021.drop(columns=['%','Recentes','Próx'])
+brasileiro_2021
 
 
 # In[14]:
@@ -139,7 +140,8 @@ covariance = stats(brasileiro_2021, "PTS")
 brasileiro_2021.columns[np.argmax(covariance)+2] + " / " + brasileiro_2021.columns[np.argmin(covariance)+2]
 
 
-# **Questão 3.** Tomando todas as séries do _DataFrama_ de _GM_ em diante, identifique aquela que possui a mais forte correlação positiva com _E_ e aquela que possui a mais forte correlação negativa com _V_, respectivamente.
+# **Questão 3.** Considere o _DataFrame_ processado para a resolução da Questão 2. Entre as 
+# séries Gols Marcados (Pró) (_GP_), Gol Sofridos (Contra) (_GC_), Saldo de Gols (_SG_), Cartões Amarelos (_CA_) e Cartões Vermelhos (_CV_), identifique a que possui a mais forte correlação positiva com _E_ e a que possui a mais forte correlação negativa com _V_, respectivamente. Assinale a alternativa correta.
 # 
 # A. GP / GC
 # 

@@ -490,9 +490,326 @@
 <span class="c1"># Fonte: https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-a&quot;</span>
 <span class="n">brasileiro_2021</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../database/brasileirao2021.csv&#39;</span><span class="p">)</span>
 <span class="n">brasileiro_2021</span> <span class="o">=</span> <span class="n">brasileiro_2021</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;%&#39;</span><span class="p">,</span><span class="s1">&#39;Recentes&#39;</span><span class="p">,</span><span class="s1">&#39;Próx&#39;</span><span class="p">])</span>
+<span class="n">brasileiro_2021</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Posição</th>
+      <th>PTS</th>
+      <th>J</th>
+      <th>V</th>
+      <th>E</th>
+      <th>D</th>
+      <th>GP</th>
+      <th>GC</th>
+      <th>SG</th>
+      <th>CA</th>
+      <th>CV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1º  0  Atlético Mineiro - MG</td>
+      <td>59</td>
+      <td>27</td>
+      <td>18</td>
+      <td>5</td>
+      <td>4</td>
+      <td>44</td>
+      <td>20</td>
+      <td>24</td>
+      <td>53</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2º  +1  Palmeiras - SP</td>
+      <td>49</td>
+      <td>28</td>
+      <td>15</td>
+      <td>4</td>
+      <td>9</td>
+      <td>42</td>
+      <td>34</td>
+      <td>8</td>
+      <td>64</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3º  +1  Fortaleza - CE</td>
+      <td>48</td>
+      <td>28</td>
+      <td>14</td>
+      <td>6</td>
+      <td>8</td>
+      <td>38</td>
+      <td>30</td>
+      <td>8</td>
+      <td>62</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4º  -2  Flamengo - RJ</td>
+      <td>46</td>
+      <td>25</td>
+      <td>14</td>
+      <td>4</td>
+      <td>7</td>
+      <td>47</td>
+      <td>24</td>
+      <td>23</td>
+      <td>52</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5º  0  Red Bull Bragantino - SP</td>
+      <td>46</td>
+      <td>28</td>
+      <td>11</td>
+      <td>13</td>
+      <td>4</td>
+      <td>44</td>
+      <td>32</td>
+      <td>12</td>
+      <td>69</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6º  0  Internacional - RS</td>
+      <td>41</td>
+      <td>28</td>
+      <td>10</td>
+      <td>11</td>
+      <td>7</td>
+      <td>37</td>
+      <td>30</td>
+      <td>7</td>
+      <td>75</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7º  0  Corinthians - SP</td>
+      <td>41</td>
+      <td>28</td>
+      <td>10</td>
+      <td>11</td>
+      <td>7</td>
+      <td>30</td>
+      <td>26</td>
+      <td>4</td>
+      <td>39</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8º  0  Fluminense - RJ</td>
+      <td>39</td>
+      <td>28</td>
+      <td>10</td>
+      <td>9</td>
+      <td>9</td>
+      <td>28</td>
+      <td>30</td>
+      <td>-2</td>
+      <td>63</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9º  +2  Atlético - GO</td>
+      <td>37</td>
+      <td>27</td>
+      <td>9</td>
+      <td>10</td>
+      <td>8</td>
+      <td>24</td>
+      <td>24</td>
+      <td>0</td>
+      <td>71</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10º  +3  America - MG</td>
+      <td>35</td>
+      <td>28</td>
+      <td>8</td>
+      <td>11</td>
+      <td>9</td>
+      <td>27</td>
+      <td>29</td>
+      <td>-2</td>
+      <td>45</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11º  -2  Cuiabá - MT</td>
+      <td>35</td>
+      <td>28</td>
+      <td>7</td>
+      <td>14</td>
+      <td>7</td>
+      <td>27</td>
+      <td>28</td>
+      <td>-1</td>
+      <td>62</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12º  -2  Athletico Paranaense - PR</td>
+      <td>34</td>
+      <td>27</td>
+      <td>10</td>
+      <td>4</td>
+      <td>13</td>
+      <td>32</td>
+      <td>36</td>
+      <td>-4</td>
+      <td>62</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13º  -1  São Paulo - SP</td>
+      <td>34</td>
+      <td>28</td>
+      <td>7</td>
+      <td>13</td>
+      <td>8</td>
+      <td>22</td>
+      <td>27</td>
+      <td>-5</td>
+      <td>78</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14º  0  Ceará - CE</td>
+      <td>33</td>
+      <td>28</td>
+      <td>6</td>
+      <td>15</td>
+      <td>7</td>
+      <td>26</td>
+      <td>30</td>
+      <td>-4</td>
+      <td>67</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15º  +1  Bahia - BA</td>
+      <td>32</td>
+      <td>28</td>
+      <td>8</td>
+      <td>8</td>
+      <td>12</td>
+      <td>32</td>
+      <td>39</td>
+      <td>-7</td>
+      <td>75</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16º  -1  Santos - SP</td>
+      <td>32</td>
+      <td>28</td>
+      <td>7</td>
+      <td>11</td>
+      <td>10</td>
+      <td>25</td>
+      <td>34</td>
+      <td>-9</td>
+      <td>83</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17º  0  Juventude - RS</td>
+      <td>29</td>
+      <td>28</td>
+      <td>6</td>
+      <td>11</td>
+      <td>11</td>
+      <td>27</td>
+      <td>36</td>
+      <td>-9</td>
+      <td>72</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18º  0  Sport - PE</td>
+      <td>27</td>
+      <td>28</td>
+      <td>6</td>
+      <td>9</td>
+      <td>13</td>
+      <td>15</td>
+      <td>24</td>
+      <td>-9</td>
+      <td>70</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19º  0  Grêmio - RS</td>
+      <td>26</td>
+      <td>26</td>
+      <td>7</td>
+      <td>5</td>
+      <td>14</td>
+      <td>23</td>
+      <td>32</td>
+      <td>-9</td>
+      <td>75</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20º  0  Chapecoense - SC</td>
+      <td>13</td>
+      <td>28</td>
+      <td>1</td>
+      <td>10</td>
+      <td>17</td>
+      <td>24</td>
+      <td>49</td>
+      <td>-25</td>
+      <td>58</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -706,7 +1023,8 @@
 </div>
 </div>
 </div>
-<p><strong>Questão 3.</strong> Tomando todas as séries do <em>DataFrama</em> de <em>GM</em> em diante, identifique aquela que possui a mais forte correlação positiva com <em>E</em> e aquela que possui a mais forte correlação negativa com <em>V</em>, respectivamente.</p>
+<p><strong>Questão 3.</strong> Considere o <em>DataFrame</em> processado para a resolução da Questão 2. Entre as
+séries Gols Marcados (Pró) (<em>GP</em>), Gol Sofridos (Contra) (<em>GC</em>), Saldo de Gols (<em>SG</em>), Cartões Amarelos (<em>CA</em>) e Cartões Vermelhos (<em>CV</em>), identifique a que possui a mais forte correlação positiva com <em>E</em> e a que possui a mais forte correlação negativa com <em>V</em>, respectivamente. Assinale a alternativa correta.</p>
 <p>A. GP / GC</p>
 <p>B. CV / GP</p>
 <p>C. CA / GC</p>
