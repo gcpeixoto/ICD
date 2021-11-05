@@ -40,6 +40,7 @@
   numbered: false
   chapters:
   - file: ipynb/16-visualizacao-dados-seaborn
+  - file: ipynb/17-raspagem-dados
 - part: Questionários
   numbered: false
   chapters:

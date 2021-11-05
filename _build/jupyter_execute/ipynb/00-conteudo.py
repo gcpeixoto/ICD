@@ -58,8 +58,8 @@
 # ### Parte 7
 # 
 # - [Visualização de dados com seaborn](16-visualizacao-dados-seaborn)
+# - [Raspagem de dados](17-raspagem-dados)
 # 
-# _Coming soon..._
 # 
 # ## Avaliação
 # 
@@ -172,12 +172,6 @@
 # 
 # - [Projeto _Cadernos de ICD_](cadernos-icd.ipynb)
 
-# In[ ]:
-
-
-
-
-
 # 
 # ```{toctree}
 # :hidden:
@@ -246,6 +240,7 @@
 # :caption: Parte 6
 # 
 # 16-visualizacao-dados-seaborn
+# 17-raspagem-dados
 # ```
 # 
 # 
