@@ -1,0 +1,1576 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Raspagem de dados &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/13-regressao.html">
+   Análise de regressão
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/13a-distribuicoes.html">
+   Distribuições
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/14-aprendizado-maquina.html">
+   Aprendizado de máquina - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/14b-aprendizado-maquina-2.html">
+   Aprendizado de máquina - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/15-otimizacao.html">
+   Otimização
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 6
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/16-visualizacao-dados-seaborn.html">
+   Visualização de dados com
+   <em>
+    seaborn
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/17-raspagem-dados.html">
+   Raspagem de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/18-analise-redes.html">
+   Análise de redes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q41.html">
+   Questionário 41 (Q41)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q42.html">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q43.html">
+   Questionário 43 (Q43)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q51.html">
+   Questionário 51 (Q51)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/rise/17-raspagem-dados-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/rise/17-raspagem-dados-rise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/rise/17-raspagem-dados-rise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-raspar">
+     O que raspar?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#raspagem-com-pandas">
+     Raspagem com
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conceitos-de-background">
+   Conceitos de background
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html-5">
+     HTML 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#arquivo-html">
+       Arquivo HTML
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dom">
+     DOM
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#arvore-dom">
+       Árvore DOM
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tags">
+     Tags
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#escrevendo-html-no-jupyter-notebook">
+     Escrevendo HTML no Jupyter Notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apis">
+     APIs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apis-brasileiras-relevantes">
+       APIs brasileiras relevantes:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodos-http">
+     Métodos HTTP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#json-e-xml">
+     JSON e XML
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#xml-x-json">
+       XML x JSON
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#web-crawlers">
+     <em>
+      Web crawlers
+     </em>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crawlers-e-termos-de-conduta">
+       <em>
+        Crawlers
+       </em>
+       e termos de conduta
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#robots-txt">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         robots.txt
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliotecas-para-raspagem-de-dados">
+   Bibliotecas para raspagem de dados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vantagens-de-beautifulsoup">
+     Vantagens de
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       BeautifulSoup
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pratica-raspagem-de-dados-do-site-da-ufpb">
+   Prática: raspagem de dados do site da UFPB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcionalidades-do-modulo">
+     Funcionalidades do módulo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navegacao-na-arvore-para-baixo">
+     Navegação na árvore para baixo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navegacao-na-arvore-para-cima">
+     Navegação na árvore para cima
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#realizando-buscas-na-arvore">
+     Realizando buscas na árvore
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcoes-customizadas">
+     Funções customizadas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limpeza-dos-dados-extraidos">
+     Limpeza dos dados extraídos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="raspagem-de-dados">
+<h1>Raspagem de dados<a class="headerlink" href="#raspagem-de-dados" title="Permalink to this headline">¶</a></h1>
+<section id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>Raspagem de dados</em> (<em>data scraping</em>), em seu sentido mais amplo, é um conceito aplicado à obtenção de dados de um certo programa a partir de outro de forma a extrair conteúdo de alto valor que sejam, prioritariamente, de fácil interpretação a humanos.</p></li>
+<li><p>Sinônimo para <em>raspagem da web</em> (<em>web scraping</em>), visto que a fonte mais ampla para coleta dados é a <em>web</em>.</p></li>
+<li><p>“Raspar” dados da <em>web</em> equivale a utilizar scripts, programas ou APIs para obter dados relevantes de sites, páginas, blogs, repositórios, ou qualquer outro lugar acessível por conectividade e requisição.</p></li>
+</ul>
+<section id="o-que-raspar">
+<h3>O que raspar?<a class="headerlink" href="#o-que-raspar" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>preços de ativos do mercado financeiro em tempo real;</p></li>
+<li><p>históricos de sinistros em saúde pública, tais como os registros de casos durante a pandemia da Covid-19;</p></li>
+<li><p>matérias jornalísticas sobre um mesmo tema em diversos canais de comunicação;</p></li>
+<li><p>placar final de todos os jogos da NBA nos últimos 5 anos.</p></li>
+<li><p>muitas outras coisas</p></li>
+</ul>
+</section>
+<section id="raspagem-com-pandas">
+<h3>Raspagem com <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#raspagem-com-pandas" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Durante o curso, você já lidou implicitamente com a raspagem de dados</p></li>
+<li><p>Ex.: carregamento de arquivo CSV hospedado em site da internet com <code class="docutils literal notranslate"><span class="pre">pandas.read_csv</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="conceitos-de-background">
+<h2>Conceitos de background<a class="headerlink" href="#conceitos-de-background" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Compilação de conceitos, módulos e ferramentas que dão base para a raspagem.</p></li>
+</ul>
+<section id="html-5">
+<h3>HTML 5<a class="headerlink" href="#html-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><em>HTML</em> (<em>HyperText Markup Language</em>), desenvolvida no início da década de 1990 como a linguagem básica da internet.</p></li>
+<li><p>A maioria das páginas da internet hoje são escritas em HTML 5, o padrão recomendado pela W3C.</p></li>
+</ul>
+<section id="arquivo-html">
+<h4>Arquivo HTML<a class="headerlink" href="#arquivo-html" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Um documento HTML é estruturado por meio de <em>elementos</em> enclausurados por um par de <em>tags</em>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;pt-br&quot;</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Introdução à Ciência de Dados<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ciência de Dados no século XXI<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A História começa neste <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;historia-icd.html&quot;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="c">&lt;!-- comentário --&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>No exemplo, <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code> e <code class="docutils literal notranslate"><span class="pre">&lt;/head&gt;</span></code> são exemplo de <em>tags</em> de abertura e fechamento para a seção <em>head</em> do documento.</p>
+</section>
+</section>
+<section id="dom">
+<h3>DOM<a class="headerlink" href="#dom" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Os navegadores da web interpretam o código HTML e o transformam em uma “árvore”.</p></li>
+<li><p>Esta árvore caracteriza o modelo de objetos do documento: DOM (<em>Document Object Model</em>).</p></li>
+</ul>
+<section id="arvore-dom">
+<h4>Árvore DOM<a class="headerlink" href="#arvore-dom" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>|- DOCTYPE: html
+|- html lang=&quot;pt-br&quot;
+   |- head
+   |  |- #text:
+   |  |- title
+   |  |  |- #text: Introdução à Ciência de Dados
+   |  |- #text:
+   |- #text:
+   |- body
+      |- #text:
+      |- h1
+      |  |- #text: Ciência de Dados no século XXI
+      |- #text:
+      |- p
+      |  |- #text: A História começa neste 
+      |  |- a href=&quot;historia-icd.html&quot;
+      |     | #text: link
+      |  |- #text:
+      |- #comment: comentário
+      |- #text:
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tags">
+<h3>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Existem diversas <em>tags</em> disponíveis em HTML.</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tag</p></th>
+<th class="head"><p>Descrição</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE&gt;</span></code></p></td>
+<td><p>define o tipo do documento</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code></p></td>
+<td><p>define a raiz de um documento HTML</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code></p></td>
+<td><p>enclausura os metadados (informações) sobre o documento</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span></code></p></td>
+<td><p>define um título para o documento</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code></p></td>
+<td><p>define o corpo do documento</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code></p></td>
+<td><p>define cabeçalho de primeiro nível (seção)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code></p></td>
+<td><p>define um parágrafo</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code></p></td>
+<td><p>define um <em>hyperlink</em> (ancoramento)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Lista completa em <a class="reference external" href="https://www.w3schools.com/TAGs/">https://www.w3schools.com/TAGs/</a></p>
+</section>
+<section id="escrevendo-html-no-jupyter-notebook">
+<h3>Escrevendo HTML no Jupyter Notebook<a class="headerlink" href="#escrevendo-html-no-jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Podemos escrever sintaxes de código HTML em um <em>Jupyter Notebook</em> e renderizar a saída formatada usando:</p>
+<ul>
+<li><p>o comando mágico <code class="docutils literal notranslate"><span class="pre">%%html</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IPython.display</span></code></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="c">&lt;!-- Nada aqui --&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Brincando com <span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>H<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;</span><span class="nt">sub</span><span class="p">&gt;</span>T<span class="p">&lt;/</span><span class="nt">sub</span><span class="p">&gt;&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>M<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>L!<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Muito legal adicionar <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>negrito<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>, 
+<span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>itálico<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> emojis como <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span> <span class="ni">&amp;#128540;</span> <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> e  
+um <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;none.html&quot;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> para lugar algum!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><!-- Nada aqui -->
+<h2>Brincando com <sup>H</sup><sub>T</sub><sup>M</sup>L!</h2>
+<p> Muito legal adicionar <b>negrito</b>, 
+<i>itálico</i> emojis como <span> &#128540; </span> e  
+um <a href="none.html">link</a> para lugar algum!</p>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;!-- Nada aqui --&gt; </span><span class="se">\</span>
+<span class="s2">&lt;h2&gt;Brincando com &lt;sup&gt;H&lt;/sup&gt;&lt;sub&gt;T&lt;/sub&gt;&lt;sup&gt;M&lt;/sup&gt;L!&lt;/h2&gt; </span><span class="se">\</span>
+<span class="s2">&lt;p&gt; Muito legal adicionar &lt;b&gt;negrito&lt;/b&gt;, </span><span class="se">\</span>
+<span class="s2">&lt;i&gt;itálico&lt;/i&gt; emojis como &lt;span&gt; &amp;#128540; &lt;/span&gt; e </span><span class="se">\</span>
+<span class="s2">um &lt;a href=&#39;none.html&#39;&gt;link&lt;/a&gt; para lugar algum!&lt;/p&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><!-- Nada aqui --> <h2>Brincando com <sup>H</sup><sub>T</sub><sup>M</sup>L!</h2> <p> Muito legal adicionar <b>negrito</b>, <i>itálico</i> emojis como <span> &#128540; </span> e um <a href='none.html'>link</a> para lugar algum!</p></div></div>
+</div>
+</section>
+<section id="apis">
+<h3>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Uma <em>API</em> (<em>Application Program Interface</em>) é um mecanismo (interface) que usa aplicativos de terceiros para realizar “conexões” e puxar dados. APIs são parecidas com módulos, mas não oferecem meramente um conjunto de funções, mas sim um programa capaz de operar com muitos dados.</p></li>
+<li><p>Diversas instuições fornecem APIs para que desenvolvedores possam coletar dados: Google, Facebook, Twitter, Yahoo, Elsevier, etc</p></li>
+</ul>
+<p>Lista de APIs públicas: <a class="reference external" href="https://devresourc.es/tools-and-utilities/public-apis">https://devresourc.es/tools-and-utilities/public-apis</a>.</p>
+<section id="apis-brasileiras-relevantes">
+<h4>APIs brasileiras relevantes:<a class="headerlink" href="#apis-brasileiras-relevantes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>APIs da B3 (Bolsa de Valores): <a class="reference external" href="https://www.b3.com.br/data/files/2B/41/CC/5D/10F42610D290A226790D8AA8/APIs-B3-Visao-Geral-versao-1.0.pdf">https://www.b3.com.br/data/files/2B/41/CC/5D/10F42610D290A226790D8AA8/APIs-B3-Visao-Geral-versao-1.0.pdf</a></p></li>
+<li><p>APIs do Governo Federal: <a class="reference external" href="https://www.gov.br/conecta/catalogo/">https://www.gov.br/conecta/catalogo/</a></p></li>
+</ul>
+</section>
+</section>
+<section id="metodos-http">
+<h3>Métodos HTTP<a class="headerlink" href="#metodos-http" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Na <em>web</em> lidamos com HTTP (<em>HyperText Transfer Protocol</em>), um protocolo de comunicação cliente/ servidor.</p></li>
+<li><p>O <em>scraping</em> ocorre por meio <em>requisições</em> (<em>requests</em>) e <em>respostas</em>.</p></li>
+<li><p>Em geral, há quatro métodos para transitar informações entre <em>browsers</em> e servidores <em>web</em> via HTTP:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span></code>, para recuperar informação;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POST</span></code>, para criar informação;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUT</span></code>, para atualizar informação;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, para deletar informação;</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="json-e-xml">
+<h3>JSON e XML<a class="headerlink" href="#json-e-xml" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>APIs utilizadas para raspagem de dados comumente retornam a informação:</p>
+<ul>
+<li><p>em formato XML (<em>eXtensible Markup Language</em>), blocada em <em>tags</em> ou</p></li>
+<li><p>em formato JSON (<em>JavaScript Object Notation</em>), serializada.</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>Nota: embora JSON seja a escolha de APIs mais modernas, é importante ter em mente que muitos provedores de APIs as fornecem com saída XML apenas. Um dos argumentos em favor de JSON é a economia de caracteres.</p>
+</div></blockquote>
+<section id="xml-x-json">
+<h4>XML x JSON<a class="headerlink" href="#xml-x-json" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>XML: 100 caracteres</p></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;user&gt;</span>
+    <span class="nt">&lt;firstname&gt;</span>Juan<span class="nt">&lt;/firstname&gt;</span>
+    <span class="nt">&lt;lastname&gt;</span>Hernandes<span class="nt">&lt;/lastname&gt;</span>
+    <span class="nt">&lt;username&gt;</span>Fernandez<span class="nt">&lt;/username&gt;</span>
+<span class="nt">&lt;/user&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>JSON: 75 caracteres (mesma informação com 25% menos espaço.)</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;user&quot;</span><span class="p">:</span>
+ <span class="p">{</span><span class="nt">&quot;firstname&quot;</span><span class="p">:</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;lastname&quot;</span><span class="p">:</span><span class="s2">&quot;Hernandes&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;Fernandez&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="web-crawlers">
+<h3><em>Web crawlers</em><a class="headerlink" href="#web-crawlers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Rastreadores da web (<em>web crawlers</em>) são programas que indexam informações da rede a partir de várias fontes. -</p></li>
+<li><p>Comportam-se como “espreitadores metódicos” - conhecidos como <em>bots</em>, <em>aranhas</em> ou <em>escutadores</em> da rede.</p></li>
+<li><p>Trabalham de forma recursiva <em>ad infinitum</em> puxando conteúdo de páginas e examinando-os.</p></li>
+</ul>
+<section id="crawlers-e-termos-de-conduta">
+<h4><em>Crawlers</em> e termos de conduta<a class="headerlink" href="#crawlers-e-termos-de-conduta" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Para coleta de dados, porém baseiam-se em termos de serviço e conduta.</p></li>
+<li><p>Todo site público possui, de alguma forma, termos de serviço geridos por um administrador que declaram o que é permitido ao <em>crawler</em> fazer ou não.</p></li>
+<li><p>Essas permissões (<em>allows</em>) ou restrições (<em>disallows</em>) estão expostas em arquivo chamado <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code>.</p></li>
+<li><p>Qualquer site relevante possui um arquivo deste associado à sua URL.</p></li>
+</ul>
+</section>
+<section id="robots-txt">
+<h4><code class="docutils literal notranslate"><span class="pre">robots.txt</span></code><a class="headerlink" href="#robots-txt" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Para vê-lo, basta adicionar este nome após a URL</p></li>
+<li><p>As restrições sobre <em>crawlers</em> esbarram na fronteira da ética, principalmente no que diz respeito à raspagem de dados.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Exemplo: <a class="reference external" href="https://www.ufpb.br/robots.txt:">https://www.ufpb.br/robots.txt:</a></p></li>
+</ul>
+<p>Para outros exemplos, veja:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.wikipedia.org/robots.txt">https://www.wikipedia.org/robots.txt</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="bibliotecas-para-raspagem-de-dados">
+<h2>Bibliotecas para raspagem de dados<a class="headerlink" href="#bibliotecas-para-raspagem-de-dados" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Há diversos exemplos: _requests, <em>grab</em>, <em>scrapy</em>, <em>restkit</em>, <em>lxml</em>, <em>PDFMiner</em>.</p></li>
+<li><p>Neste capítulo, vamos dar enfoque ao módulo Python <em>BeautifulSoap</em> e seus interpretadores (<em>parsers</em>).</p></li>
+</ul>
+<section id="vantagens-de-beautifulsoup">
+<h3>Vantagens de <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code><a class="headerlink" href="#vantagens-de-beautifulsoup" title="Permalink to this headline">¶</a></h3>
+<p>Segundo o <a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/">site oficial</a>, a <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></p>
+<ul class="simple">
+<li><p>fornece métodos simples e expressões idiomáticas “Pythônicas” para navegar, pesquisar e modificar uma árvore de análise: um kit de ferramentas para dissecar um documento e extrair o que você precisa.</p></li>
+<li><p>converte automaticamente os documentos recebidos em Unicode e os documentos enviados em UTF-8. Você não tem que pensar em codificações, a menos que o documento não especifique uma codificação e a Beautiful Soup não consiga detectar uma.</p></li>
+<li><p>baseia-se em interpretadores (<em>parsers</em>) Python populares como <em>lxml</em> e <em>html5lib</em>, permitindo que você experimente diferentes estratégias de análise para obter flexibilidade.</p></li>
+</ul>
+</section>
+</section>
+<section id="pratica-raspagem-de-dados-do-site-da-ufpb">
+<h2>Prática: raspagem de dados do site da UFPB<a class="headerlink" href="#pratica-raspagem-de-dados-do-site-da-ufpb" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Neste exemplo, faremos uma raspagem no site da UFPB para coletar a lista de cursos de graduação. Os passos a serem seguidos são:</p></li>
+</ul>
+<ol class="simple">
+<li><p>abrir uma requisição para a URL da PRG/UFPB;</p></li>
+<li><p>coletar o HTML da página;</p></li>
+<li><p>extrair o conteúdo da tabela de cursos na árvore DOM;</p></li>
+<li><p>construir um <em>DataFrame</em> cujas colunas devem conter: nome do curso, sede, modalidade, nome do(a) coordenador(a) e Centro de Ensino que administra o curso.</p></li>
+</ol>
+<section id="funcionalidades-do-modulo">
+<h3>Funcionalidades do módulo<a class="headerlink" href="#funcionalidades-do-modulo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Antes de produzirmos o <em>DataFrame</em>, faremos uma breve explanação sobre outras funcionalidades do módulo <code class="docutils literal notranslate"><span class="pre">BeautifulSoap</span></code>.</p></li>
+</ul>
+<p>Primeiramente, abriremos uma requisição com <code class="docutils literal notranslate"><span class="pre">urllib.request</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;https://sigaa.ufpb.br/sigaa/public/curso/lista.jsf?nivel=G&amp;aba=p-graduacao&#39;</span><span class="p">)</span>
+<span class="n">bs</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span><span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Neste ponto, criamos o objeto <code class="docutils literal notranslate"><span class="pre">bs</span></code> que contém a árvore DOM do documento HTML. Podemos acessar as partes do documento diretamente a partir das <em>tags</em> <code class="docutils literal notranslate"><span class="pre">head</span></code>, <code class="docutils literal notranslate"><span class="pre">body</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code> etc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># impressão na tela de head e body</span>
+<span class="c1"># omitidas por serem grandes. </span>
+<span class="c1"># Teste em seu computador!</span>
+<span class="n">head</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">head</span>
+<span class="n">body</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">body</span>
+<span class="n">title</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">title</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;title&gt; SIGAA- Sistema Integrado de Gestão de Atividades Acadêmicas &lt;/title&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos puxar o conteúdo das <em>tags</em> com <code class="docutils literal notranslate"><span class="pre">contents</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># é uma lista</span>
+<span class="n">title</span><span class="o">.</span><span class="n">contents</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39; SIGAA- Sistema Integrado de Gestão de Atividades Acadêmicas &#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># opera sobre str</span>
+<span class="n">title</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;SIGAA- Sistema Integrado de Gestão de Atividades Acadêmicas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos navegar na árvore por meio das <em>tags</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">head</span><span class="o">.</span><span class="n">link</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;link class=&quot;component&quot; href=&quot;/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/basic_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf;jsessionid=1902C352A582FDA4008F3B754472DB2D&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">head</span><span class="o">.</span><span class="n">meta</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">body</span><span class="o">.</span><span class="n">li</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;li&gt;&lt;a class=&quot;sr-only sr-only-focusable&quot; href=&quot;#conteudo&quot;&gt;Pular para conteúdo&lt;/a&gt;&lt;/li&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">body</span><span class="o">.</span><span class="n">span</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;span class=&quot;icone-contraste&quot;&gt;&lt;/span&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="navegacao-na-arvore-para-baixo">
+<h3>Navegação na árvore para baixo<a class="headerlink" href="#navegacao-na-arvore-para-baixo" title="Permalink to this headline">¶</a></h3>
+<p>A árvore DOM é baseada em uma estrutura do tipo “<em>parents</em>/<em>children</em>”. Um elemento pai pode ter um ou mais filhos e os elementos filhos podem também ter um ou mais filhos. Em termos de nível, os primeiros são <em>filhos diretos</em>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">contents</span></code> para encontrar filhas diretas como lista;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">children</span></code> para encontrar filhas diretas como iterador;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">descendants</span></code> para encontrar filhas diretas, filhas de filhas e assim por diante.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">body</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># iterador</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">body</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+&lt;class &#39;bs4.element.Tag&#39;&gt;
+&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+&lt;class &#39;bs4.element.Comment&#39;&gt;
+&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+&lt;class &#39;bs4.element.Tag&#39;&gt;
+&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+&lt;class &#39;bs4.element.Tag&#39;&gt;
+&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+&lt;class &#39;bs4.element.Comment&#39;&gt;
+&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># itera sobre todos os descendentes</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">body</span><span class="o">.</span><span class="n">descendants</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">500</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;descendente </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>descendente 500: &lt;class &#39;bs4.element.NavigableString&#39;&gt;
+descendente 1000: &lt;class &#39;bs4.element.NavigableString&#39;&gt;
+descendente 1500: &lt;class &#39;bs4.element.Tag&#39;&gt;
+descendente 2000: &lt;class &#39;bs4.element.NavigableString&#39;&gt;
+descendente 2500: &lt;class &#39;bs4.element.NavigableString&#39;&gt;
+descendente 3000: &lt;class &#39;bs4.element.NavigableString&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para navegar apenas em strings (já removendo espaços em branco) dentro de <em>tags</em>, podemos usar <code class="docutils literal notranslate"><span class="pre">stripped_strings</span></code>. Se quisermos considerar espaços, devemos usar apenas <code class="docutils literal notranslate"><span class="pre">strings</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># idenfica o campus sede em tabela </span>
+<span class="n">campus</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Areia&#39;</span><span class="p">,</span><span class="s1">&#39;Bananeiras&#39;</span><span class="p">,</span><span class="s1">&#39;Rio Tinto&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">body</span><span class="o">.</span><span class="n">tbody</span><span class="o">.</span><span class="n">stripped_strings</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">campus</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Areia,Areia,Areia,Areia,Areia,Areia,Rio Tinto,Rio Tinto,Rio Tinto,Rio Tinto,Rio Tinto,Rio Tinto,Bananeiras,Bananeiras,Bananeiras,Bananeiras,Bananeiras,Bananeiras,
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="navegacao-na-arvore-para-cima">
+<h3>Navegação na árvore para cima<a class="headerlink" href="#navegacao-na-arvore-para-cima" title="Permalink to this headline">¶</a></h3>
+<p>Inversamente, podemos acessar elementos “pai” (ou “mãe”) a partir dos filhos com <code class="docutils literal notranslate"><span class="pre">parent</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">head</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">parent</span><span class="p">)[:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;\n&#39;,
+ &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;,
+ &#39;\n&#39;,
+ &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para iterar sobre os elementos “pai” (ou “mãe”), use <code class="docutils literal notranslate"><span class="pre">parents</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">head</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">parents</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;bs4.element.Tag&#39;&gt;
+&lt;class &#39;bs4.element.Tag&#39;&gt;
+&lt;class &#39;bs4.BeautifulSoup&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="realizando-buscas-na-arvore">
+<h3>Realizando buscas na árvore<a class="headerlink" href="#realizando-buscas-na-arvore" title="Permalink to this headline">¶</a></h3>
+<p>Funções de localização bastante úteis são <code class="docutils literal notranslate"><span class="pre">find_all</span></code> e <code class="docutils literal notranslate"><span class="pre">find</span></code>. Podemos aplicá-la passando como argumento uma <em>tag</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">body</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)[</span><span class="mi">10</span><span class="p">:</span><span class="mi">15</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;td&gt;Presencial&lt;/td&gt;,
+ &lt;td&gt;SILDIVANE VALCACIA SILVA&lt;/td&gt;,
+ &lt;td&gt;
+ &lt;a href=&quot;portal.jsf?id=1626776&amp;amp;lc=pt_BR&quot; title=&quot;Visualizar Página do Curso&quot;&gt;
+ &lt;img src=&quot;/sigaa/img/view.gif;jsessionid=1902C352A582FDA4008F3B754472DB2D&quot;/&gt;
+ &lt;/a&gt;
+ &lt;/td&gt;,
+ &lt;td class=&quot;subFormulario&quot; colspan=&quot;5&quot;&gt;
+ 										CCA - CENTRO DE CIÊNCIAS AGRÁRIAS (CCA)
+ 										&lt;/td&gt;,
+ &lt;td&gt;
+ 							AGRONOMIA								
+ 							&lt;/td&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>uma lista de <em>tags</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">body</span><span class="o">.</span><span class="n">find_all</span><span class="p">([</span><span class="s1">&#39;li&#39;</span><span class="p">,</span><span class="s1">&#39;ul&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;ul id=&quot;menu-acessibilidade&quot;&gt;
+ &lt;li&gt;&lt;a class=&quot;sr-only sr-only-focusable&quot; href=&quot;#conteudo&quot;&gt;Pular para conteúdo&lt;/a&gt;&lt;/li&gt;
+ &lt;li class=&quot;separador&quot;&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a class=&quot;toggleable&quot; href=&quot;#&quot; id=&quot;acessibilidade-contraste&quot; title=&quot;Contraste&quot;&gt;&lt;span class=&quot;icone-contraste&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Auto Contraste&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ &lt;li class=&quot;separador&quot;&gt;&lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href=&quot;/sigaa/logon/&quot; style=&quot;font-size: 15px; font-weight: bold;&quot; title=&quot;Acessar o SIGAA&quot;&gt;Entrar&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;/ul&gt;,
+ &lt;li&gt;&lt;a class=&quot;sr-only sr-only-focusable&quot; href=&quot;#conteudo&quot;&gt;Pular para conteúdo&lt;/a&gt;&lt;/li&gt;,
+ &lt;li class=&quot;separador&quot;&gt;&lt;/li&gt;,
+ &lt;li&gt;&lt;a class=&quot;toggleable&quot; href=&quot;#&quot; id=&quot;acessibilidade-contraste&quot; title=&quot;Contraste&quot;&gt;&lt;span class=&quot;icone-contraste&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Auto Contraste&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;,
+ &lt;li class=&quot;separador&quot;&gt;&lt;/li&gt;,
+ &lt;li&gt;
+ &lt;a href=&quot;/sigaa/logon/&quot; style=&quot;font-size: 15px; font-weight: bold;&quot; title=&quot;Acessar o SIGAA&quot;&gt;Entrar&lt;/a&gt;
+ &lt;/li&gt;,
+ &lt;ul&gt;
+ &lt;/ul&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>ou <em>tag</em> e classe.</p>
+<blockquote>
+<div><p><em>Classes</em> dizem respeito ao estilo de formatação do arquivo HTML, que segue regras da linguagem <a class="reference external" href="https://www.w3schools.com/css/default.asp">CSS</a>.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># busca &lt;table data&gt; com classe &quot;subFormulario&quot;</span>
+<span class="n">body</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">,</span><span class="n">class_</span><span class="o">=</span><span class="s2">&quot;subFormulario&quot;</span><span class="p">)[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;td class=&quot;subFormulario&quot; colspan=&quot;5&quot;&gt;
+ 										CBIOTEC - CENTRO DE BIOTECNOLOGIA
+ 										&lt;/td&gt;,
+ &lt;td class=&quot;subFormulario&quot; colspan=&quot;5&quot;&gt;
+ 										CCA - CENTRO DE CIÊNCIAS AGRÁRIAS (CCA)
+ 										&lt;/td&gt;,
+ &lt;td class=&quot;subFormulario&quot; colspan=&quot;5&quot;&gt;
+ 										CCAE - CENTRO DE CIÊNCIAS APLICADAS E EDUCAÇÃO (CCAE)
+ 										&lt;/td&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos também realizar buscas específicas por expressões regulares. Para isso, basta usar o módulo <code class="docutils literal notranslate"><span class="pre">re</span></code> e funções como <code class="docutils literal notranslate"><span class="pre">re.compile</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">body</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;GRAD&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Consulta de Cursos -\n\tGRADUAÇÃO&#39;,
+ &#39;Através desta página você pode consultar os cursos de\n\tGRADUAÇÃO ofereridos pela UFPB. &#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">body</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;CENTRO&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;\n\t\t\t\t\t\t\t\t\t\tCBIOTEC - CENTRO DE BIOTECNOLOGIA\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCA - CENTRO DE CIÊNCIAS AGRÁRIAS (CCA)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCAE - CENTRO DE CIÊNCIAS APLICADAS E EDUCAÇÃO (CCAE)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCS - CENTRO DE CIÊNCIAS DA SAÚDE (CCS)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCEN - CENTRO DE CIÊNCIAS EXATAS E DA NATUREZA (CCEN)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCHLA. - CENTRO DE CIÊNCIAS HUMANAS, LETRAS E ARTES (CCHLA)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCHSA - CENTRO DE CIÊNCIAS HUMANAS SOCIAIS E AGRÁRIAS (CCHSA)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCJ - CENTRO DE CIÊNCIAS JURÍDICAS (CCJ)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCM - CENTRO DE CIENCIAS MEDICAS (CCM)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCSA - CENTRO DE CIÊNCIAS SOCIAIS E APLICADAS (CCSA)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCCTA - CENTRO DE COMUNICAÇÃO, TURISMO E ARTES (CCTA)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCE - CENTRO DE EDUCAÇÃO (CE)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCEAR - CENTRO DE ENERGIAS E ALTERNATIVAS E RENOVÁVEIS (CEAR)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCI - CENTRO DE INFORMÁTICA (CI)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCT - CENTRO DE TECNOLOGIA (CT)\n\t\t\t\t\t\t\t\t\t\t&#39;,
+ &#39;\n\t\t\t\t\t\t\t\t\t\tCTDR - CENTRO DE TECNOLOGIA E DESENVOLVIMENTO REGIONAL (CTDR)\n\t\t\t\t\t\t\t\t\t\t&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se o resultado a ser localizado for único, podemos usar <code class="docutils literal notranslate"><span class="pre">find</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">body</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;Copyright&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n\t\t\tSIGAA - 21.11.0 -| STI - Superintendência de Tecnologia da Informação | Copyright © 2006-2021 - UFPB\n\t\t&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="funcoes-customizadas">
+<h3>Funções customizadas<a class="headerlink" href="#funcoes-customizadas" title="Permalink to this headline">¶</a></h3>
+<p>Agora, implementaremos algumas funções customizadas para extrair o cabeçalho e o conteúdo da tabela de cursos do site da UFPB. Essas funções varrem a árvore DOM e coletam apenas as informações de interesse, transformando-as para listas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extrai cabeçalhos</span>
+<span class="k">def</span> <span class="nf">get_table_head</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Lê objeto tabela e extrai header para lista&#39;&#39;&#39;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">thead</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;thead&#39;</span><span class="p">)</span>
+    <span class="n">th</span> <span class="o">=</span> <span class="n">thead</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">th</span><span class="p">:</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">getText</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="n">t_header</span> <span class="o">=</span> <span class="n">get_table_head</span><span class="p">(</span><span class="n">body</span><span class="o">.</span><span class="n">div</span><span class="p">)</span>
+
+<span class="n">t_header</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Nome&#39;, &#39;Sede&#39;, &#39;Modalidade&#39;, &#39;Coordenador&#39;, &#39;&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extrai linhas</span>
+<span class="k">def</span> <span class="nf">get_table_body</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">tbody</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;tbody&#39;</span><span class="p">)</span>
+    <span class="n">tr</span> <span class="o">=</span> <span class="n">tbody</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tr</span><span class="p">:</span>
+        <span class="n">this_row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">row_fields</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">row_fields</span><span class="p">:</span>
+            <span class="n">this_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">getText</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">this_row</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">get_table_body</span><span class="p">(</span><span class="n">body</span><span class="o">.</span><span class="n">div</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="limpeza-dos-dados-extraidos">
+<h3>Limpeza dos dados extraídos<a class="headerlink" href="#limpeza-dos-dados-extraidos" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Tabela original não traz os nomes dos cursos organizados por linha</p></li>
+<li><p>Precisamos de uma coluna com o nome de cada Centro de Ensino organizado por curso</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># cria DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">t_header</span><span class="p">)</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;CENTRO&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">centros</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">centros</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+<span class="n">idx</span>
+
+<span class="c1"># preenchimento</span>
+<span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">idx</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">idx</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span>
+            <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">centros</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># extra</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">-</span> <span class="nb">max</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+<span class="n">vals</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">dx</span><span class="o">*</span><span class="p">[</span><span class="n">vals</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+
+<span class="c1"># limpa e renomeia</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Centro&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Curso&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Curso</th>
+      <th>Sede</th>
+      <th>Modalidade</th>
+      <th>Coordenador</th>
+      <th></th>
+      <th>Centro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BIOTECNOLOGIA</td>
+      <td>João Pessoa</td>
+      <td>Presencial</td>
+      <td>SILDIVANE VALCACIA SILVA</td>
+      <td></td>
+      <td>CBIOTEC - CENTRO DE BIOTECNOLOGIA</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AGRONOMIA</td>
+      <td>Areia</td>
+      <td>Presencial</td>
+      <td>FABIO MIELEZRSKI</td>
+      <td></td>
+      <td>CCA - CENTRO DE CIÊNCIAS AGRÁRIAS (CCA)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>CIÊNCIAS BIOLÓGICAS- AREIA</td>
+      <td>Areia</td>
+      <td>Presencial</td>
+      <td>LAIS ANGELICA DE ANDRADE PINHEIRO BORGES</td>
+      <td></td>
+      <td>CCA - CENTRO DE CIÊNCIAS AGRÁRIAS (CCA)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MEDICINA VETERINÁRIA</td>
+      <td>Areia</td>
+      <td>Presencial</td>
+      <td>GISELE DE CASTRO MENEZES</td>
+      <td></td>
+      <td>CCA - CENTRO DE CIÊNCIAS AGRÁRIAS (CCA)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>QUÍMICA</td>
+      <td>Areia</td>
+      <td>Presencial</td>
+      <td>DAYSE DAS NEVES MOREIRA</td>
+      <td></td>
+      <td>CCA - CENTRO DE CIÊNCIAS AGRÁRIAS (CCA)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>QUÍMICA INDUSTRIAL</td>
+      <td>João Pessoa</td>
+      <td>Presencial</td>
+      <td>RAUL ROSENHAIM</td>
+      <td></td>
+      <td>CT - CENTRO DE TECNOLOGIA (CT)</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>ADMINISTRAÇÃO PÚBLICA</td>
+      <td>João Pessoa</td>
+      <td>A Distância</td>
+      <td>JULIANA FERNANDES MOREIRA</td>
+      <td></td>
+      <td>CT - CENTRO DE TECNOLOGIA (CT)</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>GASTRONOMIA</td>
+      <td>João Pessoa</td>
+      <td>Presencial</td>
+      <td>SAMARA DE MACÊDO MORAIS</td>
+      <td></td>
+      <td>CT - CENTRO DE TECNOLOGIA (CT)</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>TECNOLOGIA DE ALIMENTOS</td>
+      <td>João Pessoa</td>
+      <td>Presencial</td>
+      <td>ISMAEL IVAN ROCKENBACH</td>
+      <td></td>
+      <td>CT - CENTRO DE TECNOLOGIA (CT)</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>TECNOLOGIA EM PRODUÇÃO SUCROALCOOLEIRA</td>
+      <td>João Pessoa</td>
+      <td>Presencial</td>
+      <td>SOLANGE MARIA DE VASCONCELOS</td>
+      <td></td>
+      <td>CT - CENTRO DE TECNOLOGIA (CT)</td>
+    </tr>
+  </tbody>
+</table>
+<p>120 rows × 6 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

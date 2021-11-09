@@ -41,6 +41,7 @@
   chapters:
   - file: ipynb/16-visualizacao-dados-seaborn
   - file: ipynb/17-raspagem-dados
+  - file: ipynb/18-analise-redes
 - part: Questionários
   numbered: false
   chapters:
