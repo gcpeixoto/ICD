@@ -188,7 +188,7 @@ plt.gcf().set_size_inches((6,6))
 # 
 # $$\text{acc} = \dfrac{TP + TN}{TP + TN + FP + FN}$$
 # 
-# $$\text{rec} = \dfrac{TP}{TP + FP}$$
+# $$\text{rec} = \dfrac{TP}{TP + FN}$$
 # 
 # $$\text{spec} = \dfrac{TN}{TN + FP}$$
 # 

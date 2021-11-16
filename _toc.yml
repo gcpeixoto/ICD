@@ -42,6 +42,7 @@
   - file: ipynb/16-visualizacao-dados-seaborn
   - file: ipynb/17-raspagem-dados
   - file: ipynb/18-analise-redes
+  - file: ipynb/19-etica-dados
 - part: Questionários
   numbered: false
   chapters:

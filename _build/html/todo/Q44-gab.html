@@ -1,0 +1,1900 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Questionário Q44 &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/13-regressao.html">
+   Análise de regressão
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/13a-distribuicoes.html">
+   Distribuições
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/14-aprendizado-maquina.html">
+   Aprendizado de máquina - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/14b-aprendizado-maquina-2.html">
+   Aprendizado de máquina - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/15-otimizacao.html">
+   Otimização
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 6
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/16-visualizacao-dados-seaborn.html">
+   Visualização de dados com
+   <em>
+    seaborn
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/17-raspagem-dados.html">
+   Raspagem de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/19-etica-dados.html">
+   Ciência de dados e ética
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q41.html">
+   Questionário 41 (Q41)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q42.html">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q43.html">
+   Questionário 43 (Q43)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q51.html">
+   Questionário 51 (Q51)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/todo/Q44-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/Q44-gab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/Q44-gab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Questionário Q44
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gabarito">
+   Gabarito
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Gabarito
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="questionario-q44">
+<h1>Questionário Q44<a class="headerlink" href="#questionario-q44" title="Permalink to this headline">¶</a></h1>
+<p>Orientações:</p>
+<ul class="simple">
+<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
+<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
+<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
+<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-a à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
+</ul>
+<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
+<hr><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questão 1.</strong> O <em>dataset</em>
+<a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/covid19-weekly-trends-in-europe.csv?raw=true">covid19-weekly-trends-in-europe.csv</a> contém as tendências semanais de casos de Covid-19 em diferentes regiões da Europa registradas em 8 de novembro de 2021.</p>
+<p>E tendo os dados da média móvel de mortes do brasil em 7 dias, partindo do dia 3 (quarta-feira), até o dia 8 (Segunda-feira):</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data</p></th>
+<th class="text-align:center head"><p>Dia</p></th>
+<th class="text-align:right head"><p>Mortes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>03/11</p></td>
+<td class="text-align:center"><p>Quarta</p></td>
+<td class="text-align:right"><p>225</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>04/11</p></td>
+<td class="text-align:center"><p>Quinta</p></td>
+<td class="text-align:right"><p>227</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>05/11</p></td>
+<td class="text-align:center"><p>Sexta</p></td>
+<td class="text-align:right"><p>230</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>06/11</p></td>
+<td class="text-align:center"><p>Sabado</p></td>
+<td class="text-align:right"><p>237</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>07/11</p></td>
+<td class="text-align:center"><p>Domingo</p></td>
+<td class="text-align:right"><p>232</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>08/11</p></td>
+<td class="text-align:center"><p>Segunda</p></td>
+<td class="text-align:right"><p>235</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>09/11</p></td>
+<td class="text-align:center"><p>Terça</p></td>
+<td class="text-align:right"><p>243</p></td>
+</tr>
+</tbody>
+</table>
+<p>Fonte: <a class="reference external" href="https://g1.globo.com/saude/coronavirus/noticia/2021/11/09/brasil-completa-uma-semana-com-media-movel-abaixo-de-250-vitimas-diarias-de-covid-total-se-aproxima-de-610-mil.ghtml">Portal G1</a>.</p>
+<p>Dito isso, faça sua função para calcular a distribuição acumulativa entre as mortes em 7 dias por COVID nas diferentes regiões da Europa e o valor mortes do brasil em cada um dos 7 dias acima, guarde em um array e informe qual dia tem a maior probabilidade de ser encontrada.</p>
+<p>Posteriormente, separe os países da união europeia (apenas o que estão no dataset) e os que não estão na UE, e avaliando os casos dos ultimos 7 dias dessas (Cases in the last 7 days) dentre as duas regiões que vc selecionou informe qual é mais assimétricamente distribuido.</p>
+<p>Assinale de maneira respectiva a alternativa correta:</p>
+<p>A. Segunda // Fora da União Européia</p>
+<p>B. Terça // Dentro da União Européia</p>
+<p>C. Quarta // Dentro da União Européia</p>
+<p>D. Segunda // Dentro da União Européia</p>
+<p>E. Terça // Fora da União Européia</p>
+<hr>
+</section>
+<section id="gabarito">
+<h1>Gabarito<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>E</strong></p>
+<p>This Dataset contains Weekly trends of COVID-19 in different regions of Europe as on November 08, 2021.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dia</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Quarta&#39;</span><span class="p">,</span><span class="s1">&#39;Quinta&#39;</span><span class="p">,</span><span class="s1">&#39;Sexta&#39;</span><span class="p">,</span> <span class="s1">&#39;Sabado&#39;</span><span class="p">,</span><span class="s1">&#39;Domingo&#39;</span><span class="p">,</span><span class="s1">&#39;Segunda&#39;</span><span class="p">,</span><span class="s1">&#39;Terça&#39;</span><span class="p">]</span>
+<span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;03/11&#39;</span><span class="p">,</span><span class="s1">&#39;04/11&#39;</span><span class="p">,</span><span class="s1">&#39;05/11&#39;</span><span class="p">,</span><span class="s1">&#39;06/11&#39;</span><span class="p">,</span><span class="s1">&#39;07/11&#39;</span><span class="p">,</span><span class="s1">&#39;08/11&#39;</span><span class="p">,</span><span class="s1">&#39;09/11&#39;</span><span class="p">]</span>
+<span class="n">deaths</span> <span class="o">=</span> <span class="p">[</span><span class="mi">225</span><span class="p">,</span><span class="mi">227</span><span class="p">,</span><span class="mi">230</span><span class="p">,</span><span class="mi">237</span><span class="p">,</span><span class="mi">232</span><span class="p">,</span><span class="mi">235</span><span class="p">,</span><span class="mi">243</span><span class="p">]</span>
+<span class="n">brasil_deaths_weakly</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Dia&quot;</span><span class="p">:</span><span class="n">dia</span><span class="p">,</span><span class="s2">&quot;Mortes&quot;</span><span class="p">:</span><span class="n">deaths</span><span class="p">},</span> <span class="n">index</span> <span class="o">=</span> <span class="n">date</span><span class="p">)</span>
+<span class="n">brasil_deaths_weakly</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dia</th>
+      <th>Mortes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>03/11</th>
+      <td>Quarta</td>
+      <td>225</td>
+    </tr>
+    <tr>
+      <th>04/11</th>
+      <td>Quinta</td>
+      <td>227</td>
+    </tr>
+    <tr>
+      <th>05/11</th>
+      <td>Sexta</td>
+      <td>230</td>
+    </tr>
+    <tr>
+      <th>06/11</th>
+      <td>Sabado</td>
+      <td>237</td>
+    </tr>
+    <tr>
+      <th>07/11</th>
+      <td>Domingo</td>
+      <td>232</td>
+    </tr>
+    <tr>
+      <th>08/11</th>
+      <td>Segunda</td>
+      <td>235</td>
+    </tr>
+    <tr>
+      <th>09/11</th>
+      <td>Terça</td>
+      <td>243</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;COVID-19_WEEKLY_TRENDS_IN_EUROPE.csv&quot;</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Country, Other&quot;</span><span class="p">)</span>
+<span class="n">db</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Cases in the last 7 days</th>
+      <th>Cases in the preceding 7 days</th>
+      <th>Weekly Case % Change</th>
+      <th>Cases in the last 7 days/1M pop</th>
+      <th>Deaths in the last 7 days</th>
+      <th>Deaths in the preceeding 7 days</th>
+      <th>Weekly Death % Change</th>
+      <th>Deaths in the last 7 days/1M pop</th>
+      <th>Population</th>
+    </tr>
+    <tr>
+      <th>Country, Other</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Russia</th>
+      <td>281305</td>
+      <td>272147</td>
+      <td>3.0</td>
+      <td>1926</td>
+      <td>8276</td>
+      <td>7938</td>
+      <td>4.0</td>
+      <td>57</td>
+      <td>146018963</td>
+    </tr>
+    <tr>
+      <th>UK</th>
+      <td>245052</td>
+      <td>281168</td>
+      <td>-13.0</td>
+      <td>3584</td>
+      <td>1173</td>
+      <td>1099</td>
+      <td>7.0</td>
+      <td>17</td>
+      <td>68367364</td>
+    </tr>
+    <tr>
+      <th>Germany</th>
+      <td>172611</td>
+      <td>131880</td>
+      <td>31.0</td>
+      <td>2051</td>
+      <td>800</td>
+      <td>465</td>
+      <td>72.0</td>
+      <td>10</td>
+      <td>84145628</td>
+    </tr>
+    <tr>
+      <th>Ukraine</th>
+      <td>153131</td>
+      <td>152897</td>
+      <td>0.2</td>
+      <td>3530</td>
+      <td>4355</td>
+      <td>3857</td>
+      <td>13.0</td>
+      <td>100</td>
+      <td>43378803</td>
+    </tr>
+    <tr>
+      <th>Poland</th>
+      <td>78963</td>
+      <td>52327</td>
+      <td>51.0</td>
+      <td>2089</td>
+      <td>758</td>
+      <td>552</td>
+      <td>37.0</td>
+      <td>20</td>
+      <td>37790630</td>
+    </tr>
+    <tr>
+      <th>Netherlands</th>
+      <td>68958</td>
+      <td>49489</td>
+      <td>39.0</td>
+      <td>4012</td>
+      <td>150</td>
+      <td>97</td>
+      <td>55.0</td>
+      <td>9</td>
+      <td>17186062</td>
+    </tr>
+    <tr>
+      <th>Romania</th>
+      <td>58851</td>
+      <td>86103</td>
+      <td>-32.0</td>
+      <td>3087</td>
+      <td>2901</td>
+      <td>3058</td>
+      <td>-5.0</td>
+      <td>152</td>
+      <td>19064310</td>
+    </tr>
+    <tr>
+      <th>Czechia</th>
+      <td>53152</td>
+      <td>33393</td>
+      <td>59.0</td>
+      <td>4951</td>
+      <td>243</td>
+      <td>149</td>
+      <td>63.0</td>
+      <td>23</td>
+      <td>10735806</td>
+    </tr>
+    <tr>
+      <th>Austria</th>
+      <td>52906</td>
+      <td>32375</td>
+      <td>63.0</td>
+      <td>5829</td>
+      <td>145</td>
+      <td>106</td>
+      <td>37.0</td>
+      <td>16</td>
+      <td>9075760</td>
+    </tr>
+    <tr>
+      <th>France</th>
+      <td>50607</td>
+      <td>41009</td>
+      <td>23.0</td>
+      <td>773</td>
+      <td>227</td>
+      <td>216</td>
+      <td>5.0</td>
+      <td>3</td>
+      <td>65468526</td>
+    </tr>
+    <tr>
+      <th>Belgium</th>
+      <td>46581</td>
+      <td>50270</td>
+      <td>-7.0</td>
+      <td>3996</td>
+      <td>123</td>
+      <td>147</td>
+      <td>-16.0</td>
+      <td>11</td>
+      <td>11657712</td>
+    </tr>
+    <tr>
+      <th>Greece</th>
+      <td>42734</td>
+      <td>25812</td>
+      <td>66.0</td>
+      <td>4127</td>
+      <td>357</td>
+      <td>310</td>
+      <td>15.0</td>
+      <td>34</td>
+      <td>10354278</td>
+    </tr>
+    <tr>
+      <th>Serbia</th>
+      <td>40276</td>
+      <td>44540</td>
+      <td>-10.0</td>
+      <td>4635</td>
+      <td>450</td>
+      <td>446</td>
+      <td>1.0</td>
+      <td>52</td>
+      <td>8689831</td>
+    </tr>
+    <tr>
+      <th>Italy</th>
+      <td>36082</td>
+      <td>30780</td>
+      <td>17.0</td>
+      <td>598</td>
+      <td>291</td>
+      <td>274</td>
+      <td>6.0</td>
+      <td>5</td>
+      <td>60341753</td>
+    </tr>
+    <tr>
+      <th>Slovakia</th>
+      <td>34862</td>
+      <td>27335</td>
+      <td>28.0</td>
+      <td>6381</td>
+      <td>195</td>
+      <td>131</td>
+      <td>49.0</td>
+      <td>36</td>
+      <td>5463213</td>
+    </tr>
+    <tr>
+      <th>Croatia</th>
+      <td>30979</td>
+      <td>25023</td>
+      <td>24.0</td>
+      <td>7610</td>
+      <td>280</td>
+      <td>182</td>
+      <td>54.0</td>
+      <td>69</td>
+      <td>4071065</td>
+    </tr>
+    <tr>
+      <th>Bulgaria</th>
+      <td>30270</td>
+      <td>33049</td>
+      <td>-8.0</td>
+      <td>4401</td>
+      <td>1075</td>
+      <td>926</td>
+      <td>16.0</td>
+      <td>156</td>
+      <td>6877774</td>
+    </tr>
+    <tr>
+      <th>Hungary</th>
+      <td>28745</td>
+      <td>19594</td>
+      <td>47.0</td>
+      <td>2986</td>
+      <td>455</td>
+      <td>237</td>
+      <td>92.0</td>
+      <td>47</td>
+      <td>9627220</td>
+    </tr>
+    <tr>
+      <th>Ireland</th>
+      <td>23792</td>
+      <td>15717</td>
+      <td>51.0</td>
+      <td>4747</td>
+      <td>56</td>
+      <td>67</td>
+      <td>-16.0</td>
+      <td>11</td>
+      <td>5012190</td>
+    </tr>
+    <tr>
+      <th>Slovenia</th>
+      <td>20128</td>
+      <td>15938</td>
+      <td>26.0</td>
+      <td>9680</td>
+      <td>85</td>
+      <td>62</td>
+      <td>37.0</td>
+      <td>41</td>
+      <td>2079324</td>
+    </tr>
+    <tr>
+      <th>Lithuania</th>
+      <td>18391</td>
+      <td>20506</td>
+      <td>-10.0</td>
+      <td>6886</td>
+      <td>231</td>
+      <td>244</td>
+      <td>-5.0</td>
+      <td>86</td>
+      <td>2670951</td>
+    </tr>
+    <tr>
+      <th>Switzerland</th>
+      <td>14892</td>
+      <td>10144</td>
+      <td>47.0</td>
+      <td>1704</td>
+      <td>43</td>
+      <td>41</td>
+      <td>5.0</td>
+      <td>5</td>
+      <td>8740037</td>
+    </tr>
+    <tr>
+      <th>Denmark</th>
+      <td>14778</td>
+      <td>11369</td>
+      <td>30.0</td>
+      <td>2539</td>
+      <td>24</td>
+      <td>15</td>
+      <td>60.0</td>
+      <td>4</td>
+      <td>5819739</td>
+    </tr>
+    <tr>
+      <th>Belarus</th>
+      <td>13759</td>
+      <td>13934</td>
+      <td>-1.0</td>
+      <td>1457</td>
+      <td>114</td>
+      <td>116</td>
+      <td>-2.0</td>
+      <td>12</td>
+      <td>9445126</td>
+    </tr>
+    <tr>
+      <th>Latvia</th>
+      <td>12685</td>
+      <td>16566</td>
+      <td>-23.0</td>
+      <td>6827</td>
+      <td>246</td>
+      <td>225</td>
+      <td>9.0</td>
+      <td>132</td>
+      <td>1858017</td>
+    </tr>
+    <tr>
+      <th>Spain</th>
+      <td>11581</td>
+      <td>13336</td>
+      <td>-13.0</td>
+      <td>248</td>
+      <td>108</td>
+      <td>228</td>
+      <td>-53.0</td>
+      <td>2</td>
+      <td>46779233</td>
+    </tr>
+    <tr>
+      <th>Estonia</th>
+      <td>11127</td>
+      <td>11931</td>
+      <td>-7.0</td>
+      <td>8380</td>
+      <td>79</td>
+      <td>70</td>
+      <td>13.0</td>
+      <td>59</td>
+      <td>1327740</td>
+    </tr>
+    <tr>
+      <th>Norway</th>
+      <td>9575</td>
+      <td>6763</td>
+      <td>42.0</td>
+      <td>1748</td>
+      <td>22</td>
+      <td>6</td>
+      <td>267.0</td>
+      <td>4</td>
+      <td>5478446</td>
+    </tr>
+    <tr>
+      <th>Moldova</th>
+      <td>8196</td>
+      <td>9768</td>
+      <td>-16.0</td>
+      <td>2038</td>
+      <td>309</td>
+      <td>293</td>
+      <td>5.0</td>
+      <td>77</td>
+      <td>4021300</td>
+    </tr>
+    <tr>
+      <th>Portugal</th>
+      <td>6906</td>
+      <td>5513</td>
+      <td>25.0</td>
+      <td>680</td>
+      <td>46</td>
+      <td>24</td>
+      <td>92.0</td>
+      <td>5</td>
+      <td>10156551</td>
+    </tr>
+    <tr>
+      <th>Finland</th>
+      <td>4945</td>
+      <td>4375</td>
+      <td>13.0</td>
+      <td>891</td>
+      <td>26</td>
+      <td>19</td>
+      <td>37.0</td>
+      <td>5</td>
+      <td>5552342</td>
+    </tr>
+    <tr>
+      <th>Montenegro</th>
+      <td>4265</td>
+      <td>3392</td>
+      <td>26.0</td>
+      <td>6790</td>
+      <td>45</td>
+      <td>38</td>
+      <td>18.0</td>
+      <td>72</td>
+      <td>628173</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>3825</td>
+      <td>3604</td>
+      <td>6.0</td>
+      <td>1331</td>
+      <td>31</td>
+      <td>50</td>
+      <td>-38.0</td>
+      <td>11</td>
+      <td>2873553</td>
+    </tr>
+    <tr>
+      <th>North Macedonia</th>
+      <td>3525</td>
+      <td>2786</td>
+      <td>27.0</td>
+      <td>1692</td>
+      <td>100</td>
+      <td>81</td>
+      <td>23.0</td>
+      <td>48</td>
+      <td>2083258</td>
+    </tr>
+    <tr>
+      <th>Sweden</th>
+      <td>3466</td>
+      <td>5920</td>
+      <td>-41.0</td>
+      <td>340</td>
+      <td>10</td>
+      <td>20</td>
+      <td>-50.0</td>
+      <td>1</td>
+      <td>10184260</td>
+    </tr>
+    <tr>
+      <th>Bosnia and Herzegovina</th>
+      <td>3355</td>
+      <td>5083</td>
+      <td>-34.0</td>
+      <td>1031</td>
+      <td>151</td>
+      <td>201</td>
+      <td>-25.0</td>
+      <td>46</td>
+      <td>3253249</td>
+    </tr>
+    <tr>
+      <th>Luxembourg</th>
+      <td>1159</td>
+      <td>1080</td>
+      <td>7.0</td>
+      <td>1812</td>
+      <td>6</td>
+      <td>1</td>
+      <td>500.0</td>
+      <td>9</td>
+      <td>639707</td>
+    </tr>
+    <tr>
+      <th>Channel Islands</th>
+      <td>614</td>
+      <td>476</td>
+      <td>29.0</td>
+      <td>3488</td>
+      <td>0</td>
+      <td>1</td>
+      <td>-100.0</td>
+      <td>0</td>
+      <td>176025</td>
+    </tr>
+    <tr>
+      <th>Iceland</th>
+      <td>583</td>
+      <td>605</td>
+      <td>-4.0</td>
+      <td>1694</td>
+      <td>1</td>
+      <td>0</td>
+      <td>100.0</td>
+      <td>3</td>
+      <td>344232</td>
+    </tr>
+    <tr>
+      <th>Faeroe Islands</th>
+      <td>470</td>
+      <td>530</td>
+      <td>-11.0</td>
+      <td>9570</td>
+      <td>3</td>
+      <td>0</td>
+      <td>300.0</td>
+      <td>61</td>
+      <td>49114</td>
+    </tr>
+    <tr>
+      <th>Isle of Man</th>
+      <td>279</td>
+      <td>494</td>
+      <td>-44.0</td>
+      <td>3258</td>
+      <td>3</td>
+      <td>0</td>
+      <td>300.0</td>
+      <td>35</td>
+      <td>85640</td>
+    </tr>
+    <tr>
+      <th>Malta</th>
+      <td>251</td>
+      <td>102</td>
+      <td>146.0</td>
+      <td>566</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>443131</td>
+    </tr>
+    <tr>
+      <th>Gibraltar</th>
+      <td>161</td>
+      <td>118</td>
+      <td>36.0</td>
+      <td>4781</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>33677</td>
+    </tr>
+    <tr>
+      <th>Andorra</th>
+      <td>102</td>
+      <td>112</td>
+      <td>-9.0</td>
+      <td>1317</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>77432</td>
+    </tr>
+    <tr>
+      <th>Liechtenstein</th>
+      <td>81</td>
+      <td>47</td>
+      <td>72.0</td>
+      <td>2116</td>
+      <td>0</td>
+      <td>1</td>
+      <td>-100.0</td>
+      <td>0</td>
+      <td>38276</td>
+    </tr>
+    <tr>
+      <th>San Marino</th>
+      <td>60</td>
+      <td>34</td>
+      <td>76.0</td>
+      <td>1763</td>
+      <td>0</td>
+      <td>1</td>
+      <td>-100.0</td>
+      <td>0</td>
+      <td>34027</td>
+    </tr>
+    <tr>
+      <th>Monaco</th>
+      <td>21</td>
+      <td>27</td>
+      <td>-22.0</td>
+      <td>530</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>39617</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">UE</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s2">&quot;https://en.wikipedia.org/wiki/List_of_European_Union_member_states_by_population&quot;</span><span class="p">)</span>
+<span class="n">UE</span> <span class="o">=</span> <span class="n">UE</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">UE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rank</th>
+      <th>Country</th>
+      <th>2020Eurostat figure[1]</th>
+      <th>% ofpop.</th>
+      <th>Nationalofficial figure</th>
+      <th>Date of nationalofficial figure</th>
+      <th>Source of nationalofficial figure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>Germany</td>
+      <td>83166711</td>
+      <td>18.59</td>
+      <td>83129285.0</td>
+      <td>June 30, 2021</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.0</td>
+      <td>France</td>
+      <td>67320216</td>
+      <td>15.05</td>
+      <td>67399000.0</td>
+      <td>March, 2021</td>
+      <td>Monthly official estimate</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.0</td>
+      <td>Italy</td>
+      <td>59641488</td>
+      <td>13.33</td>
+      <td>60391000.0</td>
+      <td>January 1, 2020</td>
+      <td>Monthly official estimate</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.0</td>
+      <td>Spain</td>
+      <td>47332614</td>
+      <td>10.58</td>
+      <td>47351567.0</td>
+      <td>July 1, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>Poland</td>
+      <td>37958138</td>
+      <td>8.49</td>
+      <td>38230000.0</td>
+      <td>February 28, 2021</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6.0</td>
+      <td>Romania</td>
+      <td>19328838</td>
+      <td>4.32</td>
+      <td>19318000.0</td>
+      <td>January 1, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7.0</td>
+      <td>Netherlands</td>
+      <td>17407585</td>
+      <td>3.89</td>
+      <td>17475908.0</td>
+      <td>February 1, 2021</td>
+      <td>Monthly official estimate</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8.0</td>
+      <td>Belgium</td>
+      <td>11522440</td>
+      <td>2.58</td>
+      <td>11560220.0</td>
+      <td>March 1, 2021</td>
+      <td>Monthly official estimate</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9.0</td>
+      <td>Greece</td>
+      <td>10718565</td>
+      <td>2.40</td>
+      <td>10718565.0</td>
+      <td>January 1, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10.0</td>
+      <td>Czech Republic</td>
+      <td>10693939</td>
+      <td>2.39</td>
+      <td>10701777.0</td>
+      <td>December 31, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11.0</td>
+      <td>Sweden</td>
+      <td>10327589</td>
+      <td>2.31</td>
+      <td>10379285.0</td>
+      <td>December 31, 2020</td>
+      <td>Monthly official estimate</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12.0</td>
+      <td>Portugal</td>
+      <td>10295909</td>
+      <td>2.30</td>
+      <td>10295909.0</td>
+      <td>2019</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13.0</td>
+      <td>Hungary</td>
+      <td>9769526</td>
+      <td>2.18</td>
+      <td>9730000.0</td>
+      <td>January 1, 2021</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14.0</td>
+      <td>Austria</td>
+      <td>8901064</td>
+      <td>1.99</td>
+      <td>8901064.0</td>
+      <td>January 1, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15.0</td>
+      <td>Bulgaria</td>
+      <td>6951482</td>
+      <td>1.55</td>
+      <td>6916548.0</td>
+      <td>December 31, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16.0</td>
+      <td>Denmark</td>
+      <td>5822763</td>
+      <td>1.30</td>
+      <td>5840045.0</td>
+      <td>January 1, 2021</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17.0</td>
+      <td>Finland</td>
+      <td>5525292</td>
+      <td>1.24</td>
+      <td>5537116.0</td>
+      <td>March 31, 2021</td>
+      <td>Monthly official estimate</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18.0</td>
+      <td>Slovakia</td>
+      <td>5457873</td>
+      <td>1.22</td>
+      <td>5459781.0</td>
+      <td>December 31, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19.0</td>
+      <td>Ireland</td>
+      <td>4964440</td>
+      <td>1.11</td>
+      <td>4977400.0</td>
+      <td>April 1, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20.0</td>
+      <td>Croatia</td>
+      <td>4058165</td>
+      <td>0.91</td>
+      <td>4047200.0</td>
+      <td>December 31, 2020</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>21.0</td>
+      <td>Lithuania</td>
+      <td>2794090</td>
+      <td>0.62</td>
+      <td>2785501.0</td>
+      <td>May 1, 2021</td>
+      <td>Monthly official estimate</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>22.0</td>
+      <td>Slovenia</td>
+      <td>2095861</td>
+      <td>0.47</td>
+      <td>2108977.0</td>
+      <td>January 1, 2021</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>23.0</td>
+      <td>Latvia</td>
+      <td>1907675</td>
+      <td>0.43</td>
+      <td>1887600.0</td>
+      <td>April 1, 2021</td>
+      <td>Monthly official estimate</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>24.0</td>
+      <td>Estonia</td>
+      <td>1328976</td>
+      <td>0.30</td>
+      <td>1330068.0</td>
+      <td>January 1, 2021</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>25.0</td>
+      <td>Cyprus</td>
+      <td>888005</td>
+      <td>0.20</td>
+      <td>888000.0</td>
+      <td>December 31, 2019</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>26.0</td>
+      <td>Luxembourg</td>
+      <td>626108</td>
+      <td>0.14</td>
+      <td>634700.0</td>
+      <td>January 1, 2021</td>
+      <td>Official estimate</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>27.0</td>
+      <td>Malta</td>
+      <td>514564</td>
+      <td>0.12</td>
+      <td>514564.0</td>
+      <td>December 31, 2019</td>
+      <td>Official estimate</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Tem que tratar pois não tem Cyprus no nosso dataset</span>
+<span class="n">UE_</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">out_UE</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">db</span><span class="o">.</span><span class="n">index</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">db</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">UE</span><span class="p">[</span><span class="s2">&quot;Country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+        
+        <span class="n">UE_</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">out_UE</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#lista de poíses da união européia presente no dataset</span>
+<span class="n">UE_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Germany&#39;,
+ &#39;Poland&#39;,
+ &#39;Netherlands&#39;,
+ &#39;Romania&#39;,
+ &#39;Austria&#39;,
+ &#39;France&#39;,
+ &#39;Belgium&#39;,
+ &#39;Greece&#39;,
+ &#39;Italy&#39;,
+ &#39;Slovakia&#39;,
+ &#39;Croatia&#39;,
+ &#39;Bulgaria&#39;,
+ &#39;Hungary&#39;,
+ &#39;Ireland&#39;,
+ &#39;Slovenia&#39;,
+ &#39;Lithuania&#39;,
+ &#39;Denmark&#39;,
+ &#39;Latvia&#39;,
+ &#39;Spain&#39;,
+ &#39;Estonia&#39;,
+ &#39;Portugal&#39;,
+ &#39;Finland&#39;,
+ &#39;Sweden&#39;,
+ &#39;Luxembourg&#39;,
+ &#39;Malta&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Paises que estão no nosso dataset mas não são da União européia</span>
+<span class="n">out_UE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Russia&#39;,
+ &#39;UK&#39;,
+ &#39;Ukraine&#39;,
+ &#39;Czechia&#39;,
+ &#39;Serbia&#39;,
+ &#39;Switzerland&#39;,
+ &#39;Belarus&#39;,
+ &#39;Norway&#39;,
+ &#39;Moldova&#39;,
+ &#39;Montenegro&#39;,
+ &#39;Albania&#39;,
+ &#39;North Macedonia&#39;,
+ &#39;Bosnia and Herzegovina&#39;,
+ &#39;Channel Islands&#39;,
+ &#39;Iceland&#39;,
+ &#39;Faeroe Islands&#39;,
+ &#39;Isle of Man&#39;,
+ &#39;Gibraltar&#39;,
+ &#39;Andorra&#39;,
+ &#39;Liechtenstein&#39;,
+ &#39;San Marino&#39;,
+ &#39;Monaco&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">UE_db</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">UE_</span><span class="p">]</span>
+<span class="n">out_UE_db</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">out_UE</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># implementação da CDF</span>
+<span class="k">def</span> <span class="nf">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># contagem</span>
+    
+    <span class="k">for</span> <span class="n">ti</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span> <span class="c1"># cada valor na amostra</span>
+        <span class="k">if</span> <span class="n">ti</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">prob</span> <span class="o">=</span> <span class="n">c</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c1"># probabilidade</span>
+    <span class="k">return</span> <span class="n">prob</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdfs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">CDF</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s1">&#39;Deaths in the last 7 days&#39;</span><span class="p">],</span> <span class="n">brasil_deaths_weakly</span><span class="p">[</span><span class="s1">&#39;Mortes&#39;</span><span class="p">][</span><span class="n">_</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">brasil_deaths_weakly</span><span class="p">[</span><span class="s1">&#39;Mortes&#39;</span><span class="p">]))])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="n">brasil_deaths_weakly</span><span class="p">[</span><span class="s1">&#39;Dia&#39;</span><span class="p">][</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">cdfs</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># coeficiente de pearson</span>
+<span class="k">def</span> <span class="nf">p</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">median</span><span class="p">()</span> <span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span><span class="p">(</span><span class="n">UE_db</span><span class="p">[</span><span class="s1">&#39;Cases in the last 7 days&#39;</span><span class="p">]),</span> <span class="n">p</span><span class="p">(</span><span class="n">out_UE_db</span><span class="p">[</span><span class="s1">&#39;Cases in the last 7 days&#39;</span><span class="p">])])</span>
+
+<span class="n">p_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dentro da União Europeia&#39;</span><span class="p">,</span> <span class="s1">&#39;Fora da União Européia&#39;</span><span class="p">]</span>
+
+<span class="n">p_list</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">pp</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Fora da União Européia&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;Resposta esperada: </span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s1"> //  </span><span class="si">{</span><span class="n">p_list</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">pp</span><span class="p">)]</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Resposta esperada: Terça //  Fora da União Européia&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questão 2.</strong> Calcule e plote uma distribuição exponencial do zero com os valores head da coluna “Weekly Death % Change” do DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sb</span>
+
+
+<span class="c1">#DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">db</span>
+
+<span class="c1">#Criando um vetor valores de 0 a 0.3 com 300 pontos</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="c1">#Cores para plotar o gráfico</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;cyan&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#RESOLUÇÃO:</span>
+
+
+<span class="c1">#Captando os valores head do dataframe</span>
+<span class="n">lamb</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())):</span>
+    <span class="n">lamb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Weekly Death % Change&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+    
+<span class="c1">#Distribuição exponencial</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lamb</span><span class="p">)):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">lamb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">lamb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">fs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="c1">#Plotando o gráfico</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lamb</span><span class="p">)):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">fs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\lambda$=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">lamb</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;f(X,$\lambda$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Q44-gab_21_0.png" src="../_images/Q44-gab_21_0.png" />
+</div>
+</div>
+<hr>
+<p><strong>Questão 3.</strong> O código</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">from</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span> <span class="kn">import</span> <span class="nn">norm</span>
+<span class="n">N</span><span class="p">,</span> <span class="n">band</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">0.5</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">N</span><span class="p">)),</span>
+     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.7</span> <span class="o">*</span> <span class="n">N</span><span class="p">))))[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="n">Xp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+
+<span class="n">dens</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mf">0.7</span><span class="o">*</span><span class="n">norm</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>gera a distribuição sombreada <code class="docutils literal notranslate"><span class="pre">dens</span></code> apresentada nas figuras de (a) a (d) abaixo.</p>
+<figure class="align-default" id="q44-2">
+<a class="reference internal image-reference" href="figs/q/q-44-2.png"><img alt="figs/q/q-44-2.png" src="figs/q/q-44-2.png" style="width: 400px;" /></a>
+</figure>
+<p>Com base nos <em>kernels</em> disponíveis na classe <code class="docutils literal notranslate"><span class="pre">KernelDensity</span></code>
+do módulo <em>scikit-learn</em>, assinale a alternativa que melhor preeche as lacunas na sentença:</p>
+<p><em>“O kernel ______ aproxima a distribuição em ______, ao passo que o kernel ______ aproxima a distribuição mostrada em ______.”</em></p>
+<p>A. ‘linear’ / (a) / ‘gaussian’ / (d)</p>
+<p>B. ‘linear’ / (b) / ‘tophat’ / (a)</p>
+<p>C. ‘epanechnikov’ / © / ‘linear’ / (d)</p>
+<p>D. ‘gaussian’ / (b) / ‘epanechnikov’ / ©</p>
+<hr>
+</section>
+<section id="id1">
+<h1>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>C</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KernelDensity</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># amostras</span>
+<span class="n">band</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1"># largura de banda</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">N</span><span class="p">)),</span>
+     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.7</span> <span class="o">*</span> <span class="n">N</span><span class="p">))))[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="n">Xp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+
+<span class="n">true_dens</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mf">0.7</span> <span class="o">*</span> <span class="n">norm</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># gaussian</span>
+<span class="n">kde_gaus</span> <span class="o">=</span> <span class="n">KernelDensity</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;gaussian&#39;</span><span class="p">,</span> <span class="n">bandwidth</span><span class="o">=</span><span class="n">band</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">log_dens_gaus</span> <span class="o">=</span> <span class="n">kde_gaus</span><span class="o">.</span><span class="n">score_samples</span><span class="p">(</span><span class="n">Xp</span><span class="p">)</span>
+
+<span class="c1"># tophat</span>
+<span class="n">kde_tophat</span> <span class="o">=</span> <span class="n">KernelDensity</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;tophat&#39;</span><span class="p">,</span> <span class="n">bandwidth</span><span class="o">=</span><span class="n">band</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">log_dens_tophat</span> <span class="o">=</span> <span class="n">kde_tophat</span><span class="o">.</span><span class="n">score_samples</span><span class="p">(</span><span class="n">Xp</span><span class="p">)</span>
+
+<span class="c1"># epanechnikov</span>
+<span class="n">kde_epanechnikov</span> <span class="o">=</span> <span class="n">KernelDensity</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;epanechnikov&#39;</span><span class="p">,</span> <span class="n">bandwidth</span><span class="o">=</span><span class="n">band</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">log_dens_epanechnikov</span> <span class="o">=</span> <span class="n">kde_epanechnikov</span><span class="o">.</span><span class="n">score_samples</span><span class="p">(</span><span class="n">Xp</span><span class="p">)</span>
+
+<span class="c1"># linear</span>
+<span class="n">kde_linear</span> <span class="o">=</span> <span class="n">KernelDensity</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">bandwidth</span><span class="o">=</span><span class="n">band</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">log_dens_linear</span> <span class="o">=</span> <span class="n">kde_linear</span><span class="o">.</span><span class="n">score_samples</span><span class="p">(</span><span class="n">Xp</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">true_dens</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">log_dens_gaus</span><span class="p">),</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;#ed3411&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">true_dens</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">log_dens_tophat</span><span class="p">),</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;#ed3411&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;(b)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">223</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">true_dens</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">log_dens_epanechnikov</span><span class="p">),</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;#ed3411&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;(c)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">true_dens</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">log_dens_linear</span><span class="p">),</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;#ed3411&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;(d)&#39;</span><span class="p">);</span>
+<span class="c1">#plt.savefig(&#39;../figs/q/q44-2.png&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Q44-gab_24_0.png" src="../_images/Q44-gab_24_0.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
