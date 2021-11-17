@@ -323,6 +323,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q44.html">
+   Questionário Q44
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../ipynb/Q51.html">
    Questionário 51 (Q51)
   </a>
@@ -450,6 +455,16 @@
    Gabarito
   </a>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lembrar-de-conferir-o-gabarito-dessa-questao-professor">
+   LEMBRAR DE CONFERIR O GABARITO DESSA QUESTÃO PROFESSOR
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Gabarito
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -476,139 +491,24 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sb</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Questão 1.</strong> O <em>dataset</em>
-<a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/covid19-weekly-trends-in-europe.csv?raw=true">covid19-weekly-trends-in-europe.csv</a> contém as tendências semanais de casos de Covid-19 em diferentes regiões da Europa registradas em 8 de novembro de 2021.</p>
-<p>E tendo os dados da média móvel de mortes do brasil em 7 dias, partindo do dia 3 (quarta-feira), até o dia 8 (Segunda-feira):</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Data</p></th>
-<th class="text-align:center head"><p>Dia</p></th>
-<th class="text-align:right head"><p>Mortes</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p>03/11</p></td>
-<td class="text-align:center"><p>Quarta</p></td>
-<td class="text-align:right"><p>225</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>04/11</p></td>
-<td class="text-align:center"><p>Quinta</p></td>
-<td class="text-align:right"><p>227</p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p>05/11</p></td>
-<td class="text-align:center"><p>Sexta</p></td>
-<td class="text-align:right"><p>230</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>06/11</p></td>
-<td class="text-align:center"><p>Sabado</p></td>
-<td class="text-align:right"><p>237</p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p>07/11</p></td>
-<td class="text-align:center"><p>Domingo</p></td>
-<td class="text-align:right"><p>232</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p>08/11</p></td>
-<td class="text-align:center"><p>Segunda</p></td>
-<td class="text-align:right"><p>235</p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p>09/11</p></td>
-<td class="text-align:center"><p>Terça</p></td>
-<td class="text-align:right"><p>243</p></td>
-</tr>
-</tbody>
-</table>
-<p>Fonte: <a class="reference external" href="https://g1.globo.com/saude/coronavirus/noticia/2021/11/09/brasil-completa-uma-semana-com-media-movel-abaixo-de-250-vitimas-diarias-de-covid-total-se-aproxima-de-610-mil.ghtml">Portal G1</a>.</p>
-<p>Dito isso, faça sua função para calcular a distribuição acumulativa entre as mortes em 7 dias por COVID nas diferentes regiões da Europa e o valor mortes do brasil em cada um dos 7 dias acima, guarde em um array e informe qual dia tem a maior probabilidade de ser encontrada.</p>
-<p>Posteriormente, separe os países da união europeia (apenas o que estão no dataset) e os que não estão na UE, e avaliando os casos dos ultimos 7 dias dessas (Cases in the last 7 days) dentre as duas regiões que vc selecionou informe qual é mais assimétricamente distribuido.</p>
-<p>Assinale de maneira respectiva a alternativa correta:</p>
-<p>A. Segunda // Fora da União Européia</p>
-<p>B. Terça // Dentro da União Européia</p>
-<p>C. Quarta // Dentro da União Européia</p>
-<p>D. Segunda // Dentro da União Européia</p>
-<p>E. Terça // Fora da União Européia</p>
+<p><strong>Questão 1.</strong> O <em>dataset</em> <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/covid19-weekly-trends-in-europe.csv">covid19-weekly-trends-in-europe</a> contém tendências semanais de casos de Covid-19 em diferentes países da Europa com referência ao dia 8 de novembro de 2021. Separe a série correspondente ao número de casos nos últimos 7 dias (<em>Cases in the last 7 days</em>) entre países pertencentes à União Europeia (<em>UE</em>) e não pertencentes à UE (<em>non-UE</em>). Assinale a alternativa que associa corretamente o grupo de países ao valor do coeficiente de Pearson.</p>
+<p>A. <em>non-UE</em>: 620983827.08</p>
+<p>B. <em>UE</em>: 620983827.08</p>
+<p>C. <em>UE</em>: 750983827.02</p>
+<p>D. <em>non-UE</em>: 8290903184.71</p>
 <hr>
 </section>
 <section id="gabarito">
 <h1>Gabarito<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
-<p>Alternativa <strong>E</strong></p>
+<p>Alternativa <strong>D</strong></p>
 <p>This Dataset contains Weekly trends of COVID-19 in different regions of Europe as on November 08, 2021.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dia</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Quarta&#39;</span><span class="p">,</span><span class="s1">&#39;Quinta&#39;</span><span class="p">,</span><span class="s1">&#39;Sexta&#39;</span><span class="p">,</span> <span class="s1">&#39;Sabado&#39;</span><span class="p">,</span><span class="s1">&#39;Domingo&#39;</span><span class="p">,</span><span class="s1">&#39;Segunda&#39;</span><span class="p">,</span><span class="s1">&#39;Terça&#39;</span><span class="p">]</span>
-<span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;03/11&#39;</span><span class="p">,</span><span class="s1">&#39;04/11&#39;</span><span class="p">,</span><span class="s1">&#39;05/11&#39;</span><span class="p">,</span><span class="s1">&#39;06/11&#39;</span><span class="p">,</span><span class="s1">&#39;07/11&#39;</span><span class="p">,</span><span class="s1">&#39;08/11&#39;</span><span class="p">,</span><span class="s1">&#39;09/11&#39;</span><span class="p">]</span>
-<span class="n">deaths</span> <span class="o">=</span> <span class="p">[</span><span class="mi">225</span><span class="p">,</span><span class="mi">227</span><span class="p">,</span><span class="mi">230</span><span class="p">,</span><span class="mi">237</span><span class="p">,</span><span class="mi">232</span><span class="p">,</span><span class="mi">235</span><span class="p">,</span><span class="mi">243</span><span class="p">]</span>
-<span class="n">brasil_deaths_weakly</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Dia&quot;</span><span class="p">:</span><span class="n">dia</span><span class="p">,</span><span class="s2">&quot;Mortes&quot;</span><span class="p">:</span><span class="n">deaths</span><span class="p">},</span> <span class="n">index</span> <span class="o">=</span> <span class="n">date</span><span class="p">)</span>
-<span class="n">brasil_deaths_weakly</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Dia</th>
-      <th>Mortes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>03/11</th>
-      <td>Quarta</td>
-      <td>225</td>
-    </tr>
-    <tr>
-      <th>04/11</th>
-      <td>Quinta</td>
-      <td>227</td>
-    </tr>
-    <tr>
-      <th>05/11</th>
-      <td>Sexta</td>
-      <td>230</td>
-    </tr>
-    <tr>
-      <th>06/11</th>
-      <td>Sabado</td>
-      <td>237</td>
-    </tr>
-    <tr>
-      <th>07/11</th>
-      <td>Domingo</td>
-      <td>232</td>
-    </tr>
-    <tr>
-      <th>08/11</th>
-      <td>Segunda</td>
-      <td>235</td>
-    </tr>
-    <tr>
-      <th>09/11</th>
-      <td>Terça</td>
-      <td>243</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;COVID-19_WEEKLY_TRENDS_IN_EUROPE.csv&quot;</span><span class="p">)</span>
@@ -1636,35 +1536,6 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># implementação da CDF</span>
-<span class="k">def</span> <span class="nf">CDF</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># contagem</span>
-    
-    <span class="k">for</span> <span class="n">ti</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span> <span class="c1"># cada valor na amostra</span>
-        <span class="k">if</span> <span class="n">ti</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">:</span>
-            <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">prob</span> <span class="o">=</span> <span class="n">c</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c1"># probabilidade</span>
-    <span class="k">return</span> <span class="n">prob</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdfs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">CDF</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s1">&#39;Deaths in the last 7 days&#39;</span><span class="p">],</span> <span class="n">brasil_deaths_weakly</span><span class="p">[</span><span class="s1">&#39;Mortes&#39;</span><span class="p">][</span><span class="n">_</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">brasil_deaths_weakly</span><span class="p">[</span><span class="s1">&#39;Mortes&#39;</span><span class="p">]))])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="n">brasil_deaths_weakly</span><span class="p">[</span><span class="s1">&#39;Dia&#39;</span><span class="p">][</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">cdfs</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># coeficiente de pearson</span>
 <span class="k">def</span> <span class="nf">p</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">median</span><span class="p">()</span> <span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
@@ -1678,77 +1549,95 @@
 
 <span class="n">p_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dentro da União Europeia&#39;</span><span class="p">,</span> <span class="s1">&#39;Fora da União Européia&#39;</span><span class="p">]</span>
 
-<span class="n">p_list</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">pp</span><span class="p">)]</span>
+<span class="n">p_list</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">pp</span><span class="p">)],</span><span class="n">pp</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Fora da União Européia&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Fora da União Européia&#39;, array([6.20983827e+08, 8.29090318e+09]))
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;Resposta esperada: </span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s1"> //  </span><span class="si">{</span><span class="n">p_list</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">pp</span><span class="p">)]</span><span class="si">}</span><span class="s1">&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;Resposta esperada: </span><span class="si">{</span><span class="n">p_list</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">pp</span><span class="p">)]</span><span class="si">}</span><span class="s1"> //</span><span class="si">{</span><span class="n">pp</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Resposta esperada: Terça //  Fora da União Européia&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Resposta esperada: Fora da União Européia //8290903184.710569&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Questão 2.</strong> Calcule e plote uma distribuição exponencial do zero com os valores head da coluna “Weekly Death % Change” do DataFrame.</p>
+<hr>
+<p><strong>Questão 2.</strong> Analise as seguintes distribuições normais aleatórias:</p>
+<figure class="align-default" id="q44-1">
+<a class="reference internal image-reference" href="figs/q/q-44-1.png"><img alt="figs/q/q-44-1.png" src="figs/q/q-44-1.png" style="width: 400px;" /></a>
+</figure>
+<p>Assinale a alternativa em que as curvas aparecem em ordem crescente de desvio padrão.</p>
+<p>A. (A, B, C, D)</p>
+<p>B. (B, A, D, C)</p>
+<p>C. (B, A, C, D)</p>
+<p>D. (A, B, D, C)</p>
+<hr>
+</section>
+<section id="id1">
+<h1>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>C</strong></p>
+</section>
+<section id="lembrar-de-conferir-o-gabarito-dessa-questao-professor">
+<h1>LEMBRAR DE CONFERIR O GABARITO DESSA QUESTÃO PROFESSOR<a class="headerlink" href="#lembrar-de-conferir-o-gabarito-dessa-questao-professor" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sb</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="c1">#distribuições</span>
+
+<span class="n">dn1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+<span class="n">dn2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+<span class="n">dn3</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+<span class="n">dn4</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+
+<span class="c1">#mu = 2 // sigma = 10</span>
+<span class="n">count</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">ignored</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">dn1</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Curva A&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span> <span class="o">-</span> <span class="p">(</span><span class="n">bins</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="p">),</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 
 
-<span class="c1">#DataFrame</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">db</span>
-
-<span class="c1">#Criando um vetor valores de 0 a 0.3 com 300 pontos</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
-
-<span class="c1">#Cores para plotar o gráfico</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;cyan&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#RESOLUÇÃO:</span>
+<span class="c1">#mu = -20 // sigma = 5</span>
+<span class="n">count</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">ignored</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">dn2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Curva B&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span> <span class="o">-</span> <span class="p">(</span><span class="n">bins</span> <span class="o">-</span> <span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">5</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="p">),</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
 
 
-<span class="c1">#Captando os valores head do dataframe</span>
-<span class="n">lamb</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())):</span>
-    <span class="n">lamb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Weekly Death % Change&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
-    
-<span class="c1">#Distribuição exponencial</span>
-<span class="n">fs</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lamb</span><span class="p">)):</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="n">lamb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">lamb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">)</span>
-    <span class="n">fs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="c1">#mu = 40 // sigma = 40</span>
+<span class="n">count</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">ignored</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">dn3</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Curva C&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">40</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span> <span class="o">-</span> <span class="p">(</span><span class="n">bins</span> <span class="o">-</span> <span class="mi">40</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">40</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="p">),</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
 
-<span class="c1">#Plotando o gráfico</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lamb</span><span class="p">)):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">fs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\lambda$=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">lamb</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span class="c1">#mu = 100 // sigma = 27</span>
+<span class="n">count</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">ignored</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">dn4</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Curva D&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">27</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span> <span class="o">-</span> <span class="p">(</span><span class="n">bins</span> <span class="o">-</span> <span class="mi">100</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">27</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="p">),</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;f(X,$\lambda$)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">])</span>
+<span class="c1">#plt.savefig(&#39;../figs/q/q44-1.png&#39;)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Q44-gab_21_0.png" src="../_images/Q44-gab_21_0.png" />
+<img alt="../_images/Q44-gab_17_0.png" src="../_images/Q44-gab_17_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">dn3</span><span class="p">)</span><span class="o">&gt;</span><span class="nb">sum</span><span class="p">(</span><span class="n">dn4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
 </div>
 </div>
 <hr>
@@ -1778,14 +1667,12 @@ do módulo <em>scikit-learn</em>, assinale a alternativa que melhor preeche as l
 <p>D. ‘gaussian’ / (b) / ‘epanechnikov’ / ©</p>
 <hr>
 </section>
-<section id="id1">
-<h1>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id2">
+<h1>Gabarito<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
 <p>Alternativa <strong>C</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KernelDensity</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KernelDensity</span>
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># amostras</span>
 <span class="n">band</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1"># largura de banda</span>
@@ -1842,7 +1729,7 @@ do módulo <em>scikit-learn</em>, assinale a alternativa que melhor preeche as l
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Q44-gab_24_0.png" src="../_images/Q44-gab_24_0.png" />
+<img alt="../_images/Q44-gab_21_0.png" src="../_images/Q44-gab_21_0.png" />
 </div>
 </div>
 </section>

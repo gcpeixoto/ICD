@@ -79,6 +79,7 @@
 #     - [Questionário 41](Q41.ipynb)
 #     - [Questionário 42](Q42.ipynb)
 #     - [Questionário 43](Q43.ipynb)
+#     - [Questionário 44](Q44.ipynb)
 # - Unidade 3: Parte 5
 #     - [Questionário 51](Q51.ipynb)
 # 
@@ -268,6 +269,7 @@
 # Q41
 # Q42
 # Q43
+# Q44
 # Q51
 # ```
 # 
