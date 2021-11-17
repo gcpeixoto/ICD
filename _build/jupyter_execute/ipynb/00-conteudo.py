@@ -59,7 +59,7 @@
 # 
 # - [Visualização de dados com seaborn](16-visualizacao-dados-seaborn)
 # - [Raspagem de dados](17-raspagem-dados)
-# - [Análise de redes](18-analise-redes)
+# - [Análise de redes complexas](18-analise-redes)
 # - [Ciência de dados e ética](19-etica-dados)
 # 
 # ## Avaliação

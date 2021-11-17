@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Análise de redes
+# # Análise de redes complexas
 # 
 # _Rede_ (_network_) é uma forma de organizar e representar dados discretos. Elas diferem da forma tabular, em que linhas e colunas são as estruturas fundamentais, e funcionam com base em dois conceitos:
 # 
@@ -17,7 +17,7 @@
 # Grafo genérico contendo 6 vértices e 13 arestas.
 # ```
 
-# ## Redes complexas
+# ## Aplicações
 # 
 # Com o barateamento dos recursos de computação no final do século XX, a _análise de redes complexas_ (do inglês _complex network analysis_, ou CNA) evoluiu como uma área de pesquisa independente. Desde então, tornou-se possível mapear bancos de dados enormes e extrair conhecimento a partir de um emaranhado complexo de interligações. 
 # 
