@@ -14,7 +14,7 @@
 # 
 # <hr>
 
-# **Questão 1.** O _dataset_ [covid19-weekly-trends-in-europe](https://github.com/gcpeixoto/ICD/blob/main/database/covid19-weekly-trends-in-europe.csv) contém tendências semanais de casos de Covid-19 em diferentes países da Europa com referência ao dia 8 de novembro de 2021. Separe a série correspondente ao número de casos nos últimos 7 dias (_Cases in the last 7 days_) entre países pertencentes à União Europeia (_UE_) e não pertencentes à UE (_non-UE_). Assinale a alternativa que associa corretamente o grupo de países ao valor do coeficiente de Pearson.
+# **Questão 1.** O _dataset_ [covid19-weekly-trends-in-europe](https://github.com/gcpeixoto/ICD/blob/main/database/covid19-weekly-trends-in-europe.csv) contém tendências semanais de casos de Covid-19 em diferentes países da Europa com referência ao dia 8 de novembro de 2021. Separe a série correspondente ao número de casos nos últimos 7 dias (_Cases in the last 7 days_) entre países pertencentes à União Europeia (_UE_) e não pertencentes à UE (_non-UE_). Assinale a alternativa que associa corretamente o grupo de países ao valor do coeficiente de Pearson e cuja distribuição desse grupo é a mais assimétrica.
 # 
 # A. _non-UE_: 620983827.08
 # 
