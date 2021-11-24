@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Problemas propostos &#8212; Introdução à Ciência de Dados</title>
+    <title>Questionário 72 (Q72) &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -407,7 +407,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/todo/problemas.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/todo/Q72-gab.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -432,7 +432,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/problemas.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/Q72-gab.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -440,7 +440,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/problemas.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/Q72-gab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -462,14 +462,24 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gematria">
-   Gematria
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Questionário 72 (Q72)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imagens-oftalmologicas">
-   Imagens oftalmológicas
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gabarito">
+   GABARITO
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   GABARITO
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   GABARITO
   </a>
  </li>
 </ul>
@@ -483,120 +493,136 @@
         
               <div>
                 
-  <section id="problemas-propostos">
-<h1>Problemas propostos<a class="headerlink" href="#problemas-propostos" title="Permalink to this headline">¶</a></h1>
-<section id="gematria">
-<h2>Gematria<a class="headerlink" href="#gematria" title="Permalink to this headline">¶</a></h2>
-<p>Converta os caracteres hebraicos de uma string em seus valores numéricos correspondentes e busque por padrões na sequência.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># integer range from Unicode</span>
-<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">16</span><span class="p">),(</span><span class="s1">&#39;0x05d0&#39;</span><span class="p">,</span><span class="s1">&#39;0x05eb&#39;</span><span class="p">))</span>
-
-<span class="c1"># hex</span>
-<span class="n">hexi</span> <span class="o">=</span> <span class="p">[</span><span class="nb">hex</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)]</span>
-
-<span class="c1"># unicode</span>
-<span class="n">char</span> <span class="o">=</span> <span class="p">[</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)]</span>
-
-<span class="c1"># gematry number</span>
-<span class="n">numb</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
-
-<span class="c1"># letter name</span>
-<span class="n">name</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Alef&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Bet&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Gimel&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Dalet&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;He&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Vav&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Zayin&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Het&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Tet&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Yod&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Final Kaf&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Kaf&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Lamed&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Final Mem&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Mem&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Final Nun&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Nun&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Samekh&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Ayin&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Final Pe&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Pe&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Final Tsadi&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Tsadi&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Qof&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Resh&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Shin&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Tav&#39;</span><span class="p">,]</span>
-
-<span class="n">cn</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">numb</span><span class="p">,</span><span class="n">char</span><span class="p">))</span>
-
-<span class="c1"># Hebrew dictionary </span>
-<span class="c1"># key as hex</span>
-<span class="n">dheb_hex</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">hexi</span><span class="p">,</span><span class="n">cn</span><span class="p">))</span>
-
-<span class="n">cn</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">hexi</span><span class="p">,</span><span class="n">numb</span><span class="p">,</span><span class="n">char</span><span class="p">))</span>
-
-<span class="c1"># key as name</span>
-<span class="n">dheb</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">cn</span><span class="p">))</span>
+  <section id="questionario-72-q72">
+<h1>Questionário 72 (Q72)<a class="headerlink" href="#questionario-72-q72" title="Permalink to this headline">¶</a></h1>
+<p>Orientações:</p>
+<ul class="simple">
+<li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
+<li><p>O tempo de registro das respostas no questionário será de 10 minutos. Portanto, resolva primeiro as questões e depois registre-as.</p></li>
+<li><p>Haverá apenas 1 (uma) tentativa de resposta.</p></li>
+<li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-o à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
+</ul>
+<p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
+<hr><p>Para responder às questões, leia o texto introdutório a seguir.</p>
+<blockquote>
+<div><p>Um ataque hacker ao portal do Governo Federal foi identificado após se descobrir na página <a class="reference external" href="https://www.gov.br/economia/pt-br/assuntos/processo-eletronico-nacional/conteudo/barramento-de-servicos/relacao-dos-orgaos-e-entidades">https://www.gov.br/economia/pt-br/assuntos/processo-eletronico-nacional/conteudo/barramento-de-servicos/relacao-dos-orgaos-e-entidades</a>, associada ao Ministério da Economia, que as <em>cache keys</em> embutidas em alguns links resultavam em uma chave com 6 blocos de 4 dígitos que permitia o acesso furtivo a dados sigilosos.</p>
+<p>A atividade criminosa funcionava da seguinte forma:</p>
+<ol class="simple">
+<li><p>O hacker coletou cada <em>cache key</em> existente no cabeçalho do arquivo .HTML dessa página exatamente nas vinculações aos arquivos .CSS. A <em>cache key</em> é um número hexadecimal de 32 dígitos que aparece em um elemento <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code>. No exemplo</p></li>
+</ol>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&lt;link href=&quot;https://www.gov.br/economia/ ... cachekey-dac9630aec642a428cd73f4be0a03569.css&quot;  ... /&gt;,
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &quot;to make many books, there is no limit&quot;</span>
-<span class="n">phrase</span> <span class="o">=</span> <span class="s1">&#39;עשות ספרים הרבה אין קץ&#39;</span>
-
-<span class="c1"># convert from byte mode to hex</span>
-<span class="n">hext</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">phrase</span><span class="p">]</span>
-
-<span class="c1"># filter to purge whitespace </span>
-<span class="n">hextf</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;20&#39;</span><span class="p">,</span><span class="n">hext</span><span class="p">))</span>
-
-<span class="c1"># não é o mesmo hex!!!</span>
-<span class="n">hextf</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0x&#39;</span> <span class="o">+</span> <span class="n">h</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hextf</span><span class="p">]</span>
+<p>a cache key é o número <code class="docutils literal notranslate"><span class="pre">dac9630aec642a428cd73f4be0a03569</span></code>.
+2. O hacker usava a <em>cache key</em> como entrada para uma função decriptadora e obtinha um número de 4 dígitos.
+3. Juntando as 6 <em>cache keys</em> contidas na página, ele determinava uma sequência do tipo ####.####.####.####.####.####, que era usada para quebrar <em>firewalls</em> e acessar os arquivos sigilosos.</p>
+</div></blockquote>
+<p>Como especialista, você frustrou o ataque do hacker usando a função de decriptação dada por:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">Hash</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">ord</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">Hash</span><span class="p">)),</span>
 </pre></div>
 </div>
+<p>onde <code class="docutils literal notranslate"><span class="pre">Hash</span></code> é uma <em>cache key</em>. Por exemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">decrypt</span><span class="p">(</span><span class="s1">&#39;dac9630aec642a428cd73f4be0a03569&#39;</span><span class="p">))</span>
+<span class="mi">2280</span>
+</pre></div>
 </div>
-</div>
+<p><em>Obs.:</em> o relato acima é fictício.</p>
+<p><strong>Questão 1.</strong> Utilize raspagem de dados para coletar as 6 <em>cache keys</em> contidas na página e determinar as 6 quádruplas que quebram o <em>firewall</em> e assinale a alternativa que contém todas as quádruplas corretas, independentemente da ordem das <em>cache keys</em> que os determinam.</p>
+<p>A. 2184.1999.2200.1090.2215.2175</p>
+<p>B. 1090.1999.2169.2215.2175.2184</p>
+<p>C. 2091.2169.1999.2184.2215.2175</p>
+<p>D. 2175.1999.2184.2215.1090.1010</p>
 </section>
-<section id="imagens-oftalmologicas">
-<h2>Imagens oftalmológicas<a class="headerlink" href="#imagens-oftalmologicas" title="Permalink to this headline">¶</a></h2>
-<p>Buscando pigmentações predominantes em imagens de ceratometria</p>
+<section id="gabarito">
+<h1>GABARITO<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>C</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">skimage</span> <span class="k">as</span> <span class="nn">ski</span>
-<span class="kn">import</span> <span class="nn">skimage.io</span> <span class="k">as</span> <span class="nn">skio</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">re</span>
 
-<span class="n">img</span> <span class="o">=</span> <span class="n">skio</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../database/eyes/SyntEyeKTC-106_a-net.png&#39;</span><span class="p">)</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;https://www.gov.br/economia/pt-br/assuntos/processo-eletronico-nacional/conteudo/barramento-de-servicos/relacao-dos-orgaos-e-entidades&#39;</span><span class="p">)</span>
+<span class="n">bs</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span><span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="n">cachekeys</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">bs</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">,</span><span class="n">href</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">href</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;cachekey&#39;</span><span class="p">,</span><span class="n">href</span><span class="p">):</span>
+        <span class="n">cachekeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">href</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;cachekey-&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># função de decriptação</span>
+<span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">Hash</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">ord</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">Hash</span><span class="p">))</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">decrypt</span><span class="p">(</span><span class="n">c</span><span class="p">):</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cachekeys</span><span class="p">}</span>   
+<span class="n">d</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{2215: &#39;4a21f3937dd6f4f89b8d16728182fe2f&#39;,
+ 2175: &#39;0c31728a3e7108b3f261e8aa6e5ca331&#39;,
+ 2091: &#39;1b344ad55df00297c407169c4cb35475&#39;,
+ 2169: &#39;715d92bf5752dbe815d989936f6f005b&#39;,
+ 1999: &#39;f1d8571f08ac94651335a30389d12127&#39;,
+ 2184: &#39;1ed4564f817a7882afc4321325dad02b&#39;}
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Questão 2.</strong> No corpo do arquivo HTML da página em questão, existem diversas âncoras (elementos da árvore DOM com a tag <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;...&lt;/a&gt;</span></code> com URLs que apontam para outros endereços no domínio do Ministério da Economia. Assinale a alternativa correta para o número de links contidos em <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> que iniciam pela raiz <code class="docutils literal notranslate"><span class="pre">https://www.gov.br/economia/pt-br</span></code>.</p>
+<p>A. 502</p>
+<p>B. 499</p>
+<p>C. 400</p>
+<p>D. 380</p>
+</section>
+<section id="id1">
+<h1>GABARITO<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>B</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">img</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">img</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span><span class="mi">3</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
-    <span class="n">A</span><span class="p">[:,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-    
-<span class="n">A</span> <span class="o">=</span> <span class="n">A</span><span class="o">/</span><span class="mi">255</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gov_economia_links</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">bs</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="n">href</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">href</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>    
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;(https://www.gov.br/economia/pt-br)&#39;</span><span class="p">,</span><span class="n">href</span><span class="p">):</span>
+        <span class="n">gov_economia_links</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">href</span><span class="p">)</span>
+        
+<span class="nb">len</span><span class="p">(</span><span class="n">gov_economia_links</span><span class="p">)</span>        
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>499
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Questão 3.</strong> Marque a alternativa correta para o número de descendentes de <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> na árvore DOM correspondente ao arquivo HTML da página em questão.</p>
+<p>A. 5821</p>
+<p>B. 6000</p>
+<p>C. 5800</p>
+<p>D. 5994</p>
 </section>
+<section id="id2">
+<h1>GABARITO<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>Alternativa <strong>A</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">bs</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">descendants</span><span class="p">:</span>
+    <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">k</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5821
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

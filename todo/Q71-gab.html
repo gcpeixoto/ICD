@@ -351,6 +351,11 @@
    Questionário 71 (Q71)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ipynb/Q72.html">
+   Questionário 72 (Q72)
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -706,63 +711,51 @@
 <span class="n">ax_image</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">1e-10</span><span class="p">,</span><span class="mf">1e-10</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">])</span>
 <span class="n">ax_image</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ax_image</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">)</span> 
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd"># --- Comente daqui para baixo </span>
-<span class="sd">#     e ative ax_image.axix(&#39;on&#39;)</span>
-<span class="sd">#     para gerar a segunda figura</span>
 
-<span class="sd"># eixo polar sobreposto</span>
-<span class="sd">axes_coords = [1e-2,0,1,1] # coords diferentes do primeiro</span>
-<span class="sd">ax_polar = fig.add_axes(axes_coords,</span>
-<span class="sd">                        projection=&#39;polar&#39;)</span>
+<span class="c1"># --- Comente daqui para baixo </span>
+<span class="c1">#     e ative ax_image.axix(&#39;on&#39;)</span>
+<span class="c1">#     para gerar a segunda figura</span>
+
+<span class="c1"># eixo polar sobreposto</span>
+<span class="n">axes_coords</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1e-2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># coords diferentes do primeiro</span>
+<span class="n">ax_polar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">axes_coords</span><span class="p">,</span>
+                        <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;polar&#39;</span><span class="p">)</span>
 
 
-<span class="sd">a = ax_polar.get_xgridlines() # ticks radiais</span>
-<span class="sd">b = ax_polar.get_ygridlines() # ticks azimutais</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">ax_polar</span><span class="o">.</span><span class="n">get_xgridlines</span><span class="p">()</span> <span class="c1"># ticks radiais</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">ax_polar</span><span class="o">.</span><span class="n">get_ygridlines</span><span class="p">()</span> <span class="c1"># ticks azimutais</span>
 
-<span class="sd"># modifica estilo das ticks</span>
-<span class="sd">for i in range(len(a)):</span>
-<span class="sd">    a[i].set_color(&#39;k&#39;)</span>
-<span class="sd">    a[i].set_linestyle(&#39;:&#39;)</span>
+<span class="c1"># modifica estilo das ticks</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
 
-<span class="sd">a[0].set_color(&#39;b&#39;)</span>
-<span class="sd">a[0].set_linestyle(&#39;-&#39;)</span>
-<span class="sd">a[0].set_linewidth(2)</span>
-<span class="sd">a[-4].set_color(&#39;b&#39;)</span>
-<span class="sd">a[-4].set_linestyle(&#39;-&#39;)</span>
-<span class="sd">a[-4].set_linewidth(2)</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="sd">for i in range(len(b)):    </span>
-<span class="sd">    b[i].set_color(&#39;k&#39;)</span>
-<span class="sd">    b[i].set_linestyle(&#39;:&#39;)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>    
+    <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
 
-<span class="sd">ax_polar.patch.set_alpha(0)</span>
-<span class="sd">ax_polar.set_yticklabels([]); # remove ticks radiais</span>
+<span class="n">ax_polar</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ax_polar</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([]);</span> <span class="c1"># remove ticks radiais</span>
 
-<span class="sd"># altera ticks azimutais</span>
-<span class="sd">ax_polar.set_xticklabels([0,45,90,120]); </span>
-<span class="sd">#plt.savefig(&#39;../figs/q/q71-2.png&#39;)</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<span class="c1"># altera ticks azimutais</span>
+<span class="n">ax_polar</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">120</span><span class="p">]);</span> 
+<span class="c1">#plt.savefig(&#39;../figs/q/q71-2.png&#39;)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;\n# --- Comente daqui para baixo \n#     e ative ax_image.axix(&#39;on&#39;)\n#     para gerar a segunda figura\n\n# eixo polar sobreposto\naxes_coords = [1e-2,0,1,1] # coords diferentes do primeiro\nax_polar = fig.add_axes(axes_coords,\n                        projection=&#39;polar&#39;)\n\n\na = ax_polar.get_xgridlines() # ticks radiais\nb = ax_polar.get_ygridlines() # ticks azimutais\n\n# modifica estilo das ticks\nfor i in range(len(a)):\n    a[i].set_color(&#39;k&#39;)\n    a[i].set_linestyle(&#39;:&#39;)\n\na[0].set_color(&#39;b&#39;)\na[0].set_linestyle(&#39;-&#39;)\na[0].set_linewidth(2)\na[-4].set_color(&#39;b&#39;)\na[-4].set_linestyle(&#39;-&#39;)\na[-4].set_linewidth(2)\n\nfor i in range(len(b)):    \n    b[i].set_color(&#39;k&#39;)\n    b[i].set_linestyle(&#39;:&#39;)\n\nax_polar.patch.set_alpha(0)\nax_polar.set_yticklabels([]); # remove ticks radiais\n\n# altera ticks azimutais\nax_polar.set_xticklabels([0,45,90,120]); \n#plt.savefig(&#39;../figs/q/q71-2.png&#39;)\n&quot;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-214-af1489819df1&gt;:42: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax_polar.set_xticklabels([0,45,90,120]);
 </pre></div>
 </div>
 <img alt="../_images/Q71-gab_13_1.png" src="../_images/Q71-gab_13_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="p">[</span><span class="mi">2000</span><span class="p">,</span><span class="mi">1500</span><span class="p">,:]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([135,   0,  90], dtype=uint8)
-</pre></div>
-</div>
 </div>
 </div>
 </section>
