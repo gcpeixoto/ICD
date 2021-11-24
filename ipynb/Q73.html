@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Questionário 24 (Q24) &#8212; Introdução à Ciência de Dados</title>
+    <title>Questionário 73 (Q73) &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,12 +50,10 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Questionário 25 (Q25)" href="Q25.html" />
-    <link rel="prev" title="Questionário 23 (Q23)" href="Q23.html" />
+    <link rel="next" title="Cadernos de ICD" href="cadernos-icd.html" />
+    <link rel="prev" title="Questionário 72 (Q72)" href="Q72.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -303,8 +301,8 @@
    Questionário 23 (Q23)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q24.html">
    Questionário 24 (Q24)
   </a>
  </li>
@@ -358,8 +356,8 @@
    Questionário 72 (Q72)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Q73.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Questionário 73 (Q73)
   </a>
  </li>
@@ -416,7 +414,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/ipynb/Q24.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ipynb/Q73.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -441,7 +439,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/Q24.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/Q73.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -449,7 +447,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/Q24.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/Q73.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -474,8 +472,8 @@
         
               <div>
                 
-  <section id="questionario-24-q24">
-<h1>Questionário 24 (Q24)<a class="headerlink" href="#questionario-24-q24" title="Permalink to this headline">¶</a></h1>
+  <section id="questionario-73-q73">
+<h1>Questionário 73 (Q73)<a class="headerlink" href="#questionario-73-q73" title="Permalink to this headline">¶</a></h1>
 <p>Orientações:</p>
 <ul class="simple">
 <li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
@@ -484,55 +482,36 @@
 <li><p>Submeta seu arquivo-fonte (utilizado para resolver as questões) em formato <em>.ipynb</em> pelo SIGAA anexando-o à Tarefa denominada “Envio de arquivo” correspondente ao questionário.</p></li>
 </ul>
 <p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
-<hr><p><strong>Questão 1.</strong> A ESPN forneceu o censo completo dos jogadores da copa de 2018. O arquivo <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/copa2018.npy?raw=true">copa2018.npy</a> contém uma tabela de peso, altura e idade de cada um desses atletas.  Com base nesses dados, crie os <em>arrays</em> <code class="docutils literal notranslate"><span class="pre">altura</span></code>, <code class="docutils literal notranslate"><span class="pre">idade</span></code> e <code class="docutils literal notranslate"><span class="pre">peso</span></code>. Por fim, defina um <em>dict</em> que associe esses dados aos respectivos jogadores.</p>
-<p>O <em>Índice de Massa Corpórea</em> (IMC) é usado para saber se um indivíduo está no peso ideal. Ele é definido pela fórmula:</p>
-<div class="math notranslate nohighlight">
-\[IMC = \frac{M}{A^2},\]</div>
-<p>onde <span class="math notranslate nohighlight">\(M\)</span> é a massa (considere quilogramas) do indivíduo e <span class="math notranslate nohighlight">\(A\)</span> é a sua altura (considere metros).</p>
-<p>Determine quantos jogadores possuem <span class="math notranslate nohighlight">\(IMC\)</span> menor do que 21.7 e quantos possuem <span class="math notranslate nohighlight">\(IMC\)</span> maior do que 21.9. Em seguida, assinale a alternativa que, nesta ordem, é a correta.</p>
-<p>A. 7 e 16</p>
-<p>B. 7 e 12</p>
-<p>C. 6 e 17</p>
-<p>D. 5 e 14</p>
-<p><strong>Dica:</strong> Use a função do <em>numpy</em> <code class="docutils literal notranslate"><span class="pre">load('...')</span></code>, com a opção <code class="docutils literal notranslate"><span class="pre">allow_pickle=True</span></code> e manipule o <em>array</em> bidimensional.</p>
-<p><strong>Questão 2.</strong> A <em>Taxa Metabólica Basal</em> (TMB) é a quantidade mínima de energia que o ser humano, em repouso, precisa para sobreviver. A <em>Equação de Mifflin - St. Jeor</em> para calcular a TMB em kcal/dia (quilocalorias por dia) de pessoas do sexo masculino é dada por:</p>
-<div class="math notranslate nohighlight">
-\[TMB = 10M + 6.25A-5I+5,\]</div>
-<p>onde <span class="math notranslate nohighlight">\(M\)</span> é a massa do indivíduo (em <em>kg</em>), <span class="math notranslate nohighlight">\(A\)</span> sua altura (em <em>m</em>) e <span class="math notranslate nohighlight">\(I\)</span> sua idade.</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Basal_metabolic_rate">[Fonte: Wiikipedia]</a></p>
-<p>Calcule a energia necessária total para a manutenção vital de todos os jogadores da seleção de 2018 durante um ano inteiro, isto é, a TMB anual. Considere 1 ano = 365 dias.</p>
-<p>Calcule a TMB anual necessária para a manutenção vital de todos os jogadores da seleção de 2018 durante o quinquênio 2020 - 2024. Assuma que:</p>
-<ul class="simple">
-<li><p>1 ano = 365 dias;</p></li>
-<li><p>o período inicia-se em 1 de janeiro de 2020 e</p></li>
-<li><p>a escalação do time permaneça inalterada no período.</p></li>
-</ul>
-<p>Marque a alternativa que, corretamente, reporta a TMB total da equipe para os anos de 2022 e 2024.</p>
-<p>A. 2022: 4922219.625, 2024: 4838039.625</p>
-<p>B. 2022: 4992720.9375, 2024: 4992720.9375</p>
-<p>C. 2022: 4824820.9375, 2024: 4782845.9375</p>
-<p>D. 2022: 4824820.9375, 2024: 4740870.9375</p>
-<p><strong>Questão 3:</strong> O movimento executado por uma bola de futebol ao ser chutada a partir do campo por um jogador é similar ao movimento parabólico de um projétil. A velocidade da bola <span class="math notranslate nohighlight">\(V_b\)</span> pode ser calculada pela expressão:</p>
-<div class="math notranslate nohighlight">
-\[V_b = V_p\left( \dfrac{M_p}{M_p + M_b} \right)(1 + e),\]</div>
-<p>onde <span class="math notranslate nohighlight">\(V_p\)</span> é a velocidade da perna do chutador, <span class="math notranslate nohighlight">\(M_p\)</span> é a massa da perna do chutador, <span class="math notranslate nohighlight">\(M_b\)</span> é a massa da bola e <span class="math notranslate nohighlight">\(e\)</span> é o <em>coeficiente de restituição</em> da bola.</p>
-<p>O alcance <span class="math notranslate nohighlight">\(a\)</span> é a medida horizontal máxima que a bola atinge a partir do ponto de lançamento de acordo com um certo ângulo em que é lançada. Como conhecemos da Física Básica, a fórmula para o alcance é dada por:</p>
-<div class="math notranslate nohighlight">
-\[a = \dfrac{V_b^2\textrm{sen}(2\alpha)}{g}\]</div>
-<p>Diante disso, considere os seguintes dados:</p>
-<ul class="simple">
-<li><p>A massa da bola de futebol profissional é de 400 gramas e seu coeficiente de restituição é 0.7.</p></li>
-<li><p>A massa da perna de um jogador equivale a 20% de sua massa.</p></li>
-<li><p>A velocidade da perna de um jogador é de 20 m/s.</p></li>
-<li><p>A constante gravitacional equivale a 9.8 m/s<sup>2</sup>.</p></li>
-</ul>
-<p>Assuma que um campo de futebol profissional “padrão FIFA” possui área de 100 x 68 m<sup>2</sup>. Além disso, defina um <em>Whole-Field Kicker</em> (WFK) o jogador que, chutando uma bola a um ângulo de 45 graus, consegue transportá-la de gol a gol, ou seja de uma linha de fundo a outra, e como <em>Not Whole-Field Kicker</em> (not WFK) aquele que não consegue realizar esta proeza.</p>
-<p>Usando os dados disponíveis na tabela dos jogadores da seleção de 2018, assinale a alternativa que contém o nome: do  melhor WFK do time (quem chuta mais longe) e do pior Not WFK.</p>
-<p><a class="reference external" href="http://www.mathematicshed.com/uploads/1/2/5/7/12572836/physicsofkickingsoccerball.pdf">[Fonte: Physics of Kicking a Soccer Ball]</a></p>
-<p>A. Alisson / William</p>
-<p>B. Ederson / Neymar</p>
-<p>C. Cássio / Fred</p>
-<p>D. Ederson / Fagner</p>
+<hr><p>Para responder às questões, leia o texto introdutório a seguir.</p>
+<blockquote>
+<div><p>Diversos países firmam acordos bilaterais com o intuito de fortalecer interesses mútuos. Uma rede multinacional da qual o Brasil faz parte começou a ser modelada por cientistas de dados a partir de um grafo não dirigido em que os <em>nós</em> do grafo representam os países, renomeados segundo o código Alpha-3 do padrão <a class="reference external" href="https://www.iban.com/country-codes">IBAN</a>, e as <em>arestas</em> representam a existência de um acordo bilateral.
+A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria (AUS), Bélgica (BEL), Brasil (BRA), Noruega (NOR) e Estados Unidos (USA).</p>
+</div></blockquote>
+<figure class="align-default" id="rede">
+<a class="reference internal image-reference" href="../_images/q73.png"><img alt="../_images/q73.png" src="../_images/q73.png" style="width: 330px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Exemplo de rede de países que mantêm acordos bilaterais.</span><a class="headerlink" href="#rede" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<blockquote>
+<div><p>O arquivo <code class="docutils literal notranslate"><span class="pre">paises-acordo-bilateral.txt</span></code> contém, implicitamente, a lista de conexões que formam o grafo da rede inteira, as quais são determinadas por pares do tipo <code class="docutils literal notranslate"><span class="pre">x,y</span></code>, onde <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> são nomes de países não padronizados. Por exemplo, o par <code class="docutils literal notranslate"><span class="pre">China,Norway</span></code> indica que há um acordo bilateral entre China e Noruega.</p>
+</div></blockquote>
+<p><em>Obs.:</em> acesse o arquivo <a class="reference external" href="https://github.com/gcpeixoto/ICD/tree/main/database/paises-acordo-bilateral.txt">aqui</a>.</p>
+<p><strong>Questão 1.</strong> Faça a raspagem da tabela de códigos de países disponíveis na página <a class="reference external" href="https://www.iban.com/country-codes">IBAN</a> para recuperar os códigos Alpha-3 para cada país contido na lista de arestas e crie um segundo arquivo chamado <code class="docutils literal notranslate"><span class="pre">paises-acordo-bilateral-IBAN.txt</span></code>. Use o módulo <code class="docutils literal notranslate"><span class="pre">networkx</span></code> e a função <code class="docutils literal notranslate"><span class="pre">read_edgelist</span></code> para construir o grafo da rede multinacional. Em seguida, assinale a alternativa correta para a tupla (número de nós, número de arestas) que você encontrou. Sugestão: use as funções <code class="docutils literal notranslate"><span class="pre">get_table_head</span></code> e <code class="docutils literal notranslate"><span class="pre">get_table_body</span></code> criadas no capítulo do livro de ICD sobre <em>Raspagem de dados</em>.</p>
+<p>A. (14, 60)</p>
+<p>B. (16, 62)</p>
+<p>C. (12, 56)</p>
+<p>D. (14, 66)</p>
+<p><strong>Questão 2.</strong> A <em>centralidade de grau</em> <code class="docutils literal notranslate"><span class="pre">deg</span></code>, calculada para cada nó do grafo completo pelo módulo <code class="docutils literal notranslate"><span class="pre">networkx</span></code>, pode ser interpretada, para este estudo de caso, como uma medida relativa da pré-disposição de um país para se abrir à globalização. Neste sentido, calcule <code class="docutils literal notranslate"><span class="pre">deg</span></code> e assinale a opção cujo país é o mais <strong>fechado</strong> ao fenômeno da globalização.</p>
+<p>A. CHN</p>
+<p>B. NLD</p>
+<p>C. IND</p>
+<p>D. ZAF</p>
+<p><strong>Questão 3.</strong> Semelhantemente à interpretação da questão anterio, a <em>centralidade de intermediação</em> <code class="docutils literal notranslate"><span class="pre">bet</span></code> fornece uma medida relativa de quão boa é a confiança e respeitabilidade diplomática de um país para a concretização de acordos. Calcule <code class="docutils literal notranslate"><span class="pre">bet</span></code> e assinale a opção cujo país é o mais respeitado para intermediar acordos.</p>
+<p>A. AUT</p>
+<p>B. GBR</p>
+<p>C. USA</p>
+<p>D. ISR</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -560,8 +539,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Q23.html" title="previous page">Questionário 23 (Q23)</a>
-    <a class='right-next' id="next-link" href="Q25.html" title="next page">Questionário 25 (Q25)</a>
+    <a class='left-prev' id="prev-link" href="Q72.html" title="previous page">Questionário 72 (Q72)</a>
+    <a class='right-next' id="next-link" href="cadernos-icd.html" title="next page">Cadernos de ICD</a>
 
         </div>
         
