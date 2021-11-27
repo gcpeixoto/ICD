@@ -56,7 +56,7 @@
 # 
 # Alternativa **B**.
 
-# In[206]:
+# In[2]:
 
 
 import numpy as np
@@ -110,7 +110,7 @@ print(f'Valor da coordenada i na linha 0 grau = {xmed}')
 # 
 # Alternativa **A**.
 
-# In[213]:
+# In[3]:
 
 
 col_0 = col[col['x'] == xmed]
@@ -177,7 +177,7 @@ print('Resposta: vermelho, azul, verde')
 # 
 # Alternativa **D**.
 
-# In[208]:
+# In[4]:
 
 
 mr = (col['r'] >= 50) & (col['r'] <= 200) 
@@ -215,7 +215,7 @@ print('Resposta: R x G, R x B, B x G')
 
 # ## ANEXO - Plotagem das figuras da córnea
 
-# In[214]:
+# In[7]:
 
 
 # abre figura
@@ -229,7 +229,7 @@ ax_image.axis('on')
 # --- Comente daqui para baixo 
 #     e ative ax_image.axix('on')
 #     para gerar a segunda figura
-
+'''
 # eixo polar sobreposto
 axes_coords = [1e-2,0,1,1] # coords diferentes do primeiro
 ax_polar = fig.add_axes(axes_coords,
@@ -260,5 +260,6 @@ ax_polar.set_yticklabels([]); # remove ticks radiais
 
 # altera ticks azimutais
 ax_polar.set_xticklabels([0,45,90,120]); 
-#plt.savefig('../figs/q/q71-2.png')
+'''
+#plt.savefig('../figs/q/q71-1.png')
 

@@ -22,7 +22,7 @@
 # ```{figure} ../figs/q/q71-0.png
 # ---
 # width: 660px
-# name: cornea
+# name: q71-0
 # ---
 # Imagens representativas de uma córnea com altas curvaturas, indicando uma ectasia. 
 # ```

@@ -537,7 +537,7 @@
 <div><p>Oftalmologistas baseiam-se em imagens para emitir diagnósticos sobre a condição visual de seus pacientes. Uma das técnicas comumemente empregadas é a medição da curvatura da córnea. Grosso modo, a análise verifica tonalidades de cor sobre um gráfico em coordenadas polares como o apresentado na figura abaixo, à esquerda. Entretanto, a imagem completa perfaz um retângulo que contém não só o círculo colorido, mas também a área complementar externa na cor branca, como se vê também à direita.</p>
 </div></blockquote>
 <figure class="align-default" id="cornea">
-<a class="reference internal image-reference" href="figs/q/q71-0.png"><img alt="figs/q/q71-0.png" src="figs/q/q71-0.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/q71-0.png"><img alt="../_images/q71-0.png" src="../_images/q71-0.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text">Imagens representativas de uma córnea com altas curvaturas, indicando uma ectasia.</span><a class="headerlink" href="#cornea" title="Permalink to this image">¶</a></p>
 </figcaption>
@@ -602,7 +602,7 @@
 </div>
 <p>Passando os valores corretos para os argumentos <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> e <code class="docutils literal notranslate"><span class="pre">data</span></code>, as figuras abaixo podem ser reproduzidas.</p>
 <figure class="align-default" id="q71-3">
-<a class="reference internal image-reference" href="figs/q/q71-3.png"><img alt="figs/q/q71-3.png" src="figs/q/q71-3.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/q71-3.png"><img alt="../_images/q71-3.png" src="../_images/q71-3.png" style="width: 400px;" /></a>
 </figure>
 <p>Sabendo disso, marque a alternativa cuja correspondência entre figura e tons de cor aparecem na ordem correta:</p>
 <p>A. (a): vermelho, (b): azul, (c): verde.</p>
@@ -649,7 +649,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resposta: vermelho, verde, azul
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resposta: vermelho, azul, verde
 </pre></div>
 </div>
 <img alt="../_images/Q71-gab_8_1.png" src="../_images/Q71-gab_8_1.png" />
@@ -737,47 +737,44 @@
 <span class="c1"># --- Comente daqui para baixo </span>
 <span class="c1">#     e ative ax_image.axix(&#39;on&#39;)</span>
 <span class="c1">#     para gerar a segunda figura</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"># eixo polar sobreposto</span>
+<span class="sd">axes_coords = [1e-2,0,1,1] # coords diferentes do primeiro</span>
+<span class="sd">ax_polar = fig.add_axes(axes_coords,</span>
+<span class="sd">                        projection=&#39;polar&#39;)</span>
 
-<span class="c1"># eixo polar sobreposto</span>
-<span class="n">axes_coords</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1e-2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># coords diferentes do primeiro</span>
-<span class="n">ax_polar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">axes_coords</span><span class="p">,</span>
-                        <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;polar&#39;</span><span class="p">)</span>
 
+<span class="sd">a = ax_polar.get_xgridlines() # ticks radiais</span>
+<span class="sd">b = ax_polar.get_ygridlines() # ticks azimutais</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">ax_polar</span><span class="o">.</span><span class="n">get_xgridlines</span><span class="p">()</span> <span class="c1"># ticks radiais</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">ax_polar</span><span class="o">.</span><span class="n">get_ygridlines</span><span class="p">()</span> <span class="c1"># ticks azimutais</span>
+<span class="sd"># modifica estilo das ticks</span>
+<span class="sd">for i in range(len(a)):</span>
+<span class="sd">    a[i].set_color(&#39;k&#39;)</span>
+<span class="sd">    a[i].set_linestyle(&#39;:&#39;)</span>
 
-<span class="c1"># modifica estilo das ticks</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
-    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="sd">a[0].set_color(&#39;b&#39;)</span>
+<span class="sd">a[0].set_linestyle(&#39;-&#39;)</span>
+<span class="sd">a[0].set_linewidth(2)</span>
+<span class="sd">a[-4].set_color(&#39;b&#39;)</span>
+<span class="sd">a[-4].set_linestyle(&#39;-&#39;)</span>
+<span class="sd">a[-4].set_linewidth(2)</span>
 
-<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="sd">for i in range(len(b)):    </span>
+<span class="sd">    b[i].set_color(&#39;k&#39;)</span>
+<span class="sd">    b[i].set_linestyle(&#39;:&#39;)</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>    
-    <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-    <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="sd">ax_polar.patch.set_alpha(0)</span>
+<span class="sd">ax_polar.set_yticklabels([]); # remove ticks radiais</span>
 
-<span class="n">ax_polar</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">ax_polar</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([]);</span> <span class="c1"># remove ticks radiais</span>
-
-<span class="c1"># altera ticks azimutais</span>
-<span class="n">ax_polar</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">120</span><span class="p">]);</span> 
-<span class="c1">#plt.savefig(&#39;../figs/q/q71-2.png&#39;)</span>
+<span class="sd"># altera ticks azimutais</span>
+<span class="sd">ax_polar.set_xticklabels([0,45,90,120]); </span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="c1">#plt.savefig(&#39;../figs/q/q71-1.png&#39;)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-214-af1489819df1&gt;:42: UserWarning: FixedFormatter should only be used together with FixedLocator
-  ax_polar.set_xticklabels([0,45,90,120]);
-</pre></div>
-</div>
-<img alt="../_images/Q71-gab_13_1.png" src="../_images/Q71-gab_13_1.png" />
+<img alt="../_images/Q71-gab_13_0.png" src="../_images/Q71-gab_13_0.png" />
 </div>
 </div>
 </section>
