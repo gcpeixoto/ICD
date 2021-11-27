@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Relátorio de Projeto Final (Modelo) &#8212; Introdução à Ciência de Dados</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Cadernos de ICD" href="cadernos-icd.html" />
+    <link rel="prev" title="Temas sugeridos para Projeto Final" href="capstone-temas.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-conteudo.html">
+   Apresentação do curso
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introducao.html">
+   Introdução à Ciência de Dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a-pip-venv.html">
+   Pacotes e ambientes virtuais com
+   <em>
+    pip
+   </em>
+   e
+   <em>
+    venv
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02b-conda.html">
+   <em>
+    Crash course
+   </em>
+   de
+   <em>
+    conda
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-ides.html">
+   Ambientes de desenvolvimento e computação interativa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-cvs-git.html">
+   Controle de versão
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-python-intermediario.html">
+   Python intermediário - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-python-intermediario-2.html">
+   Python intermediário - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-python-intermediario-3.html">
+   Python intermediário - III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08a-computacao-vetorizada.html">
+   Computação vetorizada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08b-alc.html">
+   Álgebra Linear Computacional básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-plotagem-matplotlib.html">
+   Plotagem e formatação de gráficos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="10a-pandas-series.html">
+   Manipulação de dados - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10b-pandas-dataframe.html">
+   Manipulação de dados - II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10c-pandas-agrupamento.html">
+   Manipulação de dados - III
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-estatistica-descritiva.html">
+   Estatística Descritiva
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-correlacao.html">
+   Correlação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-regressao.html">
+   Análise de regressão
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13a-distribuicoes.html">
+   Distribuições
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-aprendizado-maquina.html">
+   Aprendizado de máquina - I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14b-aprendizado-maquina-2.html">
+   Aprendizado de máquina - II
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 6
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-otimizacao.html">
+   Otimização
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Parte 7
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-visualizacao-dados-seaborn.html">
+   Visualização de dados com
+   <em>
+    seaborn
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-raspagem-dados.html">
+   Raspagem de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18-analise-redes.html">
+   Análise de redes complexas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19-etica-dados.html">
+   Ciência de dados e ética
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Questionários
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q21.html">
+   Questionário 21 (Q21)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q22.html">
+   Questionário 22 (Q22)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q23.html">
+   Questionário 23 (Q23)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q24.html">
+   Questionário 24 (Q24)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q25.html">
+   Questionário 25 (Q25)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q31.html">
+   Questionário 31 (Q31)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q32.html">
+   Questionário 32 (Q32)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q41.html">
+   Questionário 41 (Q41)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q42.html">
+   Questionário 42 (Q42)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q43.html">
+   Questionário 43 (Q43)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q44.html">
+   Questionário 44 (Q44)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q51.html">
+   Questionário 51 (Q51)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q71.html">
+   Questionário 71 (Q71)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q72.html">
+   Questionário 72 (Q72)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Q73.html">
+   Questionário 73 (Q73)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Relatório Final
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="capstone-temas.html">
+   Temas sugeridos para Projeto Final
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Relátorio de Projeto Final (Modelo)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Cadernos de ICD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cadernos-icd.html">
+   Cadernos de ICD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ipynb/capstone-template.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/ipynb/capstone-template.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/ipynb/capstone-template.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumo">
+   Resumo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#descricao-do-problema">
+   Descrição do problema
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metodologia-de-solucao">
+   Metodologia de solução
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potencial-de-biogas-no-nordeste">
+     Potencial de biogás no Nordeste
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definicao-de-helper-functions">
+     Definição de
+     <em>
+      helper functions
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#carregamento-de-dados">
+     Carregamento de dados
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resultados-analise-e-discussao">
+   Resultados, análise e discussão
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias-bibliograficas">
+   Referências bibliográficas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajuda-esta-secao-nao-deve-ser-incluida-no-relatorio">
+     Ajuda (esta seção não deve ser incluída no relatório!)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="relatorio-de-projeto-final-modelo">
+<h1>Relátorio de Projeto Final (Modelo)<a class="headerlink" href="#relatorio-de-projeto-final-modelo" title="Permalink to this headline">¶</a></h1>
+<p><strong>Introdução à Ciência de Dados - Prof. Gustavo Oliveira - Semestre 202Y/0X</strong></p>
+<p><strong>Equipe:</strong></p>
+<ul class="simple">
+<li><p>Euclides de Alexandria, ‘euclides.alexandria&#64;nome.edu.br’</p></li>
+<li><p>Rei Henrique VII, ‘henry&#64;eu.com’</p></li>
+<li><p>Cosme de Médici, ‘cmedici&#64;yuhh.com.br’</p></li>
+</ul>
+<p><em>Nota</em>: altere Y (1,2,3,…) e X (1 ou 2) correspondentemente na identificação de ano/semestre.</p>
+<hr><section id="resumo">
+<h2>Resumo<a class="headerlink" href="#resumo" title="Permalink to this headline">¶</a></h2>
+<p>Escreva em uma ou duas sentenças, no máximo, a finalidade do relatório.</p>
+<p>Exemplo:</p>
+<blockquote>
+<div><p>Aplicamos a técnica de <em>heatmap</em> para destacar o potencial para produção de biogás na região Nordeste.</p>
+</div></blockquote>
+</section>
+<section id="descricao-do-problema">
+<h2>Descrição do problema<a class="headerlink" href="#descricao-do-problema" title="Permalink to this headline">¶</a></h2>
+<p>Descreva o problema a ser tratado em até 3 parágrafos. (O quê?)</p>
+<p>Exemplo:</p>
+<blockquote>
+<div><p>O crescimento populacional associado aos hábitos de consumo modernos são fatores consideráveis para o aumento do lixo produzido nas cidades. Resíduos sólidos são tratados de diversas formas, tais como reciclagem, incineração e aterro sanitário (REFERÊNCIA 1, ANO).</p>
+<p>Em geral, nos aterros sanitários, os compostos orgânicos podem ser tratados por processos termoquímicos ou bioquímicos que geram o biogás. Embora algumas cidades da região Nordeste possuam dados sobre o volume produzido de matéria orgânica semanalmente, não houve até o momento nenhuma análise sobre o potencial de geração de biogás nos aterros sanitários municipais (REFERÊNCIA 2, ANO).</p>
+<p>A questão central que buscamos responder é: <em>podemos construir um mapa de calor sobre a região Nordeste pelo qual possamos, rapidamente, visualizar o potencial de geração de biogás nos municípios?</em></p>
+</div></blockquote>
+</section>
+<section id="metodologia-de-solucao">
+<h2>Metodologia de solução<a class="headerlink" href="#metodologia-de-solucao" title="Permalink to this headline">¶</a></h2>
+<p>Descreva a metodologia utilizada para resolver o problema proposto. (Como?)</p>
+<p>Exemplo:</p>
+<blockquote>
+<div><p>Para resolver o problema proposto, usamos a seguinte metodologia:</p>
+<ol class="simple">
+<li><p>Coleta de dados nos sites das companhias de limpeza urbana responsáveis pela coleta de lixo em 200 municípios da região Nordeste distribuídos conforme a tabela abaixo:
+|Estado|No. de municípios|
+|—|—|
+|AL|5|
+|BA|11|
+|CE|7|
+|MA|2|
+|PB|135|
+|PE|12|
+|PI|6|
+|RN|9|
+|SE|3|</p></li>
+<li><p>Limpeza e processamento dos dados utilizando os módulos <em>pandas</em>, <em>numpy</em> e <em>statsmodels</em> para construir DataFrames contendo os parâmetros mais relevantes de análise. A seguir, mostramos um recorte de um dos DataFrames apresentando o volume de compostos orgânicos produzidos por estado (<code class="docutils literal notranslate"><span class="pre">VCOPS</span></code>) e o potencial de biogás médio por estado (<code class="docutils literal notranslate"><span class="pre">POTBIOGM</span></code>).
+|    | NELU                                           | COD   | UF   |   VCOPS (m3) |   POTBIOGM (fraction) |
+|—:|:———————————————–|:——|:—–|————-:|———————:|
+|  0 | DKX Engenharia                                 | DKX   | PE   |      65000   |                0.443 |
+|  1 | Modal Soluções em Limpeza                      | MOD   | AL   |      21234.1 |                0.211 |
+|  2 | Soft Clean                                     | SFC   | RN   |      42109.8 |                0.112 |
+|  3 | Autarquia Especial Municipal de Limpeza Urbana | EMLUR | PB   |      87772.3 |                0.652 |</p></li>
+<li><p>Definição da expressão de <code class="docutils literal notranslate"><span class="pre">POTBIOG</span></code>, cujo valor varia entre 0 e 1.</p></li>
+<li><p>Plotagem dos mapas de calor de <code class="docutils literal notranslate"><span class="pre">POTBIOG</span></code> utilizando o módulo <em>geopandas</em>.</p></li>
+</ol>
+<p>O código a seguir resume os passos fundamentais executados.</p>
+</div></blockquote>
+<hr>
+<section id="potencial-de-biogas-no-nordeste">
+<h3>Potencial de biogás no Nordeste<a class="headerlink" href="#potencial-de-biogas-no-nordeste" title="Permalink to this headline">¶</a></h3>
+<p><em>Notas:</em></p>
+<ul class="simple">
+<li><p><strong>os dados produzidos nesta análise são fictícios e não devem ser usados para pesquisa!</strong></p></li>
+<li><p>para reproduzir este código, é necessário instalar o módulo <a class="reference external" href="https://geopandas.org/en/stable/index.html"><code class="docutils literal notranslate"><span class="pre">geopandas</span></code></a>, preferencialmente em novo ambiente virtual;</p></li>
+<li><p>os mapas do Brasil estão disponíveis como arquivos .SHP <a class="reference external" href="https://biogeo.ucdavis.edu/data/gadm3.6/shp/gadm36_BRA_shp.zip%27">aqui</a>, do site <a class="reference external" href="https://gadm.org/download_country.html">GADM</a>. Consulte política de uso!</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">geo</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">title</span><span class="p">,</span> <span class="n">subplots</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">normal</span>
+
+<span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">filterwarnings</span>
+<span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="definicao-de-helper-functions">
+<h3>Definição de <em>helper functions</em><a class="headerlink" href="#definicao-de-helper-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># biogas potential (POTBIOG) simulator </span>
+<span class="k">def</span> <span class="nf">simulate_POTBIOG</span><span class="p">(</span><span class="n">state_name</span><span class="p">,</span><span class="n">mean</span><span class="p">,</span><span class="n">sigma</span><span class="p">):</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">bra2</span><span class="p">[</span><span class="n">bra2</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">state_name</span><span class="p">]</span>
+    <span class="n">state</span><span class="p">[</span><span class="s1">&#39;POTBIOG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">state</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">state</span>
+
+<span class="c1"># plot POTBIOG per state</span>
+<span class="k">def</span> <span class="nf">plotfig</span><span class="p">(</span><span class="n">UF</span><span class="p">,</span><span class="n">state_name</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;POTBIOG&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">f</span><span class="p">(</span><span class="n">UF</span><span class="p">)</span>
+    <span class="n">title</span><span class="p">(</span><span class="n">state_name</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([]);</span>
+</pre></div>
+</div>
+</section>
+<section id="carregamento-de-dados">
+<h3>Carregamento de dados<a class="headerlink" href="#carregamento-de-dados" title="Permalink to this headline">¶</a></h3>
+<p>Baixe o .zip localmente e carregue a partir do diretório ou use métodos robustos do <em>geopandas</em> para raspagem da web.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># local directory on your computer</span>
+<span class="n">local_dir</span> <span class="o">=</span> <span class="s1">&#39;/Users/gustavo/Downloads/&#39;</span>
+
+<span class="c1"># level 1 shape file</span>
+<span class="n">bra</span> <span class="o">=</span> <span class="n">geo</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">local_dir</span> <span class="o">+</span> <span class="s1">&#39;gadm36_BRA_shp/gadm36_BRA_1.shp&#39;</span><span class="p">)</span>
+
+<span class="c1"># level 2 shape file</span>
+<span class="n">bra2</span> <span class="o">=</span> <span class="n">geo</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">local_dir</span> <span class="o">+</span> <span class="s1">&#39;gadm36_BRA_shp/gadm36_BRA_2.shp&#39;</span><span class="p">)</span>
+
+<span class="c1"># NE region mask</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Alagoas&#39;</span><span class="p">)</span> <span class="o">|</span> \
+       <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bahia&#39;</span><span class="p">)</span> <span class="o">|</span> \
+       <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Ceará&#39;</span><span class="p">)</span> <span class="o">|</span> \
+       <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Maranhão&#39;</span><span class="p">)</span> <span class="o">|</span> \
+       <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Pernambuco&#39;</span><span class="p">)</span> <span class="o">|</span> \
+       <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Piauí&#39;</span><span class="p">)</span> <span class="o">|</span> \
+       <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Paraíba&#39;</span><span class="p">)</span> <span class="o">|</span> \
+       <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Rio Grande do Norte&#39;</span><span class="p">)</span> <span class="o">|</span> \
+       <span class="p">(</span><span class="n">bra</span><span class="p">[</span><span class="s1">&#39;NAME_1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sergipe&#39;</span><span class="p">)</span>
+
+<span class="c1"># NE state limits</span>
+<span class="n">NE</span> <span class="o">=</span> <span class="n">bra</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+
+<span class="c1"># simulate values for 4 states: AL, PB, PE, and RN</span>
+<span class="n">AL</span> <span class="o">=</span> <span class="n">simulate_POTBIOG</span><span class="p">(</span><span class="s1">&#39;Alagoas&#39;</span><span class="p">,</span><span class="mf">0.211</span><span class="p">,</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">PB</span> <span class="o">=</span> <span class="n">simulate_POTBIOG</span><span class="p">(</span><span class="s1">&#39;Paraíba&#39;</span><span class="p">,</span><span class="mf">0.652</span><span class="p">,</span><span class="mf">0.06</span><span class="p">)</span>
+<span class="n">PE</span> <span class="o">=</span> <span class="n">simulate_POTBIOG</span><span class="p">(</span><span class="s1">&#39;Pernambuco&#39;</span><span class="p">,</span><span class="mf">0.443</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">RN</span> <span class="o">=</span> <span class="n">simulate_POTBIOG</span><span class="p">(</span><span class="s1">&#39;Rio Grande do Norte&#39;</span><span class="p">,</span><span class="mf">0.112</span><span class="p">,</span><span class="mf">0.08</span><span class="p">)</span>
+
+<span class="c1"># to have POTBIOG&#39;s merged distribution</span>
+<span class="c1"># check for artifacts!!!</span>
+<span class="n">ALL</span> <span class="o">=</span> <span class="n">AL</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">PB</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+<span class="n">ALL</span> <span class="o">=</span> <span class="n">ALL</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">PE</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+<span class="n">ALL</span> <span class="o">=</span> <span class="n">ALL</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">RN</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot figure for all NE region</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">NE</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">ALL</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;POTBIOG&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([]);</span>
+<span class="n">title</span><span class="p">(</span><span class="s1">&#39;Potencial de Biogás - Região NE&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot figures per state of interest    </span>
+<span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">AL</span><span class="p">,</span><span class="s1">&#39;Potencial de Biogás - AL&#39;</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">PB</span><span class="p">,</span><span class="s1">&#39;Potencial de Biogás - PB&#39;</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">PE</span><span class="p">,</span><span class="s1">&#39;Potencial de Biogás - PE&#39;</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">RN</span><span class="p">,</span><span class="s1">&#39;Potencial de Biogás - RN&#39;</span><span class="p">)]:</span>
+    <span class="n">plotfig</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr></section>
+</section>
+<section id="resultados-analise-e-discussao">
+<h2>Resultados, análise e discussão<a class="headerlink" href="#resultados-analise-e-discussao" title="Permalink to this headline">¶</a></h2>
+<p>Adicione gráficos, figuras, tabelas e informações necessárias (E aí?)</p>
+<p>Exemplo:</p>
+<blockquote>
+<div><p>A partir dos dados coletados, obtivemos os mapas de calor
+abaixo para o potencial de biogás (<code class="docutils literal notranslate"><span class="pre">POTBIOG</span></code>).</p>
+</div></blockquote>
+<figure class="align-default" id="potbiog-ne">
+<a class="reference internal image-reference" href="../_images/potbiog-ne.png"><img alt="../_images/potbiog-ne.png" src="../_images/potbiog-ne.png" style="width: 330px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">POTBIOG - NE.</span><a class="headerlink" href="#potbiog-ne" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="potbiog-al">
+<a class="reference internal image-reference" href="../_images/potbiog-al.png"><img alt="../_images/potbiog-al.png" src="../_images/potbiog-al.png" style="width: 330px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">POTBIOG - AL.</span><a class="headerlink" href="#potbiog-al" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="potbiog-pb">
+<a class="reference internal image-reference" href="../_images/potbiog-pb.png"><img alt="../_images/potbiog-pb.png" src="../_images/potbiog-pb.png" style="width: 330px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">POTBIOG - PB.</span><a class="headerlink" href="#potbiog-pb" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="potbiog-pe">
+<a class="reference internal image-reference" href="../_images/potbiog-pe.png"><img alt="../_images/potbiog-pe.png" src="../_images/potbiog-pe.png" style="width: 330px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">POTBIOG - PE.</span><a class="headerlink" href="#potbiog-pe" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="potbiog-rn">
+<a class="reference internal image-reference" href="../_images/potbiog-rn.png"><img alt="../_images/potbiog-rn.png" src="../_images/potbiog-rn.png" style="width: 330px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">POTBIOG - RN.</span><a class="headerlink" href="#potbiog-rn" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<blockquote>
+<div><p>Verifica-se que os valores se distribuem de maneira heterogênea na região estudada, mas o POTBIOG do estado da Paraíba é superior aos demais.</p>
+</div></blockquote>
+</section>
+<section id="referencias-bibliograficas">
+<h2>Referências bibliográficas<a class="headerlink" href="#referencias-bibliograficas" title="Permalink to this headline">¶</a></h2>
+<p>Registre todas as referências utilizadas no formato utilizado no template do mini-artigo. Referências incluem:</p>
+<ul class="simple">
+<li><p>Livro</p></li>
+<li><p>Artigo</p></li>
+<li><p>Site</p></li>
+<li><p>Post</p></li>
+<li><p>etc.</p></li>
+</ul>
+<section id="ajuda-esta-secao-nao-deve-ser-incluida-no-relatorio">
+<h3>Ajuda (esta seção não deve ser incluída no relatório!)<a class="headerlink" href="#ajuda-esta-secao-nao-deve-ser-incluida-no-relatorio" title="Permalink to this headline">¶</a></h3>
+<p>Recursos para aprender como escrever o relatório. Caso queira fazer algo e não saiba, pergunte ao professor. Se ele souber, orientará como fazer.</p>
+<ul class="simple">
+<li><p>O que é Markdown?: <a class="reference external" href="https://pt.wikipedia.org/wiki/Markdown">link</a></p></li>
+<li><p>Dicas rápidas de Markdown: <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">link</a></p></li>
+<li><p>Editor online para aprender Markdown: <a class="reference external" href="https://stackedit.io/app">link</a></p></li>
+<li><p>Como inserir texto, imagens e tabelas em notebooks: <a class="reference external" href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/file-formats/use-text-files/format-text-with-markdown-jupyter-notebook/">link</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "gcpeixoto/ICD",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ipynb"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="capstone-temas.html" title="previous page">Temas sugeridos para Projeto Final</a>
+    <a class='right-next' id="next-link" href="cadernos-icd.html" title="next page">Cadernos de ICD</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gustavo Oliveira<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
