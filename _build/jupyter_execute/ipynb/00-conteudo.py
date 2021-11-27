@@ -82,6 +82,10 @@
 #     - [Questionário 44](Q44.ipynb)
 # - Unidade 3: Parte 5
 #     - [Questionário 51](Q51.ipynb)
+# - Unidade 4: Parte 7
+#     - [Questionário 71](Q71.ipynb)    
+#     - [Questionário 72](Q72.ipynb)    
+#     - [Questionário 73](Q73.ipynb)    
 # 
 # #### Conceito
 # 
@@ -155,7 +159,16 @@
 # 
 # ### Projeto Final
 # 
-# _Coming soon..._
+# Os temas de projeto final devem ser decididos pela equipe, mas uma lista com sugestões encontra-se abaixo:
+# 
+# - [Temas de Projeto Final](capstone-temas.ipynb)
+# 
+# #### Template
+# 
+# Os relatórios devem ser enviados em .PDF, mas utilizando como base o template .IPYNB disponibilizado no link abaixo: 
+# 
+# - [Modelo de Relatório Final](capstone-template.ipynb)
+# 
 # 
 # ### Fórmulas de cálculo
 # 
@@ -238,7 +251,6 @@
 # 
 # 14-aprendizado-maquina
 # 14b-aprendizado-maquina-2
-# 15-otimizacao
 # ```
 # 
 # 
@@ -246,6 +258,15 @@
 # :hidden:
 # :titlesonly:
 # :caption: Parte 6
+# 
+# 15-otimizacao
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
+# :caption: Parte 7
 # 
 # 16-visualizacao-dados-seaborn
 # 17-raspagem-dados
@@ -271,6 +292,19 @@
 # Q43
 # Q44
 # Q51
+# Q71
+# Q72
+# Q73
+# ```
+# 
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
+# :caption: Relatório Final
+# 
+# capstone-temas
+# capstone-template
 # ```
 # 
 # 

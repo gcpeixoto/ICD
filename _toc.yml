@@ -35,8 +35,11 @@
   chapters:
   - file: ipynb/14-aprendizado-maquina
   - file: ipynb/14b-aprendizado-maquina-2
-  - file: ipynb/15-otimizacao
 - part: Parte 6  
+  numbered: false
+  chapters:  
+  - file: ipynb/15-otimizacao
+- part: Parte 7
   numbered: false
   chapters:
   - file: ipynb/16-visualizacao-dados-seaborn
@@ -58,10 +61,14 @@
   - file: ipynb/Q43
   - file: ipynb/Q44
   - file: ipynb/Q51
-#- part: Temas de projeto
-#  numbered: false
-#  chapters:
-#  - file: ipynb/99-temas-projeto
+  - file: ipynb/Q71
+  - file: ipynb/Q72
+  - file: ipynb/Q73
+- part: Relatório Final
+  numbered: false
+  chapters:
+  - file: ipynb/capstone-temas
+  - file: ipynb/capstone-template
 - part: Cadernos de ICD
   numbered: false
   chapters:
