@@ -495,6 +495,21 @@
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geracao-de-arquivo-de-acordo-bilateral">
+   Geração de arquivo de acordo bilateral
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#raspagem-do-iban">
+   Raspagem do IBAN
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escreve-edgelist">
+   Escreve edgelist
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
    GABARITO
   </a>
@@ -528,7 +543,7 @@
 <hr><p>Para responder às questões, leia o texto introdutório a seguir.</p>
 <blockquote>
 <div><p>Diversos países firmam acordos bilaterais com o intuito de fortalecer interesses mútuos. Uma rede multinacional da qual o Brasil faz parte começou a ser modelada por cientistas de dados a partir de um grafo não dirigido em que os <em>nós</em> do grafo representam os países, renomeados segundo o código Alpha-3 do padrão <a class="reference external" href="https://www.iban.com/country-codes">IBAN</a>, e as <em>arestas</em> representam a existência de um acordo bilateral.
-A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria (AUS), Bélgica (BEL), Brasil (BRA), Noruega (NOR) e Estados Unidos (USA).</p>
+A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria (AUT), Bélgica (BEL), Brasil (BRA), Emirados Árabes Unidos (ARE) e Estados Unidos (USA).</p>
 </div></blockquote>
 <figure class="align-default" id="rede">
 <a class="reference internal image-reference" href="../_images/q73.png"><img alt="../_images/q73.png" src="../_images/q73.png" style="width: 660px;" /></a>
@@ -543,14 +558,48 @@ A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria
 <div><p><em>Obs.:</em> acesse o arquivo <a class="reference external" href="https://github.com/gcpeixoto/ICD/tree/main/database/paises-acordo-bilateral.txt">aqui</a>.</p>
 </div></blockquote>
 <p><strong>Questão 1.</strong> Faça a raspagem da tabela de códigos de países disponíveis na página <a class="reference external" href="https://www.iban.com/country-codes">IBAN</a> para recuperar os códigos Alpha-3 para cada país contido na lista de arestas e crie um segundo arquivo chamado <code class="docutils literal notranslate"><span class="pre">paises-acordo-bilateral-IBAN.txt</span></code>. Use o módulo <code class="docutils literal notranslate"><span class="pre">networkx</span></code> e a função <code class="docutils literal notranslate"><span class="pre">read_edgelist</span></code> para construir o grafo da rede multinacional. Em seguida, assinale a alternativa correta para a tupla (número de nós, número de arestas) que você encontrou. Sugestão: use as funções <code class="docutils literal notranslate"><span class="pre">get_table_head</span></code> e <code class="docutils literal notranslate"><span class="pre">get_table_body</span></code> criadas no capítulo do livro de ICD sobre <em>Raspagem de dados</em>.</p>
-<p>A. (14, 60)</p>
-<p>B. (16, 62)</p>
-<p>C. (12, 56)</p>
-<p>D. (14, 66)</p>
+<p>A. (14, 28)</p>
+<p>B. (16, 30)</p>
+<p>C. (12, 36)</p>
+<p>D. (14, 38)</p>
 </section>
 <section id="gabarito">
 <h1>GABARITO<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
 <p>Alternativa <strong>D</strong>.</p>
+</section>
+<section id="geracao-de-arquivo-de-acordo-bilateral">
+<h1>Geração de arquivo de acordo bilateral<a class="headerlink" href="#geracao-de-arquivo-de-acordo-bilateral" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">countries</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Argentina&#39;</span><span class="p">,</span><span class="s1">&#39;Austria&#39;</span><span class="p">,</span><span class="s1">&#39;Belgium&#39;</span><span class="p">,</span><span class="s1">&#39;Brazil&#39;</span><span class="p">,</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;United Arab Emirates (the)&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;United States of America (the)&#39;</span><span class="p">,</span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;India&#39;</span><span class="p">,</span><span class="s1">&#39;Israel&#39;</span><span class="p">,</span><span class="s1">&#39;Netherlands (the)&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;Norway&#39;</span><span class="p">,</span><span class="s1">&#39;Russian Federation (the)&#39;</span><span class="p">,</span><span class="s1">&#39;South Africa&#39;</span><span class="p">)</span>
+
+<span class="n">adj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,(</span><span class="nb">len</span><span class="p">(</span><span class="n">countries</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">countries</span><span class="p">)))</span>
+<span class="n">adj</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">diag_indices_from</span><span class="p">(</span><span class="n">adj</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">adj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">adj</span><span class="p">)</span>
+<span class="n">adj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">adj</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">adj</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> 
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../database/paises-acordo-bilateral.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">countries</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">countries</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">countries</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span> <span class="o">+</span> <span class="n">countries</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="raspagem-do-iban">
+<h1>Raspagem do IBAN<a class="headerlink" href="#raspagem-do-iban" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
@@ -593,6 +642,9 @@ A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria
 </div>
 </div>
 </div>
+</section>
+<section id="escreve-edgelist">
+<h1>Escreve edgelist<a class="headerlink" href="#escreve-edgelist" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../database/paises-acordo-bilateral.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
@@ -615,13 +667,13 @@ A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">read_edgelist</span><span class="p">(</span><span class="s1">&#39;../database/paises-acordo-bilateral-IBAN.txt&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-<span class="n">Gsub</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">subgraph</span><span class="p">(</span><span class="n">G</span><span class="p">,[</span><span class="s1">&#39;AUT&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;BRA&#39;</span><span class="p">,</span><span class="s1">&#39;BEL&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">])</span>
+<span class="n">Gsub</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">subgraph</span><span class="p">(</span><span class="n">G</span><span class="p">,[</span><span class="s1">&#39;AUT&#39;</span><span class="p">,</span><span class="s1">&#39;ARE&#39;</span><span class="p">,</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span><span class="s1">&#39;BRA&#39;</span><span class="p">,</span><span class="s1">&#39;BEL&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">])</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx</span><span class="p">(</span><span class="n">Gsub</span><span class="p">,</span><span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Q73-gab_7_0.png" src="../_images/Q73-gab_7_0.png" />
+<img alt="../_images/Q73-gab_11_0.png" src="../_images/Q73-gab_11_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -631,23 +683,23 @@ A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(14, 66)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(14, 38)
 </pre></div>
 </div>
 </div>
 </div>
 <p><strong>Questão 2.</strong> A <em>centralidade de grau</em> <code class="docutils literal notranslate"><span class="pre">deg</span></code>, calculada para cada nó do grafo completo pelo módulo <code class="docutils literal notranslate"><span class="pre">networkx</span></code>, pode ser interpretada, para este estudo de caso, como uma medida relativa da pré-disposição de um país para se abrir à globalização. Neste sentido, calcule <code class="docutils literal notranslate"><span class="pre">deg</span></code> e assinale a opção cujo país é o mais <strong>fechado</strong> ao fenômeno da globalização.</p>
 <p>A. CHN</p>
-<p>B. NLD</p>
+<p>B. BRA</p>
 <p>C. IND</p>
-<p>D. ZAF</p>
+<p>D. NLD</p>
 </section>
 <section id="id1">
 <h1>GABARITO<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>Alternativa <strong>D</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># minima deg é ZAF</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># minima deg é NLD</span>
 <span class="n">deg</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">degree_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 <span class="n">deg</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">deg</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)}</span>
 <span class="n">deg</span>
@@ -655,28 +707,28 @@ A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;USA&#39;: 1.153846153846154,
- &#39;CHN&#39;: 1.0,
- &#39;DEU&#39;: 0.8461538461538463,
- &#39;AUT&#39;: 0.8461538461538463,
- &#39;GBR&#39;: 0.7692307692307693,
- &#39;NLD&#39;: 0.7692307692307693,
- &#39;RUS&#39;: 0.6923076923076923,
- &#39;BEL&#39;: 0.6923076923076923,
- &#39;ISR&#39;: 0.6923076923076923,
- &#39;CAN&#39;: 0.6153846153846154,
- &#39;IND&#39;: 0.6153846153846154,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;DEU&#39;: 0.6923076923076923,
+ &#39;ISR&#39;: 0.6153846153846154,
+ &#39;ARE&#39;: 0.6153846153846154,
  &#39;NOR&#39;: 0.5384615384615385,
- &#39;BRA&#39;: 0.5384615384615385,
- &#39;ZAF&#39;: 0.38461538461538464}
+ &#39;BEL&#39;: 0.46153846153846156,
+ &#39;USA&#39;: 0.46153846153846156,
+ &#39;CHN&#39;: 0.38461538461538464,
+ &#39;AUT&#39;: 0.38461538461538464,
+ &#39;RUS&#39;: 0.38461538461538464,
+ &#39;ARG&#39;: 0.3076923076923077,
+ &#39;BRA&#39;: 0.3076923076923077,
+ &#39;ZAF&#39;: 0.23076923076923078,
+ &#39;IND&#39;: 0.23076923076923078,
+ &#39;NLD&#39;: 0.23076923076923078}
 </pre></div>
 </div>
 </div>
 </div>
 <p><strong>Questão 3.</strong> Semelhantemente à interpretação da questão anterior, a <em>centralidade de intermediação</em> <code class="docutils literal notranslate"><span class="pre">bet</span></code> fornece uma medida relativa de quão boa é a confiança e respeitabilidade diplomática de um país para a concretização de acordos. Calcule <code class="docutils literal notranslate"><span class="pre">bet</span></code> e assinale a opção cujo país é o mais respeitado para intermediar acordos.</p>
 <p>A. AUT</p>
-<p>B. GBR</p>
-<p>C. USA</p>
+<p>B. ZAF</p>
+<p>C. DEU</p>
 <p>D. ISR</p>
 </section>
 <section id="id2">
@@ -684,7 +736,7 @@ A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria
 <p>Alternativa <strong>C</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># maxima bet é USA</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># maxima bet é DEU</span>
 <span class="n">bet</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">betweenness_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 <span class="n">bet</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">bet</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)}</span>
 <span class="n">bet</span>
@@ -692,20 +744,20 @@ A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;USA&#39;: 0.08887871387871386,
- &#39;CHN&#39;: 0.06340048840048838,
- &#39;GBR&#39;: 0.04718152218152218,
- &#39;RUS&#39;: 0.03540903540903541,
- &#39;AUT&#39;: 0.03124745624745625,
- &#39;DEU&#39;: 0.030392755392755398,
- &#39;NLD&#39;: 0.01876271876271876,
- &#39;IND&#39;: 0.017908017908017906,
- &#39;BRA&#39;: 0.01746031746031746,
- &#39;ISR&#39;: 0.016361416361416362,
- &#39;CAN&#39;: 0.0161986161986162,
- &#39;BEL&#39;: 0.013298738298738297,
- &#39;NOR&#39;: 0.01233211233211233,
- &#39;ZAF&#39;: 0.0014245014245014244}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;DEU&#39;: 0.16265262515262513,
+ &#39;ISR&#39;: 0.12664835164835167,
+ &#39;ARE&#39;: 0.09372710622710621,
+ &#39;CHN&#39;: 0.0839896214896215,
+ &#39;NOR&#39;: 0.06858974358974358,
+ &#39;AUT&#39;: 0.050534188034188035,
+ &#39;USA&#39;: 0.03774420024420024,
+ &#39;ARG&#39;: 0.027472527472527472,
+ &#39;BEL&#39;: 0.026098901098901096,
+ &#39;RUS&#39;: 0.025106837606837604,
+ &#39;IND&#39;: 0.023504273504273504,
+ &#39;BRA&#39;: 0.013247863247863246,
+ &#39;NLD&#39;: 0.01282051282051282,
+ &#39;ZAF&#39;: 0.004273504273504273}
 </pre></div>
 </div>
 </div>

@@ -1,0 +1,38 @@
+Argentina,China
+Argentina,Germany
+Argentina,Norway
+Argentina,South Africa
+Austria,Brazil
+Austria,China
+Austria,Germany
+Austria,Israel
+Austria,Norway
+Belgium,United Arab Emirates (the)
+Belgium,United States of America (the)
+Belgium,Germany
+Belgium,Israel
+Belgium,Norway
+Belgium,Russian Federation (the)
+Brazil,United Arab Emirates (the)
+Brazil,United States of America (the)
+Brazil,Russian Federation (the)
+China,United Arab Emirates (the)
+China,India
+China,Russian Federation (the)
+United Arab Emirates (the),United States of America (the)
+United Arab Emirates (the),Germany
+United Arab Emirates (the),Israel
+United Arab Emirates (the),Norway
+United Arab Emirates (the),Russian Federation (the)
+United States of America (the),Germany
+United States of America (the),Israel
+United States of America (the),Russian Federation (the)
+Germany,Israel
+Germany,Netherlands (the)
+Germany,Norway
+Germany,South Africa
+India,Israel
+India,Netherlands (the)
+Israel,Norway
+Israel,South Africa
+Netherlands (the),Norway

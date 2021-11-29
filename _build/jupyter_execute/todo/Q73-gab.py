@@ -17,7 +17,7 @@
 # Para responder às questões, leia o texto introdutório a seguir.
 # 
 # >Diversos países firmam acordos bilaterais com o intuito de fortalecer interesses mútuos. Uma rede multinacional da qual o Brasil faz parte começou a ser modelada por cientistas de dados a partir de um grafo não dirigido em que os _nós_ do grafo representam os países, renomeados segundo o código Alpha-3 do padrão [IBAN](https://www.iban.com/country-codes), e as _arestas_ representam a existência de um acordo bilateral.
-# > A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria (AUS), Bélgica (BEL), Brasil (BRA), Noruega (NOR) e Estados Unidos (USA).
+# > A figura abaixo mostra, por exemplo, um subgrafo dessa rede formado por Áustria (AUT), Bélgica (BEL), Brasil (BRA), Emirados Árabes Unidos (ARE) e Estados Unidos (USA).
 # ```{figure} ../figs/q/q73.png
 # ---
 # width: 660px
@@ -31,22 +31,53 @@
 
 # **Questão 1.** Faça a raspagem da tabela de códigos de países disponíveis na página [IBAN](https://www.iban.com/country-codes) para recuperar os códigos Alpha-3 para cada país contido na lista de arestas e crie um segundo arquivo chamado `paises-acordo-bilateral-IBAN.txt`. Use o módulo `networkx` e a função `read_edgelist` para construir o grafo da rede multinacional. Em seguida, assinale a alternativa correta para a tupla (número de nós, número de arestas) que você encontrou. Sugestão: use as funções `get_table_head` e `get_table_body` criadas no capítulo do livro de ICD sobre _Raspagem de dados_.
 # 
-# A. (14, 60)
+# A. (14, 28)
 # 
-# B. (16, 62)
+# B. (16, 30)
 # 
-# C. (12, 56)
+# C. (12, 36)
 # 
-# D. (14, 66)
+# D. (14, 38)
 
 # ## GABARITO
 # 
 # Alternativa **D**.
 
+# ## Geração de arquivo de acordo bilateral
+
+# In[1]:
+
+
+import numpy as np
+np.random.seed(3)
+
+countries = ('Argentina','Austria','Belgium','Brazil','China',
+             'United Arab Emirates (the)',
+             'United States of America (the)','Germany',
+             'India','Israel','Netherlands (the)',
+             'Norway','Russian Federation (the)','South Africa')
+
+adj = np.random.randint(0,2,(len(countries),len(countries)))
+adj[np.diag_indices_from(adj)] = 0
+adj = np.tril(adj)
+adj = np.tril(adj) + np.tril(adj).T 
+
+f = open('../database/paises-acordo-bilateral.txt','w')
+for i in range(len(countries)):
+    for j in range(i+1,len(countries)):
+        if adj[i,j] == 1:
+            s = countries[i] + ',' + countries[j] + '\n'
+            f.write(s)
+            
+f.close()
+
+
+# ## Raspagem do IBAN
+
 # 
 # 
 
-# In[1]:
+# In[2]:
 
 
 from urllib.request import urlopen
@@ -87,7 +118,9 @@ r = get_table_body(bs.body)
 iban = pd.DataFrame(r,columns=t_header).drop_duplicates().drop(columns=['Alpha-2 code','Numeric']).reset_index(drop=True)
 
 
-# In[2]:
+# ## Escreve edgelist
+
+# In[3]:
 
 
 f = open('../database/paises-acordo-bilateral.txt','r')
@@ -105,15 +138,15 @@ f.close()
 g.close()
 
 
-# In[3]:
+# In[4]:
 
 
 G = nx.read_edgelist('../database/paises-acordo-bilateral-IBAN.txt',delimiter=',')
-Gsub = nx.subgraph(G,['AUT','USA','BRA','BEL',''])
+Gsub = nx.subgraph(G,['AUT','ARE','USA','BRA','BEL',''])
 nx.draw_networkx(Gsub,with_labels=True)
 
 
-# In[4]:
+# In[5]:
 
 
 G.number_of_nodes(),G.number_of_edges()
@@ -123,20 +156,20 @@ G.number_of_nodes(),G.number_of_edges()
 # 
 # A. CHN 
 # 
-# B. NLD
+# B. BRA
 # 
 # C. IND
 # 
-# D. ZAF
+# D. NLD
 
 # ## GABARITO
 # 
 # Alternativa **D**.
 
-# In[5]:
+# In[6]:
 
 
-# minima deg é ZAF
+# minima deg é NLD
 deg = nx.degree_centrality(G)
 deg = {k: v for k, v in sorted(deg.items(), key=lambda item: item[1],reverse=True)}
 deg
@@ -146,9 +179,9 @@ deg
 # 
 # A. AUT
 # 
-# B. GBR
+# B. ZAF
 # 
-# C. USA
+# C. DEU
 # 
 # D. ISR
 
@@ -156,16 +189,16 @@ deg
 # 
 # Alternativa **C**.
 
-# In[6]:
+# In[7]:
 
 
-# maxima bet é USA
+# maxima bet é DEU
 bet = nx.betweenness_centrality(G)
 bet = {k: v for k, v in sorted(bet.items(), key=lambda item: item[1],reverse=True)}
 bet
 
 
-# In[7]:
+# In[8]:
 
 
 get_ipython().system('rm ../database/paises-acordo-bilateral-IBAN.txt')
