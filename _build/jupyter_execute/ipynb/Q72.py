@@ -54,15 +54,15 @@
 # 
 # D. 2175.1999.2184.2215.1090.1010
 
-# **Questão 2.** No corpo do arquivo HTML da página em questão, existem diversas âncoras (elementos da árvore DOM com a tag `<a>...</a>` com URLs que apontam para outros endereços no domínio do Ministério da Economia. Assinale a alternativa correta para o número de links contidos em `<body>` que iniciam pela raiz `https://www.gov.br/economia/pt-br`.
+# **Questão 2.** No corpo do arquivo HTML da página em questão, existem diversas âncoras (elementos da árvore DOM com a tag `<a>...</a>` com URLs que apontam para outros endereços no domínio do Ministério da Economia. Assinale a alternativa correta para o número de links _x_ contidos em `<body>` que iniciam pela raiz `https://www.gov.br/economia/pt-br`.
 # 
-# A. 502
+# A. 490 < _x_ < 494
 # 
-# B. 499 
+# B. 499 < _x_ < 504 
 # 
-# C. 400
+# C. 400 < _x_ < 404
 # 
-# D. 380
+# D. 306 < _x_ < 308
 
 # **Questão 3.** Marque a alternativa correta para o número de descendentes de `<body>` na árvore DOM correspondente ao arquivo HTML da página em questão.
 # 

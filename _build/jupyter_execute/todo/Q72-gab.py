@@ -58,7 +58,7 @@
 # 
 # Alternativa **C**.
 
-# In[1]:
+# In[2]:
 
 
 from urllib.request import urlopen
@@ -82,21 +82,21 @@ d = {decrypt(c):c for c in cachekeys}
 d
 
 
-# **Questão 2.** No corpo do arquivo HTML da página em questão, existem diversas âncoras (elementos da árvore DOM com a tag `<a>...</a>` com URLs que apontam para outros endereços no domínio do Ministério da Economia. Assinale a alternativa correta para o número de links contidos em `<body>` que iniciam pela raiz `https://www.gov.br/economia/pt-br`.
+# **Questão 2.** No corpo do arquivo HTML da página em questão, existem diversas âncoras (elementos da árvore DOM com a tag `<a>...</a>` com URLs que apontam para outros endereços no domínio do Ministério da Economia. Assinale a alternativa correta para o número de links _x_ contidos em `<body>` que iniciam pela raiz `https://www.gov.br/economia/pt-br`.
 # 
-# A. 502
+# A. 490 < _x_ < 494
 # 
-# B. 499 
+# B. 499 < _x_ < 504 
 # 
-# C. 400
+# C. 400 < _x_ < 404
 # 
-# D. 380
+# D. 306 < _x_ < 308
 
 # ## GABARITO
 # 
 # Alternativa **B**.
 
-# In[2]:
+# In[3]:
 
 
 gov_economia_links = []
@@ -122,7 +122,7 @@ len(gov_economia_links)
 # 
 # Alternativa **A**.
 
-# In[3]:
+# In[4]:
 
 
 k = 0
