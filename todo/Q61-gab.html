@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Questionário 31 (Q31) &#8212; Introdução à Ciência de Dados</title>
+    <title>Questionário 61 (Q61) &#8212; Introdução à Ciência de Dados</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -436,7 +436,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/todo/Q31-gab.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/todo/Q61-gab.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -461,7 +461,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/Q31-gab.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gcpeixoto/ICD/master?urlpath=lab/tree/todo/Q61-gab.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -469,7 +469,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/Q31-gab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/gcpeixoto/ICD/blob/master/todo/Q61-gab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -493,7 +493,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Questionário 31 (Q31)
+   Questionário 61 (Q61)
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -522,8 +522,8 @@
         
               <div>
                 
-  <section id="questionario-31-q31">
-<h1>Questionário 31 (Q31)<a class="headerlink" href="#questionario-31-q31" title="Permalink to this headline">¶</a></h1>
+  <section id="questionario-61-q61">
+<h1>Questionário 61 (Q61)<a class="headerlink" href="#questionario-61-q61" title="Permalink to this headline">¶</a></h1>
 <p>Orientações:</p>
 <ul class="simple">
 <li><p>Registre suas respostas no questionário de mesmo nome no SIGAA.</p></li>
@@ -534,115 +534,167 @@
 <p><em>Nota:</em> o arquivo-fonte será utilizado apenas como prova de execução da tarefa. Nenhuma avaliação será feita quanto ao estilo de programação.</p>
 <hr><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Symbol</span><span class="p">,</span> <span class="n">pprint</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Questão 1.</strong> Assinale a alternativa cujos tipos de dado mencionados podem ser todos utilizados para construir uma <em>Series</em> do <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
-<p>A. <code class="docutils literal notranslate"><span class="pre">str</span></code>,<code class="docutils literal notranslate"><span class="pre">numpy.array</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code>.</p>
-<p>B. <code class="docutils literal notranslate"><span class="pre">set</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.</p>
-<p>C. <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code>,<code class="docutils literal notranslate"><span class="pre">set</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code></p>
-<p>D. <code class="docutils literal notranslate"><span class="pre">dict</span></code>,<code class="docutils literal notranslate"><span class="pre">numpy.array</span></code>,<code class="docutils literal notranslate"><span class="pre">complex</span></code></p>
+<p><strong>Questão 1.</strong> Observe a figura abaixo e julgue os itens a seguir.</p>
+<figure class="align-default" id="convex">
+<a class="reference internal image-reference" href="../_images/q61.png"><img alt="../_images/q61.png" src="../_images/q61.png" style="width: 300px;" /></a>
+</figure>
+<p>i) existe uma função convexa entre as quatro plotadas.
+ii) uma entre as funções plotadas possui convexidade parcial.
+iii) duas entre as funções plotadas não são convexas.</p>
+<p>Assinale a alternativa correta.</p>
+<p>A. São corretos i) e ii), apenas.</p>
+<p>B. Apenas i) é correto.</p>
+<p>C. São corretos i) e iii), apenas.</p>
+<p>D. n.d.a.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">141</span><span class="p">)</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;(a)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">142</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">x2</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;(b)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">143</span><span class="p">)</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x3</span><span class="p">,</span> <span class="n">x3</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;(c)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+<span class="n">x4</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x4</span><span class="p">,</span> <span class="n">x4</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([]);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;(d)&#39;</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Q61-gab_4_0.png" src="../_images/Q61-gab_4_0.png" />
+</div>
+</div>
 <hr>
 </section>
 <section id="gabarito">
 <h1>Gabarito<a class="headerlink" href="#gabarito" title="Permalink to this headline">¶</a></h1>
-<p>Alternativa <strong>D</strong>, pois <code class="docutils literal notranslate"><span class="pre">set</span></code> é sequência não ordenada e não gera <em>Series</em>.</p>
+<p>Alternativa <strong>A</strong></p>
 <hr>
-<p><strong>Questão 2</strong> Ao se construir um objeto <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code>, um comportamento padrão é esperado quando índices não são explicitamente fornecidos. Semelhantemente, ao se trabalhar com objetos <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>, a biblioteca encarrega-se, por padrão, de tratar dados chamados “ausentes”.  Assinale a alternativa correta quanto à execução das funções de criação dos objetos.</p>
-<p>A. <code class="docutils literal notranslate"><span class="pre">pandas.Series()</span></code> sempre retorna erro se um <code class="docutils literal notranslate"><span class="pre">index</span></code> não for especificado; <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> trata dados ausentes adicionando 0 nas posições devidas e converte o <code class="docutils literal notranslate"><span class="pre">dtype</span></code> de todas as <code class="docutils literal notranslate"><span class="pre">Series</span></code> que o constituem para <code class="docutils literal notranslate"><span class="pre">int64</span></code>.</p>
-<p>B. <code class="docutils literal notranslate"><span class="pre">pandas.Series()</span></code> atribui valores de <code class="docutils literal notranslate"><span class="pre">1</span></code> a <code class="docutils literal notranslate"><span class="pre">n</span></code> (sendo <code class="docutils literal notranslate"><span class="pre">n</span></code> o número de elementos) às linhas; <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame()</span></code> trata dados ausentes adicionando <code class="docutils literal notranslate"><span class="pre">np.nan</span></code> nas posições devidas.</p>
-<p>C. <code class="docutils literal notranslate"><span class="pre">pandas.Series()</span></code> atribui valores de <code class="docutils literal notranslate"><span class="pre">0</span></code> a <code class="docutils literal notranslate"><span class="pre">n</span></code> (sendo <code class="docutils literal notranslate"><span class="pre">n</span></code> o número de elementos) às linhas; <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame()</span></code> trata dados ausentes adicionando <code class="docutils literal notranslate"><span class="pre">np.nan</span></code> nas posições devidas.</p>
-<p>D. n.d.a.</p>
+<p><strong>Questão 2.</strong> A função a seguir simula a curva do <em>potencial de ação</em> de uma membrana:</p>
+<div class="math notranslate nohighlight">
+\[P(x) = \dfrac{1.0}{(x - 0.5)^2 + 0.01} - \dfrac{1.0}{(x - 0.8)^2 + 0.04} - 70.\]</div>
+<p>Use computação simbólica para calcular uma aproximação para <span class="math notranslate nohighlight">\(P'(x=0)\)</span> e assinale a alternativa correta.</p>
+<p>A. -67.62</p>
+<p>B. 0.25</p>
+<p>C. 11.33</p>
+<p>D. 0.00</p>
+<p>Nota: Use <code class="docutils literal notranslate"><span class="pre">sympy.subs(x,x0)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Gráfico da função</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mf">1.0</span><span class="o">/</span><span class="p">((</span><span class="n">x1</span><span class="o">-</span><span class="mf">0.8</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span><span class="mf">0.04</span><span class="p">)</span> <span class="o">-</span> <span class="mi">70</span> <span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$P(x)$&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Potencial de ação de uma membrana&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">#plt.savefig(&quot;../figs/q/q61-2.png&#39;&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Q61-gab_8_0.png" src="../_images/Q61-gab_8_0.png" />
+</div>
+</div>
 <hr>
 </section>
 <section id="id1">
 <h1>Gabarito<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>Alternariva <strong>D</strong>:</p>
-<p>Se os index não forem fornecidos, o pandas atribuirá automaticamente os valores 0, 1, …, n-1, onde n é o número de elementos da lista. Dados não encontrados são assinalados por um valor especial. O marcador padrão do pandas para dados faltantes é o NaN (not a number).</p>
-<hr>
-<p><strong>Questão 3.</strong> A temperatura na Elysium Planitia do Planeta Vermelho é monitorada pela NASA através da MARS InSigth Mission.
-Suponha que você assinou um contrato com a NASA para analisar supostas predições climáticas para o ano de 2022. O gráfico abaixo mostra uma distribuição provável da temperatura média diária na região supracitada para cada dia do mês de junho (disponível no arquivo <a class="reference external" href="https://github.com/gcpeixoto/ICD/blob/main/database/mars-temp-2022-06.csv?raw=true">mars-temp-2022-06.csv</a>), porém, falhas de medição passadas induziram <em>gaps</em> nas previsões para alguns dias, como pode ser observado.</p>
-<figure class="align-default" id="mars-temp">
-<a class="reference internal image-reference" href="../_images/q31-mars-temp.png"><img alt="../_images/q31-mars-temp.png" src="../_images/q31-mars-temp.png" style="width: 400px;" /></a>
-<figcaption>
-<p><span class="caption-text">Temperatura média diária na Elysium Planitia - Marte.</span><a class="headerlink" href="#mars-temp" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<p>Fonte: adaptado de <a class="reference external" href="https://mars.nasa.gov/insight/weather/">NASA MARS Insight Mission</a></p>
-<p>Sabendo que a temperatura <span class="math notranslate nohighlight">\(T_d\)</span> no dia desconhecido <span class="math notranslate nohighlight">\(d\)</span> pode ser estimada por</p>
+<p>Alternativa <strong>C</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mf">0.01</span><span class="p">))</span><span class="o">-</span><span class="mf">1.0</span><span class="o">/</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mf">0.8</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span><span class="mf">0.04</span><span class="p">)</span> <span class="o">-</span> <span class="mi">70</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -70 + \frac{1.0}{\left(x - 0.5\right)^{2} + 0.01} - \frac{1.0}{\left(x - 0.8\right)^{2} + 0.04}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dp</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">dp</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 11.3326917958273\]</div>
+</div>
+</div>
+<hr><p><strong>Questão 3.</strong> Considere a função</p>
 <div class="math notranslate nohighlight">
-\[T_d = \mu(T_{d-1},T_{d-2},T_{d-3}),\]</div>
-<p>onde <span class="math notranslate nohighlight">\(\mu\)</span> significa “média aritmética dos valores dados”, assinale a alternativa que corresponde à temperatura média para todo o mês de junho, à menor e à maior, nesta ordem.</p>
-<p>Obs.: se <span class="math notranslate nohighlight">\(d=25\)</span>, a temperatura no 25o. dia é a média das temperaturas do 22o. ao 24o. dia.</p>
-<p>A. (-72.15, -74.99, -65.07)</p>
-<p>B. (-65.0, -72.99, -65.07)</p>
-<p>C. (-75.0, -74.99, -65.07)</p>
-<p>D. (-69.97, -74.99, -65.07)</p>
-<p><strong>Obs.:</strong> se <span class="math notranslate nohighlight">\(d=25\)</span>, a temperatura no 25o. dia é a média das temperaturas do 22o. ao 24o. dia.</p>
+\[f(x) =  - \dfrac{1}{e^x \text{sen}(6x)},\]</div>
+<p>definida no domínio <span class="math notranslate nohighlight">\([-5,8]\)</span>. Assinale a alternativa correta:</p>
+<p>A. <span class="math notranslate nohighlight">\(f(x)\)</span> não é convexa e <span class="math notranslate nohighlight">\(f'(x) = -e^{-x} \text{sen}{\left(6 x \right)} - 6 e^{-x} \cos{\left(6 x \right)}\)</span></p>
+<p>B. <span class="math notranslate nohighlight">\(f(x)\)</span> é convexa e <span class="math notranslate nohighlight">\(f'(x) = e^{-x} \text{sen}{\left(6 x \right)} - 6 e^{-x} \cos{\left(6 x \right)}\)</span></p>
+<p>C. <span class="math notranslate nohighlight">\(f(x)\)</span> não é convexa e <span class="math notranslate nohighlight">\(f'(x) = -e^{x} \sin{\left(6 x \right)} - 6 e^{x} \cos{\left(6 x \right)}\)</span></p>
+<p>D. <span class="math notranslate nohighlight">\(f(x)\)</span> é convexa e <span class="math notranslate nohighlight">\(f'(x) = e^{x} \sin{\left(6 x \right)} + 6 e^{x} \cos{\left(6 x \right)}\)</span></p>
 <hr>
 </section>
 <section id="id2">
 <h1>Gabarito<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
-<p>Alternativa <strong>D</strong></p>
+<p>Alternativa <strong>B</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># domínio</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.1</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">6</span> 
 
+<span class="c1"># função e valores</span>
+<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">sym</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
 
-<span class="c1">#--- geração de campo de temperatura aleatório</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">temps</span> <span class="o">=</span> <span class="mf">23.4</span> <span class="o">+</span> <span class="p">(</span><span class="mf">28.6</span><span class="o">-</span><span class="mf">23.34</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">temps</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">temps</span><span class="p">))</span> <span class="o">-</span> <span class="mi">70</span>
-<span class="n">temps</span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">27</span><span class="p">]]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temps</span><span class="p">,</span><span class="s1">&#39;o-&#39;</span><span class="p">,</span><span class="n">mfc</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;#cc11bb&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">));</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;ave. temp. [C]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mars/Elysium Planitia: Jun/2022 [ficticious]&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../figs/q/q31-mars-temp.png&#39;</span><span class="p">)</span>
-<span class="c1">#---</span>
-
-<span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;6/1/2022&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">db</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">temps</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;temp&#39;</span><span class="p">)</span>
-<span class="n">db</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../database/mars-Temp-2022-06.csv&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dom</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">dom</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">dom</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Q31-gab_9_0.png" src="../_images/Q31-gab_9_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">correct</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">## primeiro realiza a troca por um valor que conhecemos.  </span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">a</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">count</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="n">count</span><span class="p">])</span> <span class="c1">#Tiranda a média dos 4 valores anteriores.</span>
-            <span class="c1">#print(f&#39;{count-3}, {count}&#39;) # as posições q são tiradas as médias.</span>
-        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">correct</span><span class="p">(</span><span class="n">db</span><span class="p">)</span>
-<span class="n">mean</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;mean: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">result</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="n">m</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;min: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">result</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="n">M</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;max: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">result</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="n">mean</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">M</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;mean: -69.97&#39;, &#39;min: -74.99&#39;, &#39;max: -65.07&#39;)
-</pre></div>
-</div>
+<img alt="../_images/Q61-gab_16_0.png" src="../_images/Q61-gab_16_0.png" />
 </div>
 </div>
 </section>
