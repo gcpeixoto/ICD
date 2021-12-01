@@ -82,6 +82,8 @@
 #     - [Questionário 44](Q44.ipynb)
 # - Unidade 3: Parte 5
 #     - [Questionário 51](Q51.ipynb)
+# - Unidade 3: Parte 6
+#     - [Questionário 61](Q61.ipynb)    
 # - Unidade 4: Parte 7
 #     - [Questionário 71](Q71.ipynb)    
 #     - [Questionário 72](Q72.ipynb)    
@@ -187,12 +189,6 @@
 # 
 # - [Projeto _Cadernos de ICD_](cadernos-icd.ipynb)
 
-# In[ ]:
-
-
-
-
-
 # 
 # ```{toctree}
 # :hidden:
@@ -292,6 +288,7 @@
 # Q43
 # Q44
 # Q51
+# Q61
 # Q71
 # Q72
 # Q73
