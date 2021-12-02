@@ -64,12 +64,12 @@
 # 
 # $$f(x) =  - \dfrac{1}{e^x \text{sen}(6x)},$$
 # 
-# definida no domínio $[-5,8]$. Assinale a alternativa correta:
+# definida no domínio $[-0.5,-0.1]$. Assinale a alternativa correta:
 # 
-# A. $f(x)$ não é convexa e $f'(x) = -e^{-x} \text{sen}{\left(6 x \right)} - 6 e^{-x} \cos{\left(6 x \right)}$
+# A. $f(x)$ não é convexa e $f'(x) = -\frac{e^{x}}{\text{sen}{\left(6 x \right)}} + \frac{6 e^{- x} \cos{\left(6 x \right)}}{\text{sen}^{2}{\left(6 x \right)}}$
 # 
-# B. $f(x)$ é convexa e $f'(x) = e^{-x} \text{sen}{\left(6 x \right)} - 6 e^{-x} \cos{\left(6 x \right)}$
+# B. $f(x)$ é convexa e $f'(x) = \frac{e^{- x}}{\text{sen}{\left(6 x \right)}} + \frac{6 e^{- x} \cos{\left(6 x \right)}}{\text{sen}^{2}{\left(6 x \right)}}$
 # 
-# C. $f(x)$ não é convexa e $f'(x) = -e^{x} \text{sen}{\left(6 x \right)} - 6 e^{x} \cos{\left(6 x \right)}$
+# C. $f(x)$ não é convexa e $f'(x) = \frac{e^{x}}{\text{sen}{\left(6 x \right)}} + \frac{6 e^{- x} \cos{\left(6 x \right)}}{\text{sen}^{2}{\left(6 x \right)}}$
 # 
-# D. $f(x)$ é convexa e $f'(x) = e^{x} \text{sen}{\left(6 x \right)} + 6 e^{x} \cos{\left(6 x \right)}$
+# D. $f(x)$ é convexa e $f'(x) = -\frac{e^{- x}}{\text{sen}{\left(6 x \right)}} + \frac{6 e^{- x} \cos{\left(6 x \right)}}{\text{sen}^{2}{\left(6 x \right)}}$
